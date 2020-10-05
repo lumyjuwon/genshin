@@ -1,11 +1,9 @@
 import React from 'react';
-import { GlobalStyles } from './components/globalStyles';
 import Layout from './components/layout';
 
 function App() {
   return (
     <div className="App">
-      <GlobalStyles />
       <Layout>
         <a href="#">Hello Genshin</a>
         <div className="test">
