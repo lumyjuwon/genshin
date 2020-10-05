@@ -1,15 +1,13 @@
 import React from 'react';
 import Header from './header';
+import Footer from './footer';
 
 export default function Layout({ children }: any) {
   return (
     <>
       <Header />
       {children}
-      <footer>
-        {/* Footer Component */}
-        This is Footer
-      </footer>
+      <Footer />
     </>
   );
 }
