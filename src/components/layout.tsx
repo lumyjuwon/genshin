@@ -1,12 +1,10 @@
 import React from 'react';
+import Header from './header';
 
 export default function Layout({ children }: any) {
   return (
     <>
-      <header>
-        {/* Header Component */}
-        This is Header
-      </header>
+      <Header />
       {children}
       <footer>
         {/* Footer Component */}
