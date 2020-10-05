@@ -13,5 +13,6 @@ export const GlobalStyles = createGlobalStyle`
 	body {
 		background-color: #212223;
 		color: #f1f2f3;
+		line-height: 1.4;
 	}
 `
