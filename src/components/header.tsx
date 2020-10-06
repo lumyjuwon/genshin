@@ -1,6 +1,7 @@
 import React from 'react';
-import { BrowserRouter, Link } from 'react-router-dom';
+import { BrowserRouter, Link, Route } from 'react-router-dom';
 import styled from 'styled-components';
+import Wishes from '../pages/wishes';
 
 export default function Header() {
   const Header = styled.header`
@@ -33,7 +34,7 @@ export default function Header() {
           </div>
           <NavBar>
             <NavLink>
-              <Link to="#">Character</Link>
+              <Link to="/wishes">Wishes</Link>
             </NavLink>
             <NavLink>
               <Link to="#">Weapon</Link>
@@ -43,6 +44,4 @@ export default function Header() {
       </BrowserRouter>
     </Header>
   )
-  
-  
 }
