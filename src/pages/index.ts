@@ -1,1 +1,1 @@
-export { WishesScreen } from "./wish_screen/WishesScreen";
+export { GachaScreen } from "./gacha_screen/GachaScreen";
