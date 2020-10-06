@@ -1,0 +1,16 @@
+{
+  "characterExp": {
+    "Hero's Wit": [4, 20000],
+    "Adventurer's Experience": [3, 5000],
+    "Wanderer's Advice": [2, 1000]
+  },
+  "characterAscension": {
+    "Traveler": ["Brilliant Diamond Silver", "Brilliant Diamond Fragment", "Brilliant Diamond Chunk", "Brilliant Diamond Gemstone"],
+    "Anemo": ["Vayuda Turquoise Silver", "Vayuda Turquoise Fragment", "Vayuda Turquoise Chunk", "Vayuda Turquoise Gemstone"],
+    "Cyro": ["Shivada Jade Silver", "Shivada Jade Fragment", "Shivada Jade Chunk", "Shivada Jade Gemstone"],
+    "Electro": ["Vajrada Amethyst Silver", "Vajrada Amethyst Fragment", "Vajrada Amethyst Chunk", "Vajrada Amethyst Gemstone"],
+    "Geo": ["Prithiva Topaz Silver", "Prithiva Topaz Fragment", "Prithiva Topaz Chunk", "Prithiva Topaz Gemstone"],
+    "Hydro": ["Varunada Lazurite Silver", "Varunada Lazurite Fragment", "Varunada Lazurite Chunk", "Varunada Lazurite Gemstone"],
+    "Pyro": ["Agnidus Agate Silver", "Agnidus Agate Fragment", "Agnidus Agate Chunk", "Agnidus Agate Gemstone"]
+  }
+}
