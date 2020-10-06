@@ -6,7 +6,7 @@ export function TextLinkButton({ href, children }: propType) {
     display: "block",
     width: "fit-content",
     padding: "20px 10px",
-    fontSize: "25px",
+    fontSize: "22px",
     fontColor: "#f1f2f3",
     transition: "0.2s",
     cursor: "pointer",
