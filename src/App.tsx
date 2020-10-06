@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { BrowserRouter, Link, Route } from "react-router-dom";
 
-import { Header, Footer } from "src/components";
+import { Header, Footer, TextButton } from "src/components";
 
 const Container = styled.div({});
 
