@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 
-import { Header, Footer } from "src/components";
+import { Header, Footer, TextLinkButton } from "src/components";
 import { GachaScreen } from "src/pages";
 
 const Container = styled.div({});
@@ -13,7 +13,9 @@ function App() {
   return (
     <BrowserRouter>
       <Container>
-        <Header></Header>
+        <Header>
+          <TextLinkButton href="/gacha">Gacha</TextLinkButton>
+        </Header>
         <ContentContainer>
           <Switch>
             <Route path="/gacha" component={GachaScreen} />

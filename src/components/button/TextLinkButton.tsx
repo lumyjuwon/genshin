@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-export function TextButton({ href, children }: propType) {
-  const TextButton = styled.a({
-    width: "fit-content",
+export function TextLinkButton({ href, children }: propType) {
+  const TextLinkButton = styled.a({
     display: "block",
+    width: "fit-content",
     padding: "20px 10px",
     fontSize: "25px",
     fontColor: "#f1f2f3",
@@ -16,9 +16,9 @@ export function TextButton({ href, children }: propType) {
   });
 
   return (
-    <TextButton href={href}>
+    <TextLinkButton href={href}>
       {children}
-    </TextButton>
+    </TextLinkButton>
   );
 }
 interface propType {
