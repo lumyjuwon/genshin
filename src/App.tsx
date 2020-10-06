@@ -10,18 +10,32 @@ const Container = styled.div({});
 const ContentContainer = styled.div({});
 
 function App() {
+
+  const MainLogo = styled.a({
+    fontSize: "30px",
+    padding: "20px 15px",
+    cursor: "pointer"
+  })
+
   return (
     <BrowserRouter>
       <Container>
         <Header>
+          <MainLogo href="/">
+            Genshin Simul
+          </MainLogo>
           <TextLinkButton href="/gacha">Gacha</TextLinkButton>
+          <TextLinkButton href="/character">Character</TextLinkButton>
+          <TextLinkButton href="/weapon">Weapon</TextLinkButton>
         </Header>
         <ContentContainer>
           <Switch>
             <Route path="/gacha" component={GachaScreen} />
           </Switch>
         </ContentContainer>
-        <Footer></Footer>
+        <Footer>
+          This is Footer
+        </Footer>
       </Container>
     </BrowserRouter>
   );
