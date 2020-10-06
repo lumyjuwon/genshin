@@ -1,1 +1,1 @@
-import React from 'react';
+export { WishesScreen } from "./wish_screen/WishesScreen";

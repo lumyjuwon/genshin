@@ -1,19 +1,22 @@
-import React from 'react';
-import Layout from './components/layout';
+import React from "react";
+import styled from "styled-components";
+import { BrowserRouter, Link, Route } from "react-router-dom";
+
+import { Header, Footer } from "src/components";
+
+const Container = styled.div({});
+
+const ContentContainer = styled.div({});
 
 function App() {
   return (
-    <div className="App">
-      <Layout>
-        <a href="#">Hello Genshin</a>
-        <div className="test">
-          <div className="inner">
-            Inner Test
-          </div>
-          Hello Genshin
-        </div>
-      </Layout>
-    </div>
+    <BrowserRouter>
+      <Container>
+        <Header></Header>
+        <ContentContainer></ContentContainer>
+        <Footer></Footer>
+      </Container>
+    </BrowserRouter>
   );
 }
 
