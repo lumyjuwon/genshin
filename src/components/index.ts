@@ -3,6 +3,7 @@ export { Header } from "./Header";
 export { Footer } from "./Footer";
 export { InnerDiv } from './InnerDiv';
 export { CenterAlignDiv } from './CenterAlignDiv';
+export { FlexCenterWrapper } from './FlexCenterWrapper';
 
 // Button Component
 export { TextButton } from "./button/TextButton";
