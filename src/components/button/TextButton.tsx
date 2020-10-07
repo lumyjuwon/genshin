@@ -9,7 +9,7 @@ interface Props {
 export function TextButton({ href, children }: Props){
   const TextButton = styled.a({
     display: "inline-block",
-    margin: "5px",
+    margin: "5px 10px",
     transition: "0.1s",
     borderBottom: "2px solid transparent",
     "&:hover": {
