@@ -39,6 +39,7 @@ function App() {
             </div>
             <TextButton href="/policy">Privacy Policy</TextButton>
             <TextButton href="/terms">Terms of Service</TextButton>
+            <TextButton href="mailto:lumyjuwon@gmail.com">Contact Us</TextButton>
           </Footer>
       </Container>
     </BrowserRouter>
