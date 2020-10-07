@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-import { InnerDiv } from "src/components";
+import { ScreenInnerWrapper } from "src/components";
 import { RoundImage } from "src/components";
 import { RoundButton } from "src/components";
-import { CenterAlignDiv } from 'src/components';
+import { TextCenterWrapper } from 'src/components';
 import { GachaArrangeView } from './GachaArrangeView';
 import { GachaResult } from "./GachaResult";
 
@@ -13,16 +13,16 @@ export function GachaScreen() {
 
   return (
     <Container>
-      <InnerDiv>
+      <ScreenInnerWrapper>
         <GachaArrangeView />
-        <CenterAlignDiv>
+        <TextCenterWrapper>
           <>
             <RoundButton>Reset</RoundButton>
             <RoundButton>10Times</RoundButton>
           </>
-        </CenterAlignDiv>
+        </TextCenterWrapper>
         <GachaResult />
-      </InnerDiv>
+      </ScreenInnerWrapper>
     </Container>
   );
 }

@@ -1,8 +1,8 @@
 export { Text } from "./Text";
 export { Header } from "./Header";
 export { Footer } from "./Footer";
-export { InnerDiv } from './InnerDiv';
-export { CenterAlignDiv } from './CenterAlignDiv';
+export { ScreenInnerWrapper } from './ScreenInnerWrapper';
+export { TextCenterWrapper } from './TextCenterWrapper';
 export { FlexCenterWrapper } from './FlexCenterWrapper';
 
 // Button Component
