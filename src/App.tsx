@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 
-import { Header, Footer, TextLinkButton } from "src/components";
 import { GachaScreen } from "src/pages";
+import { Header, Footer, TextBoxButton, TextButton } from "src/components";
 
 const Container = styled.div({});
 
@@ -24,18 +24,22 @@ function App() {
           <MainLogo href="/">
             Genshin Simul
           </MainLogo>
-          <TextLinkButton href="/gacha">Gacha</TextLinkButton>
-          <TextLinkButton href="/character">Character</TextLinkButton>
-          <TextLinkButton href="/weapon">Weapon</TextLinkButton>
+          <TextBoxButton href="/gacha">Gacha</TextBoxButton>
+          <TextBoxButton href="/character">Character</TextBoxButton>
+          <TextBoxButton href="/weapon">Weapon</TextBoxButton>
         </Header>
         <ContentContainer>
           <Switch>
             <Route path="/gacha" component={GachaScreen} />
           </Switch>
         </ContentContainer>
-        <Footer>
-          This is Footer
-        </Footer>
+          <Footer>
+            <div>
+              ⓒCopyright 2020
+            </div>
+            <TextButton href="/policy">Privacy Policy</TextButton>
+            <TextButton href="/terms">Terms of Service</TextButton>
+          </Footer>
       </Container>
     </BrowserRouter>
   );

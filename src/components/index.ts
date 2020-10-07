@@ -1,4 +1,5 @@
 export { Header } from "./Header";
 export { Footer } from "./Footer";
 export { Text } from "./Text";
-export { TextLinkButton } from "./button/TextLinkButton";
+export { TextBoxButton } from "./button/TextBoxButton";
+export { TextButton } from "./button/TextButton";
