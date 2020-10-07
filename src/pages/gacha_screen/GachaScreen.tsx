@@ -7,6 +7,7 @@ import { RoundButton } from "src/components";
 import { TextCenterWrapper } from 'src/components';
 import { GachaArrangeView } from './GachaArrangeView';
 import { GachaResult } from "./GachaResult";
+import { GachaBanner } from "./GachaBanner";
 
 export function GachaScreen() {
   const Container = styled.div({});
@@ -14,6 +15,7 @@ export function GachaScreen() {
   return (
     <Container>
       <ScreenInnerWrapper>
+        <GachaBanner />
         <GachaArrangeView />
         <TextCenterWrapper>
           <>
