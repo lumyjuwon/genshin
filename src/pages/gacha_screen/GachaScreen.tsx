@@ -1,15 +1,19 @@
 import React from "react";
-import { RoundImage } from "src/components/image/RoundImage";
 import styled from "styled-components";
+
+import { InnerDiv } from "src/components";
+import { RoundImage } from "src/components/image/RoundImage";
 
 export function GachaScreen() {
   const Container = styled.div({});
 
   return (
     <Container>
-      <RoundImage
-        image={require("../../resources/characters/images/Amber.png")}
-      />
+      <InnerDiv>
+        <RoundImage
+          image={require("../../resources/characters/images/Amber.png")}
+        />
+      </InnerDiv>
     </Container>
   );
 }
