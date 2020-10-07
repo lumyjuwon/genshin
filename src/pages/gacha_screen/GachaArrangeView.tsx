@@ -8,13 +8,26 @@ export function GachaArrangeView(props: Props) {
     backgroundColor: "#333",
     display: "grid",
     maxWidth: "980px",
+    height: "400px",
     margin: "30px auto",
     padding: "20px 50px",
+    gridTemplateColumns: "repeat(5, 100px)",
+    columnGap: "10px",
+    rowGap: "20px"
   });
 
   return (
     <GridContainer>
-      Gacha Grid
+      <div>1</div>
+      <div>1</div>
+      <div>1</div>
+      <div>1</div>
+      <div>1</div>
+      <div>1</div>
+      <div>1</div>
+      <div>1</div>
+      <div>1</div>
+      <div>1</div>
     </GridContainer>
   );
 }
