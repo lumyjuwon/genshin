@@ -1,7 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-export function TextBoxButton({ href, children }: propType) {
+interface Props {
+  href: string,
+  children: string
+}
+
+export function TextBoxButton({ href, children }: Props) {
   const TextBoxButton = styled.a({
     display: "block",
     width: "fit-content",
@@ -20,8 +25,4 @@ export function TextBoxButton({ href, children }: propType) {
       {children}
     </TextBoxButton>
   );
-}
-interface propType {
-  href: string,
-  children: string
 }
