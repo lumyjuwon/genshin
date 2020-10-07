@@ -4,9 +4,17 @@ import Styled from "styled-components";
 interface Props {}
 
 export function GachaArrangeView(props: Props) {
-  const Container = Styled.div({
-    justifyContent: "center",
+  const GridContainer = Styled.div({
+    backgroundColor: "#333",
+    display: "grid",
+    maxWidth: "980px",
+    margin: "30px auto",
+    padding: "20px 50px",
   });
 
-  return <Container></Container>;
+  return (
+    <GridContainer>
+      Gacha Grid
+    </GridContainer>
+  );
 }
