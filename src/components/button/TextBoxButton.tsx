@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-export function TextLinkButton({ href, children }: propType) {
-  const TextLinkButton = styled.a({
+export function TextBoxButton({ href, children }: propType) {
+  const TextBoxButton = styled.a({
     display: "block",
     width: "fit-content",
     padding: "20px 10px",
@@ -16,9 +16,9 @@ export function TextLinkButton({ href, children }: propType) {
   });
 
   return (
-    <TextLinkButton href={href}>
+    <TextBoxButton href={href}>
       {children}
-    </TextLinkButton>
+    </TextBoxButton>
   );
 }
 interface propType {
