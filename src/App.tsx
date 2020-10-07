@@ -34,8 +34,8 @@ function App() {
           </Switch>
         </ContentContainer>
           <Footer>
-            <div>
-              ⓒCopyright 2020
+            <div style={{fontSize: "12px"}}>
+              Copyrightⓒ 2020
             </div>
             <TextButton href="/policy">Privacy Policy</TextButton>
             <TextButton href="/terms">Terms of Service</TextButton>
