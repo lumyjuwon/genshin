@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import { ScreenInnerWrapper } from "src/components";
@@ -10,6 +10,21 @@ import { GachaResult } from "./GachaResult";
 import { GachaBanner } from "./GachaBanner";
 
 export function GachaScreen() {
+
+  const [ gachaCount, setGachaCount ] = useState(0);
+
+  const onResetClick = function(): void {
+    setGachaCount(0);
+  };
+
+  const oneTimeClick = function(): void {
+    setGachaCount(gachaCount + 1);
+  };
+
+  const tenTimesClick = function(): void {
+    setGachaCount(gachaCount + 10);
+  };
+
   const Container = styled.div({});
 
   return (
@@ -19,11 +34,12 @@ export function GachaScreen() {
         <GachaArrangeView />
         <TextCenterWrapper>
           <>
-            <RoundButton>Reset</RoundButton>
-            <RoundButton>10Times</RoundButton>
+            <RoundButton onClick={onResetClick}>Reset</RoundButton>
+            <RoundButton onClick={oneTimeClick}>1 Time</RoundButton>
+            <RoundButton onClick={tenTimesClick}>10 Times</RoundButton>
           </>
         </TextCenterWrapper>
-        <GachaResult />
+        <GachaResult times={gachaCount} />
       </ScreenInnerWrapper>
     </Container>
   );
