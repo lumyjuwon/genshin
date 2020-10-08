@@ -1,7 +1,7 @@
 import React from "react";
 import Styled from "styled-components";
 
-import { FlexCenterWrapper } from 'src/components';
+import { FlexCenterWrapper, RoundImage } from 'src/components';
 
 interface Props {}
 
@@ -9,7 +9,7 @@ export function GachaArrangeView(props: Props) {
   const GridContainer = Styled.div({
     backgroundColor: "#333",
     display: "grid",
-    height: "400px",
+    height: "fit-content",
     padding: "25px 50px",
     gridTemplateColumns: "repeat(5, 150px)",
     columnGap: "10px",
@@ -20,16 +20,36 @@ export function GachaArrangeView(props: Props) {
   return (
     <FlexCenterWrapper>
       <GridContainer>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
-        <div>1</div>
+        <FlexCenterWrapper>
+          <RoundImage image={require("../../resources/characters/images/Venti.png")} />
+        </FlexCenterWrapper>
+        <FlexCenterWrapper>
+          <RoundImage image={require("../../resources/characters/images/Venti.png")} />
+        </FlexCenterWrapper>
+        <FlexCenterWrapper>
+          <RoundImage image={require("../../resources/characters/images/Venti.png")} />
+        </FlexCenterWrapper>
+        <FlexCenterWrapper>
+          <RoundImage image={require("../../resources/characters/images/Venti.png")} />
+        </FlexCenterWrapper>
+        <FlexCenterWrapper>
+          <RoundImage image={require("../../resources/characters/images/Venti.png")} />
+        </FlexCenterWrapper>
+        <FlexCenterWrapper>
+          <RoundImage image={require("../../resources/characters/images/Venti.png")} />
+        </FlexCenterWrapper>
+        <FlexCenterWrapper>
+          <RoundImage image={require("../../resources/characters/images/Venti.png")} />
+        </FlexCenterWrapper>
+        <FlexCenterWrapper>
+          <RoundImage image={require("../../resources/characters/images/Venti.png")} />
+        </FlexCenterWrapper>
+        <FlexCenterWrapper>
+          <RoundImage image={require("../../resources/characters/images/Venti.png")} />
+        </FlexCenterWrapper>
+        <FlexCenterWrapper>
+          <RoundImage image={require("../../resources/characters/images/Venti.png")} />
+        </FlexCenterWrapper>
       </GridContainer>
     </FlexCenterWrapper>
   );
