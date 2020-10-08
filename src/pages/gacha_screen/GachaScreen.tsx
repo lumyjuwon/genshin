@@ -36,16 +36,18 @@ export function GachaScreen() {
   return (
     <Container>
       <ScreenInnerWrapper>
-        <GachaBanner />
-        <GachaArrangeView />
-        <TextCenterWrapper>
-          <>
-            <RoundButton onClick={onResetClick}>Reset</RoundButton>
-            <RoundButton onClick={oneTimeClick}>1 Time</RoundButton>
-            <RoundButton onClick={tenTimesClick}>10 Times</RoundButton>
-          </>
-        </TextCenterWrapper>
-        <GachaResult times={gachaTimes} three={threeStarCount} four={fourStarCount} five={fiveStarCount} />
+        <>
+          <GachaBanner />
+          <GachaArrangeView />
+          <TextCenterWrapper>
+            <>
+              <RoundButton onClick={onResetClick}>Reset</RoundButton>
+              <RoundButton onClick={oneTimeClick}>1 Time</RoundButton>
+              <RoundButton onClick={tenTimesClick}>10 Times</RoundButton>
+            </>
+          </TextCenterWrapper>
+          <GachaResult times={gachaTimes} three={threeStarCount} four={fourStarCount} five={fiveStarCount} />
+        </>
       </ScreenInnerWrapper>
     </Container>
   );
