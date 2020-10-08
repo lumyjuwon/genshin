@@ -11,18 +11,24 @@ import { GachaBanner } from "./GachaBanner";
 
 export function GachaScreen() {
 
-  const [ gachaCount, setGachaCount ] = useState(0);
+  const [ gachaTimes, setGachaTimes ] = useState(0);
+  const [ fiveStarCount, setFiveStarCount ] = useState(0);
+  const [ fourStarCount, setFoutStarCount ] = useState(0);
+  const [ threeStarCount, setThreeStarCount ] = useState(0); 
 
   const onResetClick = function(): void {
-    setGachaCount(0);
+    setGachaTimes(0);
+    setFiveStarCount(0);
+    setFoutStarCount(0);
+    setThreeStarCount(0);
   };
 
   const oneTimeClick = function(): void {
-    setGachaCount(gachaCount + 1);
+    setGachaTimes(gachaTimes + 1);
   };
 
   const tenTimesClick = function(): void {
-    setGachaCount(gachaCount + 10);
+    setGachaTimes(gachaTimes + 10);
   };
 
   const Container = styled.div({});
@@ -39,7 +45,7 @@ export function GachaScreen() {
             <RoundButton onClick={tenTimesClick}>10 Times</RoundButton>
           </>
         </TextCenterWrapper>
-        <GachaResult times={gachaCount} />
+        <GachaResult times={gachaTimes} three={threeStarCount} four={fourStarCount} five={fiveStarCount} />
       </ScreenInnerWrapper>
     </Container>
   );
