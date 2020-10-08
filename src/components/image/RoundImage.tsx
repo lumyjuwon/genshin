@@ -17,9 +17,10 @@ export function RoundImage(props: Props) {
   const combinedProps: Props = Object.assign({}, defaultProps, props);
 
   const Image = Styled.img({
-    width: combinedProps.width,
-    height: combinedProps.height,
-    borderRadius: 16,
+    width: `${combinedProps.width}`,
+    height: `${combinedProps.height}`,
+    border: "5px solid #e1cf1e",
+    borderRadius: "25%",
   });
 
   return <Image src={combinedProps.image} />;
