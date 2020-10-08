@@ -1,7 +1,7 @@
 import React from "react";
 import Styled from "styled-components";
 
-import { FlexCenterWrapper, RoundImage } from 'src/components';
+import { FlexCenterWrapper, RoundImage, TextCenterWrapper } from 'src/components';
 
 interface Props {}
 
@@ -17,11 +17,21 @@ export function GachaArrangeView(props: Props) {
     textAlign: "center"
   });
 
+  // This not work.... need to fix..
+  const FlexCenterWrapperExtended = Styled(FlexCenterWrapper)({
+    flexDirection: "column"
+  })
+
   return (
     <FlexCenterWrapper>
       <GridContainer>
         <FlexCenterWrapper>
-          <RoundImage image={require("../../resources/characters/images/Venti.png")} />
+          <>
+            <RoundImage image={require("../../resources/characters/images/Venti.png")} />
+            <TextCenterWrapper>
+              Venti
+            </TextCenterWrapper>
+          </>
         </FlexCenterWrapper>
         <FlexCenterWrapper>
           <RoundImage image={require("../../resources/characters/images/Venti.png")} />
