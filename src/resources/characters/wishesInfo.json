@@ -3,5 +3,43 @@
     "5star": 0.6,
     "4star": 5.1,
     "3star": 94.3
+  },
+  "pityCharacterRate": {
+    "5star": 1.6,
+    "4star": 13,
+    "3star": 85
+  },
+  "pityWeaponRate": {
+    "5star": 1.85,
+    "4star": 14.5,
+    "3star": 83.65
+  },
+  "VentiPickup": {
+    "pity": {
+      "first": {
+        "venti": 50
+      },
+      "second": {
+        "venti": 100
+      }
+    }
+  },
+  "BeginnerPickup": {
+    "Rate": {
+      "Noelle": 100,
+      "5star": 0.6,
+      "4star": 5.1,
+      "3star": 94.3
+    }
+  },
+  "WeaponPickup": {
+    "5star": 0.6,
+    "4star": 5.1,
+    "3star": 94.3
+  },
+  "AllTimePickup": {
+    "5star": 0.6,
+    "4star": 5.1,
+    "3star": 94.3
   }
 }
