@@ -45,7 +45,6 @@ export function GachaScreen() {
   const fourStarListLength: number = wishesInfo["4starCharacter"].length;
   
   const gachaExecution: Function = function(): void {
-    setGachaTimes(gachaTimes + 1);
     let pityFlag = false;
     if (gachaTimes % 90 === 89) {
       pityFlag = true;
@@ -61,6 +60,7 @@ export function GachaScreen() {
 
       }
     }
+    setGachaTimes(gachaTimes + 1);
   }
 
   return (
