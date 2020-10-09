@@ -11,22 +11,24 @@ export function GachaScreen() {
 
   const [ gachaTimes, setGachaTimes ] = useState(0);
   const [ fiveStarCount, setFiveStarCount ] = useState(0);
-  const [ fourStarCount, setFoutStarCount ] = useState(0);
+  const [ fourStarCount, setFourStarCount ] = useState(0);
   const [ threeStarCount, setThreeStarCount ] = useState(0); 
 
   const onResetClick: Function = function(): void {
     setGachaTimes(0);
     setFiveStarCount(0);
-    setFoutStarCount(0);
+    setFourStarCount(0);
     setThreeStarCount(0);
   };
 
   const oneTimeClick: Function = function(): void {
-    setGachaTimes(gachaTimes + 1);
+    gachaExecution();
   };
 
   const tenTimesClick: Function = function(): void {
-    setGachaTimes(gachaTimes + 10);
+    for(let i = 0; i < 10; i++) {
+      gachaExecution();
+    }
   };
 
   const Container = styled.div({});
@@ -38,14 +40,27 @@ export function GachaScreen() {
   const fiveProbability: boolean = probability(0.6);
   const fourProbability: boolean = probability(5.7);
 
-  const gachaResult = [];
+  const gachaResult = {};
+  const fiveStarListLength: number = wishesInfo["5starCharacter"].length;
+  const fourStarListLength: number = wishesInfo["4starCharacter"].length;
   
-  if (fiveProbability) {
-    wishesInfo["5starCharacter"]
-  } else if (fourProbability) {
+  const gachaExecution: Function = function(): void {
+    setGachaTimes(gachaTimes + 1);
+    let pityFlag = false;
+    if (gachaTimes % 90 === 89) {
+      pityFlag = true;
+    }
+    if(pityFlag) {
+      setFiveStarCount(fiveStarCount + 1);
+    } else {
+      if (fiveProbability) {
+        setFiveStarCount(fiveStarCount + 1);
+      } else if (fourProbability) {
+        setFourStarCount(fourStarCount + 1);
+      } else {
 
-  } else {
-
+      }
+    }
   }
 
   return (
