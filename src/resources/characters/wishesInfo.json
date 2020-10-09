@@ -41,5 +41,7 @@
     "5star": 0.6,
     "4star": 5.1,
     "3star": 94.3
-  }
+  },
+  "5starCharacter": ["Venti", "Mona", "Keqing", "Klee", "Diluc", "Jean", "Qiqi", "Xiao"],
+  "4starCharacter": ["Noelle", "Razor", "Ningguang", "Lisa", "Kaeya", "Fischl", "Chongyun", "Bennett", "Beidou", "Barbara", "Amber", "Sucrose", "Xiangling", "Xingqui"]
 }
