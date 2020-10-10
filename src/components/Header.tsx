@@ -4,7 +4,6 @@ import styled from "styled-components";
 // import { InnerDiv } from './InnerDiv';
 
 export function Header({ children }: any) {
-
   const Header = styled.header({
     borderBottom: "1px solid #515253",
     backgroundColor: "#111213",
@@ -16,7 +15,7 @@ export function Header({ children }: any) {
     margin: "0 auto",
     display: "flex",
     alignItems: "center",
-  })
+  });
 
   // const Test = styled(InnerDiv)({
   //   display: "flex",
@@ -25,9 +24,7 @@ export function Header({ children }: any) {
 
   return (
     <Header>
-      <HeaderInner>
-        {children}
-      </HeaderInner>
+      <HeaderInner>{children}</HeaderInner>
     </Header>
   );
 }
