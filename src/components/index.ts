@@ -9,6 +9,8 @@ export { TextButton } from "./button/TextButton";
 export { TextBoxButton } from "./button/TextBoxButton";
 export { RoundButton } from "./button/RoundButton";
 export { RoundImageButton } from "./button/RoundImageButton";
+export { SquareTextButton } from "./button/SquareTextButton";
+export { SquareImageButton } from "./button/SquareImageButton";
 
 // Image Component
 export { RoundImage } from "./image/RoundImage";
