@@ -1,1 +1,1 @@
-import React from "react";
+export const wishesInfo = require('../data/wishesInfo.json');
