@@ -12,7 +12,7 @@ export function TextBoxButton({ href, children }: Props) {
     width: "fit-content",
     padding: "20px 10px",
     fontSize: "22px",
-    fontColor: "#f1f2f3",
+    color: "#f1f2f3",
     transition: "0.2s",
     cursor: "pointer",
     "&:hover": {
