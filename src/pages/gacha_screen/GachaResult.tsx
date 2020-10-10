@@ -39,7 +39,7 @@ export function GachaResult({ times, three, four, five }: Props) {
       </TextCenterWrapper>
       <FlexCenterWrapperExtended as={FlexCenterWrapper}>
         <div>
-          list
+          Character or Weapon list
         </div>
       </FlexCenterWrapperExtended>
     </ResultView>

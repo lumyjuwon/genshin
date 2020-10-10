@@ -21,8 +21,6 @@ export function GachaArrangeView(props: Props) {
     flexDirection: "column"
   })
 
-  const Fade = require('react-reveal/Fade');
-
   return (
     <FlexCenterWrapper>
       <GridContainer>
