@@ -1,8 +1,8 @@
 export { Header } from "./Header";
 export { Footer } from "./Footer";
-export { ScreenInnerWrapper } from "./ScreenInnerWrapper";
-export { TextCenterWrapper } from "./TextCenterWrapper";
-export { FlexCenterWrapper } from "./FlexCenterWrapper";
+export { ScreenInnerWrapper } from "./wrapper/ScreenInnerWrapper";
+export { TextCenterWrapper } from ".//wrapper/TextCenterWrapper";
+export { FlexCenterWrapper } from "./wrapper/FlexCenterWrapper";
 
 // Button Component
 export { TextButton } from "./button/TextButton";
