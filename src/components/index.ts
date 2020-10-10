@@ -11,3 +11,4 @@ export { RoundButton } from './button/RoundButton'
 
 // Image Component
 export { RoundImage } from './image/RoundImage';
+export { SquareImage } from './image/SquareImage';
