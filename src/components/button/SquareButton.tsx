@@ -6,16 +6,18 @@ interface Props {
   children: React.ReactElement;
 }
 
-export function SquareButton(props: Props) {
-  const SquareButton = styled.div({});
+const Button = styled.div((props: Props) => {
+  return {};
+});
 
+export function SquareButton(props: Props) {
   return (
-    <SquareButton
+    <Button
       onClick={() => {
         props.onClick();
       }}
     >
       {props.children}
-    </SquareButton>
+    </Button>
   );
 }

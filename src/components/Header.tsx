@@ -1,30 +1,27 @@
 import React from "react";
 import styled from "styled-components";
 
-// import { InnerDiv } from './InnerDiv';
+interface Props {
+  children: JSX.Element;
+}
 
-export function Header({ children }: any) {
-  const Header = styled.header({
-    borderBottom: "1px solid #515253",
-    backgroundColor: "#111213",
-    marginBottom: "20px",
-  });
+const HeaderOuter = styled.header({
+  borderBottom: "1px solid #515253",
+  backgroundColor: "#111213",
+  marginBottom: "20px",
+});
 
-  const HeaderInner = styled.div({
-    maxWidth: "1200px",
-    margin: "0 auto",
-    display: "flex",
-    alignItems: "center",
-  });
+const HeaderInner = styled.div({
+  maxWidth: "1200px",
+  margin: "0 auto",
+  display: "flex",
+  alignItems: "center",
+});
 
-  // const Test = styled(InnerDiv)({
-  //   display: "flex",
-  //   alignItems: "center"
-  // })
-
+export function Header(props: Props) {
   return (
-    <Header>
-      <HeaderInner>{children}</HeaderInner>
-    </Header>
+    <HeaderOuter>
+      <HeaderInner>{props.children}</HeaderInner>
+    </HeaderOuter>
   );
 }

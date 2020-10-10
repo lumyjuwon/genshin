@@ -18,10 +18,10 @@ export function SquareImageButton(props: Props) {
       }}
     >
       <SquareImage
-        image={props.image}
+        src={props.image}
         width={props.width}
         height={props.height}
-      ></SquareImage>
+      />
     </SquareButton>
   );
 }

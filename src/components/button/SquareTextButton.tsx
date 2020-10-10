@@ -3,14 +3,21 @@ import styled from "styled-components";
 
 import { SquareButton } from "./SquareButton";
 
-interface Props {
+interface ButtonProps {
   onClick: Function;
+}
+
+interface TitleProps {}
+
+interface Props extends ButtonProps, TitleProps {
   title: string;
 }
 
-export function SquareTextButton(props: Props) {
-  const Title = styled.a({});
+const Title = styled.a((props: TitleProps) => {
+  return {};
+});
 
+export function SquareTextButton(props: Props) {
   return (
     <SquareButton
       onClick={() => {

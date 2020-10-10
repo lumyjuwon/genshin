@@ -1,25 +1,19 @@
 import React from "react";
-import Styled from "styled-components";
+import styled from "styled-components";
 
 interface Props {
-  image: any;
+  src: any;
   width?: number;
   height?: number;
 }
 
-export function SquareImage(props: Props) {
-  const defaultProps: Props = {
-    image: undefined,
-    width: 100,
-    height: 100,
+const Image = styled.img((props: Props) => {
+  return {
+    width: props.width ? `${props.width}px` : `100px`,
+    height: props.height ? `${props.width}px` : `100px`,
   };
+});
 
-  const combinedProps: Props = Object.assign({}, defaultProps, props);
-
-  const Image = Styled.img({
-    width: `${combinedProps.width}px`,
-    height: `${combinedProps.height}px`,
-  });
-
-  return <Image src={combinedProps.image} />;
+export function SquareImage(props: Props) {
+  return <Image src={props.src} width={props.width} height={props.height} />;
 }

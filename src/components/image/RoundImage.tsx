@@ -1,26 +1,29 @@
 import React from "react";
-import Styled from "styled-components";
+import styled from "styled-components";
 
 interface Props {
-  image: any;
+  src: any;
   width?: number;
   height?: number;
+  borderRadius?: number;
 }
 
-export function RoundImage(props: Props) {
-  const defaultProps: Props = {
-    image: undefined,
-    width: 100,
-    height: 100,
-  };
-
-  const combinedProps: Props = Object.assign({}, defaultProps, props);
-
-  const Image = Styled.img({
-    width: `${combinedProps.width}px`,
-    height: `${combinedProps.height}px`,
+const Image = styled.img((props: Props) => {
+  return {
+    src: props.src,
+    width: props.width ? `${props.width}px` : `100px`,
+    height: props.height ? `${props.width}px` : `100px`,
     borderRadius: "25%",
-  });
+  };
+});
 
-  return <Image src={combinedProps.image} />;
+export function RoundImage(props: Props) {
+  return (
+    <Image
+      src={props.src}
+      width={props.width}
+      height={props.height}
+      borderRadius={props.borderRadius}
+    />
+  );
 }

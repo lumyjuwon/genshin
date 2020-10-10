@@ -1,7 +1,7 @@
 import React from "react";
 import Styled from "styled-components";
 
-import { FlexCenterWrapper, SquareImage, TextCenterWrapper } from 'src/components';
+import { FlexCenterWrapper, SquareImage } from "src/components";
 
 interface Props {}
 
@@ -16,43 +16,58 @@ export function GachaArrangeView(props: Props) {
     textAlign: "center",
   });
 
-  // This not work.... need to fix..
-  const FlexCenterWrapperExtended = Styled(FlexCenterWrapper)({
-    flexDirection: "column"
-  })
-
   return (
     <FlexCenterWrapper>
       <GridContainer>
         <FlexCenterWrapper direction="column">
-          <SquareImage image={require("../../resources/characters/images/Venti.png")} />
+          <SquareImage
+            src={require("../../resources/characters/images/Venti.png")}
+          />
         </FlexCenterWrapper>
         <FlexCenterWrapper direction="column">
-          <SquareImage image={require("../../resources/characters/images/Venti.png")} />
+          <SquareImage
+            src={require("../../resources/characters/images/Venti.png")}
+          />
         </FlexCenterWrapper>
         <FlexCenterWrapper direction="column">
-          <SquareImage image={require("../../resources/characters/images/Venti.png")} />
+          <SquareImage
+            src={require("../../resources/characters/images/Venti.png")}
+          />
         </FlexCenterWrapper>
         <FlexCenterWrapper direction="column">
-          <SquareImage image={require("../../resources/characters/images/Venti.png")} />
+          <SquareImage
+            src={require("../../resources/characters/images/Venti.png")}
+          />
         </FlexCenterWrapper>
         <FlexCenterWrapper direction="column">
-          <SquareImage image={require("../../resources/characters/images/Venti.png")} />
+          <SquareImage
+            src={require("../../resources/characters/images/Venti.png")}
+          />
         </FlexCenterWrapper>
         <FlexCenterWrapper direction="column">
-          <SquareImage image={require("../../resources/characters/images/Venti.png")} />
+          <SquareImage
+            src={require("../../resources/characters/images/Venti.png")}
+          />
         </FlexCenterWrapper>
         <FlexCenterWrapper direction="column">
-          <SquareImage image={require("../../resources/characters/images/Venti.png")} />
+          <SquareImage
+            src={require("../../resources/characters/images/Venti.png")}
+          />
         </FlexCenterWrapper>
         <FlexCenterWrapper direction="column">
-          <SquareImage image={require("../../resources/characters/images/Venti.png")} />
+          <SquareImage
+            src={require("../../resources/characters/images/Venti.png")}
+          />
         </FlexCenterWrapper>
         <FlexCenterWrapper direction="column">
-          <SquareImage image={require("../../resources/characters/images/Venti.png")} />
+          <SquareImage
+            src={require("../../resources/characters/images/Venti.png")}
+          />
         </FlexCenterWrapper>
         <FlexCenterWrapper direction="column">
-          <SquareImage image={require("../../resources/characters/images/Venti.png")} />
+          <SquareImage
+            src={require("../../resources/characters/images/Venti.png")}
+          />
         </FlexCenterWrapper>
       </GridContainer>
     </FlexCenterWrapper>
