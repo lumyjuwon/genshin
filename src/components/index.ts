@@ -5,7 +5,7 @@ export { SelectOptions } from './SelectOptions';
 // Wrapper
 export { ScreenInnerWrapper } from "./wrapper/ScreenInnerWrapper";
 export { TextCenterWrapper } from ".//wrapper/TextCenterWrapper";
-export { FlexCenterWrapper } from "./wrapper/FlexCenterWrapper";
+export { FlexWrapper } from "./wrapper/FlexWrapper";
 
 // Button Component
 export { TextButton } from "./button/TextButton";
