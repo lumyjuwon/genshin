@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { FlexCenterWrapper, TextCenterWrapper } from 'src/components';
+import { TextCenterWrapper } from 'src/components';
 
 interface Props {
   times: number,
@@ -37,11 +37,6 @@ export function GachaResult({ times, three, four, five }: Props) {
           </div>
         </>
       </TextCenterWrapper>
-      <FlexCenterWrapperExtended as={FlexCenterWrapper}>
-        <div>
-          Character or Weapon list
-        </div>
-      </FlexCenterWrapperExtended>
     </ResultView>
   );
 }
