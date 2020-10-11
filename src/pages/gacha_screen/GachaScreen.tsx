@@ -49,12 +49,12 @@ export function GachaScreen() {
     } else {
       if (fiveProbability) {
         // 픽업이 뽑히면.,..
-        if (winPickUp) {
-          getPickUp = true;
-        } else {
+        // if (winPickUp) {
+        //   getPickUp = true;
+        // } else {
           
-          getFiveStar = true;
-        }
+        //   getFiveStar = true;
+        // }
         setFiveStarCount(fiveStarCount + 1);
         // setGachaResult({ ...gachaResult, ...result})
       } else if (fourProbability) {
@@ -82,11 +82,11 @@ export function GachaScreen() {
 
       if (fiveProbability) {
         // 픽업이 뽑히면...
-        if (winPickUp) {
-          getPickUp = true;
-        } else {
-          getFiveStar = true;
-        }
+        // if (winPickUp) {
+        //   getPickUp = true;
+        // } else {
+        //   getFiveStar = true;
+        // }
         setFiveStarCount(fiveStarCount + 1);
         // setGachaResult({ ...gachaResult, ...result})
       

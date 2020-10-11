@@ -26,9 +26,7 @@ function App() {
               Genshin Simul
             </MainLogo>
             <TextBoxButton href="/gacha">Gacha</TextBoxButton>
-            <TextBoxButton href="/character">Character</TextBoxButton>
-            <TextBoxButton href="/weapon">Weapon</TextBoxButton>
-            <TextBoxButton href="/elmreson">공명</TextBoxButton>
+            <TextBoxButton href="/elmreson">Resonance</TextBoxButton>
           </>
         </Header>
         <ContentContainer>
