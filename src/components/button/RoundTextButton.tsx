@@ -3,9 +3,14 @@ import styled from "styled-components";
 
 import { RoundButton } from "./RoundButton";
 
-interface Props {
-  children: JSX.Element;
-  onClick?: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
+interface ButtonProps {
+  onClick?: Function;
+}
+
+interface TitleProps {}
+
+interface Props extends ButtonProps, TitleProps {
+  children: string | JSX.Element; 
 }
 
 const Title = styled.a((props: TitleProps) => {
@@ -14,8 +19,12 @@ const Title = styled.a((props: TitleProps) => {
 
 export function RoundTextButton(props: Props) {
   return (
-    <RoundButton onClick={props.onClick}>
-      <Title>{props.children}</Title>;
+    <RoundButton onClick={(event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+      props.onClick?.();
+    }}>
+      <>
+        <Title>{props.children}</Title>
+      </>
     </RoundButton>
   );
 }
