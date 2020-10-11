@@ -21,12 +21,14 @@ function App() {
     <BrowserRouter>
       <Container>
         <Header>
-          <MainLogo href="/">
-            Genshin Simul
-          </MainLogo>
-          <TextBoxButton href="/gacha">Gacha</TextBoxButton>
-          <TextBoxButton href="/character">Character</TextBoxButton>
-          <TextBoxButton href="/weapon">Weapon</TextBoxButton>
+          <>
+            <MainLogo href="/">
+              Genshin Simul
+            </MainLogo>
+            <TextBoxButton href="/gacha">Gacha</TextBoxButton>
+            <TextBoxButton href="/character">Character</TextBoxButton>
+            <TextBoxButton href="/weapon">Weapon</TextBoxButton>
+          </>
         </Header>
         <ContentContainer>
           <Switch>
@@ -34,12 +36,14 @@ function App() {
           </Switch>
         </ContentContainer>
           <Footer>
-            <div style={{fontSize: "12px"}}>
-              Copyrightⓒ 2020
-            </div>
-            <TextButton href="/policy">Privacy Policy</TextButton>
-            <TextButton href="/terms">Terms of Service</TextButton>
-            <TextButton href="mailto:lumyjuwon@gmail.com">Contact Us</TextButton>
+            <>
+              <div style={{fontSize: "12px"}}>
+                Copyrightⓒ 2020
+              </div>
+              <TextButton href="/policy">Privacy Policy</TextButton>
+              <TextButton href="/terms">Terms of Service</TextButton>
+              <TextButton href="mailto:lumyjuwon@gmail.com">Contact Us</TextButton>
+            </>
           </Footer>
       </Container>
     </BrowserRouter>
