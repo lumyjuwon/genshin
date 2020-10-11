@@ -14,8 +14,10 @@ const Title = styled.a<TitleStyle>((props: TitleStyle) => {
 interface Props {
   onClick: Function;
   title: string;
-  buttonStyles?: ButtonStyle;
-  titleStyles?: TitleStyle
+  styles?: {
+    buttonStyles?: ButtonStyle;
+    titleStyles?: TitleStyle
+  }
 }
 
 
@@ -25,7 +27,7 @@ export function SquareTextButton(props: Props) {
       onClick={() => {
         props.onClick();
       }}
-      styles={props.buttonStyles}
+      styles={props.styles?.buttonStyles}
     >
       <Title>{props.title}</Title>
     </SquareButton>

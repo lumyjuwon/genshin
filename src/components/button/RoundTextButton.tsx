@@ -14,8 +14,10 @@ const Text = styled.a<TextStyle>((props: TextStyle) => {
 interface Props{
   onClick: Function;
   children: string;
-  buttonStyles?: ButtonStyle;
-  textStyles?: TextStyle;
+  styles?: {
+    buttonStyles?: ButtonStyle;
+    textStyles?: TextStyle;
+  }
 }
 
 export function RoundTextButton(props: Props) {
@@ -23,8 +25,8 @@ export function RoundTextButton(props: Props) {
     <RoundButton onClick={(event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
       props.onClick?.();
     }} 
-    styles={props.buttonStyles}>
-      <Text {...props.textStyles}>{props.children}</Text>
+    styles={props.styles?.buttonStyles}>
+      <Text {...props.styles?.textStyles}>{props.children}</Text>
     </RoundButton>
   );
 }

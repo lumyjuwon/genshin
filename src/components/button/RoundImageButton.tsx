@@ -5,14 +5,16 @@ import { RoundButton, ButtonStyle } from "./RoundButton";
 interface Props{
   src: any;
   onClick: Function;
-  buttonStyles?: ButtonStyle;
-  imageStyles?: ImageStyle;
+  styles?: {
+    buttonStyles?: ButtonStyle;
+    imageStyles?: ImageStyle;
+  }
 }
 
 export function RoundImageButton(props: Props) {
   return (
-    <RoundButton onClick={props.onClick} styles={props.buttonStyles}>
-      <RoundImage {...props} styles={props.imageStyles}></RoundImage>
+    <RoundButton onClick={props.onClick} styles={props.styles?.buttonStyles}>
+      <RoundImage {...props} styles={props.styles?.imageStyles}></RoundImage>
     </RoundButton>
   )
 }

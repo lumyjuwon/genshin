@@ -27,9 +27,11 @@ const Button = styled.a<ButtonStyle>((props: ButtonStyle) => {
 interface Props {
   href: string;
   children: string;
-  buttonStyles?: ButtonStyle;
+  styles?: {
+    buttonStyles?: ButtonStyle;
+  }
 }
 
 export function TextButton(props: Props) {
-  return <Button href={props.href}>{props.children}</Button>;
+  return <Button href={props.href} {...props.styles?.buttonStyles}>{props.children}</Button>;
 }
