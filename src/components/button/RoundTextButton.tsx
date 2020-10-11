@@ -1,30 +1,30 @@
 import React from "react";
 import styled from "styled-components";
 
-import { RoundButton } from "./RoundButton";
+import { RoundButton, ButtonStyle } from "./RoundButton";
 
-interface ButtonProps {
-  onClick?: Function;
-}
+interface TextStyle {}
 
-interface TitleProps {}
-
-interface Props extends ButtonProps, TitleProps {
-  children: string | JSX.Element; 
-}
-
-const Title = styled.a((props: TitleProps) => {
-  return {};
+const Text = styled.a<TextStyle>((props: TextStyle) => {
+  return {
+    ...props
+  };
 });
+
+interface Props{
+  onClick: Function;
+  children: string;
+  buttonStyles?: ButtonStyle;
+  textStyles?: TextStyle;
+}
 
 export function RoundTextButton(props: Props) {
   return (
     <RoundButton onClick={(event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
       props.onClick?.();
-    }}>
-      <>
-        <Title>{props.children}</Title>
-      </>
+    }} 
+    styles={props.buttonStyles}>
+      <Text {...props.textStyles}>{props.children}</Text>
     </RoundButton>
   );
 }

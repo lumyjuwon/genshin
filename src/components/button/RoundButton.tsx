@@ -1,8 +1,7 @@
 import React from "react";
-import { combineProps } from "src/utils";
 import styled from "styled-components";
 
-interface ButtonProps {
+export interface ButtonStyle{
   display?: string;
   border?: string;
   borderRadius?: string;
@@ -14,45 +13,36 @@ interface ButtonProps {
   shadow?: string;
 }
 
-interface Props{
-  onClick: Function;
-  children: JSX.Element | string |null;
-  styles?: ButtonProps
-}
-
-const defaultButtonProps: ButtonProps = {
-  display: "inline-block",
-  border: "2px solid #f1f2f3",
-  borderRadius: "8px",
-  width: "fit-content",
-  padding: "5px 5px",
-  margin: "10px",
-  cursor: "pointer",
-}
-
-const Button = styled.div((props: ButtonProps) => {
+const Button = styled.div<ButtonStyle>((props: ButtonStyle) => {
   return {
-    ...defaultButtonProps,
+    display: "inline-block",
+    border: "2px solid #f1f2f3",
+    borderRadius: "8px",
+    width: "fit-content",
+    padding: "5px 5px",
+    margin: "10px",
+    cursor: "pointer",
     transition: "0.2s",
     "&:hover": {
       borderColor: "transparent",
       backgroundColor: "#f1f2f3",
       color: "#212223"
-    }
-  };
+    },
+    ...props
+  }
 });
 
+export interface Props{
+  onClick: Function;
+  children: JSX.Element;
+  styles?: ButtonStyle;
+}
+
 export function RoundButton(props: Props) {
-
-  const combinedProps: ButtonProps = combineProps(defaultButtonProps, props.styles)
-
   return (
     <Button
-      onClick={(event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-          props.onClick?.();
-        }
-      }
-      style={{...combinedProps}}
+      onClick={() => {props.onClick()}}
+      {...props.styles}
     >
       {props.children}
     </Button>
