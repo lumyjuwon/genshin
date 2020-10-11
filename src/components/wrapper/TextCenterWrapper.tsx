@@ -5,10 +5,11 @@ interface Props {
   children: JSX.Element | string;
 }
 
-export function TextCenterWrapper({ children }: Props) {
-  const TextCenterWrapper = styled.div({
-    textAlign: "center",
-  })
+const TextCenterDiv = styled.div({
+  textAlign: "center",
+})
 
-  return <TextCenterWrapper>{children}</TextCenterWrapper>
+export function TextCenterWrapper({ children }: Props) {
+
+  return <TextCenterDiv>{children}</TextCenterDiv>
 }
