@@ -74,9 +74,9 @@ export function GachaScreen() {
           <GachaArrangeView />
           <TextCenterWrapper>
             <>
-              <RoundTextButton onClick={onResetClick}>Reset</RoundTextButton>
-              <RoundTextButton onClick={oneTimeGachaExecution}>1 Time</RoundTextButton>
-              <RoundTextButton onClick={tenTimesGachaExecution}>10 Times</RoundTextButton>
+              <RoundTextButton onClick={() => onResetClick()}>Reset</RoundTextButton>
+              <RoundTextButton onClick={() => oneTimeGachaExecution()}>1 Time</RoundTextButton>
+              <RoundTextButton onClick={() => tenTimesGachaExecution()}>10 Times</RoundTextButton>
             </>
           </TextCenterWrapper>
           <GachaResult times={gachaTimes} three={threeStarCount} four={fourStarCount} five={fiveStarCount} />
