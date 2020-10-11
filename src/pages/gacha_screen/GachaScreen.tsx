@@ -31,35 +31,75 @@ export function GachaScreen() {
   
   // const fiveStarListLength: number = wishesInfo["5starCharacter"].length;
   // const fourStarListLength: number = wishesInfo["4starCharacter"].length;
-  let pityFlag = false;
+  let pityFlag: boolean = false;
+  let getFiveStar: boolean = false;
+  let getPickUp: boolean = false;
   
   const oneTimeGachaExecution = function(): void {
-    if (gachaTimes % 90 === 89) {
+    let result: any = {};
+
+    if (gachaTimes % 90 === 89 && !getFiveStar && !getPickUp) {
       pityFlag = true;
     }
+
     if(pityFlag) {
       setFiveStarCount(fiveStarCount + 1);
+      pityFlag = false;
+      getFiveStar = false;
     } else {
       if (fiveProbability) {
+        // 픽업이 뽑히면.,..
+        if (winPickUp) {
+          getPickUp = true;
+        } else {
+          
+          getFiveStar = true;
+        }
         setFiveStarCount(fiveStarCount + 1);
+        // setGachaResult({ ...gachaResult, ...result})
       } else if (fourProbability) {
         setFourStarCount(fourStarCount + 1);
+        // setGachaResult({ ...gachaResult, ...result})
       } else {
-        
+        setThreeStarCount(threeStarCount + 1);
+        // setGachaResult({ ...gachaResult, ...result})
       }
     }
+
     setGachaTimes(gachaTimes + 1);
   }
   
-  const tenTimesGachaExecution = function() {
-    if (gachaTimes % 90 >= 80) {
+  const tenTimesGachaExecution = function(): void {
+    if (gachaTimes % 90 === 89 && !getFiveStar && !getPickUp) {
       pityFlag = true;
     }
+
     if (pityFlag) {
       setFiveStarCount(fiveStarCount + 1);
+      pityFlag = false;
+      getFiveStar = false;
     } else {
 
+      if (fiveProbability) {
+        // 픽업이 뽑히면...
+        if (winPickUp) {
+          getPickUp = true;
+        } else {
+          getFiveStar = true;
+        }
+        setFiveStarCount(fiveStarCount + 1);
+        // setGachaResult({ ...gachaResult, ...result})
+      
+      // 4성은 100% 1개 나옴...
+      } else if (fourProbability) {
+        setFourStarCount(fourStarCount + 1);
+        // setGachaResult({ ...gachaResult, ...result})
+      } else {
+        setThreeStarCount(threeStarCount + 1);
+        // setGachaResult({ ...gachaResult, ...result})
+      }
     }
+
     setGachaTimes(gachaTimes + 10);
   }
 
