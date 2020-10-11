@@ -1,21 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 
-import { SquareButton } from "./SquareButton";
+import { SquareButton, ButtonStyle } from "./SquareButton";
 
-interface ButtonProps {
-  onClick: Function;
-}
+interface TitleStyle {}
 
-interface TitleProps {}
-
-interface Props extends ButtonProps, TitleProps {
-  title: string;
-}
-
-const Title = styled.a((props: TitleProps) => {
-  return {};
+const Title = styled.a<TitleStyle>((props: TitleStyle) => {
+  return {
+    ...props
+  };
 });
+
+interface Props {
+  onClick: Function;
+  title: string;
+  buttonStyles?: ButtonStyle;
+  titleStyles?: TitleStyle
+}
+
 
 export function SquareTextButton(props: Props) {
   return (
@@ -23,6 +25,7 @@ export function SquareTextButton(props: Props) {
       onClick={() => {
         props.onClick();
       }}
+      styles={props.buttonStyles}
     >
       <Title>{props.title}</Title>
     </SquareButton>

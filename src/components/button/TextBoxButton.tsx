@@ -1,12 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 
-interface Props {
-  href: string;
-  children: string;
+interface ButtonStyle{
+  display?: string,
+  width?: string,
+  padding?: string,
+  fontSize?: string,
+  fontColor?: string,
+  transition?: string,
+  cursor?: string,
+  "&:hover"?: {
+    backgroundColor?: string,
+  },
 }
 
-const Button = styled.a((props: Props) => {
+const Button = styled.a<ButtonStyle>((props: ButtonStyle) => {
   return {
     display: "block",
     width: "fit-content",
@@ -18,8 +26,15 @@ const Button = styled.a((props: Props) => {
     "&:hover": {
       backgroundColor: "#515253",
     },
+    ...props
   };
 });
+
+interface Props {
+  href: string;
+  children: string;
+  buttonStyles?: ButtonStyle;
+}
 
 export function TextBoxButton(props: Props) {
   return <Button href={props.href}>{props.children}</Button>;

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 interface Props {
-  children: JSX.Element;
+  children: JSX.Element
 }
 
 const FooterDiv = styled.footer({

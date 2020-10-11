@@ -1,14 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 
-interface Props {
-  onClick: Function;
-  children: React.ReactElement;
+export interface ButtonStyle{
+  width?: string;
+  height?: string;
 }
 
-const Button = styled.div((props: Props) => {
-  return {};
+const Button = styled.button<ButtonStyle>((props: ButtonStyle) => {
+  return {
+    ...props
+  };
 });
+
+interface Props {
+  onClick: Function;
+  children: JSX.Element;
+  styles?: ButtonStyle;
+}
 
 export function SquareButton(props: Props) {
   return (
@@ -16,6 +24,7 @@ export function SquareButton(props: Props) {
       onClick={() => {
         props.onClick();
       }}
+      {...props.styles}
     >
       {props.children}
     </Button>

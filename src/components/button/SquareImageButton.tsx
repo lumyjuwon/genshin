@@ -1,13 +1,13 @@
 import React from "react";
 
-import { SquareButton } from "./SquareButton";
-import { SquareImage } from "../image/SquareImage";
+import { SquareButton, ButtonStyle } from "./SquareButton";
+import { SquareImage, ImageStyle } from "../image/SquareImage";
 
 interface Props {
   onClick: Function;
-  image: any;
-  width?: number;
-  height?: number;
+  src: any;
+  buttonStyles: ButtonStyle;
+  imageStyles: ImageStyle;
 }
 
 export function SquareImageButton(props: Props) {
@@ -16,11 +16,11 @@ export function SquareImageButton(props: Props) {
       onClick={() => {
         props.onClick();
       }}
+      {...props.buttonStyles}
     >
       <SquareImage
-        src={props.image}
-        width={props.width}
-        height={props.height}
+        src={props.src}
+        styles={props.imageStyles}
       />
     </SquareButton>
   );

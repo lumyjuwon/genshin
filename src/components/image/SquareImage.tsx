@@ -1,19 +1,24 @@
 import React from "react";
 import styled from "styled-components";
 
-interface Props {
-  src: any;
-  width?: number;
-  height?: number;
+export interface ImageStyle{
+  width?: string;
+  height?: string;
 }
 
-const Image = styled.img((props: Props) => {
+const Image = styled.img<ImageStyle>((props: ImageStyle) => {
   return {
-    width: props.width ? `${props.width}px` : `100px`,
-    height: props.height ? `${props.width}px` : `100px`,
+    width: '100px',
+    height: '100px',
+    ...props
   };
 });
 
+interface Props {
+  src: any;
+  styles?: ImageStyle;
+}
+
 export function SquareImage(props: Props) {
-  return <Image src={props.src} width={props.width} height={props.height} />;
+  return <Image {...props} />;
 }

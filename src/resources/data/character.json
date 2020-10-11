@@ -1,0 +1,140 @@
+{
+  "Klee": {
+    "rank": 5,
+    "element": "Pyro",
+    "weapon": "Bow",
+    "region": "Mondstadt"
+  },
+  "Keqing": {
+    "rank": 5,
+    "element": "Electro",
+    "weapon": "Sword",
+    "region": "Liyue"
+  },
+  "Diluc": {
+    "rank": 5,
+    "element": "Pyro",
+    "weapon": "Claymore",
+    "region": "Mondstadt"
+  },
+  "Jean": {
+    "rank": 5,
+    "element": "Anemo",
+    "weapon": "Sword",
+    "region": "Mondstadt"
+  },
+  "Qiqi": {
+    "rank": 5,
+    "element": "Cyro",
+    "weapon": "Sword",
+    "region": "Liyue"
+  },
+  "Mona": {
+    "rank": 5,
+    "element": "Hydro",
+    "weapon": "Catalyst",
+    "region": "Mondstadt"
+  },
+  "Venti": {
+    "rank": 5,
+    "element": "Anemo",
+    "weapon": "Bow",
+    "region": "Mondstadt"
+  },
+  "Traveler": {
+    "rank": 5,
+    "element": "Adaptive",
+    "weapon": "Sword",
+    "region": "Unknown"
+  },
+  "Xiao": {
+    "rank": 5,
+    "element": "Anemo",
+    "weapon": "Polearm",
+    "region": "Liyue"
+  },
+  "Noelle": {
+    "rank": 4,
+    "element": "Geo",
+    "weapon": "Claymore",
+    "region": "Mondstadt"
+  },
+  "Razor": {
+    "rank": 4,
+    "element": "Electro",
+    "weapon": "Claymore",
+    "region": "Mondstadt"
+  },
+  "Ningguang": {
+    "rank": 4,
+    "element": "Geo",
+    "weapon": "Catalyst",
+    "region": "Liyue"
+  },
+  "Lisa": {
+    "rank": 4,
+    "element": "Electro",
+    "weapon": "Catalyst",
+    "region": "Mondstadt"
+  },
+  "Kaeya": {
+    "rank": 4,
+    "element": "Cryo",
+    "weapon": "Sword",
+    "region": "Mondstadt"
+  },
+  "Fischl": {
+    "rank": 4,
+    "element": "Electro",
+    "weapon": "Bow",
+    "region": "Mondstadt"
+  },
+  "Chongyun": {
+    "rank": 4,
+    "element": "Cryo",
+    "weapon": "Claymore",
+    "region": "Liyue"
+  },
+  "Bennett": {
+    "rank": 4,
+    "element": "Pyro",
+    "weapon": "Sword",
+    "region": "Mondstadt"
+  },
+  "Beidou": {
+    "rank": 4,
+    "element": "Electro",
+    "weapon": "Claymore",
+    "region": "Liyue"
+  },
+  "Barbara": {
+    "rank": 4,
+    "element": "Hydro",
+    "weapon": "Catalyst",
+    "region": "Mondstadt"
+  },
+  "Amber": {
+    "rank": 4,
+    "element": "Pyro",
+    "weapon": "Bow",
+    "region": "Mondstadt"
+  }, 
+  "Sucrose": {
+    "rank": 4,
+    "element": "Anemo",
+    "weapon": "Catalyst",
+    "region": "Mondstadt"
+  },
+  "Xiangling": {
+    "rank": 4,
+    "element": "Pyro",
+    "weapon": "Polearm",
+    "region": "Liyue"
+  },
+  "Xingqiu": {
+    "rank": 4,
+    "element": "Hydro",
+    "weapon": "Sword",
+    "region": "Liyue"
+  }
+}
