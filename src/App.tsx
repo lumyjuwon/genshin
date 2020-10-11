@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 
-import { GachaScreen } from "src/pages";
+import { GachaScreen, ElementalResonanceScreen } from "src/pages";
 import { Header, Footer, TextBoxButton, TextButton } from "src/components";
 
 const Container = styled.div({});
@@ -28,11 +28,13 @@ function App() {
             <TextBoxButton href="/gacha">Gacha</TextBoxButton>
             <TextBoxButton href="/character">Character</TextBoxButton>
             <TextBoxButton href="/weapon">Weapon</TextBoxButton>
+            <TextBoxButton href="/elmreson">공명</TextBoxButton>
           </>
         </Header>
         <ContentContainer>
           <Switch>
             <Route path="/gacha" component={GachaScreen} />
+            <Route path="/elmreson" component={ElementalResonanceScreen} />
           </Switch>
         </ContentContainer>
           <Footer>
