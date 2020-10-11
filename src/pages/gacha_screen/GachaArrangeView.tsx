@@ -1,7 +1,7 @@
 import React from "react";
 import Styled from "styled-components";
 
-import { FlexCenterWrapper, SquareImage } from "src/components";
+import { FlexWrapper, SquareImage } from "src/components";
 
 interface Props {}
 
@@ -11,65 +11,68 @@ export function GachaArrangeView(props: Props) {
     display: "grid",
     width: "1200px",
     height: "400px",
-    gridTemplateColumns: "repeat(10, 110px)",
+    gridTemplateColumns: "repeat(auto-fit, 110px)",
     columnGap: "10px",
     textAlign: "center",
   });
 
   return (
-    <FlexCenterWrapper>
+    <FlexWrapper>
       <GridContainer>
-        <FlexCenterWrapper direction="column">
+
+        {/* need to modify to map() */}
+        <FlexWrapper styles={{flexDirection: "column"}}>
           <SquareImage
             src={require("../../resources/characters/images/Venti.png")}
           />
-        </FlexCenterWrapper>
-        <FlexCenterWrapper direction="column">
+        </FlexWrapper>
+        <FlexWrapper styles={{flexDirection: "column"}}>
           <SquareImage
             src={require("../../resources/characters/images/Venti.png")}
           />
-        </FlexCenterWrapper>
-        <FlexCenterWrapper direction="column">
+        </FlexWrapper>
+        <FlexWrapper styles={{flexDirection: "column"}}>
           <SquareImage
             src={require("../../resources/characters/images/Venti.png")}
           />
-        </FlexCenterWrapper>
-        <FlexCenterWrapper direction="column">
+        </FlexWrapper>
+        <FlexWrapper styles={{flexDirection: "column"}}>
           <SquareImage
             src={require("../../resources/characters/images/Venti.png")}
           />
-        </FlexCenterWrapper>
-        <FlexCenterWrapper direction="column">
+        </FlexWrapper>
+        <FlexWrapper styles={{flexDirection: "column"}}>
           <SquareImage
             src={require("../../resources/characters/images/Venti.png")}
           />
-        </FlexCenterWrapper>
-        <FlexCenterWrapper direction="column">
+        </FlexWrapper>
+        <FlexWrapper styles={{flexDirection: "column"}}>
           <SquareImage
             src={require("../../resources/characters/images/Venti.png")}
           />
-        </FlexCenterWrapper>
-        <FlexCenterWrapper direction="column">
+        </FlexWrapper>
+        <FlexWrapper styles={{flexDirection: "column"}}>
           <SquareImage
             src={require("../../resources/characters/images/Venti.png")}
           />
-        </FlexCenterWrapper>
-        <FlexCenterWrapper direction="column">
+        </FlexWrapper>
+        <FlexWrapper styles={{flexDirection: "column"}}>
           <SquareImage
             src={require("../../resources/characters/images/Venti.png")}
           />
-        </FlexCenterWrapper>
-        <FlexCenterWrapper direction="column">
+        </FlexWrapper>
+        <FlexWrapper styles={{flexDirection: "column"}}>
           <SquareImage
             src={require("../../resources/characters/images/Venti.png")}
           />
-        </FlexCenterWrapper>
-        <FlexCenterWrapper direction="column">
+        </FlexWrapper>
+        <FlexWrapper styles={{flexDirection: "column"}}>
           <SquareImage
             src={require("../../resources/characters/images/Venti.png")}
           />
-        </FlexCenterWrapper>
+        </FlexWrapper>
+        
       </GridContainer>
-    </FlexCenterWrapper>
+    </FlexWrapper>
   );
 }
