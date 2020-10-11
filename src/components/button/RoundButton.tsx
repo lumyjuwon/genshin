@@ -1,5 +1,4 @@
 import React from "react";
-import { combineProps } from "src/utils";
 import styled from "styled-components";
 
 interface ButtonProps {
@@ -16,7 +15,7 @@ interface ButtonProps {
 
 interface Props{
   onClick: Function;
-  children: JSX.Element | string |null;
+  children: JSX.Element | string | null;
   styles?: ButtonProps
 }
 
@@ -32,7 +31,7 @@ const defaultButtonProps: ButtonProps = {
 
 const Button = styled.div((props: ButtonProps) => {
   return {
-    ...defaultButtonProps,
+    ...props,
     transition: "0.2s",
     "&:hover": {
       borderColor: "transparent",
@@ -43,16 +42,13 @@ const Button = styled.div((props: ButtonProps) => {
 });
 
 export function RoundButton(props: Props) {
-
-  const combinedProps: ButtonProps = combineProps(defaultButtonProps, props.styles)
-
   return (
     <Button
       onClick={(event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
           props.onClick?.();
         }
       }
-      style={{...combinedProps}}
+      style={{...defaultButtonProps, ...props.styles}}
     >
       {props.children}
     </Button>

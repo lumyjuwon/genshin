@@ -19,9 +19,11 @@ const Title = styled.a((props: TitleProps) => {
 
 export function RoundTextButton(props: Props) {
   return (
-    <RoundButton onClick={(event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-      props.onClick?.();
-    }}>
+    <RoundButton
+      onClick={(event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+        props.onClick?.();
+      }}
+    >
       <>
         <Title>{props.children}</Title>
       </>
