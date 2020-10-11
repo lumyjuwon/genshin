@@ -1,3 +1,6 @@
-export function combineProps(defaultProps: any, mergingProps: any): any {
-  console.log("combinedPropsFunction");
+export function combineProps(defaultProps: any, elementProps: any): object {
+  return {
+    ...defaultProps,
+    ...elementProps,
+  }
 }

@@ -1,1 +1,1 @@
-import React from 'react';
+export { combineProps } from './combineProps';
