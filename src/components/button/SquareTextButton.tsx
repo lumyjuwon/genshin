@@ -3,20 +3,24 @@ import styled from "styled-components";
 
 import { SquareButton, ButtonStyle } from "./SquareButton";
 
-interface TitleStyle {}
+interface TextStyle {
+  fontSize?: string,
+  color?: string,
+}
 
-const Title = styled.a<TitleStyle>((props: TitleStyle) => {
+const Text = styled.a<TextStyle>((props: TextStyle) => {
   return {
-    ...props
+    fontSize: props.fontSize ? props.fontSize : "16px",
+    color: props.color ? props.color : "#f1f2f3"
   };
 });
 
 interface Props {
   onClick: Function;
-  title: string;
+  text: string;
   styles?: {
     buttonStyles?: ButtonStyle;
-    titleStyles?: TitleStyle
+    textStyles?: TextStyle
   }
 }
 
@@ -29,7 +33,7 @@ export function SquareTextButton(props: Props) {
       }}
       styles={props.styles?.buttonStyles}
     >
-      <Title>{props.title}</Title>
+      <Text {...props.styles?.textStyles}>{props.text}</Text>
     </SquareButton>
   );
 }

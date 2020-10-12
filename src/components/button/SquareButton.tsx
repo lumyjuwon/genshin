@@ -8,7 +8,8 @@ export interface ButtonStyle{
 
 const Button = styled.button<ButtonStyle>((props: ButtonStyle) => {
   return {
-    ...props
+    width: props.width ? props.width : "fit-content",
+    height: props.height ? props.height : "auto"
   };
 });
 

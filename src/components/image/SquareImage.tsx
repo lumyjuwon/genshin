@@ -6,11 +6,10 @@ export interface ImageStyle{
   height?: string;
 }
 
-const Image = styled.img<ImageStyle>((props: ImageStyle) => {
+const Image = styled.img<ImageStyle>(({ width, height }: ImageStyle) => {
   return {
-    width: '100px',
-    height: '100px',
-    ...props
+    width: width ? width : "100px",
+    height: height ? height: "100px",
   };
 });
 
@@ -20,5 +19,5 @@ interface Props {
 }
 
 export function SquareImage(props: Props) {
-  return <Image {...props} />;
+  return <Image {...props.styles} src={props.src} />;
 }

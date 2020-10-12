@@ -9,10 +9,9 @@ export interface ImageStyle{
 
 const Image = styled.img<ImageStyle>((props: ImageStyle) => {
   return {
-    width: '100px',
-    height: '100px',
-    borderRadius: '25%',
-    ...props
+    width: props.width ? props.width : '100px',
+    height: props.height ? props.height : '100px',
+    borderRadius: props.borderRadius ? props.borderRadius : '8px',
   }
 })
 
@@ -23,6 +22,6 @@ interface Props {
 
 export function RoundImage(props: Props) {
   return (
-      <Image {...props}/>
+    <Image {...props.styles} src={props.src} />
   );
 }
