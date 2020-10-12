@@ -3,22 +3,26 @@ import styled from "styled-components";
 
 interface ButtonStyle{
   display?: string,
-  margin?: string,
-  transition?: string,
-  borderBottom?: string,
+  width?: string,
+  padding?: string,
+  fontSize?: string,
+  fontColor?: string,
   "&:hover"?: {
-    borderBottom?: string
+    backgroundColor?: string,
   },
 }
 
 const Button = styled.a<ButtonStyle>((props: ButtonStyle) => {
   return {
-    display: "inline-block",
-    margin: "5px 10px",
-    transition: "0.1s",
-    borderBottom: "2px solid transparent",
+    display: "block",
+    width: "fit-content",
+    padding: "20px 10px",
+    fontSize: "22px",
+    fontColor: "#f1f2f3",
+    transition: "0.2s",
+    cursor: "pointer",
     "&:hover": {
-      borderBottom: "2px solid #f1f2f3",
+      backgroundColor: "#515253",
     },
     ...props
   };
@@ -32,6 +36,6 @@ interface Props {
   }
 }
 
-export function TextButton(props: Props) {
+export function TextBlockButton(props: Props) {
   return <Button href={props.href} {...props.styles?.buttonStyles}>{props.children}</Button>;
 }

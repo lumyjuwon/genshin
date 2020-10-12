@@ -3,11 +3,15 @@ import styled from "styled-components";
 
 import { RoundButton, ButtonStyle } from "./RoundButton";
 
-interface TextStyle {}
+interface TextStyle {
+  fontSize?: string;
+  color?: string;
+}
 
 const Text = styled.a<TextStyle>((props: TextStyle) => {
   return {
-    ...props
+    fontSize: props.fontSize ? props.fontSize : "16px",
+    color: props.color ? props.color : "#f1f2f3"
   };
 });
 

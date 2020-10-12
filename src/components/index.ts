@@ -8,8 +8,8 @@ export { TextCenterWrapper } from ".//wrapper/TextCenterWrapper";
 export { FlexWrapper } from "./wrapper/FlexWrapper";
 
 // Button Component
-export { TextButton } from "./button/TextButton";
-export { TextBoxButton } from "./button/TextBoxButton";
+export { TextInLineButton } from "./button/TextInLineButton";
+export { TextBlockButton } from "./button/TextBlockButton";
 export { RoundTextButton } from "./button/RoundTextButton";
 export { RoundImageButton } from "./button/RoundImageButton";
 export { SquareTextButton } from "./button/SquareTextButton";

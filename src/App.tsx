@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import { GachaScreen, ElementalResonanceScreen } from "src/pages";
-import { Header, Footer, TextBoxButton, TextButton } from "src/components";
+import { Header, Footer, TextBlockButton, TextInLineButton } from "src/components";
 
 const Container = styled.div({});
 
@@ -25,8 +25,8 @@ function App() {
             <MainLogo href="/">
               Genshin Simul
             </MainLogo>
-            <TextBoxButton href="/gacha">Gacha</TextBoxButton>
-            <TextBoxButton href="/elmreson">Resonance</TextBoxButton>
+            <TextBlockButton href="/gacha">Gacha</TextBlockButton>
+            <TextBlockButton href="/elmreson">Resonance</TextBlockButton>
           </>
         </Header>
         <ContentContainer>
@@ -40,9 +40,9 @@ function App() {
               <div style={{fontSize: "12px"}}>
                 Copyrightⓒ 2020
               </div>
-              <TextButton href="/policy">Privacy Policy</TextButton>
-              <TextButton href="/terms">Terms of Service</TextButton>
-              <TextButton href="mailto:lumyjuwon@gmail.com">Contact Us</TextButton>
+              <TextInLineButton href="/policy">Privacy Policy</TextInLineButton>
+              <TextInLineButton href="/terms">Terms of Service</TextInLineButton>
+              <TextInLineButton href="mailto:lumyjuwon@gmail.com">Contact Us</TextInLineButton>
             </>
           </Footer>
       </Container>
