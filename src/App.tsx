@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import { GachaScreen, ElementalResonanceScreen } from "src/pages";
 import { Header, Footer, TextBoxButton, TextButton } from "src/components";
@@ -13,7 +13,7 @@ function App() {
 
   const MainLogo = styled.a({
     fontSize: "30px",
-    padding: "20px 15px",
+    padding: "20px 15px 20px 0px",
     cursor: "pointer"
   })
 
