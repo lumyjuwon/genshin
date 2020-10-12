@@ -14,7 +14,7 @@ interface Props{
 export function RoundImageButton(props: Props) {
   return (
     <RoundButton onClick={props.onClick} styles={props.styles?.buttonStyles}>
-      <RoundImage {...props} styles={props.styles?.imageStyles}></RoundImage>
+      <RoundImage src={props.src} styles={props.styles?.imageStyles}></RoundImage>
     </RoundButton>
   )
 }
