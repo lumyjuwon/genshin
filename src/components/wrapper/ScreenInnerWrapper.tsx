@@ -5,15 +5,16 @@ interface Props {
   children: JSX.Element
 }
 
+const ScreenWrapperDiv = styled.div({
+  maxWidth: "1200px",
+  margin: "0 auto"
+})
+
 export function ScreenInnerWrapper({ children }: Props){
-  const ScreenInnerWrapper = styled.div({
-    maxWidth: "1200px",
-    margin: "0 auto"
-  })
 
   return (
-    <ScreenInnerWrapper>
+    <ScreenWrapperDiv>
       {children}
-    </ScreenInnerWrapper>
+    </ScreenWrapperDiv>
   );
 }
