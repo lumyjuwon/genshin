@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 import { GachaResult } from "./GachaResult";
-import { GachaBanner } from "./GachaBanner";
-import { GachaArrangeView } from './GachaArrangeView';
 import { wishesInfo } from 'src/resources/data';
-import { ScreenInnerWrapper, RoundTextButton, TextCenterWrapper } from "src/components";
+import { GachaArrangeView } from './GachaArrangeView';
+import { SelectOptions, ScreenInnerWrapper, RoundTextButton, TextCenterWrapper } from "src/components";
 
 export function GachaScreen() {
   
@@ -110,7 +109,7 @@ export function GachaScreen() {
     <Container>
       <ScreenInnerWrapper>
         <>
-          <GachaBanner />
+          <SelectOptions id="pickup" desc="Choose PickUp" options={wishesInfo.pickupContents} />
           <GachaArrangeView />
           <TextCenterWrapper>
             <>
