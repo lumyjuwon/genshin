@@ -12,7 +12,7 @@ const HeaderOuter = styled.header({
 });
 
 const HeaderInner = styled.div({
-  maxWidth: "1200px",
+  maxWidth: "1300px",
   margin: "0 auto",
   display: "flex",
   alignItems: "center",
