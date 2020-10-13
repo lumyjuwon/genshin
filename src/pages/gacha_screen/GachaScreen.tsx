@@ -112,7 +112,7 @@ export function GachaScreen() {
         <div style={{margin: "30px"}}>
           <GachaBanner contents={wishesInfo.pickupContents}/>
           <div style={{clear: "both"}}></div>
-          <GachaArrangeView />
+          <GachaArrangeView result={["Venti", "Mona", "Keqing", "Fischl", "Diluc", "Amber", "Barbara", "Qiqi", "Jean", "Kaeya"]} />
           <TextCenterWrapper>
             <div style={{margin: "20px"}}>
               <RoundTextButton onClick={() => onResetClick()}>Reset</RoundTextButton>
