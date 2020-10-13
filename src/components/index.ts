@@ -1,6 +1,5 @@
 export { Header } from "./Header";
 export { Footer } from "./Footer";
-export { SelectOptions } from './SelectOptions';
 
 // Wrapper
 export { ScreenInnerWrapper } from "./wrapper/ScreenInnerWrapper";
