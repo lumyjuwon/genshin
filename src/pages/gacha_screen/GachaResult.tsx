@@ -10,14 +10,11 @@ interface Props {
   five: number;
 }
 
-export function GachaResult({ times, three, four, five }: Props) {
-  const ResultView = styled.div({
-    display: "flex"
-  });
+const ResultView = styled.div({
+  display: "flex"
+});
 
-  const FlexCenterWrapperExtended = styled.div({
-    flex: "1"
-  })
+export function GachaResult({ times, three, four, five }: Props) {
 
   return (
     <ResultView>
