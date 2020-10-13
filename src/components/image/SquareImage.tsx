@@ -4,12 +4,14 @@ import styled from "styled-components";
 export interface ImageStyle{
   width?: string;
   height?: string;
+  boxShadow?: string;
 }
 
-const Image = styled.img<ImageStyle>(({ width, height }: ImageStyle) => {
+const Image = styled.img<ImageStyle>(({ width, height, boxShadow }: ImageStyle) => {
   return {
     width: width ? width : "100px",
     height: height ? height: "100px",
+    boxShadow: boxShadow ? boxShadow : "none"
   };
 });
 

@@ -5,6 +5,7 @@ export interface ImageStyle{
   width?: string;
   height?: string;
   borderRadius?: string;
+  boxShadow?: string;
 }
 
 const Image = styled.img<ImageStyle>((props: ImageStyle) => {
@@ -12,6 +13,7 @@ const Image = styled.img<ImageStyle>((props: ImageStyle) => {
     width: props.width ? props.width : '100px',
     height: props.height ? props.height : '100px',
     borderRadius: props.borderRadius ? props.borderRadius : '8px',
+    boxShadow: props.boxShadow ? props.boxShadow : "none"
   }
 })
 
