@@ -4,7 +4,8 @@ import styled from "styled-components";
 import { GachaResult } from "./GachaResult";
 import { wishesInfo } from 'src/resources/data';
 import { GachaArrangeView } from './GachaArrangeView';
-import { SelectOptions, ScreenInnerWrapper, RoundTextButton, TextCenterWrapper } from "src/components";
+import { GachaBanner } from "./GachaBanner";
+import { ScreenInnerWrapper, RoundTextButton, TextCenterWrapper } from "src/components";
 
 export function GachaScreen() {
   
@@ -35,7 +36,7 @@ export function GachaScreen() {
   let getPickUp: boolean = false;
   
   const oneTimeGachaExecution = function(): void {
-    let result: any = {};
+    // let result: any = {};
 
     if (gachaTimes % 90 === 89 && !getFiveStar && !getPickUp) {
       pityFlag = true;
@@ -108,18 +109,19 @@ export function GachaScreen() {
   return (
     <Container>
       <ScreenInnerWrapper>
-        <>
-          <SelectOptions id="pickup" desc="Choose PickUp" options={wishesInfo.pickupContents} />
+        <div style={{margin: "30px"}}>
+          <GachaBanner />
+          <div style={{clear: "both"}}></div>
           <GachaArrangeView />
           <TextCenterWrapper>
-            <>
+            <div style={{margin: "20px"}}>
               <RoundTextButton onClick={() => onResetClick()}>Reset</RoundTextButton>
               <RoundTextButton onClick={() => oneTimeGachaExecution()}>1 Time</RoundTextButton>
               <RoundTextButton onClick={() => tenTimesGachaExecution()}>10 Times</RoundTextButton>
-            </>
+            </div>
           </TextCenterWrapper>
           <GachaResult times={gachaTimes} three={threeStarCount} four={fourStarCount} five={fiveStarCount} />
-        </>
+        </div>
       </ScreenInnerWrapper>
     </Container>
   );
