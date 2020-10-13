@@ -58,7 +58,11 @@ const List = styled.li({
   }
 })
 
-export function GachaBanner() {
+interface Props {
+  contents: Array<string>;
+}
+
+export function GachaBanner(props: Props) {
   return (
     <StyledDiv>
       <FlexWrapper styles={{justifyContent: "space-between"}}>
@@ -70,9 +74,9 @@ export function GachaBanner() {
         </>
       </FlexWrapper>
       <DropDown>
-        <List>Venti PickUp</List>
-        <List>Weapon PickUp</List>
-        <List>All Time PickUp</List>
+        {props.contents.map((content: string, i: number) => {
+          return <List key={i}>{content}</List>
+        })}
       </DropDown>
     </StyledDiv>
   )

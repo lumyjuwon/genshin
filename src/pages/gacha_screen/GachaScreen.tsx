@@ -110,7 +110,7 @@ export function GachaScreen() {
     <Container>
       <ScreenInnerWrapper>
         <div style={{margin: "30px"}}>
-          <GachaBanner />
+          <GachaBanner contents={wishesInfo.pickupContents}/>
           <div style={{clear: "both"}}></div>
           <GachaArrangeView />
           <TextCenterWrapper>
