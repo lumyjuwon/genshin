@@ -11,6 +11,7 @@ export interface ButtonStyle {
   cursor?: string;
   height?: string;
   shadow?: string;
+  pointerEvents?: "fill" | "stroke" | "none" | "auto" | "inherit" | "initial" | "-moz-initial" | "revert" | "unset" | "all" | "visible" | "painted" | "visibleFill" | "visiblePainted" | "visibleStroke";
 }
 
 const Button = styled.div<ButtonStyle>((props: ButtonStyle) => {
@@ -22,6 +23,7 @@ const Button = styled.div<ButtonStyle>((props: ButtonStyle) => {
     padding: props.padding ? props.padding : "5px 5px",
     margin: props.margin ? props.margin : "10px",
     cursor: props.cursor ? props.cursor : "pointer",
+    pointerEvents: props.pointerEvents ? props.pointerEvents : "auto",
     transition: "0.2s",
     "&:hover": {
       borderColor: "transparent",
