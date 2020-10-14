@@ -13,7 +13,8 @@ export function GachaScreen() {
   const [ fiveStarCount, setFiveStarCount ] = useState(0);
   const [ fourStarCount, setFourStarCount ] = useState(0);
   const [ threeStarCount, setThreeStarCount ] = useState(0);
-  const [ gachaResult, setGachaResult ] = useState({});
+  const [ gachaResult, setGachaResult ] = useState([]);
+  const [ isPickUp, setIsPickup ] = useState(false);
   
   const onResetClick = (): void => {
     setGachaTimes(0);
@@ -34,6 +35,8 @@ export function GachaScreen() {
   let pityFlag: boolean = false;
   let getFiveStar: boolean = false;
   let getPickUp: boolean = false;
+  // 픽업 뽑히면 reset버튼만 활성화
+  let blockedButton: "none" | undefined = undefined;
   
   const oneTimeGachaExecution = function(): void {
     // let result: any = {};
@@ -69,6 +72,10 @@ export function GachaScreen() {
     setGachaTimes(gachaTimes + 1);
   }
   
+  // Mock-up result Data
+  // need to delete
+  const mockUpResult: Array<string> = ["Venti", "Mona", "Keqing", "Fischl", "Diluc", "Amber", "Barbara", "Qiqi", "Jean", "Kaeya"];
+
   const tenTimesGachaExecution = function(): void {
     if (gachaTimes % 90 === 89 && !getFiveStar && !getPickUp) {
       pityFlag = true;
@@ -105,6 +112,7 @@ export function GachaScreen() {
 
   // styled-component
   const Container = styled.div({});
+  isPickUp && (blockedButton = "none");
 
   return (
     <Container>
@@ -112,7 +120,7 @@ export function GachaScreen() {
         <div style={{margin: "30px"}}>
           <GachaBanner contents={wishesInfo.pickupContents}/>
           <div style={{clear: "both"}}></div>
-          <GachaArrangeView result={["Venti", "Mona", "Keqing", "Fischl", "Diluc", "Amber", "Barbara", "Qiqi", "Jean", "Kaeya"]} />
+          <GachaArrangeView result={mockUpResult} />
           <TextCenterWrapper>
             <div style={{margin: "20px"}}>
               <RoundTextButton onClick={() => onResetClick()}>Reset</RoundTextButton>
