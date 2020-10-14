@@ -4,40 +4,15 @@ import styled from "styled-components";
 import { FlexWrapper, SquareImage } from "src/components";
 import characterInfo from '../../resources/data/characterInfo.json';
 
-const characterInfoObject = JSON.parse(characterInfo);
+const characterInfoObject = JSON.parse(JSON.stringify(characterInfo));
 
 interface Props {
   result: Array<string>;
 }
 
-// interface Character {
-//   "Klee": (string | number)[];
-//   "Keqing": (string | number)[];
-//   "Diluc": (string | number)[];
-//   "Jean": (string | number)[];
-//   "Qiqi": (string | number)[];
-//   "Mona": (string | number)[];
-//   "Venti": (string | number)[];
-//   "Xiao": (string | number)[];
-//   "Noelle": (string | number)[];
-//   "Razor": (string | number)[];
-//   "Ningguang": (string | number)[];
-//   "Lisa": (string | number)[];
-//   "Kaeya": (string | number)[];
-//   "Fischl": (string | number)[];
-//   "Chongyun": (string | number)[];
-//   "Bennett": (string | number)[];
-//   "Beidou": (string | number)[];
-//   "Barbara": (string | number)[];
-//   "Amber": (string | number)[];
-//   "Sucrose": (string | number)[];
-//   "Xiangling": (string | number)[];
-//   "Xinqiu": (string | number)[];
-// };
-
-enum Color {
-  five = "#a86d1f",
-  four = "b182c4"
+const shadowColor: {five: string, four: string} = {
+  five: "#a86d1f",
+  four: "#b182c4"
 }
 
 export function GachaArrangeView(props: Props) {
@@ -57,11 +32,16 @@ export function GachaArrangeView(props: Props) {
       <GridContainer>
 
         {props.result.map((r: string, i: number) => {
-          console.log(characterInfoObject[r]);
+          let shadow = "#777"
+          if (characterInfoObject[r][0] === 5) {
+            shadow = shadowColor.five;
+          } else if (characterInfoObject[r][0] === 4) {
+            shadow = shadowColor.four;
+          }
           return (
             <FlexWrapper styles={{flexDirection: "column"}} key={i}>
               <SquareImage
-                styles={{ height: "300px", boxShadow: "0 0 8px 2px #a86d1f, 0px 10px 5px #a86d1f, 0px -10px 5px #a86d1f" }}
+                styles={{ height: "300px", boxShadow: `0 0 8px 2px ${shadow}, 0px 10px 5px ${shadow}, 0px -10px 5px ${shadow}` }}
                 src={require(`../../resources/characters/images/gacha/${r}.jpg`)}
               />
             </FlexWrapper>
