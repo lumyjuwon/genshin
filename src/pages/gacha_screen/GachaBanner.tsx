@@ -54,7 +54,7 @@ const List = styled.li({
   borderTop: "1px solid #212223",
   borderRadius: "8px",
   "&:hover": {
-    backgroundColor: "#888",
+    backgroundColor: "#ccc",
   }
 })
 
