@@ -14,5 +14,6 @@ export const GlobalStyles = createGlobalStyle`
 		background-color: #212223;
 		color: #f1f2f3;
 		line-height: 1.4;
+		font-family: 'Nanum Gothic', sans-serif
 	}
 `
