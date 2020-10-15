@@ -5,5 +5,7 @@
     }
   ],
   "settings": {
+    "editor.formatOnSave": true,
+    "prettier.tabWidth": 2
   }
 }
