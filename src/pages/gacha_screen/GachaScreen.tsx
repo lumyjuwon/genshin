@@ -13,8 +13,8 @@ export function GachaScreen() {
   const [ fiveStarCount, setFiveStarCount ] = useState(0);
   const [ fourStarCount, setFourStarCount ] = useState(0);
   const [ threeStarCount, setThreeStarCount ] = useState(0);
-  const [ gachaResult, setGachaResult ] = useState([]);
   const [ isPickUp, setIsPickup ] = useState(false);
+  const [ pickUpContent, setPickUpContent ] = useState("");
   
   const onResetClick = (): void => {
     setGachaTimes(0);
@@ -22,6 +22,11 @@ export function GachaScreen() {
     setFourStarCount(0);
     setThreeStarCount(0);
   };
+
+  const onBannerClick = function(content: string): void {
+    setPickUpContent(content);
+  }
+  
   
   // After this, gacha logic
   const probability: Function = function(prob: number): boolean {
@@ -35,9 +40,7 @@ export function GachaScreen() {
   let pityFlag: boolean = false;
   let getFiveStar: boolean = false;
   let getPickUp: boolean = false;
-  // 픽업 뽑히면 reset버튼만 활성화
-  let blockedButton: "none" | undefined = undefined;
-  
+
   const oneTimeGachaExecution = function(): void {
     // let result: any = {};
 
@@ -112,20 +115,18 @@ export function GachaScreen() {
 
   // styled-component
   const Container = styled.div({});
-  isPickUp && (blockedButton = "none");
 
   return (
     <Container>
       <ScreenInnerWrapper>
         <div style={{margin: "30px"}}>
-          <GachaBanner contents={wishesInfo.pickupContents}/>
-          <div style={{clear: "both"}}></div>
+          <GachaBanner contents={wishesInfo.pickupContents} onClick={onBannerClick}/>
           <GachaArrangeView result={mockUpResult} />
           <TextCenterWrapper>
             <div style={{margin: "20px"}}>
               <RoundTextButton onClick={() => onResetClick()}>Reset</RoundTextButton>
-              <RoundTextButton onClick={() => oneTimeGachaExecution()}>1 Time</RoundTextButton>
-              <RoundTextButton onClick={() => tenTimesGachaExecution()}>10 Times</RoundTextButton>
+              {isPickUp || <RoundTextButton onClick={() => oneTimeGachaExecution()}>1 Time</RoundTextButton>}
+              {isPickUp || <RoundTextButton onClick={() => tenTimesGachaExecution()}>10 Time</RoundTextButton>}
             </div>
           </TextCenterWrapper>
           <GachaResult times={gachaTimes} three={threeStarCount} four={fourStarCount} five={fiveStarCount} />

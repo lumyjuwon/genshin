@@ -17,7 +17,7 @@ const DropDown = styled.ul({
   left: "-1px",
   opacity: "0",
   visibility: "hidden",
-  boxShadow: "8px 8px 3px rgba(0,0,0,0.3)"
+  boxShadow: "6px 6px 3px rgba(0,0,0,0.6)"
 })
 
 const StyledDiv = styled.div`
@@ -60,22 +60,31 @@ const List = styled.li({
 
 interface Props {
   contents: Array<string>;
+  onClick: Function;
 }
 
+let selectedPickUp: string = "Choose PickUp";
+
 export function GachaBanner(props: Props) {
+
+  const onListClick = (content: string | null): void => {
+    props.onClick(content);
+    if (content) selectedPickUp = content;
+  }
+
   return (
     <StyledDiv>
       <FlexWrapper styles={{justifyContent: "space-between"}}>
         <>
-          <HoverDiv>
-            Choose PickUp
+          <HoverDiv id="content">
+            {selectedPickUp}
           </HoverDiv>
           <Icon>^</Icon>
         </>
       </FlexWrapper>
       <DropDown>
         {props.contents.map((content: string, i: number) => {
-          return <List key={i}>{content}</List>
+          return <List key={i} value={content} onClick={(e) => onListClick(e.currentTarget.textContent)}>{content}</List>
         })}
       </DropDown>
     </StyledDiv>
