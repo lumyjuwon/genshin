@@ -11,7 +11,7 @@ interface TextStyle {
 const Text = styled.a<TextStyle>((props: TextStyle) => {
   return {
     fontSize: props.fontSize ? props.fontSize : "16px",
-    color: props.color ? props.color : "#f1f2f3"
+    // add color property in RoundButton component
   };
 });
 

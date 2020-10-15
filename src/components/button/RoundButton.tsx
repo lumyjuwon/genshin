@@ -11,6 +11,7 @@ export interface ButtonStyle {
   cursor?: string;
   height?: string;
   shadow?: string;
+  color?: string;
   pointerEvents?: "fill" | "stroke" | "none" | "auto" | "inherit" | "initial" | "-moz-initial" | "revert" | "unset" | "all" | "visible" | "painted" | "visibleFill" | "visiblePainted" | "visibleStroke";
 }
 
@@ -24,18 +25,18 @@ const Button = styled.div<ButtonStyle>((props: ButtonStyle) => {
     margin: props.margin ? props.margin : "10px",
     cursor: props.cursor ? props.cursor : "pointer",
     pointerEvents: props.pointerEvents ? props.pointerEvents : "auto",
+    color: props.color ? props.color : "#f1f2f3",
     transition: "0.2s",
     "&:hover": {
-      borderColor: "transparent",
       backgroundColor: "#f1f2f3",
-      color: "#212223",
+      color: "#212223"
     },
   };
 });
 
 export interface Props {
   onClick: Function;
-  children: JSX.Element;
+  children: JSX.Element; 
   styles?: ButtonStyle;
 }
 
