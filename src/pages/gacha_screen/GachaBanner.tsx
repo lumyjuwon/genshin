@@ -58,35 +58,53 @@ const List = styled.li({
   }
 })
 
+const Help = styled.span({
+  display: "inline-block",
+  marginBottom: "20px",
+  padding: "7px",
+  border: "1px solid #f1f2f3",
+  cursor: "pointer",
+  borderRadius: "50%",
+  transition: "0.2s",
+  "&:hover": {
+    backgroundColor: "#f1f2f3",
+  }
+})
+
 interface Props {
   contents: Array<string>;
   onClick: Function;
 }
 
-let selectedPickUp: string = "Choose PickUp";
+let selectedPickUp: string = "Venti PickUp";
 
 export function GachaBanner(props: Props) {
 
   const onListClick = (content: string | null): void => {
-    props.onClick(content);
     if (content) selectedPickUp = content;
+    props.onClick(selectedPickUp);
   }
 
   return (
-    <StyledDiv>
-      <FlexWrapper styles={{justifyContent: "space-between"}}>
-        <>
-          <HoverDiv id="content">
-            {selectedPickUp}
-          </HoverDiv>
-          <Icon>^</Icon>
-        </>
-      </FlexWrapper>
-      <DropDown>
-        {props.contents.map((content: string, i: number) => {
-          return <List key={i} value={content} onClick={(e) => onListClick(e.currentTarget.textContent)}>{content}</List>
-        })}
-      </DropDown>
-    </StyledDiv>
+    <FlexWrapper styles={{justifyContent: "space-between"}}>
+      <>
+        <StyledDiv>
+          <FlexWrapper styles={{justifyContent: "space-between"}}>
+            <>
+              <HoverDiv id="content">
+                {selectedPickUp}
+              </HoverDiv>
+              <Icon>^</Icon>
+            </>
+          </FlexWrapper>
+          <DropDown>
+            {props.contents.map((content: string, i: number) => {
+              return <List key={i} value={content} onClick={(e) => onListClick(e.currentTarget.textContent)}>{content}</List>
+            })}
+          </DropDown>
+        </StyledDiv>
+        <Help role="img">❔</Help>
+      </>
+    </FlexWrapper>
   )
 }
