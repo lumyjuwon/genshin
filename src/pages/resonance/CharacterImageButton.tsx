@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 interface Props {
   src: any;
-  onClick: Function
+  onClick: Function;
   isActive?: boolean;
 }
 
@@ -13,6 +13,14 @@ export function CharacterImageButton(props: Props) {
     <RoundImageButton
       src={props.src}
       onClick={props.onClick}
+      styles={{
+        buttonStyles: {},
+        imageStyles: {
+          width: "80px",
+          height: "80px",
+          borderRadius: "50%",
+        },
+      }}
     />
   );
 }
