@@ -3,11 +3,11 @@ import { RoundImage, ImageStyle } from "../image/RoundImage";
 import { RoundButton, ButtonStyle } from "./RoundButton";
 
 interface Props{
-  src: any;
-  onClick: Function;
-  styles?: {
-    buttonStyles?: ButtonStyle;
-    imageStyles?: ImageStyle;
+  readonly src: any;
+  readonly onClick: Function;
+  readonly styles?: {
+    readonly buttonStyles?: ButtonStyle;
+    readonly imageStyles?: ImageStyle;
   }
 }
 

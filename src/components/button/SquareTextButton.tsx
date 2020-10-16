@@ -4,14 +4,14 @@ import styled from "styled-components";
 import { SquareButton, ButtonStyle } from "./SquareButton";
 
 interface TextStyle {
-  fontSize?: string,
-  color?: string,
+  readonly fontSize?: string,
+  readonly color?: string,
 }
 
 const Text = styled.a<TextStyle>((props: TextStyle) => {
   return {
-    fontSize: props.fontSize ? props.fontSize : "16px",
-    color: props.color ? props.color : "#f1f2f3"
+    fontSize: props.fontSize || "16px",
+    color: props.color || "#f1f2f3"
   };
 });
 

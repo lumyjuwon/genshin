@@ -2,27 +2,27 @@ import React from "react";
 import styled from "styled-components";
 
 interface ButtonStyle{
-  display?: string,
-  width?: string,
-  padding?: string,
-  fontSize?: string,
-  fontColor?: string,
-  "&:hover"?: {
-    backgroundColor?: string,
+  readonly display?: "block" | "inline-block",
+  readonly width?: string,
+  readonly padding?: string,
+  readonly fontSize?: string,
+  readonly color?: string,
+  readonly "&:hover"?: {
+    readonly backgroundColor?: string,
   },
 }
 
 const Button = styled.a<ButtonStyle>((props: ButtonStyle) => {
   return {
-    display: "block",
-    width: "fit-content",
-    padding: "20px 10px",
-    fontSize: "22px",
-    fontColor: "#f1f2f3",
+    display: props.display || "block",
+    width: props.width || "fit-content",
+    padding: props.padding || "20px 10px",
+    fontSize: props.fontSize || "22px",
+    color: props.color || "#f1f2f3",
     transition: "0.2s",
     cursor: "pointer",
     "&:hover": {
-      backgroundColor: "#515253",
+      backgroundColor: props["&:hover"]?.backgroundColor || "#515253",
     },
     ...props
   };

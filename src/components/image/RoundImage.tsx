@@ -2,18 +2,18 @@ import React from "react";
 import styled from "styled-components";
 
 export interface ImageStyle{
-  width?: string;
-  height?: string;
-  borderRadius?: string;
-  boxShadow?: string;
+  readonly width?: string;
+  readonly height?: string;
+  readonly borderRadius?: string;
+  readonly boxShadow?: string;
 }
 
 const Image = styled.img<ImageStyle>((props: ImageStyle) => {
   return {
-    width: props.width ? props.width : '100px',
-    height: props.height ? props.height : '100px',
-    borderRadius: props.borderRadius ? props.borderRadius : '8px',
-    boxShadow: props.boxShadow ? props.boxShadow : "none"
+    width: props.width || '100px',
+    height: props.height || '100px',
+    borderRadius: props.borderRadius || '8px',
+    boxShadow: props.boxShadow || "none"
   }
 })
 

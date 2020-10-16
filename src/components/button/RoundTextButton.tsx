@@ -4,13 +4,13 @@ import styled from "styled-components";
 import { RoundButton, ButtonStyle } from "./RoundButton";
 
 interface TextStyle {
-  fontSize?: string;
-  color?: string;
+  readonly fontSize?: string;
+  readonly color?: string;
 }
 
 const Text = styled.a<TextStyle>((props: TextStyle) => {
   return {
-    fontSize: props.fontSize ? props.fontSize : "16px",
+    fontSize: props.fontSize || "16px",
     // add color property in RoundButton component
   };
 });

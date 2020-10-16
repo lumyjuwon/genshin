@@ -4,11 +4,11 @@ import { SquareButton, ButtonStyle } from "./SquareButton";
 import { SquareImage, ImageStyle } from "../image/SquareImage";
 
 interface Props {
-  onClick: Function;
-  src: any;
-  styles?: {
-    buttonStyles?: ButtonStyle;
-    imageStyles?: ImageStyle; 
+  readonly onClick: Function;
+  readonly src: any;
+  readonly styles?: {
+    readonly buttonStyles?: ButtonStyle;
+    readonly imageStyles?: ImageStyle; 
   }
 }
 

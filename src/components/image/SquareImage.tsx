@@ -2,16 +2,16 @@ import React from "react";
 import styled from "styled-components";
 
 export interface ImageStyle{
-  width?: string;
-  height?: string;
-  boxShadow?: string;
+  readonly width?: string;
+  readonly height?: string;
+  readonly boxShadow?: string;
 }
 
-const Image = styled.img<ImageStyle>(({ width, height, boxShadow }: ImageStyle) => {
+const Image = styled.img<ImageStyle>((props: ImageStyle) => {
   return {
-    width: width ? width : "100px",
-    height: height ? height: "100px",
-    boxShadow: boxShadow ? boxShadow : "none"
+    width: props.width || "100px",
+    height: props.height || "100px",
+    boxShadow: props.boxShadow || "none"
   };
 });
 

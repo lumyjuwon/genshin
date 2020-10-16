@@ -2,14 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 export interface ButtonStyle{
-  width?: string;
-  height?: string;
+  readonly width?: string;
+  readonly height?: string;
 }
 
 const Button = styled.button<ButtonStyle>((props: ButtonStyle) => {
   return {
-    width: props.width ? props.width : "fit-content",
-    height: props.height ? props.height : "auto"
+    width: props.width || "fit-content",
+    height: props.height || "auto"
   };
 });
 

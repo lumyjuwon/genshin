@@ -54,13 +54,7 @@ export function GachaScreen() {
       getFiveStar = false;
     } else {
       if (fiveProbability) {
-        // 픽업이 뽑히면.,..
-        // if (winPickUp) {
-        //   getPickUp = true;
-        // } else {
-          
-        //   getFiveStar = true;
-        // }
+        console.log("wow...")
         setFiveStarCount(fiveStarCount + 1);
         // setGachaResult({ ...gachaResult, ...result})
       } else if (fourProbability) {
@@ -91,15 +85,8 @@ export function GachaScreen() {
     } else {
 
       if (fiveProbability) {
-        // 픽업이 뽑히면...
-        // if (winPickUp) {
-        //   getPickUp = true;
-        // } else {
-        //   getFiveStar = true;
-        // }
-        setFiveStarCount(fiveStarCount + 1);
         // setGachaResult({ ...gachaResult, ...result})
-      
+        setFiveStarCount(fiveStarCount + 1);
       // 4성은 100% 1개 나옴...
       } else if (fourProbability) {
         setFourStarCount(fourStarCount + 1);
