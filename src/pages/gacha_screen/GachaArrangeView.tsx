@@ -33,11 +33,12 @@ export function GachaArrangeView(props: Props) {
 
         {props.result.map((r: string, i: number) => {
           let shadow = "#777"
-          if (characterInfoObject[r][0] === 5) {
-            shadow = shadowColor.five;
-          } else if (characterInfoObject[r][0] === 4) {
-            shadow = shadowColor.four;
-          }
+          console.log(characterInfoObject[r])
+          // if (characterInfoObject[r][0] === 5) {
+          //   shadow = shadowColor.five;
+          // } else if (characterInfoObject[r][0] === 4) {
+          //   shadow = shadowColor.four;
+          // }
           return (
             <FlexWrapper styles={{flexDirection: "column"}} key={i}>
               <SquareImage
