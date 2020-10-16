@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { SetStateAction, useState } from "react";
 import styled from "styled-components";
 
 import { GachaResult } from "./GachaResult";
@@ -9,12 +9,15 @@ import { ScreenInnerWrapper, RoundTextButton, TextCenterWrapper } from "src/comp
 
 export function GachaScreen() {
   
+  const wishesInfoObject = JSON.parse(JSON.stringify(wishesInfo));
+
   const [ gachaTimes, setGachaTimes ] = useState(0);
   const [ fiveStarCount, setFiveStarCount ] = useState(0);
   const [ fourStarCount, setFourStarCount ] = useState(0);
   const [ threeStarCount, setThreeStarCount ] = useState(0);
   const [ isPickUp, setIsPickup ] = useState(false);
-  const [ pickUpContent, setPickUpContent ] = useState("");
+  const [ pickUpContent, setPickUpContent ] = useState("All Time PickUp");
+  const [ gachaResult, setGachaResult ] = useState([]);
   
   const onResetClick = (): void => {
     setGachaTimes(0);
@@ -35,14 +38,19 @@ export function GachaScreen() {
   const fiveProbability: boolean = probability(0.6);
   const fourProbability: boolean = probability(5.7);
   
-  // const fiveStarListLength: number = wishesInfo["5starCharacter"].length;
-  // const fourStarListLength: number = wishesInfo["4starCharacter"].length;
+  let contentWithoutBlank: string = pickUpContent.split(" ").join("");
   let pityFlag: boolean = false;
   let getFiveStar: boolean = false;
   let getPickUp: boolean = false;
-
+  let fiveStarList: string[] = wishesInfoObject[contentWithoutBlank].pool.five;
+  let fourStarList: string[] = wishesInfoObject[contentWithoutBlank].pool.four;
+  let threeStarList: string[] = wishesInfoObject[contentWithoutBlank].pool.three;
+  let fiveStarListLength: number = wishesInfo[contentWithoutBlank].pool.five.length;
+  let fourStarListLength: number = wishesInfo[contentWithoutBlank].pool.four.length;
+  let threeStarListLength: number = wishesInfo[contentWithoutBlank].pool.three.length;
+  
   const oneTimeGachaExecution = function(): void {
-    // let result: any = {};
+    let result: never[] = [];
 
     if (gachaTimes % 90 === 89 && !getFiveStar && !getPickUp) {
       pityFlag = true;
@@ -54,18 +62,20 @@ export function GachaScreen() {
       getFiveStar = false;
     } else {
       if (fiveProbability) {
-        console.log("wow...")
+        result.push(fiveStarList[Math.floor(Math.random() * fiveStarListLength)] as never);
         setFiveStarCount(fiveStarCount + 1);
-        // setGachaResult({ ...gachaResult, ...result})
+        setGachaResult([...gachaResult, ...result]);
       } else if (fourProbability) {
+        result.push(fourStarList[Math.floor(Math.random() * fourStarListLength)] as never);
         setFourStarCount(fourStarCount + 1);
-        // setGachaResult({ ...gachaResult, ...result})
+        setGachaResult([...gachaResult, ...result]);
       } else {
+        result.push(threeStarList[Math.floor(Math.random() * threeStarListLength)] as never);
         setThreeStarCount(threeStarCount + 1);
-        // setGachaResult({ ...gachaResult, ...result})
+        setGachaResult([...gachaResult, ...result]);
       }
     }
-
+    console.log(gachaResult);
     setGachaTimes(gachaTimes + 1);
   }
   
@@ -90,10 +100,8 @@ export function GachaScreen() {
       // 4성은 100% 1개 나옴...
       } else if (fourProbability) {
         setFourStarCount(fourStarCount + 1);
-        // setGachaResult({ ...gachaResult, ...result})
       } else {
         setThreeStarCount(threeStarCount + 1);
-        // setGachaResult({ ...gachaResult, ...result})
       }
     }
 
@@ -108,7 +116,7 @@ export function GachaScreen() {
       <ScreenInnerWrapper>
         <div style={{margin: "30px"}}>
           <GachaBanner contents={wishesInfo.pickupContents} onClick={onBannerClick}/>
-          <GachaArrangeView result={mockUpResult} />
+          <GachaArrangeView result={gachaResult} />
           <TextCenterWrapper>
             <div style={{margin: "20px"}}>
               <RoundTextButton onClick={() => onResetClick()}>Reset</RoundTextButton>
