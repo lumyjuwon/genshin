@@ -7,7 +7,7 @@ export { TextCenterWrapper } from ".//wrapper/TextCenterWrapper";
 export { FlexWrapper } from "./wrapper/FlexWrapper";
 
 // Button Component
-export { TextInLineButton } from "./button/TextUnderLineButton";
+export { TextUnderLineButton } from "./button/TextUnderLineButton";
 export { TextBlockButton } from "./button/TextBlockButton";
 export { RoundTextButton } from "./button/RoundTextButton";
 export { RoundImageButton } from "./button/RoundImageButton";
