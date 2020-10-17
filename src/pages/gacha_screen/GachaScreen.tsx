@@ -163,9 +163,25 @@ export function GachaScreen() {
           <GachaArrangeView result={gachaExecutionResult} />
           <TextCenterWrapper>
             <div style={{margin: "20px"}}>
-              <RoundTextButton onClick={() => onResetClick()}>Reset</RoundTextButton>
-              {isPickUp || <RoundTextButton onClick={() => oneTimeGachaExecution()}>1 Time</RoundTextButton>}
-              {isPickUp || <RoundTextButton onClick={() => tenTimesGachaExecution()}>10 Time</RoundTextButton>}
+              <RoundTextButton
+                styles={{ buttonStyles: { display: "inline-block" }}}
+                onClick={() => onResetClick()}
+              >
+                Reset
+              </RoundTextButton>
+              {(pickUpContent !== "Novice Wishes") &&     
+              <RoundTextButton
+                styles={{ buttonStyles: { display: "inline-block" }}}
+                onClick={() => oneTimeGachaExecution()}
+              >
+                1 Time
+              </RoundTextButton>}
+              <RoundTextButton
+                styles={{ buttonStyles: { display: "inline-block" }}}
+                onClick={() => tenTimesGachaExecution()}
+              >
+                10 Time
+              </RoundTextButton>
             </div>
           </TextCenterWrapper>
           <GachaResult times={gachaTimes} three={threeStarCount} four={fourStarCount} five={fiveStarCount} />
