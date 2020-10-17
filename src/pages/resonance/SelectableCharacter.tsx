@@ -2,7 +2,7 @@ import React from "react";
 import { RoundImageButton } from "src/components";
 
 interface Props {
-  src: ImageData;
+  src: string;
   onClick: Function;
   isActive?: boolean;
 }

@@ -5,11 +5,11 @@ import { SquareImage, ImageStyle } from "../image/SquareImage";
 
 interface Props {
   readonly onClick: Function;
-  readonly src: any;
+  readonly src: string;
   readonly styles?: {
     readonly buttonStyles?: ButtonStyle;
-    readonly imageStyles?: ImageStyle; 
-  }
+    readonly imageStyles?: ImageStyle;
+  };
 }
 
 export function SquareImageButton(props: Props) {
@@ -20,10 +20,7 @@ export function SquareImageButton(props: Props) {
       }}
       {...props.styles?.buttonStyles}
     >
-      <SquareImage
-        src={props.src}
-        styles={props.styles?.imageStyles}
-      />
+      <SquareImage src={props.src} styles={props.styles?.imageStyles} />
     </SquareButton>
   );
 }

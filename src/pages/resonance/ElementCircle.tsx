@@ -3,7 +3,7 @@ import { RoundImage } from "src/components";
 import styled from "styled-components";
 
 interface Props {
-  src: ImageData;
+  src: string;
   isActive?: boolean;
   styles?: ContainerStyle;
 }
