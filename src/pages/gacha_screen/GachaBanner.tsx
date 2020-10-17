@@ -76,7 +76,7 @@ interface Props {
   onClick: Function;
 }
 
-let selectedPickUp: string = "All Time PickUp";
+let selectedPickUp: string = "Character Event Wish";
 
 export function GachaBanner(props: Props) {
 
