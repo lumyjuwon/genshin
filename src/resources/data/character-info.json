@@ -41,7 +41,13 @@
     "weapon": "Bow",
     "region": "Mondstadt"
   },
-  "Traveler": {
+  "FemaleTraveler": {
+    "rank": 5,
+    "element": "Adaptive",
+    "weapon": "Sword",
+    "region": "Unknown"
+  },
+  "MaleTraveler": {
     "rank": 5,
     "element": "Adaptive",
     "weapon": "Sword",
