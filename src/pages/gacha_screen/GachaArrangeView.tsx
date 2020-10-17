@@ -10,11 +10,6 @@ interface Props {
   result: Array<string>;
 }
 
-const shadowColor: {five: string, four: string} = {
-  five: "#a86d1f",
-  four: "#b182c4"
-}
-
 export function GachaArrangeView(props: Props) {
   const GridContainer = styled.div({
     backgroundColor: "#333",
@@ -24,8 +19,17 @@ export function GachaArrangeView(props: Props) {
     gridTemplateColumns: "repeat(auto-fit, 100px)",
     columnGap: "12px",
     textAlign: "center",
-    padding: "0 15px"
+    padding: "0 15px",
+    alignItems: "center",
+    justifyItems: "center",
+    alignContent: "center",
+    justifyContent: "center"
   });
+
+  const shadowColor: {five: string, four: string} = {
+    five: "#a86d1f",
+    four: "#b182c4"
+  }
 
   return (
     <FlexWrapper>
@@ -40,12 +44,10 @@ export function GachaArrangeView(props: Props) {
           //   shadow = shadowColor.four;
           // }
           return (
-            <FlexWrapper styles={{flexDirection: "column"}} key={i}>
-              <SquareImage
-                styles={{ height: "300px", boxShadow: `0 0 8px 2px ${shadow}, 0px 10px 5px ${shadow}, 0px -10px 5px ${shadow}` }}
-                src={require(`../../resources/characters/images/gacha/${r}.jpg`)}
-              />
-            </FlexWrapper>
+            <SquareImage
+              styles={{ height: "300px", boxShadow: `0 0 8px 2px ${shadow}, 0px 10px 5px ${shadow}, 0px -10px 5px ${shadow}`, objectFit: "none" }}
+              src={require(`../../resources/gacha/${r}.png`)}
+            />
           );
         })}
         
