@@ -1,31 +1,18 @@
 {
   "pickupContents": ["Novice Wishes", "Character Event Wish", "Weapon Event Wish", "Standard Wish"],
-  "baseCharacterRate": {
-    "5star": 0.6,
-    "4star": 5.7,
-    "3star": 100
-  },
-  "baseWeaponRate": {
-    "5star": 0.7,
-    "4star": 6.7,
-    "3star": 100
-  },
-  "pityCharacterRate": {
-    "5star": 1.6,
-    "4star": 14.6,
-    "3star": 100
-  },
-  "pityWeaponRate": {
-    "5star": 1.85,
-    "4star": 16.35,
-    "3star": 100
-  },
   "CharacterEventWish": {
+    "rate": {
+      "five": 0.6,
+      "four": 5.7
+    },
     "pickUp": {
       "five": ["Venti"],
       "four": ["Fischl", "Xiangling", "Barbara"]
     },
-    "pickupRate": 50,
+    "pickupRate": {
+      "five": 50,
+      "four": 75
+    },
     "pity": {
       "first": {
         "venti": 50
@@ -118,11 +105,18 @@
     }
   },
   "WeaponEventWish": {
+    "rate": {
+      "five": 0.7,
+      "four": 6.7
+    },
     "pickUp": {
       "5star": ["Amos' Bow", "Aquila Favonia"],
       "4star": ["The Stringless", "Wine and Song", "The Bell", "Favonius Lance", "The Flute"]
     },
-    "pickupRate": 75,
+    "pickupRate": {
+      "five": 75,
+      "four": 75
+    },
     "pool": {
       "five": [
         "Amos' Bow",
@@ -185,9 +179,10 @@
     }
   },
   "StandardWish": {
-    "5star": 0.6,
-    "4star": 5.1,
-    "3star": 94.3,
+    "rate": {
+      "five": 0.6,
+      "four": 5.7
+    },
     "pool": {
       "five": [ 
         "Keqing",
