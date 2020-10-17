@@ -1,0 +1,386 @@
+{
+  "Amos' Bow": {
+    "rank": 5,
+    "type": "bow"
+  },
+  "Skyward Harp": {
+    "rank": 5,
+    "type": "bow"
+  },
+  "Alley Hunter": {
+    "rank": 4,
+    "type": "bow"
+  },
+  "The Stringless": {
+    "rank": 4,
+    "type": "bow"
+  },
+  "Sacrificial Bow": {
+    "rank": 4,
+    "type": "bow"
+  },
+  "Rust": {
+    "rank": 4,
+    "type": "bow"
+  },
+  "Royal Bow": {
+    "rank": 4,
+    "type": "bow"
+  },
+  "The Viridescent Hunt": {
+    "rank": 4,
+    "type": "bow"
+  },
+  "Prototype Crescent": {
+    "rank": 4,
+    "type": "bow"
+  },
+  "Favonius Warbow": {
+    "rank": 4,
+    "type": "bow"
+  },
+  "Compound Bow": {
+    "rank": 4,
+    "type": "bow"
+  },
+  "Blackcliff Warbow": {
+    "rank": 4,
+    "type": "bow"
+  },
+  "Raven Bow": {
+    "rank": 3,
+    "type": "bow"
+  },
+  "Messenger": {
+    "rank": 3,
+    "type": "bow"
+  },
+  "Ebony Bow": {
+    "rank": 3,
+    "type": "bow"
+  },
+  "Sharpshooter's Oath": {
+    "rank": 3,
+    "type": "bow"
+  },
+  "Slingshot": {
+    "rank": 3,
+    "type": "bow"
+  },
+  "Recurve Bow": {
+    "rank": 3,
+    "type": "bow"
+  },
+  "Seasoned Hunter's Bow": {
+    "rank": 2,
+    "type": "bow"
+  },
+  "Hunter's Bow": {
+    "rank": 1,
+    "type": "bow"
+  },
+  "Lost Prayer to the Sacred Winds": {
+    "rank": 5,
+    "type": "catalyst"
+  },
+  "Skyward Atlas": {
+    "rank": 5,
+    "type": "catalyst"
+  },
+  "Wine and Song": {
+    "rank": 4,
+    "type": "catalyst"
+  },
+  "Blackcliff Amulet": {
+    "rank": 4,
+    "type": "catalyst"
+  },
+  "Eye of Perception": {
+    "rank": 4,
+    "type": "catalyst"
+  },
+  "Favonius Codex": {
+    "rank": 4,
+    "type": "catalyst"
+  },
+  "Mappa Mare": {
+    "rank": 4,
+    "type": "catalyst"
+  },
+  "The Widsith": {
+    "rank": 4,
+    "type": "catalyst"
+  },
+  "Solar Pearl": {
+    "rank": 4,
+    "type": "catalyst"
+  },
+  "Prototype Malice": {
+    "rank": 4,
+    "type": "catalyst"
+  },
+  "Royal Grimoire": {
+    "rank": 4,
+    "type": "catalyst"
+  },
+  "Sacrificial Fragments": {
+    "rank": 4,
+    "type": "catalyst"
+  },
+  "Twin Nephrite": {
+    "rank": 3,
+    "type": "catalyst"
+  },
+  "Thrilling Tales of Dragon Slayers": {
+    "rank": 3,
+    "type": "catalyst"
+  },
+  "Amber Catalyst": {
+    "rank": 3,
+    "type": "catalyst"
+  },
+  "Magic Guide": {
+    "rank": 3,
+    "type": "catalyst"
+  },
+  "Otherworldly Story": {
+    "rank": 3,
+    "type": "catalyst"
+  },
+  "Emerald Orb": {
+    "rank": 3,
+    "type": "catalyst"
+  },
+  "Pocket Grimoire": {
+    "rank": 2,
+    "type": "catalyst"
+  },
+  "Apprentice's Notes": {
+    "rank": 1,
+    "type": "catalyst"
+  },
+  "Wolf's Gravestone": {
+    "rank": 5,
+    "type": "claymore"
+  },
+  "Skyward Pride": {
+    "rank": 5,
+    "type": "claymore"
+  },
+  "Rainslasher": {
+    "rank": 4,
+    "type": "claymore"
+  },
+  "Whiteblind": {
+    "rank": 4,
+    "type": "claymore"
+  },
+  "The Bell": {
+    "rank": 4,
+    "type": "claymore"
+  },
+  "Serpent Spine": {
+    "rank": 4,
+    "type": "claymore"
+  },
+  "Sacrificial Greatsword": {
+    "rank": 4,
+    "type": "claymore"
+  },
+  "Blackcliff Slasher": {
+    "rank": 4,
+    "type": "claymore"
+  },
+  "Prototype Aminus": {
+    "rank": 4,
+    "type": "claymore"
+  },
+  "Lithic Blade": {
+    "rank": 4,
+    "type": "claymore"
+  },
+  "Favonius Greatsword": {
+    "rank": 4,
+    "type": "claymore"
+  },
+  "Royal Greatsword": {
+    "rank": 4,
+    "type": "claymore"
+  },
+  "Quartz": {
+    "rank": 3,
+    "type": "claymore"
+  },
+  "Bloodtainted Greatsword": {
+    "rank": 3,
+    "type": "claymore"
+  },
+  "Skyrider Greatsword": {
+    "rank": 3,
+    "type": "claymore"
+  },
+  "Ferrous Shadow": {
+    "rank": 3,
+    "type": "claymore"
+  },
+  "White Iron Greatsword": {
+    "rank": 3,
+    "type": "claymore"
+  },
+  "Debate Club": {
+    "rank": 3,
+    "type": "claymore"
+  },
+  "Old Merc's Pal": {
+    "rank": 2,
+    "type": "claymore"
+  },
+  "Waster Greatsword": {
+    "rank": 1,
+    "type": "claymore"
+  },
+  "Kunwu's Iris Rift": {
+    "rank": 5,
+    "type": "polearm"
+  },
+  "Primordial Jade Winged-Spear": {
+    "rank": 5,
+    "type": "polearm"
+  },
+  "Skyward Spine": {
+    "rank": 4,
+    "type": "polearm"
+  },
+  "Blackcliff Pole": {
+    "rank": 4,
+    "type": "polearm"
+  },
+  "Crescent Pike": {
+    "rank": 4,
+    "type": "polearm"
+  },
+  "Deathmatch": {
+    "rank": 4,
+    "type": "polearm"
+  },
+  "Dragon's Bane": {
+    "rank": 4,
+    "type": "polearm"
+  },
+  "Favonius Lance": {
+    "rank": 4,
+    "type": "polearm"
+  },
+  "Lithic Spear": {
+    "rank": 4,
+    "type": "polearm"
+  },
+  "Prototype Grudge": {
+    "rank": 4,
+    "type": "polearm"
+  },
+  "Black Tassel": {
+    "rank": 3,
+    "type": "polearm"
+  },
+  "Halberd": {
+    "rank": 3,
+    "type": "polearm"
+  },
+  "White Tassel": {
+    "rank": 3,
+    "type": "polearm"
+  },
+  "Iron Point": {
+    "rank": 2,
+    "type": "polearm"
+  },
+  "Beginner's Protector": {
+    "rank": 1,
+    "type": "polearm"
+  },
+  "Skyward Blade": {
+    "rank": 5,
+    "type": "sword"
+  },
+  "Aquila Favonia": {
+    "rank": 5,
+    "type": "sword"
+  },
+  "Blackcliff Longsword": {
+    "rank": 4,
+    "type": "sword"
+  },
+  "The Flute": {
+    "rank": 4,
+    "type": "sword"
+  },
+  "The Black Sword": {
+    "rank": 4,
+    "type": "sword"
+  },
+  "The Alley Flash": {
+    "rank": 4,
+    "type": "sword"
+  },
+  "Sword of Descension": {
+    "rank": 4,
+    "type": "sword"
+  },
+  "Sacrificial Sword": {
+    "rank": 4,
+    "type": "sword"
+  },
+  "Royal Longsword": {
+    "rank": 4,
+    "type": "sword"
+  },
+  "Prototype Rancour": {
+    "rank": 4,
+    "type": "sword"
+  },
+  "Lion's Roar": {
+    "rank": 4,
+    "type": "sword"
+  },
+  "Iron Sting": {
+    "rank": 4,
+    "type": "sword"
+  },
+  "Favonius Sword": {
+    "rank": 4,
+    "type": "sword"
+  },
+  "Harbinger of Dawn": {
+    "rank": 3,
+    "type": "sword"
+  },
+  "Skyrider Sword": {
+    "rank": 3,
+    "type": "sword"
+  },
+  "Fillet Blade": {
+    "rank": 3,
+    "type": "sword"
+  },
+  "Dark Iron Sword": {
+    "rank": 3,
+    "type": "sword"
+  },
+  "Cool Steel": {
+    "rank": 3,
+    "type": "sword"
+  },
+  "Traveler's Handy Sword": {
+    "rank": 3,
+    "type": "sword"
+  },
+  "Silver Sword": {
+    "rank": 2,
+    "type": "sword"
+  },
+  "Dull Blade": {
+    "rank": 1,
+    "type": "sword"
+  }
+}
