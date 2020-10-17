@@ -1,4 +1,5 @@
 {
+  "pickupContents": ["Novice Wishes", "Character Event Wish", "Weapon Event Wish", "Standard Wish"],
   "baseCharacterRate": {
     "5star": 0.6,
     "4star": 5.7,
@@ -19,9 +20,11 @@
     "4star": 16.35,
     "3star": 100
   },
-  "pickupContents": ["Venti PickUp", "Weapon PickUp", "All Time PickUp"],
-  "VentiPickUp": {
-    "pickupCharacter": "Venti",
+  "CharacterEventWish": {
+    "pickUp": {
+      "five": ["Venti"],
+      "four": ["Fischl", "Xiangling", "Barbara"]
+    },
     "pickupRate": 50,
     "pity": {
       "first": {
@@ -32,26 +35,156 @@
       }
     },
     "pool": {
-
+      "five": ["Venti", "Keqing", "Mona", "Qiqi", "Jean", "Diluc"],
+      "four": [
+        "Fischl",
+        "Xiangling",
+        "Barbara",
+        "Sucrose",
+        "Chongyun",
+        "Noelle",
+        "Ningguang",
+        "Xingqiu",
+        "Bennett",
+        "Beidou",
+        "Razor",
+        "Rust",
+        "Sacrificial Bow",
+        "The Stringless",
+        "Favonius Warbow",
+        "Eye of Perception",
+        "Sacrificial Fragments",
+        "The Widsith",
+        "Favonius Codex",
+        "Favonius Lance",
+        "Dragon's Bane",
+        "Rainslasher",
+        "Sacrificial Greatsword",
+        "The Bell",
+        "Favonius Greatsword",
+        "Lion's Roar",
+        "Sacrificial Sword",
+        "The Flute",
+        "Favonius Sword"
+      ],
+      "three": [
+        "Slingshot",
+        "Sharpshooter's Oath",
+        "Raven Bow",
+        "Emerald Orb",
+        "Thrilling Tales of Dragon Slayers",
+        "Magic Guide",
+        "Black Tassel",
+        "Debate Club",
+        "Bloodtainted Greatsword",
+        "Ferrous Shadow",
+        "Skyrider Sword",
+        "Harbinger of Dawn",
+        "Cool Steel"
+      ]
     }
   },
-  "BeginnerPickUp": {
+  "NoviceWishes": {
     "Noelle": 100,
     "pool": {
-
+      "five": ["Keqing", "Mona", "Jean", "Qiqi", "Diluc"],
+      "four": [
+        "Sucrose",
+        "Chongyun",
+        "Bennett",
+        "Fischl",
+        "Ningguang",
+        "Xingqiu",
+        "Beidou",
+        "Xiangling",
+        "Razor",
+        "Barbara"
+      ],
+      "three": [
+        "Slingshot",
+        "Sharpshooter's Oath",
+        "Raven Bow",
+        "Emerald Orb",
+        "Thrilling Tales of Dragon Slayers",
+        "Magic Guide",
+        "Black Tassel",
+        "Debate Club",
+        "Bloodtainted Greatsword",
+        "Ferrous Shadow",
+        "Skyrider Sword",
+        "Harbinger of Dawn",
+        "Cool Steel"
+      ]
     }
   },
-  "WeaponPickUp": {
-    "pickupWeapon": {
+  "WeaponEventWish": {
+    "pickUp": {
       "5star": ["Amos' Bow", "Aquila Favonia"],
       "4star": ["The Stringless", "Wine and Song", "The Bell", "Favonius Lance", "The Flute"]
     },
     "pickupRate": 75,
     "pool": {
-
+      "five": [
+        "Amos' Bow",
+        "Aquila Favonia",
+        "Skyward Harp",
+        "Lost Prayer to the Sacred Winds",
+        "Skyward Atlas",
+        "Primordial Jade Winged-Spear",
+        "Skyward Spine",
+        "Wolf's Gravestone",
+        "Skyward Pride",
+        "Skyward Blade"
+      ],
+      "four": [
+        "The Stringless",
+        "The Widsith",
+        "Favonius Lance",
+        "The Bell",
+        "The Flute",
+        "Sucrose",
+        "Chongyun",
+        "Noelle",
+        "Bennett",
+        "Fischl",
+        "Ningguang",
+        "Xingqiu",
+        "Beidou",
+        "Xiangling",
+        "Razor",
+        "Barbara",
+        "Rust",
+        "Sacrificial Bow",
+        "Favonius Warbow",
+        "Eye of Perception",
+        "Sacrificial Fragments",
+        "Favonius Codex",
+        "Dragon's Bane",
+        "Rainslasher",
+        "Favonius Greatsword",
+        "Sacrificial Greatsword",
+        "Lion's Roar",
+        "Sacrificial Sword",
+        "Favonius Sword"
+      ],
+      "three": [
+        "Slingshot",
+        "Sharpshooter's Oath",
+        "Raven Bow",
+        "Emerald Orb",
+        "Thrilling Tales of Dragon Slayers",
+        "Magic Guide",
+        "Black Tassel",
+        "Debate Club",
+        "Bloodtainted Greatsword",
+        "Ferrous Shadow",
+        "Skyrider Sword",
+        "Harbinger of Dawn",
+        "Cool Steel"
+      ]
     }
   },
-  "AllTimePickUp": {
+  "StandardWish": {
     "5star": 0.6,
     "4star": 5.1,
     "3star": 94.3,
@@ -77,7 +210,7 @@
         "Sucrose",
         "Chongyun",
         "Noelle",
-        "Bennet",
+        "Bennett",
         "Fischl",
         "Ningguang",
         "Xingqiu",
