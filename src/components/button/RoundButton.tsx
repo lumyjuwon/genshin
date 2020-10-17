@@ -11,13 +11,29 @@ export interface ButtonStyle {
   readonly cursor?: string;
   readonly height?: string;
   readonly shadow?: string;
+  readonly backgroundColor?: string;
   readonly color?: string;
-  readonly pointerEvents?: "fill" | "stroke" | "none" | "auto" | "inherit" | "initial" | "-moz-initial" | "revert" | "unset" | "all" | "visible" | "painted" | "visibleFill" | "visiblePainted" | "visibleStroke";
+  readonly pointerEvents?:
+    | "fill"
+    | "stroke"
+    | "none"
+    | "auto"
+    | "inherit"
+    | "initial"
+    | "-moz-initial"
+    | "revert"
+    | "unset"
+    | "all"
+    | "visible"
+    | "painted"
+    | "visibleFill"
+    | "visiblePainted"
+    | "visibleStroke";
 }
 
 const Button = styled.div<ButtonStyle>((props: ButtonStyle) => {
   return {
-    display: props.display || "inline-block",
+    display: props.display || "flex",
     border: props.border || "2px solid #f1f2f3",
     borderRadius: props.borderRadius || "8px",
     width: props.width || "fit-content",
@@ -25,18 +41,19 @@ const Button = styled.div<ButtonStyle>((props: ButtonStyle) => {
     margin: props.margin || "10px",
     cursor: props.cursor || "pointer",
     pointerEvents: props.pointerEvents || "auto",
+    backgroundColor: props.backgroundColor || "transparent",
     color: props.color || "#f1f2f3",
     transition: "0.2s",
     "&:hover": {
       backgroundColor: "#f1f2f3",
-      color: "#212223"
+      color: "#212223",
     },
   };
 });
 
 export interface Props {
   onClick: Function;
-  children: JSX.Element; 
+  children: JSX.Element;
   styles?: ButtonStyle;
 }
 
