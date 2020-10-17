@@ -46,7 +46,7 @@ export function GachaArrangeView(props: Props) {
           return (
             <SquareImage
               styles={{ height: "300px", boxShadow: `0 0 8px 2px ${shadow}, 0px 10px 5px ${shadow}, 0px -10px 5px ${shadow}`, objectFit: "none" }}
-              src={require(`../../resources/gacha/${r}.png`)}
+              src={require(`../../resources/images/gacha/${r}.png`)}
             />
           );
         })}
