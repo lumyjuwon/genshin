@@ -1,4 +1,4 @@
-import React, { SetStateAction, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import { GachaResult } from "./GachaResult";
@@ -15,7 +15,6 @@ export function GachaScreen() {
   const [ fiveStarCount, setFiveStarCount ] = useState(0);
   const [ fourStarCount, setFourStarCount ] = useState(0);
   const [ threeStarCount, setThreeStarCount ] = useState(0);
-  const [ isPickUp, setIsPickup ] = useState(false);
   const [ pickUpContent, setPickUpContent ] = useState("Character Event Wish");
   const [ accGachaResult, setAccGachaResult ] = useState([]);
   const [ gachaExecutionResult, setGachaExecutionResult ] = useState([]);
@@ -31,7 +30,6 @@ export function GachaScreen() {
 
   const onBannerClick = function(content: string): void {
     setPickUpContent(content);
-    console.log(content);
   }
   
   // After this, gacha logic
@@ -40,102 +38,107 @@ export function GachaScreen() {
   }
   const fiveProbability = probability(0.6);
   const fourProbability = probability(5.7);
-
-  interface PickUpRate {
-    five: number;
-    four: number;
-  }
   
   let contentWithoutBlank: string = pickUpContent.split(" ").join("");
   let pityFlag: boolean = false;
-  let getFiveStar: boolean = false;
-  let getPickUp: boolean = false;
+  let pityFlagCount: number = 0;
+  let isGetFiveStar: boolean = false;
+  let isGetPickUp: boolean = false;
+  const pickUpGuaranteeCount = wishesInfoObject[contentWithoutBlank].pity.guarantee;
   const fivePickUpList = wishesInfoObject[contentWithoutBlank].pickUp.five;
   const fourPickUpList = wishesInfoObject[contentWithoutBlank].pickUp.four;
-  const pickUpRate: PickUpRate | undefined = wishesInfoObject[contentWithoutBlank].pickupRate;
+  const pickUpRate = wishesInfoObject[contentWithoutBlank].pickupRate;
   const fiveStarList = wishesInfoObject[contentWithoutBlank].pool.five;
   const fourStarList = wishesInfoObject[contentWithoutBlank].pool.four;
   const threeStarList = wishesInfoObject[contentWithoutBlank].pool.three;
-  const fiveStarListLength = wishesInfo[contentWithoutBlank].pool.five.length;
-  const fourStarListLength = wishesInfo[contentWithoutBlank].pool.four.length;
-  const threeStarListLength = wishesInfo[contentWithoutBlank].pool.three.length;
+  const pickUpOccur = wishesInfo[contentWithoutBlank].pity.occur;
   
   const oneTimeGachaExecution = function(): void {
+    // always return gachaTimes - 1... I don't know why....
+    setGachaTimes(gachaTimes + 1);
+
     let randomPick: string;
     let result: never[] = [];
 
-    if (gachaTimes % 90 === 89 && (!getFiveStar || !getPickUp)) {
-      pityFlag = true;
+    if(gachaTimes % pickUpOccur === (pickUpOccur - 1)) {
+      if (!isGetFiveStar) pityFlag = true;
+      if (isGetFiveStar && !isGetPickUp && ((pickUpGuaranteeCount - 1) === pityFlagCount)) pityFlag = true;
+      pityFlagCount += 1;
     }
 
-    if(pityFlag) {
-      randomPick = fivePickUpList[Math.floor(Math.random() * fivePickUpList.length)];
-      setGachaExecutionResult([randomPick] as never);
-      result.push(randomPick as never);
-      setAccGachaResult([...accGachaResult, ...result])
-      setFiveStarCount(fiveStarCount + 1);
-      pityFlag = false;
-      getFiveStar = false;
-      
-    } else {
-      if (fiveProbability) {
+    if (pityFlag){
+      if (!isGetPickUp && pityFlagCount === pickUpGuaranteeCount) {
+        randomPick = fivePickUpList[Math.floor(Math.random() * fivePickUpList.length)];
+      } else {
         if (!pickUpRate) {
-          randomPick = fiveStarList[Math.floor(Math.random() * fiveStarListLength)];
+          randomPick = fiveStarList[Math.floor(Math.random() * fiveStarList.length)];
         } else {
           if (probability(pickUpRate.five)) {
             randomPick = fivePickUpList[Math.floor(Math.random() * fivePickUpList.length)];
+            isGetPickUp = true;
           } else {
             const nonPickUpList = fiveStarList.filter((v: string) => !fivePickUpList.includes(v));
             randomPick = nonPickUpList[Math.floor(Math.random() * nonPickUpList.length)];
           }
         }
-        setGachaExecutionResult([randomPick] as never);
-        result.push(randomPick as never);
-        setFiveStarCount(fiveStarCount + 1);
-        setAccGachaResult([...accGachaResult, ...result]);
-        getFiveStar = true;
-        if (fivePickUpList.includes(randomPick)) getPickUp = true;
+      }
+      isGetFiveStar = false;
+      pityFlag = false;
+      result.push(randomPick as never);
+      setFiveStarCount(fiveStarCount + 1);
 
-      } else if (fourProbability) {
+    } else {
+      if (probability(fiveProbability)) {
         if (!pickUpRate) {
-          randomPick = fourStarList[Math.floor(Math.random() * fourStarListLength)];
+          randomPick = fiveStarList[Math.floor(Math.random() * fiveStarList.length)];
+        } else {
+          if (probability(pickUpRate.five)) {
+            randomPick = fivePickUpList[Math.floor(Math.random() * fivePickUpList.length)];
+            isGetPickUp = true;
+          } else {
+            const nonPickUpList = fiveStarList.filter((v: string) => !fivePickUpList.includes(v));
+            randomPick = nonPickUpList[Math.floor(Math.random() * nonPickUpList.length)];
+          }
+        }
+        isGetFiveStar = true;
+        setFiveStarCount(fiveStarCount + 1);
+        result.push(randomPick as never);
+
+      } else if (probability(fourProbability)) {
+        if (!pickUpRate) {
+          randomPick = fourStarList[Math.floor(Math.random() * fourStarList.length)];
         } else {
           if (probability(pickUpRate.four)) {
             randomPick = fourPickUpList[Math.floor(Math.random() * fourPickUpList.length)];
+            isGetPickUp = true;
           } else {
             const nonPickUpList = fourStarList.filter((v: string) => !fourPickUpList.includes(v));
             randomPick = nonPickUpList[Math.floor(Math.random() * nonPickUpList.length)];
           }
         }
-        setGachaExecutionResult([randomPick] as never);
-        result.push(randomPick as never);
         setFourStarCount(fourStarCount + 1);
-        setAccGachaResult([...accGachaResult, ...result]);
+        result.push(randomPick as never);
 
       } else {
-        randomPick = threeStarList[Math.floor(Math.random() * threeStarListLength)];
-        setGachaExecutionResult([randomPick] as never);
-        result.push(randomPick as never);
+        randomPick = threeStarList[Math.floor(Math.random() * threeStarList.length)];
         setThreeStarCount(threeStarCount + 1);
-        setAccGachaResult([...accGachaResult, ...result]);
+        result.push(randomPick as never);
       }
     }
-    setGachaTimes(gachaTimes + 1);
+    console.log(randomPick);
+    setGachaExecutionResult([...result]);
+    setAccGachaResult([...accGachaResult, ...result]);
   }
-  
-  // Mock-up result Data
-  // need to delete
-  const mockUpResult: Array<string> = ["Venti", "Mona", "Keqing", "Fischl", "Diluc", "Amber", "Barbara", "Qiqi", "Jean", "Kaeya"];
 
   const tenTimesGachaExecution = function(): void {
-    if (gachaTimes % 90 === 89 && !getFiveStar && !getPickUp) {
+    if (gachaTimes % 90 === 89 && !isGetFiveStar && !isGetPickUp) {
       pityFlag = true;
     }
 
     if (pityFlag) {
       setFiveStarCount(fiveStarCount + 1);
       pityFlag = false;
-      getFiveStar = false;
+      isGetFiveStar = false;
     } else {
 
       if (fiveProbability) {
@@ -154,6 +157,8 @@ export function GachaScreen() {
 
   // styled-component
   const Container = styled.div({});
+
+  console.log(gachaTimes)
 
   return (
     <Container>
