@@ -72,7 +72,10 @@
     }
   },
   "NoviceWishes": {
-    "Noelle": 100,
+    "pickUp": {
+      "five": [],
+      "four": []
+    },
     "pool": {
       "five": ["Keqing", "Mona", "Jean", "Qiqi", "Diluc"],
       "four": [
@@ -179,6 +182,10 @@
     }
   },
   "StandardWish": {
+    "pickUp": {
+      "five": [],
+      "four": []
+    },
     "rate": {
       "five": 0.6,
       "four": 5.7

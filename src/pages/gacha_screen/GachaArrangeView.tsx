@@ -1,10 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import { characterInfo, weaponInfo } from 'src/resources/data';
 import { FlexWrapper, SquareImage } from "src/components";
-import characterInfo from "../../resources/data/characterInfo.json";
-
-const characterInfoObject = JSON.parse(JSON.stringify(characterInfo));
 
 interface Props {
   result: Array<string>;
@@ -36,12 +34,19 @@ export function GachaArrangeView(props: Props) {
       <GridContainer>
         {props.result.map((r: string, i: number) => {
           let shadow = "#777";
-          console.log(characterInfoObject[r]);
-          // if (characterInfoObject[r][0] === 5) {
-          //   shadow = shadowColor.five;
-          // } else if (characterInfoObject[r][0] === 4) {
-          //   shadow = shadowColor.four;
-          // }
+          if (characterInfo[r])
+            if (characterInfo[r].rank === 5) {
+              shadow = shadowColor.five;
+            } else if (characterInfo[r].rank === 4) {
+              shadow = shadowColor.four;
+            }
+          else {
+            if (weaponInfo[r].rank === 5) {
+              shadow = shadowColor.five;
+            } else if (weaponInfo[r].rank === 4) {
+              shadow = shadowColor.four;
+            }
+          }
           return (
             <SquareImage
               styles={{

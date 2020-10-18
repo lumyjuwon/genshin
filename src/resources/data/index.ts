@@ -10,4 +10,12 @@ export interface Character {
   }
 }
 
+export interface Weapon {
+  [key: string]: {
+    rank: number,
+    type: string
+  }
+}
+
 export const characterInfo: Character = require('../data/character-info.json');
+export const weaponInfo: Weapon = require('../data/weapon-info.json');
