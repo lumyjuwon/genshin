@@ -5,6 +5,7 @@ export { Footer } from "./Footer";
 export { ScreenInnerWrapper } from "./wrapper/ScreenInnerWrapper";
 export { TextCenterWrapper } from ".//wrapper/TextCenterWrapper";
 export { FlexWrapper } from "./wrapper/FlexWrapper";
+export { ContentWrapper } from "./wrapper/ContentWrapper"
 
 // Button Component
 export { TextUnderLineButton } from "./button/TextUnderLineButton";
