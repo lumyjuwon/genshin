@@ -14,12 +14,8 @@
       "four": 75
     },
     "pity": {
-      "first": {
-        "venti": 50
-      },
-      "second": {
-        "venti": 100
-      }
+      "occur": 90,
+      "guarantee": 2
     },
     "pool": {
       "five": ["Venti", "Keqing", "Mona", "Qiqi", "Jean", "Diluc"],
@@ -120,6 +116,10 @@
       "five": 75,
       "four": 75
     },
+    "pity": {
+      "occur": 80,
+      "guarantee": 2
+    },
     "pool": {
       "five": [
         "Amos' Bow",
@@ -189,6 +189,9 @@
     "rate": {
       "five": 0.6,
       "four": 5.7
+    },
+    "pity": {
+      "occur": 90
     },
     "pool": {
       "five": [ 
