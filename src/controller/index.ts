@@ -1,0 +1,1 @@
+import { GachaController } from "./gachacontroller"
