@@ -25,6 +25,7 @@ export function GachaScreen() {
   }
 
   const gachaData = new GachaData(data);
+  const gachaExecutor = new Gacha(gachaData);
 
   const [ gachaTimes, setGachaTimes ] = useState(0);
   const [ fiveStarCount, setFiveStarCount ] = useState(0);
@@ -52,19 +53,23 @@ export function GachaScreen() {
   }
 
   const oneTimeGachaExecution = function(): void {
-    const gachaExecutor = new Gacha(gachaData, gachaTimes, pityCount, favoriteCount);
     setGachaExecutionResult(gachaExecutor.start(1) as never[]);
-    setAccGachaResult([...accGachaResult, ...gachaExecutionResult]);
     setGachaTimes(gachaExecutor.getGachaCount());
+    // const gachaExecutor = new Gacha(gachaData, gachaTimes, pityCount, favoriteCount);
+    // setGachaExecutionResult(gachaExecutor.start(1) as never[]);
+    // setAccGachaResult([...accGachaResult, ...gachaExecutionResult]);
+    // setGachaTimes(gachaExecutor.getGachaCount());
   }
 
   const tenTimesGachaExecution = function(): void {
-    const gachaExecutor = new Gacha(gachaData, gachaTimes, pityCount, favoriteCount);
     setGachaExecutionResult(gachaExecutor.start(10) as never[]);
-    setAccGachaResult([...accGachaResult, ...gachaExecutionResult]);
     setGachaTimes(gachaExecutor.getGachaCount());
-    setPityCount(gachaExecutor.pityCount);
-    setFavoriteCount(gachaExecutor.favoriteCount);
+    // const gachaExecutor = new Gacha(gachaData, gachaTimes, pityCount, favoriteCount);
+    // setGachaExecutionResult(gachaExecutor.start(10) as never[]);
+    // setAccGachaResult([...accGachaResult, ...gachaExecutionResult]);
+    // setGachaTimes(gachaExecutor.getGachaCount());
+    // setPityCount(gachaExecutor.pityCount);
+    // setFavoriteCount(gachaExecutor.favoriteCount);
   }
 
   // styled-component

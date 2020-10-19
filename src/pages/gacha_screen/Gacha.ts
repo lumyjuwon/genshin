@@ -54,11 +54,11 @@ export class Gacha {
   public favoriteCount: number;
   public gachaResult: Array<string>;
 
-  constructor(gachaData: GachaData, totalCount: number, pCount: number, fCount: number){
+  constructor(gachaData: GachaData){
     this.data = gachaData;
-    this.totalCount = totalCount;
-    this.pityCount = pCount;
-    this.favoriteCount = fCount;
+    this.totalCount = 0;
+    this.pityCount = 0;
+    this.favoriteCount = 0;
     this.gachaResult = [];
   }
 
