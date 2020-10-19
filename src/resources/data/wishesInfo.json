@@ -15,7 +15,7 @@
     },
     "pity": {
       "occur": 90,
-      "guarantee": 2
+      "guarantee": 180
     },
     "pool": {
       "five": ["Venti", "Keqing", "Mona", "Qiqi", "Jean", "Diluc"],
@@ -118,7 +118,7 @@
     },
     "pity": {
       "occur": 80,
-      "guarantee": 2
+      "guarantee": 160
     },
     "pool": {
       "five": [
