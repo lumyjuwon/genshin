@@ -16,12 +16,12 @@ export function GachaScreen() {
     FOUR_PICK_UP_LIST: wishesInfo.CharacterEventWish.pickUp.four,
     FOUR_ITEMS: wishesInfo.CharacterEventWish.pool.four,
     THREE_ITEMS: wishesInfo.CharacterEventWish.pool.three,
-    FIVE_PICK_UP_PERCENT: 50,
-    FOUR_PICK_UP_PERCENT: 75,
-    FIVE_PERCENT: 0.6,
-    FOUR_PERCENT: 5.1,
-    MAX_PITY_COUNT: 90,
-    MAX_FAVORITE_COUNT: 180,
+    FIVE_PICK_UP_PERCENT: wishesInfo.CharacterEventWish.pickUpRate.five,
+    FOUR_PICK_UP_PERCENT: wishesInfo.CharacterEventWish.pickUpRate.four,
+    FIVE_PERCENT: wishesInfo.CharacterEventWish.rate.five,
+    FOUR_PERCENT: wishesInfo.CharacterEventWish.rate.four,
+    MAX_PITY_COUNT: wishesInfo.CharacterEventWish.pity.occur,
+    MAX_FAVORITE_COUNT: wishesInfo.CharacterEventWish.pity.guarantee,
   }
 
   const gachaData = new GachaData(data);
