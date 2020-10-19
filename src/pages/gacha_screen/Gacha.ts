@@ -1,43 +1,37 @@
+interface GachaInfo{
+  percent: number;
+  items: Array<string>;
+  pickUpPercent: number;
+  pickUpItems: Array<string>;
+}
 
 interface Data{
-  WIN_TARGET: Array<string>;
-  WIN_ITEMS: Array<string>;
-  FOUR_PICK_UP_LIST: Array<string>;
-  FOUR_ITEMS: Array<string>;
-  THREE_ITEMS: Array<string>;
-  FIVE_PICK_UP_PERCENT: number;
-  FOUR_PICK_UP_PERCENT: number;
-  FIVE_PERCENT: number;
-  FOUR_PERCENT: number;
-  MAX_PITY_COUNT: number;
-  MAX_FAVORITE_COUNT: number;
+  favoriteTarget: Array<string>; // 없으면 빈배열
+  maxPityCount: number;
+  maxFavoriteCount: number;
+  maxGuaranteeCount: number;
+  fiveStars: GachaInfo;
+  fourStars: GachaInfo;
+  threeStars: GachaInfo;
 }
 
 export class GachaData implements Data{
-  readonly WIN_TARGET: Array<string>;
-  readonly WIN_ITEMS: Array<string>;
-  readonly FOUR_PICK_UP_LIST: Array<string>;
-  readonly FOUR_ITEMS: Array<string>;
-  readonly THREE_ITEMS: Array<string>;
-  readonly FIVE_PICK_UP_PERCENT: number;
-  readonly FOUR_PICK_UP_PERCENT: number;
-  readonly FIVE_PERCENT: number;
-  readonly FOUR_PERCENT: number;
-  readonly MAX_PITY_COUNT: number;
-  readonly MAX_FAVORITE_COUNT: number;
+  readonly favoriteTarget: Array<string>;
+  readonly maxPityCount: number;
+  readonly maxFavoriteCount: number;
+  readonly maxGuaranteeCount: number;
+  readonly fiveStars: GachaInfo;
+  readonly fourStars: GachaInfo;
+  readonly threeStars: GachaInfo;
 
   constructor(data: Data){
-    this.WIN_TARGET = data.WIN_TARGET;
-    this.WIN_ITEMS = data.WIN_ITEMS;
-    this.FOUR_PICK_UP_LIST = data.FOUR_PICK_UP_LIST;
-    this.FOUR_ITEMS = data.FOUR_ITEMS;
-    this.THREE_ITEMS = data.THREE_ITEMS;
-    this.FIVE_PICK_UP_PERCENT = data.FIVE_PICK_UP_PERCENT;
-    this.FOUR_PICK_UP_PERCENT = data.FOUR_PICK_UP_PERCENT;
-    this.FIVE_PERCENT = data.FIVE_PERCENT;
-    this.FOUR_PERCENT = data.FOUR_PERCENT;
-    this.MAX_PITY_COUNT = data.MAX_PITY_COUNT;
-    this.MAX_FAVORITE_COUNT = data.MAX_FAVORITE_COUNT;
+    this.favoriteTarget = data.favoriteTarget;
+    this.maxPityCount = data.maxPityCount;
+    this.maxFavoriteCount = data.maxFavoriteCount;
+    this.maxGuaranteeCount = data.maxGuaranteeCount;
+    this.fiveStars = data.fiveStars;
+    this.fourStars = data.fourStars;
+    this.threeStars = data.threeStars;
 
     this.isValidData();
   }
@@ -59,144 +53,95 @@ export class Gacha {
     this.totalCount = 0;
     this.pityCount = 0;
     this.favoriteCount = 0;
-    this.gachaResult = [];
+    this.gachaResult = new Array<string>();
   }
 
-  // 5성 뽑기
-  winGacha(): string {
-    this.pityCount = 0;
-    let resultCharacter: string;
+  pick(info: GachaInfo): string{
+    const isPickUp = Math.random() * 100 <= info.pickUpPercent;
+    let resultItem: string;
 
-    if(this.favoriteCount === this.data.MAX_FAVORITE_COUNT){
-      this.favoriteCount = 0;
-      const characterIndex: number = Math.floor(Math.random() * this.data.WIN_TARGET.length)
-      resultCharacter = this.data.WIN_TARGET[characterIndex];
+    // Check Pick Up
+    if(isPickUp){
+      const itemIndex = Math.floor(Math.random() * info.pickUpItems.length);
+      resultItem = info.pickUpItems[itemIndex];
     }
+    // Not Pick Up
     else{
-      const isPickUp = Math.random() * 100 <= this.data.FIVE_PICK_UP_PERCENT;
-
-      // WIN_TARGET중에서 랜덤
-      if(isPickUp){
-        this.favoriteCount = 0;
-        const characterIndex: number = Math.floor(Math.random() * this.data.WIN_TARGET.length)
-        resultCharacter = this.data.WIN_TARGET[characterIndex];
-      }
-      // WIN_TARGET을 제외한 5성에서 랜덤
-      else{
-        const nonPickUpCharacters: Array<string> = this.data.WIN_ITEMS.filter(
-          (v: string) => !this.data.WIN_TARGET.includes(v)
-        );
-        const characterIndex:number = Math.floor(Math.random() * nonPickUpCharacters.length);
-        resultCharacter = nonPickUpCharacters[characterIndex];
-      }
+      const nonPickUpItems: Array<string> = info.items.filter(
+        (item: string) => !info.pickUpItems.includes(item)
+      );
+      const itemIndex:number = Math.floor(Math.random() * nonPickUpItems.length);
+      resultItem = nonPickUpItems[itemIndex];
     }
-    console.log("win Gacha", resultCharacter);
-    return resultCharacter;
+
+    return resultItem;
   }
-  
-  // 4~3성 가챠
-  normalGacha(): string {
-    const isFour = Math.random() * 100 <= this.data.FOUR_PERCENT;
-    let resultCharacter: string;
-    
-    if(isFour) {
-      const isFourPickUp = Math.random() * 100 <= this.data.FOUR_PICK_UP_PERCENT;
-
-      // 4성 픽업
-      if (isFourPickUp) {
-        const characterIndex = Math.floor(Math.random() * this.data.FOUR_PICK_UP_LIST.length);
-        resultCharacter = this.data.FOUR_PICK_UP_LIST[characterIndex]
-
-      // 나머지 4성
-      } else {
-        const nonPickUpCharacters = this.data.FOUR_ITEMS.filter(
-          (v: string) => !this.data.FOUR_PICK_UP_LIST.includes(v)
-        );
-        const characterIndex = Math.floor(Math.random() * nonPickUpCharacters.length);
-        resultCharacter = nonPickUpCharacters[characterIndex];
-      }
-
-    } else {
-      const characterIndex = Math.floor(Math.random() * this.data.THREE_ITEMS.length);
-      resultCharacter = this.data.THREE_ITEMS[characterIndex];
-    }
-    console.log("normalGacha", resultCharacter)
-    return resultCharacter;
-  }
-
-  guaranteeOverFour(): string {
-    const isFive = Math.random() * 100 <= this.data.FIVE_PERCENT;
-    let resultCharacter: string;
-    if(isFive) {
-      const isFivePickUp = Math.random() * 100 <= this.data.FIVE_PICK_UP_PERCENT;
-      if(isFivePickUp) {
-        const characterIndex = Math.floor(Math.random() * this.data.WIN_TARGET.length);
-        resultCharacter = this.data.WIN_TARGET[characterIndex];
-      } else {
-        const nonPickUpCharacters: Array<string> = this.data.WIN_ITEMS.filter(
-          (v: string) => !this.data.WIN_TARGET.includes(v)
-        );
-        const characterIndex:number = Math.floor(Math.random() * nonPickUpCharacters.length);
-        resultCharacter = nonPickUpCharacters[characterIndex];
-      }
-    } else {
-      const isFourPickUp = Math.random() * 100 <= this.data.FOUR_PICK_UP_PERCENT;
-
-      if (isFourPickUp) {
-        const characterIndex = Math.floor(Math.random() * this.data.FOUR_PICK_UP_LIST.length);
-        resultCharacter = this.data.FOUR_PICK_UP_LIST[characterIndex]
-
-      } else {
-        const nonPickUpCharacters = this.data.FOUR_ITEMS.filter(
-          (v: string) => !this.data.FOUR_PICK_UP_LIST.includes(v)
-        );
-        const characterIndex = Math.floor(Math.random() * nonPickUpCharacters.length);
-        resultCharacter = nonPickUpCharacters[characterIndex];
-      }
-    }
-    console.log("guarantee", resultCharacter);
-    return resultCharacter;
-  }
-
 
   start(tries: number): Array<string> {
     this.totalCount += tries;
+    const resultItems = new Array<string>();
 
     for(let i = 0; i<tries; i++){
       this.pityCount += 1;
       this.favoriteCount += 1;
 
-      // NEED TO FIX: pityCount, favoriteCount가 10 이후로 증가하지 않음
-      if(this.pityCount === this.data.MAX_PITY_COUNT || this.favoriteCount === this.data.MAX_FAVORITE_COUNT){
-        console.log("pity");
-        this.gachaResult.push(this.winGacha());
-      }
-      else{
-
-        // 10회 4성 이상 100%
-        if(i===9) {
-          console.log("10번째다!")
-          this.gachaResult.push(this.guaranteeOverFour());
-
-        } else {
-          const isFive = Math.random() * 100 <= this.data.FIVE_PERCENT;
-
-          if(isFive){
-            this.gachaResult.push(this.winGacha());
-          }
-          else{
-            this.gachaResult.push(this.normalGacha());
+      // 4성이상 보장
+      if(this.data.maxGuaranteeCount === tries && i === 0) {
+        const percent = Math.random() * 100;
+        let resultItem: string;
+        if(percent <= this.data.fiveStars.percent) {
+          resultItem = this.pick(this.data.fiveStars);
+          this.pityCount = 0;
+          
+          if (this.data.fiveStars.pickUpItems.includes(resultItem)) {
+            this.favoriteCount = 0;
           }
         }
+        else {
+          resultItem = this.pick(this.data.fourStars);
+        }
+      }
+
+      // 천장일 때
+      else if(this.pityCount === this.data.maxPityCount || this.favoriteCount === this.data.maxFavoriteCount){
+        const resultItem = this.pick(this.data.fiveStars);
+        
+        if(this.data.favoriteTarget.includes(resultItem)){
+          this.pityCount = 0;
+          this.favoriteCount = 0;
+        }
+        else{
+          this.pityCount = 0;
+        }
+
+        resultItems.push(resultItem);
+      }
+
+      // 일반 뽑기
+      else{
+        const percent = Math.random() * 100;
+        let resultItem: string;
+        if(percent <= this.data.fiveStars.percent) {
+          resultItem = this.pick(this.data.fiveStars);
+          
+          this.pityCount = 0;
+          if (this.data.fiveStars.pickUpItems.includes(resultItem)) {
+            this.favoriteCount = 0;
+          }
+        }
+        else if(percent <= (this.data.fiveStars.percent + this.data.fourStars.percent)) {
+          resultItem = this.pick(this.data.fourStars);
+        }
+        else {
+          resultItem = this.pick(this.data.threeStars);
+        }
+
+        resultItems.push(resultItem);
       }
     }
     
     console.log('Pity Count', this.pityCount);
     console.log('Favorite Count', this.favoriteCount)
     return this.gachaResult;
-  }
-
-  getGachaCount(): number {
-    return this.totalCount;
   }
 }
