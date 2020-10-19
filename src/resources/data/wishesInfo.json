@@ -9,7 +9,7 @@
       "five": ["Venti"],
       "four": ["Fischl", "Xiangling", "Barbara"]
     },
-    "pickupRate": {
+    "pickUpRate": {
       "five": 50,
       "four": 75
     },
@@ -112,7 +112,7 @@
       "5star": ["Amos' Bow", "Aquila Favonia"],
       "4star": ["The Stringless", "Wine and Song", "The Bell", "Favonius Lance", "The Flute"]
     },
-    "pickupRate": {
+    "pickUpRate": {
       "five": 75,
       "four": 75
     },
