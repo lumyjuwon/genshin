@@ -149,4 +149,8 @@ export class Gacha {
     console.log('Favorite Count', this.favoriteCount)
     return this.gachaResult;
   }
+
+  getGachaCount(): number {
+    return this.totalCount;
+  }
 }

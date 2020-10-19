@@ -47,41 +47,19 @@ export function GachaScreen() {
   const onBannerClick = function(content: string): void {
     setPickUpContent(content);
   }
-  
-  // After this, gacha logic
-  const probability: Function = function(prob: number): boolean {
-    return Math.random() < (prob / 100)
-  }
-  const fiveProbability = probability(0.6);
-  const fourProbability = probability(5.7);
 
-  
-  let contentWithoutBlank: string = pickUpContent.split(" ").join("");
-  let pityFlag: boolean = false;
-  let pityFlagCount: number = 0;
-  let isGetFiveStar: boolean = false;
-  let isGetPickUp: boolean = false;
-  const pickUpGuaranteeCount = wishesInfo[contentWithoutBlank].pity.guarantee;
-  const fivePickUpList = wishesInfo[contentWithoutBlank].pickUp.five;
-  const fourPickUpList = wishesInfo[contentWithoutBlank].pickUp.four;
-  const pickUpRate = wishesInfo[contentWithoutBlank].pickupRate;
-  const fiveStarList = wishesInfo[contentWithoutBlank].pool.five;
-  const fourStarList = wishesInfo[contentWithoutBlank].pool.four;
-  const threeStarList = wishesInfo[contentWithoutBlank].pool.three;
-  const pickUpOccur = wishesInfo[contentWithoutBlank].pity.occur;
-  
   const oneTimeGachaExecution = function(): void {
-    console.log(gachaExeecutor.start(1));
+    gachaExeecutor.start(1);
+    setGachaTimes(gachaTimes + gachaExeecutor.getGachaCount());
   }
 
   const tenTimesGachaExecution = function(): void {
-    console.log(gachaExeecutor.start(10));
+    gachaExeecutor.start(10);
+    setGachaTimes(gachaTimes + gachaExeecutor.getGachaCount());
   }
 
   // styled-component
   const Container = styled.div({});
-
-  console.log(gachaTimes)
 
   return (
     <Container>
