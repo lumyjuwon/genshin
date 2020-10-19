@@ -25,7 +25,6 @@ export function GachaScreen() {
   }
 
   const gachaData = new GachaData(data);
-  const gachaExeecutor = new Gacha(gachaData);
 
   const [ gachaTimes, setGachaTimes ] = useState(0);
   const [ fiveStarCount, setFiveStarCount ] = useState(0);
@@ -34,6 +33,8 @@ export function GachaScreen() {
   const [ pickUpContent, setPickUpContent ] = useState("Character Event Wish");
   const [ accGachaResult, setAccGachaResult ] = useState([]);
   const [ gachaExecutionResult, setGachaExecutionResult ] = useState([]);
+  const [ pityCount, setPityCount ] = useState(0);
+  const [ favoriteCount, setFavoriteCount ] = useState(0);
   
   const onResetClick = (): void => {
     setGachaTimes(0);
@@ -42,6 +43,8 @@ export function GachaScreen() {
     setThreeStarCount(0);
     setGachaExecutionResult([]);
     setAccGachaResult([]);
+    setPityCount(0);
+    setFavoriteCount(0);
   };
 
   const onBannerClick = function(content: string): void {
@@ -49,11 +52,19 @@ export function GachaScreen() {
   }
 
   const oneTimeGachaExecution = function(): void {
-    gachaExeecutor.start(1);
+    const gachaExecutor = new Gacha(gachaData, gachaTimes, pityCount, favoriteCount);
+    setGachaExecutionResult(gachaExecutor.start(1) as never[]);
+    setAccGachaResult([...accGachaResult, ...gachaExecutionResult]);
+    setGachaTimes(gachaExecutor.getGachaCount());
   }
 
   const tenTimesGachaExecution = function(): void {
-    gachaExeecutor.start(10);
+    const gachaExecutor = new Gacha(gachaData, gachaTimes, pityCount, favoriteCount);
+    setGachaExecutionResult(gachaExecutor.start(10) as never[]);
+    setAccGachaResult([...accGachaResult, ...gachaExecutionResult]);
+    setGachaTimes(gachaExecutor.getGachaCount());
+    setPityCount(gachaExecutor.pityCount);
+    setFavoriteCount(gachaExecutor.favoriteCount);
   }
 
   // styled-component

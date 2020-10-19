@@ -34,18 +34,14 @@ export function GachaArrangeView(props: Props) {
       <GridContainer>
         {props.result.map((r: string, i: number) => {
           let shadow = "#777";
-          if (characterInfo[r])
-            if (characterInfo[r].rank === 5) {
-              shadow = shadowColor.five;
-            } else if (characterInfo[r].rank === 4) {
-              shadow = shadowColor.four;
-            }
-          else {
-            if (weaponInfo[r].rank === 5) {
-              shadow = shadowColor.five;
-            } else if (weaponInfo[r].rank === 4) {
-              shadow = shadowColor.four;
-            }
+          if (characterInfo[r]) {
+            if (characterInfo[r].rank === 5) shadow = shadowColor.five;
+            else if (characterInfo[r].rank === 4) shadow = shadowColor.four;
+
+          } else {
+            console.log("무기다!")
+            if (weaponInfo[r].rank === 5) shadow = shadowColor.five;
+            else if (weaponInfo[r].rank === 4) shadow = shadowColor.four;
           }
           return (
             <SquareImage

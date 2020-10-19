@@ -54,11 +54,11 @@ export class Gacha {
   public favoriteCount: number;
   public gachaResult: Array<string>;
 
-  constructor(gachaData: GachaData){
+  constructor(gachaData: GachaData, totalCount: number, pCount: number, fCount: number){
     this.data = gachaData;
-    this.totalCount = 0;
-    this.pityCount = 0;
-    this.favoriteCount = 0;
+    this.totalCount = totalCount;
+    this.pityCount = pCount;
+    this.favoriteCount = fCount;
     this.gachaResult = [];
   }
 
@@ -90,6 +90,7 @@ export class Gacha {
         resultCharacter = nonPickUpCharacters[characterIndex];
       }
     }
+    console.log("win Gacha", resultCharacter);
     return resultCharacter;
   }
   
@@ -119,6 +120,7 @@ export class Gacha {
       const characterIndex = Math.floor(Math.random() * this.data.THREE_ITEMS.length);
       resultCharacter = this.data.THREE_ITEMS[characterIndex];
     }
+    console.log("normalGacha", resultCharacter)
     return resultCharacter;
   }
 
@@ -152,6 +154,7 @@ export class Gacha {
         resultCharacter = nonPickUpCharacters[characterIndex];
       }
     }
+    console.log("guarantee", resultCharacter);
     return resultCharacter;
   }
 
@@ -159,13 +162,11 @@ export class Gacha {
   start(tries: number): Array<string> {
     this.totalCount += tries;
 
-    console.log(this.totalCount, this.data.MAX_PITY_COUNT, this.data.MAX_FAVORITE_COUNT);
-
     for(let i = 0; i<tries; i++){
       this.pityCount += 1;
       this.favoriteCount += 1;
 
-
+      // NEED TO FIX: pityCount, favoriteCount가 10 이후로 증가하지 않음
       if(this.pityCount === this.data.MAX_PITY_COUNT || this.favoriteCount === this.data.MAX_FAVORITE_COUNT){
         console.log("pity");
         this.gachaResult.push(this.winGacha());
@@ -174,6 +175,7 @@ export class Gacha {
 
         // 10회 4성 이상 100%
         if(i===9) {
+          console.log("10번째다!")
           this.gachaResult.push(this.guaranteeOverFour());
 
         } else {
