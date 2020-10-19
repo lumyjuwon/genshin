@@ -49,13 +49,11 @@ export function GachaScreen() {
   }
 
   const oneTimeGachaExecution = function(): void {
-    setGachaExecutionResult(gachaExeecutor.start(1) as never[]);
-    setGachaTimes(gachaTimes + gachaExeecutor.getGachaCount());
+    gachaExeecutor.start(1);
   }
 
   const tenTimesGachaExecution = function(): void {
-    setGachaExecutionResult(gachaExeecutor.start(10) as never[]);
-    setGachaTimes(gachaTimes + gachaExeecutor.getGachaCount());
+    gachaExeecutor.start(10);
   }
 
   // styled-component
