@@ -6,7 +6,7 @@ export interface GachaInfo{
 }
 
 export interface GachaData{
-  pickUpTarget: Array<string>; // 없으면 빈배열
+  pickUpTarget: Array<string>;
   maxPityCount: number;
   maxPickUpCount: number;
   maxBonusCount: number;
@@ -122,7 +122,7 @@ export class GachaController {
         resultItems.push(resultItem);
       }
 
-      // 천장일 때
+      // 천장일 때, need to fix
       else if(this.pityCount === this.data.maxPityCount || this.favoriteCount === this.data.maxPickUpCount){
         const resultItem = this.pick(this.data.fiveStars);
         

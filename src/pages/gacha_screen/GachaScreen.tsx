@@ -2,11 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 
 import { GachaResult } from "./GachaResult";
-import { wishesInfo } from 'src/resources/data';
+import { gachaInfo } from 'src/resources/data';
 import { GachaArrangeView } from './GachaArrangeView';
 import { GachaBanner } from "./GachaBanner";
 import { ScreenInnerWrapper, RoundTextButton, TextCenterWrapper, FlexWrapper } from "src/components";
-import { Gacha, GachaData } from "./Gacha";
+import { GachaController, GachaContent, GachaData } from "./Gacha";
 import { GachaInventory } from "./GachaInventory";
 
 // styled-component
@@ -18,30 +18,30 @@ export function GachaScreen() {
   const [ fiveStarCount, setFiveStarCount ] = useState(0);
   const [ fourStarCount, setFourStarCount ] = useState(0);
   const [ threeStarCount, setThreeStarCount ] = useState(0);
-  const [ pickUpContent, setPickUpContent ] = useState(Object.keys(wishesInfo)[0]);
+  const [ pickUpContent, setPickUpContent ] = useState(Object.keys(gachaInfo)[0]);
   const [ gachaInventoryList, setGachaInventoryList ] = useState([]);
   const [ gachaExecutionResult, setGachaExecutionResult ] = useState([]);
   const [ nextPity, setNextPity ] = useState(0);
   
-  const refInitialValue = new Map<string, Gacha>();
-  const gacha = useRef<Gacha>();
-  const gachaMap = useRef<Map<string, Gacha>>(refInitialValue);
+  const refInitialValue = new Map<string, GachaController>();
+  const gacha = useRef<GachaController>();
+  const gachaMap = useRef<Map<string, GachaController>>(refInitialValue);
 
-  const contentData = {
-    favoriteTarget: wishesInfo[pickUpContent].favoriteTarget,
-    maxPityCount: wishesInfo[pickUpContent].pityCount,
-    maxFavoriteCount: wishesInfo[pickUpContent].favoriteCount,
-    maxGuaranteeCount: wishesInfo[pickUpContent].guaranteeCount,
-    guaranteeItem: wishesInfo[pickUpContent].guaranteeItem,
-    fiveStars: wishesInfo[pickUpContent].fiveStars,
-    fourStars: wishesInfo[pickUpContent].fourStars,
-    threeStars: wishesInfo[pickUpContent].threeStars
+  const contentData: GachaData = {
+    pickUpTarget: gachaInfo[pickUpContent].pickUpTarget,
+    maxPityCount: gachaInfo[pickUpContent].maxPityCount,
+    maxPickUpCount: gachaInfo[pickUpContent].maxPickUpCount,
+    maxBonusCount: gachaInfo[pickUpContent].maxBonusCount,
+    guaranteeItem: gachaInfo[pickUpContent].guaranteeItem,
+    fiveStars: gachaInfo[pickUpContent].fiveStars,
+    fourStars: gachaInfo[pickUpContent].fourStars,
+    threeStars: gachaInfo[pickUpContent].threeStars
   }
 
   useEffect(() => {
     if(!gachaMap.current?.has(pickUpContent)){
-      const data = new GachaData(contentData);
-      const executor = new Gacha(data);
+      const data = new GachaContent(contentData);
+      const executor = new GachaController(data);
       gachaMap.current?.set(pickUpContent, executor);
     }
     
@@ -90,7 +90,7 @@ export function GachaScreen() {
     <Container>
       <ScreenInnerWrapper>
         <div style={{margin: "30px"}}>
-          <GachaBanner content={pickUpContent} onClick={onBannerClick} pickUpList={Object.keys(wishesInfo)}/>
+          <GachaBanner content={pickUpContent} onClick={onBannerClick} pickUpList={Object.keys(gachaInfo)}/>
           <GachaArrangeView result={gachaExecutionResult} />
           <TextCenterWrapper>
             <div style={{margin: "20px"}}>

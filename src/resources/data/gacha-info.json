@@ -1,9 +1,9 @@
 {
   "Character Event Wish": {
-    "favoriteTarget": ["Venti"],
-    "pityCount": 90,
-    "favoriteCount": 180,
-    "guaranteeCount": 10,
+    "pickUpTarget": ["Venti"],
+    "maxPityCount": 90,
+    "maxPickUpCount": 180,
+    "maxBonusCount": 10,
     "guaranteeItem": "",
     "fiveStars": {
       "percent": 0.6,
