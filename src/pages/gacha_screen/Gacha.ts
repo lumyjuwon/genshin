@@ -10,6 +10,7 @@ interface Data{
   maxPityCount: number;
   maxFavoriteCount: number;
   maxGuaranteeCount: number;
+  guaranteeCharacter: Array<string>;
   fiveStars: GachaInfo;
   fourStars: GachaInfo;
   threeStars: GachaInfo;
@@ -20,6 +21,7 @@ export class GachaData implements Data{
   readonly maxPityCount: number;
   readonly maxFavoriteCount: number;
   readonly maxGuaranteeCount: number;
+  readonly guaranteeCharacter: Array<string>;
   readonly fiveStars: GachaInfo;
   readonly fourStars: GachaInfo;
   readonly threeStars: GachaInfo;
@@ -29,6 +31,7 @@ export class GachaData implements Data{
     this.maxPityCount = data.maxPityCount;
     this.maxFavoriteCount = data.maxFavoriteCount;
     this.maxGuaranteeCount = data.maxGuaranteeCount;
+    this.guaranteeCharacter = data.guaranteeCharacter;
     this.fiveStars = data.fiveStars;
     this.fourStars = data.fourStars;
     this.threeStars = data.threeStars;
@@ -79,17 +82,19 @@ export class Gacha {
 
   start(tries: number): Array<string> {
     this.totalCount += tries;
-    const resultItems = new Array<string>();
 
     for(let i = 0; i<tries; i++){
       this.pityCount += 1;
       this.favoriteCount += 1;
 
-      // 4성이상 보장
+      // 4성이상 보장, 초보자 Noelle
       if(this.data.maxGuaranteeCount === tries && i === 0) {
         const percent = Math.random() * 100;
         let resultItem: string;
-        if(percent <= this.data.fiveStars.percent) {
+        if(this.data.guaranteeCharacter.length > 0) {
+          resultItem = this.data.guaranteeCharacter.pop() as string;
+        }
+        else if(percent <= this.data.fiveStars.percent) {
           resultItem = this.pick(this.data.fiveStars);
           this.pityCount = 0;
           
@@ -100,6 +105,7 @@ export class Gacha {
         else {
           resultItem = this.pick(this.data.fourStars);
         }
+        this.gachaResult.push(resultItem);
       }
 
       // 천장일 때
@@ -114,7 +120,7 @@ export class Gacha {
           this.pityCount = 0;
         }
 
-        resultItems.push(resultItem);
+        this.gachaResult.push(resultItem);
       }
 
       // 일반 뽑기
@@ -136,12 +142,13 @@ export class Gacha {
           resultItem = this.pick(this.data.threeStars);
         }
 
-        resultItems.push(resultItem);
+        this.gachaResult.push(resultItem);
       }
     }
     
     console.log('Pity Count', this.pityCount);
     console.log('Favorite Count', this.favoriteCount)
+    console.log(this.gachaResult);
     return this.gachaResult;
   }
 }
