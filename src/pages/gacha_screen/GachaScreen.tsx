@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 
 import { GachaResult } from "./GachaResult";
@@ -9,33 +9,41 @@ import { ScreenInnerWrapper, RoundTextButton, TextCenterWrapper } from "src/comp
 import { Gacha, GachaData } from "./Gacha";
 
 export function GachaScreen() {
-
-  const data = {
-    WIN_TARGET: wishesInfo.CharacterEventWish.pickUp.five,
-    WIN_ITEMS: wishesInfo.CharacterEventWish.pool.five,
-    FOUR_PICK_UP_LIST: wishesInfo.CharacterEventWish.pickUp.four,
-    FOUR_ITEMS: wishesInfo.CharacterEventWish.pool.four,
-    THREE_ITEMS: wishesInfo.CharacterEventWish.pool.three,
-    FIVE_PICK_UP_PERCENT: wishesInfo.CharacterEventWish.pickUpRate.five,
-    FOUR_PICK_UP_PERCENT: wishesInfo.CharacterEventWish.pickUpRate.four,
-    FIVE_PERCENT: wishesInfo.CharacterEventWish.rate.five,
-    FOUR_PERCENT: wishesInfo.CharacterEventWish.rate.four,
-    MAX_PITY_COUNT: wishesInfo.CharacterEventWish.pity.occur,
-    MAX_FAVORITE_COUNT: wishesInfo.CharacterEventWish.pity.guarantee,
-  }
-
-  const gachaData = new GachaData(data);
-  const gachaExecutor = new Gacha(gachaData);
-
+  
   const [ gachaTimes, setGachaTimes ] = useState(0);
   const [ fiveStarCount, setFiveStarCount ] = useState(0);
   const [ fourStarCount, setFourStarCount ] = useState(0);
   const [ threeStarCount, setThreeStarCount ] = useState(0);
   const [ pickUpContent, setPickUpContent ] = useState("Character Event Wish");
-  const [ accGachaResult, setAccGachaResult ] = useState([]);
+  const [ gachaInventoryList, setGachaInventoryList ] = useState([]);
   const [ gachaExecutionResult, setGachaExecutionResult ] = useState([]);
-  const [ pityCount, setPityCount ] = useState(0);
-  const [ favoriteCount, setFavoriteCount ] = useState(0);
+  
+  const refInitialValue = new Map<string, Gacha>();
+  const gacha = useRef<Gacha>();
+  const gachaMap = useRef<Map<string, Gacha>>(refInitialValue);
+  
+  const contentWithoutBlank = pickUpContent.split(" ").join("");
+  
+  const contentData = {
+    favoriteTarget: wishesInfo[contentWithoutBlank].favoriteTarget,
+    maxPityCount: wishesInfo[contentWithoutBlank].pityCount,
+    maxFavoriteCount: wishesInfo[contentWithoutBlank].favoriteCount,
+    maxGuaranteeCount: wishesInfo[contentWithoutBlank].guaranteeCount,
+    guaranteeCharacter: wishesInfo[contentWithoutBlank].guaranteeCharacter,
+    fiveStars: wishesInfo[contentWithoutBlank].fiveStars,
+    fourStars: wishesInfo[contentWithoutBlank].fourStars,
+    threeStars: wishesInfo[contentWithoutBlank].threeStars
+  }
+
+  useEffect(() => {
+    if(!gachaMap.current?.has(contentWithoutBlank)){
+      const data = new GachaData(contentData);
+      const executor = new Gacha(data);
+      gachaMap.current?.set(contentWithoutBlank, executor);
+    }
+    
+    gacha.current = gachaMap.current?.get(contentWithoutBlank);
+  }, [contentWithoutBlank, contentData]);
   
   const onResetClick = (): void => {
     setGachaTimes(0);
@@ -43,9 +51,7 @@ export function GachaScreen() {
     setFourStarCount(0);
     setThreeStarCount(0);
     setGachaExecutionResult([]);
-    setAccGachaResult([]);
-    setPityCount(0);
-    setFavoriteCount(0);
+    setGachaInventoryList([]);
   };
 
   const onBannerClick = function(content: string): void {
@@ -53,27 +59,25 @@ export function GachaScreen() {
   }
 
   const oneTimeGachaExecution = function(): void {
-    setGachaExecutionResult(gachaExecutor.start(1) as never[]);
-    setGachaTimes(gachaExecutor.getGachaCount());
-    // const gachaExecutor = new Gacha(gachaData, gachaTimes, pityCount, favoriteCount);
-    // setGachaExecutionResult(gachaExecutor.start(1) as never[]);
-    // setAccGachaResult([...accGachaResult, ...gachaExecutionResult]);
-    // setGachaTimes(gachaExecutor.getGachaCount());
+    setGachaExecutionResult(gacha.current?.start(1) as never[]);
+    gacha.current && setGachaTimes(gacha.current.totalCount);
+    setGachaInventoryList([...gachaInventoryList, ...gachaExecutionResult]);
   }
 
   const tenTimesGachaExecution = function(): void {
-    setGachaExecutionResult(gachaExecutor.start(10) as never[]);
-    setGachaTimes(gachaExecutor.getGachaCount());
-    // const gachaExecutor = new Gacha(gachaData, gachaTimes, pityCount, favoriteCount);
-    // setGachaExecutionResult(gachaExecutor.start(10) as never[]);
-    // setAccGachaResult([...accGachaResult, ...gachaExecutionResult]);
-    // setGachaTimes(gachaExecutor.getGachaCount());
-    // setPityCount(gachaExecutor.pityCount);
-    // setFavoriteCount(gachaExecutor.favoriteCount);
+    setGachaExecutionResult(gacha.current?.start(10) as never[]);
+    gacha.current && setGachaTimes(gacha.current.totalCount);
+    setGachaInventoryList([...gachaInventoryList, ...gachaExecutionResult]);
   }
 
   // styled-component
   const Container = styled.div({});
+
+  let noviceWishesFlag: boolean = true;
+
+  if(contentWithoutBlank === "NoviceWishes" && gachaTimes === 20) {
+    noviceWishesFlag = false;
+  }
 
   return (
     <Container>
@@ -96,15 +100,25 @@ export function GachaScreen() {
               >
                 1 Time
               </RoundTextButton>}
-              <RoundTextButton
-                styles={{ buttonStyles: { display: "inline-block" }}}
-                onClick={() => tenTimesGachaExecution()}
-              >
-                10 Time
-              </RoundTextButton>
+              {noviceWishesFlag ? 
+                <RoundTextButton
+                  styles={{ buttonStyles: { display: "inline-block" }}}
+                  onClick={() => tenTimesGachaExecution()}
+                >
+                  10 Time
+                </RoundTextButton> :
+                <TextCenterWrapper>
+                  Novive Wishes finished. Choose another Wish or click Reset Button
+                </TextCenterWrapper>
+              }
             </div>
           </TextCenterWrapper>
-          <GachaResult times={gachaTimes} three={threeStarCount} four={fourStarCount} five={fiveStarCount} />
+          <GachaResult
+            times={gachaTimes}
+            five={fiveStarCount}
+            four={fourStarCount}
+            three={threeStarCount}
+          />
         </div>
       </ScreenInnerWrapper>
     </Container>
