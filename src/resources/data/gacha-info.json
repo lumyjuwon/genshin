@@ -1,11 +1,9 @@
 {
-  "pickupContents": ["Novice Wishes", "Character Event Wish", "Weapon Event Wish", "Standard Wish"],
-  
-  "Character Event Wish": {
-    "favoriteTarget": ["Venti"],
-    "pityCount": 90,
-    "favoriteCount": 180,
-    "guaranteeCount": 10,
+  "CharacterEvent": {
+    "pickUpTarget": ["Venti"],
+    "maxPityCount": 90,
+    "maxPickUpCount": 180,
+    "maxBonusCount": 10,
     "guaranteeItem": "",
     "fiveStars": {
       "percent": 0.6,
@@ -71,11 +69,11 @@
     }
   },
 
-  "Weapon Event Wish": {
-    "favoriteTarget": ["Amos' Bow", "Aquila Favonia"],
-    "pityCount": 80,
-    "favoriteCount": 160,
-    "guaranteeCount": 10,
+  "WeaponEvent": {
+    "pickUpTarget": ["Amos' Bow", "Aquila Favonia"],
+    "maxPityCount": 80,
+    "maxPickUpCount": 160,
+    "maxBonusCount": 10,
     "guaranteeItem": "",
     "fiveStars": {
       "percent": 0.7,
@@ -158,11 +156,11 @@
     }
   },
 
-  "Standard Wish": {
-    "favoriteTarget": [],
-    "pityCount": 90,
-    "favoriteCount": 180,
-    "guaranteeCount": 10,
+  "Standard": {
+    "pickUpTarget": [],
+    "maxPityCount": 90,
+    "maxPickUpCount": 180,
+    "maxBonusCount": 10,
     "guaranteeItem": "",
     "fiveStars": {
       "percent": 0.6,
@@ -247,11 +245,11 @@
     }
   },
 
-  "Novice Wishes": {
-    "favoriteTarget": [],
-    "pityCount": 9999,
-    "favoriteCount": 9999,
-    "guaranteeCount": 10,
+  "Novice": {
+    "pickUpTarget": [],
+    "maxPityCount": 9999,
+    "maxPickUpCount": 9999,
+    "maxBonusCount": 10,
     "guaranteeItem": "Noelle",
     "fiveStars": {
       "percent": 0.6,

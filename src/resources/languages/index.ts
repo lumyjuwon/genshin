@@ -1,5 +1,5 @@
 interface Language{
-
+  Energetic_lightning: string
 }
 
 export const en: Language = require("./en-us.json")
