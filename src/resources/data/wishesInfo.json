@@ -1,6 +1,4 @@
 {
-  "pickupContents": ["Novice Wishes", "Character Event Wish", "Weapon Event Wish", "Standard Wish"],
-  
   "Character Event Wish": {
     "favoriteTarget": ["Venti"],
     "pityCount": 90,

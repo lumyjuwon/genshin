@@ -24,6 +24,20 @@ const GridContainer = styled.div({
   rowGap: "5px",
 });
 
+const PositionAbsolute = styled.div({
+  display: "flex",
+  textAlign: "center",
+  alignItems: "center",
+  position: "absolute",
+  top: "0",
+  right: "0",
+  borderRadius: "50%",
+  backgroundColor: "#ff0000",
+  width: "25px",
+  height: "25px",
+  boxShadow: "4px 4px 2px rgba(0,0,0,0.5)"
+})
+
 export function GachaInventory(props: Props){
   
   const arrayToObject = function(inventory: Array<string>): Inventory {
@@ -51,7 +65,7 @@ export function GachaInventory(props: Props){
     <GridContainer>
       {inventoryItems.map((item: string, index: number) => {
         return (
-          <div>
+          <div key={index} style={{position: "relative"}}>
             {characterInfo[item] ?
               <RoundImage
                 src={require(`../../resources/images/characters/${item}.png`)}
@@ -60,7 +74,7 @@ export function GachaInventory(props: Props){
                 src={require(`../../resources/images/items/weapons/${item}.png`)}
               />
             }
-            <p>{inventoryItemCounts[index]}</p>
+            <PositionAbsolute style={{display: "block", position:"absolute", top: "0", right: "0"}}>{inventoryItemCounts[index]}</PositionAbsolute>
           </div>
         );
       })}

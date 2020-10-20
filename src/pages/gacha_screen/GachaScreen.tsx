@@ -9,15 +9,19 @@ import { ScreenInnerWrapper, RoundTextButton, TextCenterWrapper, FlexWrapper } f
 import { Gacha, GachaData } from "./Gacha";
 import { GachaInventory } from "./GachaInventory";
 
+// styled-component
+const Container = styled.div({});
+
 export function GachaScreen() {
   
   const [ gachaTimes, setGachaTimes ] = useState(0);
   const [ fiveStarCount, setFiveStarCount ] = useState(0);
   const [ fourStarCount, setFourStarCount ] = useState(0);
   const [ threeStarCount, setThreeStarCount ] = useState(0);
-  const [ pickUpContent, setPickUpContent ] = useState("Character Event Wish");
+  const [ pickUpContent, setPickUpContent ] = useState(Object.keys(wishesInfo)[0]);
   const [ gachaInventoryList, setGachaInventoryList ] = useState([]);
   const [ gachaExecutionResult, setGachaExecutionResult ] = useState([]);
+  const [ nextPity, setNextPity ] = useState(0);
   
   const refInitialValue = new Map<string, Gacha>();
   const gacha = useRef<Gacha>();
@@ -51,33 +55,34 @@ export function GachaScreen() {
     setThreeStarCount(0);
     setGachaExecutionResult([]);
     setGachaInventoryList([]);
+    setNextPity(contentData.maxPityCount);
     
     gachaMap.current.clear();
-    // 초보자뽑기 Noelle이 다시 나오도록 해야함
   };
 
   const onBannerClick = function(content: string): void {
     setPickUpContent(content);
+    gacha.current && setGachaTimes(gacha.current.totalCount);
+    gacha.current && setNextPity(gacha.current.pityCount)
   }
 
   const oneTimeGachaExecution = function(): void {
     setGachaExecutionResult(gacha.current?.start(1) as never[]);
     gacha.current && setGachaTimes(gacha.current.totalCount);
-    gacha.current && setGachaInventoryList([...gacha.current.gachaResult] as never[]);
+    gacha.current && setNextPity(contentData.maxPityCount - gacha.current.pityCount);
+    gacha.current && setGachaInventoryList([...gachaInventoryList, ...gacha.current.gachaResult as never[]]);
   }
-
+  
   const tenTimesGachaExecution = function(): void {
     setGachaExecutionResult(gacha.current?.start(10) as never[]);
     gacha.current && setGachaTimes(gacha.current.totalCount);
-    gacha.current && setGachaInventoryList([...gacha.current.gachaResult] as never[]);
+    gacha.current && setNextPity(contentData.maxPityCount - gacha.current.pityCount);
+    gacha.current && setGachaInventoryList([...gachaInventoryList, ...gacha.current.gachaResult as never[]]);
   }
-
-  // styled-component
-  const Container = styled.div({});
 
   let noviceWishesFlag: boolean = true;
 
-  if(pickUpContent === "NoviceWishes" && gachaTimes === 20) {
+  if(pickUpContent === "Novice Wishes" && gachaTimes === 20) {
     noviceWishesFlag = false;
   }
 
@@ -85,7 +90,7 @@ export function GachaScreen() {
     <Container>
       <ScreenInnerWrapper>
         <div style={{margin: "30px"}}>
-          <GachaBanner contents={wishesInfo.pickupContents} onClick={onBannerClick}/>
+          <GachaBanner content={pickUpContent} onClick={onBannerClick} pickUpList={Object.keys(wishesInfo)}/>
           <GachaArrangeView result={gachaExecutionResult} />
           <TextCenterWrapper>
             <div style={{margin: "20px"}}>
@@ -110,7 +115,7 @@ export function GachaScreen() {
                   10 Time
                 </RoundTextButton> :
                 <TextCenterWrapper>
-                  Novive Wishes finished. Choose another Wish or click Reset Button
+                  Novice Wishes finished. Choose another Wish or click Reset Button
                 </TextCenterWrapper>
               }
             </div>
@@ -118,12 +123,22 @@ export function GachaScreen() {
           <FlexWrapper>
             <>
               <div style={{flex: "1"}}>
-                <GachaResult
-                  times={gachaTimes}
-                  five={fiveStarCount}
-                  four={fourStarCount}
-                  three={threeStarCount}
-                />
+                {(pickUpContent === "Novice Wishes") ? 
+                  <GachaResult
+                    times={gachaTimes}
+                    five={fiveStarCount}
+                    pity={0}
+                    four={fourStarCount}
+                    three={threeStarCount}
+                  /> :
+                  <GachaResult
+                    times={gachaTimes}
+                    pity={nextPity}
+                    five={fiveStarCount}
+                    four={fourStarCount}
+                    three={threeStarCount}
+                  />
+                }
               </div>
               <div style={{flex: "1"}}>
                 <GachaInventory inventoryList={gachaInventoryList} />

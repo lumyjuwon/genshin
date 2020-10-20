@@ -72,17 +72,18 @@ const Help = styled.span({
 })
 
 interface Props {
-  contents: Array<string>;
+  content: string;
   onClick: Function;
+  pickUpList: Array<string>;
 }
 
-let selectedPickUp: string = "Character Event Wish";
-
 export function GachaBanner(props: Props) {
-
+  
+  let selectedPickUp: string = props.content;
+  
   const onListClick = (content: string | null): void => {
     if (content) selectedPickUp = content;
-    props.onClick(selectedPickUp);
+    if(content !== props.content) props.onClick(selectedPickUp);
   }
 
   return (
@@ -98,7 +99,7 @@ export function GachaBanner(props: Props) {
             </>
           </FlexWrapper>
           <DropDown>
-            {props.contents.map((content: string, i: number) => {
+            {props.pickUpList.map((content: string, i: number) => {
               return <List key={i} value={content} onClick={(e) => onListClick(e.currentTarget.textContent)}>{content}</List>
             })}
           </DropDown>

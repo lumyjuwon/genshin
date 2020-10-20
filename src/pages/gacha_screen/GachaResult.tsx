@@ -5,6 +5,7 @@ import { TextCenterWrapper } from 'src/components';
 
 interface Props {
   times: number,
+  pity?: number,
   three: number;
   four: number;
   five: number;
@@ -25,12 +26,9 @@ export function GachaResult(props: Props) {
           <div>
             {`Total Gacha Times: ${props.times}`}
           </div>
-          {/* <div>
-            {Next Pity: }
-          </div> */}
-          {/* <div>
-            {Next Absolute: }
-          </div> */}
+          <div>
+              {`Next Pity: ${props.pity}`}
+            </div>
           <div>
             {`5★: ${props.five}`}
           </div>

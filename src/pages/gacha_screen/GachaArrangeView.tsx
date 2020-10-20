@@ -4,25 +4,26 @@ import styled from "styled-components";
 import { characterInfo, weaponInfo } from 'src/resources/data';
 import { FlexWrapper, SquareImage } from "src/components";
 
+const GridContainer = styled.div({
+  backgroundColor: "#333",
+  display: "grid",
+  width: "1200px",
+  height: "400px",
+  gridTemplateColumns: "repeat(auto-fit, 100px)",
+  columnGap: "12px",
+  textAlign: "center",
+  padding: "0 15px",
+  alignItems: "center",
+  justifyItems: "center",
+  alignContent: "center",
+  justifyContent: "center",
+});
+
 interface Props {
   result: Array<string>;
 }
 
 export function GachaArrangeView(props: Props) {
-  const GridContainer = styled.div({
-    backgroundColor: "#333",
-    display: "grid",
-    width: "1200px",
-    height: "400px",
-    gridTemplateColumns: "repeat(auto-fit, 100px)",
-    columnGap: "12px",
-    textAlign: "center",
-    padding: "0 15px",
-    alignItems: "center",
-    justifyItems: "center",
-    alignContent: "center",
-    justifyContent: "center",
-  });
 
   const shadowColor: { five: string; four: string } = {
     five: "#a86d1f",
@@ -44,6 +45,7 @@ export function GachaArrangeView(props: Props) {
           }
           return (
             <SquareImage
+              key={i}
               styles={{
                 height: "300px",
                 boxShadow: `0 0 8px 2px ${shadow}, 0px 10px 5px ${shadow}, 0px -10px 5px ${shadow}`,

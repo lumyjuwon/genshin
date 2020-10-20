@@ -113,10 +113,15 @@ export class Gacha {
 
         resultItems.push(resultItem);
       }
-
-      // 천장일 때
+      
+      
       else if(this.pityCount === this.data.maxPityCount || this.favoriteCount === this.data.maxFavoriteCount){
+        
         const resultItem = this.pick(this.data.fiveStars);
+        
+        if(this.favoriteCount === this.data.maxFavoriteCount) {
+          
+        }
         
         if(this.data.favoriteTarget.includes(resultItem)){
           this.pityCount = 0;
@@ -153,7 +158,9 @@ export class Gacha {
       }
     }
     
-    this.gachaResult = this.gachaResult.concat(resultItems);
+    console.log("pity count: ", this.pityCount)
+    console.log("favorite count: ", this.favoriteCount);
+    this.gachaResult = resultItems;
     return resultItems;
   }
 }
