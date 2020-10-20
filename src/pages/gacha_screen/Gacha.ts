@@ -82,6 +82,7 @@ export class Gacha {
 
   start(tries: number): Array<string> {
     this.totalCount += tries;
+    const resultItems = new Array<string>();
 
     for(let i = 0; i<tries; i++){
       this.pityCount += 1;
@@ -91,6 +92,7 @@ export class Gacha {
       if(this.data.maxGuaranteeCount === tries && i === 0) {
         const percent = Math.random() * 100;
         let resultItem: string;
+
         if(this.data.guaranteeCharacter.length > 0) {
           resultItem = this.data.guaranteeCharacter.pop() as string;
         }
@@ -105,7 +107,8 @@ export class Gacha {
         else {
           resultItem = this.pick(this.data.fourStars);
         }
-        this.gachaResult.push(resultItem);
+
+        resultItems.push(resultItem);
       }
 
       // 천장일 때
@@ -120,13 +123,14 @@ export class Gacha {
           this.pityCount = 0;
         }
 
-        this.gachaResult.push(resultItem);
+        resultItems.push(resultItem);
       }
 
       // 일반 뽑기
       else{
         const percent = Math.random() * 100;
         let resultItem: string;
+
         if(percent <= this.data.fiveStars.percent) {
           resultItem = this.pick(this.data.fiveStars);
           
@@ -142,13 +146,10 @@ export class Gacha {
           resultItem = this.pick(this.data.threeStars);
         }
 
-        this.gachaResult.push(resultItem);
+        resultItems.push(resultItem);
       }
     }
     
-    console.log('Pity Count', this.pityCount);
-    console.log('Favorite Count', this.favoriteCount)
-    console.log(this.gachaResult);
-    return this.gachaResult;
+    return resultItems;
   }
 }

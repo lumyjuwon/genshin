@@ -39,7 +39,6 @@ export function GachaArrangeView(props: Props) {
             else if (characterInfo[r].rank === 4) shadow = shadowColor.four;
 
           } else {
-            console.log("무기다!")
             if (weaponInfo[r].rank === 5) shadow = shadowColor.five;
             else if (weaponInfo[r].rank === 4) shadow = shadowColor.four;
           }
