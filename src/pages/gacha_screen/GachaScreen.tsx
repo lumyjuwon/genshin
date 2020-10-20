@@ -7,6 +7,7 @@ import { GachaArrangeView } from './GachaArrangeView';
 import { GachaBanner } from "./GachaBanner";
 import { ScreenInnerWrapper, RoundTextButton, TextCenterWrapper } from "src/components";
 import { Gacha, GachaData } from "./Gacha";
+import { GachaInventory } from "./GachaInventory";
 
 export function GachaScreen() {
   
@@ -29,7 +30,7 @@ export function GachaScreen() {
     maxPityCount: wishesInfo[contentWithoutBlank].pityCount,
     maxFavoriteCount: wishesInfo[contentWithoutBlank].favoriteCount,
     maxGuaranteeCount: wishesInfo[contentWithoutBlank].guaranteeCount,
-    guaranteeCharacter: wishesInfo[contentWithoutBlank].guaranteeCharacter,
+    guaranteeItems: wishesInfo[contentWithoutBlank].guaranteeItems,
     fiveStars: wishesInfo[contentWithoutBlank].fiveStars,
     fourStars: wishesInfo[contentWithoutBlank].fourStars,
     threeStars: wishesInfo[contentWithoutBlank].threeStars
@@ -52,6 +53,9 @@ export function GachaScreen() {
     setThreeStarCount(0);
     setGachaExecutionResult([]);
     setGachaInventoryList([]);
+    
+    gachaMap.current.clear();
+    // 초보자뽑기 Noelle이 다시 나오도록 해야함
   };
 
   const onBannerClick = function(content: string): void {
@@ -61,13 +65,13 @@ export function GachaScreen() {
   const oneTimeGachaExecution = function(): void {
     setGachaExecutionResult(gacha.current?.start(1) as never[]);
     gacha.current && setGachaTimes(gacha.current.totalCount);
-    setGachaInventoryList([...gachaInventoryList, ...gachaExecutionResult]);
+    gacha.current && setGachaInventoryList([...gacha.current.gachaResult] as never[]);
   }
 
   const tenTimesGachaExecution = function(): void {
     setGachaExecutionResult(gacha.current?.start(10) as never[]);
     gacha.current && setGachaTimes(gacha.current.totalCount);
-    setGachaInventoryList([...gachaInventoryList, ...gachaExecutionResult]);
+    gacha.current && setGachaInventoryList([...gacha.current.gachaResult] as never[]);
   }
 
   // styled-component
@@ -119,6 +123,7 @@ export function GachaScreen() {
             four={fourStarCount}
             three={threeStarCount}
           />
+          <GachaInventory inventoryList={gachaInventoryList} />
         </div>
       </ScreenInnerWrapper>
     </Container>
