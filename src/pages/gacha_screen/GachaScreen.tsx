@@ -22,29 +22,27 @@ export function GachaScreen() {
   const refInitialValue = new Map<string, Gacha>();
   const gacha = useRef<Gacha>();
   const gachaMap = useRef<Map<string, Gacha>>(refInitialValue);
-  
-  const contentWithoutBlank = pickUpContent.split(" ").join("");
-  
+
   const contentData = {
-    favoriteTarget: wishesInfo[contentWithoutBlank].favoriteTarget,
-    maxPityCount: wishesInfo[contentWithoutBlank].pityCount,
-    maxFavoriteCount: wishesInfo[contentWithoutBlank].favoriteCount,
-    maxGuaranteeCount: wishesInfo[contentWithoutBlank].guaranteeCount,
-    guaranteeItem: wishesInfo[contentWithoutBlank].guaranteeItem,
-    fiveStars: wishesInfo[contentWithoutBlank].fiveStars,
-    fourStars: wishesInfo[contentWithoutBlank].fourStars,
-    threeStars: wishesInfo[contentWithoutBlank].threeStars
+    favoriteTarget: wishesInfo[pickUpContent].favoriteTarget,
+    maxPityCount: wishesInfo[pickUpContent].pityCount,
+    maxFavoriteCount: wishesInfo[pickUpContent].favoriteCount,
+    maxGuaranteeCount: wishesInfo[pickUpContent].guaranteeCount,
+    guaranteeItem: wishesInfo[pickUpContent].guaranteeItem,
+    fiveStars: wishesInfo[pickUpContent].fiveStars,
+    fourStars: wishesInfo[pickUpContent].fourStars,
+    threeStars: wishesInfo[pickUpContent].threeStars
   }
 
   useEffect(() => {
-    if(!gachaMap.current?.has(contentWithoutBlank)){
+    if(!gachaMap.current?.has(pickUpContent)){
       const data = new GachaData(contentData);
       const executor = new Gacha(data);
-      gachaMap.current?.set(contentWithoutBlank, executor);
+      gachaMap.current?.set(pickUpContent, executor);
     }
     
-    gacha.current = gachaMap.current?.get(contentWithoutBlank);
-  }, [contentWithoutBlank, contentData]);
+    gacha.current = gachaMap.current?.get(pickUpContent);
+  }, [pickUpContent, contentData]);
   
   const onResetClick = (): void => {
     setGachaTimes(0);
@@ -79,7 +77,7 @@ export function GachaScreen() {
 
   let noviceWishesFlag: boolean = true;
 
-  if(contentWithoutBlank === "NoviceWishes" && gachaTimes === 20) {
+  if(pickUpContent === "NoviceWishes" && gachaTimes === 20) {
     noviceWishesFlag = false;
   }
 

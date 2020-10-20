@@ -1,7 +1,7 @@
 {
   "pickupContents": ["Novice Wishes", "Character Event Wish", "Weapon Event Wish", "Standard Wish"],
   
-  "CharacterEventWish": {
+  "Character Event Wish": {
     "favoriteTarget": ["Venti"],
     "pityCount": 90,
     "favoriteCount": 180,
@@ -71,7 +71,7 @@
     }
   },
 
-  "WeaponEventWish": {
+  "Weapon Event Wish": {
     "favoriteTarget": ["Amos' Bow", "Aquila Favonia"],
     "pityCount": 80,
     "favoriteCount": 160,
@@ -158,7 +158,7 @@
     }
   },
 
-  "StandardWish": {
+  "Standard Wish": {
     "favoriteTarget": [],
     "pityCount": 90,
     "favoriteCount": 180,
@@ -247,7 +247,7 @@
     }
   },
 
-  "NoviceWishes": {
+  "Novice Wishes": {
     "favoriteTarget": [],
     "pityCount": 9999,
     "favoriteCount": 9999,
