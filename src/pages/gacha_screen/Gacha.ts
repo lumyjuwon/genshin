@@ -1,36 +1,36 @@
-interface GachaInfo{
+export interface GachaInfo{
   percent: number;
   items: Array<string>;
   pickUpPercent: number;
   pickUpItems: Array<string>;
 }
 
-interface Data{
-  favoriteTarget: Array<string>; // 없으면 빈배열
+export interface GachaData{
+  pickUpTarget: Array<string>; // 없으면 빈배열
   maxPityCount: number;
-  maxFavoriteCount: number;
-  maxGuaranteeCount: number;
+  maxPickUpCount: number;
+  maxBonusCount: number;
   guaranteeItem: string;
   fiveStars: GachaInfo;
   fourStars: GachaInfo;
   threeStars: GachaInfo;
 }
 
-export class GachaData implements Data{
-  readonly favoriteTarget: Array<string>;
+export class GachaContent implements GachaData{
+  readonly pickUpTarget: Array<string>;
   readonly maxPityCount: number;
-  readonly maxFavoriteCount: number;
-  readonly maxGuaranteeCount: number;
+  readonly maxPickUpCount: number;
+  readonly maxBonusCount: number;
   readonly guaranteeItem: string;
   readonly fiveStars: GachaInfo;
   readonly fourStars: GachaInfo;
   readonly threeStars: GachaInfo;
 
-  constructor(data: Data){
-    this.favoriteTarget = data.favoriteTarget;
+  constructor(data: GachaData){
+    this.pickUpTarget = data.pickUpTarget;
     this.maxPityCount = data.maxPityCount;
-    this.maxFavoriteCount = data.maxFavoriteCount;
-    this.maxGuaranteeCount = data.maxGuaranteeCount;
+    this.maxPickUpCount = data.maxPickUpCount;
+    this.maxBonusCount = data.maxBonusCount;
     this.guaranteeItem = data.guaranteeItem;
     this.fiveStars = data.fiveStars;
     this.fourStars = data.fourStars;
@@ -44,16 +44,24 @@ export class GachaData implements Data{
   }
 }
 
-export class Gacha {
-  private data: GachaData;
+export class GachaController {
+  private data: GachaContent;
   public totalCount: number;
   public pityCount: number;
   public favoriteCount: number;
   public gachaResult: Array<string>;
   public isGuaranteeItem: boolean;
 
-  constructor(gachaData: GachaData){
+  constructor(gachaData: GachaContent){
     this.data = gachaData;
+    this.totalCount = 0;
+    this.pityCount = 0;
+    this.favoriteCount = 0;
+    this.gachaResult = new Array<string>();
+    this.isGuaranteeItem = false;
+  }
+
+  clear(){
     this.totalCount = 0;
     this.pityCount = 0;
     this.favoriteCount = 0;
@@ -91,7 +99,7 @@ export class Gacha {
       this.favoriteCount += 1;
 
       // 4성이상 보장, 초보자 Noelle
-      if(this.data.maxGuaranteeCount === tries && i === 0) {
+      if(this.data.maxBonusCount === tries && i === 0) {
         const percent = Math.random() * 100;
         let resultItem: string;
 
@@ -113,17 +121,12 @@ export class Gacha {
 
         resultItems.push(resultItem);
       }
-      
-      
-      else if(this.pityCount === this.data.maxPityCount || this.favoriteCount === this.data.maxFavoriteCount){
-        
+
+      // 천장일 때
+      else if(this.pityCount === this.data.maxPityCount || this.favoriteCount === this.data.maxPickUpCount){
         const resultItem = this.pick(this.data.fiveStars);
         
-        if(this.favoriteCount === this.data.maxFavoriteCount) {
-          
-        }
-        
-        if(this.data.favoriteTarget.includes(resultItem)){
+        if(this.data.pickUpTarget.includes(resultItem)){
           this.pityCount = 0;
           this.favoriteCount = 0;
         }
