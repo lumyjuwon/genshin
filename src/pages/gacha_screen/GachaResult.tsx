@@ -11,26 +11,34 @@ interface Props {
 }
 
 const ResultView = styled.div({
-  display: "flex"
+  display: "flex",
+  width: "fit-content",
+  margin: "0 auto",
 });
 
-export function GachaResult({ times, three, four, five }: Props) {
+export function GachaResult(props: Props) {
 
   return (
     <ResultView>
       <TextCenterWrapper>
         <>
           <div>
-            {`Total Times: ${times}`}
+            {`Total Gacha Times: ${props.times}`}
+          </div>
+          {/* <div>
+            {Next Pity: }
+          </div> */}
+          {/* <div>
+            {Next Absolute: }
+          </div> */}
+          <div>
+            {`5★: ${props.five}`}
           </div>
           <div>
-            {`5★: ${five}`}
+            {`4★: ${props.four}`}
           </div>
           <div>
-            {`4★: ${four}`}
-          </div>
-          <div>
-            {`3★: ${three}`}
+            {`3★: ${props.three}`}
           </div>
         </>
       </TextCenterWrapper>

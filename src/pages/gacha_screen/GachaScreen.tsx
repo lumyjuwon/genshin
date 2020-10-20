@@ -5,7 +5,7 @@ import { GachaResult } from "./GachaResult";
 import { wishesInfo } from 'src/resources/data';
 import { GachaArrangeView } from './GachaArrangeView';
 import { GachaBanner } from "./GachaBanner";
-import { ScreenInnerWrapper, RoundTextButton, TextCenterWrapper } from "src/components";
+import { ScreenInnerWrapper, RoundTextButton, TextCenterWrapper, FlexWrapper } from "src/components";
 import { Gacha, GachaData } from "./Gacha";
 import { GachaInventory } from "./GachaInventory";
 
@@ -117,13 +117,21 @@ export function GachaScreen() {
               }
             </div>
           </TextCenterWrapper>
-          <GachaResult
-            times={gachaTimes}
-            five={fiveStarCount}
-            four={fourStarCount}
-            three={threeStarCount}
-          />
-          <GachaInventory inventoryList={gachaInventoryList} />
+          <FlexWrapper>
+            <>
+              <div style={{flex: "1"}}>
+                <GachaResult
+                  times={gachaTimes}
+                  five={fiveStarCount}
+                  four={fourStarCount}
+                  three={threeStarCount}
+                />
+              </div>
+              <div style={{flex: "1"}}>
+                <GachaInventory inventoryList={gachaInventoryList} />
+              </div>
+            </>
+          </FlexWrapper>
         </div>
       </ScreenInnerWrapper>
     </Container>
