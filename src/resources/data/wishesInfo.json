@@ -47,9 +47,9 @@
         "The Flute",
         "Favonius Sword"
       ],
-      "pickUpItems": ["Barbara, Fischl, Xiangling"]
+      "pickUpItems": ["Barbara", "Fischl", "Xiangling"]
     },
-    "three": {
+    "threeStars": {
       "percent": 94.3,
       "pickUpPercent": 0,
       "items": [
