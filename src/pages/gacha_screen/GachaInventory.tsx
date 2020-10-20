@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { RoundImage } from 'src/components';
+import { characterInfo } from 'src/resources/data';
+
 interface Props {
   inventoryList: Array<string>;
 }
@@ -8,6 +11,18 @@ interface Props {
 interface Inventory {
   [key: string]: number;
 }
+
+const GridContainer = styled.div({
+  display: "grid",
+  alignItems: "center",
+  justifyItems: "center",
+  alignContent: "center",
+  justifyContent: "center",
+  gridTemplateColumns: "repeat(5, 100px)",
+  gridTemplateRows: "repeat(autofit, 100px)",
+  columnGap: "5px",
+  rowGap: "5px",
+});
 
 export function GachaInventory(props: Props){
   
@@ -33,15 +48,22 @@ export function GachaInventory(props: Props){
   const inventoryItemCounts = Object.values(inventory);
 
   return (
-    <div>
+    <GridContainer>
       {inventoryItems.map((item: string, index: number) => {
         return (
-          <>
-            <p>{item}</p>
+          <div>
+            {characterInfo[item] ?
+              <RoundImage
+                src={require(`../../resources/images/characters/${item}.png`)}
+              /> :
+              <RoundImage
+                src={require(`../../resources/images/items/weapons/${item}.png`)}
+              />
+            }
             <p>{inventoryItemCounts[index]}</p>
-          </>
+          </div>
         );
       })}
-    </div>
+    </GridContainer>
   );
 }
