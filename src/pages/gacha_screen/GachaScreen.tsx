@@ -30,7 +30,7 @@ export function GachaScreen() {
     maxPityCount: wishesInfo[contentWithoutBlank].pityCount,
     maxFavoriteCount: wishesInfo[contentWithoutBlank].favoriteCount,
     maxGuaranteeCount: wishesInfo[contentWithoutBlank].guaranteeCount,
-    guaranteeItems: wishesInfo[contentWithoutBlank].guaranteeItems,
+    guaranteeItem: wishesInfo[contentWithoutBlank].guaranteeItem,
     fiveStars: wishesInfo[contentWithoutBlank].fiveStars,
     fourStars: wishesInfo[contentWithoutBlank].fourStars,
     threeStars: wishesInfo[contentWithoutBlank].threeStars

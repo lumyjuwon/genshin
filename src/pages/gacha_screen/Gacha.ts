@@ -10,7 +10,7 @@ interface Data{
   maxPityCount: number;
   maxFavoriteCount: number;
   maxGuaranteeCount: number;
-  guaranteeItems: Array<string>;
+  guaranteeItem: string;
   fiveStars: GachaInfo;
   fourStars: GachaInfo;
   threeStars: GachaInfo;
@@ -21,7 +21,7 @@ export class GachaData implements Data{
   readonly maxPityCount: number;
   readonly maxFavoriteCount: number;
   readonly maxGuaranteeCount: number;
-  readonly guaranteeItems: Array<string>;
+  readonly guaranteeItem: string;
   readonly fiveStars: GachaInfo;
   readonly fourStars: GachaInfo;
   readonly threeStars: GachaInfo;
@@ -31,7 +31,7 @@ export class GachaData implements Data{
     this.maxPityCount = data.maxPityCount;
     this.maxFavoriteCount = data.maxFavoriteCount;
     this.maxGuaranteeCount = data.maxGuaranteeCount;
-    this.guaranteeItems = data.guaranteeItems;
+    this.guaranteeItem = data.guaranteeItem;
     this.fiveStars = data.fiveStars;
     this.fourStars = data.fourStars;
     this.threeStars = data.threeStars;
@@ -50,6 +50,7 @@ export class Gacha {
   public pityCount: number;
   public favoriteCount: number;
   public gachaResult: Array<string>;
+  public isGuaranteeItem: boolean;
 
   constructor(gachaData: GachaData){
     this.data = gachaData;
@@ -57,6 +58,7 @@ export class Gacha {
     this.pityCount = 0;
     this.favoriteCount = 0;
     this.gachaResult = new Array<string>();
+    this.isGuaranteeItem = false;
   }
 
   pick(info: GachaInfo): string {
@@ -93,9 +95,9 @@ export class Gacha {
         const percent = Math.random() * 100;
         let resultItem: string;
 
-        if(this.data.guaranteeItems.length > 0) {
-          resultItem = this.data.guaranteeItems.pop() as string;
-
+        if(this.data.guaranteeItem && !this.isGuaranteeItem) {
+          resultItem = this.data.guaranteeItem;
+          this.isGuaranteeItem = true;
         }
         else if(percent <= this.data.fiveStars.percent) {
           resultItem = this.pick(this.data.fiveStars);

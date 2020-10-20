@@ -6,7 +6,7 @@
     "pityCount": 90,
     "favoriteCount": 180,
     "guaranteeCount": 10,
-    "guaranteeItems": [],
+    "guaranteeItem": "",
     "fiveStars": {
       "percent": 0.6,
       "pickUpPercent": 50,
@@ -76,7 +76,7 @@
     "pityCount": 80,
     "favoriteCount": 160,
     "guaranteeCount": 10,
-    "guaranteeItems": [],
+    "guaranteeItem": "",
     "fiveStars": {
       "percent": 0.7,
       "pickUpPercent": 75,
@@ -163,7 +163,7 @@
     "pityCount": 90,
     "favoriteCount": 180,
     "guaranteeCount": 10,
-    "guaranteeItems": [],
+    "guaranteeItem": "",
     "fiveStars": {
       "percent": 0.6,
       "pickUpPercent": 0,
@@ -252,7 +252,7 @@
     "pityCount": 9999,
     "favoriteCount": 9999,
     "guaranteeCount": 10,
-    "guaranteeItems": ["Noelle"],
+    "guaranteeItem": "Noelle",
     "fiveStars": {
       "percent": 0.6,
       "pickUpPercent": 0,
