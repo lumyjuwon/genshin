@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { RoundImage } from 'src/components';
-import { characterInfo } from 'src/resources/data';
+import { characterInfo, weaponInfo } from 'src/resources/data';
 
 interface Props {
   inventoryList: Array<string>;
@@ -20,8 +20,8 @@ const GridContainer = styled.div({
   justifyContent: "center",
   gridTemplateColumns: "repeat(5, 100px)",
   gridTemplateRows: "repeat(autofit, 100px)",
-  columnGap: "5px",
-  rowGap: "5px",
+  columnGap: "10px",
+  rowGap: "10px",
 });
 
 const PositionAbsolute = styled.div({
@@ -39,11 +39,37 @@ const PositionAbsolute = styled.div({
 })
 
 export function GachaInventory(props: Props){
-  
-  const arrayToObject = function(inventory: Array<string>): Inventory {
+
+  const sortByStars = (gachaResult: Array<string>): Array<string> => {
+    gachaResult.sort((item: string, nextItem: string): number => {
+      if(characterInfo[item]) {
+        
+        if(characterInfo[nextItem]) {
+          return characterInfo[nextItem].rank - characterInfo[item].rank;
+        }
+        else {
+          return weaponInfo[nextItem].rank - characterInfo[item].rank;
+        }
+
+      }
+      else {
+        
+        if(characterInfo[nextItem]){
+          return characterInfo[nextItem].rank - weaponInfo[item].rank;
+        }
+        else {
+          return weaponInfo[nextItem].rank - weaponInfo[item].rank;
+        }
+
+      }
+    });
+    return gachaResult;
+  }
+
+  const arrayToObject = (sortedInventory: Array<string>): Inventory => {
     let inventoryObject: Inventory = {};
   
-    inventory.map((item: string) => {
+    sortedInventory.map((item: string) => {
       
       if(!inventoryObject.hasOwnProperty(item)) {
         inventoryObject[item] = 1;
@@ -57,7 +83,8 @@ export function GachaInventory(props: Props){
     return inventoryObject;
   }
 
-  const inventory = arrayToObject(props.inventoryList)
+  const sortedGachaResult = sortByStars(props.inventoryList);
+  const inventory = arrayToObject(sortedGachaResult);
   const inventoryItems = Object.keys(inventory);
   const inventoryItemCounts = Object.values(inventory);
 
