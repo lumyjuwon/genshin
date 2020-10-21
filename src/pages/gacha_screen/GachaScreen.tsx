@@ -101,7 +101,7 @@ export function GachaScreen() {
         <div style={{margin: "30px"}}>
           <GachaBanner content={gachaContent} onClick={onBannerClick} pickUpList={Object.keys(gachaInfo)}/>
           <GachaArrangeView result={gachaExecutionResult} />
-          <TextCenterWrapper>
+          <TextCenterWrapper styles={{width: "100%", margin: "20px auto"}}>
             <div style={{margin: "20px"}}>
               <RoundTextButton
                 styles={{

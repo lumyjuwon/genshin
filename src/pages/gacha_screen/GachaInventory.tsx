@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { RoundImage } from 'src/components';
+import { RoundImage, TextCenterWrapper } from 'src/components';
 import { characterInfo, weaponInfo } from 'src/resources/data';
 
 interface Props {
@@ -136,6 +136,10 @@ export function GachaInventory(props: Props){
   return (
     <>
       <Title>Inventory</Title>
+      {!props.inventoryList.length ?
+        <TextCenterWrapper styles={{width: "1200px", margin: "10px auto"}}>There is no item... Press button!</TextCenterWrapper>
+        : null
+      }
       <GridContainer>
           {inventoryItems.map((item: string, index: number) => {
             return (
