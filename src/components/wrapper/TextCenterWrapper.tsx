@@ -1,15 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
 
-interface Props {
-  children: JSX.Element | string;
+interface DivStyle {
+  width?: string;
+  margin?: string;
 }
 
-const TextCenterDiv = styled.div({
-  textAlign: "center",
+interface Props {
+  children: JSX.Element | string;
+  styles?: DivStyle;
+}
+
+const TextCenterDiv = styled.div<DivStyle>((props: DivStyle) => {
+  
+  return {
+    textAlign: "center",
+    width: props.width || "fit-content",
+    margin: props.margin || "10px"
+  }
 })
 
-export function TextCenterWrapper({ children }: Props) {
+export function TextCenterWrapper({ children, styles }: Props) {
 
-  return <TextCenterDiv>{children}</TextCenterDiv>
+  return <TextCenterDiv {...styles}>{children}</TextCenterDiv>
 }
