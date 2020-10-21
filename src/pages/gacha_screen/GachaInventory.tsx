@@ -26,16 +26,23 @@ const GridContainer = styled.div({
 
 const PositionAbsolute = styled.div({
   display: "flex",
-  textAlign: "center",
+  justifyContent: "center",
   alignItems: "center",
   position: "absolute",
-  top: "0",
-  right: "0",
+  top: "-8px",
+  right: "-8px",
   borderRadius: "50%",
   backgroundColor: "#ff0000",
   width: "25px",
   height: "25px",
   boxShadow: "4px 4px 2px rgba(0,0,0,0.5)"
+})
+
+const StarEmoji = styled.span({
+  display: "inline-block",
+  letterSpacing: "-10px",
+  width: "100%",
+  textAlign: "center",
 })
 
 export function GachaInventory(props: Props){
@@ -79,7 +86,7 @@ export function GachaInventory(props: Props){
       }
   
     });
-  
+    
     return inventoryObject;
   }
 
@@ -87,6 +94,15 @@ export function GachaInventory(props: Props){
   const inventory = arrayToObject(sortedGachaResult);
   const inventoryItems = Object.keys(inventory);
   const inventoryItemCounts = Object.values(inventory);
+
+  const itemRank = inventoryItems.map((item: string) => {
+    if (characterInfo[item]) {
+      return characterInfo[item].rank;
+
+    } else {
+      return weaponInfo[item].rank;
+    }
+  });
 
   return (
     <GridContainer>
@@ -101,7 +117,8 @@ export function GachaInventory(props: Props){
                 src={require(`../../resources/images/items/weapons/${item}.png`)}
               />
             }
-            <PositionAbsolute style={{display: "block", position:"absolute", top: "0", right: "0"}}>{inventoryItemCounts[index]}</PositionAbsolute>
+            <PositionAbsolute>{inventoryItemCounts[index]}</PositionAbsolute>
+            <StarEmoji role="img">{"⭐".repeat(itemRank[index])}</StarEmoji>
           </div>
         );
       })}
