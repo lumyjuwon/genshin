@@ -25,30 +25,30 @@ interface Props {
 
 export function GachaArrangeView(props: Props) {
 
-  const shadowColor: { five: string; four: string } = {
-    five: "#a86d1f",
-    four: "#b182c4",
+  const shadowPal: { five: string; four: string } = {
+    five: "0 0 8px 2px #a86d1f, 0px 25px 5px #a86d1f, 0px -25px 5px #a86d1f",
+    four: "0 0 8px 2px #b182c4, 0px 25px 5px #b182c4, 0px -25px 5px #b182c4",
   };
 
   return (
     <FlexWrapper>
       <GridContainer>
         {props.result.map((item: string, index: number) => {
-          let shadow = "#777";
+          let shadow = "0 0 8px 2px #777, 0px 8px 5px #777, 0px -8px 5px #777";
           if (characterInfo[item]) {
-            if (characterInfo[item].rank === 5) shadow = shadowColor.five;
-            else if (characterInfo[item].rank === 4) shadow = shadowColor.four;
+            if (characterInfo[item].rank === 5) shadow = shadowPal.five;
+            else if (characterInfo[item].rank === 4) shadow = shadowPal.four;
 
           } else {
-            if (weaponInfo[item].rank === 5) shadow = shadowColor.five;
-            else if (weaponInfo[item].rank === 4) shadow = shadowColor.four;
+            if (weaponInfo[item].rank === 5) shadow = shadowPal.five;
+            else if (weaponInfo[item].rank === 4) shadow = shadowPal.four;
           }
           return (
             <SquareImage
               key={index}
               styles={{
                 height: "300px",
-                boxShadow: `0 0 8px 2px ${shadow}, 0px 10px 5px ${shadow}, 0px -10px 5px ${shadow}`,
+                boxShadow: `${shadow}`,
                 objectFit: "none",
               }}
               src={require(`../../resources/images/gacha/${item}.png`)}
