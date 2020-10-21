@@ -12,13 +12,19 @@ interface Inventory {
   [key: string]: number;
 }
 
+const Title = styled.div({
+  width: "fit-content",
+  fontSize: "20px",
+  marginBottom: "30px"
+})
+
 const GridContainer = styled.div({
   display: "grid",
   alignItems: "center",
   justifyItems: "center",
   alignContent: "center",
   justifyContent: "center",
-  gridTemplateColumns: "repeat(5, 100px)",
+  gridTemplateColumns: "repeat(10, 100px)",
   gridTemplateRows: "repeat(autofit, 100px)",
   columnGap: "10px",
   rowGap: "10px",
@@ -39,11 +45,34 @@ const PositionAbsolute = styled.div({
 })
 
 const StarEmoji = styled.span({
+  marginLeft: "-5px",
   display: "inline-block",
   letterSpacing: "-10px",
   width: "100%",
   textAlign: "center",
 })
+
+const ItemTooltip = styled.div({
+  visibility: "hidden",
+  width: "100%",
+  position: "absolute",
+  bottom: "16px",
+  left: "0",
+  backgroundColor: "#000",
+  textAlign: "center",
+  borderRadius: "8px",
+  opacity: "0.8",
+  overflow: "hidden"
+});
+
+const Item = styled.div`
+  position: relative;
+  border: 2px solid #aaa;
+  border-radius: 16px;
+  &:hover ${ItemTooltip} {
+    visibility: visible;
+  }  
+`;
 
 export function GachaInventory(props: Props){
 
@@ -105,23 +134,27 @@ export function GachaInventory(props: Props){
   });
 
   return (
-    <GridContainer>
-      {inventoryItems.map((item: string, index: number) => {
-        return (
-          <div key={index} style={{position: "relative"}}>
-            {characterInfo[item] ?
-              <RoundImage
-                src={require(`../../resources/images/characters/${item}.png`)}
-              /> :
-              <RoundImage
-                src={require(`../../resources/images/items/weapons/${item}.png`)}
-              />
-            }
-            <PositionAbsolute>{inventoryItemCounts[index]}</PositionAbsolute>
-            <StarEmoji role="img">{"⭐".repeat(itemRank[index])}</StarEmoji>
-          </div>
-        );
-      })}
-    </GridContainer>
+    <>
+      <Title>Inventory</Title>
+      <GridContainer>
+          {inventoryItems.map((item: string, index: number) => {
+            return (
+              <Item key={index}>
+                {characterInfo[item] ?
+                  <RoundImage
+                    src={require(`../../resources/images/characters/${item}.png`)}
+                  /> :
+                  <RoundImage
+                    src={require(`../../resources/images/items/weapons/${item}.png`)}
+                  />
+                }
+                <ItemTooltip>{item}</ItemTooltip>
+                <PositionAbsolute>{inventoryItemCounts[index]}</PositionAbsolute>
+                <StarEmoji role="img">{"⭐".repeat(itemRank[index])}</StarEmoji>
+              </Item>
+            );
+          })}
+      </GridContainer>
+    </>
   );
 }
