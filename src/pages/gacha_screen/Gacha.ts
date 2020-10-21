@@ -51,6 +51,7 @@ export class GachaController {
   public favoriteCount: number;
   public gachaResult: Array<string>;
   public isGuaranteeItem: boolean;
+  public isNextPickUpTarget: boolean;
 
   constructor(gachaData: GachaContent){
     this.data = gachaData;
@@ -59,6 +60,7 @@ export class GachaController {
     this.favoriteCount = 0;
     this.gachaResult = new Array<string>();
     this.isGuaranteeItem = false;
+    this.isNextPickUpTarget = false;
   }
 
   clear(){
@@ -67,6 +69,7 @@ export class GachaController {
     this.favoriteCount = 0;
     this.gachaResult = new Array<string>();
     this.isGuaranteeItem = false;
+    this.isNextPickUpTarget = false;
   }
 
   pick(info: GachaInfo): string {
@@ -150,12 +153,20 @@ export class GachaController {
         let resultItem: string;
 
         if(percent <= this.data.fiveStars.percent) {
-          resultItem = this.pick(this.data.fiveStars);
+
+          if(this.isNextPickUpTarget) {
+            const characterIndex = Math.floor(Math.random() * this.data.pickUpTarget.length)
+            resultItem = this.data.pickUpTarget[characterIndex];
+          }
+          else {
+            resultItem = this.pick(this.data.fiveStars);
+          }
           
           this.pityCount = 0;
           if (this.data.fiveStars.pickUpItems.includes(resultItem)) {
             this.favoriteCount = 0;
           }
+
         }
         else if(percent <= (this.data.fiveStars.percent + this.data.fourStars.percent)) {
           resultItem = this.pick(this.data.fourStars);
