@@ -21,13 +21,13 @@ function App() {
           <>
             <MainLogo href="/">Genshin Simul</MainLogo>
             <TextBlockButton href="/gacha">Gacha</TextBlockButton>
-            <TextBlockButton href="/elmreson">Resonance</TextBlockButton>
+            <TextBlockButton href="/party">Party</TextBlockButton>
           </>
         </Header>
         <ContentWrapper>
           <Switch>
             <Route path="/gacha" component={GachaScreen} />
-            <Route path="/elmreson" component={PartyScreen} />
+            <Route path="/party" component={PartyScreen} />
           </Switch>
         </ContentWrapper>
         <Footer>
