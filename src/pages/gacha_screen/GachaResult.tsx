@@ -1,45 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import { TextCenterWrapper } from 'src/components';
+import { FlexWrapper } from 'src/components';
 
 interface Props {
-  times: number,
-  pity?: number,
-  three: number;
+  times: number;
+  result: Array<string>;
   four: number;
   five: number;
+  pity?: number;
 }
 
-const ResultView = styled.div({
+const ResultBar = styled.div({
   display: "flex",
   width: "fit-content",
   margin: "0 auto",
+  borderRadius: "16px",
+  border: "2px dashed #f1f2f3"
 });
+
+const Result = styled.div({
+  margin: "10px 10px",
+  padding: "5px 10px",
+
+})
 
 export function GachaResult(props: Props) {
 
+  props.result.map((item: string) => {
+    
+  })
+
   return (
-    <ResultView>
-      <TextCenterWrapper>
+    <ResultBar>
+      <FlexWrapper>
         <>
-          <div>
+          <Result>
             {`Total Gacha Times: ${props.times}`}
-          </div>
-          <div>
+          </Result>
+          <Result>
               {`Next Pity: ${props.pity}`}
-            </div>
-          <div>
+            </Result>
+          <Result>
             {`5★: ${props.five}`}
-          </div>
-          <div>
+          </Result>
+          <Result>
             {`4★: ${props.four}`}
-          </div>
-          <div>
-            {`3★: ${props.three}`}
-          </div>
+          </Result>
         </>
-      </TextCenterWrapper>
-    </ResultView>
+      </FlexWrapper>
+    </ResultBar>
   );
 }
