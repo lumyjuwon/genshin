@@ -33,25 +33,25 @@ export function GachaArrangeView(props: Props) {
   return (
     <FlexWrapper>
       <GridContainer>
-        {props.result.map((r: string, i: number) => {
+        {props.result.map((item: string, index: number) => {
           let shadow = "#777";
-          if (characterInfo[r]) {
-            if (characterInfo[r].rank === 5) shadow = shadowColor.five;
-            else if (characterInfo[r].rank === 4) shadow = shadowColor.four;
+          if (characterInfo[item]) {
+            if (characterInfo[item].rank === 5) shadow = shadowColor.five;
+            else if (characterInfo[item].rank === 4) shadow = shadowColor.four;
 
           } else {
-            if (weaponInfo[r].rank === 5) shadow = shadowColor.five;
-            else if (weaponInfo[r].rank === 4) shadow = shadowColor.four;
+            if (weaponInfo[item].rank === 5) shadow = shadowColor.five;
+            else if (weaponInfo[item].rank === 4) shadow = shadowColor.four;
           }
           return (
             <SquareImage
-              key={i}
+              key={index}
               styles={{
                 height: "300px",
                 boxShadow: `0 0 8px 2px ${shadow}, 0px 10px 5px ${shadow}, 0px -10px 5px ${shadow}`,
                 objectFit: "none",
               }}
-              src={require(`../../resources/images/gacha/${r}.png`)}
+              src={require(`../../resources/images/gacha/${item}.png`)}
             />
           );
         })}
