@@ -7,12 +7,13 @@ import { Header, Footer, TextBlockButton, TextUnderLineButton, ContentWrapper } 
 
 const Container = styled.div({});
 
+const MainLogo = styled.a({
+  fontSize: "30px",
+  padding: "20px 15px 20px 0px",
+  cursor: "pointer"
+});
+
 function App() {
-  const MainLogo = styled.a({
-    fontSize: "30px",
-    padding: "20px 15px 20px 0px",
-    cursor: "pointer"
-  });
 
   return (
     <BrowserRouter>
