@@ -86,6 +86,10 @@ export function GachaBanner(props: Props) {
     if(content !== props.content) props.onClick(selectedPickUp);
   }
 
+  const onHelpClick = () => {
+    
+  }
+
   return (
     <FlexWrapper styles={{justifyContent: "space-between"}}>
       <>
@@ -104,7 +108,7 @@ export function GachaBanner(props: Props) {
             })}
           </DropDown>
         </StyledDiv>
-        <Help role="img">❔</Help>
+        <Help role="img" onClick={() => onHelpClick()}>❔</Help>
       </>
     </FlexWrapper>
   )
