@@ -130,6 +130,7 @@ export class GachaController {
         const resultItem = this.data.pickUpTarget[characterIndex];
         this.pityCount = 0;
         this.favoriteCount = 0;
+        this.isNextPickUpTarget = false;
 
         resultItems.push(resultItem);
       }
@@ -140,9 +141,11 @@ export class GachaController {
         if(this.data.pickUpTarget.includes(resultItem)){
           this.pityCount = 0;
           this.favoriteCount = 0;
+          this.isNextPickUpTarget = false;
         }
         else{
           this.pityCount = 0;
+          this.isNextPickUpTarget = true;
         }
 
         resultItems.push(resultItem);
@@ -157,14 +160,17 @@ export class GachaController {
           if(this.isNextPickUpTarget) {
             const characterIndex = Math.floor(Math.random() * this.data.pickUpTarget.length)
             resultItem = this.data.pickUpTarget[characterIndex];
+            this.isNextPickUpTarget = false;
           }
           else {
             resultItem = this.pick(this.data.fiveStars);
+            this.isNextPickUpTarget = true;
           }
           
           this.pityCount = 0;
           if (this.data.fiveStars.pickUpItems.includes(resultItem)) {
             this.favoriteCount = 0;
+            this.isNextPickUpTarget = false;
           }
 
         }
