@@ -121,9 +121,17 @@ export class GachaController {
 
         resultItems.push(resultItem);
       }
+      // maxPickUpCount 천장
+      else if(this.favoriteCount === this.data.maxPickUpCount) {
+        const characterIndex = Math.floor(Math.random() * this.data.pickUpTarget.length)
+        const resultItem = this.data.pickUpTarget[characterIndex];
+        this.pityCount = 0;
+        this.favoriteCount = 0;
 
-      // 천장일 때, need to fix
-      else if(this.pityCount === this.data.maxPityCount || this.favoriteCount === this.data.maxPickUpCount){
+        resultItems.push(resultItem);
+      }
+      // maxPityCount 천장
+      else if(this.pityCount === this.data.maxPityCount){
         const resultItem = this.pick(this.data.fiveStars);
         
         if(this.data.pickUpTarget.includes(resultItem)){
@@ -136,7 +144,6 @@ export class GachaController {
 
         resultItems.push(resultItem);
       }
-
       // 일반 뽑기
       else{
         const percent = Math.random() * 100;
