@@ -1,6 +1,6 @@
 {
   "Character Event Wish": {
-    "pickUpTarget": ["Venti"],
+    "pickUpTarget": ["Klee"],
     "maxPityCount": 90,
     "maxPickUpCount": 180,
     "maxBonusCount": 10,
@@ -8,8 +8,8 @@
     "fiveStars": {
       "percent": 0.6,
       "pickUpPercent": 50,
-      "items": ["Venti", "Keqing", "Mona", "Qiqi", "Jean", "Diluc"],
-      "pickUpItems": ["Venti"]
+      "items": ["Klee", "Keqing", "Mona", "Qiqi", "Jean", "Diluc"],
+      "pickUpItems": ["Klee"]
     },
     "fourStars": {
       "percent": 5.1,
@@ -45,7 +45,7 @@
         "The Flute",
         "Favonius Sword"
       ],
-      "pickUpItems": ["Barbara", "Fischl", "Xiangling"]
+      "pickUpItems": ["Sucrose", "Noelle", "Xingqiu"]
     },
     "threeStars": {
       "percent": 94.3,
@@ -70,7 +70,7 @@
   },
 
   "Weapon Event Wish": {
-    "pickUpTarget": ["Amos' Bow", "Aquila Favonia"],
+    "pickUpTarget": ["Lost Prayer to the Sacred Winds", "Wolf's Gravestone"],
     "maxPityCount": 80,
     "maxPickUpCount": 160,
     "maxBonusCount": 10,
@@ -90,7 +90,7 @@
         "Skyward Pride",
         "Skyward Blade"
       ],
-      "pickUpItems": ["Amos' Bow", "Aquila Favonia"]
+      "pickUpItems": ["Lost Prayer to the Sacred Winds", "Wolf's Gravestone"]
     },
     "fourStars": {
       "percent": 6.0,
@@ -127,11 +127,11 @@
         "Favonius Sword"
       ],
       "pickUpItems": [
-        "The Stringless",
-        "Wine and Song",
-        "The Bell",
-        "Favonius Lance",
-        "The Flute"
+        "Sacrificial Sword",
+        "Sacrificial Greatsword",
+        "Sacrificial Bow",
+        "Sacrificial Fragments",
+        "Dragon's Bane"
       ]
     },
     "threeStars": {
