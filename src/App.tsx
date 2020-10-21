@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import { GachaScreen, ElementalResonanceScreen } from "src/pages";
+import { GachaScreen, PartyScreen } from "src/pages";
 import { Header, Footer, TextBlockButton, TextUnderLineButton, ContentWrapper } from "src/components";
 
 const Container = styled.div({});
@@ -14,7 +14,6 @@ const MainLogo = styled.a({
 });
 
 function App() {
-
   return (
     <BrowserRouter>
       <Container>
@@ -28,7 +27,7 @@ function App() {
         <ContentWrapper>
           <Switch>
             <Route path="/gacha" component={GachaScreen} />
-            <Route path="/elmreson" component={ElementalResonanceScreen} />
+            <Route path="/elmreson" component={PartyScreen} />
           </Switch>
         </ContentWrapper>
         <Footer>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 
 import { characterInfo } from "src/resources/data";
@@ -6,6 +6,12 @@ import { characterInfo } from "src/resources/data";
 import { CharacterImageButton } from "./SelectableCharacter";
 import { SelectedCharacterImage } from "./SelectedCharacter";
 import { ElementCircleList } from "./ElementCircleList";
+import { ElementEffectSummary } from "./ElementEffectSummary";
+
+type CharacterName = string;
+type CharacterSrc = string;
+type ElementName = string;
+type ElementCount = number;
 
 const SelectedCharacterLayout = styled.div({
   display: "flex",
@@ -13,22 +19,23 @@ const SelectedCharacterLayout = styled.div({
   justifyContent: "center",
   paddingLeft: "25vw",
   paddingRight: "25vw",
-  marginBottom: "10vh"
+  marginBottom: "5vh"
 });
 
 const CharacterLayout = styled.div({
   display: "flex",
   flexWrap: "wrap",
+  justifyContent: "center",
   alignItems: "flex-start",
   paddingLeft: "25vw",
   paddingRight: "25vw"
 });
 
-export function ElementalResonanceScreen() {
+export function PartyScreen() {
   const MAX_SELECTED_CHARACTER = 4;
 
-  const [selectedCharacters, setSelectedCharacters] = useState(new Map<string, string>());
-  const [unSelectedCharacters, setUnSelectedCharacters] = useState(
+  const [selectedCharacters, setSelectedCharacters] = useState(new Map<CharacterName, CharacterSrc>());
+  const [emptyCharacters, setEmptyCharacters] = useState(
     new Map<string, null>([
       ["0", null],
       ["1", null],
@@ -36,7 +43,7 @@ export function ElementalResonanceScreen() {
       ["3", null]
     ])
   );
-  const [activeElements, setActiveElements] = useState<Map<string, number>>(new Map());
+  const [activeElements, setActiveElements] = useState<Map<ElementName, ElementCount>>(new Map());
 
   function fillEmptyCharacters(filledCharacterSize: number) {
     const emptyCharacters: Map<string, null> = new Map();
@@ -47,11 +54,11 @@ export function ElementalResonanceScreen() {
       emptyCharacterCount++;
     }
 
-    setUnSelectedCharacters(emptyCharacters);
+    setEmptyCharacters(emptyCharacters);
   }
 
-  function changeActiveElements(characters: Map<string, string>) {
-    const activeElems: Map<string, number> = new Map();
+  function changeActiveElements(characters: Map<CharacterName, CharacterSrc>) {
+    const activeElems: Map<ElementName, ElementCount> = new Map();
 
     characters.forEach((value: any, name: string) => {
       if (characterInfo[name].element !== undefined) {
@@ -68,8 +75,8 @@ export function ElementalResonanceScreen() {
     setActiveElements(activeElems);
   }
 
-  function selectCharacter(name: string, resource: any) {
-    const characters: Map<string, any> = new Map(selectedCharacters);
+  function selectCharacter(name: CharacterName, resource: CharacterSrc) {
+    const characters: Map<CharacterName, CharacterSrc> = new Map(selectedCharacters);
 
     if (characters.has(name)) {
       characters.delete(name);
@@ -80,23 +87,22 @@ export function ElementalResonanceScreen() {
     }
 
     fillEmptyCharacters(characters.size);
-
     changeActiveElements(characters);
-
     setSelectedCharacters(characters);
   }
 
   return (
     <div>
       <SelectedCharacterLayout>
-        {[...selectedCharacters].map((dic: any) => {
+        {[...selectedCharacters].map((dic: [CharacterName, CharacterSrc]) => {
           return <SelectedCharacterImage key={dic[0]} src={dic[1]} />;
         })}
-        {[...unSelectedCharacters].map((dic: any) => {
+        {[...emptyCharacters].map((dic: [string, any]) => {
           return <SelectedCharacterImage key={dic[0]} src={dic[1]} />;
         })}
       </SelectedCharacterLayout>
       <ElementCircleList activeElements={activeElements} />
+      <ElementEffectSummary activeElements={activeElements} />
       <CharacterLayout>
         {Object.keys(characterInfo).map((name: string) => {
           return (

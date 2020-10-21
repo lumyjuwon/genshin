@@ -9,7 +9,7 @@ const ElementLayout = styled.div({
   justifyContent: "center",
   paddingLeft: "25vw",
   paddingRight: "25vw",
-  marginBottom: "10vh"
+  marginBottom: "5vh"
 });
 
 const elements: { [key: string]: { resource: any; borderColor: string } } = {

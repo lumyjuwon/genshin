@@ -16,7 +16,7 @@ const Container = styled.div({
   color: "#f1f2f3",
   transition: "0.2s",
   alignItmes: "center",
-  justifyContent: "centre",
+  justifyContent: "centre"
 });
 
 export function SelectedCharacterImage(props: Props) {
@@ -27,7 +27,7 @@ export function SelectedCharacterImage(props: Props) {
         styles={{
           width: "100px",
           height: "100px",
-          borderRadius: "35%",
+          borderRadius: "35%"
         }}
       />
     </Container>
