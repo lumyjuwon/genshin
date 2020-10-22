@@ -1,19 +1,8 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 import { characterInfo, weaponInfo } from 'src/resources/data';
 import { FlexWrapper, SquareImage } from "src/components";
-
-const resultAnimation = keyframes`
-  0% {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-`;
 
 const GridContainer = styled.div({
   backgroundColor: "#333",
@@ -47,7 +36,6 @@ const ItemTooltip = styled.div({
 
 const HoverTransform = styled.div<{ delay: number }>`
   position: relative;
-  opacity: 0;
   &:hover {
     transition: 0.2s ease-in-out;
     transform: scale(1.2, 1.2);
@@ -55,8 +43,6 @@ const HoverTransform = styled.div<{ delay: number }>`
   &:hover ${ItemTooltip} {
     visibility: visible;
   }
-  animation: ${resultAnimation} 0.2s linear forwards;
-  animation-delay: ${(props) => props.delay * 0.1 || 0}s;
 `
 
 interface Props {
