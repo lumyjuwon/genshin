@@ -1,8 +1,19 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 import { characterInfo, weaponInfo } from 'src/resources/data';
 import { FlexWrapper, SquareImage } from "src/components";
+
+const resultAnimation = keyframes`
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
 
 const GridContainer = styled.div({
   backgroundColor: "#333",
@@ -17,6 +28,7 @@ const GridContainer = styled.div({
   justifyItems: "center",
   alignContent: "center",
   justifyContent: "center",
+
 });
 
 const ItemTooltip = styled.div({
@@ -33,8 +45,9 @@ const ItemTooltip = styled.div({
   fontSize: "16px"
 });
 
-const HoverTransform = styled.div`
+const HoverTransform = styled.div<{ delay: number }>`
   position: relative;
+  opacity: 0;
   &:hover {
     transition: 0.2s ease-in-out;
     transform: scale(1.2, 1.2);
@@ -42,6 +55,8 @@ const HoverTransform = styled.div`
   &:hover ${ItemTooltip} {
     visibility: visible;
   }
+  animation: ${resultAnimation} 0.2s linear forwards;
+  animation-delay: ${(props) => props.delay * 0.1 || 0}s;
 `
 
 interface Props {
@@ -69,7 +84,7 @@ export function GachaArrangeView(props: Props) {
             else if (weaponInfo[item].rank === 4) shadow = shadowPal.four;
           }
           return (
-            <HoverTransform>
+            <HoverTransform delay={index}>
               <SquareImage
                 key={index}
                 styles={{
