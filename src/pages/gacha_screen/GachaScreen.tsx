@@ -60,6 +60,7 @@ export function GachaScreen() {
 
   const onBannerClick = (content: string): void => {
     setGachaContent(content);
+    setGachaExecutionResult([]);
     gacha.current = gachaMap.current.get(content);
 
     gacha.current && setTotalCount(gacha.current.totalCount);
@@ -154,7 +155,8 @@ export function GachaScreen() {
               result={gachaInventoryList}
             />
           }
-          <div style={{margin: "30px auto"}}>
+          <div style={{margin: "50px auto 30px"}}>
+            <hr />
             <GachaInventory inventoryList={gachaInventoryList} />
           </div>
         </div>
