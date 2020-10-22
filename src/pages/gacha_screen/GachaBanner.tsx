@@ -18,6 +18,7 @@ const DropDown = styled.ul({
   left: "-1px",
   opacity: "0",
   visibility: "hidden",
+  transition: "all 0.1s",
   boxShadow: "6px 6px 3px rgba(0,0,0,0.6)",
 })
 
@@ -30,7 +31,7 @@ const StyledDiv = styled.div`
   padding: 5px 10px;
   border-radius: 8px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: all 0.2s;
   position: relative;
   &:hover {
     color: #212223;
@@ -110,7 +111,7 @@ export function GachaBanner(props: Props) {
               <HoverDiv id="content">
                 {selectedPickUp}
               </HoverDiv>
-              <Icon>^</Icon>
+              <Icon>▲</Icon>
             </>
           </FlexWrapper>
           <DropDown>

@@ -37,7 +37,7 @@ const ItemTooltip = styled.div({
 const HoverTransform = styled.div<{ delay: number }>`
   position: relative;
   &:hover {
-    transition: 0.2s ease-in-out;
+    transition: 0.1s ease-in-out;
     transform: scale(1.2, 1.2);
   }
   &:hover ${ItemTooltip} {
