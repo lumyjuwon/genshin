@@ -247,8 +247,8 @@
 
   "Novice Wishes": {
     "pickUpTarget": [],
-    "maxPityCount": 9999,
-    "maxPickUpCount": 9999,
+    "maxPityCount": 0,
+    "maxPickUpCount": 0,
     "maxBonusCount": 10,
     "guaranteeItem": "Noelle",
     "fiveStars": {
