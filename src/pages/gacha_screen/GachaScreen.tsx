@@ -63,7 +63,7 @@ export function GachaScreen() {
     gacha.current = gachaMap.current.get(content);
 
     gacha.current && setTotalCount(gacha.current.totalCount);
-    gacha.current && setNextPity(contentData.maxPityCount - gacha.current.pityCount);
+    gacha.current && setNextPity(gacha.current.nextPity);
   }
 
   const onGachaExecution = (tries: number): void => {
@@ -123,7 +123,7 @@ export function GachaScreen() {
                 1 Time
               </RoundTextButton>}
               {(gachaContent === "Novice Wishes" && totalCount === 20) ? 
-                <TextCenterWrapper>
+                <TextCenterWrapper styles={{width: "800px", margin: "0 auto"}}>
                   Novice Wishes finished. Choose another Wish or click Reset Button
                 </TextCenterWrapper> :
                 <RoundTextButton
