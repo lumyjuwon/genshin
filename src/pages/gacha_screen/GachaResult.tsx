@@ -36,7 +36,7 @@ export function GachaResult(props: Props) {
       <FlexWrapper>
         <>
           <Result>
-            {`Total Gacha Times: ${props.times}`}
+            {`Gacha Times: ${props.times}`}
           </Result>
           <Result>
               {`Next Pity: ${props.pity}`}
