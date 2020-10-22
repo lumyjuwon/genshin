@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { characterInfo, weaponInfo } from 'src/resources/data';
-import { FlexWrapper, SquareImage } from "src/components";
+import { FlexWrapper, SquareImage, TextCenterWrapper } from "src/components";
 
 const GridContainer = styled.div({
   backgroundColor: "#333",
@@ -45,6 +45,16 @@ const HoverTransform = styled.div<{ delay: number }>`
   }
 `
 
+const Container = styled.div({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  width: "1140px",
+  height: "400px",
+  backgroundColor: "#333",
+  margin: "0 auto"
+})
+
 interface Props {
   result: Array<string>;
 }
@@ -56,35 +66,59 @@ export function GachaArrangeView(props: Props) {
     four: "0 0 8px 2px #b182c4, 0px 25px 5px #b182c4, 0px -25px 5px #b182c4",
   };
 
-  return (
-    <FlexWrapper>
-      <GridContainer>
-        {props.result.map((item: string, index: number) => {
-          let shadow = "0 0 8px 2px #777, 0px 8px 5px #777, 0px -8px 5px #777";
-          if (characterInfo[item]) {
-            if (characterInfo[item].rank === 5) shadow = shadowPal.five;
-            else if (characterInfo[item].rank === 4) shadow = shadowPal.four;
+  if(props.result.length) {
 
-          } else {
-            if (weaponInfo[item].rank === 5) shadow = shadowPal.five;
-            else if (weaponInfo[item].rank === 4) shadow = shadowPal.four;
-          }
-          return (
-            <HoverTransform delay={index}>
-              <SquareImage
-                key={index}
-                styles={{
-                  height: "300px",
-                  boxShadow: `${shadow}`,
-                  objectFit: "none",
-                }}
-                src={require(`../../resources/images/gacha/${item}.png`)}
-              />
-              <ItemTooltip>{item}</ItemTooltip>
-            </HoverTransform>
-          );
-        })}
-      </GridContainer>
-    </FlexWrapper>
-  );
+    return (
+      <FlexWrapper>
+        <GridContainer>
+          {props.result.map((item: string, index: number) => {
+            let shadow = "0 0 8px 2px #777, 0px 8px 5px #777, 0px -8px 5px #777";
+            if (characterInfo[item]) {
+              if (characterInfo[item].rank === 5) shadow = shadowPal.five;
+              else if (characterInfo[item].rank === 4) shadow = shadowPal.four;
+  
+            } else {
+              if (weaponInfo[item].rank === 5) shadow = shadowPal.five;
+              else if (weaponInfo[item].rank === 4) shadow = shadowPal.four;
+            }
+            return (
+              <HoverTransform delay={index}>
+                <SquareImage
+                  key={index}
+                  styles={{
+                    height: "300px",
+                    boxShadow: `${shadow}`,
+                    objectFit: "none",
+                  }}
+                  src={require(`../../resources/images/gacha/${item}.png`)}
+                />
+                <ItemTooltip>{item}</ItemTooltip>
+              </HoverTransform>
+            );
+          })}
+        </GridContainer>
+      </FlexWrapper>
+    );
+  }
+  else {
+    return (
+      <Container>
+        <FlexWrapper>
+          <>
+            <SquareImage
+              styles={{width: "300x", height: "370px"}}
+              src={require("../../resources/images/characters/Flying Paimon.gif")} 
+            />
+            <TextCenterWrapper styles={{ fontSize: "25px"}}>
+              <>
+                <span role="img">💬&nbsp;</span>
+                Click 1 Time or 10 Times button to start!
+              </>
+            </TextCenterWrapper>
+          </>
+        </FlexWrapper>
+      </Container>
+    )
+  }
+  
 }

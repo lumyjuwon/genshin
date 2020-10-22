@@ -4,6 +4,7 @@ import styled from 'styled-components';
 interface DivStyle {
   width?: string;
   margin?: string;
+  fontSize?: string;
 }
 
 interface Props {
@@ -16,7 +17,8 @@ const TextCenterDiv = styled.div<DivStyle>((props: DivStyle) => {
   return {
     textAlign: "center",
     width: props.width || "fit-content",
-    margin: props.margin || "10px"
+    margin: props.margin || "10px",
+    fontSize: props.fontSize || "inherit"
   }
 })
 
