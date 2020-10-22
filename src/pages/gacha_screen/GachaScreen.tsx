@@ -44,6 +44,7 @@ export function GachaScreen() {
       gachaMap.current?.set(gachaContent, executor);
     }
     
+    console.log("useEffect")
     gacha.current = gachaMap.current?.get(gachaContent);
   }, [gachaContent, contentData]);
   
@@ -57,14 +58,20 @@ export function GachaScreen() {
     
     gachaMap.current.clear();
   };
+  
+  const afterGachaCurrentChange = () => {
+    gacha.current && setTotalCount(gacha.current.totalCount);
+    gacha.current && setNextPity(gacha.current.nextPity);
+  }
 
   const onBannerClick = (content: string): void => {
     setGachaContent(content);
     setGachaExecutionResult([]);
-    gacha.current = gachaMap.current.get(content);
-
-    gacha.current && setTotalCount(gacha.current.totalCount);
-    gacha.current && setNextPity(gacha.current.nextPity);
+    
+    // Due to useState is asyncronous, gacha.current is prev state.
+    setTimeout(afterGachaCurrentChange);
+    // gacha.current && setTotalCount(gacha.current.totalCount);
+    // gacha.current && setNextPity(gacha.current.nextPity);
   }
 
   const onGachaExecution = (tries: number): void => {
