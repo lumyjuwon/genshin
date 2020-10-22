@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { RoundImage, TextCenterWrapper } from 'src/components';
+import { FlexWrapper, RoundImage, TextCenterWrapper } from 'src/components';
 import { characterInfo, weaponInfo } from 'src/resources/data';
 
 interface Props {
@@ -15,6 +15,10 @@ interface Inventory {
 const Title = styled.div({
   width: "fit-content",
   fontSize: "20px",
+  marginBottom: "30px"
+})
+
+const ItemCount = styled.div({
   marginBottom: "30px"
 })
 
@@ -138,9 +142,22 @@ export function GachaInventory(props: Props){
     }
   });
 
+  const totalItemCount = inventoryItemCounts.reduce(
+    (acc: number, count: number) => {
+      return acc + count;
+    }
+  , 0);
+
   return (
     <>
-      <Title>Inventory</Title>
+      <FlexWrapper styles={{justifyContent: "space-between"}}>
+        <>
+          <Title>Inventory</Title>
+          <ItemCount>
+            {`Total Items: ${totalItemCount}`}
+          </ItemCount>
+        </>
+      </FlexWrapper>
       {!props.inventoryList.length ?
         <TextCenterWrapper styles={{width: "1200px", margin: "10px auto"}}>There is no item... Press button!</TextCenterWrapper>
         : null
