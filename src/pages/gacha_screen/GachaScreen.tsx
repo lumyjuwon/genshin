@@ -44,7 +44,6 @@ export function GachaScreen() {
       gachaMap.current?.set(gachaContent, executor);
     }
     
-    console.log("useEffect")
     gacha.current = gachaMap.current?.get(gachaContent);
   }, [gachaContent, contentData]);
   
