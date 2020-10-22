@@ -118,6 +118,10 @@ export class GachaController {
           
           if (this.data.fiveStars.pickUpItems.includes(resultItem)) {
             this.favoriteCount = 0;
+            this.isNextPickUpTarget = false;
+          }
+          else {
+            this.isNextPickUpTarget = true;
           }
         }
         else {
@@ -133,21 +137,22 @@ export class GachaController {
         this.pityCount = 0;
         this.favoriteCount = 0;
         this.isNextPickUpTarget = false;
-
+        
         resultItems.push(resultItem);
       }
       // maxPityCount 천장
       else if(this.pityCount === this.data.maxPityCount){
         const resultItem = this.pick(this.data.fiveStars);
+        this.pityCount = 0;
         
         if(this.data.pickUpTarget.includes(resultItem)){
-          this.pityCount = 0;
           this.favoriteCount = 0;
           this.isNextPickUpTarget = false;
+          
         }
         else{
-          this.pityCount = 0;
           this.isNextPickUpTarget = true;
+          
         }
 
         resultItems.push(resultItem);
@@ -163,16 +168,19 @@ export class GachaController {
             const characterIndex = Math.floor(Math.random() * this.data.pickUpTarget.length)
             resultItem = this.data.pickUpTarget[characterIndex];
             this.isNextPickUpTarget = false;
+            
           }
           else {
             resultItem = this.pick(this.data.fiveStars);
             this.isNextPickUpTarget = true;
+            
           }
           
           this.pityCount = 0;
           if (this.data.fiveStars.pickUpItems.includes(resultItem)) {
             this.favoriteCount = 0;
             this.isNextPickUpTarget = false;
+            
           }
 
         }
