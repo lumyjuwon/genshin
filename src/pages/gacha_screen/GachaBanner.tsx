@@ -10,6 +10,7 @@ const Icon = styled.div({
 
 const DropDown = styled.ul({
   width: "300px",
+  zIndex: 1,
   backgroundColor: "transparent",
   position: "absolute",
   borderRadius: "8px",
@@ -17,7 +18,7 @@ const DropDown = styled.ul({
   left: "-1px",
   opacity: "0",
   visibility: "hidden",
-  boxShadow: "6px 6px 3px rgba(0,0,0,0.6)"
+  boxShadow: "6px 6px 3px rgba(0,0,0,0.6)",
 })
 
 const StyledDiv = styled.div`
@@ -56,20 +57,34 @@ const List = styled.li({
   "&:hover": {
     backgroundColor: "#ccc",
   }
+});
+
+const Details = styled.div({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: "#000",
+  visibility: "hidden",
 })
 
-const Help = styled.span({
-  display: "inline-block",
-  marginBottom: "20px",
-  padding: "7px",
-  border: "1px solid #f1f2f3",
-  cursor: "pointer",
-  borderRadius: "50%",
-  transition: "0.2s",
-  "&:hover": {
-    backgroundColor: "#f1f2f3",
-  }
-})
+const Help = styled.div`
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  border: 1px solid #f1f2f3;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.2s;
+  &:hover {
+    background-color: #f1f2f3;
+  };
+  &:hover ${Details} {
+    visibility: visible;
+  };
+`
 
 interface Props {
   content: string;
@@ -84,10 +99,6 @@ export function GachaBanner(props: Props) {
   const onListClick = (content: string | null): void => {
     if (content) selectedPickUp = content;
     if(content !== props.content) props.onClick(selectedPickUp);
-  }
-
-  const onHelpClick = () => {
-    
   }
 
   return (
@@ -108,7 +119,10 @@ export function GachaBanner(props: Props) {
             })}
           </DropDown>
         </StyledDiv>
-        <Help role="img" onClick={() => onHelpClick()}>❔</Help>
+        <div style={{position: "relative"}}>
+          <Help role="img">❔</Help>
+          <Details>Details</Details>
+        </div>
       </>
     </FlexWrapper>
   )
