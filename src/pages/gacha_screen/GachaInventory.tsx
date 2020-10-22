@@ -62,13 +62,18 @@ const ItemTooltip = styled.div({
   textAlign: "center",
   borderRadius: "8px",
   opacity: "0.8",
-  overflow: "hidden"
+  fontSize: "14px"
 });
 
 const Item = styled.div`
   position: relative;
   border: 2px solid #aaa;
   border-radius: 16px;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 5px rgba(0,0,0,0.77);
+  }
   &:hover ${ItemTooltip} {
     visibility: visible;
   }  

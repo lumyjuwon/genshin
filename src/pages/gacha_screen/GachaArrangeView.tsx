@@ -19,6 +19,31 @@ const GridContainer = styled.div({
   justifyContent: "center",
 });
 
+const ItemTooltip = styled.div({
+  visibility: "hidden",
+  width: "100%",
+  position: "absolute",
+  bottom: "16px",
+  left: "0",
+  backgroundColor: "#000",
+  textAlign: "center",
+  borderRadius: "8px",
+  opacity: "0.8",
+  overflow: "hidden",
+  fontSize: "16px"
+});
+
+const HoverTransform = styled.div`
+  position: relative;
+  &:hover {
+    transition: 0.2s ease-in-out;
+    transform: scale(1.2, 1.2);
+  }
+  &:hover ${ItemTooltip} {
+    visibility: visible;
+  }
+`
+
 interface Props {
   result: Array<string>;
 }
@@ -44,15 +69,18 @@ export function GachaArrangeView(props: Props) {
             else if (weaponInfo[item].rank === 4) shadow = shadowPal.four;
           }
           return (
-            <SquareImage
-              key={index}
-              styles={{
-                height: "300px",
-                boxShadow: `${shadow}`,
-                objectFit: "none",
-              }}
-              src={require(`../../resources/images/gacha/${item}.png`)}
-            />
+            <HoverTransform>
+              <SquareImage
+                key={index}
+                styles={{
+                  height: "300px",
+                  boxShadow: `${shadow}`,
+                  objectFit: "none",
+                }}
+                src={require(`../../resources/images/gacha/${item}.png`)}
+              />
+              <ItemTooltip>{item}</ItemTooltip>
+            </HoverTransform>
           );
         })}
       </GridContainer>
