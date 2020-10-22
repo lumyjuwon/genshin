@@ -49,6 +49,7 @@ export class GachaController {
   public totalCount: number;
   public pityCount: number;
   public favoriteCount: number;
+  public nextPity: number;
   public gachaResult: Array<string>;
   public isGuaranteeItem: boolean;
   public isNextPickUpTarget: boolean;
@@ -58,6 +59,7 @@ export class GachaController {
     this.totalCount = 0;
     this.pityCount = 0;
     this.favoriteCount = 0;
+    this.nextPity = gachaData.maxPityCount;
     this.gachaResult = new Array<string>();
     this.isGuaranteeItem = false;
     this.isNextPickUpTarget = false;
@@ -185,8 +187,7 @@ export class GachaController {
       }
     }
     
-    console.log("pity count: ", this.pityCount)
-    console.log("favorite count: ", this.favoriteCount);
+    this.nextPity = this.data.maxPityCount - this.pityCount;
     this.gachaResult = resultItems;
     return resultItems;
   }
