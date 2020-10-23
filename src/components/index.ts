@@ -14,6 +14,7 @@ export { RoundTextButton } from "./button/RoundTextButton";
 export { RoundImageButton } from "./button/RoundImageButton";
 export { SquareTextButton } from "./button/SquareTextButton";
 export { SquareImageButton } from "./button/SquareImageButton";
+export { CheckBoxButton } from "./button/CheckBoxButton";
 
 // Image Component
 export { RoundImage } from "./image/RoundImage";

@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-import { FlexWrapper, RoundImage, TextCenterWrapper } from 'src/components';
+import { FlexWrapper, RoundImage, TextCenterWrapper, CheckBoxButton } from 'src/components';
 import { characterInfo, weaponInfo } from 'src/resources/data';
 
 interface Props {
@@ -85,20 +85,7 @@ const Item = styled.div`
 const TextAlignRight = styled.div({
   textAlign: "right",
   marginBottom: "30px"
-})
-
-const CheckboxLabel = styled.label({
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center"
-})
-
-const CheckboxInput = styled.input({
-  width: "16px",
-  height: "16px"
-})
-
-
+});
 
 export function GachaInventory(props: Props){
   
@@ -200,10 +187,9 @@ export function GachaInventory(props: Props){
             <ItemCount>
               {`Total Items: ${totalItemCount}`}
             </ItemCount>
-            <CheckboxLabel onClick={() => onLabelClicked()}>
+            <CheckBoxButton onClick={() => onLabelClicked()} refProp={inputRef}>
               Hide 3-Stars Items
-              <CheckboxInput ref={inputRef} type="checkbox" name="switch" value="hide" />
-            </CheckboxLabel>
+            </CheckBoxButton>
           </TextAlignRight>
         </>
       </FlexWrapper>
