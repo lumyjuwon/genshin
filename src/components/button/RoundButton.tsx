@@ -37,6 +37,7 @@ const Button = styled.div<ButtonStyle>((props: ButtonStyle) => {
     border: props.border || "2px solid #f1f2f3",
     borderRadius: props.borderRadius || "8px",
     width: props.width || "fit-content",
+    height: props.height || "auto",
     padding: props.padding || "5px 5px",
     margin: props.margin || "10px",
     cursor: props.cursor || "pointer",
