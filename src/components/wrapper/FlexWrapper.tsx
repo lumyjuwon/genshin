@@ -6,6 +6,7 @@ interface DivProps {
   readonly flexDirection?: "inherit" | "-moz-initial" | "initial" | "revert" | "unset" | "column" | "column-reverse" | "row" | "row-reverse" | undefined;
   readonly justifyContent?: string;
   readonly alignItems?: string;
+  readonly width?: string;
 }
 
 const FlexDiv = styled.div<DivProps>((props: DivProps) => {
@@ -14,12 +15,13 @@ const FlexDiv = styled.div<DivProps>((props: DivProps) => {
       flexDirection: props.flexDirection || "row",
       justifyContent: props.justifyContent || "center",
       alignItems: props.alignItems || "center",
+      width: props.width || "auto",
     }
   }
 )
 
 interface Props {
-  children: JSX.Element;
+  children: JSX.Element | string;
   styles?: DivProps
 }
 
