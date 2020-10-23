@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import { FlexWrapper } from 'src/components';
+import { FlexWrapper, SquareImage } from 'src/components';
 
 interface Props {
   times: number;
@@ -9,6 +9,7 @@ interface Props {
   four: number;
   five: number;
   pity?: number;
+  gem: number;
 }
 
 const ResultBar = styled.div({
@@ -39,13 +40,24 @@ export function GachaResult(props: Props) {
             {`Gacha Times: ${props.times}`}
           </Result>
           <Result>
-              {`Next Pity: ${props.pity}`}
-            </Result>
+            {`Next Pity: ${props.pity}`}
+          </Result>
           <Result>
             {`5★: ${props.five}`}
           </Result>
           <Result>
             {`4★: ${props.four}`}
+          </Result>
+          <Result>
+            <FlexWrapper>
+              <>
+              <SquareImage
+                styles={{ width: "20px", height: "20px" }}
+                src={require("../../resources/images/items/gem/Primogem.webp")}
+              />
+              <span>{`: ${props.gem}`}</span>
+              </>
+            </FlexWrapper>
           </Result>
         </>
       </FlexWrapper>

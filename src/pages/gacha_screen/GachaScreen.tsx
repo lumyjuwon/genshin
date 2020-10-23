@@ -21,6 +21,7 @@ export function GachaScreen() {
   const [ gachaInventoryList, setGachaInventoryList ] = useState([]);
   const [ gachaExecutionResult, setGachaExecutionResult ] = useState([]);
   const [ nextPity, setNextPity ] = useState(0);
+  const [ usedPrimoGem, setUsedPrimoGem ] = useState(0);
   
   const refInitialValue = new Map<string, GachaController>();
   const gacha = useRef<GachaController>();
@@ -53,6 +54,7 @@ export function GachaScreen() {
     setFiveStarCount(0);
     setGachaExecutionResult([]);
     setGachaInventoryList([]);
+    setUsedPrimoGem(0);
     setNextPity(contentData.maxPityCount);
     
     gachaMap.current.clear();
@@ -79,6 +81,7 @@ export function GachaScreen() {
     gacha.current && setNextPity(contentData.maxPityCount - gacha.current.pityCount);
     gacha.current && setGachaInventoryList([...gachaInventoryList, ...gacha.current.gachaResult as never[]]);
     gacha.current && setStarCount(gacha.current.gachaResult);
+    setUsedPrimoGem(usedPrimoGem + (payedFateCount * 160));
   }
 
   const setStarCount = (result: Array<string>) => {
@@ -102,8 +105,13 @@ export function GachaScreen() {
     setFourStarCount(fourCount);
   }
 
+  let contentList = Object.keys(gachaInfo);
   let payedFateCount: number = 10;
-  if(gachaContent === "Novice Wishes") {
+  let gemImage: string = "Acquaint Fate";
+  if(gachaContent ===  contentList[0] || gachaContent === contentList[1] ) {
+    gemImage = "Intertwined Fate";
+  }
+  if(gachaContent === contentList[3]) {
     payedFateCount = 8;
   }
 
@@ -140,7 +148,7 @@ export function GachaScreen() {
                       <>
                         <SquareImage
                           styles={{width: "25px", height: "25px" }}
-                          src={require("../../resources/images/items/gem/Acquaint Fate.png")}
+                          src={require(`../../resources/images/items/gem/${gemImage}.png`)}
                         />
                         <span style={{fontSize: "14px"}}>&nbsp;× {payedFateCount}</span>
                       </>
@@ -159,7 +167,7 @@ export function GachaScreen() {
                     <>
                       <SquareImage
                         styles={{width: "25px", height: "25px" }}
-                        src={require("../../resources/images/items/gem/Acquaint Fate.png")}
+                        src={require(`../../resources/images/items/gem/${gemImage}.png`)}
                       />
                       <span style={{fontSize: "14px"}}>&nbsp;× {payedFateCount}</span>
                     </>
@@ -182,6 +190,7 @@ export function GachaScreen() {
               times={totalCount}
               four={fourStarCount}
               five={fiveStarCount}
+              gem={usedPrimoGem}
               pity={0}
               result={gachaInventoryList}
             /> :
@@ -189,6 +198,7 @@ export function GachaScreen() {
               times={totalCount}
               four={fourStarCount}
               five={fiveStarCount}
+              gem={usedPrimoGem}
               pity={nextPity}
               result={gachaInventoryList}
             />
