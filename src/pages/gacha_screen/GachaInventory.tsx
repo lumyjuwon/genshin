@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import { FlexWrapper, RoundImage, TextCenterWrapper } from 'src/components';
@@ -14,12 +14,11 @@ interface Inventory {
 
 const Title = styled.div({
   width: "fit-content",
-  fontSize: "20px",
-  marginBottom: "30px"
+  fontSize: "20px"
 })
 
 const ItemCount = styled.div({
-  marginBottom: "30px"
+  marginBottom: "10px"
 })
 
 const GridContainer = styled.div({
@@ -83,7 +82,34 @@ const Item = styled.div`
   }  
 `;
 
+const TextAlignRight = styled.div({
+  textAlign: "right",
+  marginBottom: "30px"
+})
+
+const CheckboxLabel = styled.label({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center"
+})
+
+const CheckboxInput = styled.input({
+  width: "16px",
+  height: "16px"
+})
+
+
+
 export function GachaInventory(props: Props){
+  
+  const [ isHide, setIsHide ] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+  
+  useEffect(() => {
+    if (inputRef.current) {
+      setIsHide(inputRef.current.checked);
+    };
+  }, []);
 
   const sortByStars = (gachaResult: Array<string>): Array<string> => {
     gachaResult.sort((item: string, nextItem: string): number => {
@@ -128,10 +154,27 @@ export function GachaInventory(props: Props){
     return inventoryObject;
   }
 
+  // This works, but render twice
+  const onLabelClicked = () => {
+    inputRef.current && setIsHide(inputRef.current.checked);
+  }
+
   const sortedGachaResult = sortByStars(props.inventoryList);
   const inventory = arrayToObject(sortedGachaResult);
-  const inventoryItems = Object.keys(inventory);
   const inventoryItemCounts = Object.values(inventory);
+  
+  let inventoryItems: Array<string> = Object.keys(inventory);
+  
+  if(isHide) {
+    inventoryItems = inventoryItems.filter((item: string) => {
+      if (characterInfo[item]) {
+        return characterInfo[item].rank > 3;
+  
+      } else {
+        return weaponInfo[item].rank > 3;
+      }
+    });
+  };
 
   const itemRank = inventoryItems.map((item: string) => {
     if (characterInfo[item]) {
@@ -150,12 +193,18 @@ export function GachaInventory(props: Props){
 
   return (
     <>
-      <FlexWrapper styles={{justifyContent: "space-between"}}>
+      <FlexWrapper styles={{justifyContent: "space-between", alignItems: "start"}}>
         <>
           <Title>Inventory</Title>
-          <ItemCount>
-            {`Total Items: ${totalItemCount}`}
-          </ItemCount>
+          <TextAlignRight style={{textAlign: "right"}}>
+            <ItemCount>
+              {`Total Items: ${totalItemCount}`}
+            </ItemCount>
+            <CheckboxLabel onClick={() => onLabelClicked()}>
+              Hide 3-Stars Items
+              <CheckboxInput ref={inputRef} type="checkbox" name="switch" value="hide" />
+            </CheckboxLabel>
+          </TextAlignRight>
         </>
       </FlexWrapper>
       {!props.inventoryList.length ?
@@ -168,9 +217,11 @@ export function GachaInventory(props: Props){
               <Item key={index}>
                 {characterInfo[item] ?
                   <RoundImage
+                    styles={{borderRadius: "16px"}}
                     src={require(`../../resources/images/characters/${item}.png`)}
                   /> :
                   <RoundImage
+                    styles={{borderRadius: "16px"}}
                     src={require(`../../resources/images/items/weapons/${item}.png`)}
                   />
                 }
