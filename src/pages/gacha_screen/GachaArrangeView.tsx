@@ -69,35 +69,37 @@ export function GachaArrangeView(props: Props) {
   if(props.result.length) {
 
     return (
-      <FlexWrapper>
-        <GridContainer>
-          {props.result.map((item: string, index: number) => {
-            let shadow = "0 0 8px 2px #777, 0px 8px 5px #777, 0px -8px 5px #777";
-            if (characterInfo[item]) {
-              if (characterInfo[item].rank === 5) shadow = shadowPal.five;
-              else if (characterInfo[item].rank === 4) shadow = shadowPal.four;
-  
-            } else {
-              if (weaponInfo[item].rank === 5) shadow = shadowPal.five;
-              else if (weaponInfo[item].rank === 4) shadow = shadowPal.four;
-            }
-            return (
-              <HoverTransform delay={index}>
-                <SquareImage
-                  key={index}
-                  styles={{
-                    height: "300px",
-                    boxShadow: `${shadow}`,
-                    objectFit: "none",
-                  }}
-                  src={require(`../../resources/images/gacha/${item}.png`)}
-                />
-                <ItemTooltip>{item}</ItemTooltip>
-              </HoverTransform>
-            );
-          })}
-        </GridContainer>
-      </FlexWrapper>
+      <Container>
+        <FlexWrapper>
+          <GridContainer>
+            {props.result.map((item: string, index: number) => {
+              let shadow = "0 0 8px 2px #777, 0px 8px 5px #777, 0px -8px 5px #777";
+              if (characterInfo[item]) {
+                if (characterInfo[item].rank === 5) shadow = shadowPal.five;
+                else if (characterInfo[item].rank === 4) shadow = shadowPal.four;
+    
+              } else {
+                if (weaponInfo[item].rank === 5) shadow = shadowPal.five;
+                else if (weaponInfo[item].rank === 4) shadow = shadowPal.four;
+              }
+              return (
+                <HoverTransform delay={index}>
+                  <SquareImage
+                    key={index}
+                    styles={{
+                      height: "300px",
+                      boxShadow: `${shadow}`,
+                      objectFit: "none",
+                    }}
+                    src={require(`../../resources/images/gacha/${item}.png`)}
+                  />
+                  <ItemTooltip>{item}</ItemTooltip>
+                </HoverTransform>
+              );
+            })}
+          </GridContainer>
+        </FlexWrapper>
+      </Container>
     );
   }
   else {
@@ -112,7 +114,7 @@ export function GachaArrangeView(props: Props) {
             <TextCenterWrapper styles={{ fontSize: "25px"}}>
               <>
                 <span role="img">💬&nbsp;</span>
-                Click 1 Time or 10 Times button to start!
+                Click button to start!
               </>
             </TextCenterWrapper>
           </>
