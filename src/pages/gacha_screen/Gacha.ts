@@ -52,7 +52,8 @@ export class GachaController {
   public nextPity: number;
   public gachaResult: Array<string>;
   public isGuaranteeItem: boolean;
-  public isNextPickUpTarget: boolean;
+  public isNextFivePickUp: boolean;
+  public isNextFourPickUp: boolean;
 
   constructor(gachaData: GachaContent){
     this.data = gachaData;
@@ -62,7 +63,8 @@ export class GachaController {
     this.nextPity = gachaData.maxPityCount;
     this.gachaResult = new Array<string>();
     this.isGuaranteeItem = false;
-    this.isNextPickUpTarget = false;
+    this.isNextFivePickUp = false;
+    this.isNextFourPickUp = false;
   }
 
   clear(){
@@ -71,7 +73,7 @@ export class GachaController {
     this.favoriteCount = 0;
     this.gachaResult = new Array<string>();
     this.isGuaranteeItem = false;
-    this.isNextPickUpTarget = false;
+    this.isNextFivePickUp = false;
   }
 
   pick(info: GachaInfo): string {
@@ -92,6 +94,35 @@ export class GachaController {
       resultItem = nonPickUpItems[itemIndex];
     }
 
+    return resultItem;
+  }
+
+  nextIsPickUp(info: GachaInfo, isNextPickUp: boolean): string {
+    let resultItem: string;
+
+    if(isNextPickUp) {
+      const characterIndex = Math.floor(Math.random() * info.pickUpItems.length)
+      resultItem = info.pickUpItems[characterIndex];
+      isNextPickUp = false;
+      
+    }
+    else {
+      resultItem = this.pick(info);
+      isNextPickUp = true;
+      
+    }
+
+    // if(info.pickUpItems.includes(resultItem)){
+    //   if(info === this.data.fiveStars) this.favoriteCount = 0;
+    //   isNextPickUp = false;
+      
+    // }
+    // else{
+    //   isNextPickUp = true;
+      
+    // }
+
+    // console.log(isNextPickUp);
     return resultItem;
   }
 
@@ -118,14 +149,21 @@ export class GachaController {
           
           if (this.data.fiveStars.pickUpItems.includes(resultItem)) {
             this.favoriteCount = 0;
-            this.isNextPickUpTarget = false;
+            this.isNextFivePickUp = false;
           }
           else {
-            this.isNextPickUpTarget = true;
+            this.isNextFivePickUp = true;
           }
         }
         else {
           resultItem = this.pick(this.data.fourStars);
+
+          if (this.data.fourStars.pickUpItems.includes(resultItem)) {
+            this.isNextFourPickUp = false;
+          } 
+          else {
+            this.isNextFourPickUp = true;
+          }
         }
 
         resultItems.push(resultItem);
@@ -136,25 +174,30 @@ export class GachaController {
         const resultItem = this.data.pickUpTarget[characterIndex];
         this.pityCount = 0;
         this.favoriteCount = 0;
-        this.isNextPickUpTarget = false;
+        this.isNextFivePickUp = false;
         
+
+        console.log("always", this.isNextFivePickUp);
         resultItems.push(resultItem);
       }
       // maxPityCount 천장
       else if(this.pityCount === this.data.maxPityCount){
-        const resultItem = this.pick(this.data.fiveStars);
+        
+        const resultItem = this.nextIsPickUp(this.data.fiveStars, this.isNextFivePickUp);
+
         this.pityCount = 0;
         
         if(this.data.pickUpTarget.includes(resultItem)){
           this.favoriteCount = 0;
-          this.isNextPickUpTarget = false;
+          this.isNextFivePickUp = false;
           
         }
         else{
-          this.isNextPickUpTarget = true;
+          this.isNextFivePickUp = true;
           
         }
 
+        console.log("pity", this.isNextFivePickUp);
         resultItems.push(resultItem);
       }
       // 일반 뽑기
@@ -164,28 +207,34 @@ export class GachaController {
 
         if(percent <= this.data.fiveStars.percent) {
 
-          if(this.isNextPickUpTarget) {
-            const characterIndex = Math.floor(Math.random() * this.data.pickUpTarget.length)
-            resultItem = this.data.pickUpTarget[characterIndex];
-            this.isNextPickUpTarget = false;
+          resultItem = this.nextIsPickUp(this.data.fiveStars, this.isNextFivePickUp);
+          
+          this.pityCount = 0;
+          
+          if (this.data.fiveStars.pickUpItems.includes(resultItem)) {
+            this.favoriteCount = 0;
+            this.isNextFivePickUp = false;
             
           }
           else {
-            resultItem = this.pick(this.data.fiveStars);
-            this.isNextPickUpTarget = true;
-            
+            this.isNextFivePickUp = true;
           }
-          
-          this.pityCount = 0;
-          if (this.data.fiveStars.pickUpItems.includes(resultItem)) {
-            this.favoriteCount = 0;
-            this.isNextPickUpTarget = false;
-            
-          }
+
+          console.log("일반", this.isNextFivePickUp);
 
         }
         else if(percent <= (this.data.fiveStars.percent + this.data.fourStars.percent)) {
-          resultItem = this.pick(this.data.fourStars);
+          
+          resultItem = this.nextIsPickUp(this.data.fourStars, this.isNextFourPickUp);
+          
+          if (this.data.fourStars.pickUpItems.includes(resultItem)) {
+            this.isNextFourPickUp = false;
+            
+          }
+          else {
+            this.isNextFourPickUp = true;
+          }
+
         }
         else {
           resultItem = this.pick(this.data.threeStars);
