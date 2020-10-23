@@ -121,8 +121,7 @@ export class GachaController {
     //   isNextPickUp = true;
       
     // }
-
-    // console.log(isNextPickUp);
+    
     return resultItem;
   }
 
@@ -176,8 +175,6 @@ export class GachaController {
         this.favoriteCount = 0;
         this.isNextFivePickUp = false;
         
-
-        console.log("always", this.isNextFivePickUp);
         resultItems.push(resultItem);
       }
       // maxPityCount 천장
@@ -197,7 +194,6 @@ export class GachaController {
           
         }
 
-        console.log("pity", this.isNextFivePickUp);
         resultItems.push(resultItem);
       }
       // 일반 뽑기
@@ -219,8 +215,6 @@ export class GachaController {
           else {
             this.isNextFivePickUp = true;
           }
-
-          console.log("일반", this.isNextFivePickUp);
 
         }
         else if(percent <= (this.data.fiveStars.percent + this.data.fourStars.percent)) {
