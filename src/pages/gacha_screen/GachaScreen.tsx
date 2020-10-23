@@ -5,9 +5,9 @@ import { GachaResult } from "./GachaResult";
 import { characterInfo, weaponInfo, gachaInfo } from 'src/resources/data';
 import { GachaArrangeView } from './GachaArrangeView';
 import { GachaBanner } from "./GachaBanner";
-import { ScreenInnerWrapper, RoundTextButton, TextCenterWrapper } from "src/components";
 import { GachaController, GachaContent, GachaData } from "./Gacha";
 import { GachaInventory } from "./GachaInventory";
+import { ScreenInnerWrapper, RoundTextButton, TextCenterWrapper, SquareImage, FlexWrapper, RoundButton } from "src/components";
 
 // styled-component
 const Container = styled.div({});
@@ -102,49 +102,81 @@ export function GachaScreen() {
     setFourStarCount(fourCount);
   }
 
+  let payedFateCount: number = 10;
+  if(gachaContent === "Novice Wishes") {
+    payedFateCount = 8;
+  }
+
+  let stopBeginnerWishes: boolean = (gachaContent === "Novice Wishes" && totalCount === 20);
+
   return (
     <Container>
       <ScreenInnerWrapper>
         <div style={{margin: "30px"}}>
           <GachaBanner content={gachaContent} onClick={onBannerClick} pickUpList={Object.keys(gachaInfo)}/>
           <GachaArrangeView result={gachaExecutionResult} />
-          <TextCenterWrapper styles={{width: "100%", margin: "20px auto"}}>
-            <div style={{margin: "20px"}}>
-              <RoundTextButton
-                styles={{
-                  buttonStyles: { display: "inline-block", backgroundColor: "#cc0000", },
-                  textStyles: { fontSize: "20px" }
-                }}
-                onClick={() => onResetClick()}
+          <div style={{margin: "30px 0 20px"}}>
+          <FlexWrapper>
+            <>
+            <RoundTextButton
+              styles={{
+                buttonStyles: { display: "inline-block", backgroundColor: "#cc0000", margin: "10px", padding: "12px" },
+                textStyles: { fontSize: "20px" }
+              }}
+              onClick={() => onResetClick()}
+            >
+              Reset
+            </RoundTextButton>
+            {
+            stopBeginnerWishes ? 
+              <RoundButton
+                styles={{ border: "2px solid #f1f2f3", width: "200px", display: "inline-block", pointerEvents: "none" }}
+                onClick={() => onGachaExecution(10)}
               >
-                Reset
-              </RoundTextButton>
-              {(gachaContent !== "Novice Wishes") &&     
-              <RoundTextButton
-                styles={{ 
-                  buttonStyles: { display: "inline-block", width: "200px", borderRadius: "30px" },
-                  textStyles: { fontSize: "20px" }
-                }}
-                onClick={() => onGachaExecution(1)}
+                <FlexWrapper styles={{flexDirection: "column", width: "100%"}}>
+                  <>
+                    <div style={{fontSize: "14px"}}>Wish × 10</div>
+                    <FlexWrapper>
+                      <>
+                        <SquareImage
+                          styles={{width: "25px", height: "25px" }}
+                          src={require("../../resources/images/items/gem/Acquaint Fate.png")}
+                        />
+                        <span style={{fontSize: "14px"}}>&nbsp;× {payedFateCount}</span>
+                      </>
+                    </FlexWrapper>
+                  </>
+                </FlexWrapper>
+              </RoundButton> :
+              <RoundButton
+                styles={{ border: "2px solid #f1f2f3", width: "150px", display: "inline-block" }}
+                onClick={() => onGachaExecution(10)}
               >
-                1 Time
-              </RoundTextButton>}
-              {(gachaContent === "Novice Wishes" && totalCount === 20) ? 
-                <TextCenterWrapper styles={{width: "800px", margin: "0 auto"}}>
-                  Novice Wishes finished. Choose another Wish or click Reset Button
-                </TextCenterWrapper> :
-                <RoundTextButton
-                  styles={{
-                    buttonStyles: { display: "inline-block", width: "200px", borderRadius: "30px" },
-                    textStyles: { fontSize: "20px" }
-                  }}
-                  onClick={() => onGachaExecution(10)}
-                >
-                  10 Times
-                </RoundTextButton>                
-              }
-            </div>
-          </TextCenterWrapper>
+              <FlexWrapper styles={{flexDirection: "column", width: "100%"}}>
+                <>
+                  <div style={{fontSize: "14px"}}>Wish × 10</div>
+                  <FlexWrapper>
+                    <>
+                      <SquareImage
+                        styles={{width: "25px", height: "25px" }}
+                        src={require("../../resources/images/items/gem/Acquaint Fate.png")}
+                      />
+                      <span style={{fontSize: "14px"}}>&nbsp;× {payedFateCount}</span>
+                    </>
+                  </FlexWrapper>
+                </>
+                </FlexWrapper>
+              </RoundButton>
+            }
+            </>
+          </FlexWrapper>
+          </div>
+          {stopBeginnerWishes ? 
+            <TextCenterWrapper styles={{width: "800px", margin: "0 auto 20px"}}>
+              Novice Wishes finished. Choose another Wish or click Reset Button
+            </TextCenterWrapper> :
+            null
+          }
           {(gachaContent === "Novice Wishes") ? 
             <GachaResult
               times={totalCount}
