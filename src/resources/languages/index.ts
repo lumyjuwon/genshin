@@ -6,6 +6,16 @@ export enum LangCode {
   ko = 'ko'
 }
 
+export enum Lang {
+  Gacha = 'Gacha',
+  Party = 'Party',
+  Energetic_Lightning = 'Energetic_Lightning',
+  Fire_Of_Passion = 'Fire_Of_Passion',
+  Healing_Water = 'Healing_Water',
+  Swift_Wind = 'Swift_Wind',
+  Crushing_Ice = 'Crushing_Ice'
+}
+
 const languages = {
   [LangCode.en]: {
     translation: require('./en-us.json')
@@ -21,16 +31,6 @@ i18n.use(initReactI18next).init({
   fallbackLng: LangCode.ko,
   debug: true
 });
-
-export enum Lang {
-  Gacha = 'Gacha',
-  Party = 'Party',
-  Energetic_Lightning = 'Energetic_Lightning',
-  Fire_Of_Passion = 'Fire_Of_Passion',
-  Healing_Water = 'Healing_Water',
-  Swift_Wind = 'Swift_Wind',
-  Crushing_Ice = 'Crushing_Ice'
-}
 
 export function trans(key: Lang): string {
   return i18n.t(key);
