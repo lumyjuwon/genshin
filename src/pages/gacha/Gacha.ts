@@ -94,6 +94,7 @@ export class GachaController {
       resultItem = nonPickUpItems[itemIndex];
     }
 
+    if (!resultItem) throw new Error("this.pick undefined")
     return resultItem;
   }
 
@@ -118,6 +119,7 @@ export class GachaController {
       resultItem = this.pick(info);
     }
 
+    if (!resultItem) throw new Error("this.isnextpickup undefined")
     return resultItem;
   }
 
@@ -161,16 +163,28 @@ export class GachaController {
           }
         }
 
+        if (!resultItem) throw new Error("guarantee undefined");
         resultItems.push(resultItem);
       }
       // maxPickUpCount 천장
       else if(this.favoriteCount === this.data.maxPickUpCount) {
-        const characterIndex = Math.floor(Math.random() * this.data.pickUpTarget.length)
-        const resultItem = this.data.pickUpTarget[characterIndex];
+        let resultItem: string;
+
+        if(this.data.fiveStars.pickUpItems.length > 0) {
+          const characterIndex = Math.floor(Math.random() * this.data.pickUpTarget.length)
+          resultItem = this.data.pickUpTarget[characterIndex];
+
+        }
+        else {
+          resultItem = this.pick(this.data.fiveStars);
+
+        }
+
         this.pityCount = 0;
         this.favoriteCount = 0;
         this.isNextFivePickUp = false;
         
+        if (!resultItem) throw new Error("this.pickupcount undefined");
         resultItems.push(resultItem);
       }
       // maxPityCount 천장
@@ -190,6 +204,7 @@ export class GachaController {
           
         }
 
+        if (!resultItem) throw new Error("this.pity undefined");
         resultItems.push(resultItem);
       }
       // 일반 뽑기
@@ -230,10 +245,12 @@ export class GachaController {
           resultItem = this.pick(this.data.threeStars);
         }
 
+        if (!resultItem) throw new Error("normal undefined")
         resultItems.push(resultItem);
       }
     }
 
+    console.log(resultItems);
     this.nextPity = this.data.maxPityCount - this.pityCount;
     this.gachaResult = resultItems;
     return resultItems;
