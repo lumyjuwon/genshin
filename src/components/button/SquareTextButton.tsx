@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import { SquareButton, ButtonStyle } from "./SquareButton";
+import { SquareButton, ButtonStyle } from './SquareButton';
 
 interface TextStyle {
   readonly fontSize?: string;
@@ -10,14 +10,14 @@ interface TextStyle {
 
 const Text = styled.a<TextStyle>((props: TextStyle) => {
   return {
-    fontSize: props.fontSize || "16px",
-    color: props.color || "#f1f2f3"
+    fontSize: props.fontSize || '16px',
+    color: props.color || '#f1f2f3'
   };
 });
 
 interface Props {
   onClick: Function;
-  text: string;
+  children: string;
   styles?: {
     buttonStyles?: ButtonStyle;
     textStyles?: TextStyle;
@@ -32,7 +32,7 @@ export function SquareTextButton(props: Props) {
       }}
       styles={props.styles?.buttonStyles}
     >
-      <Text {...props.styles?.textStyles}>{props.text}</Text>
+      <Text {...props.styles?.textStyles}>{props.children}</Text>
     </SquareButton>
   );
 }
