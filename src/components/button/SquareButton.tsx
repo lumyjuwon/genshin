@@ -10,7 +10,6 @@ const Button = styled.button<ButtonStyle>((props: ButtonStyle) => {
   return {
     width: props.width || "fit-content",
     height: props.height || "auto",
-    userSelect: "none"
   };
 });
 

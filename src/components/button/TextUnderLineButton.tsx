@@ -14,7 +14,6 @@ const Button = styled.a<ButtonStyle>((props: ButtonStyle) => {
     display: props.display || "inline-block",
     margin: props.margin || "5px 10px",
     transition: "0.1s",
-    userSelect: "none",
     borderBottom: "2px solid transparent",
     "&:hover": {
       borderBottom: props["&:hover"]?.borderBottom || "2px solid #f1f2f3",

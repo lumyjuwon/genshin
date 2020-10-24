@@ -23,8 +23,7 @@ const Button = styled.a<ButtonStyle>((props: ButtonStyle) => {
     cursor: "pointer",
     "&:hover": {
       backgroundColor: props["&:hover"]?.backgroundColor || "#515253"
-    },
-    userSelect: "none",
+    }
   };
 });
 
