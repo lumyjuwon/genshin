@@ -53,7 +53,12 @@ interface Ripple {
   size: number;
 }
 
-export const Ripple = ({ duration = 850, color = "#999" }) => {
+interface Props {
+  duration?: number;
+  color?: string;
+}
+
+export const Ripple = ({ duration = 850, color = "#999" }: Props) => {
   const [rippleArray, setRippleArray] = useState<Array<Ripple>>([]);
 
   useDebouncedRippleCleanUp(rippleArray.length, duration, () => {

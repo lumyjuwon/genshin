@@ -26,7 +26,9 @@ const Button = styled.button<ButtonStyle>((props: ButtonStyle) => {
     WebkitUserSelect: 'none',
     msUserSelect: 'none',
     MozUserSelect: 'none',
-    userSelect: 'none'
+    userSelect: 'none',
+    position: "relative",
+    overflow: "hidden",
   };
 });
 

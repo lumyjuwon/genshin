@@ -17,7 +17,7 @@ const Text = styled.a<TextStyle>((props: TextStyle) => {
 
 interface Props{
   onClick: Function;
-  children: string;
+  children: string | JSX.Element;
   styles?: {
     buttonStyles?: ButtonStyle;
     textStyles?: TextStyle;

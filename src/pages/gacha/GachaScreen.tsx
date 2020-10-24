@@ -8,6 +8,7 @@ import { GachaBanner } from "./GachaBanner";
 import { GachaController, GachaContent, GachaData } from "./Gacha";
 import { GachaInventory } from "./GachaInventory";
 import { ScreenInnerWrapper, RoundTextButton, TextCenterWrapper, SquareImage, FlexWrapper, RoundButton } from "src/components";
+import { Ripple } from "src/components/effect";
 
 // styled-component
 const Container = styled.div({});
@@ -133,7 +134,10 @@ export function GachaScreen() {
               }}
               onClick={() => onResetClick()}
             >
-              Reset
+              <>
+                {`Reset`}
+                <Ripple />
+              </>
             </RoundTextButton>
             {
             stopBeginnerWishes ? 
@@ -160,7 +164,8 @@ export function GachaScreen() {
                 styles={{ border: "2px solid #f1f2f3", width: "150px", display: "inline-block" }}
                 onClick={() => onGachaExecution(10)}
               >
-              <FlexWrapper styles={{flexDirection: "column", width: "100%"}}>
+                <>
+                <FlexWrapper styles={{flexDirection: "column", width: "100%"}}>
                 <>
                   <div style={{fontSize: "14px"}}>Wish × 10</div>
                   <FlexWrapper>
@@ -174,6 +179,8 @@ export function GachaScreen() {
                   </FlexWrapper>
                 </>
                 </FlexWrapper>
+                <Ripple />
+                </>
               </RoundButton>
             }
             </>

@@ -20,6 +20,8 @@ const Button = styled.a<ButtonStyle>((props: ButtonStyle) => {
     msUserSelect: "none",
     MozUserSelect: "none",
     userSelect: "none",
+    position: "relative",
+    overflow: "hidden",
     "&:hover": {
       borderBottom: props["&:hover"]?.borderBottom || "2px solid #f1f2f3",
     }

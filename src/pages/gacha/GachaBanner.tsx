@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import { gachaInfo } from '../../resources/data';
 import { FlexWrapper, TextCenterWrapper, SquareImage } from 'src/components';
+import { Ripple } from 'src/components/effect';
 
 interface Styles {
   styles: {
@@ -161,7 +162,15 @@ export function GachaBanner(props: Props) {
           </FlexWrapper>
           <DropDown>
             {props.pickUpList.map((content: string, i: number) => {
-              return <List key={i} value={content} onClick={(e) => onListClick(e.currentTarget.textContent)}>{content}</List>
+              return (
+                <List
+                  key={i}
+                  value={content}
+                  onClick={(e) => onListClick(e.currentTarget.textContent)}
+                >
+                  {content}
+                </List>
+              );
             })}
           </DropDown>
         </StyledDiv>
