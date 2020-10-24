@@ -161,7 +161,6 @@ export class GachaController {
           }
         }
 
-        console.log("guarantee",this.isNextFourPickUp);
         resultItems.push(resultItem);
       }
       // maxPickUpCount 천장
@@ -226,8 +225,6 @@ export class GachaController {
             this.isNextFourPickUp = true;
           }
 
-          console.log("noraml", this.isNextFourPickUp);
-
         }
         else {
           resultItem = this.pick(this.data.threeStars);
@@ -236,8 +233,7 @@ export class GachaController {
         resultItems.push(resultItem);
       }
     }
-    
-    console.log(resultItems)
+
     this.nextPity = this.data.maxPityCount - this.pityCount;
     this.gachaResult = resultItems;
     return resultItems;

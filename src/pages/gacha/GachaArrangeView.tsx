@@ -61,8 +61,6 @@ interface Props {
 
 export function GachaArrangeView(props: Props) {
 
-  console.log(props.result)
-
   const shadowPal: { five: string; four: string } = {
     five: "0 0 8px 2px #a86d1f, 0px 25px 5px #a86d1f, 0px -25px 5px #a86d1f",
     four: "0 0 8px 2px #b182c4, 0px 25px 5px #b182c4, 0px -25px 5px #b182c4",
