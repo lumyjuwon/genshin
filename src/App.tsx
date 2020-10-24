@@ -1,16 +1,17 @@
-import React from "react";
-import styled from "styled-components";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import React from 'react';
+import styled from 'styled-components';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import { GachaScreen, PartyScreen } from "src/pages";
-import { Header, Footer, TextBlockButton, TextUnderLineButton, ContentWrapper } from "src/components";
+import { GachaScreen, PartyScreen } from 'src/pages';
+import { Header, Footer, TextBlockButton, TextUnderLineButton, ContentWrapper } from 'src/components';
+import { trans, Lang } from './resources/languages';
 
 const Container = styled.div({});
 
 const MainLogo = styled.a({
-  fontSize: "30px",
-  padding: "20px 15px 20px 0px",
-  cursor: "pointer"
+  fontSize: '30px',
+  padding: '20px 15px 20px 0px',
+  cursor: 'pointer'
 });
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
         <Header>
           <>
             <MainLogo href="/">Genshin Simul</MainLogo>
-            <TextBlockButton href="/gacha">Gacha</TextBlockButton>
+            <TextBlockButton href="/gacha">{trans(Lang.Gacha)}</TextBlockButton>
             <TextBlockButton href="/party">Party</TextBlockButton>
           </>
         </Header>
@@ -32,7 +33,7 @@ function App() {
         </ContentWrapper>
         <Footer>
           <>
-            <div style={{ fontSize: "12px" }}>Copyrightⓒ 2020</div>
+            <div style={{ fontSize: '12px' }}>Copyrightⓒ 2020</div>
             <TextUnderLineButton href="/policy">Privacy Policy</TextUnderLineButton>
             <TextUnderLineButton href="/terms">Terms of Service</TextUnderLineButton>
             <TextUnderLineButton href="mailto:lumyjuwon@gmail.com">Contact Us</TextUnderLineButton>

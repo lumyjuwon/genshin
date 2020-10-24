@@ -1,9 +1,11 @@
+import './index.css';
+import './resources/languages/index';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
 import { GlobalStyles } from './components/globalStyles';
+import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <>
