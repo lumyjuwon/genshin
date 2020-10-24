@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-interface ButtonStyle{
-  readonly display?: "block" | "inline-block",
-  readonly width?: string,
-  readonly padding?: string,
-  readonly fontSize?: string,
-  readonly color?: string,
+interface ButtonStyle {
+  readonly display?: "block" | "inline-block";
+  readonly width?: string;
+  readonly padding?: string;
+  readonly fontSize?: string;
+  readonly color?: string;
   readonly "&:hover"?: {
-    readonly backgroundColor?: string,
-  },
+    readonly backgroundColor?: string;
+  };
 }
 
 const Button = styled.a<ButtonStyle>((props: ButtonStyle) => {
@@ -22,7 +22,7 @@ const Button = styled.a<ButtonStyle>((props: ButtonStyle) => {
     transition: "0.2s",
     cursor: "pointer",
     "&:hover": {
-      backgroundColor: props["&:hover"]?.backgroundColor || "#515253",
+      backgroundColor: props["&:hover"]?.backgroundColor || "#515253"
     },
     ...props
   };
@@ -33,9 +33,13 @@ interface Props {
   children: string;
   styles?: {
     buttonStyles?: ButtonStyle;
-  }
+  };
 }
 
 export function TextBlockButton(props: Props) {
-  return <Button href={props.href} {...props.styles?.buttonStyles}>{props.children}</Button>;
+  return (
+    <Button href={props.href} {...props.styles?.buttonStyles}>
+      {props.children}
+    </Button>
+  );
 }
