@@ -4,8 +4,8 @@ import styled from "styled-components";
 import { SquareButton, ButtonStyle } from "./SquareButton";
 
 interface TextStyle {
-  readonly fontSize?: string,
-  readonly color?: string,
+  readonly fontSize?: string;
+  readonly color?: string;
 }
 
 const Text = styled.a<TextStyle>((props: TextStyle) => {
@@ -20,10 +20,9 @@ interface Props {
   text: string;
   styles?: {
     buttonStyles?: ButtonStyle;
-    textStyles?: TextStyle
-  }
+    textStyles?: TextStyle;
+  };
 }
-
 
 export function SquareTextButton(props: Props) {
   return (
