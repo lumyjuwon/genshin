@@ -47,6 +47,8 @@ const Button = styled.div<ButtonStyle>((props: ButtonStyle) => {
     backgroundColor: props.backgroundColor || 'transparent',
     color: props.color || '#f1f2f3',
     transition: '0.2s',
+    position: "relative",
+    overflow: "hidden",
     WebkitTouchCallout: 'none',
     WebkitUserSelect: 'none',
     msUserSelect: 'none',
