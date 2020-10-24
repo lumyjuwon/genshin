@@ -186,6 +186,9 @@ export function GachaBanner(props: Props) {
                 </a>
                 </>
               </TextAlignLeft>
+              <TextAlignLeft styles={{ fontSize: "20px", margin: "10px 0 0" }}>
+                &nbsp;&nbsp;&nbsp;&nbsp;This is just for fun. Don't be serious.
+              </TextAlignLeft>
               <TextAlignLeft styles={{ fontSize: "25px" }}>
                 2. Items
               </TextAlignLeft>
