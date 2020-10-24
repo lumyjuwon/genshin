@@ -120,7 +120,7 @@ export function GachaScreen() {
   return (
     <Container>
       <ScreenInnerWrapper>
-        <div style={{margin: "30px"}}>
+        <>
           <GachaBanner content={gachaContent} onClick={onBannerClick} pickUpList={Object.keys(gachaInfo)}/>
           <GachaArrangeView result={gachaExecutionResult} />
           <div style={{margin: "30px 0 20px"}}>
@@ -207,7 +207,7 @@ export function GachaScreen() {
             <hr />
             <GachaInventory inventoryList={gachaInventoryList} />
           </div>
-        </div>
+        </>
       </ScreenInnerWrapper>
     </Container>
   );
