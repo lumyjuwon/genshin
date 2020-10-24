@@ -1,0 +1,34 @@
+{
+  "gacha": {
+    "gachaTitle": {
+      "character": {
+        "title": "Character Event Wish"
+      },
+      "weapon": {
+        "title": "Weapon Event Wish"
+      },
+      "standard": {
+        "title": "Standard Wish"
+      },
+      "novice": {
+        "title": "Novice Wishes"
+      }
+    },
+    "gachaItems": {
+      "Venti": "Venti",
+      "Keqing": "Keqing"
+    },
+    "information": {
+
+    },
+    "button": {
+
+    },
+    "result": {
+
+    },
+    "inventory": {
+
+    }
+  }
+}
