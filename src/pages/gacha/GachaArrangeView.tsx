@@ -49,7 +49,7 @@ const Container = styled.div({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  width: "1140px",
+  width: "1200px",
   height: "400px",
   backgroundColor: "#333",
   margin: "0 auto"
