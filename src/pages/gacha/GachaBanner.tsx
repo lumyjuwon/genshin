@@ -184,10 +184,9 @@ export function GachaBanner(props: Props) {
                 >
                   &nbsp;(Go to Wiki<span role="img">&nbsp;👆</span>)
                 </a>
-                </>
-              </TextAlignLeft>
-              <TextAlignLeft styles={{ fontSize: "20px", margin: "10px 0 0" }}>
+                <br />
                 &nbsp;&nbsp;&nbsp;&nbsp;This is just for fun. Don't be serious.
+                </>
               </TextAlignLeft>
               <TextAlignLeft styles={{ fontSize: "25px" }}>
                 2. Items
