@@ -14,7 +14,9 @@ export interface ButtonStyle {
 const Button = styled.button<ButtonStyle>((props: ButtonStyle) => {
   return {
     width: props.width || 'fit-content',
-    height: props.height || 'auto',
+    height: props.width || 'fit-content',
+    justifyContent: 'center',
+    alignItems: 'center',
     display: props.display || 'inline-block',
     padding: props.padding || '0px',
     border: props.border || 'solid',
