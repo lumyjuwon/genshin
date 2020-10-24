@@ -1,35 +1,41 @@
-import React from "react";
-import styled from "styled-components";
-
-const P = styled.p({});
-
-const Span = styled.span({});
+import React from 'react';
 
 interface Props {
   text: string;
-  regex: string;
+  regex: RegExp;
   color: string;
 }
 
-function splitColorText(text: string, colorText: string[]) {
-  const coloredText: Array<string | JSX.Element> = [];
-  for (const target in colorText) {
-    const splitedText = text.split(target);
-    coloredText.push(splitedText[0]);
+function parseColorText(text: string, regex: RegExp, color: string) {
+  const matchedText: string[] | null = text.match(regex);
+
+  if (matchedText === null) {
+    return [];
   }
+
+  const coloredText: Array<string | JSX.Element> = [];
+  let extraText = text;
+  for (const matched of matchedText) {
+    const splitedText = extraText.split(matched);
+
+    coloredText.push(splitedText[0]);
+    coloredText.push(<span style={{ color: color }}>{matched}</span>);
+    extraText = splitedText[1];
+  }
+
+  coloredText.push(extraText);
+
+  return coloredText;
 }
 
-const regex = /\d+%/g;
-
 export function RegexColorText(props: Props) {
-  const colorText: string[] | null = props.text.match(regex);
-  console.log(props.text.split("40%"));
-  console.log(props.text.split("40%")[1].split("100%"));
+  const coloredText = parseColorText(props.text, props.regex, props.color);
+  console.log(coloredText);
 
   return (
     <p>
-      {colorText?.map((text) => {
-        return <span style={{ color: props.color }}> {text} </span>;
+      {coloredText?.map((text) => {
+        return text;
       })}
     </p>
   );
