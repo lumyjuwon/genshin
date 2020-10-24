@@ -1,12 +1,13 @@
-import React, { useRef, useState } from "react";
-import styled from "styled-components";
+import React, { useRef, useState } from 'react';
+import styled from 'styled-components';
 
-import { characterInfo } from "src/resources/data";
+import { characterInfo } from 'src/resources/data';
 
-import { CharacterImageButton } from "./SelectableCharacter";
-import { SelectedCharacterImage } from "./SelectedCharacter";
-import { ElementCircleList } from "./ElementCircleList";
-import { ElementEffectSummary } from "./ElementEffectSummary";
+import { CharacterImageButton } from './SelectableCharacter';
+import { SelectedCharacterImage } from './SelectedCharacter';
+import { ElementCircleList } from './ElementCircleList';
+import { ElementEffectSummary } from './ElementEffectSummary';
+import { Menu } from './Menu';
 
 type CharacterName = string;
 type CharacterSrc = string;
@@ -14,21 +15,21 @@ type ElementName = string;
 type ElementCount = number;
 
 const SelectedCharacterLayout = styled.div({
-  display: "flex",
-  flexWrap: "wrap",
-  justifyContent: "center",
-  paddingLeft: "25vw",
-  paddingRight: "25vw",
-  marginBottom: "5vh"
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'center',
+  paddingLeft: '25vw',
+  paddingRight: '25vw',
+  marginBottom: '5vh'
 });
 
 const CharacterLayout = styled.div({
-  display: "flex",
-  flexWrap: "wrap",
-  justifyContent: "center",
-  alignItems: "flex-start",
-  paddingLeft: "25vw",
-  paddingRight: "25vw"
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'center',
+  alignItems: 'flex-start',
+  paddingLeft: '25vw',
+  paddingRight: '25vw'
 });
 
 export function PartyScreen() {
@@ -37,10 +38,10 @@ export function PartyScreen() {
   const [selectedCharacters, setSelectedCharacters] = useState(new Map<CharacterName, CharacterSrc>());
   const [emptyCharacters, setEmptyCharacters] = useState(
     new Map<string, null>([
-      ["0", null],
-      ["1", null],
-      ["2", null],
-      ["3", null]
+      ['0', null],
+      ['1', null],
+      ['2', null],
+      ['3', null]
     ])
   );
   const [activeElements, setActiveElements] = useState<Map<ElementName, ElementCount>>(new Map());
@@ -93,6 +94,7 @@ export function PartyScreen() {
 
   return (
     <div>
+      <Menu></Menu>
       <SelectedCharacterLayout>
         {[...selectedCharacters].map((dic: [CharacterName, CharacterSrc]) => {
           return <SelectedCharacterImage key={dic[0]} src={dic[1]} />;
