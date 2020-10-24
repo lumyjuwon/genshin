@@ -34,7 +34,7 @@ const ItemTooltip = styled.div({
   fontSize: "16px"
 });
 
-const HoverTransform = styled.div<{ delay: number }>`
+const HoverTransform = styled.div`
   position: relative;
   &:hover {
     transition: 0.1s ease-in-out;
@@ -61,6 +61,8 @@ interface Props {
 
 export function GachaArrangeView(props: Props) {
 
+  console.log(props.result)
+
   const shadowPal: { five: string; four: string } = {
     five: "0 0 8px 2px #a86d1f, 0px 25px 5px #a86d1f, 0px -25px 5px #a86d1f",
     four: "0 0 8px 2px #b182c4, 0px 25px 5px #b182c4, 0px -25px 5px #b182c4",
@@ -83,9 +85,8 @@ export function GachaArrangeView(props: Props) {
                 else if (weaponInfo[item].rank === 4) shadow = shadowPal.four;
               }
               return (
-                <HoverTransform delay={index}>
+                <HoverTransform key={index}>
                   <SquareImage
-                    key={index}
                     styles={{
                       height: "300px",
                       boxShadow: `${shadow}`,

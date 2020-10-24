@@ -1,2 +1,2 @@
-export { GachaScreen } from "./gacha_screen/GachaScreen";
-export { ElementalResonanceScreen } from "./resonance/ElementalResonanceScreen"
+export { GachaScreen } from "./gacha/GachaScreen";
+export { PartyScreen } from "./party/PartyScreen";
