@@ -22,7 +22,7 @@ function App() {
           <>
             <MainLogo href="/">Genshin Simul</MainLogo>
             <TextBlockButton href="/gacha">{trans(Lang.Gacha)}</TextBlockButton>
-            <TextBlockButton href="/party">Party</TextBlockButton>
+            <TextBlockButton href="/party">{trans(Lang.Party)}</TextBlockButton>
           </>
         </Header>
         <ContentWrapper>
