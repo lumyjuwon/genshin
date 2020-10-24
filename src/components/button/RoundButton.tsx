@@ -32,6 +32,7 @@ export interface ButtonStyle {
 }
 
 const Button = styled.div<ButtonStyle>((props: ButtonStyle) => {
+
   return {
     display: props.display || "flex",
     border: props.border || "2px solid #f1f2f3",
@@ -50,12 +51,15 @@ const Button = styled.div<ButtonStyle>((props: ButtonStyle) => {
     msUserSelect: "none",
     MozUserSelect: "none",
     userSelect: "none",
+    position: "relative",
+    overflow: "hidden",
     "&:hover": {
       backgroundColor: "#f1f2f3",
       color: "#212223",
-    },
+    }
   };
 });
+
 
 export interface Props {
   onClick: Function;
@@ -64,9 +68,10 @@ export interface Props {
 }
 
 export function RoundButton(props: Props) {
+
   return (
     <Button
-      onClick={() => {
+      onClick={(event: React.MouseEvent<HTMLElement, MouseEvent>) => {
         props.onClick();
       }}
       {...props.styles}
