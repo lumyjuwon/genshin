@@ -81,21 +81,22 @@ const Details = styled.div({
   overflow: "scroll",
 })
 
-const Help = styled.div`
-  display: flex;
-  width: 40px;
-  height: 40px;
-  justify-content: center;
-  align-items: center;
-  padding: 7px;
-  border: 1px solid #f1f2f3;
-  cursor: pointer;
-  border-radius: 50%;
-  transition: 0.2s;
-  &:hover {
-    background-color: #f1f2f3;
-  };
-`
+const Help = styled.div({
+  display: "flex",
+  width: "40px",
+  height: "40px",
+  justifyContent: "center",
+  alignItems: "center",
+  padding: "7px",
+  border: "1px solid #f1f2f3",
+  cursor: "pointer",
+  borderRadius: "50%",
+  transition: "0.2s",
+  margin: "0 0 10px",
+  "&:hover": {
+    backgroundColor: "#f1f2f3",
+  }
+});
 
 const DetailsContainer = styled.div({
   display: "flex",
