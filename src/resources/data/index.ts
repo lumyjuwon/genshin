@@ -1,4 +1,4 @@
-import { GachaData } from "../../pages/gacha_screen/Gacha";
+import { GachaData } from "../../pages/gacha/Gacha";
 
 interface Gacha {
   [key: string]: GachaData;

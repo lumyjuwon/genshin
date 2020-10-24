@@ -100,28 +100,24 @@ export class GachaController {
   nextIsPickUp(info: GachaInfo, isNextPickUp: boolean): string {
     let resultItem: string;
 
-    if(isNextPickUp) {
-      const characterIndex = Math.floor(Math.random() * info.pickUpItems.length)
-      resultItem = info.pickUpItems[characterIndex];
-      isNextPickUp = false;
+    if(info.pickUpItems.length > 0) {
       
+      if(isNextPickUp) {
+        const characterIndex = Math.floor(Math.random() * info.pickUpItems.length)
+        resultItem = info.pickUpItems[characterIndex];
+        isNextPickUp = false;
+        
+      }
+      else {
+        resultItem = this.pick(info);
+        isNextPickUp = true;
+        
+      }
     }
     else {
       resultItem = this.pick(info);
-      isNextPickUp = true;
-      
     }
 
-    // if(info.pickUpItems.includes(resultItem)){
-    //   if(info === this.data.fiveStars) this.favoriteCount = 0;
-    //   isNextPickUp = false;
-      
-    // }
-    // else{
-    //   isNextPickUp = true;
-      
-    // }
-    
     return resultItem;
   }
 
@@ -155,7 +151,7 @@ export class GachaController {
           }
         }
         else {
-          resultItem = this.pick(this.data.fourStars);
+          resultItem = this.nextIsPickUp(this.data.fourStars, this.isNextFourPickUp);
 
           if (this.data.fourStars.pickUpItems.includes(resultItem)) {
             this.isNextFourPickUp = false;
@@ -237,7 +233,7 @@ export class GachaController {
         resultItems.push(resultItem);
       }
     }
-    
+
     this.nextPity = this.data.maxPityCount - this.pityCount;
     this.gachaResult = resultItems;
     return resultItems;

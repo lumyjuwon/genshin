@@ -138,7 +138,7 @@ export function GachaScreen() {
             {
             stopBeginnerWishes ? 
               <RoundButton
-                styles={{ border: "2px solid #f1f2f3", width: "200px", display: "inline-block", pointerEvents: "none" }}
+                styles={{ border: "2px solid #f1f2f3", width: "150px", display: "inline-block", pointerEvents: "none" }}
                 onClick={() => onGachaExecution(10)}
               >
                 <FlexWrapper styles={{flexDirection: "column", width: "100%"}}>
