@@ -23,7 +23,8 @@ const CheckboxLabel = styled.label<LabelStyles>((props: LabelStyles) => {
     alignItems: "center",
     cursor: "pointer",
     width: props.width || "auto",
-    height: props.height || "auto"
+    height: props.height || "auto",
+    userSelect: "none",
   }
 });
 

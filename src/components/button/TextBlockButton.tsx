@@ -24,7 +24,7 @@ const Button = styled.a<ButtonStyle>((props: ButtonStyle) => {
     "&:hover": {
       backgroundColor: props["&:hover"]?.backgroundColor || "#515253"
     },
-    ...props
+    userSelect: "none",
   };
 });
 

@@ -45,6 +45,7 @@ const Button = styled.div<ButtonStyle>((props: ButtonStyle) => {
     backgroundColor: props.backgroundColor || "transparent",
     color: props.color || "#f1f2f3",
     transition: "0.2s",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: "#f1f2f3",
       color: "#212223",
