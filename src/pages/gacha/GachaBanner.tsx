@@ -79,6 +79,7 @@ const Details = styled.div({
   justifyContent: "center",
   alignItems: "center",
   overflow: "scroll",
+  zIndex: 10
 })
 
 const Help = styled.div({
