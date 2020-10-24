@@ -15,6 +15,11 @@ const Button = styled.a<ButtonStyle>((props: ButtonStyle) => {
     margin: props.margin || "5px 10px",
     transition: "0.1s",
     borderBottom: "2px solid transparent",
+    WebkitTouchCallout: "none",
+    WebkitUserSelect: "none",
+    msUserSelect: "none",
+    MozUserSelect: "none",
+    userSelect: "none",
     "&:hover": {
       borderBottom: props["&:hover"]?.borderBottom || "2px solid #f1f2f3",
     }

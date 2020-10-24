@@ -22,6 +22,11 @@ const CheckboxLabel = styled.label<LabelStyles>((props: LabelStyles) => {
     justifyContent: "center",
     alignItems: "center",
     cursor: "pointer",
+    WebkitTouchCallout: "none",
+    WebkitUserSelect: "none",
+    msUserSelect: "none",
+    MozUserSelect: "none",
+		userSelect: "none",
     width: props.width || "auto",
     height: props.height || "auto"
   }

@@ -21,6 +21,11 @@ const Button = styled.a<ButtonStyle>((props: ButtonStyle) => {
     color: props.color || "#f1f2f3",
     transition: "0.2s",
     cursor: "pointer",
+    WebkitTouchCallout: "none",
+    WebkitUserSelect: "none",
+    msUserSelect: "none",
+    MozUserSelect: "none",
+    userSelect: "none",
     "&:hover": {
       backgroundColor: props["&:hover"]?.backgroundColor || "#515253"
     }
