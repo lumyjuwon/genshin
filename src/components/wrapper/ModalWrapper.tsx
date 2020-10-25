@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { CloseBlackButton } from 'src/resources/svg';
 
 import { CircleButton } from '../button/CircleButton';
-import { RoundButton } from '../button/RoundButton';
 
 const Overlay = styled.div({
   position: 'fixed',

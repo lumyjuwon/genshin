@@ -5,7 +5,7 @@ import { SquareImage, ImageStyle } from '../image/SquareImage';
 
 interface Props {
   readonly onClick: Function;
-  readonly src: string;
+  readonly src: string | null;
   readonly styles?: {
     readonly buttonStyles?: ButtonStyle;
     readonly imageStyles?: ImageStyle;

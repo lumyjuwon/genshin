@@ -5,6 +5,7 @@ export { Footer } from './Footer';
 // Wrapper
 export { ScreenInnerWrapper } from './wrapper/ScreenInnerWrapper';
 export { TextCenterWrapper } from './/wrapper/TextCenterWrapper';
+export { GridWrapper } from './wrapper/GridWrapper';
 export { FlexWrapper } from './wrapper/FlexWrapper';
 export { ContentWrapper } from './wrapper/ContentWrapper';
 export { ModalWrapper } from './wrapper/ModalWrapper';
