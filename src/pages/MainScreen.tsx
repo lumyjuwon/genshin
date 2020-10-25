@@ -31,7 +31,7 @@ export function MainScreen() {
           <>
           <ImageContentCard
             src={`${require("../resources/images/mainscreen/gacha.png")}`}
-            title="Gacha"
+            title="Wish"
             desc="Test Your Luck!!!"
             styles={{
               cardStyles: {width: "300px", height: "400px", padding: "20px 10px", margin: "50px 50px 0 0"},
