@@ -19,7 +19,7 @@ export const characterInfo: Character = require('../data/character-info.json');
 interface Weapon {
   [name: string]: {
     rank: number;
-    type: 'bow' | 'catalyst' | 'claymore' | 'polearm' | 'sword';
+    type: 'Bow' | 'Catalyst' | 'Claymore' | 'Polearm' | 'Sword';
   };
 }
 export const weaponInfo: Weapon = require('../data/weapon-info.json');
@@ -27,7 +27,7 @@ export const weaponInfo: Weapon = require('../data/weapon-info.json');
 interface Artifact {
   [name: string]: {
     rank: number;
-    type: string;
+    type: 'Flower' | 'Feather' | 'Hourglass' | 'HolyGrail' | 'Crown';
   };
 }
 export const artifactInfo: Artifact = require('../data/artifact-info.json');
