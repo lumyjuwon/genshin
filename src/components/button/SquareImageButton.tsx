@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import { SquareButton, ButtonStyle } from "./SquareButton";
-import { SquareImage, ImageStyle } from "../image/SquareImage";
+import { SquareButton, ButtonStyle } from './SquareButton';
+import { SquareImage, ImageStyle } from '../image/SquareImage';
 
 interface Props {
   readonly onClick: Function;

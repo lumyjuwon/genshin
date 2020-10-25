@@ -18,15 +18,13 @@ const Image = styled.img<ImageStyle>((props: ImageStyle) => {
 });
 
 interface Props {
-  src: string;
+  src: string | null;
   styles?: ImageStyle;
 }
 
 export function SquareImage(props: Props) {
-  if (props.src !== '') {
-    return <Image {...props.styles} src={props.src} />;
-  } else {
-    ///@ts-ignore
-    return <Image {...props.styles} src={null} />;
+  if (props.src === null) {
+    return null;
   }
+  return <Image {...props.styles} src={props.src} />;
 }
