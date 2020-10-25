@@ -1,10 +1,10 @@
 import React from 'react';
-import Styled from 'styled-components';
+import styled from 'styled-components';
 
 import { RoundTextButton, SquareTextButton, UnderlineInputText } from 'src/components';
 import { Lang, trans } from 'src/resources/languages';
 
-const Container = Styled.div({
+const Container = styled.div({
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'flex-end',
