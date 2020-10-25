@@ -115,7 +115,8 @@ const ExitButton = styled.span({
   position: "absolute",
   top: "0",
   right: "0",
-  fontSize: "35px"
+  fontSize: "35px",
+  cursor: "pointer"
 })
 
 const TextAlignLeft = styled.div<Styles>(props => {
