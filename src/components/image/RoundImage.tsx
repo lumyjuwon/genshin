@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export interface ImageStyle {
+export interface Style {
   readonly width?: string;
   readonly height?: string;
   readonly borderRadius?: string;
@@ -9,7 +9,17 @@ export interface ImageStyle {
   readonly objectFit?: 'inherit' | 'none' | '-moz-initial' | 'initial' | 'revert' | 'unset' | 'fill' | 'contain' | 'cover' | 'scale-down';
 }
 
-const Image = styled.img<ImageStyle>((props: ImageStyle) => {
+const Container = styled.div<Style>((props: Style) => {
+  return {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: props.width || '100px',
+    height: props.height || '100px'
+  };
+});
+
+const Image = styled.img<Style>((props: Style) => {
   return {
     width: props.width || '100px',
     height: props.height || '100px',
@@ -20,15 +30,10 @@ const Image = styled.img<ImageStyle>((props: ImageStyle) => {
 });
 
 interface Props {
-  src: string;
-  styles?: ImageStyle;
+  src: string | null;
+  styles?: Style;
 }
 
 export function RoundImage(props: Props) {
-  if (props.src !== '') {
-    return <Image {...props.styles} src={props.src} />;
-  } else {
-    ///@ts-ignore
-    return <Image {...props.styles} src={null} />;
-  }
+  return <Container {...props.styles}>{props.src !== null && <Image {...props.styles} src={props.src} />}</Container>;
 }
