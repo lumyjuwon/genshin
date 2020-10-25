@@ -11,10 +11,11 @@ const HeaderOuter = styled.header({
 });
 
 const HeaderInner = styled.div({
-  maxWidth: "1300px",
+  maxWidth: "80vw",
   margin: "0 auto",
   display: "flex",
-  alignItems: "center"
+  alignItems: "center",
+  minHeight: "10vh",
 });
 
 export function Header(props: Props) {
