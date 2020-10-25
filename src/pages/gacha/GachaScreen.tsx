@@ -1,17 +1,21 @@
 import React, { useEffect, useRef, useState } from "react";
-import styled from "styled-components";
 
 import { GachaResult } from "./GachaResult";
-import { characterInfo, weaponInfo, gachaInfo } from 'src/resources/data';
-import { GachaArrangeView } from './GachaArrangeView';
 import { GachaBanner } from "./GachaBanner";
-import { GachaController, GachaContent, GachaData } from "./Gacha";
-import { GachaInventory } from "./GachaInventory";
-import { ScreenInnerWrapper, RoundTextButton, TextCenterWrapper, SquareImage, FlexWrapper, RoundButton } from "src/components";
 import { Ripple } from "src/components/effect";
-
-// styled-component
-const Container = styled.div({});
+import { GachaInventory } from "./GachaInventory";
+import { GachaArrangeView } from './GachaArrangeView';
+import { GachaController, GachaContent, GachaData } from "./Gacha";
+import { characterInfo, weaponInfo, gachaInfo } from 'src/resources/data';
+import { 
+  ScreenInnerWrapper,
+  RoundTextButton,
+  TextCenterWrapper,
+  SquareImage,
+  FlexWrapper,
+  RoundButton,
+  ContentWrapper
+} from "src/components";
 
 export function GachaScreen() {
   
@@ -119,7 +123,7 @@ export function GachaScreen() {
   let stopBeginnerWishes: boolean = (gachaContent === "Novice Wishes" && totalCount === 20);
 
   return (
-    <Container>
+    <ContentWrapper>
       <ScreenInnerWrapper>
         <>
           <GachaBanner content={gachaContent} onClick={onBannerClick} pickUpList={Object.keys(gachaInfo)}/>
@@ -216,6 +220,6 @@ export function GachaScreen() {
           </div>
         </>
       </ScreenInnerWrapper>
-    </Container>
+    </ContentWrapper>
   );
 }

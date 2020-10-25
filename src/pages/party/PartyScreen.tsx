@@ -8,6 +8,7 @@ import { ElementCircleList } from './element/ElementCircleList';
 import { ElementEffectSummary } from './element/ElementEffectSummary';
 import { Menu } from './Menu';
 import { CharacterSimulator } from './simulator/CharacterSimulator';
+import { ContentWrapper } from 'src/components';
 
 type CharacterName = string;
 type CharacterSrc = string;
@@ -81,7 +82,8 @@ export function PartyScreen() {
   }
 
   return (
-    <div>
+    <ContentWrapper>
+      <>
       <Menu></Menu>
       <CharacterSimulator allCharacters={allCharacters} />
       <ElementCircleList activeElements={activeElements} />
@@ -100,6 +102,7 @@ export function PartyScreen() {
           );
         })}
       </CharacterLayout>
-    </div>
+      </>
+    </ContentWrapper>
   );
 }

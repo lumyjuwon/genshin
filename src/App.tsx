@@ -25,16 +25,12 @@ function App() {
         </>
       </Header>
       <Container>
-        <ContentWrapper>
-          <>
-          <Switch>
-            <Route path="/gacha" component={GachaScreen} />
-            <Route path="/party" component={PartyScreen} />
-            {/* root path must be the very bottom */}
-            <Route path="/" component={MainScreen} />
-          </Switch>
-          </>
-        </ContentWrapper>
+        <Switch>
+          <Route path="/gacha" component={GachaScreen} />
+          <Route path="/party" component={PartyScreen} />
+          {/* root path must be the very bottom */}
+          <Route path="/" component={MainScreen} />
+        </Switch>
       </Container>
       <Footer>
         <>
