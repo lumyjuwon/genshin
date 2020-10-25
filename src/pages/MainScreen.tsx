@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImageContentCard, TextCenterWrapper } from 'src/components';
+import { FlexWrapper, ImageContentCard, TextCenterWrapper } from 'src/components';
 import styled from 'styled-components';
 
 const ImageContainer = styled.div({
@@ -27,14 +27,18 @@ export function MainScreen() {
     <ImageContainer>
       <Containter>
         <Title>Genshin Simulator</Title>
-        <ImageContentCard
-          src={`${require("../resources/images/mainscreen/gacha.png")}`}
-          title="Gacha"
-        />
-        <ImageContentCard
-          src={`${require("../resources/images/mainscreen/party.png")}`}
-          title="Party"
-        />
+        <FlexWrapper styles={{width: "100%"}}>
+          <>
+          <ImageContentCard
+            src={`${require("../resources/images/mainscreen/gacha.png")}`}
+            title="Gacha"
+          />
+          <ImageContentCard
+            src={`${require("../resources/images/mainscreen/party.png")}`}
+            title="Party"
+          />
+          </>
+        </FlexWrapper>
       </Containter>
     </ImageContainer>
   )

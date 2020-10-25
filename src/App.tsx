@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import { GachaScreen, PartyScreen, MainScreen, Policy, Terms, About } from 'src/pages';
