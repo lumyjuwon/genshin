@@ -36,29 +36,29 @@ export function GachaResult(props: Props) {
     <ResultBar>
       <FlexWrapper>
         <>
-          <Result>
-            {`Gacha Times: ${props.times}`}
-          </Result>
-          <Result>
-            {`Next Pity: ${props.pity}`}
-          </Result>
-          <Result>
-            {`5★: ${props.five}`}
-          </Result>
-          <Result>
-            {`4★: ${props.four}`}
-          </Result>
-          <Result>
-            <FlexWrapper>
-              <>
-              <SquareImage
-                styles={{ width: "20px", height: "20px" }}
-                src={require("../../resources/images/items/gem/Primogem.webp")}
-              />
-              <span>{`: ${props.gem}`}</span>
-              </>
-            </FlexWrapper>
-          </Result>
+        <Result>
+          {`Gacha Times: ${props.times}`}
+        </Result>
+        <Result>
+          {`Next Pity: ${props.pity}`}
+        </Result>
+        <Result>
+          {`5★: ${props.five}`}
+        </Result>
+        <Result>
+          {`4★: ${props.four}`}
+        </Result>
+        <Result>
+          <FlexWrapper>
+            <>
+            <SquareImage
+              styles={{ width: "20px", height: "20px" }}
+              src={require("../../resources/images/items/gem/Primogem.webp")}
+            />
+            <span>{`: ${props.gem}`}</span>
+            </>
+          </FlexWrapper>
+        </Result>
         </>
       </FlexWrapper>
     </ResultBar>

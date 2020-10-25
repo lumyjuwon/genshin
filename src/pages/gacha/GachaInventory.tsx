@@ -180,44 +180,44 @@ export function GachaInventory(props: Props){
 
   return (
     <>
-      <FlexWrapper styles={{justifyContent: "space-between", alignItems: "start"}}>
-        <>
-          <Title>Inventory</Title>
-          <TextAlignRight style={{textAlign: "right"}}>
-            <ItemCount>
-              {`Total Items: ${totalItemCount}`}
-            </ItemCount>
-            <CheckBoxButton onClick={() => onLabelClicked()} refProp={inputRef}>
-              Hide 3-Stars Items
-            </CheckBoxButton>
-          </TextAlignRight>
-        </>
-      </FlexWrapper>
-      {!props.inventoryList.length ?
-        <TextCenterWrapper styles={{width: "1200px", margin: "10px auto"}}>There is no item... Press button!</TextCenterWrapper>
-        : null
-      }
-      <GridContainer>
-          {inventoryItems.map((item: string, index: number) => {
-            return (
-              <Item key={index}>
-                {characterInfo[item] ?
-                  <RoundImage
-                    styles={{borderRadius: "16px"}}
-                    src={require(`../../resources/images/characters/${item}.png`)}
-                  /> :
-                  <RoundImage
-                    styles={{borderRadius: "16px"}}
-                    src={require(`../../resources/images/items/weapons/${item}.png`)}
-                  />
-                }
-                <ItemTooltip>{item}</ItemTooltip>
-                <PositionAbsolute>{inventoryItemCounts[index]}</PositionAbsolute>
-                <StarEmoji role="img">{"⭐".repeat(itemRank[index])}</StarEmoji>
-              </Item>
-            );
-          })}
-      </GridContainer>
+    <FlexWrapper styles={{justifyContent: "space-between", alignItems: "start"}}>
+      <>
+      <Title>Inventory</Title>
+      <TextAlignRight style={{textAlign: "right"}}>
+        <ItemCount>
+          {`Total Items: ${totalItemCount}`}
+        </ItemCount>
+        <CheckBoxButton onClick={() => onLabelClicked()} refProp={inputRef}>
+          Hide 3-Stars Items
+        </CheckBoxButton>
+      </TextAlignRight>
+      </>
+    </FlexWrapper>
+    {!props.inventoryList.length ?
+      <TextCenterWrapper styles={{width: "1200px", margin: "10px auto"}}>There is no item... Press button!</TextCenterWrapper>
+      : null
+    }
+    <GridContainer>
+        {inventoryItems.map((item: string, index: number) => {
+          return (
+            <Item key={index}>
+              {characterInfo[item] ?
+                <RoundImage
+                  styles={{borderRadius: "16px"}}
+                  src={require(`../../resources/images/characters/${item}.png`)}
+                /> :
+                <RoundImage
+                  styles={{borderRadius: "16px"}}
+                  src={require(`../../resources/images/items/weapons/${item}.png`)}
+                />
+              }
+              <ItemTooltip>{item}</ItemTooltip>
+              <PositionAbsolute>{inventoryItemCounts[index]}</PositionAbsolute>
+              <StarEmoji role="img">{"⭐".repeat(itemRank[index])}</StarEmoji>
+            </Item>
+          );
+        })}
+    </GridContainer>
     </>
   );
 }

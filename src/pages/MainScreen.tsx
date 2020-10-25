@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlexWrapper, ImageContentCard, TextCenterWrapper } from 'src/components';
+import { FlexWrapper, ImageContentCard } from 'src/components';
 import styled from 'styled-components';
 
 const ImageContainer = styled.div({

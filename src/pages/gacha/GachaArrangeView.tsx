@@ -106,16 +106,16 @@ export function GachaArrangeView(props: Props) {
       <Container>
         <FlexWrapper>
           <>
-            <SquareImage
-              styles={{width: "300x", height: "370px"}}
-              src={require("../../resources/images/characters/Flying Paimon.gif")} 
-            />
-            <TextCenterWrapper styles={{ fontSize: "25px"}}>
-              <>
-                <span role="img">💬&nbsp;</span>
-                Click button to start!
-              </>
-            </TextCenterWrapper>
+          <SquareImage
+            styles={{width: "300x", height: "370px"}}
+            src={require("../../resources/images/characters/Flying Paimon.gif")} 
+          />
+          <TextCenterWrapper styles={{ fontSize: "25px"}}>
+            <>
+            <span role="img">💬&nbsp;</span>
+            Click button to start!
+            </>
+          </TextCenterWrapper>
           </>
         </FlexWrapper>
       </Container>

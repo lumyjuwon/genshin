@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 import { gachaInfo } from '../../resources/data';
 import { FlexWrapper, TextCenterWrapper, SquareImage } from 'src/components';
-import { Ripple } from 'src/components/effect';
 
 interface Styles {
   styles: {
@@ -152,80 +151,80 @@ export function GachaBanner(props: Props) {
   return (
     <FlexWrapper styles={{justifyContent: "space-between"}}>
       <>
-        <StyledDiv>
-          <FlexWrapper styles={{justifyContent: "space-between"}}>
-            <>
-              <HoverDiv id="content">
-                {selectedPickUp}
-              </HoverDiv>
-              <Icon>▲</Icon>
-            </>
-          </FlexWrapper>
-          <DropDown>
-            {props.pickUpList.map((content: string, i: number) => {
-              return (
-                <List
-                  key={i}
-                  value={content}
-                  onClick={(e) => onListClick(e.currentTarget.textContent)}
-                >
-                  {content}
-                </List>
-              );
-            })}
-          </DropDown>
-        </StyledDiv>
-        <div style={{position: "relative"}}>
-          <Help role="img" onClick={() => onExitClick()}>❔</Help>
-          <Details id="help" style={{ visibility: "hidden" }}>
-            <DetailsContainer>
-              <ExitButton role="img" onClick={() => onExitClick()}>❌</ExitButton>
-              <TextCenterWrapper styles={{fontSize: "35px", margin: "0", padding: "0"}}>Information</TextCenterWrapper>
-              <TextAlignLeft styles={{fontSize: "25px"}}>
-                1. Rules
-              </TextAlignLeft>
-              <TextAlignLeft styles={{ fontSize: "20px", margin: "0" }}>
-                <>
-                &nbsp;&nbsp;&nbsp;&nbsp;Same as Genshin Wishes Rule
-                <a href="https://genshin-impact.fandom.com/wiki/Wishes"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ fontSize: "16px" }}
-                >
-                  &nbsp;(Go to Wiki<span role="img">&nbsp;👆</span>)
-                </a>
-                <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;This is just for fun. Don't be serious.
-                </>
-              </TextAlignLeft>
-              <TextAlignLeft styles={{ fontSize: "25px" }}>
-                2. Items
-              </TextAlignLeft>
-              <TextAlignLeft styles={{fontSize: "20px", margin: "0 0 10px"}}>
-                <>
-                &nbsp;&nbsp;&nbsp;&nbsp;Wish Content: {`${props.content}`}
-                </>
-              </TextAlignLeft>
-              <FlexWrapper
-                styles={{width: "100%", justifyContent: "flex-start"}}
+      <StyledDiv>
+        <FlexWrapper styles={{justifyContent: "space-between"}}>
+          <>
+          <HoverDiv id="content">
+            {selectedPickUp}
+          </HoverDiv>
+          <Icon>▲</Icon>
+          </>
+        </FlexWrapper>
+        <DropDown>
+          {props.pickUpList.map((content: string, i: number) => {
+            return (
+              <List
+                key={i}
+                value={content}
+                onClick={(e) => onListClick(e.currentTarget.textContent)}
               >
-                <>
-                  &nbsp;&nbsp;&nbsp;&nbsp;
-                  <SquareImage
-                    src={require(`../../resources/images/gacha/${props.content}.jpg`)}
-                    styles={{width: "600px", height: "300px"}}
-                  />
-                </>
-              </FlexWrapper>
-              <TextAlignLeft styles={{fontSize: "20px"}}>
-                &nbsp;&nbsp;&nbsp;&nbsp;5-star PickUp Items: {gachaInfo[props.content].pickUpTarget.join(", ") || "None"}
-              </TextAlignLeft>
-              <TextAlignLeft styles={{fontSize: "20px", margin: "0"}}>
-                &nbsp;&nbsp;&nbsp;&nbsp;4-star PickUp Items: {gachaInfo[props.content].fourStars.pickUpItems.join(", ") || "None"}
-              </TextAlignLeft>
-            </DetailsContainer>
-          </Details>
-        </div>
+                {content}
+              </List>
+            );
+          })}
+        </DropDown>
+      </StyledDiv>
+      <div style={{position: "relative"}}>
+        <Help role="img" onClick={() => onExitClick()}>❔</Help>
+        <Details id="help" style={{ visibility: "hidden" }}>
+          <DetailsContainer>
+            <ExitButton role="img" onClick={() => onExitClick()}>❌</ExitButton>
+            <TextCenterWrapper styles={{fontSize: "35px", margin: "0", padding: "0"}}>Information</TextCenterWrapper>
+            <TextAlignLeft styles={{fontSize: "25px"}}>
+              1. Rules
+            </TextAlignLeft>
+            <TextAlignLeft styles={{ fontSize: "20px", margin: "0" }}>
+              <>
+              &nbsp;&nbsp;&nbsp;&nbsp;Same as Genshin Wishes Rule
+              <a href="https://genshin-impact.fandom.com/wiki/Wishes"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ fontSize: "16px" }}
+              >
+                &nbsp;(Go to Wiki<span role="img">&nbsp;👆</span>)
+              </a>
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;This is just for fun. Don't be serious.
+              </>
+            </TextAlignLeft>
+            <TextAlignLeft styles={{ fontSize: "25px" }}>
+              2. Items
+            </TextAlignLeft>
+            <TextAlignLeft styles={{fontSize: "20px", margin: "0 0 10px"}}>
+              <>
+              &nbsp;&nbsp;&nbsp;&nbsp;Wish Content: {`${props.content}`}
+              </>
+            </TextAlignLeft>
+            <FlexWrapper
+              styles={{width: "100%", justifyContent: "flex-start"}}
+            >
+              <>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <SquareImage
+                src={require(`../../resources/images/gacha/${props.content}.jpg`)}
+                styles={{width: "600px", height: "300px"}}
+              />
+              </>
+            </FlexWrapper>
+            <TextAlignLeft styles={{fontSize: "20px"}}>
+              &nbsp;&nbsp;&nbsp;&nbsp;5-star PickUp Items: {gachaInfo[props.content].pickUpTarget.join(", ") || "None"}
+            </TextAlignLeft>
+            <TextAlignLeft styles={{fontSize: "20px", margin: "0"}}>
+              &nbsp;&nbsp;&nbsp;&nbsp;4-star PickUp Items: {gachaInfo[props.content].fourStars.pickUpItems.join(", ") || "None"}
+            </TextAlignLeft>
+          </DetailsContainer>
+        </Details>
+      </div>
       </>
     </FlexWrapper>
   )

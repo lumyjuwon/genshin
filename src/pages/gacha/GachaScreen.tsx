@@ -76,8 +76,6 @@ export function GachaScreen() {
     
     // Due to useState is asyncronous, gacha.current is prev state.
     setTimeout(afterGachaCurrentChange);
-    // gacha.current && setTotalCount(gacha.current.totalCount);
-    // gacha.current && setNextPity(gacha.current.nextPity);
   }
 
   const onGachaExecution = (tries: number): void => {
@@ -126,98 +124,96 @@ export function GachaScreen() {
     <ContentWrapper>
       <ScreenInnerWrapper>
         <>
-          <GachaBanner content={gachaContent} onClick={onBannerClick} pickUpList={Object.keys(gachaInfo)}/>
-          <GachaArrangeView result={gachaExecutionResult} />
-          <div style={{margin: "30px 0 20px"}}>
-          <FlexWrapper>
+        <GachaBanner content={gachaContent} onClick={onBannerClick} pickUpList={Object.keys(gachaInfo)}/>
+        <GachaArrangeView result={gachaExecutionResult} />
+        <div style={{margin: "30px 0 20px"}}>
+        <FlexWrapper>
+          <>
+          <RoundTextButton
+            styles={{
+              buttonStyles: { display: "inline-block", backgroundColor: "#cc0000", margin: "10px", padding: "12px" },
+              textStyles: { fontSize: "20px" }
+            }}
+            onClick={() => onResetClick()}
+          >
             <>
-            <RoundTextButton
-              styles={{
-                buttonStyles: { display: "inline-block", backgroundColor: "#cc0000", margin: "10px", padding: "12px" },
-                textStyles: { fontSize: "20px" }
-              }}
-              onClick={() => onResetClick()}
+            {`Reset`}
+            <Ripple />
+            </>
+          </RoundTextButton>
+          {stopBeginnerWishes ?
+            <RoundButton
+              styles={{ border: "2px solid #f1f2f3", width: "150px", display: "inline-block", pointerEvents: "none" }}
+              onClick={() => onGachaExecution(10)}
             >
-              <>
-                {`Reset`}
-                <Ripple />
-              </>
-            </RoundTextButton>
-            {
-            stopBeginnerWishes ? 
-              <RoundButton
-                styles={{ border: "2px solid #f1f2f3", width: "150px", display: "inline-block", pointerEvents: "none" }}
-                onClick={() => onGachaExecution(10)}
-              >
-                <FlexWrapper styles={{flexDirection: "column", width: "100%"}}>
+              <FlexWrapper styles={{flexDirection: "column", width: "100%"}}>
+                <>
+                <div style={{fontSize: "14px"}}>Wish × 10</div>
+                <FlexWrapper>
                   <>
-                    <div style={{fontSize: "14px"}}>Wish × 10</div>
-                    <FlexWrapper>
-                      <>
-                        <SquareImage
-                          styles={{width: "25px", height: "25px" }}
-                          src={require(`../../resources/images/items/gem/${gemImage}.png`)}
-                        />
-                        <span style={{fontSize: "14px"}}>&nbsp;× {payedFateCount}</span>
-                      </>
-                    </FlexWrapper>
+                  <SquareImage
+                    styles={{width: "25px", height: "25px" }}
+                    src={require(`../../resources/images/items/gem/${gemImage}.png`)}
+                  />
+                  <span style={{fontSize: "14px"}}>&nbsp;× {payedFateCount}</span>
                   </>
                 </FlexWrapper>
-              </RoundButton> :
-              <RoundButton
-                styles={{ border: "2px solid #f1f2f3", width: "150px", display: "inline-block" }}
-                onClick={() => onGachaExecution(10)}
-              >
-                <>
-                <FlexWrapper styles={{flexDirection: "column", width: "100%"}}>
-                <>
-                  <div style={{fontSize: "14px"}}>Wish × 10</div>
-                  <FlexWrapper>
-                    <>
-                      <SquareImage
-                        styles={{width: "25px", height: "25px" }}
-                        src={require(`../../resources/images/items/gem/${gemImage}.png`)}
-                      />
-                      <span style={{fontSize: "14px"}}>&nbsp;× {payedFateCount}</span>
-                    </>
-                  </FlexWrapper>
                 </>
+              </FlexWrapper>
+            </RoundButton> :
+            <RoundButton
+              styles={{ border: "2px solid #f1f2f3", width: "150px", display: "inline-block" }}
+              onClick={() => onGachaExecution(10)}
+            >
+              <>
+              <FlexWrapper styles={{flexDirection: "column", width: "100%"}}>
+                <>
+                <div style={{fontSize: "14px"}}>Wish × 10</div>
+                <FlexWrapper>
+                  <>
+                  <SquareImage
+                    styles={{width: "25px", height: "25px" }}
+                    src={require(`../../resources/images/items/gem/${gemImage}.png`)}
+                  />
+                  <span style={{fontSize: "14px"}}>&nbsp;× {payedFateCount}</span>
+                  </>
                 </FlexWrapper>
-                <Ripple />
                 </>
-              </RoundButton>
-            }
-            </>
-          </FlexWrapper>
-          </div>
-          {stopBeginnerWishes ? 
-            <TextCenterWrapper styles={{width: "800px", margin: "0 auto 20px"}}>
-              Novice Wishes finished. Choose another Wish or click Reset Button
-            </TextCenterWrapper> :
-            null
-          }
-          {(gachaContent === "Novice Wishes") ? 
-            <GachaResult
-              times={totalCount}
-              four={fourStarCount}
-              five={fiveStarCount}
-              gem={usedPrimoGem}
-              pity={0}
-              result={gachaInventoryList}
-            /> :
-            <GachaResult
-              times={totalCount}
-              four={fourStarCount}
-              five={fiveStarCount}
-              gem={usedPrimoGem}
-              pity={nextPity}
-              result={gachaInventoryList}
-            />
-          }
-          <div style={{margin: "50px auto 30px"}}>
-            <hr />
-            <GachaInventory inventoryList={gachaInventoryList} />
-          </div>
+              </FlexWrapper>
+              <Ripple />
+              </>
+            </RoundButton>}
+          </>
+        </FlexWrapper>
+        </div>
+        {stopBeginnerWishes ? 
+          <TextCenterWrapper styles={{width: "800px", margin: "0 auto 20px"}}>
+            Novice Wishes finished. Choose another Wish or click Reset Button
+          </TextCenterWrapper> :
+          null
+        }
+        {(gachaContent === "Novice Wishes") ? 
+          <GachaResult
+            times={totalCount}
+            four={fourStarCount}
+            five={fiveStarCount}
+            gem={usedPrimoGem}
+            pity={0}
+            result={gachaInventoryList}
+          /> :
+          <GachaResult
+            times={totalCount}
+            four={fourStarCount}
+            five={fiveStarCount}
+            gem={usedPrimoGem}
+            pity={nextPity}
+            result={gachaInventoryList}
+          />
+        }
+        <div style={{margin: "50px auto 30px"}}>
+          <hr />
+          <GachaInventory inventoryList={gachaInventoryList} />
+        </div>
         </>
       </ScreenInnerWrapper>
     </ContentWrapper>
