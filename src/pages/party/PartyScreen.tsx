@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
 
-import { ContentWrapper, ModalWrapper } from 'src/components';
+import { ContentWrapper, GridWrapper, ModalWrapper } from 'src/components';
 import { characterInfo } from 'src/resources/data';
 
-import { CharacterImageButton } from './simulator/SelectableCharacter';
+import { SelectButton } from './SelectButton';
 import { ElementCircleList } from './element/ElementCircleList';
 import { ElementEffectSummary } from './element/ElementEffectSummary';
 import { Menu } from './Menu';
@@ -14,14 +13,6 @@ type CharacterName = string;
 type CharacterSrc = string | null;
 type ElementName = string;
 type ElementCount = number;
-
-const CharacterLayout = styled.div({
-  display: 'flex',
-  width: '40vw',
-  flexWrap: 'wrap',
-  justifyContent: 'center',
-  alignItems: 'flex-start'
-});
 
 const MAX_SELECTED_CHARACTER = 4;
 const selectedCharacters = new Map<CharacterName, CharacterSrc>(new Map());
@@ -100,10 +91,10 @@ export function PartyScreen() {
         }}
         visible={isVisibleCharacterModal}
       >
-        <CharacterLayout>
+        <GridWrapper>
           {Object.keys(characterInfo).map((name: string) => {
             return (
-              <CharacterImageButton
+              <SelectButton
                 key={name}
                 src={require(`../../resources/images/characters/${name}.png`)}
                 onClick={() => {
@@ -113,7 +104,7 @@ export function PartyScreen() {
               />
             );
           })}
-        </CharacterLayout>
+        </GridWrapper>
       </ModalWrapper>
     </ContentWrapper>
   );

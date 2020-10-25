@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { RoundImageButton } from 'src/components';
-import { CharacterEquipment } from './CharacterEquipment';
+import { CharacterEquipSlot } from './CharacterEquipSlot';
 
 const Wrapper = styled.div({
   display: 'flex',
@@ -34,7 +34,7 @@ export function CharacterSimulator(props: Props) {
     <Wrapper>
       {props.characters.map((dic: [string, string | null], index: number) => {
         return (
-          <Inner>
+          <Inner key={dic[0]}>
             <RoundImageButton
               src={dic[1]}
               onClick={() => {
@@ -42,7 +42,7 @@ export function CharacterSimulator(props: Props) {
               }}
               styles={{ buttonStyles: { width: '120px', height: '120px' } }}
             />
-            <CharacterEquipment key={index} characterSrc={dic[1]}></CharacterEquipment>
+            <CharacterEquipSlot key={index} characterSrc={dic[1]}></CharacterEquipSlot>
           </Inner>
         );
       })}
