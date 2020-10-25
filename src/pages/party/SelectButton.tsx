@@ -2,12 +2,12 @@ import React from 'react';
 import { RoundImageButton } from 'src/components';
 
 interface Props {
-  src: string;
+  src: string | null;
   onClick: Function;
   isActive?: boolean;
 }
 
-export function CharacterImageButton(props: Props) {
+export function SelectButton(props: Props) {
   return (
     <RoundImageButton
       src={props.src}

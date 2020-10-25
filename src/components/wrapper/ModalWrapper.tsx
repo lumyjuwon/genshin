@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
+import { CloseBlackButton } from 'src/resources/svg';
+
+import { CircleButton } from '../button/CircleButton';
+
 const Overlay = styled.div({
   position: 'fixed',
   zIndex: 999,
@@ -27,6 +31,7 @@ const Wrapper = styled.div({
 const WrapperInner = styled.div({
   display: 'flex',
   position: 'relative',
+  flexDirection: 'column',
   boxShadow: '0px 0px 4px 4px rgba(0,0,0,0.25)',
   padding: '16px',
   width: 'fit-content',
@@ -35,7 +40,14 @@ const WrapperInner = styled.div({
   borderRadius: '12px'
 });
 
+const Header = styled.div({
+  display: 'flex',
+  justifyContent: 'flex-end',
+  marginBottom: '8px'
+});
+
 interface Props {
+  cancel: Function;
   visible: boolean;
   children?: JSX.Element;
   onCancel?: Function;
@@ -47,7 +59,14 @@ export function ModalWrapper(props: Props) {
       <>
         <Overlay />
         <Wrapper>
-          <WrapperInner>{props.children}</WrapperInner>
+          <WrapperInner>
+            <Header>
+              <CircleButton onClick={props.cancel}>
+                <CloseBlackButton></CloseBlackButton>
+              </CircleButton>
+            </Header>
+            {props.children}
+          </WrapperInner>
         </Wrapper>
       </>
     );
