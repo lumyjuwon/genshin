@@ -27,15 +27,15 @@ interface DescStyle {
 const CardContainer = styled.div<CardStyle>((props: CardStyle) => {
   return {
     width: props.width || "fit-content",
-    height: props.width || "fit-content",
+    height: props.height || "auto",
     padding: props.padding || "10px",
     margin: props.margin || "10px",
     backgroundColor: props.backgroundColor || "#313233",
     cursor: props.cursor || "pointer",
-    boxShadow: "13px 13px 6px rgba(0,0,0,0.2)",
+    boxShadow: "10px 10px 6px rgba(0,0,0,0.7)",
     transition: ".2s ease-out",
     "&:hover": {
-      boxShadow: "0 4px 8px rgba(38,38,38,0.2)"
+      boxShadow: "0 4px 8px rgba(38,38,38,0.5)"
     }
   }
 })
@@ -44,6 +44,7 @@ const Title = styled.div<TitleStyle>((props: TitleStyle) => {
   return {
     fontSize: props.fontSize || "25px",
     color: props.color || "inherit",
+    marginTop: "20px"
   }
 })
 
@@ -51,7 +52,9 @@ const Description = styled.div<DescStyle>((props: DescStyle) => {
   return {
     fontSize: props.fontSize || "20px",
     color: props.color || "inherit",
-    fontWeight: "lighter"
+    fontWeight: "lighter",
+    textAlign: "center",
+    marginTop: "20px"
   }
 })
 
@@ -60,10 +63,10 @@ interface Props {
   desc?: string;
   title: string;
   styles?: {
-    cardStyles: CardStyle;
-    titleStyles: TitleStyle;
-    descStyles: DescStyle;
-    imageStyles: ImageStyle;
+    cardStyles?: CardStyle;
+    titleStyles?: TitleStyle;
+    descStyles?: DescStyle;
+    imageStyles?: ImageStyle;
   }
 }
 
