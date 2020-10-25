@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { RoundImage } from '../image/RoundImage';
 import { FlexWrapper } from '../wrapper/FlexWrapper';
-import { ImageStyle } from '../image/RoundImage';
+import { Style as ImageStyle } from '../image/RoundImage';
 
 interface CardStyle {
   width?: string;
