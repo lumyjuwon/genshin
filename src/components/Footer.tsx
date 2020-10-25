@@ -6,9 +6,12 @@ interface Props {
 }
 
 const FooterDiv = styled.footer({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  flexDirection: "column",
   backgroundColor: "#444546",
   borderTop: "1px solid #616263",
-  marginTop: "20px",
   padding: "20px 150px",
   textAlign: "center",
 });
