@@ -28,3 +28,4 @@ export { SquareImage } from "./image/SquareImage";
 
 // Card Component
 export { ImageContentCard } from './card/ImageContentCard';
+export { TextContentCard } from './card/TextContentCard';
