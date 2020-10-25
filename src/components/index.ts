@@ -23,5 +23,8 @@ export { RoundButton } from './button/RoundButton';
 export { UnderlineInputText } from './input/UnderlineInputText';
 
 // Image Component
-export { RoundImage } from './image/RoundImage';
-export { SquareImage } from './image/SquareImage';
+export { RoundImage } from "./image/RoundImage";
+export { SquareImage } from "./image/SquareImage";
+
+// Card Component
+export { ImageContentCard } from './card/ImageContentCard';
