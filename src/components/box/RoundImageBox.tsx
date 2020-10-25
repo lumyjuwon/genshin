@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { RoundImage } from '../image/RoundImage';
 
 export interface Style {
   readonly width?: string;
@@ -9,13 +10,13 @@ export interface Style {
   readonly objectFit?: 'inherit' | 'none' | '-moz-initial' | 'initial' | 'revert' | 'unset' | 'fill' | 'contain' | 'cover' | 'scale-down';
 }
 
-const Image = styled.img<Style>((props: Style) => {
+const Container = styled.div<Style>((props: Style) => {
   return {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     width: props.width || '100px',
-    height: props.height || '100px',
-    borderRadius: props.borderRadius || '8px',
-    boxShadow: props.boxShadow || 'none',
-    objectFit: props.objectFit || 'fill'
+    height: props.height || '100px'
   };
 });
 
@@ -24,9 +25,6 @@ interface Props {
   styles?: Style;
 }
 
-export function RoundImage(props: Props) {
-  if (props.src === null) {
-    return null;
-  }
-  return <Image {...props.styles} src={props.src} />;
+export function RoundImageBox(props: Props) {
+  return <Container {...props.styles}>{props.src !== null && <RoundImage {...props.styles} src={props.src} />}</Container>;
 }
