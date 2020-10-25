@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const ImageContainer = styled.div({
   width: "100%",
   height: "90vh",
-  backgroundImage: `url(${require("../resources/images/mainscreen/main.jpg")})`,
+  backgroundImage: `url(${require("../../resources/images/mainscreen/main.jpg")})`,
 })
 
 const Containter = styled.div({
@@ -30,7 +30,7 @@ export function MainScreen() {
         <FlexWrapper styles={{width: "100%"}}>
           <>
           <ImageContentCard
-            src={`${require("../resources/images/mainscreen/gacha.png")}`}
+            src={`${require("../../resources/images/mainscreen/gacha.png")}`}
             title="Wish"
             desc="Test Your Luck!!!"
             styles={{
@@ -39,7 +39,7 @@ export function MainScreen() {
             }}
           />
           <ImageContentCard
-            src={`${require("../resources/images/mainscreen/party.png")}`}
+            src={`${require("../../resources/images/mainscreen/party.png")}`}
             title="Party"
             desc="Element Resonance and Character Weapon System"
             styles={{
@@ -48,7 +48,7 @@ export function MainScreen() {
             }}
           />
           <ImageContentCard
-            src={`${require("../resources/images/mainscreen/Paimon.jpg")}`}
+            src={`${require("../../resources/images/mainscreen/Paimon.jpg")}`}
             title="Coming Soon..."
             desc="Coming Soon..."
             styles={{
