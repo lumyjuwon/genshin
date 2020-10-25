@@ -1,9 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+
+import { RoundImageButton } from 'src/components';
 import { CharacterEquipment } from './CharacterEquipment';
 
-const Container = styled.div({
+const Wrapper = styled.div({
   display: 'flex',
+  width: 'fit-content',
+  height: 'fit-content',
   flexWrap: 'wrap',
   flexDirection: 'column',
   justifyContent: 'center',
@@ -13,16 +17,35 @@ const Container = styled.div({
   marginBottom: '5vh'
 });
 
+const Inner = styled.div({
+  display: 'flex',
+  width: 'fit-content',
+  height: 'fit-content',
+  flexDirection: 'row'
+});
+
 interface Props {
-  allCharacters: Array<[string, string]>;
+  characters: Array<[string, string | null]>;
+  onClick: Function;
 }
 
 export function CharacterSimulator(props: Props) {
   return (
-    <Container>
-      {props.allCharacters.map((dic: [string, string]) => {
-        return <CharacterEquipment characterSrc={dic[1]}></CharacterEquipment>;
+    <Wrapper>
+      {props.characters.map((dic: [string, string | null], index: number) => {
+        return (
+          <Inner>
+            <RoundImageButton
+              src={dic[1]}
+              onClick={() => {
+                props.onClick();
+              }}
+              styles={{ buttonStyles: { width: '120px', height: '120px' } }}
+            />
+            <CharacterEquipment key={index} characterSrc={dic[1]}></CharacterEquipment>
+          </Inner>
+        );
       })}
-    </Container>
+    </Wrapper>
   );
 }

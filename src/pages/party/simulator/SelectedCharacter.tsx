@@ -3,7 +3,7 @@ import { RoundImage } from 'src/components';
 import styled from 'styled-components';
 
 interface Props {
-  src: string;
+  src: string | null;
 }
 
 const Container = styled.div({
@@ -25,8 +25,8 @@ export function SelectedCharacterImage(props: Props) {
       <RoundImage
         src={props.src}
         styles={{
-          width: '120px',
-          height: '120px',
+          width: '100px',
+          height: '100px',
           borderRadius: '35%'
         }}
       />

@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import { RoundImageButton } from 'src/components';
 
-import { SelectedCharacterImage } from './SelectedCharacter';
+interface EquipmentButtonProps {
+  type: string;
+  src: string | null;
+  onClick: Function;
+}
+
+const EquipmentButton = (props: EquipmentButtonProps) => {
+  const [equipment, setEquipment] = useState<string>('');
+
+  return (
+    <RoundImageButton
+      src={props.src}
+      onClick={() => {
+        props.onClick();
+      }}
+      styles={{ buttonStyles: { width: '100px', height: '100px' }, imageStyles: { width: '100px', height: '100px' } }}
+    />
+  );
+};
 
 const Container = styled.div({
   display: 'flex',
@@ -13,20 +31,19 @@ const Container = styled.div({
 });
 
 interface Props {
-  characterSrc: string;
+  characterSrc: string | null;
 }
+
+const arr = ['Weapon', 'Flower', 'Feather', 'Hourglass', 'HolyGrail', 'Crown'];
 
 export function CharacterEquipment(props: Props) {
   return (
     <Container>
-      <SelectedCharacterImage src={props.characterSrc} />
-      {props.characterSrc !== '' && (
+      {props.characterSrc !== null && (
         <>
-          <RoundImageButton src={''} onClick={() => {}}></RoundImageButton>
-          <RoundImageButton src={''} onClick={() => {}}></RoundImageButton>
-          <RoundImageButton src={''} onClick={() => {}}></RoundImageButton>
-          <RoundImageButton src={''} onClick={() => {}}></RoundImageButton>
-          <RoundImageButton src={''} onClick={() => {}}></RoundImageButton>
+          {arr.map((type: string) => {
+            return <EquipmentButton key={type} type={type} src={null} onClick={() => {}} />;
+          })}
         </>
       )}
     </Container>

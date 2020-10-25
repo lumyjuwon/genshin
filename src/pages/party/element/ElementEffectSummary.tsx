@@ -16,11 +16,9 @@ interface Props {
 export function ElementEffectSummary(props: Props) {
   return (
     <Container>
-      <RegexColorText
-        text={`물 원소의 부착 지속 시간이 40% 감소한다. 초전도, 과부하, 감전 반응을 일으키면 100%의 확률로 번개 원소 입자가 1개 생성된다.\n재사용 대기시간: 5초`}
-        regex={/\d+%/g}
-        color={'blue'}
-      />
+      <RegexColorText regex={/\d+%/g} color={'blue'}>
+        {`물 원소의 부착 지속 시간이 40% 감소한다. 초전도, 과부하, 감전 반응을 일으키면 100%의 확률로 번개 원소 입자가 1개 생성된다.\n재사용 대기시간: 5초`}
+      </RegexColorText>
     </Container>
   );
 }

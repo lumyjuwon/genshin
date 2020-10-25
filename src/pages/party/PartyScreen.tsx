@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
+import { ContentWrapper, ModalWrapper } from 'src/components';
 import { characterInfo } from 'src/resources/data';
 
 import { CharacterImageButton } from './simulator/SelectableCharacter';
@@ -8,41 +9,40 @@ import { ElementCircleList } from './element/ElementCircleList';
 import { ElementEffectSummary } from './element/ElementEffectSummary';
 import { Menu } from './Menu';
 import { CharacterSimulator } from './simulator/CharacterSimulator';
-import { ContentWrapper, ModalWrapper } from 'src/components';
 
 type CharacterName = string;
-type CharacterSrc = string;
+type CharacterSrc = string | null;
 type ElementName = string;
 type ElementCount = number;
 
 const CharacterLayout = styled.div({
   display: 'flex',
+  width: '40vw',
   flexWrap: 'wrap',
   justifyContent: 'center',
-  alignItems: 'flex-start',
-  paddingLeft: '25vw',
-  paddingRight: '25vw'
+  alignItems: 'flex-start'
 });
 
 const MAX_SELECTED_CHARACTER = 4;
 const selectedCharacters = new Map<CharacterName, CharacterSrc>(new Map());
 const emptyCharacters = new Map<CharacterName, CharacterSrc>([
-  ['0', ''],
-  ['1', ''],
-  ['2', ''],
-  ['3', '']
+  ['0', null],
+  ['1', null],
+  ['2', null],
+  ['3', null]
 ]);
 
 export function PartyScreen() {
   const [allCharacters, setAllCharacters] = useState<Array<[CharacterName, CharacterSrc]>>([...emptyCharacters]);
   const [activeElements, setActiveElements] = useState<Map<ElementName, ElementCount>>(new Map());
+  const [isVisibleCharacterModal, setIsVisibleCharacterModal] = useState<boolean>(false);
 
   function fillEmptyCharacters(filledCharacterSize: number) {
     emptyCharacters.clear();
 
     let emptyCharacterCount = 0;
     while (emptyCharacterCount !== MAX_SELECTED_CHARACTER - filledCharacterSize) {
-      emptyCharacters.set(emptyCharacterCount.toString(), '');
+      emptyCharacters.set(emptyCharacterCount.toString(), null);
       emptyCharacterCount++;
     }
   }
@@ -85,9 +85,21 @@ export function PartyScreen() {
     <ContentWrapper>
       <>
         <Menu></Menu>
-        <CharacterSimulator allCharacters={allCharacters} />
+        <CharacterSimulator
+          characters={allCharacters}
+          onClick={() => {
+            setIsVisibleCharacterModal(true);
+          }}
+        />
         <ElementCircleList activeElements={activeElements} />
         <ElementEffectSummary activeElements={activeElements} />
+      </>
+      <ModalWrapper
+        cancel={() => {
+          setIsVisibleCharacterModal(false);
+        }}
+        visible={isVisibleCharacterModal}
+      >
         <CharacterLayout>
           {Object.keys(characterInfo).map((name: string) => {
             return (
@@ -102,7 +114,7 @@ export function PartyScreen() {
             );
           })}
         </CharacterLayout>
-      </>
+      </ModalWrapper>
     </ContentWrapper>
   );
 }
