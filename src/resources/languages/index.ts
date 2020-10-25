@@ -9,6 +9,8 @@ export enum LangCode {
 export enum Lang {
   Gacha = 'Gacha',
   Party = 'Party',
+  Party_Save_Text = 'Party_Save_Text',
+  Party_Save_Text_Placeholder = 'Party_Save_Text_Placeholder',
   Energetic_Lightning = 'Energetic_Lightning',
   Fire_Of_Passion = 'Fire_Of_Passion',
   Healing_Water = 'Healing_Water',
