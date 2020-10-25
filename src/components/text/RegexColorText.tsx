@@ -19,7 +19,11 @@ function parseColorText(text: string, regex: RegExp, color: string) {
     const splitedText = extraText.split(matched);
 
     coloredText.push(splitedText[0]);
-    coloredText.push(<span style={{ color: color }}>{matched}</span>);
+    coloredText.push(
+      <span key={matched} style={{ color: color }}>
+        {matched}
+      </span>
+    );
     extraText = splitedText[1];
   }
 
@@ -30,8 +34,6 @@ function parseColorText(text: string, regex: RegExp, color: string) {
 
 export function RegexColorText(props: Props) {
   const coloredText = parseColorText(props.text, props.regex, props.color);
-  console.log(coloredText);
-
   return (
     <p>
       {coloredText?.map((text) => {
