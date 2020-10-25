@@ -32,10 +32,29 @@ export function MainScreen() {
           <ImageContentCard
             src={`${require("../resources/images/mainscreen/gacha.png")}`}
             title="Gacha"
+            desc="Test Your Luck!!!"
+            styles={{
+              cardStyles: {width: "300px", height: "400px", padding: "20px 10px", margin: "50px 50px 0 0"},
+              imageStyles: {width: "200px", height: "200px"}
+            }}
           />
           <ImageContentCard
             src={`${require("../resources/images/mainscreen/party.png")}`}
             title="Party"
+            desc="Element Resonance and Character Weapon System"
+            styles={{
+              cardStyles: {width: "300px", height: "400px", padding: "20px 10px", margin: "50px 50px 0 0"},
+              imageStyles: {width: "200px", height: "200px"}
+            }}
+          />
+          <ImageContentCard
+            src={`${require("../resources/images/mainscreen/Paimon.jpg")}`}
+            title="Coming Soon..."
+            desc="Coming Soon..."
+            styles={{
+              cardStyles: {width: "300px", height: "400px", padding: "20px 10px", margin: "50px 50px 0 0"},
+              imageStyles: {width: "200px", height: "200px"}
+            }}
           />
           </>
         </FlexWrapper>
