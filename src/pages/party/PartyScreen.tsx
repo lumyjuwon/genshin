@@ -8,7 +8,7 @@ import { ElementCircleList } from './element/ElementCircleList';
 import { ElementEffectSummary } from './element/ElementEffectSummary';
 import { Menu } from './Menu';
 import { CharacterSimulator } from './simulator/CharacterSimulator';
-import { ContentWrapper } from 'src/components';
+import { ContentWrapper, ModalWrapper } from 'src/components';
 
 type CharacterName = string;
 type CharacterSrc = string;
@@ -84,24 +84,24 @@ export function PartyScreen() {
   return (
     <ContentWrapper>
       <>
-      <Menu></Menu>
-      <CharacterSimulator allCharacters={allCharacters} />
-      <ElementCircleList activeElements={activeElements} />
-      <ElementEffectSummary activeElements={activeElements} />
-      <CharacterLayout>
-        {Object.keys(characterInfo).map((name: string) => {
-          return (
-            <CharacterImageButton
-              key={name}
-              src={require(`../../resources/images/characters/${name}.png`)}
-              onClick={() => {
-                selectCharacter(name, require(`../../resources/images/characters/${name}.png`));
-              }}
-              isActive={selectedCharacters.has(name)}
-            />
-          );
-        })}
-      </CharacterLayout>
+        <Menu></Menu>
+        <CharacterSimulator allCharacters={allCharacters} />
+        <ElementCircleList activeElements={activeElements} />
+        <ElementEffectSummary activeElements={activeElements} />
+        <CharacterLayout>
+          {Object.keys(characterInfo).map((name: string) => {
+            return (
+              <CharacterImageButton
+                key={name}
+                src={require(`../../resources/images/characters/${name}.png`)}
+                onClick={() => {
+                  selectCharacter(name, require(`../../resources/images/characters/${name}.png`));
+                }}
+                isActive={selectedCharacters.has(name)}
+              />
+            );
+          })}
+        </CharacterLayout>
       </>
     </ContentWrapper>
   );
