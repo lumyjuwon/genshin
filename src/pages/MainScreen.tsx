@@ -52,7 +52,7 @@ export function MainScreen() {
             title="Coming Soon..."
             desc="Coming Soon..."
             styles={{
-              cardStyles: {width: "300px", height: "400px", padding: "20px 10px", margin: "50px 50px 0 0"},
+              cardStyles: {width: "300px", height: "400px", padding: "20px 10px", margin: "50px 0 0"},
               imageStyles: {width: "200px", height: "200px"}
             }}
           />
