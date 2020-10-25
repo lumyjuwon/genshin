@@ -94,7 +94,6 @@ export class GachaController {
       resultItem = nonPickUpItems[itemIndex];
     }
 
-    if (!resultItem) throw new Error("this.pick undefined")
     return resultItem;
   }
 
@@ -119,7 +118,6 @@ export class GachaController {
       resultItem = this.pick(info);
     }
 
-    if (!resultItem) throw new Error("this.isnextpickup undefined")
     return resultItem;
   }
 
@@ -163,7 +161,6 @@ export class GachaController {
           }
         }
 
-        if (!resultItem) throw new Error("guarantee undefined");
         resultItems.push(resultItem);
       }
       // maxPickUpCount 천장
@@ -184,7 +181,6 @@ export class GachaController {
         this.favoriteCount = 0;
         this.isNextFivePickUp = false;
         
-        if (!resultItem) throw new Error("this.pickupcount undefined");
         resultItems.push(resultItem);
       }
       // maxPityCount 천장
@@ -204,7 +200,6 @@ export class GachaController {
           
         }
 
-        if (!resultItem) throw new Error("this.pity undefined");
         resultItems.push(resultItem);
       }
       // 일반 뽑기
@@ -245,12 +240,10 @@ export class GachaController {
           resultItem = this.pick(this.data.threeStars);
         }
 
-        if (!resultItem) throw new Error("normal undefined")
         resultItems.push(resultItem);
       }
     }
-
-    console.log(resultItems);
+    
     this.nextPity = this.data.maxPityCount - this.pityCount;
     this.gachaResult = resultItems;
     return resultItems;
