@@ -28,11 +28,9 @@ function parseColorText(text: string, regex: RegExp, color: string) {
 
 interface Props {
   children: string;
-  regex: RegExp;
-  color: string;
 }
 
-export function RegexColorText(props: Props) {
+export function TagColorText(props: Props) {
   const coloredText = parseColorText(props.children, props.regex, props.color);
   return (
     <p>
