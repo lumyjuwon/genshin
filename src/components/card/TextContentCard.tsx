@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { RoundImage } from '../image/RoundImage';
 import { FlexWrapper } from '../wrapper/FlexWrapper';
-import { ImageStyle } from '../image/RoundImage';
 
 interface CardStyle {
   width?: string;
@@ -32,8 +30,8 @@ const CardContainer = styled.div<CardStyle>((props: CardStyle) => {
     padding: props.padding || "10px",
     margin: props.margin || "10px",
     backgroundColor: props.backgroundColor || "#313233",
-    borderRadius: props.borderRadius || "16px",
     boxShadow: "10px 10px 6px rgba(0,0,0,0.7)",
+    borderRadius: props.borderRadius || "16px",
     transition: ".2s ease-out",
     "&:hover": {
       boxShadow: "0 4px 8px rgba(38,38,38,0.5)"
@@ -60,25 +58,22 @@ const Description = styled.div<DescStyle>((props: DescStyle) => {
 })
 
 interface Props {
-  src: string;
-  title: string;
   desc?: string;
+  title: string;
   styles?: {
     cardStyles?: CardStyle;
     titleStyles?: TitleStyle;
     descStyles?: DescStyle;
-    imageStyles?: ImageStyle;
   }
   onClick?: Function;
 }
 
-export function ImageContentCard(props: Props) {
+export function TextContentCard(props: Props) {
   
   return (
     <CardContainer {...props.styles?.cardStyles} onClick={() => props.onClick?.()}>
       <FlexWrapper styles={{ flexDirection: "column" }}>
         <>
-        <RoundImage src={props.src} styles={props.styles?.imageStyles}/>
         <Title {...props.styles?.titleStyles}>{props.title}</Title>
         <Description {...props.styles?.descStyles}>{props.desc}</Description>
         </>
