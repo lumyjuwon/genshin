@@ -6,10 +6,7 @@ interface Props {
 }
 
 const Wrapper = styled.div({
-  paddingTop: '50px',
-  paddingLeft: '100px',
-  paddingRight: '100px',
-  paddingBottom: '50px'
+  padding: "5vh 100px"
 });
 
 export function ContentWrapper({ children }: Props) {
