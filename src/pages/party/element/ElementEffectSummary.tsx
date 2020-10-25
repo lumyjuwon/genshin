@@ -1,5 +1,4 @@
 import React from 'react';
-import { RoundImageButton } from 'src/components';
 import { RegexColorText } from 'src/components/text/RegexColorText';
 import styled from 'styled-components';
 
@@ -8,19 +7,6 @@ const Container = styled.div({
   justifyContent: 'center',
   marginBottom: '50px'
 });
-
-const DiamondSquare = styled.div({
-  position: 'relative',
-  width: '0px',
-  height: '0px',
-  border: '50px solid transparent',
-  borderBottomColor: 'red',
-  top: '-50px'
-});
-
-const TopContainer = styled.div({});
-
-const ContentContainer = styled.div({});
 
 interface Props {
   activeElements: Map<string, number>;

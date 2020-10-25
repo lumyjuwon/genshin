@@ -14,31 +14,31 @@ const ElementLayout = styled.div({
 
 const elements: { [key: string]: { resource: any; borderColor: string } } = {
   Anemo: {
-    resource: require('../../resources/images/elements/Anemo.png'),
+    resource: require('../../../resources/images/elements/Anemo.png'),
     borderColor: 'rgb(74, 255, 227)'
   },
   Cryo: {
-    resource: require('../../resources/images/elements/Cryo.png'),
+    resource: require('../../../resources/images/elements/Cryo.png'),
     borderColor: 'rgb(175, 255, 255)'
   },
   Dendro: {
-    resource: require('../../resources/images/elements/Dendro.png'),
+    resource: require('../../../resources/images/elements/Dendro.png'),
     borderColor: 'rgb(177, 233, 41)'
   },
   Electro: {
-    resource: require('../../resources/images/elements/Electro.png'),
+    resource: require('../../../resources/images/elements/Electro.png'),
     borderColor: 'rgb(255, 172, 255)'
   },
   Geo: {
-    resource: require('../../resources/images/elements/Geo.png'),
+    resource: require('../../../resources/images/elements/Geo.png'),
     borderColor: 'rgb(255, 231, 4)'
   },
   Hydro: {
-    resource: require('../../resources/images/elements/Hydro.png'),
+    resource: require('../../../resources/images/elements/Hydro.png'),
     borderColor: 'rgb(5, 255, 255)'
   },
   Pyro: {
-    resource: require('../../resources/images/elements/Pyro.png'),
+    resource: require('../../../resources/images/elements/Pyro.png'),
     borderColor: 'rgb(255, 140, 90)'
   }
 };

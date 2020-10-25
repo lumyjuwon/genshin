@@ -1,5 +1,5 @@
-import React from "react";
-import { RoundImageButton } from "src/components";
+import React from 'react';
+import { RoundImageButton } from 'src/components';
 
 interface Props {
   src: string;
@@ -14,13 +14,13 @@ export function CharacterImageButton(props: Props) {
       onClick={props.onClick}
       styles={{
         buttonStyles: {
-          backgroundColor: props.isActive ? "#f1f2f3" : "transparent",
+          backgroundColor: props.isActive ? '#f1f2f3' : 'transparent'
         },
         imageStyles: {
-          width: "80px",
-          height: "80px",
-          borderRadius: "35%",
-        },
+          width: '80px',
+          height: '80px',
+          borderRadius: '35%'
+        }
       }}
     />
   );

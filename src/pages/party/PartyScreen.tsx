@@ -1,27 +1,18 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import { characterInfo } from 'src/resources/data';
 
-import { CharacterImageButton } from './SelectableCharacter';
-import { SelectedCharacterImage } from './SelectedCharacter';
-import { ElementCircleList } from './ElementCircleList';
-import { ElementEffectSummary } from './ElementEffectSummary';
+import { CharacterImageButton } from './simulator/SelectableCharacter';
+import { ElementCircleList } from './element/ElementCircleList';
+import { ElementEffectSummary } from './element/ElementEffectSummary';
 import { Menu } from './Menu';
+import { CharacterSimulator } from './simulator/CharacterSimulator';
 
 type CharacterName = string;
 type CharacterSrc = string;
 type ElementName = string;
 type ElementCount = number;
-
-const SelectedCharacterLayout = styled.div({
-  display: 'flex',
-  flexWrap: 'wrap',
-  justifyContent: 'center',
-  paddingLeft: '25vw',
-  paddingRight: '25vw',
-  marginBottom: '5vh'
-});
 
 const CharacterLayout = styled.div({
   display: 'flex',
@@ -32,30 +23,27 @@ const CharacterLayout = styled.div({
   paddingRight: '25vw'
 });
 
-export function PartyScreen() {
-  const MAX_SELECTED_CHARACTER = 4;
+const MAX_SELECTED_CHARACTER = 4;
+const selectedCharacters = new Map<CharacterName, CharacterSrc>(new Map());
+const emptyCharacters = new Map<CharacterName, CharacterSrc>([
+  ['0', ''],
+  ['1', ''],
+  ['2', ''],
+  ['3', '']
+]);
 
-  const [selectedCharacters, setSelectedCharacters] = useState(new Map<CharacterName, CharacterSrc>());
-  const [emptyCharacters, setEmptyCharacters] = useState(
-    new Map<string, null>([
-      ['0', null],
-      ['1', null],
-      ['2', null],
-      ['3', null]
-    ])
-  );
+export function PartyScreen() {
+  const [allCharacters, setAllCharacters] = useState<Array<[CharacterName, CharacterSrc]>>([...emptyCharacters]);
   const [activeElements, setActiveElements] = useState<Map<ElementName, ElementCount>>(new Map());
 
   function fillEmptyCharacters(filledCharacterSize: number) {
-    const emptyCharacters: Map<string, null> = new Map();
+    emptyCharacters.clear();
 
     let emptyCharacterCount = 0;
     while (emptyCharacterCount !== MAX_SELECTED_CHARACTER - filledCharacterSize) {
-      emptyCharacters.set(emptyCharacterCount.toString(), null);
+      emptyCharacters.set(emptyCharacterCount.toString(), '');
       emptyCharacterCount++;
     }
-
-    setEmptyCharacters(emptyCharacters);
   }
 
   function changeActiveElements(characters: Map<CharacterName, CharacterSrc>) {
@@ -77,32 +65,25 @@ export function PartyScreen() {
   }
 
   function selectCharacter(name: CharacterName, resource: CharacterSrc) {
-    const characters: Map<CharacterName, CharacterSrc> = new Map(selectedCharacters);
-
-    if (characters.has(name)) {
-      characters.delete(name);
+    if (selectedCharacters.has(name)) {
+      selectedCharacters.delete(name);
     } else {
-      if (characters.size < MAX_SELECTED_CHARACTER) {
-        characters.set(name, resource);
+      if (selectedCharacters.size < MAX_SELECTED_CHARACTER) {
+        selectedCharacters.set(name, resource);
       }
     }
 
-    fillEmptyCharacters(characters.size);
-    changeActiveElements(characters);
-    setSelectedCharacters(characters);
+    fillEmptyCharacters(selectedCharacters.size);
+    changeActiveElements(selectedCharacters);
+
+    const combinedCharacters = [...selectedCharacters].concat([...emptyCharacters]);
+    setAllCharacters(combinedCharacters);
   }
 
   return (
     <div>
       <Menu></Menu>
-      <SelectedCharacterLayout>
-        {[...selectedCharacters].map((dic: [CharacterName, CharacterSrc]) => {
-          return <SelectedCharacterImage key={dic[0]} src={dic[1]} />;
-        })}
-        {[...emptyCharacters].map((dic: [string, any]) => {
-          return <SelectedCharacterImage key={dic[0]} src={dic[1]} />;
-        })}
-      </SelectedCharacterLayout>
+      <CharacterSimulator allCharacters={allCharacters} />
       <ElementCircleList activeElements={activeElements} />
       <ElementEffectSummary activeElements={activeElements} />
       <CharacterLayout>

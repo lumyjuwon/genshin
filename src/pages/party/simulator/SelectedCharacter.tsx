@@ -25,8 +25,8 @@ export function SelectedCharacterImage(props: Props) {
       <RoundImage
         src={props.src}
         styles={{
-          width: '150px',
-          height: '150px',
+          width: '120px',
+          height: '120px',
           borderRadius: '35%'
         }}
       />
