@@ -33,21 +33,27 @@ function App() {
     <BrowserRouter>
       <Header>
         <>
-          <MainLogo onClick={() => deleteSelected()}>
-            <Link to="/">Genshin Simul</Link>
-          </MainLogo>
-          <TextBlockButton
-            refProp={gacha}
-            onClick={() => onNavClick(gacha)}
-          >
-            <Link to="/gacha">{trans(Lang.Gacha)}</Link>
-          </TextBlockButton>
-          <TextBlockButton
-            refProp={party}
-            onClick={() => onNavClick(party)}
-          >
-            <Link to="/party">{trans(Lang.Party)}</Link>
-          </TextBlockButton>
+          <Link to="/">
+            <MainLogo onClick={() => deleteSelected()}>
+              Genshin Simul
+            </MainLogo>
+          </Link>
+          <Link to="/gacha">
+            <TextBlockButton
+              refProp={gacha}
+              onClick={() => onNavClick(gacha)}
+            >
+              {trans(Lang.Gacha)}
+            </TextBlockButton>
+          </Link>
+          <Link to="/party">
+            <TextBlockButton
+              refProp={party}
+              onClick={() => onNavClick(party)}
+            >
+              {trans(Lang.Party)}
+            </TextBlockButton>
+          </Link>
         </>
       </Header>
       <Switch>
