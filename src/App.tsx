@@ -17,14 +17,15 @@ function App() {
   const gacha = useRef<HTMLAnchorElement>(null);
   const party = useRef<HTMLAnchorElement>(null);
 
-  const onNavClick = (ref: React.RefObject<HTMLAnchorElement>) => {
+  const deleteSelected = () => {
     const target = document.querySelectorAll(".selected");
-    console.log(target);
     target.forEach(child => {
       child.classList.remove("selected");
     })
-    
-    
+  }
+
+  const onNavClick = (ref: React.RefObject<HTMLAnchorElement>) => {
+    deleteSelected();
     ref.current && (ref.current.className += " selected");
   }
 
@@ -32,7 +33,7 @@ function App() {
     <BrowserRouter>
       <Header>
         <>
-          <MainLogo>
+          <MainLogo onClick={() => deleteSelected()}>
             <Link to="/">Genshin Simul</Link>
           </MainLogo>
           <TextBlockButton
