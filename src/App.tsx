@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 
@@ -13,6 +13,21 @@ const MainLogo = styled.a({
 });
 
 function App() {
+
+  const gacha = useRef<HTMLAnchorElement>(null);
+  const party = useRef<HTMLAnchorElement>(null);
+
+  const onNavClick = (ref: React.RefObject<HTMLAnchorElement>) => {
+    const target = document.querySelectorAll(".selected");
+    console.log(target);
+    target.forEach(child => {
+      child.classList.remove("selected");
+    })
+    
+    
+    ref.current && (ref.current.className += " selected");
+  }
+
   return (
     <BrowserRouter>
       <Header>
@@ -20,10 +35,16 @@ function App() {
           <MainLogo>
             <Link to="/">Genshin Simul</Link>
           </MainLogo>
-          <TextBlockButton>
+          <TextBlockButton
+            refProp={gacha}
+            onClick={() => onNavClick(gacha)}
+          >
             <Link to="/gacha">{trans(Lang.Gacha)}</Link>
           </TextBlockButton>
-          <TextBlockButton>
+          <TextBlockButton
+            refProp={party}
+            onClick={() => onNavClick(party)}
+          >
             <Link to="/party">{trans(Lang.Party)}</Link>
           </TextBlockButton>
         </>
