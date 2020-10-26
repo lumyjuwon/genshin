@@ -12,16 +12,40 @@ interface CardStyle {
   margin?: string;
   backgroundColor?: string;
   borderRadius?: string;
+  medium?: {
+    width?: string;
+    height?: string;
+    padding?: string;
+    margin?: string;
+  }
+  small?: {
+    width?: string;
+    height?: string;
+    padding?: string;
+    margin?: string;
+  }
 }
 
 interface TitleStyle {
   fontSize?: string;
   color?: string;
+  medium?: {
+    fontSize: string;
+  }
+  small?: {
+    fontSize: string;
+  }
 }
 
 interface DescStyle {
   fontSize?: string;
   color?: string;
+  medium?: {
+    fontSize: string;
+  }
+  small?: {
+    fontSize: string;
+  }
 }
 
 
@@ -37,7 +61,19 @@ const CardContainer = styled.div<CardStyle>((props: CardStyle) => {
     transition: ".2s ease-out",
     "&:hover": {
       boxShadow: "0 4px 8px rgba(38,38,38,0.5)"
-    }
+    },
+    "@media screen and (max-width: 1380px)": {
+      width: props.medium?.width || (props.width || "fit-content"),
+      height: props.medium?.height || (props.height || "auto"),
+      padding: props.medium?.padding || (props.padding || "10px"),
+      margin: props.medium?.margin || (props.margin || "30px"),
+    },
+    "@media screen and (max-width: 768px)": {
+      width: props.small?.width || (props.width || "fit-content"),
+      height: props.small?.height || (props.height || "auto"),
+      padding: props.small?.padding || (props.padding || "10px"),
+      margin: props.small?.margin || (props.margin || "30px"),
+    },
   }
 })
 
@@ -45,7 +81,13 @@ const Title = styled.div<TitleStyle>((props: TitleStyle) => {
   return {
     fontSize: props.fontSize || "25px",
     color: props.color || "inherit",
-    marginTop: "20px"
+    marginTop: "20px",
+    "@media screen and (max-width: 1380px)": {
+      fontSize: props.medium?.fontSize || (props.fontSize || "25px"),
+    },
+    "@media screen and (max-width: 768px)": {
+      fontSize: props.small?.fontSize || (props.fontSize || "25px"),
+    }
   }
 })
 
@@ -55,7 +97,13 @@ const Description = styled.div<DescStyle>((props: DescStyle) => {
     color: props.color || "inherit",
     fontWeight: "lighter",
     textAlign: "center",
-    marginTop: "20px"
+    marginTop: "20px",
+    "@media screen and (max-width: 1380px)": {
+      fontSize: props.medium?.fontSize || (props.fontSize || "20px"),
+    },
+    "@media screen and (max-width: 768px)": {
+      fontSize: props.small?.fontSize || (props.fontSize || "20px"),
+    }
   }
 })
 

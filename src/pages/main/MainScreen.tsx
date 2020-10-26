@@ -49,8 +49,7 @@ export function MainScreen() {
           <FlexWrapper
             styles={{
               width: "fit-content",
-              medium: { width: "200px" },
-              small: { width: "fit-content", flexDirection: "column" }
+              small: { flexDirection: "column" }
             }}
           >
             <>
@@ -59,8 +58,8 @@ export function MainScreen() {
               title="Wish"
               desc="Test Your Luck!!!"
               styles={{
-                cardStyles: {width: "300px", height: "400px", padding: "20px 10px"},
-                imageStyles: {width: "200px", height: "200px"}
+                cardStyles: {width: "300px", height: "400px", padding: "20px 10px", medium: {width: "210px", margin: "20px"}},
+                imageStyles: {width: "200px", height: "200px", medium: {width: "150px", height: "150px"}}
               }}
             />
             <ImageContentCard
@@ -68,8 +67,8 @@ export function MainScreen() {
               title="Party"
               desc="Element Resonance and Character Weapon System"
               styles={{
-                cardStyles: {width: "300px", height: "400px", padding: "20px 10px"},
-                imageStyles: {width: "200px", height: "200px"}
+                cardStyles: {width: "300px", height: "400px", padding: "20px 10px", medium: {width: "210px", margin: "20px"}},
+                imageStyles: {width: "200px", height: "200px", medium: {width: "150px", height: "150px"}}
               }}
             />
             <ImageContentCard
@@ -77,8 +76,8 @@ export function MainScreen() {
               title="Coming Soon..."
               desc="Coming Soon..."
               styles={{
-                cardStyles: {width: "300px", height: "400px", padding: "20px 10px"},
-                imageStyles: {width: "200px", height: "200px"}
+                cardStyles: {width: "300px", height: "400px", padding: "20px 10px", medium: {width: "210px", margin: "20px"}},
+                imageStyles: {width: "200px", height: "200px", medium: {width: "150px", height: "150px"}}
               }}
             />
             </>
