@@ -9,7 +9,7 @@ interface ButtonStyle{
   },
 }
 
-const Button = styled.a<ButtonStyle>((props: ButtonStyle) => {
+const Button = styled.div<ButtonStyle>((props: ButtonStyle) => {
   return {
     display: props.display || "inline-block",
     margin: props.margin || "5px 10px",
