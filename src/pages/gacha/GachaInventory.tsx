@@ -14,7 +14,7 @@ interface Inventory {
 
 const Title = styled.div({
   width: "fit-content",
-  fontSize: "20px"
+  fontSize: "25px"
 })
 
 const ItemCount = styled.div({
@@ -84,7 +84,7 @@ const Item = styled.div`
 
 const TextAlignRight = styled.div({
   textAlign: "right",
-  marginBottom: "30px"
+  marginBottom: "10px"
 });
 
 export function GachaInventory(props: Props){
@@ -180,21 +180,34 @@ export function GachaInventory(props: Props){
 
   return (
     <>
-    <FlexWrapper styles={{justifyContent: "space-between", alignItems: "start"}}>
+    <FlexWrapper styles={{justifyContent: "space-between", alignItems: "start", margin: "0 0 10px"}}>
       <>
       <Title>Inventory</Title>
       <TextAlignRight style={{textAlign: "right"}}>
         <ItemCount>
           {`Total Items: ${totalItemCount}`}
         </ItemCount>
-        <CheckBoxButton onClick={() => onLabelClicked()} refProp={inputRef}>
-          Hide 3-Stars Items
-        </CheckBoxButton>
       </TextAlignRight>
       </>
     </FlexWrapper>
+    <FlexWrapper styles={{justifyContent: "space-between"}}>
+      <>
+      <CheckBoxButton onClick={() => onLabelClicked()} refProp={inputRef}>
+        Show only PickUps
+      </CheckBoxButton>
+      <CheckBoxButton onClick={() => onLabelClicked()} refProp={inputRef}>
+        Show only characters
+      </CheckBoxButton>
+      <CheckBoxButton onClick={() => onLabelClicked()} refProp={inputRef}>
+        Show only weapons
+      </CheckBoxButton>
+      <CheckBoxButton onClick={() => onLabelClicked()} refProp={inputRef}>
+        Hide 3-Stars Items
+      </CheckBoxButton>
+      </>
+    </FlexWrapper>
     {!props.inventoryList.length ?
-      <TextCenterWrapper styles={{width: "1200px", margin: "10px auto"}}>There is no item... Press button!</TextCenterWrapper>
+      <TextCenterWrapper styles={{width: "1200px", margin: "30px auto"}}>There is no item... Press button!</TextCenterWrapper>
       : null
     }
     <GridContainer>

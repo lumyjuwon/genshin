@@ -6,7 +6,7 @@ import { GachaScreen, PartyScreen, MainScreen, Policy, Terms, About } from 'src/
 import { Header, Footer, TextBlockButton, TextUnderLineButton, ContentWrapper, TextCenterWrapper, FlexWrapper, SquareImage } from 'src/components';
 import { trans, Lang } from './resources/languages';
 
-const MainLogo = styled.a({
+const MainLogo = styled.div({
   fontSize: '30px',
   padding: '20px 15px 20px 0px',
   cursor: 'pointer',
@@ -60,8 +60,8 @@ const ToggleIcon = styled.div({
 
 function App() {
 
-  const gacha = useRef<HTMLAnchorElement>(null);
-  const party = useRef<HTMLAnchorElement>(null);
+  const gacha = useRef<HTMLDivElement>(null);
+  const party = useRef<HTMLDivElement>(null);
 
   const deleteSelected = () => {
     const target = document.querySelectorAll(".selected");
@@ -70,7 +70,7 @@ function App() {
     })
   }
 
-  const onNavClick = (ref: React.RefObject<HTMLAnchorElement>) => {
+  const onNavClick = (ref: React.RefObject<HTMLDivElement>) => {
     deleteSelected();
     ref.current && (ref.current.className += " selected");
   }

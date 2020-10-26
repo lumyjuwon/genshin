@@ -7,6 +7,7 @@ interface DivProps {
   readonly justifyContent?: string;
   readonly alignItems?: string;
   readonly width?: string;
+  readonly margin?: string;
   readonly medium?: {
     readonly flexDirection?: "inherit" | "-moz-initial" | "initial" | "revert" | "unset" | "column" | "column-reverse" | "row" | "row-reverse" | undefined;
     readonly width?: string;
@@ -24,6 +25,7 @@ const FlexDiv = styled.div<DivProps>((props: DivProps) => {
       justifyContent: props.justifyContent || "center",
       alignItems: props.alignItems || "center",
       width: props.width || "auto",
+      margin: props.margin || "0",
       "@media screen and (max-width: 1380px)": {
         flexDirection: props.medium?.flexDirection || "row",
         width: props.medium?.width || "auto"

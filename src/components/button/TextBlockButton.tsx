@@ -15,7 +15,7 @@ interface ButtonStyle {
   }
 }
 
-const Button = styled.a<ButtonStyle>((props: ButtonStyle) => {
+const Button = styled.div<ButtonStyle>((props: ButtonStyle) => {
   return {
     display: props.display || "block",
     width: props.width || "fit-content",
@@ -49,7 +49,7 @@ interface Props {
     buttonStyles?: ButtonStyle;
   };
   onClick?: Function;
-  refProp?: React.RefObject<HTMLAnchorElement>
+  refProp?: React.RefObject<HTMLDivElement>
 }
 
 export function TextBlockButton(props: Props) {
