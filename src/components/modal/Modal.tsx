@@ -53,7 +53,7 @@ interface Props {
   onCancel?: Function;
 }
 
-export function ModalWrapper(props: Props) {
+export function Modal(props: Props) {
   if (props.visible) {
     return (
       <>

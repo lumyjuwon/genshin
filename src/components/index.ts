@@ -8,7 +8,6 @@ export { TextCenterWrapper } from './/wrapper/TextCenterWrapper';
 export { GridWrapper } from './wrapper/GridWrapper';
 export { FlexWrapper } from './wrapper/FlexWrapper';
 export { ContentWrapper } from './wrapper/ContentWrapper';
-export { ModalWrapper } from './wrapper/ModalWrapper';
 
 // Button Component
 export { RoundButton } from './button/RoundButton';
@@ -32,3 +31,6 @@ export { SquareImage } from './image/SquareImage';
 // Card Component
 export { ImageContentCard } from './card/ImageContentCard';
 export { TextContentCard } from './card/TextContentCard';
+
+// Modal
+export { Modal } from './modal/Modal';

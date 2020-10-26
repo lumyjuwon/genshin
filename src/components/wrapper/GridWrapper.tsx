@@ -10,7 +10,7 @@ const Wrapper = styled.div({
 });
 
 interface Props {
-  children: JSX.Element[];
+  children: any;
 }
 
 export function GridWrapper(props: Props) {
