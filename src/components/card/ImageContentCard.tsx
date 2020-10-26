@@ -30,7 +30,7 @@ const CardContainer = styled.div<CardStyle>((props: CardStyle) => {
     width: props.width || "fit-content",
     height: props.height || "auto",
     padding: props.padding || "10px",
-    margin: props.margin || "10px",
+    margin: props.margin || "30px",
     backgroundColor: props.backgroundColor || "#313233",
     borderRadius: props.borderRadius || "16px",
     boxShadow: "10px 10px 6px rgba(0,0,0,0.7)",
