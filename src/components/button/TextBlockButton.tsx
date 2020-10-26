@@ -35,16 +35,16 @@ const Button = styled.a<ButtonStyle>((props: ButtonStyle) => {
 });
 
 interface Props {
-  href: string;
-  children: string;
+  children: string | JSX.Element;
   styles?: {
     buttonStyles?: ButtonStyle;
   };
+  onClick?: Function;
 }
 
 export function TextBlockButton(props: Props) {
   return (
-    <Button href={props.href} {...props.styles?.buttonStyles}>
+    <Button {...props.styles?.buttonStyles} onClick={() => props.onClick?.()}>
       {props.children}
     </Button>
   );
