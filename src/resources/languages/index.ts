@@ -8,14 +8,18 @@ export enum LangCode {
 
 export enum Lang {
   Gacha = 'Gacha',
+
   Party = 'Party',
   Party_Save_Text = 'Party_Save_Text',
   Party_Save_Text_Placeholder = 'Party_Save_Text_Placeholder',
-  Energetic_Lightning = 'Energetic_Lightning',
+  Tangled_Guardian = 'Tangled_Guardian',
   Fire_Of_Passion = 'Fire_Of_Passion',
   Healing_Water = 'Healing_Water',
   Swift_Wind = 'Swift_Wind',
-  Crushing_Ice = 'Crushing_Ice'
+  Energetic_Lightning = 'Energetic_Lightning',
+  Crushing_Ice = 'Crushing_Ice',
+  Floating_Rock = 'Floating_Rock',
+  Active_Party_Buff = 'Active_Party_Buff'
 }
 
 const languages = {
