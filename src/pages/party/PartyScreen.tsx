@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-import { ContentWrapper, GridWrapper, ModalWrapper } from 'src/components';
+import { ContentWrapper, GridWrapper, Modal } from 'src/components';
 import { characterInfo } from 'src/resources/data';
 
-import { SelectButton } from './SelectButton';
-import { ElementCircleList } from './element/ElementCircleList';
-import { ElementEffectSummary } from './element/ElementEffectSummary';
 import { Menu } from './Menu';
+import { SelectButton } from './SelectButton';
 import { CharacterSimulator } from './simulator/CharacterSimulator';
+import { ElementResult } from './element/ElementResult';
 
 type CharacterName = string;
 type CharacterSrc = string | null;
@@ -15,6 +14,7 @@ type ElementName = string;
 type ElementCount = number;
 
 const MAX_SELECTED_CHARACTER = 4;
+
 const selectedCharacters = new Map<CharacterName, CharacterSrc>(new Map());
 const emptyCharacters = new Map<CharacterName, CharacterSrc>([
   ['0', null],
@@ -24,9 +24,15 @@ const emptyCharacters = new Map<CharacterName, CharacterSrc>([
 ]);
 
 export function PartyScreen() {
-  const [allCharacters, setAllCharacters] = useState<Array<[CharacterName, CharacterSrc]>>([...emptyCharacters]);
+  const [allCharacters, setAllCharacters] = useState<Array<[CharacterName, CharacterSrc]>>([]);
   const [activeElements, setActiveElements] = useState<Map<ElementName, ElementCount>>(new Map());
   const [isVisibleCharacterModal, setIsVisibleCharacterModal] = useState<boolean>(false);
+
+  useEffect(() => {
+    setAllCharacters([...selectedCharacters, ...emptyCharacters]);
+    fillEmptyCharacters(selectedCharacters.size);
+    changeActiveElements(selectedCharacters);
+  }, []);
 
   function fillEmptyCharacters(filledCharacterSize: number) {
     emptyCharacters.clear();
@@ -75,17 +81,16 @@ export function PartyScreen() {
   return (
     <ContentWrapper>
       <>
-        <Menu></Menu>
+        <Menu />
         <CharacterSimulator
           characters={allCharacters}
           onClick={() => {
             setIsVisibleCharacterModal(true);
           }}
         />
-        <ElementCircleList activeElements={activeElements} />
-        <ElementEffectSummary activeElements={activeElements} />
+        <ElementResult activeElements={activeElements} />
       </>
-      <ModalWrapper
+      <Modal
         cancel={() => {
           setIsVisibleCharacterModal(false);
         }}
@@ -105,7 +110,7 @@ export function PartyScreen() {
             );
           })}
         </GridWrapper>
-      </ModalWrapper>
+      </Modal>
     </ContentWrapper>
   );
 }

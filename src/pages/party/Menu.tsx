@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { RoundTextButton, SquareTextButton, UnderlineInputText } from 'src/components';
+import { SquareTextButton, UnderlineInputText } from 'src/components';
 import { Lang, trans } from 'src/resources/languages';
 
 const Container = styled.div({
@@ -9,6 +9,7 @@ const Container = styled.div({
   flexDirection: 'row',
   justifyContent: 'flex-end',
   alignItems: 'center',
+  paddingRight: '8vw',
   marginBottom: '64px'
 });
 
