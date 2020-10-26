@@ -3,14 +3,60 @@ import styled from 'styled-components';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 
 import { GachaScreen, PartyScreen, MainScreen, Policy, Terms, About } from 'src/pages';
-import { Header, Footer, TextBlockButton, TextUnderLineButton, ContentWrapper, TextCenterWrapper, FlexWrapper } from 'src/components';
+import { Header, Footer, TextBlockButton, TextUnderLineButton, ContentWrapper, TextCenterWrapper, FlexWrapper, SquareImage } from 'src/components';
 import { trans, Lang } from './resources/languages';
 
 const MainLogo = styled.a({
   fontSize: '30px',
   padding: '20px 15px 20px 0px',
-  cursor: 'pointer'
+  cursor: 'pointer',
+  "@media screen and (max-width: 768px)": {
+
+  }
 });
+
+const CopyRight = styled.div({
+  fontSize: "12px",
+  "@media screen and (max-width: 768px)": {
+    fontSize: "10px"
+  }
+});
+
+const FooterText = styled.div({
+  fontSize: "16px",
+  "@media screen and (max-width: 768px)": {
+    fontSize: "12px"
+  }
+});
+
+const NavList = styled.div({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  "@media screen and (max-width: 768px)": {
+    display: "none",  
+    "&.responsive": {
+      width: "100%",
+      display: "flex",
+      flexDirection: "column",
+      position: "absolute",
+      top: "10vh",
+      left: "0",
+      backgroundColor: "#222",
+      textAlign: "center",
+      zIndex: 9999
+    }
+  }
+})
+
+const ToggleIcon = styled.div({
+  display: "none",
+  fontSize: "30px",
+  color: "#f1f2f3",
+  "@media screen and (max-width: 768px)": {
+    display: "block",
+  }
+})
 
 function App() {
 
@@ -29,19 +75,33 @@ function App() {
     ref.current && (ref.current.className += " selected");
   }
 
+  const onToggleClick = () => {
+    const target = document.querySelectorAll("#nav-list");
+    target.forEach(child => {
+      if(child.classList.contains("responsive")) {
+        child.classList.remove("responsive");
+      }
+      else {
+        child.className += " responsive";
+      }
+    })
+  }
+
   return (
     <BrowserRouter>
       <Header>
         <>
-          <Link to="/">
-            <MainLogo onClick={() => deleteSelected()}>
-              Genshin Simul
-            </MainLogo>
-          </Link>
+        <Link to="/">
+          <MainLogo onClick={() => deleteSelected()}>
+            Genshin Simul
+          </MainLogo>
+        </Link>
+        <NavList id="nav-list">
           <Link to="/gacha">
             <TextBlockButton
               refProp={gacha}
               onClick={() => onNavClick(gacha)}
+              styles={{ buttonStyles: { small: {width: "100vw"} }}}
             >
               {trans(Lang.Gacha)}
             </TextBlockButton>
@@ -50,10 +110,15 @@ function App() {
             <TextBlockButton
               refProp={party}
               onClick={() => onNavClick(party)}
+              styles={{ buttonStyles: { small: {width: "100vw"} }}}
             >
               {trans(Lang.Party)}
             </TextBlockButton>
           </Link>
+        </NavList>
+        <ToggleIcon onClick={() => onToggleClick()}>
+          <i className="fas fa-bars"></i>
+        </ToggleIcon>
         </>
       </Header>
       <Switch>
@@ -66,12 +131,24 @@ function App() {
       </Switch>
       <Footer>
         <>
-          <div style={{ fontSize: '12px' }}>Copyrightⓒ 2020</div>
+          <CopyRight>Copyrightⓒ 2020</CopyRight>
           <FlexWrapper>
             <>
-            <TextUnderLineButton href="/policy">Privacy Policy</TextUnderLineButton>
-            <TextUnderLineButton href="/terms">Terms of Service</TextUnderLineButton>
-            <TextUnderLineButton href="/about">About Us</TextUnderLineButton>
+            <Link to="/policy">
+              <TextUnderLineButton>
+                <FooterText>Privacy Policy</FooterText>
+              </TextUnderLineButton>
+            </Link>
+            <Link to="/terms">
+              <TextUnderLineButton>
+                <FooterText>Terms of Service</FooterText>
+              </TextUnderLineButton>
+            </Link>
+            <Link to="/about">
+              <TextUnderLineButton>
+                <FooterText>About Us</FooterText>
+              </TextUnderLineButton>
+            </Link>
             </>
           </FlexWrapper>
         </>

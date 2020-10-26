@@ -7,7 +7,8 @@ interface Props {
 
 const HeaderOuter = styled.header({
   borderBottom: "1px solid #515253",
-  backgroundColor: "#111213"
+  backgroundColor: "#111213",
+  position: "relative"
 });
 
 const HeaderInner = styled.div({
@@ -16,6 +17,9 @@ const HeaderInner = styled.div({
   display: "flex",
   alignItems: "center",
   minHeight: "10vh",
+  "@media screen and (max-width: 768px)": {
+    justifyContent: "space-between"
+  }
 });
 
 export function Header(props: Props) {

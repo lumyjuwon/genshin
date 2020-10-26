@@ -29,13 +29,13 @@ const Button = styled.a<ButtonStyle>((props: ButtonStyle) => {
 });
 
 interface Props {
-  href: string;
-  children: string;
+  children: string | JSX.Element;
   styles?: {
     buttonStyles?: ButtonStyle;
   }
+  onClick?: Function;
 }
 
 export function TextUnderLineButton(props: Props) {
-  return <Button href={props.href} {...props.styles?.buttonStyles}>{props.children}</Button>;
+  return <Button {...props.styles?.buttonStyles} onClick={() => props.onClick?.()}>{props.children}</Button>;
 }

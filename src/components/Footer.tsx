@@ -14,6 +14,9 @@ const FooterDiv = styled.footer({
   borderTop: "1px solid #616263",
   padding: "20px 150px",
   textAlign: "center",
+  "@media screen and (max-width: 768px)": {
+    padding: "20px 50px"
+  }
 });
 
 export function Footer(props: Props) {
