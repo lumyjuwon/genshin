@@ -93,7 +93,7 @@ const Help = styled.div({
   cursor: "pointer",
   borderRadius: "50%",
   transition: "0.2s",
-  margin: "0 0 10px",
+  margin: "0 0 20px",
   "&:hover": {
     backgroundColor: "#f1f2f3",
   }
@@ -193,8 +193,6 @@ export function GachaBanner(props: Props) {
               >
                 &nbsp;(Go to Wiki<span role="img">&nbsp;👆</span>)
               </a>
-              <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;This is just for fun. Don't be serious.
               </>
             </TextAlignLeft>
             <TextAlignLeft styles={{ fontSize: "25px" }}>
@@ -202,7 +200,7 @@ export function GachaBanner(props: Props) {
             </TextAlignLeft>
             <TextAlignLeft styles={{fontSize: "20px", margin: "0 0 10px"}}>
               <>
-              &nbsp;&nbsp;&nbsp;&nbsp;Wish Content: {`${props.content}`}
+              &nbsp;&nbsp;&nbsp;&nbsp;Selected Wish Content: {`${props.content}`}
               </>
             </TextAlignLeft>
             <FlexWrapper
@@ -221,6 +219,9 @@ export function GachaBanner(props: Props) {
             </TextAlignLeft>
             <TextAlignLeft styles={{fontSize: "20px", margin: "0"}}>
               &nbsp;&nbsp;&nbsp;&nbsp;4-star PickUp Items: {gachaInfo[props.content].fourStars.pickUpItems.join(", ") || "None"}
+            </TextAlignLeft>
+            <TextAlignLeft styles={{fontSize: "22px"}}>
+              <span role="img">⚠</span>&nbsp;This is just for fun!
             </TextAlignLeft>
           </DetailsContainer>
         </Details>
