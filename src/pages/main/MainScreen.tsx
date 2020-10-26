@@ -18,14 +18,26 @@ const Containter = styled.div({
   width: "100%",
   height: "100%",
   backgroundColor: "rgba(0,0,0,.5)",
-  padding: "100px 150px"
+  padding: "100px 150px",
+  "@media screen and (max-width: 1380px)": {
+    padding: "70px 100px"
+  },
+  "@media screen and (max-width: 768px)": {
+    padding: "50px 80px"
+  }
 })
 
 const Title = styled.div({
   fontSize: "50px",
   textAlign: "center",
   fontWeight: "bold",
-  marginBottom: "40px"
+  marginBottom: "40px",
+  "@media screen and (max-width: 1380px)": {
+    fontSize: "40px"
+  },
+  "@media screen and (max-width: 768px)": {
+    fontSize: "30px"
+  }
 })
 
 export function MainScreen() {
@@ -34,7 +46,13 @@ export function MainScreen() {
       <Containter>
         <Title>Genshin Simulator</Title>
         <FlexWrapper styles={{width: "100%"}}>
-          <FlexWrapper styles={{width: "fit-content"}}>
+          <FlexWrapper
+            styles={{
+              width: "fit-content",
+              medium: { width: "200px" },
+              small: { width: "fit-content", flexDirection: "column" }
+            }}
+          >
             <>
             <ImageContentCard
               src={`${require("../../resources/images/mainscreen/gacha.png")}`}

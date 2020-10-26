@@ -76,7 +76,13 @@ export function ImageContentCard(props: Props) {
   
   return (
     <CardContainer {...props.styles?.cardStyles} onClick={() => props.onClick?.()}>
-      <FlexWrapper styles={{ flexDirection: "column" }}>
+      <FlexWrapper
+        styles={{
+          flexDirection: "column",
+          medium: {flexDirection: "column"},
+          small: {flexDirection: "column"}
+        }}
+      >
         <>
         <RoundImage src={props.src} styles={props.styles?.imageStyles}/>
         <Title {...props.styles?.titleStyles}>{props.title}</Title>

@@ -2,11 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 
 interface DivProps {
-  readonly display?: "flex" | "inline";
+  readonly display?: "flex" | "inline-flex";
   readonly flexDirection?: "inherit" | "-moz-initial" | "initial" | "revert" | "unset" | "column" | "column-reverse" | "row" | "row-reverse" | undefined;
   readonly justifyContent?: string;
   readonly alignItems?: string;
   readonly width?: string;
+  readonly medium?: {
+    readonly flexDirection?: "inherit" | "-moz-initial" | "initial" | "revert" | "unset" | "column" | "column-reverse" | "row" | "row-reverse" | undefined;
+    readonly width?: string;
+  }
+  readonly small?: {
+    readonly flexDirection?: "inherit" | "-moz-initial" | "initial" | "revert" | "unset" | "column" | "column-reverse" | "row" | "row-reverse" | undefined;
+    readonly width?: string;
+  }
 }
 
 const FlexDiv = styled.div<DivProps>((props: DivProps) => {
@@ -16,6 +24,14 @@ const FlexDiv = styled.div<DivProps>((props: DivProps) => {
       justifyContent: props.justifyContent || "center",
       alignItems: props.alignItems || "center",
       width: props.width || "auto",
+      "@media screen and (max-width: 1380px)": {
+        flexDirection: props.medium?.flexDirection || "row",
+        width: props.medium?.width || "auto"
+      },
+      "@media screen and (max-width: 768px)": {
+        flexDirection: props.small?.flexDirection || "row",
+        width: props.small?.width || "auto"
+      }
     }
   }
 )
