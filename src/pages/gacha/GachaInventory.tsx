@@ -21,6 +21,64 @@ const ItemCount = styled.div({
   marginBottom: "10px"
 })
 
+const HoverDiv = styled.div({
+
+})
+
+const Icon = styled.div({
+  transition: "0.2s",
+  transform: "rotate(180deg)"
+})
+
+const DropDown = styled.ul({
+  width: "120px",
+  zIndex: 1,
+  backgroundColor: "transparent",
+  position: "absolute",
+  borderRadius: "8px",
+  top: "29px",
+  left: "0",
+  opacity: "0",
+  visibility: "hidden",
+  transition: "all 0.1s",
+  boxShadow: "6px 6px 3px rgba(0,0,0,0.6)",
+})
+
+const StyledDiv = styled.div`
+  width: 120px;
+  height: 30px;
+  border: 1px solid #f1f2f3;
+  font-size: 16px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  &:hover {
+    color: #212223;
+    background-color: #f1f2f3;
+  };
+  &:hover ${Icon} {
+    transform: rotate(0);
+  };
+  &:hover ${DropDown} {
+    opacity: 1;
+    visibility: visible;
+  };
+`
+
+const List = styled.li({
+  padding: "5px 10px",
+  backgroundColor: "#f1f2f3",
+  width: "100%",
+  borderTop: "1px solid #212223",
+  borderRadius: "8px",
+  "&:hover": {
+    backgroundColor: "#ccc",
+  }
+});
+
 const GridContainer = styled.div({
   display: "grid",
   alignItems: "center",
@@ -89,14 +147,11 @@ const TextAlignRight = styled.div({
 
 export function GachaInventory(props: Props){
   
-  const [ isHide, setIsHide ] = useState(false);
+  const [ isHide, setIsHide ] = useState<boolean>(false);
+  const [ filter, setFilter ] = useState("Rarity");
+ 
   const inputRef = useRef<HTMLInputElement>(null);
-  
-  useEffect(() => {
-    if (inputRef.current) {
-      setIsHide(inputRef.current.checked);
-    };
-  }, []);
+  const filterRef = useRef<HTMLLIElement>(null);
 
   const sortByStars = (gachaResult: Array<string>): Array<string> => {
     gachaResult.sort((item: string, nextItem: string): number => {
@@ -178,9 +233,15 @@ export function GachaInventory(props: Props){
     }
   , 0);
 
+  const filterList: Array<string> = ["Rarity", "Character", "Weapon", "PickUps"]
+
+  const onFilterClick = (event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
+    event.currentTarget.textContent && setFilter(event.currentTarget.textContent);
+  }
+
   return (
     <>
-    <FlexWrapper styles={{justifyContent: "space-between", alignItems: "start", margin: "0 0 10px"}}>
+    <FlexWrapper styles={{justifyContent: "space-between", alignItems: "start"}}>
       <>
       <Title>Inventory</Title>
       <TextAlignRight style={{textAlign: "right"}}>
@@ -190,24 +251,37 @@ export function GachaInventory(props: Props){
       </TextAlignRight>
       </>
     </FlexWrapper>
-    <FlexWrapper styles={{justifyContent: "space-between"}}>
+    <FlexWrapper styles={{justifyContent: "flex-end", margin: "0 0 40px"}}>
       <>
-      <CheckBoxButton onClick={() => onLabelClicked()} refProp={inputRef}>
-        Show only PickUps
-      </CheckBoxButton>
-      <CheckBoxButton onClick={() => onLabelClicked()} refProp={inputRef}>
-        Show only characters
-      </CheckBoxButton>
-      <CheckBoxButton onClick={() => onLabelClicked()} refProp={inputRef}>
-        Show only weapons
-      </CheckBoxButton>
+      <StyledDiv>
+        <FlexWrapper styles={{justifyContent: "space-between"}}>
+          <>
+          <HoverDiv id="filter">
+            {filter}
+          </HoverDiv>
+          <Icon>▲</Icon>
+          </>
+        </FlexWrapper>
+        <DropDown>
+          {filterList.map((content: string, i: number) => {
+            return (
+              <List
+                key={i}
+                onClick={(event: React.MouseEvent<HTMLLIElement, MouseEvent>) => onFilterClick(event)}
+              >
+                {content}
+              </List>
+            );
+          })}
+        </DropDown>
+      </StyledDiv>
       <CheckBoxButton onClick={() => onLabelClicked()} refProp={inputRef}>
         Hide 3-Stars Items
       </CheckBoxButton>
       </>
     </FlexWrapper>
     {!props.inventoryList.length ?
-      <TextCenterWrapper styles={{width: "1200px", margin: "30px auto"}}>There is no item... Press button!</TextCenterWrapper>
+      <TextCenterWrapper styles={{width: "1200px", margin: "10px auto"}}>There is no item... Press button!</TextCenterWrapper>
       : null
     }
     <GridContainer>
