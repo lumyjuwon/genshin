@@ -34,7 +34,9 @@ export function GachaResult(props: Props) {
 
   return (
     <ResultBar>
-      <FlexWrapper>
+      <FlexWrapper styles={{
+        small: {flexDirection: "column"}
+      }}>
         <>
         <Result>
           {`Gacha Times: ${props.times}`}

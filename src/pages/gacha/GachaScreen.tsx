@@ -146,7 +146,11 @@ export function GachaScreen() {
               styles={{ border: "2px solid #f1f2f3", width: "150px", display: "inline-block", pointerEvents: "none" }}
               onClick={() => onGachaExecution(10)}
             >
-              <FlexWrapper styles={{flexDirection: "column", width: "100%"}}>
+              <FlexWrapper styles={{
+                flexDirection: "column", width: "100%",
+                medium: {flexDirection: "column"},
+                small: {flexDirection: "column"}
+              }}>
                 <>
                 <div style={{fontSize: "14px"}}>Wish × 10</div>
                 <FlexWrapper>

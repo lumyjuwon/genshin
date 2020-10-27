@@ -14,7 +14,7 @@ const Title = styled.div({
 })
 
 const ItemCount = styled.div({
-  marginBottom: "10px"
+  
 })
 
 const HoverDiv = styled.div({
@@ -85,6 +85,12 @@ const GridContainer = styled.div({
   gridTemplateRows: "repeat(autofit, 100px)",
   columnGap: "10px",
   rowGap: "10px",
+  "@media screen and (max-width: 1380px)": {
+    gridTemplateColumns: "repeat(6, 100px)",
+  },
+  "@media screen and (max-width: 768px)": {
+    gridTemplateColumns: "repeat(3, 80px)",
+  }
 });
 
 const PositionAbsolute = styled.div({
@@ -119,7 +125,10 @@ const ItemTooltip = styled.div({
   textAlign: "center",
   borderRadius: "8px",
   opacity: "0.8",
-  fontSize: "14px"
+  fontSize: "14px",
+  "@media screen and (max-width: 768px)": {
+    fontSize: "12px"
+  }
 });
 
 const Item = styled.div`
@@ -253,14 +262,16 @@ export function GachaInventory(props: Props){
 
   return (
     <>
-    <FlexWrapper styles={{justifyContent: "space-between", alignItems: "start"}}>
+    <FlexWrapper styles={{justifyContent: "space-between", margin: "0 0 10px"}}>
       <>
       <Title>Inventory</Title>
-      <TextAlignRight style={{textAlign: "right"}}>
+      <FlexWrapper styles={{
+        justifyContent: "flex-end"
+      }}>
         <ItemCount>
           {`Total Items: ${totalItemCount}`}
         </ItemCount>
-      </TextAlignRight>
+      </FlexWrapper>
       </>
     </FlexWrapper>
     <FlexWrapper styles={{justifyContent: "flex-end", margin: "0 0 40px"}}>
@@ -287,13 +298,23 @@ export function GachaInventory(props: Props){
           })}
         </DropDown>
       </StyledDiv>
-      <CheckBoxButton onClick={() => onLabelClicked()} refProp={inputRef}>
+      <CheckBoxButton
+        onClick={() => onLabelClicked()}
+        refProp={inputRef}
+        styles={{labelStyles: {small: {fontSize: "14px"}}}}
+      >
         Hide 3-Stars Items
       </CheckBoxButton>
       </>
     </FlexWrapper>
     {!props.inventoryList.length ?
-      <TextCenterWrapper styles={{width: "1200px", margin: "10px auto"}}>There is no item... Press button!</TextCenterWrapper>
+      <TextCenterWrapper styles={{
+        width: "1300px", margin: "10px auto",
+        medium: {width: "700px"},
+        small: {width: "100%", fontSize: "16px"}
+      }}>
+        There is no item... Press button!
+      </TextCenterWrapper>
       : null
     }
     <GridContainer>
@@ -302,11 +323,11 @@ export function GachaInventory(props: Props){
             <Item key={index}>
               {characterInfo[item] ?
                 <RoundImage
-                  styles={{borderRadius: "16px"}}
+                  styles={{borderRadius: "16px", small: {width: "80px", height: "80px"}}}
                   src={require(`../../resources/images/characters/${item}.png`)}
                 /> :
                 <RoundImage
-                  styles={{borderRadius: "16px"}}
+                  styles={{borderRadius: "16px", small: {width: "80px", height: "80px"}}}
                   src={require(`../../resources/images/items/weapons/${item}.png`)}
                 />
               }

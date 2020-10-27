@@ -18,7 +18,7 @@ const Icon = styled.div({
 
 const DropDown = styled.ul({
   width: "300px",
-  zIndex: 1,
+  zIndex: 5,
   backgroundColor: "transparent",
   position: "absolute",
   borderRadius: "8px",
@@ -28,6 +28,10 @@ const DropDown = styled.ul({
   visibility: "hidden",
   transition: "all 0.1s",
   boxShadow: "6px 6px 3px rgba(0,0,0,0.6)",
+  "@media screen and (max-width: 768px)": {
+    width: "220px",
+    top: "34px"
+  }
 })
 
 const StyledDiv = styled.div`
@@ -52,6 +56,11 @@ const StyledDiv = styled.div`
     opacity: 1;
     visibility: visible;
   };
+  @media screen and (max-width: 768px) {
+    width: 220px;
+    font-size: 16px;
+    height: 35px;
+  }
 `
 const HoverDiv = styled.div({
 
@@ -125,7 +134,6 @@ const TextAlignLeft = styled.div<Styles>(props => {
     textAlign: "left",
     margin: `${props.styles.margin || "20px 0"}`
   };
-
 })
 
 interface Props {
@@ -154,13 +162,13 @@ export function GachaBanner(props: Props) {
       <StyledDiv>
         <FlexWrapper styles={{justifyContent: "space-between"}}>
           <>
-          <HoverDiv id="content">
+          <HoverDiv>
             {selectedPickUp}
           </HoverDiv>
           <Icon>▲</Icon>
           </>
         </FlexWrapper>
-        <DropDown>
+        <DropDown id="content">
           {props.pickUpList.map((content: string, i: number) => {
             return (
               <List
