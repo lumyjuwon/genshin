@@ -17,6 +17,10 @@ const ImageContainer = styled.div({
 })
 
 const Containter = styled.div({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  flexDirection: "column",
   width: "100%",
   height: "100%",
   backgroundColor: "rgba(0,0,0,.5)",
@@ -60,7 +64,7 @@ export function MainScreen() {
               title={trans(Lang.Gacha)}
               desc={trans(Lang.Main_Wish_Desc)}
               styles={{
-                cardStyles: {width: "300px", height: "400px", padding: "20px 10px", medium: {width: "210px", margin: "20px"}},
+                cardStyles: {width: "300px", height: "400px", padding: "20px 10px", medium: {width: "210px", margin: "20px"}, small: { width: "260px"}},
                 imageStyles: {width: "200px", height: "200px", medium: {width: "150px", height: "150px"}}
               }}
             />
@@ -69,7 +73,7 @@ export function MainScreen() {
               title={trans(Lang.Party)}
               desc={trans(Lang.Main_Party_Desc)}
               styles={{
-                cardStyles: {width: "300px", height: "400px", padding: "20px 10px", medium: {width: "210px", margin: "20px"}},
+                cardStyles: {width: "300px", height: "400px", padding: "20px 10px", medium: {width: "210px", margin: "20px"}, small: { width: "260px"}},
                 imageStyles: {width: "200px", height: "200px", medium: {width: "150px", height: "150px"}}
               }}
             />
@@ -78,7 +82,7 @@ export function MainScreen() {
               title="Coming Soon..."
               desc="Coming Soon..."
               styles={{
-                cardStyles: {width: "300px", height: "400px", padding: "20px 10px", medium: {width: "210px", margin: "20px"}},
+                cardStyles: {width: "300px", height: "400px", padding: "20px 10px", medium: {width: "210px", margin: "20px"}, small: { width: "260px"}},
                 imageStyles: {width: "200px", height: "200px", medium: {width: "150px", height: "150px"}}
               }}
             />
