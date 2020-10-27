@@ -220,8 +220,8 @@ export function GachaInventory(props: Props){
         onClick={onFilterClick}
         content={filter}
         styles={{
-          containerStyles: {width: "100px", height: "30px"},
-          listStyles: {width: "100px", top: "29px", left: "-1px"}
+          containerStyles: {width: "110px", height: "30px", small: {fontSize: "14px"}},
+          listStyles: {width: "110px", top: "29px", left: "-1px"}
         }}
       />
       <CheckBoxButton

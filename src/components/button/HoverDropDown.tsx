@@ -1,4 +1,4 @@
-import React, { RefObject } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import { FlexWrapper } from '../wrapper/FlexWrapper';
@@ -9,6 +9,11 @@ interface ContainerStyles {
   margin?: string;
   padding?: string;
   fontSize?: string;
+  small?: {
+    width?: string;
+    height?: string;
+    fontSize?: string;
+  }
 }
 
 interface ListStyles {
@@ -16,6 +21,11 @@ interface ListStyles {
   backgroundColor?: string;
   top?: string;
   left?: string;
+  small?: {
+    width?: string;
+    top?: string;
+    left?: string;
+  }
 }
 
 const Icon = styled.div({
@@ -36,6 +46,11 @@ const DropDown = styled.ul<ListStyles>((props: ListStyles) => {
     visibility: "hidden",
     transition: "all 0.1s",
     boxShadow: "6px 6px 3px rgba(0,0,0,0.6)",
+    "@media screen and (max-width: 768px)": {
+      width: props.small?.width || (props.width || "fit-content"),
+      top: props.small?.top || (props.top || "0"),
+      left: props.small?.left || (props.left || "0"),
+    }
   };
 })
 
@@ -64,7 +79,12 @@ const Container = styled.div<ContainerStyles>`
   &:hover ${DropDown} {
     opacity: 1;
     visibility: visible;
-  };
+  }
+  @media screen and (max-width: 768px) {
+    width: ${props => props.small?.width || (props.width || "fit-content")};
+    height: ${props => props.small?.height || (props.height || "auto")};
+    font-size: ${props => props.small?.fontSize || (props.fontSize || "16px")};
+  }
 `
 
 const List = styled.li({
