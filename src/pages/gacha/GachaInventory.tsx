@@ -1,7 +1,7 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 
-import { FlexWrapper, RoundImage, TextCenterWrapper, CheckBoxButton } from 'src/components';
+import { FlexWrapper, RoundImage, TextCenterWrapper, CheckBoxButton, HoverDropDown } from 'src/components';
 import { characterInfo, gachaInfo, weaponInfo } from 'src/resources/data';
 
 interface Props {
@@ -16,64 +16,6 @@ const Title = styled.div({
 const ItemCount = styled.div({
   
 })
-
-const HoverDiv = styled.div({
-
-})
-
-const Icon = styled.div({
-  transition: "0.2s",
-  transform: "rotate(180deg)"
-})
-
-const DropDown = styled.ul({
-  width: "120px",
-  zIndex: 1,
-  backgroundColor: "transparent",
-  position: "absolute",
-  borderRadius: "8px",
-  top: "29px",
-  left: "0",
-  opacity: "0",
-  visibility: "hidden",
-  transition: "all 0.1s",
-  boxShadow: "6px 6px 3px rgba(0,0,0,0.6)",
-})
-
-const StyledDiv = styled.div`
-  width: 120px;
-  height: 30px;
-  border: 1px solid #f1f2f3;
-  font-size: 16px;
-  padding: 5px 10px;
-  margin-right: 10px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.2s;
-  position: relative;
-  &:hover {
-    color: #212223;
-    background-color: #f1f2f3;
-  };
-  &:hover ${Icon} {
-    transform: rotate(0);
-  };
-  &:hover ${DropDown} {
-    opacity: 1;
-    visibility: visible;
-  };
-`
-
-const List = styled.li({
-  padding: "5px 10px",
-  backgroundColor: "#f1f2f3",
-  width: "100%",
-  borderTop: "1px solid #212223",
-  borderRadius: "8px",
-  "&:hover": {
-    backgroundColor: "#ccc",
-  }
-});
 
 const GridContainer = styled.div({
   display: "grid",
@@ -145,18 +87,15 @@ const Item = styled.div`
   }  
 `;
 
-const TextAlignRight = styled.div({
-  textAlign: "right",
-  marginBottom: "10px"
-});
+const filterList: Array<string> = ["Rarity", "Character", "Weapon", "PickUps"]
 
 export function GachaInventory(props: Props){
   
   const [ isHide, setIsHide ] = useState<boolean>(false);
-  const [ filter, setFilter ] = useState("Rarity");
- 
+  const [ filter, setFilter ] = useState(filterList[0]);
+  
   const inputRef = useRef<HTMLInputElement>(null);
-
+  
   const sortByStars = (gachaResult: Array<string>): Array<string> => {
     gachaResult.sort((item: string, nextItem: string): number => {
       if(characterInfo[item]) {
@@ -167,7 +106,7 @@ export function GachaInventory(props: Props){
         else {
           return weaponInfo[nextItem].rank - characterInfo[item].rank;
         }
-
+        
       }
       else {
         
@@ -225,7 +164,6 @@ export function GachaInventory(props: Props){
     });
   };
   
-  const filterList: Array<string> = ["Rarity", "Character", "Weapon", "PickUps"]
 
   if(filter === filterList[0]) {
     
@@ -256,8 +194,9 @@ export function GachaInventory(props: Props){
   , 0);
 
 
-  const onFilterClick = (event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
-    event.currentTarget.textContent && setFilter(event.currentTarget.textContent);
+  const onFilterClick = (content: string) => {
+    setFilter(content);
+    console.log(filter);
   }
 
   return (
@@ -276,28 +215,15 @@ export function GachaInventory(props: Props){
     </FlexWrapper>
     <FlexWrapper styles={{justifyContent: "flex-end", margin: "0 0 40px"}}>
       <>
-      <StyledDiv>
-        <FlexWrapper styles={{justifyContent: "space-between"}}>
-          <>
-          <HoverDiv id="filter">
-            {filter}
-          </HoverDiv>
-          <Icon>▲</Icon>
-          </>
-        </FlexWrapper>
-        <DropDown>
-          {filterList.map((content: string, i: number) => {
-            return (
-              <List
-                key={i}
-                onClick={(event: React.MouseEvent<HTMLLIElement, MouseEvent>) => onFilterClick(event)}
-              >
-                {content}
-              </List>
-            );
-          })}
-        </DropDown>
-      </StyledDiv>
+      <HoverDropDown 
+        hoverList={filterList}
+        onClick={onFilterClick}
+        content={filter}
+        styles={{
+          containerStyles: {width: "100px", height: "30px"},
+          listStyles: {width: "100px", top: "29px", left: "-1px"}
+        }}
+      />
       <CheckBoxButton
         onClick={() => onLabelClicked()}
         refProp={inputRef}

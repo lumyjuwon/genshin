@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { RefObject } from 'react';
 import styled from 'styled-components';
 
 import { FlexWrapper } from '../wrapper/FlexWrapper';
@@ -14,13 +14,8 @@ interface ContainerStyles {
 interface ListStyles {
   width?: string;
   backgroundColor?: string;
-  top: string;
-  left: string;
-}
-
-interface Styles {
-  containerStyles?: ContainerStyles;
-  listStyles?: ListStyles
+  top?: string;
+  left?: string;
 }
 
 const Icon = styled.div({
@@ -28,15 +23,15 @@ const Icon = styled.div({
   transform: "rotate(180deg)"
 })
 
-const DropDown = styled.ul<Styles>((props: Styles) => {
+const DropDown = styled.ul<ListStyles>((props: ListStyles) => {
   return {
-    width: props.listStyles?.width || "interit",
-    backgroundColor: props.listStyles?.backgroundColor || "transparent",
+    width: props.width || "fit-content",
+    backgroundColor: props.backgroundColor || "transparent",
     zIndex: 1,
     position: "absolute",
     borderRadius: "8px",
-    top: props.listStyles?.top || "0",
-    left: props.listStyles?.left || "0",
+    top: props.top || "0",
+    left: props.left || "0",
     opacity: "0",
     visibility: "hidden",
     transition: "all 0.1s",
@@ -48,12 +43,12 @@ const HoverDiv = styled.div({
 
 })
 
-const Container = styled.div<Styles>`
-  width: ${props => props.containerStyles?.width || "120px"};
-  height: ${props => props.containerStyles?.height || "30px"};
-  font-size: ${props => props.containerStyles?.fontSize || "16px"};
-  padding: ${props => props.containerStyles?.padding || "5px 10px"};
-  margin: ${props => props.containerStyles?.margin || "0 10px 0 0"};
+const Container = styled.div<ContainerStyles>`
+  width: ${props => props.width || "fit-content"};
+  height: ${props => props.height || "30px"};
+  font-size: ${props => props.fontSize || "16px"};
+  padding: ${props => props.padding || "5px 10px"};
+  margin: ${props => props.margin || "0 10px 0 0"};
   border: 1px solid #f1f2f3;
   border-radius: 8px;
   cursor: pointer;
@@ -84,19 +79,30 @@ const List = styled.li({
 });
 
 interface Props {
-  defauitValue: Element | string;
   hoverList: Array<string>;
+  styles?: {
+    containerStyles?: ContainerStyles;
+    listStyles?: ListStyles;
+  }
   onClick: Function;
-  styles?: Styles;
+  content: string;
 }
 
 export function HoverDropDown(props: Props){
+
+  
+  let selectedContent: string;
+  const onListClick = (content: string | null): void => {
+    if (content) selectedContent = content;
+    if(content !== props.content) props.onClick(selectedContent);
+  }
+
   return (
     <Container {...props.styles?.containerStyles}>
       <FlexWrapper styles={{justifyContent: "space-between"}}>
         <>
         <HoverDiv>
-          {props.defauitValue}
+          {props.content}
         </HoverDiv>
         <Icon>▲</Icon>
         </>
@@ -106,8 +112,7 @@ export function HoverDropDown(props: Props){
           return (
             <List
               key={i}
-              value={content}
-              onClick={() => props.onClick?.()}
+              onClick={(e) => onListClick(e.currentTarget.textContent)}
             >
               {content}
             </List>
