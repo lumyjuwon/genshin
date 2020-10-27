@@ -6,6 +6,14 @@ export interface ImageStyle {
   readonly height?: string;
   readonly boxShadow?: string;
   readonly objectFit?: 'inherit' | 'none' | '-moz-initial' | 'initial' | 'revert' | 'unset' | 'fill' | 'contain' | 'cover' | 'scale-down';
+  medium?: {
+    width?: string;
+    height?: string;
+  }
+  small?: {
+    width?: string;
+    height?: string;
+  }
 }
 
 const Image = styled.img<ImageStyle>((props: ImageStyle) => {
@@ -13,7 +21,15 @@ const Image = styled.img<ImageStyle>((props: ImageStyle) => {
     width: props.width || '100px',
     height: props.height || '100px',
     boxShadow: props.boxShadow || 'none',
-    objectFit: props.objectFit || 'fill'
+    objectFit: props.objectFit || 'fill',
+    "@media screen and (max-width: 1380px)": {
+      width: props.medium?.width || (props.width || '100px'),
+      height: props.medium?.height || (props.height || '100px')
+    },
+    "@media screen and (max-width: 768px)": {
+      width: props.small?.width || (props.width || '100px'),
+      height: props.small?.height || (props.height || '100px')
+    }
   };
 });
 

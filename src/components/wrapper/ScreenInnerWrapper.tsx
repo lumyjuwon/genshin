@@ -6,8 +6,14 @@ interface Props {
 }
 
 const ScreenWrapperDiv = styled.div({
-  maxWidth: "1200px",
-  margin: "0 auto"
+  width: "1300px",
+  margin: "0 auto",
+  "@media screen and (max-width: 1380px)": {
+    width: "700px"
+  },
+  "@media screen and (max-width: 768px)": {
+    width: "100%"
+  }
 })
 
 export function ScreenInnerWrapper({ children }: Props){

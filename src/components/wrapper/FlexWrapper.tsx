@@ -27,12 +27,12 @@ const FlexDiv = styled.div<DivProps>((props: DivProps) => {
       width: props.width || "auto",
       margin: props.margin || "0",
       "@media screen and (max-width: 1380px)": {
-        flexDirection: props.medium?.flexDirection || "row",
-        width: props.medium?.width || "auto"
+        flexDirection: props.medium?.flexDirection || (props.flexDirection || "row"),
+        width: props.medium?.width || (props.width || "auto")
       },
       "@media screen and (max-width: 768px)": {
-        flexDirection: props.small?.flexDirection || "row",
-        width: props.small?.width || "auto"
+        flexDirection: props.small?.flexDirection || (props.flexDirection || "row"),
+        width: props.small?.width || (props.flexDirection || "auto")
       }
     }
   }

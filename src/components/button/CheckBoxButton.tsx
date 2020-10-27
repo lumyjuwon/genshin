@@ -4,6 +4,9 @@ import styled from 'styled-components';
 interface LabelStyles {
   readonly width?: string;
   readonly height?: string;
+  readonly small?: {
+    fontSize?: string;
+  }
 }
 
 interface InputStyles {
@@ -12,8 +15,8 @@ interface InputStyles {
 }
 
 interface StyleProps {
-  readonly labelStyles: LabelStyles;
-  readonly inputStyles: InputStyles;
+  readonly labelStyles?: LabelStyles;
+  readonly inputStyles?: InputStyles;
 }
 
 const CheckboxLabel = styled.label<LabelStyles>((props: LabelStyles) => {
@@ -28,7 +31,10 @@ const CheckboxLabel = styled.label<LabelStyles>((props: LabelStyles) => {
     MozUserSelect: "none",
 		userSelect: "none",
     width: props.width || "auto",
-    height: props.height || "auto"
+    height: props.height || "auto",
+    "@media screen and (max-width: 768px)": {
+      fontSize: props.small?.fontSize || "inherit"
+    }
   }
 });
 
