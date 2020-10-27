@@ -190,14 +190,11 @@ export function GachaInventory(props: Props){
     return inventoryMap;
   }
 
-  const isPickUp = (item: string): boolean => {
-    let result: boolean = false;
-    for(let content of Object.keys(gachaInfo)) {
-      if(gachaInfo[content].fiveStars.pickUpItems.includes(item)) result = true;
-      if(gachaInfo[content].fourStars.pickUpItems.includes(item)) result = true;
-    }
-    return result;
-  }
+  let pickUpList: Array<string> = [];
+  Object.keys(gachaInfo).forEach(content => {
+    pickUpList = pickUpList.concat(gachaInfo[content].fiveStars.pickUpItems);
+    pickUpList = pickUpList.concat(gachaInfo[content].fourStars.pickUpItems);
+  })
 
   const onLabelClicked = () => {
     inputRef.current && setIsHide(inputRef.current.checked);
@@ -231,9 +228,7 @@ export function GachaInventory(props: Props){
     inventoryItems = inventoryItems.filter((item: string) => weaponInfo[item]);
   }
   else {
-    inventoryItems = inventoryItems.filter((item: string) => {
-      isPickUp(item);
-    })
+    inventoryItems = inventoryItems.filter((item: string) => pickUpList.includes(item))
   }
 
   const itemRank = inventoryItems.map((item: string) => {
