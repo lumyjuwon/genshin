@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import { GridWrapper, ModalWrapper, RoundImageButton } from 'src/components';
+import { GridWrapper, Modal, RoundImageButton } from 'src/components';
 import { weaponInfo } from 'src/resources/data';
 import { SelectButton } from '../SelectButton';
 
 interface EquipmentButtonProps {
   type: string;
-  items: string[];
+  // items: string[];
 }
 
 const EquipmentButton = (props: EquipmentButtonProps) => {
@@ -24,7 +24,7 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
         }}
         styles={{ buttonStyles: { width: '100px', height: '100px' }, imageStyles: { width: '80px', height: '80px' } }}
       />
-      <ModalWrapper
+      <Modal
         cancel={() => {
           setIsVisibleEquipmentModal(false);
         }}
@@ -44,11 +44,12 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
                   isActive={weaponName === equipment}
                 />
               );
+            } else {
+              return null;
             }
-            return <></>;
           })}
         </GridWrapper>
-      </ModalWrapper>
+      </Modal>
     </div>
   );
 };
@@ -64,7 +65,7 @@ interface Props {
   characterSrc: string | null;
 }
 
-const arr = ['weapon', 'Flower', 'Feather', 'Hourglass', 'HolyGrail', 'Crown'];
+const arr = ['Bow', 'Flower', 'Feather', 'Hourglass', 'HolyGrail', 'Crown'];
 
 export function CharacterEquipSlot(props: Props) {
   return (
@@ -72,8 +73,7 @@ export function CharacterEquipSlot(props: Props) {
       {props.characterSrc !== null && (
         <>
           {arr.map((type: string) => {
-            return null;
-            // return <EquipmentButton key={type} type={type} itmes={} />;
+            return <EquipmentButton key={type} type={type} />;
           })}
         </>
       )}

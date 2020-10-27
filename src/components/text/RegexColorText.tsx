@@ -1,6 +1,6 @@
 import React from 'react';
 
-function parseColorText(text: string, regex: RegExp, color: string) {
+function parseColorText(text: string, regex: RegExp, color?: string, isBold?: boolean) {
   const matchedText: string[] | null = text.match(regex);
 
   if (matchedText === null) {
@@ -14,7 +14,7 @@ function parseColorText(text: string, regex: RegExp, color: string) {
 
     coloredText.push(splitedText[0]);
     coloredText.push(
-      <span key={matched} style={{ color: color }}>
+      <span key={matched} style={{ color: color, fontWeight: isBold ? 'bold' : 'normal' }}>
         {matched}
       </span>
     );
@@ -29,13 +29,14 @@ function parseColorText(text: string, regex: RegExp, color: string) {
 interface Props {
   children: string;
   regex: RegExp;
-  color: string;
+  color?: string;
+  isBold?: boolean;
 }
 
 export function RegexColorText(props: Props) {
-  const coloredText = parseColorText(props.children, props.regex, props.color);
+  const coloredText = parseColorText(props.children, props.regex, props.color, props.isBold);
   return (
-    <p>
+    <p style={{ lineHeight: '150%' }}>
       {coloredText?.map((text) => {
         return text;
       })}
