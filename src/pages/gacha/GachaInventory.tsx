@@ -2,14 +2,10 @@ import React, { useRef, useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import { FlexWrapper, RoundImage, TextCenterWrapper, CheckBoxButton } from 'src/components';
-import { characterInfo, weaponInfo } from 'src/resources/data';
+import { characterInfo, gachaInfo, weaponInfo } from 'src/resources/data';
 
 interface Props {
   inventoryList: Array<string>;
-}
-
-interface Inventory {
-  [key: string]: number;
 }
 
 const Title = styled.div({
@@ -151,7 +147,6 @@ export function GachaInventory(props: Props){
   const [ filter, setFilter ] = useState("Rarity");
  
   const inputRef = useRef<HTMLInputElement>(null);
-  const filterRef = useRef<HTMLLIElement>(null);
 
   const sortByStars = (gachaResult: Array<string>): Array<string> => {
     gachaResult.sort((item: string, nextItem: string): number => {
@@ -179,33 +174,39 @@ export function GachaInventory(props: Props){
     return gachaResult;
   }
 
-  const arrayToObject = (sortedInventory: Array<string>): Inventory => {
-    let inventoryObject: Inventory = {};
+  const arrayToMap = (sortedInventory: Array<string>): Map<string, number> => {
+    let inventoryMap = new Map<string, number>();
   
     sortedInventory.map((item: string) => {
       
-      if(!inventoryObject.hasOwnProperty(item)) {
-        inventoryObject[item] = 1;
+      if(!inventoryMap.has(item)) {
+        inventoryMap.set(item, 0);
       }
-      else {
-        inventoryObject[item] += 1;
-      }
-  
+      
+      const count = inventoryMap.get(item) as number + 1;
+      count && inventoryMap.set(item, count);
     });
     
-    return inventoryObject;
+    return inventoryMap;
   }
 
-  // This works, but render twice
+  const isPickUp = (item: string): boolean => {
+    let result: boolean = false;
+    for(let content of Object.keys(gachaInfo)) {
+      if(gachaInfo[content].fiveStars.pickUpItems.includes(item)) result = true;
+      if(gachaInfo[content].fourStars.pickUpItems.includes(item)) result = true;
+    }
+    return result;
+  }
+
   const onLabelClicked = () => {
     inputRef.current && setIsHide(inputRef.current.checked);
   }
 
   const sortedGachaResult = sortByStars(props.inventoryList);
-  const inventory = arrayToObject(sortedGachaResult);
-  const inventoryItemCounts = Object.values(inventory);
+  const inventory = arrayToMap(sortedGachaResult);
   
-  let inventoryItems: Array<string> = Object.keys(inventory);
+  let inventoryItems: Array<string> = Array.from(inventory.keys());
   
   if(isHide) {
     inventoryItems = inventoryItems.filter((item: string) => {
@@ -217,6 +218,23 @@ export function GachaInventory(props: Props){
       }
     });
   };
+  
+  const filterList: Array<string> = ["Rarity", "Character", "Weapon", "PickUps"]
+
+  if(filter === filterList[0]) {
+    
+  }
+  else if(filter === filterList[1]) {
+    inventoryItems = inventoryItems.filter((item: string) => characterInfo[item]);
+  }
+  else if(filter === filterList[2]) {
+    inventoryItems = inventoryItems.filter((item: string) => weaponInfo[item]);
+  }
+  else {
+    inventoryItems = inventoryItems.filter((item: string) => {
+      isPickUp(item);
+    })
+  }
 
   const itemRank = inventoryItems.map((item: string) => {
     if (characterInfo[item]) {
@@ -227,13 +245,12 @@ export function GachaInventory(props: Props){
     }
   });
 
-  const totalItemCount = inventoryItemCounts.reduce(
+  const totalItemCount = Array.from(inventory.values()).reduce(
     (acc: number, count: number) => {
       return acc + count;
     }
   , 0);
 
-  const filterList: Array<string> = ["Rarity", "Character", "Weapon", "PickUps"]
 
   const onFilterClick = (event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
     event.currentTarget.textContent && setFilter(event.currentTarget.textContent);
@@ -299,7 +316,7 @@ export function GachaInventory(props: Props){
                 />
               }
               <ItemTooltip>{item}</ItemTooltip>
-              <PositionAbsolute>{inventoryItemCounts[index]}</PositionAbsolute>
+              <PositionAbsolute>{inventory.get(item)}</PositionAbsolute>
               <StarEmoji role="img">{"⭐".repeat(itemRank[index])}</StarEmoji>
             </Item>
           );
