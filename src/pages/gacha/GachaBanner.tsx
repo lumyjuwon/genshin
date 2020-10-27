@@ -8,6 +8,9 @@ interface Styles {
   styles: {
     fontSize?: string;
     margin?: string;
+    small?: {
+      fontSize?: string;
+    }
   }
 }
 
@@ -116,6 +119,12 @@ const DetailsContainer = styled.div({
   alignItems: "center",
   width: "1140px",
   margin: "0 auto",
+  "@media screen and (max-width: 1380px)": {
+    width: "700px"
+  },
+  "@media screen and (max-width: 768px)": {
+    width: "90%"
+  }
 });
 
 const ExitButton = styled.span({
@@ -124,15 +133,21 @@ const ExitButton = styled.span({
   top: "0",
   right: "0",
   fontSize: "35px",
-  cursor: "pointer"
+  cursor: "pointer",
+  "@media screen and (max-width: 768px)": {
+    fontSize: "25px"
+  }
 })
 
 const TextAlignLeft = styled.div<Styles>(props => {
   return {
     width: "100%",
-    fontSize: `${props.styles.fontSize || "16px"}`,
+    fontSize: props.styles.fontSize || "16px",
     textAlign: "left",
-    margin: `${props.styles.margin || "20px 0"}`
+    margin: props.styles.margin || "20px 0", 
+    "@media screen and (max-width: 768px)": {
+      fontSize: props.styles.small?.fontSize || (props.styles.fontSize || "16px")
+    }
   };
 })
 
@@ -187,13 +202,13 @@ export function GachaBanner(props: Props) {
         <Details id="help" style={{ visibility: "hidden" }}>
           <DetailsContainer>
             <ExitButton role="img" onClick={() => onExitClick()}>❌</ExitButton>
-            <TextCenterWrapper styles={{fontSize: "35px", margin: "0", padding: "0"}}>Information</TextCenterWrapper>
-            <TextAlignLeft styles={{fontSize: "25px"}}>
+            <TextCenterWrapper styles={{fontSize: "35px", margin: "0", padding: "0", small: {fontSize: "25px"}}}>Information</TextCenterWrapper>
+            <TextAlignLeft styles={{fontSize: "25px", small: {fontSize: "20px"}}}>
               1. Rules
             </TextAlignLeft>
-            <TextAlignLeft styles={{ fontSize: "20px", margin: "0" }}>
+            <TextAlignLeft styles={{ fontSize: "20px", margin: "0 0 20px", small: {fontSize: "16px"} }}>
               <>
-              &nbsp;&nbsp;&nbsp;&nbsp;Same as Genshin Wishes Rule
+              Same as Genshin Wishes Rule
               <a href="https://genshin-impact.fandom.com/wiki/Wishes"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -203,32 +218,32 @@ export function GachaBanner(props: Props) {
               </a>
               </>
             </TextAlignLeft>
-            <TextAlignLeft styles={{ fontSize: "25px" }}>
+            <TextAlignLeft styles={{ fontSize: "25px", small: {fontSize: "20px"}}}>
               2. Items
             </TextAlignLeft>
-            <TextAlignLeft styles={{fontSize: "20px", margin: "0 0 10px"}}>
+            <TextAlignLeft styles={{fontSize: "20px", margin: "0 0 20px", small: {fontSize: "16px"}}}>
               <>
-              &nbsp;&nbsp;&nbsp;&nbsp;Selected Wish Content: {`${props.content}`}
+              Selected Wish Content: {`${props.content}`}
               </>
             </TextAlignLeft>
             <FlexWrapper
-              styles={{width: "100%", justifyContent: "flex-start"}}
+              styles={{width: "100%", justifyContent: "flex-start", small: {justifyContent: "center"}}}
             >
               <>
-              &nbsp;&nbsp;&nbsp;&nbsp;
+              
               <SquareImage
                 src={require(`../../resources/images/gacha/${props.content}.jpg`)}
-                styles={{width: "600px", height: "300px"}}
+                styles={{width: "600px", height: "300px", small: {width: "90%", height: "auto"}}}
               />
               </>
             </FlexWrapper>
-            <TextAlignLeft styles={{fontSize: "20px"}}>
-              &nbsp;&nbsp;&nbsp;&nbsp;5-star PickUp Items: {gachaInfo[props.content].pickUpTarget.join(", ") || "None"}
+            <TextAlignLeft styles={{fontSize: "20px", small: {fontSize: "16px"}}}>
+              5-star PickUp Items: {gachaInfo[props.content].pickUpTarget.join(", ") || "None"}
             </TextAlignLeft>
-            <TextAlignLeft styles={{fontSize: "20px", margin: "0"}}>
-              &nbsp;&nbsp;&nbsp;&nbsp;4-star PickUp Items: {gachaInfo[props.content].fourStars.pickUpItems.join(", ") || "None"}
+            <TextAlignLeft styles={{fontSize: "20px", margin: "0", small: {fontSize: "16px"}}}>
+              4-star PickUp Items: {gachaInfo[props.content].fourStars.pickUpItems.join(", ") || "None"}
             </TextAlignLeft>
-            <TextAlignLeft styles={{fontSize: "22px"}}>
+            <TextAlignLeft styles={{fontSize: "22px", small: {fontSize: "18px"}}}>
               <span role="img">⚠</span>&nbsp;This is just for fun!
             </TextAlignLeft>
           </DetailsContainer>

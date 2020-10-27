@@ -44,7 +44,10 @@ const ItemTooltip = styled.div({
   borderRadius: "8px",
   opacity: "0.8",
   overflow: "hidden",
-  fontSize: "16px"
+  fontSize: "16px",
+  "@media screen and (max-width: 768px)": {
+    fontSize: "12px"
+  }
 });
 
 const HoverTransform = styled.div`
