@@ -11,10 +11,12 @@ interface DivProps {
   readonly medium?: {
     readonly flexDirection?: "inherit" | "-moz-initial" | "initial" | "revert" | "unset" | "column" | "column-reverse" | "row" | "row-reverse" | undefined;
     readonly width?: string;
+    readonly justifyContent?: string;
   }
   readonly small?: {
     readonly flexDirection?: "inherit" | "-moz-initial" | "initial" | "revert" | "unset" | "column" | "column-reverse" | "row" | "row-reverse" | undefined;
     readonly width?: string;
+    readonly justifyContent?: string;
   }
 }
 
@@ -28,11 +30,13 @@ const FlexDiv = styled.div<DivProps>((props: DivProps) => {
       margin: props.margin || "0",
       "@media screen and (max-width: 1380px)": {
         flexDirection: props.medium?.flexDirection || (props.flexDirection || "row"),
-        width: props.medium?.width || (props.width || "auto")
+        width: props.medium?.width || (props.width || "auto"),
+        justifyContent: props.medium?.justifyContent || (props.justifyContent || "center")
       },
       "@media screen and (max-width: 768px)": {
         flexDirection: props.small?.flexDirection || (props.flexDirection || "row"),
-        width: props.small?.width || (props.flexDirection || "auto")
+        width: props.small?.width || (props.flexDirection || "auto"),
+        justifyContent: props.small?.justifyContent || (props.justifyContent || "center")
       }
     }
   }
