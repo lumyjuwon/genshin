@@ -20,6 +20,7 @@ export { RoundImageButton } from './button/RoundImageButton';
 export { SquareTextButton } from './button/SquareTextButton';
 export { SquareImageButton } from './button/SquareImageButton';
 export { CheckBoxButton } from './button/CheckBoxButton';
+export { HoverDropDown } from './button/HoverDropDown';
 
 // Input Component
 export { UnderlineInputText } from './input/UnderlineInputText';
