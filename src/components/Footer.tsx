@@ -15,7 +15,7 @@ const FooterDiv = styled.footer({
   padding: "20px 150px",
   textAlign: "center",
   "@media screen and (max-width: 768px)": {
-    padding: "20px 50px"
+    padding: "15px 10px"
   }
 });
 
