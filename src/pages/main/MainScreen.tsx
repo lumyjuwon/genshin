@@ -1,6 +1,8 @@
 import React from 'react';
-import { FlexWrapper, ImageContentCard } from 'src/components';
 import styled from 'styled-components';
+
+import { trans, Lang } from '../../resources/languages';
+import { FlexWrapper, ImageContentCard } from 'src/components';
 
 const ImageContainer = styled.div({
   width: "100%",
@@ -55,8 +57,8 @@ export function MainScreen() {
             <>
             <ImageContentCard
               src={`${require("../../resources/images/mainscreen/gacha.png")}`}
-              title="Wish"
-              desc="Test Your Luck!!!"
+              title={trans(Lang.Gacha)}
+              desc={trans(Lang.Main_Wish_Desc)}
               styles={{
                 cardStyles: {width: "300px", height: "400px", padding: "20px 10px", medium: {width: "210px", margin: "20px"}},
                 imageStyles: {width: "200px", height: "200px", medium: {width: "150px", height: "150px"}}
@@ -64,8 +66,8 @@ export function MainScreen() {
             />
             <ImageContentCard
               src={`${require("../../resources/images/mainscreen/party.png")}`}
-              title="Party"
-              desc="Element Resonance and Character Weapon System"
+              title={trans(Lang.Party)}
+              desc={trans(Lang.Main_Party_Desc)}
               styles={{
                 cardStyles: {width: "300px", height: "400px", padding: "20px 10px", medium: {width: "210px", margin: "20px"}},
                 imageStyles: {width: "200px", height: "200px", medium: {width: "150px", height: "150px"}}

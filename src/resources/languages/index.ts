@@ -7,6 +7,9 @@ export enum LangCode {
 }
 
 export enum Lang {
+  Main_Wish_Desc = "Main_Wish_Desc",
+  Main_Party_Desc = "Main_Party_Desc",
+
   Gacha = 'Gacha',
 
   Party = 'Party',
