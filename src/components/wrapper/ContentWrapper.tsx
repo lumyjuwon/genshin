@@ -6,7 +6,7 @@ interface Props {
 }
 
 const Wrapper = styled.div({
-  width: "100vw",
+  width: "100%",
   minHeight: "90vh",
   padding: '5vh 20px'
 });
