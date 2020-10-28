@@ -125,7 +125,7 @@ export function GachaArrangeView(props: Props) {
                     }}
                     src={imagePath}
                   />
-                  <ItemTooltip>{trans(Lang[item.replace(/\s|\|\\-/g, '_').replace(/\\'/g, '') as Lang])}</ItemTooltip>
+                  <ItemTooltip>{trans(Lang[item.replace(/\s|\|\\-/g, '_').replace(/'/g, '') as Lang])}</ItemTooltip>
                 </HoverTransform>
               );
             })}

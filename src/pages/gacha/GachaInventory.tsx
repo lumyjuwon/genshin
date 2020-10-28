@@ -258,7 +258,7 @@ export function GachaInventory(props: Props){
                   src={require(`../../resources/images/items/weapons/${item}.png`)}
                 />
               }
-              <ItemTooltip>{trans(Lang[item.replace(/\s|\|\\-/g, '_').replace(/\\'/g, '') as Lang])}</ItemTooltip>
+              <ItemTooltip>{trans(Lang[item.replace(/\s|\|\\-/g, '_').replace(/'/g, '') as Lang])}</ItemTooltip>
               <PositionAbsolute>{inventory.get(item)}</PositionAbsolute>
               <StarEmoji role="img">{"⭐".repeat(itemRank[index])}</StarEmoji>
             </Item>
