@@ -1,7 +1,10 @@
 {
+  "Main_Logo": "원신 시뮬",
+  "Main_Title": "원신 시뮬레이터",
   "Main_Wish_Desc": "당신의 운을 시험해보세요!",
   "Main_Party_Desc": "원소 공명과 캐릭터 무기 장착 시뮬레이션",
-
+  "Main_Privacy_Policy": "개인정보보호정책",
+  "Main_Terms_Of_Service": "이용 약관",
 
   "Gacha": "기원",
   "Character Event Wish": "캐릭터 이벤트 기원",
@@ -11,6 +14,8 @@
   "If_View_Blank": "버튼을 눌러 시작해주세요!",
   "Reset": "초기화",
   "Start": "기원 10회",
+  "Novice_Finish": "초보자 뽑기 횟수를 모두 소진했습니다. 다른 기원을 선택하거나 초기화 버튼을 눌러주세요",
+  "Blank_Arrange_View": "기원 10회 버튼을 눌러 시작해보세요!",
   "Total_Count": "기원 횟수",
   "Next_Pity": "다음 천장",
   "inventory": "배낭",

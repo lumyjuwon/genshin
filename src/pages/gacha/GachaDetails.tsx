@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import { gachaInfo } from '../../resources/data';
 import { FlexWrapper, TextCenterWrapper, SquareImage } from 'src/components';
+import { trans, Lang } from 'src/resources/languages';
 
 interface Styles {
   styles: {
@@ -102,28 +103,30 @@ export function GachaDetails(props: Props) {
       <Details id="help" style={{ visibility: "hidden" }}>
         <DetailsContainer>
           <ExitButton role="img" onClick={() => onExitClick()}>❌</ExitButton>
-          <TextCenterWrapper styles={{fontSize: "35px", margin: "0", padding: "0", small: {fontSize: "25px"}}}>Information</TextCenterWrapper>
+          <TextCenterWrapper styles={{fontSize: "35px", margin: "0", padding: "0", small: {fontSize: "25px"}}}>
+            {trans(Lang.Help_Title)}
+          </TextCenterWrapper>
           <TextAlignLeft styles={{fontSize: "25px", small: {fontSize: "20px"}}}>
-            1. Rules
+            1. {trans(Lang.Help_Rules)}
           </TextAlignLeft>
           <TextAlignLeft styles={{ fontSize: "20px", margin: "0 0 20px", small: {fontSize: "16px"} }}>
             <>
-            Same as Genshin Wishes Rule
+            {trans(Lang.Help_Rules_Desc)}
             <a href="https://genshin-impact.fandom.com/wiki/Wishes"
               target="_blank"
               rel="noopener noreferrer"
               style={{ fontSize: "16px" }}
             >
-              &nbsp;(Go to Wiki<span role="img">&nbsp;👆</span>)
+              &nbsp;({trans(Lang.Go_To_Wiki)}<span role="img">&nbsp;👆</span>)
             </a>
             </>
           </TextAlignLeft>
           <TextAlignLeft styles={{ fontSize: "25px", small: {fontSize: "20px"}}}>
-            2. Items
+            2. {trans(Lang.Help_Item)}
           </TextAlignLeft>
           <TextAlignLeft styles={{fontSize: "20px", margin: "0 0 20px", small: {fontSize: "16px"}}}>
             <>
-            Selected Wish Content: {`${props.content}`}
+            {trans(Lang.Help_Content)}: {`${props.content}`}
             </>
           </TextAlignLeft>
           <FlexWrapper
@@ -138,13 +141,13 @@ export function GachaDetails(props: Props) {
             </>
           </FlexWrapper>
           <TextAlignLeft styles={{fontSize: "20px", small: {fontSize: "16px"}}}>
-            5-star PickUp Items: {gachaInfo[props.content].pickUpTarget.join(", ") || "None"}
+            {trans(Lang.Five_Pick_Up)}: {gachaInfo[props.content].pickUpTarget.join(", ") || "None"}
           </TextAlignLeft>
           <TextAlignLeft styles={{fontSize: "20px", margin: "0", small: {fontSize: "16px"}}}>
-            4-star PickUp Items: {gachaInfo[props.content].fourStars.pickUpItems.join(", ") || "None"}
+            {trans(Lang.Four_Pick_Up)}: {gachaInfo[props.content].fourStars.pickUpItems.join(", ") || "None"}
           </TextAlignLeft>
           <TextAlignLeft styles={{fontSize: "22px", small: {fontSize: "18px"}}}>
-            <span role="img">⚠</span>&nbsp;This is just for fun!
+            <span role="img">⚠</span>&nbsp;{trans(Lang.Help_Warning)}
           </TextAlignLeft>
         </DetailsContainer>
       </Details>

@@ -50,7 +50,7 @@ export function MainScreen() {
   return (
     <ImageContainer>
       <Containter>
-        <Title>Genshin Simulator</Title>
+        <Title>{trans(Lang.Main_Title)}</Title>
         <FlexWrapper styles={{width: "100%"}}>
           <FlexWrapper
             styles={{

@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 
+import { trans, Lang } from 'src/resources/languages';
 import { FlexWrapper, RoundImage, TextCenterWrapper, CheckBoxButton, HoverDropDown } from 'src/components';
 import { characterInfo, gachaInfo, weaponInfo } from 'src/resources/data';
 
@@ -208,7 +209,7 @@ export function GachaInventory(props: Props){
         justifyContent: "flex-end"
       }}>
         <ItemCount>
-          {`Total Items: ${totalItemCount}`}
+          {`${trans(Lang.Item_Count)}: ${totalItemCount}`}
         </ItemCount>
       </FlexWrapper>
       </>
@@ -229,7 +230,7 @@ export function GachaInventory(props: Props){
         refProp={inputRef}
         styles={{labelStyles: {small: {fontSize: "14px"}}}}
       >
-        Hide 3-Stars Items
+        {trans(Lang.Hide_Three_Star)}
       </CheckBoxButton>
       </>
     </FlexWrapper>
@@ -239,7 +240,7 @@ export function GachaInventory(props: Props){
         medium: {width: "700px"},
         small: {width: "100%", fontSize: "16px"}
       }}>
-        There is no item... Press button!
+        {trans(Lang.If_Inventory_Blank)}
       </TextCenterWrapper>
       : null
     }

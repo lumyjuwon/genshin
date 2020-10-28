@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
+import { trans, Lang } from 'src/resources/languages';
 import { FlexWrapper, SquareImage } from 'src/components';
 
 interface Props {
@@ -39,10 +40,10 @@ export function GachaResult(props: Props) {
       }}>
         <>
         <Result>
-          {`Gacha Times: ${props.times}`}
+          {`${trans(Lang.Total_Count)}: ${props.times}`}
         </Result>
         <Result>
-          {`Next Pity: ${props.pity}`}
+          {`${trans(Lang.Next_Pity)}: ${props.pity}`}
         </Result>
         <Result>
           {`5★: ${props.five}`}

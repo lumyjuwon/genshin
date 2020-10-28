@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import { characterInfo, weaponInfo } from 'src/resources/data';
 import { FlexWrapper, SquareImage, TextCenterWrapper } from "src/components";
+import { trans, Lang } from "src/resources/languages";
 
 const GridContainer = styled.div({
   backgroundColor: "#333",
@@ -149,7 +150,7 @@ export function GachaArrangeView(props: Props) {
           <TextCenterWrapper styles={{ fontSize: "25px", small: {fontSize: "20px"}}}>
             <>
             <span role="img">💬&nbsp;</span>
-            Click button to start!
+            {trans(Lang.Blank_Arrange_View)}
             </>
           </TextCenterWrapper>
           </>

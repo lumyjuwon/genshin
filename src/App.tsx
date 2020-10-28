@@ -93,7 +93,7 @@ function App() {
         <>
         <Link to="/">
           <MainLogo onClick={() => deleteSelected()}>
-            Genshin Simul
+            {trans(Lang.Main_Logo)}
           </MainLogo>
         </Link>
         <NavList id="nav-list">
@@ -136,12 +136,12 @@ function App() {
             <>
             <Link to="/policy">
               <TextUnderLineButton>
-                <FooterText>Privacy Policy</FooterText>
+                <FooterText>{trans(Lang.Main_Privacy_Policy)}</FooterText>
               </TextUnderLineButton>
             </Link>
             <Link to="/terms">
               <TextUnderLineButton>
-                <FooterText>Terms of Service</FooterText>
+                <FooterText>{trans(Lang.Main_Terms_Of_Service)}</FooterText>
               </TextUnderLineButton>
             </Link>
             <Link to="/about">

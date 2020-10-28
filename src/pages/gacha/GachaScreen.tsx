@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 
+import { trans, Lang } from 'src/resources/languages';
 import { GachaResult } from "./GachaResult";
 import { GachaBanner } from "./GachaBanner";
 import { Ripple } from "src/components/effect";
@@ -137,7 +138,7 @@ export function GachaScreen() {
             onClick={() => onResetClick()}
           >
             <>
-            {`Reset`}
+            {trans(Lang.Reset)}
             <Ripple />
             </>
           </RoundTextButton>
@@ -152,7 +153,7 @@ export function GachaScreen() {
                 small: {flexDirection: "column"}
               }}>
                 <>
-                <div style={{fontSize: "14px"}}>Wish × 10</div>
+                <div style={{fontSize: "14px"}}>{trans(Lang.Start)}</div>
                 <FlexWrapper>
                   <>
                   <SquareImage
@@ -172,7 +173,7 @@ export function GachaScreen() {
               <>
               <FlexWrapper styles={{flexDirection: "column", width: "100%"}}>
                 <>
-                <div style={{fontSize: "14px"}}>Wish × 10</div>
+                <div style={{fontSize: "14px"}}>{trans(Lang.Start)}</div>
                 <FlexWrapper>
                   <>
                   <SquareImage
@@ -192,7 +193,7 @@ export function GachaScreen() {
         </div>
         {stopBeginnerWishes ? 
           <TextCenterWrapper styles={{width: "800px", margin: "0 auto 20px"}}>
-            Novice Wishes finished. Choose another Wish or click Reset Button
+            {trans(Lang.Novice_Finish)}
           </TextCenterWrapper> :
           null
         }
