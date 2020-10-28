@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { characterInfo, weaponInfo } from 'src/resources/data';
-import { FlexWrapper, SquareImage, TextCenterWrapper } from "src/components";
+import { FlexWrapper, SquareImage, TextCenterWrapper, TooltipText } from "src/components";
 import { trans, Lang } from "src/resources/languages";
 
 const GridContainer = styled.div({
@@ -34,21 +34,8 @@ const GridContainer = styled.div({
 
 });
 
-const ItemTooltip = styled.div({
-  visibility: "hidden",
-  width: "100%",
-  position: "absolute",
-  bottom: "16px",
-  left: "0",
-  backgroundColor: "#000",
-  textAlign: "center",
-  borderRadius: "8px",
-  opacity: "0.8",
-  overflow: "hidden",
-  fontSize: "16px",
-  "@media screen and (max-width: 768px)": {
-    fontSize: "12px"
-  }
+const HoverVisibleElement = styled.div({
+  visibility: "hidden"
 });
 
 const HoverTransform = styled.div`
@@ -59,7 +46,7 @@ const HoverTransform = styled.div`
     transition: 0.1s ease-in-out;
     transform: scale(1.2, 1.2);
   }
-  &:hover ${ItemTooltip} {
+  &:hover ${HoverVisibleElement} {
     visibility: visible;
   }
 `
@@ -112,6 +99,7 @@ export function GachaArrangeView(props: Props) {
               }
               let imagePath = require(`../../resources/images/gacha/${item}.png`);
               if (window.innerWidth < 768 && characterInfo[item]) imagePath = require(`../../resources/images/gacha/${item}_sm.png`)
+              
               return (
                 <HoverTransform key={index}>
                   <SquareImage
@@ -125,7 +113,11 @@ export function GachaArrangeView(props: Props) {
                     }}
                     src={imagePath}
                   />
-                  <ItemTooltip>{trans(Lang[item.replace(/\s|\|\\-/g, '_').replace(/'/g, '') as Lang])}</ItemTooltip>
+                  <HoverVisibleElement>
+                    <TooltipText styles={{small: {fontSize: "14px"}}}>
+                      {trans(Lang[item.replace(/\s|\|\\-/g, '_').replace(/'/g, '') as Lang])}
+                    </TooltipText>
+                  </HoverVisibleElement>
                 </HoverTransform>
               );
             })}

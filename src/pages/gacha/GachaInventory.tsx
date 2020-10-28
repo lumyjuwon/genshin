@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 
 import { trans, Lang } from 'src/resources/languages';
-import { FlexWrapper, RoundImage, TextCenterWrapper, CheckBoxButton, HoverDropDown } from 'src/components';
+import { FlexWrapper, RoundImage, TextCenterWrapper, CheckBoxButton, HoverDropDown, TooltipText } from 'src/components';
 import { characterInfo, gachaInfo, weaponInfo } from 'src/resources/data';
 
 interface Props {
@@ -58,21 +58,9 @@ const StarEmoji = styled.span({
   textAlign: "center",
 })
 
-const ItemTooltip = styled.div({
-  visibility: "hidden",
-  width: "100%",
-  position: "absolute",
-  bottom: "16px",
-  left: "0",
-  backgroundColor: "#000",
-  textAlign: "center",
-  borderRadius: "8px",
-  opacity: "0.8",
-  fontSize: "14px",
-  "@media screen and (max-width: 768px)": {
-    fontSize: "12px"
-  }
-});
+const HoverVisibleElement = styled.div({
+  visibility: "hidden"
+})
 
 const Item = styled.div`
   position: relative;
@@ -83,7 +71,7 @@ const Item = styled.div`
     transform: translateY(-10px);
     box-shadow: 0 8px 5px rgba(0,0,0,0.77);
   }
-  &:hover ${ItemTooltip} {
+  &:hover ${HoverVisibleElement} {
     visibility: visible;
   }  
 `;
@@ -258,7 +246,11 @@ export function GachaInventory(props: Props){
                   src={require(`../../resources/images/items/weapons/${item}.png`)}
                 />
               }
-              <ItemTooltip>{trans(Lang[item.replace(/\s|\|\\-/g, '_').replace(/'/g, '') as Lang])}</ItemTooltip>
+              <HoverVisibleElement>
+                <TooltipText styles={{fontSize: "14px", small: {fontSize: "12px"}}}>
+                  {trans(Lang[item.replace(/\s|\|\\-/g, '_').replace(/'/g, '') as Lang])}
+                </TooltipText>
+              </HoverVisibleElement>
               <PositionAbsolute>{inventory.get(item)}</PositionAbsolute>
               <StarEmoji role="img">{"⭐".repeat(itemRank[index])}</StarEmoji>
             </Item>

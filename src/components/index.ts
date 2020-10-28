@@ -35,3 +35,6 @@ export { TextContentCard } from './card/TextContentCard';
 
 // Modal
 export { Modal } from './modal/Modal';
+
+// Text
+export { TooltipText } from './text/TooltipText';
