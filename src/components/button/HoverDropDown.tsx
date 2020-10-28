@@ -37,7 +37,7 @@ const DropDown = styled.ul<ListStyles>((props: ListStyles) => {
   return {
     width: props.width || "fit-content",
     backgroundColor: props.backgroundColor || "transparent",
-    zIndex: 1,
+    zIndex: 5,
     position: "absolute",
     borderRadius: "8px",
     top: props.top || "0",
