@@ -4,27 +4,27 @@ import styled from 'styled-components';
 import { FlexWrapper } from '../wrapper/FlexWrapper';
 
 interface ContainerStyles {
-  width?: string;
-  height?: string;
-  margin?: string;
-  padding?: string;
-  fontSize?: string;
-  small?: {
-    width?: string;
-    height?: string;
-    fontSize?: string;
+  readonly width?: string;
+  readonly height?: string;
+  readonly margin?: string;
+  readonly padding?: string;
+  readonly fontSize?: string;
+  readonly small?: {
+    readonly width?: string;
+    readonly height?: string;
+    readonly fontSize?: string;
   }
 }
 
 interface ListStyles {
-  width?: string;
-  backgroundColor?: string;
-  top?: string;
-  left?: string;
-  small?: {
-    width?: string;
-    top?: string;
-    left?: string;
+  readonly width?: string;
+  readonly backgroundColor?: string;
+  readonly top?: string;
+  readonly left?: string;
+  readonly small?: {
+    readonly width?: string;
+    readonly top?: string;
+    readonly left?: string;
   }
 }
 

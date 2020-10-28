@@ -7,13 +7,13 @@ export interface Style {
   readonly borderRadius?: string;
   readonly boxShadow?: string;
   readonly objectFit?: 'inherit' | 'none' | '-moz-initial' | 'initial' | 'revert' | 'unset' | 'fill' | 'contain' | 'cover' | 'scale-down';
-  medium?: {
-    width?: string;
-    height?: string;
+  readonly medium?: {
+    readonly width?: string;
+    readonly height?: string;
   }
-  small?: {
-    width?: string;
-    height?: string;
+  readonly small?: {
+    readonly width?: string;
+    readonly height?: string;
   }
 }
 

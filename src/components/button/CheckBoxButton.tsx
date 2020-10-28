@@ -5,7 +5,7 @@ interface LabelStyles {
   readonly width?: string;
   readonly height?: string;
   readonly small?: {
-    fontSize?: string;
+    readonly fontSize?: string;
   }
 }
 

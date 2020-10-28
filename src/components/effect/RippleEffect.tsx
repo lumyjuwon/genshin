@@ -2,8 +2,8 @@ import React, { useState, useLayoutEffect } from "react";
 import styled from "styled-components";
 
 interface RippleContainerProps {
-  color: string;
-  duration: number;
+  readonly color: string;
+  readonly duration: number;
 }
 
 const RippleContainer = styled.div<RippleContainerProps>`

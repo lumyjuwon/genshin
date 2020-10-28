@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 interface TooltipStyle {
-  fontSize?: string;
-  small?: {
-    fontSize?: string;
+  readonly fontSize?: string;
+  readonly small?: {
+    readonly fontSize?: string;
   }
 }
 

@@ -11,7 +11,7 @@ interface ButtonStyle {
     readonly backgroundColor?: string;
   };
   readonly small?: {
-    width: string;
+    readonly width: string;
   }
 }
 

@@ -4,12 +4,12 @@ import styled from 'styled-components';
 import { FlexWrapper } from '../wrapper/FlexWrapper';
 
 interface CardStyle {
-  width?: string;
-  height?: string;
-  padding?: string;
-  margin?: string;
-  backgroundColor?: string;
-  borderRadius?: string;
+  readonly width?: string;
+  readonly height?: string;
+  readonly padding?: string;
+  readonly margin?: string;
+  readonly backgroundColor?: string;
+  readonly borderRadius?: string;
 }
 
 interface TitleStyle {

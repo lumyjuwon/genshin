@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 interface ContainerStyle {
-  width?: string;
-  height?: string;
-  border?: string;
-  borderColor?: string;
+  readonly width?: string;
+  readonly height?: string;
+  readonly border?: string;
+  readonly borderColor?: string;
 }
 
 const Container = styled.div<ContainerStyle>((props: ContainerStyle) => {

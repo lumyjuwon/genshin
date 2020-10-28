@@ -6,23 +6,23 @@ import { FlexWrapper } from '../wrapper/FlexWrapper';
 import { Style as ImageStyle } from '../image/RoundImage';
 
 interface CardStyle {
-  width?: string;
-  height?: string;
-  padding?: string;
-  margin?: string;
-  backgroundColor?: string;
-  borderRadius?: string;
-  medium?: {
-    width?: string;
-    height?: string;
-    padding?: string;
-    margin?: string;
+  readonly width?: string;
+  readonly height?: string;
+  readonly padding?: string;
+  readonly margin?: string;
+  readonly backgroundColor?: string;
+  readonly borderRadius?: string;
+  readonly medium?: {
+    readonly width?: string;
+    readonly height?: string;
+    readonly padding?: string;
+    readonly margin?: string;
   }
-  small?: {
-    width?: string;
-    height?: string;
-    padding?: string;
-    margin?: string;
+  readonly small?: {
+    readonly width?: string;
+    readonly height?: string;
+    readonly padding?: string;
+    readonly margin?: string;
   }
 }
 
