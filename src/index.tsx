@@ -3,15 +3,20 @@ import './resources/languages/index';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import rootReducer from 'src/reducers';
 import App from './App';
 import { GlobalStyles } from './components/globalStyles';
 import * as serviceWorker from './serviceWorker';
 
+const store = createStore(rootReducer);
+
 ReactDOM.render(
-  <>
+  <Provider store={store}>
     <GlobalStyles />
     <App />
-  </>,
+  </Provider>,
   document.getElementById('root')
 );
 
