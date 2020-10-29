@@ -61,7 +61,7 @@ export function GachaScreen() {
     setGachaExecutionResult([]);
     setGachaInventoryList([]);
     setUsedPrimoGem(0);
-    setNextPity(contentData.maxPityCount);
+    setNextPity(0);
     
     gachaMap.current.clear();
   };
