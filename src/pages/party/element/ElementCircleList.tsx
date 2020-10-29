@@ -7,9 +7,14 @@ const ElementLayout = styled.div({
   display: 'flex',
   flexWrap: 'wrap',
   justifyContent: 'center',
-  paddingLeft: '25vw',
-  paddingRight: '25vw',
-  marginBottom: '5vh'
+  padding: '0 20vw 0',
+  marginBottom: '5vh',
+  '@media screen and (max-width: 1380px)': {
+    padding: '0 5vw 0'
+  },
+  '@media screen and (max-width: 768px)': {
+    padding: '0'
+  }
 });
 
 const elements: { [key: string]: { resource: any; borderColor: string } } = {

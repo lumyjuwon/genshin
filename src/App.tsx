@@ -44,7 +44,7 @@ const NavList = styled.div({
       left: "0",
       backgroundColor: "#222",
       textAlign: "center",
-      zIndex: 9999
+      zIndex: 15
     }
   }
 })

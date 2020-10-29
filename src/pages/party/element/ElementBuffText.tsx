@@ -11,6 +11,16 @@ const Container = styled.div({
   marginBottom: '50px'
 });
 
+const TextDesc = styled.p({
+  fontSize: '20px',
+  marginBottom: '16px',
+  fontWeight: 'bold',
+  '@media screen and (max-width: 768px)': {
+    fontSize: '16px',
+    marginBottom: '0'
+  }
+})
+
 function getDescription(elements: Map<string, number>) {
   const descriptions: string[] = [];
 
@@ -61,7 +71,7 @@ export function ElementBuffText(props: Props) {
 
   return (
     <Container>
-      <p style={{ fontSize: '20px', marginBottom: '16px', fontWeight: 'bold' }}>{trans(Lang.Active_Party_Buff)}</p>
+      <TextDesc>{trans(Lang.Active_Party_Buff)}</TextDesc>
       {descriptions.map((description: string) => {
         return (
           <RegexColorText key={description} regex={/\d+%/g} color={'red'} isBold={true}>

@@ -14,12 +14,14 @@ export function SelectButton(props: Props) {
       onClick={props.onClick}
       styles={{
         buttonStyles: {
-          backgroundColor: props.isActive ? '#f1f2f3' : 'transparent'
+          backgroundColor: props.isActive ? '#f1f2f3' : 'transparent',
+          small: { margin: '5px' }
         },
         imageStyles: {
           width: '80px',
           height: '80px',
-          borderRadius: '35%'
+          borderRadius: '35%',
+          small: { width: '60px', height: '60px'}
         }
       }}
     />

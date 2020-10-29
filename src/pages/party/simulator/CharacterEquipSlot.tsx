@@ -22,7 +22,10 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
         onClick={() => {
           setIsVisibleEquipmentModal(true);
         }}
-        styles={{ buttonStyles: { width: '100px', height: '100px' }, imageStyles: { width: '80px', height: '80px' } }}
+        styles={{
+          buttonStyles: { width: '100px', height: '100px', small: { width: '75px', height: '75px' } },
+          imageStyles: { width: '80px', height: '80px', small: { width : '65px', height: '65px' } }
+        }}
       />
       <Modal
         cancel={() => {

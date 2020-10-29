@@ -12,9 +12,11 @@ const Wrapper = styled.div({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'flex-start',
-  paddingLeft: '25vw',
-  paddingRight: '25vw',
-  marginBottom: '5vh'
+  padding: '0 25vw 0',
+  marginBottom: '5vh',
+  '@media screen and (max-width: 768px)': {
+    padding: '0',
+  }
 });
 
 const Inner = styled.div({
@@ -40,7 +42,13 @@ export function CharacterSimulator(props: Props) {
               onClick={() => {
                 props.onClick();
               }}
-              styles={{ buttonStyles: { width: '120px', height: '120px' } }}
+              styles={{ 
+                buttonStyles: { 
+                  width: '120px', height: '120px',
+                  small: {width: "90px", height: "90px"}
+                },
+                imageStyles: { small: { width: "80px", height: "80px" } }
+              }}
             />
             <CharacterEquipSlot key={index} characterSrc={dic[1]}></CharacterEquipSlot>
           </Inner>

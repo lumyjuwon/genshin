@@ -6,7 +6,10 @@ const Wrapper = styled.div({
   flexWrap: 'wrap',
   width: '40vw',
   justifyContent: 'center',
-  alignItems: 'center'
+  alignItems: 'center',
+  '@media screen and (max-width: 768px)': {
+    width: '100%'
+  }
 });
 
 interface Props {

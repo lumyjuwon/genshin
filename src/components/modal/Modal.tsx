@@ -7,7 +7,7 @@ import { CircleButton } from '../button/CircleButton';
 
 const Overlay = styled.div({
   position: 'fixed',
-  zIndex: 999,
+  zIndex: 20,
   top: 0,
   left: 0,
   bottom: 0,
@@ -18,14 +18,17 @@ const Overlay = styled.div({
 const Wrapper = styled.div({
   display: 'flex',
   position: 'fixed',
-  zIndex: 1000,
+  zIndex: 30,
   tabIndex: -1,
   top: 0,
   left: 0,
   bottom: 0,
   right: 0,
   justifyContent: 'center',
-  alignItems: 'center'
+  alignItems: 'center',
+  '@media screen and (max-width: 768px)': {
+    overflow: 'scroll'
+  }
 });
 
 const WrapperInner = styled.div({
@@ -37,7 +40,11 @@ const WrapperInner = styled.div({
   width: 'fit-content',
   height: 'fit-content',
   backgroundColor: '#2B2B2B',
-  borderRadius: '12px'
+  borderRadius: '12px',
+  '@media screen and (max-width: 768px)': {
+    width: '95%',
+    padding: '0'
+  }
 });
 
 const Header = styled.div({

@@ -29,6 +29,15 @@ export interface ButtonStyle {
     | 'visibleFill'
     | 'visiblePainted'
     | 'visibleStroke';
+  readonly medium?: {
+    readonly width?: string;
+    readonly height?: string;
+  }
+  readonly small?: {
+    readonly width?: string;
+    readonly height?: string;
+    readonly margin?: string;
+  }
 }
 
 const Button = styled.div<ButtonStyle>((props: ButtonStyle) => {
@@ -57,6 +66,15 @@ const Button = styled.div<ButtonStyle>((props: ButtonStyle) => {
     '&:hover': {
       backgroundColor: '#f1f2f3',
       color: '#212223'
+    },
+    '@media screen and (max-width: 1380px)': {
+      width: props.medium?.width || (props.width || "fit-content"),
+      height: props.medium?.height || (props.height || "fit-content")
+    },
+    '@media screen and (max-width: 768px)': {
+      width: props.small?.width || (props.width || "fit-content"),
+      height: props.small?.height || (props.height || "fit-content"),
+      margin: props.small?.margin || (props.margin || "8px")
     }
   };
 });

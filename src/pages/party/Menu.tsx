@@ -10,7 +10,11 @@ const Container = styled.div({
   justifyContent: 'flex-end',
   alignItems: 'center',
   paddingRight: '8vw',
-  marginBottom: '64px'
+  marginBottom: '64px',
+  "@media screen and (max-width: 768px)": {
+    paddingRight: "0",
+    justifyContent: "center",
+  }
 });
 
 interface Props {}
