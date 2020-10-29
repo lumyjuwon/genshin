@@ -15,6 +15,7 @@ const Wrapper = styled.div({
   padding: '0 25vw 0',
   marginBottom: '5vh',
   '@media screen and (max-width: 768px)': {
+    width: '100%',
     padding: '0',
   }
 });
@@ -23,7 +24,13 @@ const Inner = styled.div({
   display: 'flex',
   width: 'fit-content',
   height: 'fit-content',
-  flexDirection: 'row'
+  flexDirection: 'row',
+  '@media screen and (max-width: 768px)': {
+    width: '100%',
+    flexDirection: 'column',
+    alignItems: 'center',
+    margin: '0 0 15px'
+  }
 });
 
 interface Props {
@@ -45,9 +52,9 @@ export function CharacterSimulator(props: Props) {
               styles={{ 
                 buttonStyles: { 
                   width: '120px', height: '120px',
-                  small: {width: "90px", height: "90px"}
+                  small: {width: "80px", height: "80px"}
                 },
-                imageStyles: { small: { width: "80px", height: "80px" } }
+                imageStyles: { small: { width: "70px", height: "70px" } }
               }}
             />
             <CharacterEquipSlot key={index} characterSrc={dic[1]}></CharacterEquipSlot>

@@ -23,8 +23,8 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
           setIsVisibleEquipmentModal(true);
         }}
         styles={{
-          buttonStyles: { width: '100px', height: '100px', small: { width: '75px', height: '75px' } },
-          imageStyles: { width: '80px', height: '80px', small: { width : '65px', height: '65px' } }
+          buttonStyles: { width: '100px', height: '100px', small: { width: '65px', height: '65px', margin: '3px' } },
+          imageStyles: { width: '80px', height: '80px', small: { width : '55px', height: '55px' } }
         }}
       />
       <Modal
@@ -61,7 +61,13 @@ const Container = styled.div({
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'center',
-  alignItems: 'center'
+  alignItems: 'center',
+  '@media screen and (max-width: 768px)': {
+    flexWrap: 'wrap',
+    '&::before': {
+      content: ''
+    }
+  }
 });
 
 interface Props {
