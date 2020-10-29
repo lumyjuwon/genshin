@@ -65,10 +65,7 @@ const Container = styled.div({
   justifyContent: 'center',
   alignItems: 'center',
   '@media screen and (max-width: 768px)': {
-    flexWrap: 'wrap',
-    '&::before': {
-      content: ''
-    }
+    flexWrap: 'wrap'
   }
 });
 
