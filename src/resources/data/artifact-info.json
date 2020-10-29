@@ -1,3 +1,252 @@
 {
-
+  "Adventurer": {
+    "rank": 3,
+    "flowerOfLife": "Adventurer's Flower",
+    "plumeOfDeath": "Adventurer's Tail Feather",
+    "sandsOfEon": "Adventurer's Pocket Watch",
+    "gobletOfEnotherm": "Adventurer's Golden Goblet",
+    "circletOfLogos": "Adventurer's Bandana",
+    "bonusTwo": "HP increased by 1,000",
+    "bonusFour": "Opening chest regenerates 30% HP over 5s"
+  },
+  "Lucky Dog": {
+    "rank": 3,
+    "flowerOfLife": "Lucky Dog's Clover",
+    "plumeOfDeath": "Lucky Dog's Eagle Feather",
+    "sandsOfEon": "Lucky Dog's Hourglass",
+    "gobletOfEnotherm": "Lucky Dog's Goblet",
+    "circletOfLogos": "Lucky Dog's Silver Circlet",
+    "bonusTwo": "DEF increased by 100",
+    "bonusFour": "Picking up Mora restores 300 HP"
+  },
+  "Traveling Doctor": {
+    "rank": 3,
+    "flowerOfLife": "Traveling Doctor's Silver Lotus",
+    "plumeOfDeath": "Traveling Doctor's Owl Feather",
+    "sandsOfEon": "Traveling Doctor's Pocket Watch",
+    "gobletOfEnotherm": "Traveling Doctor's Medicine Pot",
+    "circletOfLogos": "Traveling Doctor's Handkerchief",
+    "bonusTwo": "Increases incoming healing by 20%",
+    "bonusFour": "Using Elemental Burst restores 20% HP"
+  },
+  "Instructor": {
+    "rank": 4,
+    "flowerOfLife": "Instructor's Brooch",
+    "plumeOfDeath": "Instructor's Feather Accessory",
+    "sandsOfEon": "Instructor's Pocket Watch",
+    "gobletOfEnotherm": "Instructor's Tea Cup",
+    "circletOfLogos": "Instructor's Cap",
+    "bonusTwo": "Increases Elemental Mastery by 80",
+    "bonusFour": "After causing an elemental reaction, increases all party members' Elemental Mastery by 120 for 8s"
+  },
+  "Berserker": {
+    "rank": 4,
+    "flowerOfLife": "Berserker's Rose",
+    "plumeOfDeath": "Berserker's Indigo Feather",
+    "sandsOfEon": "Berserker's Timepiece",
+    "gobletOfEnotherm": "Berserker's Bone Goblet",
+    "circletOfLogos": "Berserker's Battle Mask",
+    "bonusTwo": "CRIT Rate +12%",
+    "bonusFour": "When HP is below 70%, CRIT Rate increases by an additional 24%"
+  },
+  "The Exile": {
+    "rank": 4,
+    "flowerOfLife": "Exile's Flower",
+    "plumeOfDeath": "Exile's Feather",
+    "sandsOfEon": "Exile's Pocket Watch",
+    "gobletOfEnotherm": "Exile's Goblet",
+    "circletOfLogos": "Exile's Circlet",
+    "bonusTwo": "Energy Recharge +20%",
+    "bonusFour": "Using an Elemental Burst regenerates 2 Energy for all party members (excluding the wearer) every 2s for 6s. This effect cannot stack"
+  },
+  "Resolution of Sojourner": {
+    "rank": 4,
+    "flowerOfLife": "Heart of Comeradeship",
+    "plumeOfDeath": "Feather of Homecoming",
+    "sandsOfEon": "Sundial of the Sojourner",
+    "gobletOfEnotherm": "Goblet of the Sojourner",
+    "circletOfLogos": "Crown of Parting",
+    "bonusTwo": "ATK +18%",
+    "bonusFour": "Increases Charged Attack CRIT Rate by 30%"
+  },
+  "Martial Artist": {
+    "rank": 4,
+    "flowerOfLife": "Martial Artist's Red Flower",
+    "plumeOfDeath": "Martial Artist's Feather Accessory",
+    "sandsOfEon": "Martial Artist's Water Hourglass",
+    "gobletOfEnotherm": "Martial Artist's Wine Cup",
+    "circletOfLogos": "Martial Artist's Bandana",
+    "bonusTwo": "Increases Normal Attack and Charged Attack DMG by 15%",
+    "bonusFour": "After using Elemental Skill, increases Normal Attack and Charged Attack DMG by 25% for 8s"
+  },
+  "Defender's Will": {
+    "rank": 4,
+    "flowerOfLife": "Guardian's Flower",
+    "plumeOfDeath": "Guardian's Sigil",
+    "sandsOfEon": "Guardian's Clock",
+    "gobletOfEnotherm": "Guardian's Vessel",
+    "circletOfLogos": "Guardian's Band",
+    "bonusTwo": "DEF +30%",
+    "bonusFour": "Increases Elemental RES by 30% for each element present in the party"
+  },
+  "Tiny Miracle": {
+    "rank": 4,
+    "flowerOfLife": "Tiny Miracle's Flower",
+    "plumeOfDeath": "Tiny Miracle's Feather",
+    "sandsOfEon": "Tiny Miracle's Hourglass",
+    "gobletOfEnotherm": "Tiny Miracle's Goblet",
+    "circletOfLogos": "Tiny Miracle's Earrings",
+    "bonusTwo": "All Elemental RES increased by 20%",
+    "bonusFour": "Incoming elemental DMG increases corresponding Elemental RES by 30% for 10s. Can only occur once every 10s"
+  },
+  "Brave Heart": {
+    "rank": 4,
+    "flowerOfLife": "Medal of the Brave",
+    "plumeOfDeath": "Prospect of the Brave",
+    "sandsOfEon": "Fortitude of the Brave",
+    "gobletOfEnotherm": "Outset of the Brave",
+    "circletOfLogos": "Crown of the Brave",
+    "bonusTwo": "ATK +18%",
+    "bonusFour": "Increases DMG by 30% against enemies with more than 50% HP"
+  },
+  "Gambler": {
+    "rank": 4,
+    "flowerOfLife": "Gambler's Brooch",
+    "plumeOfDeath": "Gambler's Feather Accessory",
+    "sandsOfEon": "Gambler's Pocket Watch",
+    "gobletOfEnotherm": "Gambler's Dice Cup",
+    "circletOfLogos": "Gambler's Earrings",
+    "bonusTwo": "Elemental Skill DMG increased by 20%",
+    "bonusFour": "Defeating an enemy has 100% chance to remove Elemental Skill CD. Can only occur once every 15s."
+  },
+  "Scholar": {
+    "rank": 4,
+    "flowerOfLife": "Scholar's Bookmark",
+    "plumeOfDeath": "Scholar's Quill Pen",
+    "sandsOfEon": "Scholar's Clock",
+    "gobletOfEnotherm": "Scholar's Ink Cup",
+    "circletOfLogos": "Scholar's Lens",
+    "bonusTwo": "Energy Recharge +20%",
+    "bonusFour": "Gaining Energy gives 3 Energy to all party members who have a bow or a catalyst equipped. Can only occurs once every 3s"
+  },
+  "Gladiator's Finale": {
+    "rank": 5,
+    "flowerOfLife": "Gladiator's Nostalgia",
+    "plumeOfDeath": "Gladiator's Destiny",
+    "sandsOfEon": "Gladiator's Longing",
+    "gobletOfEnotherm": "Gladiator's Intoxication",
+    "circletOfLogos": "Gladiator's Triumphus",
+    "bonusTwo": "ATK +18%",
+    "bonusFour": "If the wielder of this artifact set uses a Sword, Claymore or Polearm, increases their Normal Attack DMG by 35%"
+  },
+  "Maiden Beloved": {
+    "rank": 5,
+    "flowerOfLife": "Maiden's Distant Love",
+    "plumeOfDeath": "Maiden's Heart-stricken Infatuation",
+    "sandsOfEon": "Maiden's Passing Youth",
+    "gobletOfEnotherm": "Maiden's Fleeting Leisure",
+    "circletOfLogos": "Maiden's Fading Beauty",
+    "bonusTwo": "Character Healing Effectiveness +15%",
+    "bonusFour": "Using an Elemental Skill or Burst increases healing received by all party members by 20% for 10s"
+  },
+  "Noblesse Oblige": {
+    "rank": 5,
+    "flowerOfLife": "Royal Flora",
+    "plumeOfDeath": "Royal Plume",
+    "sandsOfEon": "Royal Pocket Watch",
+    "gobletOfEnotherm": "Royal Silver Urn",
+    "circletOfLogos": "Royal Masque",
+    "bonusTwo": "Elemental Burst DMG +20%",
+    "bonusFour": "Using an Elemental Burst increases all party members' ATK by 20% for 12s. This effect cannot stack"
+  },
+  "Bloodstained Chivalry": {
+    "rank": 5,
+    "flowerOfLife": "Bloodstained Flower of Iron",
+    "plumeOfDeath": "Bloodstained Black Plume",
+    "sandsOfEon": "Bloodstained Final Hour",
+    "gobletOfEnotherm": "Bloodstained Chevalier's Goblet",
+    "circletOfLogos": "Bloodstained Iron Mask",
+    "bonusTwo": "Physical DMG +25%",
+    "bonusFour": "After defeating an opponent, increases Charged Attack DMG by 50%, and reduces its Stamina cost to 0 for 10s"
+  },
+  "Wanderer's Troupe": {
+    "rank": 5,
+    "flowerOfLife": "Troupe's Dawnlight",
+    "plumeOfDeath": "Bard's Arrow Feather",
+    "sandsOfEon": "Concert's Final Hour",
+    "gobletOfEnotherm": "Wanderer's String Kettle",
+    "circletOfLogos": "Conductor's Top Hat",
+    "bonusTwo": "Elemental Mastery +80",
+    "bonusFour": "Increases Charged Attack DMG by 35% if the character uses a Catalyst or Bow"
+  },
+  "Viridescent Venerer": {
+    "rank": 5,
+    "flowerOfLife": "Thunderbird's Mercy",
+    "plumeOfDeath": "Survivor of Catastrophe",
+    "sandsOfEon": "Hourglass of Thunder",
+    "gobletOfEnotherm": "Omen of Thunderstorm",
+    "circletOfLogos": "Thunder Summoner's Crown",
+    "bonusTwo": "Anemo DMG Bonus +15%",
+    "bonusFour": "Increases Swirl DMG by 60%. Decreases opponent's Elemental RES to the element infused in the Swirl by 40% for 10s"
+  },
+  "Thundering Fury": {
+    "rank": 5,
+    "flowerOfLife": "In Remembrance of Viridescent Fields",
+    "plumeOfDeath": "Viridescent Arrow Feather",
+    "sandsOfEon": "Viridescent Venerer's Determination",
+    "gobletOfEnotherm": "Viridescent Venerer's Vessel",
+    "circletOfLogos": "Viridescent Venerer's Diadem",
+    "bonusTwo": "Electro DMG Bonus +15%",
+    "bonusFour": "Increases damage caused by Overloaded, Electro-Charged, and Superconduct DMG by 40%. Triggering such effects decreases Elemental Skill CD by 1s. Can only occur once every 0.8s"
+  },
+  "Thundersoother": {
+    "rank": 5,
+    "flowerOfLife": "Thundershoother's Heart",
+    "plumeOfDeath": "Thundershoother's Plume",
+    "sandsOfEon": "Hour of Soothing Thunder",
+    "gobletOfEnotherm": "Thundershoother's Goblet",
+    "circletOfLogos": "Thundershoother's Diadem",
+    "bonusTwo": "Electro RES increased by 40%",
+    "bonusFour": "Increases DMG against enemies affected by Electro by 35%"
+  },
+  "Crimson Witch of Flames": {
+    "rank": 5,
+    "flowerOfLife": "Witch's Flower of Blaze",
+    "plumeOfDeath": "Witch's Ever-Burning Plume",
+    "sandsOfEon": "Witch's End Time",
+    "gobletOfEnotherm": "Witch's Heart Flames",
+    "circletOfLogos": "Witch's Scorching Hat",
+    "bonusTwo": "Pyro DMG Bonus +15%",
+    "bonusFour": "Increases Overloaded and Burning DMG by 40%. Increases Vaporize and Melt DMG by 15%. Using an Elemental Skill increases 2-Piece Set effects by 50% for 10s. Max 3 stacks"
+  },
+  "Lavawalker": {
+    "rank": 5,
+    "flowerOfLife": "Lavawalker's Resolution",
+    "plumeOfDeath": "Lavawalker's Salvation",
+    "sandsOfEon": "Lavawalker's Torment",
+    "gobletOfEnotherm": "Lavawalker's Epiphany",
+    "circletOfLogos": "Lavawalker's Wisdom",
+    "bonusTwo": "Pyro RES increased by 40%",
+    "bonusFour": "Increases DMG against enemies that are Burning or affected by Pyro by 35%"
+  },
+  "Archaic Petra": {
+    "rank": 5,
+    "flowerOfLife": "Flower of Creviced Cliff",
+    "plumeOfDeath": "Feather of Jagged Peaks",
+    "sandsOfEon": "Sundial of Enduring Jade",
+    "gobletOfEnotherm": "Goblet of Chiseled Crag",
+    "circletOfLogos": "Mask of Solitude Basalt",
+    "bonusTwo": "Gain a 15% Geo DMG Bonus",
+    "bonusFour": "Upon obtaining a crystal created through a Geo Elemental Reaction, all party members gain 35% Elemental DMG Bonus to that particular element for 10s. Only one form of Elemental DMG Bonus can be gained in this manner at any one time"
+  },
+  "Retracing Bolide": {
+    "rank": 5,
+    "flowerOfLife": "Summer Night's Bloom",
+    "plumeOfDeath": "Summer Night's Finale",
+    "sandsOfEon": "Summer Night's Moment",
+    "gobletOfEnotherm": "Summer Night's Waterballoon",
+    "circletOfLogos": "Summer Night's Mask",
+    "bonusTwo": "Increases the effectiveness of shields by 35%",
+    "bonusFour": "Gain an additional 40% Normal and Charged Attack DMG while under the protection of a shield"
+  }
 }
