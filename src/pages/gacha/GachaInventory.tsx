@@ -196,7 +196,7 @@ export function GachaInventory(props: Props){
     <>
     <FlexWrapper styles={{justifyContent: "space-between", margin: "0 0 10px"}}>
       <>
-      <Title>Inventory</Title>
+      <Title>{trans(Lang.Inventory)}</Title>
       <FlexWrapper styles={{
         justifyContent: "flex-end"
       }}>
@@ -243,7 +243,7 @@ export function GachaInventory(props: Props){
               {characterInfo[item] ?
                 <RoundImage
                   styles={{borderRadius: "16px", small: {width: "80px", height: "80px"}}}
-                  src={require(`../../resources/images/characters/${item}.png`)}
+                  src={require(`../../resources/images/gacha/${item}_sm.png`)}
                 /> :
                 <RoundImage
                   styles={{borderRadius: "16px", small: {width: "80px", height: "80px"}}}
@@ -252,7 +252,7 @@ export function GachaInventory(props: Props){
               }
               <HoverVisibleElement>
                 <TooltipText styles={{fontSize: "14px", small: {fontSize: "12px"}}}>
-                  {trans(Lang[item.replace(/\s|\|\\-/g, '_').replace(/'/g, '') as Lang])}
+                  {trans(Lang[item.replace(/\s|-/g, '_').replace(/'/g, '') as Lang])}
                 </TooltipText>
               </HoverVisibleElement>
               <PositionAbsolute>{inventory.get(item)}</PositionAbsolute>

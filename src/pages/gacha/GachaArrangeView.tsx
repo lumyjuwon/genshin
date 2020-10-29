@@ -115,7 +115,7 @@ export function GachaArrangeView(props: Props) {
                   />
                   <HoverVisibleElement>
                     <TooltipText styles={{small: {fontSize: "14px"}}}>
-                      {trans(Lang[item.replace(/\s|\|\\-/g, '_').replace(/'/g, '') as Lang])}
+                      {trans(Lang[item.replace(/\s|-/g, '_').replace(/'/g, '') as Lang])}
                     </TooltipText>
                   </HoverVisibleElement>
                 </HoverTransform>

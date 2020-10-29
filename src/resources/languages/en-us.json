@@ -1,6 +1,10 @@
 {
+  "Main_Logo": "Genshin Simul",
+  "Main_Title": "Genshin Simulator",
   "Main_Wish_Desc": "Test Your Luck!",
   "Main_Party_Desc": "Elemental Resonance and Character Weapon System",
+  "Main_Privacy_Policy": "Privacy Policy",
+  "Main_Terms_Of_Service": "Terms of Service",
 
   "Gacha": "Wishes",
   "Character Event Wish": "Character Event Wish",
@@ -8,6 +12,7 @@
   "Standard Wish": "Standard Wish",
   "Novice Wishes": "Novice Wishes",
   "Blank_Arrange_View": "Click button to start!",
+  "Novice_Finish": "Novice Wishes is finished. Click Reset or Wish × 10 button",
   "Reset": "Reset",
   "Start": "Wish × 10",
   "Total_Count": "Wish Count",
@@ -15,7 +20,7 @@
   "Inventory": "Inventory",
   "Item_Count": "Item Count",
   "Hide_Three_Star": "Hide 3-star Items",
-  "If_Inventory_Blank": "There is no item in inventory... Click button!",
+  "If_Inventory_Blank": "There is no item in inventory... Click Wish × 10 button!",
   "Help_Title": "Information",
   "Help_Rules": "Rule",
   "Help_Rules_Desc": "Same as Genshin Wish Rules",
@@ -149,6 +154,11 @@
   "Traveler's Handy Sword": "Traveler's Handy Sword",
   "Silver Sword": "Silver Sword",
   "Dull Blade": "Dull Blade",
+
+  "Filter_Rarity": "Rarity",
+  "Filter_Character": "Character",
+  "Filter_Weapon": "Weapon",
+  "Filter_PickUp": "PickUps",
 
   "Party": "파티",
   "Party_Save_Text": "파티 저장",
