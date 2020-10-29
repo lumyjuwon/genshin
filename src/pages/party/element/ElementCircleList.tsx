@@ -7,13 +7,14 @@ const ElementLayout = styled.div({
   display: 'flex',
   flexWrap: 'wrap',
   justifyContent: 'center',
-  padding: '0 20vw 0',
+  padding: '0',
   marginBottom: '5vh',
   '@media screen and (max-width: 1380px)': {
-    padding: '0 5vw 0'
+    width: '500px',
+    margin: '0 auto'
   },
   '@media screen and (max-width: 768px)': {
-    padding: '0'
+    width: '220px'
   }
 });
 

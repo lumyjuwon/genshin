@@ -16,7 +16,7 @@ const Container = styled.div({
   color: '#f1f2f3',
   transition: '0.2s',
   alignItmes: 'center',
-  justifyContent: 'centre'
+  justifyContent: 'center'
 });
 
 export function SelectedCharacterImage(props: Props) {

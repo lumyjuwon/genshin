@@ -41,6 +41,10 @@ const WrapperInner = styled.div({
   height: 'fit-content',
   backgroundColor: '#2B2B2B',
   borderRadius: '12px',
+  '@media screen and (max-width: 1380px)': {
+    width: '80%',
+    justifyContent: 'center'
+  },
   '@media screen and (max-width: 768px)': {
     width: '95%',
     padding: '0'

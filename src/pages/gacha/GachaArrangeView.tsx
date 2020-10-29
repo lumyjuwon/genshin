@@ -22,14 +22,15 @@ const GridContainer = styled.div({
     width: "700px",
     gridTemplateColumns: "repeat(5, 110px)",
     columnGap: "10px",
-    gridTemplateRows: "(auto-fit, 200px)",
+    gridTemplateRows: "repeat(auto-fit, 200px)",
     rowGap: "10px",
     height: "500px"
   },
   "@media screen and (max-width: 768px)": {
     width: "100%",
     gridTemplateColumns: "repeat(3, 80px)",
-    gridTemplateRows: "(auto-fit, 80px)",
+    gridTemplateRows: "repeat(auto-fit, 80px)",
+    height: "450px"
   },
 
 });
@@ -64,7 +65,8 @@ const Container = styled.div({
     height: "500px"
   },
   "@media screen and (max-width: 768px)": {
-    width: "100%"
+    width: "100%",
+    height: "450px"
   },
 })
 

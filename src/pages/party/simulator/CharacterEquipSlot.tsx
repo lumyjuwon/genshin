@@ -23,7 +23,9 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
           setIsVisibleEquipmentModal(true);
         }}
         styles={{
-          buttonStyles: { width: '100px', height: '100px', small: { width: '65px', height: '65px', margin: '3px' } },
+          buttonStyles: { width: '100px', height: '100px', 
+            medium: { width: '75px', height: '75px' },
+            small: { width: '65px', height: '65px', margin: '3px' } },
           imageStyles: { width: '80px', height: '80px', small: { width : '55px', height: '55px' } }
         }}
       />
