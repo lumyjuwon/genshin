@@ -28,7 +28,7 @@ export function GachaScreen() {
   const [ gachaExecutionResult, setGachaExecutionResult ] = useState([]);
   const [ nextPity, setNextPity ] = useState(0);
   const [ usedPrimoGem, setUsedPrimoGem ] = useState(0);
-  
+
   const refInitialValue = new Map<string, GachaController>();
   const gacha = useRef<GachaController>();
   const gachaMap = useRef<Map<string, GachaController>>(refInitialValue);
@@ -71,8 +71,9 @@ export function GachaScreen() {
     gacha.current && setNextPity(gacha.current.nextPity);
   }
 
-  const onBannerClick = (content: string): void => {
-    setGachaContent(content);
+  const onBannerClick = (index: number): void => {
+    const wishContentNames = Object.keys(gachaInfo);
+    setGachaContent(wishContentNames[index]);
     setGachaExecutionResult([]);
     
     // Due to useState is asyncronous, gacha.current is prev state.

@@ -1,5 +1,5 @@
 {
-  "Character Event Wish": {
+  "Character_Event_Wish": {
     "pickUpTarget": ["Klee"],
     "maxPityCount": 90,
     "maxPickUpCount": 180,
@@ -69,7 +69,7 @@
     }
   },
 
-  "Weapon Event Wish": {
+  "Weapon_Event_Wish": {
     "pickUpTarget": ["Lost Prayer to the Sacred Winds", "Wolf's Gravestone"],
     "maxPityCount": 80,
     "maxPickUpCount": 160,
@@ -156,7 +156,7 @@
     }
   },
 
-  "Standard Wish": {
+  "Standard_Wish": {
     "pickUpTarget": [],
     "maxPityCount": 90,
     "maxPickUpCount": 180,
@@ -245,7 +245,7 @@
     }
   },
 
-  "Novice Wishes": {
+  "Novice_Wishes": {
     "pickUpTarget": [],
     "maxPityCount": 0,
     "maxPickUpCount": 0,

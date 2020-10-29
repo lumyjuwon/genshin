@@ -76,7 +76,12 @@ const Item = styled.div`
   }  
 `;
 
-const filterList: Array<string> = ["Rarity", "Character", "Weapon", "PickUps"]
+const filterList: Array<string> = [
+  trans(Lang.Filter_Rarity),
+  trans(Lang.Filter_Character),
+  trans(Lang.Filter_Weapon),
+  trans(Lang.Filter_PickUp)
+];
 
 export function GachaInventory(props: Props){
   
@@ -183,9 +188,8 @@ export function GachaInventory(props: Props){
   , 0);
 
 
-  const onFilterClick = (content: string) => {
-    setFilter(content);
-    console.log(filter);
+  const onFilterClick = (index: number) => {
+    setFilter(filterList[index]); 
   }
 
   return (

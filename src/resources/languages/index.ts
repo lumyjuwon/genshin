@@ -163,6 +163,11 @@ export enum Lang {
   Silver_Sword = 'Silver_Sword',
   Dull_Blade = 'Dull_Blade',
 
+  Filter_Rarity = 'Filter_Rarity',
+  Filter_Character = 'Filter_Character',
+  Filter_Weapon = 'Filter_Weapon',
+  Filter_PickUp = 'Filter_PickUp',
+
   Party = 'Party',
   Party_Save_Text = 'Party_Save_Text',
   Party_Save_Text_Placeholder = 'Party_Save_Text_Placeholder',

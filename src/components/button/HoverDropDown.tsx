@@ -110,11 +110,8 @@ interface Props {
 
 export function HoverDropDown(props: Props){
 
-  
-  let selectedContent: string;
-  const onListClick = (content: string | null): void => {
-    if (content) selectedContent = content;
-    if(content !== props.content) props.onClick(selectedContent);
+  const onListClick = (index: number): void => {
+    props.onClick(index);
   }
 
   return (
@@ -128,11 +125,11 @@ export function HoverDropDown(props: Props){
         </>
       </FlexWrapper>
       <DropDown {...props.styles?.listStyles}>
-        {props.hoverList.map((content: string, i: number) => {
+        {props.hoverList.map((content: string, index: number) => {
           return (
             <List
-              key={i}
-              onClick={(e) => onListClick(e.currentTarget.textContent)}
+              key={index}
+              onClick={() => onListClick(index)}
             >
               {content}
             </List>

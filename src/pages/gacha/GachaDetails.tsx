@@ -135,7 +135,7 @@ export function GachaDetails(props: Props) {
             <>
             
             <SquareImage
-              src={require(`../../resources/images/gacha/${props.content}.jpg`)}
+              src={require(`../../resources/images/gacha/${props.content.replace(/_/g, ' ')}.jpg`)}
               styles={{width: "600px", height: "300px", small: {width: "90%", height: "auto"}}}
             />
             </>

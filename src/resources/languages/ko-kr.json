@@ -7,10 +7,10 @@
   "Main_Terms_Of_Service": "이용 약관",
 
   "Gacha": "기원",
-  "Character Event Wish": "캐릭터 이벤트 기원",
-  "Weapon Event Wish": "무기 이벤트 기원",
-  "Standard Wish": "일반 기원",
-  "Novice Wishes": "초보자 기원",
+  "Character_Event_Wish": "캐릭터 이벤트 기원",
+  "Weapon_Event_Wish": "무기 이벤트 기원",
+  "Standard_Wish": "일반 기원",
+  "Novice_Wishes": "초보자 기원",
   "If_View_Blank": "버튼을 눌러 시작해주세요!",
   "Reset": "초기화",
   "Start": "기원 10회",
@@ -155,6 +155,11 @@
   "Travelers_Handy_Sword": "여행자의 검",
   "Silver_Sword": "실버 소드",
   "Dull_Blade": "무인검",
+
+  "Filter_Rarity": "레어도",
+  "Filter_Character": "캐릭터",
+  "Filter_Weapon": "무기",
+  "Filter_PickUp": "픽업",
 
   "Party": "파티",
   "Party_Save_Text": "파티 저장",
