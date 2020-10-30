@@ -9,11 +9,11 @@ export interface ImageStyle {
   readonly medium?: {
     readonly width?: string;
     readonly height?: string;
-  }
+  };
   readonly small?: {
     readonly width?: string;
     readonly height?: string;
-  }
+  };
 }
 
 const Image = styled.img<ImageStyle>((props: ImageStyle) => {
@@ -22,13 +22,13 @@ const Image = styled.img<ImageStyle>((props: ImageStyle) => {
     height: props.height || '100px',
     boxShadow: props.boxShadow || 'none',
     objectFit: props.objectFit || 'fill',
-    "@media screen and (max-width: 1380px)": {
-      width: props.medium?.width || (props.width || '100px'),
-      height: props.medium?.height || (props.height || '100px')
+    '@media screen and (max-width: 1380px)': {
+      width: props.medium?.width || props.width || '100px',
+      height: props.medium?.height || props.height || '100px'
     },
-    "@media screen and (max-width: 768px)": {
-      width: props.small?.width || (props.width || '100px'),
-      height: props.small?.height || (props.height || '100px')
+    '@media screen and (max-width: 768px)': {
+      width: props.small?.width || props.width || '100px',
+      height: props.small?.height || props.height || '100px'
     }
   };
 });

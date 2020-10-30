@@ -11,9 +11,9 @@ const Container = styled.div({
   alignItems: 'center',
   paddingRight: '8vw',
   marginBottom: '64px',
-  "@media screen and (max-width: 768px)": {
-    paddingRight: "0",
-    justifyContent: "center",
+  '@media screen and (max-width: 768px)': {
+    paddingRight: '0',
+    justifyContent: 'center'
   }
 });
 

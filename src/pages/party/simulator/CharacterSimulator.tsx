@@ -19,7 +19,7 @@ const Wrapper = styled.div({
   },
   '@media screen and (max-width: 768px)': {
     width: '100%',
-    padding: '0',
+    padding: '0'
   }
 });
 
@@ -52,13 +52,14 @@ export function CharacterSimulator(props: Props) {
               onClick={() => {
                 props.onClick();
               }}
-              styles={{ 
-                buttonStyles: { 
-                  width: '120px', height: '120px',
+              styles={{
+                buttonStyles: {
+                  width: '120px',
+                  height: '120px',
                   medium: { width: '90px', height: '90px' },
-                  small: { width: '80px', height: '80px'}
+                  small: { width: '80px', height: '80px' }
                 },
-                imageStyles: { medium: {width: '80px', height: '80px'}, small: { width: "70px", height: "70px" } }
+                imageStyles: { medium: { width: '80px', height: '80px' }, small: { width: '70px', height: '70px' } }
               }}
             />
             <CharacterEquipSlot key={index} characterSrc={dic[1]}></CharacterEquipSlot>

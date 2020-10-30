@@ -1,5 +1,5 @@
-import React, { useState, useLayoutEffect } from "react";
-import styled from "styled-components";
+import React, { useState, useLayoutEffect } from 'react';
+import styled from 'styled-components';
 
 interface RippleContainerProps {
   readonly color: string;
@@ -18,9 +18,9 @@ const RippleContainer = styled.div<RippleContainerProps>`
     border-radius: 100%;
     position: absolute;
     opacity: 0.6;
-    background-color: ${props => props.color};
+    background-color: ${(props) => props.color};
     animation-name: ripple;
-    animation-duration: ${props => props.duration}ms;
+    animation-duration: ${(props) => props.duration}ms;
   }
 
   @keyframes ripple {
@@ -58,7 +58,7 @@ interface Props {
   color?: string;
 }
 
-export const Ripple = ({ duration = 850, color = "#999" }: Props) => {
+export const Ripple = ({ duration = 850, color = '#999' }: Props) => {
   const [rippleArray, setRippleArray] = useState<Array<Ripple>>([]);
 
   useDebouncedRippleCleanUp(rippleArray.length, duration, () => {
@@ -67,10 +67,7 @@ export const Ripple = ({ duration = 850, color = "#999" }: Props) => {
 
   const addRipple = (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
     const rippleContainer = event.currentTarget.getBoundingClientRect();
-    const size =
-      rippleContainer.width > rippleContainer.height
-        ? rippleContainer.width
-        : rippleContainer.height;
+    const size = rippleContainer.width > rippleContainer.height ? rippleContainer.width : rippleContainer.height;
     const x = event.pageX - rippleContainer.x - size / 2;
     const y = event.pageY - rippleContainer.y - size / 2;
     const newRipple: Ripple = {
@@ -88,7 +85,7 @@ export const Ripple = ({ duration = 850, color = "#999" }: Props) => {
         rippleArray.map((ripple, index) => {
           return (
             <span
-              key={"span" + index}
+              key={'span' + index}
               style={{
                 top: ripple.y,
                 left: ripple.x,

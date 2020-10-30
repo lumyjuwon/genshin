@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import { RoundButton, ButtonStyle } from "./RoundButton";
+import { RoundButton, ButtonStyle } from './RoundButton';
 
 interface TextStyle {
   readonly fontSize?: string;
@@ -10,26 +10,28 @@ interface TextStyle {
 
 const Text = styled.a<TextStyle>((props: TextStyle) => {
   return {
-    fontSize: props.fontSize || "16px",
+    fontSize: props.fontSize || '16px'
     // add color property in RoundButton component
   };
 });
 
-interface Props{
+interface Props {
   onClick: Function;
   children: string | JSX.Element;
   styles?: {
     buttonStyles?: ButtonStyle;
     textStyles?: TextStyle;
-  }
+  };
 }
 
 export function RoundTextButton(props: Props) {
   return (
-    <RoundButton onClick={(event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-      props.onClick?.();
-    }} 
-    styles={props.styles?.buttonStyles}>
+    <RoundButton
+      onClick={(event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+        props.onClick?.();
+      }}
+      styles={props.styles?.buttonStyles}
+    >
       <Text {...props.styles?.textStyles}>{props.children}</Text>
     </RoundButton>
   );

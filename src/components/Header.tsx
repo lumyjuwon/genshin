@@ -1,24 +1,24 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 interface Props {
   children: JSX.Element;
 }
 
 const HeaderOuter = styled.header({
-  borderBottom: "1px solid #515253",
-  backgroundColor: "#111213",
-  position: "relative"
+  borderBottom: '1px solid #515253',
+  backgroundColor: '#111213',
+  position: 'relative'
 });
 
 const HeaderInner = styled.div({
-  maxWidth: "80vw",
-  margin: "0 auto",
-  display: "flex",
-  alignItems: "center",
-  minHeight: "10vh",
-  "@media screen and (max-width: 768px)": {
-    justifyContent: "space-between"
+  maxWidth: '80vw',
+  margin: '0 auto',
+  display: 'flex',
+  alignItems: 'center',
+  minHeight: '10vh',
+  '@media screen and (max-width: 768px)': {
+    justifyContent: 'space-between'
   }
 });
 

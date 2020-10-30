@@ -11,23 +11,27 @@ interface Props {
 }
 
 export function GachaBanner(props: Props) {
+  const transWishList = props.pickUpList.map((wish) => trans(Lang[wish as Lang]));
 
-  const transWishList = props.pickUpList.map(wish => trans(Lang[wish as Lang]))
- 
   return (
-    <FlexWrapper styles={{justifyContent: "space-between", margin: '0 0 20px'}}>
+    <FlexWrapper styles={{ justifyContent: 'space-between', margin: '0 0 20px' }}>
       <>
-      <HoverDropDown
-        hoverList={transWishList}
-        styles={{
-          containerStyles: { width: "300px", height: "40px", fontSize: "20px", small: {width: "220px", fontSize: "16px", height: "35px"} },
-          listStyles: {width: "300px", top: "39px", left: "-1px", small: {width: "220px", top: "34px"}}
-        }}
-        onClick={props.onClick}
-        content={trans(Lang[props.content as Lang])}
-      />
-      <GachaDetails content={props.content} />
+        <HoverDropDown
+          hoverList={transWishList}
+          styles={{
+            containerStyles: {
+              width: '300px',
+              height: '40px',
+              fontSize: '20px',
+              small: { width: '220px', fontSize: '16px', height: '35px' }
+            },
+            listStyles: { width: '300px', top: '39px', left: '-1px', small: { width: '220px', top: '34px' } }
+          }}
+          onClick={props.onClick}
+          content={trans(Lang[props.content as Lang])}
+        />
+        <GachaDetails content={props.content} />
       </>
     </FlexWrapper>
-  )
+  );
 }
