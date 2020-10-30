@@ -14,6 +14,9 @@ const Relative = styled.div`
   &:hover ${HoverVisibleElement} {
     visibility: visible;
   }
+  @media screen and (max-width: 768px) {
+    margin: 3px;
+  }
 `;
 
 const Element = styled.div({

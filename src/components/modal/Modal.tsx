@@ -5,35 +5,24 @@ import { CloseBlackButton } from 'src/resources/svg';
 
 import { CircleButton } from '../button/CircleButton';
 
-const Overlay = styled.div({
+const Wrapper = styled.div({
   position: 'fixed',
   zIndex: 20,
   top: 0,
   left: 0,
   bottom: 0,
-  right: 0,
-  backgroundColor: 'rgba(0, 0, 0, 0.25)'
-});
-
-const Wrapper = styled.div({
+  right: 0, 
   display: 'flex',
-  position: 'fixed',
-  zIndex: 30,
   tabIndex: -1,
-  top: 0,
-  left: 0,
-  bottom: 0,
-  right: 0,
   justifyContent: 'center',
   alignItems: 'center',
-  '@media screen and (max-width: 768px)': {
-    overflow: 'scroll'
-  }
+  backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  overflow: 'scroll'
 });
 
 const WrapperInner = styled.div({
-  display: 'flex',
   position: 'relative',
+  display: 'flex',
   flexDirection: 'column',
   boxShadow: '0px 0px 4px 4px rgba(0,0,0,0.25)',
   padding: '16px',
@@ -46,7 +35,7 @@ const WrapperInner = styled.div({
     justifyContent: 'center'
   },
   '@media screen and (max-width: 768px)': {
-    width: '95%',
+    width: '100%',
     padding: '0'
   }
 });
@@ -54,7 +43,7 @@ const WrapperInner = styled.div({
 const Header = styled.div({
   display: 'flex',
   justifyContent: 'flex-end',
-  marginBottom: '8px'
+  margin: '10px 0'
 });
 
 interface Props {
@@ -67,8 +56,7 @@ interface Props {
 export function Modal(props: Props) {
   if (props.visible) {
     return (
-      <>
-        <Overlay />
+      <div style={{position: 'relative'}}>
         <Wrapper>
           <WrapperInner>
             <Header>
@@ -79,7 +67,7 @@ export function Modal(props: Props) {
             {props.children}
           </WrapperInner>
         </Wrapper>
-      </>
+      </div>
     );
   } else {
     return null;

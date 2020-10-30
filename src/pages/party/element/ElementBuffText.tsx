@@ -8,7 +8,14 @@ const Container = styled.div({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  marginBottom: '50px'
+  marginBottom: '50px',
+  '@media screen and (max-width: 1380px)': {
+    width: '700px',
+    margin: '0 auto 50px'
+  },
+  '@media screen and (max-width: 768px)': {
+    width: '280px',
+  }
 });
 
 const TextDesc = styled.p({
