@@ -9,9 +9,7 @@ import { trans, Lang } from './resources/languages';
 const MainLogo = styled.div({
   fontSize: '30px',
   cursor: 'pointer',
-  "@media screen and (max-width: 768px)": {
-
-  }
+  padding: '0 20px 0 0'
 });
 
 const CopyRight = styled.div({

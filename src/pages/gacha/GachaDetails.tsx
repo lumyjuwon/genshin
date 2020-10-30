@@ -17,16 +17,15 @@ interface Styles {
 
 const Details = styled.div({
   position: "fixed",
+  width: '100vw',
+  height: '100vh',
   top: "0",
   left: "0",
-  bottom: "0",
-  right: "0",
   backgroundColor: "rgba(0,0,0,0.9)",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  overflow: "scroll",
-  zIndex: 10
+  zIndex: 10,
 })
 
 const Help = styled.div({
@@ -53,6 +52,8 @@ const DetailsContainer = styled.div({
   alignItems: "center",
   width: "1140px",
   margin: "0 auto",
+  overflowY: "scroll",
+  overflowX: "hidden",
   "@media screen and (max-width: 1380px)": {
     width: "700px"
   },
