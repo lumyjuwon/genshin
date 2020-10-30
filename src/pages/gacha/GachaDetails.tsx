@@ -26,6 +26,11 @@ const Details = styled.div({
   justifyContent: "center",
   alignItems: "center",
   zIndex: 10,
+  '@media screen and (max-height: 575px)': {
+    alignItems: "flex-start",
+    overflowY: "scroll",
+    overflowX: "hidden"
+  }
 })
 
 const Help = styled.div({
@@ -52,13 +57,11 @@ const DetailsContainer = styled.div({
   alignItems: "center",
   width: "1140px",
   margin: "0 auto",
-  overflowY: "scroll",
-  overflowX: "hidden",
   "@media screen and (max-width: 1380px)": {
     width: "700px"
   },
   "@media screen and (max-width: 768px)": {
-    width: "90%"
+    width: "90%",
   }
 });
 

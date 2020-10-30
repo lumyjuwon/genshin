@@ -16,11 +16,11 @@ const Wrapper = styled.div({
   tabIndex: -1,
   justifyContent: 'center',
   alignItems: 'center',
-  overflowY: 'scroll',
-  overflowX: 'hidden',
   backgroundColor: 'rgba(0, 0, 0, 0.5)',
   '@media screen and (max-height: 670px)': {
-    alignItems: 'flex-start'
+    alignItems: 'flex-start',
+    overflowY: 'scroll',
+    overflowX: 'hidden'
   }
 });
 
