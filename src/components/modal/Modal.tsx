@@ -16,7 +16,12 @@ const Wrapper = styled.div({
   tabIndex: -1,
   justifyContent: 'center',
   alignItems: 'center',
+  overflowY: 'scroll',
+  overflowX: 'hidden',
   backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  '@media screen and (max-height: 670px)': {
+    alignItems: 'flex-start'
+  }
 });
 
 const WrapperInner = styled.div({
@@ -25,10 +30,9 @@ const WrapperInner = styled.div({
   flexDirection: 'column',
   boxShadow: '0px 0px 4px 4px rgba(0,0,0,0.25)',
   padding: '16px',
-  width: '100%',
+  width: 'fit-content',
+  height: 'fit-content',
   margin: '0 auto',
-  overflowY: 'scroll',
-  overflowX: 'hidden',
   backgroundColor: '#2B2B2B',
   borderRadius: '12px',
   '@media screen and (max-width: 1380px)': {
