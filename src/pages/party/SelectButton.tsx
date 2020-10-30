@@ -22,6 +22,9 @@ const StarEmoji = styled.span({
   letterSpacing: "-10px",
   width: "100%",
   textAlign: "center",
+  '@media screen and (max-width: 768px)': {
+    fontSize: '14px'
+  }
 })
 
 interface ItemInfo {
@@ -76,7 +79,8 @@ export function SelectButton(props: Props) {
       />
       <HoverVisibleElement>
         <TooltipText styles={{
-          fontSize: '14px', bottom: "0px"
+          fontSize: '14px', bottom: "0px",
+          small: { fontSize: '12px' }
         }}>
           {whatKindsOfItem(props.item).name}
         </TooltipText>
