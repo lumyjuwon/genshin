@@ -8,7 +8,6 @@ import { trans, Lang } from './resources/languages';
 
 const MainLogo = styled.div({
   fontSize: '30px',
-  padding: '20px 15px 20px 0px',
   cursor: 'pointer',
   "@media screen and (max-width: 768px)": {
 
