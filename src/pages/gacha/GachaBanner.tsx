@@ -15,7 +15,7 @@ export function GachaBanner(props: Props) {
   const transWishList = props.pickUpList.map(wish => trans(Lang[wish as Lang]))
  
   return (
-    <FlexWrapper styles={{justifyContent: "space-between"}}>
+    <FlexWrapper styles={{justifyContent: "space-between", margin: '0 0 20px'}}>
       <>
       <HoverDropDown
         hoverList={transWishList}

@@ -40,7 +40,6 @@ const Help = styled.div({
   cursor: "pointer",
   borderRadius: "50%",
   transition: "0.2s",
-  margin: "0 0 20px",
   "&:hover": {
     backgroundColor: "#f1f2f3",
   }
