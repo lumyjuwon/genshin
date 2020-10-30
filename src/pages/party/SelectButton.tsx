@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { characterInfo, weaponInfo, artifactInfo } from 'src/resources/data';
-import { RoundImageButton, TextCenterWrapper, TooltipText } from 'src/components';
+import { RoundImage, RoundImageButton, TextCenterWrapper, TooltipText } from 'src/components';
 
 const HoverVisibleElement = styled.div({
   visibility: "hidden"
@@ -15,6 +15,13 @@ const Relative = styled.div`
     visibility: visible;
   }
 `;
+
+const Element = styled.div({
+  position: "absolute",
+  top: '2px',
+  right: '2px',
+  zIndex: 1
+})
 
 const StarEmoji = styled.span({
   marginLeft: "-5px",
@@ -61,6 +68,16 @@ export function SelectButton(props: Props) {
   return (
     <Relative>
       <>
+      {(characterInfo[props.item]) && 
+        <Element>
+          <RoundImage
+            src={require(`../../resources/images/elements/${characterInfo[props.item].element}.png`)}
+            styles={{
+              width: '30px', height: '30px'
+            }}
+          />
+        </Element>
+      }
       <RoundImageButton
         onClick={props.onClick}
         src={props.src}

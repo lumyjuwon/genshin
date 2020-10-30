@@ -22,8 +22,8 @@ const GridContainer = styled.div({
     width: "700px",
     gridTemplateColumns: "repeat(5, 110px)",
     columnGap: "10px",
-    gridTemplateRows: "repeat(auto-fit, 200px)",
-    rowGap: "10px",
+    gridTemplateRows: "repeat(auto-fit, 220px)",
+    rowGap: "20px",
     height: "500px"
   },
   "@media screen and (max-width: 768px)": {
