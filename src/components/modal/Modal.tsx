@@ -6,7 +6,7 @@ import { CloseBlackButton } from 'src/resources/svg';
 import { CircleButton } from '../button/CircleButton';
 
 const Wrapper = styled.div({
-  width: "100vw",
+  width: '100vw',
   height: '100vh',
   position: 'fixed',
   zIndex: 20,
@@ -60,6 +60,7 @@ interface Props {
 
 export function Modal(props: Props) {
   if (props.visible) {
+    document.body.style.overflow = 'hidden';
     return (
       <Wrapper>
         <WrapperInner>
@@ -73,6 +74,7 @@ export function Modal(props: Props) {
       </Wrapper>
     );
   } else {
+    document.body.style.overflow = 'unset';
     return null;
   }
 }
