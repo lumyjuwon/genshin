@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-interface TooltipStyle {
+export interface TooltipStyle {
   readonly fontSize?: string;
   readonly bottom?: string;
   readonly left?: string;
