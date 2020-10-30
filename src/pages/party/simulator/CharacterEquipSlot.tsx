@@ -2,13 +2,23 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import { GridWrapper, Modal, RoundImageButton } from 'src/components';
-import { weaponInfo } from 'src/resources/data';
+import { artifactInfo, gachaInfo, weaponInfo } from 'src/resources/data';
 import { SelectButton } from '../SelectButton';
 
 interface EquipmentButtonProps {
   type: string;
   // items: string[];
 }
+
+enum weaponType {
+  Bow = "Bow",
+  Catalyst = "Catalyst",
+  Claymore = "Claymore",
+  Polearm = "Polearm",
+  Sword = "sword"
+}
+
+type weaponTypeKey = keyof typeof weaponType;
 
 const EquipmentButton = (props: EquipmentButtonProps) => {
   const [equipment, setEquipment] = useState<string>('');
@@ -36,23 +46,40 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
         visible={isVisibleEquipmentModal}
       >
         <GridWrapper>
-          {Object.keys(weaponInfo).map((weaponName: string) => {
-            if (weaponInfo[weaponName].type === props.type) {
-              return (
-                <SelectButton
-                  key={weaponName}
-                  src={require(`../../../resources/images/items/weapons/${weaponName}.png`)}
-                  onClick={() => {
-                    setEquipmentSrc(require(`../../../resources/images/items/weapons/${weaponName}.png`));
-                    setEquipment(weaponName);
-                  }}
-                  isActive={weaponName === equipment}
-                />
-              );
-            } else {
-              return null;
-            }
-          })}
+          {weaponType[props.type as weaponTypeKey] ? 
+            Object.keys(weaponInfo).map((weaponName: string) => {
+              if (weaponInfo[weaponName].type === props.type) {
+                return (
+                  <SelectButton
+                    key={weaponName}
+                    src={require(`../../../resources/images/items/weapons/${weaponName}.png`)}
+                    onClick={() => {
+                      setEquipmentSrc(require(`../../../resources/images/items/weapons/${weaponName}.png`));
+                      setEquipment(weaponName);
+                    }}
+                    isActive={weaponName === equipment}
+                  />
+                );
+              } else {
+                return null;
+              }
+            }) :
+            Object.keys(artifactInfo).map((artifactName: string) => {
+              if (artifactInfo[artifactName].type && (artifactInfo[artifactName].type === props.type)) {
+                return (
+                  <SelectButton
+                    key={artifactName}
+                    src={require(`../../../resources/images/items/artifacts/${artifactName}.png`)}
+                    onClick={() => {
+                      setEquipmentSrc(require(`../../../resources/images/items/artifacts/${artifactName}.png`));
+                      setEquipment(artifactName);
+                    }}
+                    isActive={artifactName === equipment}
+                  />
+                )
+              }
+            })
+          }
         </GridWrapper>
       </Modal>
     </div>
@@ -73,14 +100,14 @@ interface Props {
   characterSrc: string | null;
 }
 
-const arr = ['Bow', 'Flower', 'Feather', 'Hourglass', 'HolyGrail', 'Crown'];
+const itemCategoryList = ['Bow', 'Flower', 'Feather', 'HourGlass', 'HolyGrail', 'Crown'];
 
 export function CharacterEquipSlot(props: Props) {
   return (
     <Container>
       {props.characterSrc !== null && (
         <>
-          {arr.map((type: string) => {
+          {itemCategoryList.map((type: string) => {
             return <EquipmentButton key={type} type={type} />;
           })}
         </>
