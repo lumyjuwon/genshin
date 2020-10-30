@@ -1,29 +1,90 @@
 import React from 'react';
-import { RoundImageButton } from 'src/components';
+import styled from 'styled-components';
+
+import { characterInfo, weaponInfo, artifactInfo } from 'src/resources/data';
+import { RoundImageButton, TextCenterWrapper, TooltipText } from 'src/components';
+
+const HoverVisibleElement = styled.div({
+  visibility: "hidden"
+});
+
+const Relative = styled.div`
+  position: relative;
+  margin: 6px;
+  &:hover ${HoverVisibleElement} {
+    visibility: visible;
+  }
+`;
+
+const StarEmoji = styled.span({
+  marginLeft: "-5px",
+  display: "inline-block",
+  letterSpacing: "-10px",
+  width: "100%",
+  textAlign: "center",
+})
+
+interface ItemInfo {
+  rank: number;
+  name: string;
+}
 
 interface Props {
   src: string | null;
   onClick: Function;
+  item: string;
   isActive?: boolean;
 }
 
 export function SelectButton(props: Props) {
+
+  const whatKindsOfItem = (item: string): ItemInfo => {
+    let info: ItemInfo = { rank: NaN, name: '' };
+    if(characterInfo[item]) {
+      info.rank = characterInfo[item].rank;
+      info.name = item;
+    }
+    else if(weaponInfo[item]) {
+      info.rank = weaponInfo[item].rank;
+      info.name = item;
+    }
+    else if(artifactInfo[item]) {
+      info.rank = artifactInfo[item].rank;
+      info.name = artifactInfo[item].set;
+    }
+    return info;
+  }
+
   return (
-    <RoundImageButton
-      src={props.src}
-      onClick={props.onClick}
-      styles={{
-        buttonStyles: {
-          backgroundColor: props.isActive ? '#f1f2f3' : 'transparent',
-          small: { margin: '5px' }
-        },
-        imageStyles: {
-          width: '80px',
-          height: '80px',
-          borderRadius: '35%',
-          small: { width: '60px', height: '60px'}
-        }
-      }}
-    />
+    <Relative>
+      <>
+      <RoundImageButton
+        onClick={props.onClick}
+        src={props.src}
+        styles={{
+          buttonStyles: {
+            backgroundColor: props.isActive ? '#f1f2f3' : 'transparent',
+            margin: '0px'
+          },
+          imageStyles: {
+            width: '80px',
+            height: '80px',
+            borderRadius: '35%',
+            small: { width: '60px', height: '60px'}
+          }
+        }}
+      />
+      <HoverVisibleElement>
+        <TooltipText styles={{
+          fontSize: '14px', bottom: "0px"
+        }}>
+          {whatKindsOfItem(props.item).name}
+        </TooltipText>
+      </HoverVisibleElement>
+      </>
+      <StarEmoji role="img">
+        {'⭐'.repeat(whatKindsOfItem(props.item).rank)}
+      </StarEmoji>
+    </Relative>
   );
 }

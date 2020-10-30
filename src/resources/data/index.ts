@@ -32,6 +32,7 @@ interface Artifact {
   [name: string]: {
     rank: number;
     type: ArtifactType;
+    set: string;
   };
 }
 export const artifactInfo: Artifact = require('../data/artifact-info.json');

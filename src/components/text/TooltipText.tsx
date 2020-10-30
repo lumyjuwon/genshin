@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 interface TooltipStyle {
   readonly fontSize?: string;
+  readonly bottom?: string;
+  readonly left?: string;
   readonly small?: {
     readonly fontSize?: string;
   }
@@ -12,8 +14,8 @@ const ItemTooltip = styled.div<TooltipStyle>((props: TooltipStyle) => {
   return {
     width: "100%",
     position: "absolute",
-    bottom: "16px",
-    left: "0",
+    bottom: props.bottom || "16px",
+    left: props.left || "0",
     backgroundColor: "#000",
     textAlign: "center",
     borderRadius: "8px",

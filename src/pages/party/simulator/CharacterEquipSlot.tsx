@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import { GridWrapper, Modal, RoundImageButton } from 'src/components';
-import { artifactInfo, gachaInfo, weaponInfo } from 'src/resources/data';
+import { artifactInfo, weaponInfo } from 'src/resources/data';
 import { SelectButton } from '../SelectButton';
 
 interface EquipmentButtonProps {
@@ -52,6 +52,7 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
                 return (
                   <SelectButton
                     key={weaponName}
+                    item={weaponName}
                     src={require(`../../../resources/images/items/weapons/${weaponName}.png`)}
                     onClick={() => {
                       setEquipmentSrc(require(`../../../resources/images/items/weapons/${weaponName}.png`));
@@ -69,6 +70,7 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
                 return (
                   <SelectButton
                     key={artifactName}
+                    item={artifactName}
                     src={require(`../../../resources/images/items/artifacts/${artifactName}.png`)}
                     onClick={() => {
                       setEquipmentSrc(require(`../../../resources/images/items/artifacts/${artifactName}.png`));

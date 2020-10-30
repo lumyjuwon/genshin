@@ -101,6 +101,7 @@ export function PartyScreen() {
             return (
               <SelectButton
                 key={name}
+                item={name}
                 src={require(`../../resources/images/characters/${name}.png`)}
                 onClick={() => {
                   selectCharacter(name, require(`../../resources/images/characters/${name}.png`));
