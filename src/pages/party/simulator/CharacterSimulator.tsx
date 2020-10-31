@@ -62,7 +62,7 @@ export function CharacterSimulator(props: Props) {
                 imageStyles: { medium: { width: '80px', height: '80px' }, small: { width: '70px', height: '70px' } }
               }}
             />
-            <CharacterEquipSlot key={index} characterSrc={dic[1]}></CharacterEquipSlot>
+            <CharacterEquipSlot key={index} characterName={dic[0]} characterSrc={dic[1]}></CharacterEquipSlot>
           </Inner>
         );
       })}

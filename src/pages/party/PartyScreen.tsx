@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import { ContentWrapper, GridWrapper, Modal } from 'src/components';
 import { characterInfo } from 'src/resources/data';
+import { CharacterImages, ElementImages } from 'src/resources/images';
 
 import { Menu } from './Menu';
 import { ItemButton } from './ItemButton';
@@ -102,21 +103,17 @@ export function PartyScreen() {
               <ItemButton
                 key={name}
                 fillFloatBackground={false}
-                floatImagePath={require(`../../resources/images/elements/${characterInfo[name].element}.png`)}
+                floatImagePath={ElementImages[characterInfo[name].element]}
                 item={name}
-                src={require(`../../resources/images/characters/${name}.png`)}
+                src={CharacterImages[name]}
                 onClick={() => {
-                  selectCharacter(name, require(`../../resources/images/characters/${name}.png`));
+                  selectCharacter(name, CharacterImages[name]);
                 }}
-                isActive={selectedCharacters.has(name)}
                 starVisible={true}
                 styles={{
-                  boxStyles: {},
-                  absoluteStyles: {},
-                  starStyles: {},
                   roundImageButtonStyles: {
                     buttonStyles: {
-                      // backgroundColor: props.isActive ? '#f1f2f3' : 'transparent',
+                      backgroundColor: selectedCharacters.has(name) ? '#f1f2f3' : 'transparent',
                       margin: '0px'
                     },
                     imageStyles: {

@@ -10,7 +10,6 @@ interface Props {
   src: string | null;
   onClick: Function;
   item: string;
-  isActive?: boolean;
   styles?: Style;
   starVisible: boolean;
 }

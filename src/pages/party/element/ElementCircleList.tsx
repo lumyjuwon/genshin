@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { ElementImages } from 'src/resources/images';
 import { ElementCircle } from './ElementCircle';
 
 const ElementLayout = styled.div({
@@ -20,31 +21,31 @@ const ElementLayout = styled.div({
 
 const elements: { [key: string]: { resource: any; borderColor: string } } = {
   Anemo: {
-    resource: require('../../../resources/images/elements/Anemo.png'),
+    resource: ElementImages.Anemo,
     borderColor: 'rgb(74, 255, 227)'
   },
   Cryo: {
-    resource: require('../../../resources/images/elements/Cryo.png'),
+    resource: ElementImages.Cryo,
     borderColor: 'rgb(175, 255, 255)'
   },
   Dendro: {
-    resource: require('../../../resources/images/elements/Dendro.png'),
+    resource: ElementImages.Dendro,
     borderColor: 'rgb(177, 233, 41)'
   },
   Electro: {
-    resource: require('../../../resources/images/elements/Electro.png'),
+    resource: ElementImages.Electro,
     borderColor: 'rgb(255, 172, 255)'
   },
   Geo: {
-    resource: require('../../../resources/images/elements/Geo.png'),
+    resource: ElementImages.Geo,
     borderColor: 'rgb(255, 231, 4)'
   },
   Hydro: {
-    resource: require('../../../resources/images/elements/Hydro.png'),
+    resource: ElementImages.Hydro,
     borderColor: 'rgb(5, 255, 255)'
   },
   Pyro: {
-    resource: require('../../../resources/images/elements/Pyro.png'),
+    resource: ElementImages.Pyro,
     borderColor: 'rgb(255, 140, 90)'
   }
 };

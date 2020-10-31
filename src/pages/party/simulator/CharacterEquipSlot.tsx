@@ -2,23 +2,15 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import { GridWrapper, Modal, RoundImageButton } from 'src/components';
-import { artifactInfo, weaponInfo } from 'src/resources/data';
+import { artifactInfo, ArtifactType, characterInfo, weaponInfo, WeaponType } from 'src/resources/data';
 import { ItemButton } from '../ItemButton';
+import { ItemImages } from 'src/resources/images';
+
+const items = Object.assign({}, weaponInfo, artifactInfo);
 
 interface EquipmentButtonProps {
-  type: string;
-  // items: string[];
+  category: string;
 }
-
-enum weaponType {
-  Bow = 'Bow',
-  Catalyst = 'Catalyst',
-  Claymore = 'Claymore',
-  Polearm = 'Polearm',
-  Sword = 'sword'
-}
-
-type weaponTypeKey = keyof typeof weaponType;
 
 const EquipmentButton = (props: EquipmentButtonProps) => {
   const [equipment, setEquipment] = useState<string>('');
@@ -49,91 +41,48 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
         visible={isVisibleEquipmentModal}
       >
         <GridWrapper>
-          {weaponType[props.type as weaponTypeKey]
-            ? Object.keys(weaponInfo).map((weaponName: string) => {
-                if (weaponInfo[weaponName].type === props.type) {
-                  return (
-                    <ItemButton
-                      key={weaponName}
-                      fillFloatBackground={true}
-                      floatImagePath={require(`../../../resources/images/items/weapons/${weaponInfo[weaponName].type}.png`)}
-                      item={weaponName}
-                      src={require(`../../../resources/images/items/weapons/${weaponName}.png`)}
-                      onClick={() => {
-                        setEquipmentSrc(require(`../../../resources/images/items/weapons/${weaponName}.png`));
-                        setEquipment(weaponName);
-                      }}
-                      isActive={weaponName === equipment}
-                      starVisible={true}
-                      styles={{
-                        boxStyles: {},
-                        absoluteStyles: {},
-                        starStyles: {},
-                        roundImageButtonStyles: {
-                          buttonStyles: {
-                            // backgroundColor: props.isActive ? '#f1f2f3' : 'transparent',
-                            margin: '0px'
-                          },
-                          imageStyles: {
-                            width: '80px',
-                            height: '80px',
-                            borderRadius: '35%',
-                            small: { width: '60px', height: '60px' }
-                          }
-                        },
-                        tooltipStyles: {
-                          fontSize: '14px',
-                          bottom: '0px',
-                          small: { fontSize: '12px' }
-                        }
-                      }}
-                    />
-                  );
-                } else {
-                  return null;
-                }
-              })
-            : Object.keys(artifactInfo).map((artifactName: string) => {
-                if (artifactInfo[artifactName].type && artifactInfo[artifactName].type === props.type) {
-                  return (
-                    <ItemButton
-                      key={artifactName}
-                      fillFloatBackground={true}
-                      floatImagePath={require(`../../../resources/images/items/artifacts/${artifactInfo[artifactName].type}.png`)}
-                      item={artifactName}
-                      src={require(`../../../resources/images/items/artifacts/${artifactName}.png`)}
-                      onClick={() => {
-                        setEquipmentSrc(require(`../../../resources/images/items/artifacts/${artifactName}.png`));
-                        setEquipment(artifactName);
-                      }}
-                      isActive={artifactName === equipment}
-                      starVisible={true}
-                      styles={{
-                        boxStyles: {},
-                        absoluteStyles: {},
-                        starStyles: {},
-                        roundImageButtonStyles: {
-                          buttonStyles: {
-                            // backgroundColor: props.isActive ? '#f1f2f3' : 'transparent',
-                            margin: '0px'
-                          },
-                          imageStyles: {
-                            width: '80px',
-                            height: '80px',
-                            borderRadius: '35%',
-                            small: { width: '60px', height: '60px' }
-                          }
-                        },
-                        tooltipStyles: {
-                          fontSize: '14px',
-                          bottom: '0px',
-                          small: { fontSize: '12px' }
-                        }
-                      }}
-                    />
-                  );
-                }
-              })}
+          {Object.keys(items).map((name: string) => {
+            if (items[name] && items[name].type === props.category) {
+              return (
+                <ItemButton
+                  key={name}
+                  fillFloatBackground={true}
+                  floatImagePath={ItemImages[name]}
+                  item={name}
+                  src={ItemImages[name]}
+                  onClick={() => {
+                    setEquipmentSrc(ItemImages[name]);
+                    setEquipment(name);
+                  }}
+                  starVisible={true}
+                  styles={{
+                    boxStyles: {},
+                    absoluteStyles: {},
+                    starStyles: {},
+                    roundImageButtonStyles: {
+                      buttonStyles: {
+                        backgroundColor: name === equipment ? '#f1f2f3' : 'transparent',
+                        margin: '0px'
+                      },
+                      imageStyles: {
+                        width: '80px',
+                        height: '80px',
+                        borderRadius: '35%',
+                        small: { width: '60px', height: '60px' }
+                      }
+                    },
+                    tooltipStyles: {
+                      fontSize: '14px',
+                      bottom: '0px',
+                      small: { fontSize: '12px' }
+                    }
+                  }}
+                />
+              );
+            } else {
+              return null;
+            }
+          })}
         </GridWrapper>
       </Modal>
     </div>
@@ -152,20 +101,28 @@ const Container = styled.div({
 
 interface Props {
   characterSrc: string | null;
+  characterName: string;
 }
 
-const itemCategoryList = ['Bow', 'Flower', 'Feather', 'HourGlass', 'HolyGrail', 'Crown'];
-
 export function CharacterEquipSlot(props: Props) {
-  return (
-    <Container>
-      {props.characterSrc !== null && (
-        <>
-          {itemCategoryList.map((type: string) => {
-            return <EquipmentButton key={type} type={type} />;
-          })}
-        </>
-      )}
-    </Container>
-  );
+  if (props.characterSrc !== null) {
+    const itemCategoryList: Array<WeaponType | ArtifactType> = [
+      characterInfo[props.characterName].weapon as WeaponType,
+      'Flower',
+      'Feather',
+      'Hourglass',
+      'HolyGrail',
+      'Crown'
+    ];
+
+    return (
+      <Container>
+        {itemCategoryList.map((cateogry: WeaponType | ArtifactType) => {
+          return <EquipmentButton key={cateogry} category={cateogry} />;
+        })}
+      </Container>
+    );
+  } else {
+    return null;
+  }
 }
