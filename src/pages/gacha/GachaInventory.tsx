@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 
 import { trans, Lang } from 'src/resources/languages';
-import { FlexWrapper, RoundImage, TextCenterWrapper, CheckBoxButton, HoverDropDown, TooltipText, ItemBadgeBox } from 'src/components';
+import { FlexWrapper, RoundImage, TextCenterWrapper, CheckBoxButton, HoverDropDown, ItemBadgeBox } from 'src/components';
 import { characterInfo, gachaInfo, weaponInfo } from 'src/resources/data';
 import { GachaImages, GachaTypeImages } from 'src/resources/images';
 
@@ -151,14 +151,6 @@ export function GachaInventory(props: Props) {
   } else {
     inventoryItems = inventoryItems.filter((item: string) => pickUpList.includes(item));
   }
-
-  const itemRank = inventoryItems.map((item: string) => {
-    if (characterInfo[item]) {
-      return characterInfo[item].rank;
-    } else {
-      return weaponInfo[item].rank;
-    }
-  });
 
   const totalItemCount = Array.from(inventory.values()).reduce((acc: number, count: number) => {
     return acc + count;
