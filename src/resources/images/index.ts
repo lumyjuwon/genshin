@@ -27,6 +27,14 @@ const ElementImages: ImageMap = {
   Pyro: require('./elements/Pyro.png')
 };
 
+const WeaponTypeImages: ImageMap = {
+  Bow: require('./items/weapons/Bow.png'),
+  Catalyst: require('./items/weapons/Catalyst.png'),
+  Claymore: require('./items/weapons/Claymore.png'),
+  Polearm: require('./items/weapons/Polearm.png'),
+  Sword: require('./items/weapons/Sword.png')
+}
+
 const ItemImages: ImageMap = {};
 appendImages(ItemImages, weaponInfo, './items/weapons');
 appendImages(ItemImages, artifactInfo, './items/artifacts');
@@ -38,4 +46,7 @@ const MainScreen = {
   Party: require('./mainscreen/party.png')
 };
 
-export { CharacterImages, ElementImages, ItemImages, MainScreen };
+const GachaImages: ImageMap = Object.assign({}, CharacterImages, ItemImages);
+const GachaTypeImages: ImageMap = Object.assign({}, ElementImages, WeaponTypeImages);
+
+export { CharacterImages, ElementImages, ItemImages, WeaponTypeImages, GachaImages, GachaTypeImages, MainScreen };
