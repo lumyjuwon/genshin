@@ -6,6 +6,7 @@ import { TooltipText, TooltipStyle } from '../text/TooltipText';
 import { ButtonStyle } from '../button/RoundButton';
 import { RoundImage, Style as RoundImageStyle } from '../image/RoundImage';
 import { RoundImageButton } from '../button/RoundImageButton';
+import { trans, Lang } from 'src/resources/languages';
 
 interface BoxStyle {
   margin?: string;
@@ -102,14 +103,12 @@ export function ItemBadgeBox(props: Props) {
     let info: ItemInfo = { rank: NaN, name: '' };
     if (characterInfo[item]) {
       info.rank = characterInfo[item].rank;
-      info.name = item;
     } else if (weaponInfo[item]) {
       info.rank = weaponInfo[item].rank;
-      info.name = item;
     } else if (artifactInfo[item]) {
       info.rank = artifactInfo[item].rank;
-      info.name = artifactInfo[item].set;
     }
+    info.name = item;
     return info;
   };
 
@@ -126,7 +125,9 @@ export function ItemBadgeBox(props: Props) {
         )}
 
         <HoverVisibleElement>
-          <TooltipText styles={props.styles?.tooltipStyles}>{whatKindsOfItem(props.item).name}</TooltipText>
+          <TooltipText styles={props.styles?.tooltipStyles}>
+            {trans(Lang[whatKindsOfItem(props.item).name.replace(/\s|-/g, '_').replace(/'/g, '') as Lang])}
+          </TooltipText>
         </HoverVisibleElement>
       </>
       {props.starVisible ? (
