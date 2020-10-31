@@ -213,7 +213,7 @@ export function GachaInventory(props: Props) {
                 starVisible={true}
                 styles={{
                   roundImageStyles: { borderRadius: '16px', small: { width: '80px', height: '80px ' } },
-                  tooltipStyles: { fontSize: '14px', small: { fontSize: '12px' } },
+                  tooltipStyles: { fontSize: '14px', bottom: '0', small: { fontSize: '12px' } },
                   absoluteStyles: { top: '70px' }
                 }}
               >

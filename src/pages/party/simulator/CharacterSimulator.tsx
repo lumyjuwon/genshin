@@ -73,7 +73,7 @@ export function CharacterSimulator(props: Props) {
                   imageStyles: { medium: { width: '80px', height: '80px' }, small: { width: '70px', height: '70px' } }
                 },
                 boxStyles: { margin: '0px' },
-                tooltipStyles: { fontSize: '16px', bottom: '22px', small: { fontSize: '14px' } },
+                tooltipStyles: { fontSize: '16px', bottom: '0', small: { fontSize: '14px' } },
                 absoluteStyles: { top: '5px', right: '5px' }
               }}
             />
