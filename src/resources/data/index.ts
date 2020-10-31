@@ -2,7 +2,7 @@ import { GachaData } from '../../pages/gacha/Gacha';
 
 export type CharacterElementType = 'Cyro' | 'Pyro' | 'Anemo' | 'Hydro' | 'Adaptive' | 'Geo';
 export type WeaponType = 'Bow' | 'Catalyst' | 'Claymore' | 'Polearm' | 'Sword';
-export type ArtifactType = 'Flower' | 'Feather' | 'Hourglass' | 'HolyGrail' | 'Crown';
+export type ArtifactType = 'Flower' | 'Feather' | 'HourGlass' | 'HolyGrail' | 'Crown';
 
 interface Gacha {
   [key: string]: GachaData;

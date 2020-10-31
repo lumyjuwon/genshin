@@ -6,7 +6,14 @@ import { artifactInfo, ArtifactType, characterInfo, weaponInfo, WeaponType } fro
 import { ItemButton } from '../ItemButton';
 import { ItemImages } from 'src/resources/images';
 
-const items = Object.assign({}, weaponInfo, artifactInfo);
+interface Items {
+  [name: string]: {
+    rank: number;
+    type: WeaponType;
+  };
+}
+
+const items: Items = Object.assign({}, weaponInfo, artifactInfo);
 
 interface EquipmentButtonProps {
   category: string;
@@ -110,7 +117,7 @@ export function CharacterEquipSlot(props: Props) {
       characterInfo[props.characterName].weapon as WeaponType,
       'Flower',
       'Feather',
-      'Hourglass',
+      'HourGlass',
       'HolyGrail',
       'Crown'
     ];

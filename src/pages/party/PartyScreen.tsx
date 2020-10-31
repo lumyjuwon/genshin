@@ -9,8 +9,8 @@ import { ItemButton } from './ItemButton';
 import { CharacterSimulator } from './simulator/CharacterSimulator';
 import { ElementResult } from './element/ElementResult';
 
-type CharacterName = string;
-type CharacterSrc = string | null;
+export type CharacterName = string;
+export type CharacterSrc = string | null;
 type ElementName = string;
 type ElementCount = number;
 

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import { RoundImageButton } from 'src/components';
 import { CharacterEquipSlot } from './CharacterEquipSlot';
+import { CharacterName, CharacterSrc } from '../PartyScreen';
 
 const Wrapper = styled.div({
   display: 'flex',
@@ -44,7 +45,7 @@ interface Props {
 export function CharacterSimulator(props: Props) {
   return (
     <Wrapper>
-      {props.characters.map((dic: [string, string | null], index: number) => {
+      {props.characters.map((dic: [CharacterName, CharacterSrc], index: number) => {
         return (
           <Inner key={dic[0]}>
             <RoundImageButton
