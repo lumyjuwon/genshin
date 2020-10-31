@@ -101,12 +101,37 @@ export function PartyScreen() {
             return (
               <SelectButton
                 key={name}
+                fillFloatBackground={false}
+                floatImagePath={require(`../../resources/images/elements/${characterInfo[name].element}.png`)}
                 item={name}
                 src={require(`../../resources/images/characters/${name}.png`)}
                 onClick={() => {
                   selectCharacter(name, require(`../../resources/images/characters/${name}.png`));
                 }}
                 isActive={selectedCharacters.has(name)}
+                starVisible={true}
+                styles={{
+                  boxStyles: {},
+                  absoluteStyles: {},
+                  starStyles: {},
+                  roundImageButtonStyles: {
+                    buttonStyles: {
+                      // backgroundColor: props.isActive ? '#f1f2f3' : 'transparent',
+                      margin: '0px'
+                    },
+                    imageStyles: {
+                      width: '80px',
+                      height: '80px',
+                      borderRadius: '35%',
+                      small: { width: '60px', height: '60px' }
+                    }
+                  },
+                  tooltipStyles: {
+                    fontSize: '14px',
+                    bottom: '0px',
+                    small: { fontSize: '12px' }
+                  }
+                }}
               />
             );
           })}

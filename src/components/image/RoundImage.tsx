@@ -6,6 +6,7 @@ export interface Style {
   readonly height?: string;
   readonly borderRadius?: string;
   readonly boxShadow?: string;
+  readonly backgroundColor?: string;
   readonly objectFit?: 'inherit' | 'none' | '-moz-initial' | 'initial' | 'revert' | 'unset' | 'fill' | 'contain' | 'cover' | 'scale-down';
   readonly medium?: {
     readonly width?: string;
@@ -22,6 +23,7 @@ const Image = styled.img<Style>((props: Style) => {
     width: props.width || '100px',
     height: props.height || '100px',
     borderRadius: props.borderRadius || '8px',
+    backgroundColor: props.backgroundColor || 'transparent',
     boxShadow: props.boxShadow || 'none',
     objectFit: props.objectFit || 'fill',
     '@media screen and (max-width: 1380px)': {

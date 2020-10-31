@@ -55,6 +55,8 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
                   return (
                     <SelectButton
                       key={weaponName}
+                      fillFloatBackground={true}
+                      floatImagePath={require(`../../../resources/images/items/weapons/${weaponInfo[weaponName].type}.png`)}
                       item={weaponName}
                       src={require(`../../../resources/images/items/weapons/${weaponName}.png`)}
                       onClick={() => {
@@ -62,6 +64,29 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
                         setEquipment(weaponName);
                       }}
                       isActive={weaponName === equipment}
+                      starVisible={true}
+                      styles={{
+                        boxStyles: {},
+                        absoluteStyles: {},
+                        starStyles: {},
+                        roundImageButtonStyles: {
+                          buttonStyles: {
+                            // backgroundColor: props.isActive ? '#f1f2f3' : 'transparent',
+                            margin: '0px'
+                          },
+                          imageStyles: {
+                            width: '80px',
+                            height: '80px',
+                            borderRadius: '35%',
+                            small: { width: '60px', height: '60px' }
+                          }
+                        },
+                        tooltipStyles: {
+                          fontSize: '14px',
+                          bottom: '0px',
+                          small: { fontSize: '12px' }
+                        }
+                      }}
                     />
                   );
                 } else {
@@ -73,6 +98,8 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
                   return (
                     <SelectButton
                       key={artifactName}
+                      fillFloatBackground={true}
+                      floatImagePath={require(`../../../resources/images/items/artifacts/${artifactInfo[artifactName].type}.png`)}
                       item={artifactName}
                       src={require(`../../../resources/images/items/artifacts/${artifactName}.png`)}
                       onClick={() => {
@@ -80,6 +107,29 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
                         setEquipment(artifactName);
                       }}
                       isActive={artifactName === equipment}
+                      starVisible={true}
+                      styles={{
+                        boxStyles: {},
+                        absoluteStyles: {},
+                        starStyles: {},
+                        roundImageButtonStyles: {
+                          buttonStyles: {
+                            // backgroundColor: props.isActive ? '#f1f2f3' : 'transparent',
+                            margin: '0px'
+                          },
+                          imageStyles: {
+                            width: '80px',
+                            height: '80px',
+                            borderRadius: '35%',
+                            small: { width: '60px', height: '60px' }
+                          }
+                        },
+                        tooltipStyles: {
+                          fontSize: '14px',
+                          bottom: '0px',
+                          small: { fontSize: '12px' }
+                        }
+                      }}
                     />
                   );
                 }

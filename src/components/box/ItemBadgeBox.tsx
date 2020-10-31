@@ -70,17 +70,7 @@ const StarEmoji = styled.span<StarStyle>((props: StarStyle) => {
   };
 });
 
-interface ItemInfo {
-  rank: number;
-  name: string;
-}
-
-interface Props {
-  children: JSX.Element;
-  src: string | null;
-  onClick?: Function;
-  item: string;
-  isActive?: boolean;
+export interface Style {
   boxStyles?: BoxStyle;
   absoluteStyles?: AbsoluteStyle;
   starStyles?: StarStyle;
@@ -90,6 +80,21 @@ interface Props {
   };
   roundImageStyles?: RoundImageStyle;
   tooltipStyles?: TooltipStyle;
+}
+
+interface ItemInfo {
+  rank: number;
+  name: string;
+}
+
+interface Props {
+  children?: JSX.Element;
+  src: string | null;
+  onClick?: Function;
+  item: string;
+  isActive?: boolean;
+  styles?: Style;
+  starVisible: boolean;
 }
 
 export function ItemBadgeBox(props: Props) {
@@ -111,22 +116,24 @@ export function ItemBadgeBox(props: Props) {
   console.log(whatKindsOfItem(props.item));
 
   return (
-    <Relative {...props.boxStyles}>
+    <Relative {...props.styles?.boxStyles}>
       <>
-        <Element {...props.absoluteStyles}>{props.children}</Element>
+        <Element {...props.styles?.absoluteStyles}>{props.children}</Element>
         {props.onClick ? (
-          <RoundImageButton onClick={props.onClick} src={props.src} styles={props.roundImageButtonStyles} />
+          <RoundImageButton onClick={props.onClick} src={props.src} styles={props.styles?.roundImageButtonStyles} />
         ) : (
-          <RoundImage src={props.src} styles={props.roundImageStyles} />
+          <RoundImage src={props.src} styles={props.styles?.roundImageStyles} />
         )}
 
         <HoverVisibleElement>
-          <TooltipText styles={props.tooltipStyles}>{whatKindsOfItem(props.item).name}</TooltipText>
+          <TooltipText styles={props.styles?.tooltipStyles}>{whatKindsOfItem(props.item).name}</TooltipText>
         </HoverVisibleElement>
       </>
-      <StarEmoji role="img" {...props.starStyles}>
-        {'⭐'.repeat(whatKindsOfItem(props.item).rank)}
-      </StarEmoji>
+      {props.starVisible ? (
+        <StarEmoji role="img" {...props.styles?.starStyles}>
+          {'⭐'.repeat(whatKindsOfItem(props.item).rank)}
+        </StarEmoji>
+      ) : null}
     </Relative>
   );
 }
