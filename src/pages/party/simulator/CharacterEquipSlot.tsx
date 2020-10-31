@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { GridWrapper, Modal, RoundImageButton } from 'src/components';
 import { artifactInfo, ArtifactType, characterInfo, weaponInfo, WeaponType } from 'src/resources/data';
 import { ItemButton } from '../ItemButton';
-import { ItemImages } from 'src/resources/images';
+import { ItemTypeImages, ItemImages } from 'src/resources/images';
 
 interface Items {
   [name: string]: {
@@ -54,7 +54,7 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
                 <ItemButton
                   key={name}
                   fillFloatBackground={true}
-                  floatImagePath={ItemImages[name]}
+                  floatImagePath={ItemTypeImages[items[name].type]}
                   item={name}
                   src={ItemImages[name]}
                   onClick={() => {

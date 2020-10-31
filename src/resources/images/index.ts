@@ -27,6 +27,7 @@ const ElementImages: ImageMap = {
   Pyro: require('./elements/Pyro.png')
 };
 
+
 const WeaponTypeImages: ImageMap = {
   Bow: require('./items/weapons/Bow.png'),
   Catalyst: require('./items/weapons/Catalyst.png'),
@@ -39,6 +40,14 @@ const ItemImages: ImageMap = {};
 appendImages(ItemImages, weaponInfo, './items/weapons');
 appendImages(ItemImages, artifactInfo, './items/artifacts');
 
+const ArtifactTypeImages: ImageMap = {
+  Flower: require('./items/artifacts/Flower.png'),
+  Feather: require('./items/artifacts/Feather.png'),
+  HourGlass: require('./items/artifacts/HourGlass.png'),
+  HolyGrail: require('./items/artifacts/HolyGrail.png'),
+  Crown: require('./items/artifacts/Crown.png'),
+}
+
 const MainScreen = {
   Gacha: require('./mainscreen/gacha.png'),
   Main: require('./mainscreen/main.jpg'),
@@ -46,7 +55,8 @@ const MainScreen = {
   Party: require('./mainscreen/party.png')
 };
 
+const ItemTypeImages: ImageMap = Object.assign({}, ArtifactTypeImages, WeaponTypeImages);
 const GachaImages: ImageMap = Object.assign({}, CharacterImages, ItemImages);
 const GachaTypeImages: ImageMap = Object.assign({}, ElementImages, WeaponTypeImages);
 
-export { CharacterImages, ElementImages, ItemImages, WeaponTypeImages, GachaImages, GachaTypeImages, MainScreen };
+export { ItemTypeImages, CharacterImages, ElementImages, ItemImages, WeaponTypeImages, GachaImages, GachaTypeImages, MainScreen };
