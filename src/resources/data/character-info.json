@@ -3,144 +3,299 @@
     "rank": 5,
     "element": "Pyro",
     "weapon": "Bow",
-    "region": "Mondstadt"
+    "region": "Mondstadt",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "HP": 9563,
+      "ATK": 289,
+      "DEF": 572,
+      "Pyro DMG(%)": 28.8
+    }
   },
   "Keqing": {
     "rank": 5,
     "element": "Electro",
     "weapon": "Sword",
-    "region": "Liyue"
+    "region": "Liyue",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "HP": 12182,
+      "ATK": 300,
+      "DEF": 743,
+      "CRIT DMG(%)": 188.4
+    }
   },
   "Diluc": {
     "rank": 5,
     "element": "Pyro",
     "weapon": "Claymore",
-    "region": "Mondstadt"
+    "region": "Mondstadt",
+    "stats": {
+      "Level":"MAX90 80Lv",
+      "HP": 12068,
+      "ATK": 312,
+      "DEF": 729,
+      "CRIT Rate(%)": 24.2
+    }
   },
   "Jean": {
     "rank": 5,
     "element": "Anemo",
     "weapon": "Sword",
-    "region": "Mondstadt"
+    "region": "Mondstadt",
+    "stats": {
+      "Level": "MAX80 80Lv",
+      "HP": 12965,
+      "ATK": 211,
+      "DEF": 678,
+      "Healing(%)": 16.6
+    }
   },
   "Qiqi": {
     "rank": 5,
     "element": "Cryo",
     "weapon": "Sword",
-    "region": "Liyue"
+    "region": "Liyue",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "HP": 11499,
+      "ATK": 266,
+      "DEF": 857,
+      "Healing Bonus(%)": 22.2 
+    }
   },
   "Mona": {
     "rank": 5,
     "element": "Hydro",
     "weapon": "Catalyst",
-    "region": "Mondstadt"
+    "region": "Mondstadt",
+    "stats": {
+      "Level":"MAX90 80Lv",
+      "HP": 9677,
+      "ATK": 266,
+      "DEF": 607,
+      "Energy Recharge(%)": 32.0
+    }
   },
   "Venti": {
     "rank": 5,
     "element": "Anemo",
     "weapon": "Bow",
-    "region": "Mondstadt"
-  },
-  "Xiao": {
-    "rank": 5,
-    "element": "Anemo",
-    "weapon": "Polearm",
-    "region": "Liyue"
+    "region": "Mondstadt",
+    "stats": {
+      "Level": "MAX80 70Lv",
+      "HP": 8557,
+      "ATK": 214,
+      "DEF": 543,
+      "Recharge(%)": 24.0
+    }
   },
   "Traveler (Anemo)": {
     "rank": 5,
     "element": "Anemo",
     "weapon": "Sword",
-    "region": "unknown"
+    "region": "unknown",
+    "stats": {
+      "Level": "MAX80 80Lv",
+      "HP": 10444,
+      "ATK": 204,
+      "DEF": 669,
+      "ATK(%)": 24.0
+    }
   },
   "Traveler (Geo)": {
     "rank": 5,
     "element": "Geo",
     "weapon": "Sword",
-    "region": "unknown"
+    "region": "unknown",
+    "stats": {
+      "Level": "MAX80 80Lv",
+      "HP": 10444,
+      "ATK": 204,
+      "DEF": 669,
+      "ATK(%)": 24.0
+    }
   },
   "Noelle": {
     "rank": 4,
     "element": "Geo",
     "weapon": "Claymore",
-    "region": "Mondstadt"
+    "region": "Mondstadt",
+    "stats": {
+      "Level":"MAX90 80Lv",
+      "HP": 11235,
+      "ATK": 178,
+      "DEF": 743,
+      "DEF(%)": 30.0
+    }
   },
   "Razor": {
     "rank": 4,
     "element": "Electro",
     "weapon": "Claymore",
-    "region": "Mondstadt"
+    "region": "Mondstadt",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "HP": 11134,
+      "ATK": 217,
+      "DEF": 699,
+      "Physical DMG(%)": 30.0
+    }
   },
   "Ningguang": {
     "rank": 4,
     "element": "Geo",
     "weapon": "Catalyst",
-    "region": "Liyue"
+    "region": "Liyue",
+    "stats": {
+      "Level":"MAX80 80Lv",
+      "HP": 8764,
+      "ATK": 188,
+      "DEF": 508,
+      "Geo DMG(%)": 18.0
+    }
   },
   "Lisa": {
     "rank": 4,
     "element": "Electro",
     "weapon": "Catalyst",
-    "region": "Mondstadt"
+    "region": "Mondstadt",
+    "stats": {
+      "Level":"MAX80 70Lv",
+      "HP": 7818,
+      "ATK": 212,
+      "DEF": 468,
+      "Element Mastery": 72
+    }
   },
   "Kaeya": {
     "rank": 4,
     "element": "Cryo",
     "weapon": "Sword",
-    "region": "Mondstadt"
+    "region": "Mondstadt",
+    "stats": {
+      "Level": "MAX70 60Lv",
+      "HP": 8184,
+      "ATK": 156,
+      "DEF": 557,
+      "Recharge(%)": 113.3
+    }
   },
   "Fischl": {
     "rank": 4,
     "element": "Electro",
     "weapon": "Bow",
-    "region": "Mondstadt"
+    "region": "Mondstadt",
+    "stats": {
+      "Level":"MAX90 80Lv",
+      "HP": 8553,
+      "ATK": 227,
+      "DEF": 553,
+      "ATK(%)": 24.0
+    }
   },
   "Chongyun": {
     "rank": 4,
     "element": "Cryo",
     "weapon": "Claymore",
-    "region": "Liyue"
+    "region": "Liyue",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "HP": 10223,
+      "ATK": 208,
+      "DEF": 603,
+      "ATK(%)": 24.0
+    }
   },
   "Bennett": {
     "rank": 4,
     "element": "Pyro",
     "weapon": "Sword",
-    "region": "Mondstadt"
+    "region": "Mondstadt",
+    "stats": {
+      "Level": "MAX80 70Lv",
+      "HP": 10129,
+      "ATK": 156,
+      "DEF": 630,
+      "Energy Recharge(%)": 20.0
+    }
   },
   "Beidou": {
     "rank": 4,
     "element": "Electro",
     "weapon": "Claymore",
-    "region": "Liyue"
+    "region": "Liyue",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "HP": 12146,
+      "ATK": 209,
+      "DEF": 658,
+      "Electro DMG(%)": 24.0
+    }
   },
   "Barbara": {
     "rank": 4,
     "element": "Hydro",
     "weapon": "Catalyst",
-    "region": "Mondstadt"
+    "region": "Mondstadt",
+    "stats": {
+      "Level": "MAX70 70Lv",
+      "HP": 7561,
+      "ATK": 123,
+      "DEF": 517,
+      "HP(%)": 12.0 
+    }
   },
   "Amber": {
     "rank": 4,
     "element": "Pyro",
     "weapon": "Bow",
-    "region": "Mondstadt"
+    "region": "Mondstadt",
+    "stats": {
+      "Level": "MAX80 70Lv",
+      "HP": 7730,
+      "ATK": 182,
+      "DEF": 491,
+      "ATK(%)": 18.0
+    }
   }, 
   "Sucrose": {
     "rank": 4,
     "element": "Anemo",
     "weapon": "Catalyst",
-    "region": "Mondstadt"
+    "region": "Mondstadt",
+    "stats": {
+      "Level":"MAX80 70Lv",
+      "HP": 7552,
+      "ATK": 129,
+      "DEF": 574,
+      "Anemo DMG(%)": 18.0 
+    }
   },
   "Xiangling": {
     "rank": 4,
     "element": "Pyro",
     "weapon": "Polearm",
-    "region": "Liyue"
+    "region": "Liyue",
+    "stats": {
+      "Level":"MAX90 80Lv",
+      "HP": 10122,
+      "ATK": 210,
+      "DEF": 623,
+      "Element Mastery": 96
+    }
   },
   "Xingqiu": {
     "rank": 4,
     "element": "Hydro",
     "weapon": "Sword",
-    "region": "Liyue"
+    "region": "Liyue",
+    "stats": {
+      "Level": "MAX80 70Lv",
+      "HP": 8352,
+      "ATK": 165,
+      "DEF": 619,
+      "ATK(%)": 18.0
+    }
   }
 }
