@@ -41,23 +41,23 @@
     "weapon": "Bow",
     "region": "Mondstadt"
   },
-  "FemaleTraveler": {
-    "rank": 5,
-    "element": "Adaptive",
-    "weapon": "Sword",
-    "region": "Unknown"
-  },
-  "MaleTraveler": {
-    "rank": 5,
-    "element": "Adaptive",
-    "weapon": "Sword",
-    "region": "Unknown"
-  },
   "Xiao": {
     "rank": 5,
     "element": "Anemo",
     "weapon": "Polearm",
     "region": "Liyue"
+  },
+  "Traveler (Anemo)": {
+    "rank": 5,
+    "element": "Anemo",
+    "weapon": "Sword",
+    "region": "unknown"
+  },
+  "Traveler (Geo)": {
+    "rank": 5,
+    "element": "Geo",
+    "weapon": "Sword",
+    "region": "unknown"
   },
   "Noelle": {
     "rank": 4,
