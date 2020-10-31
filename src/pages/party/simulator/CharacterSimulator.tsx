@@ -2,8 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { RoundImageButton } from 'src/components';
+import { CharacterName } from 'src/resources/data';
+import { ImageSrc } from 'src/resources/images';
+
 import { CharacterEquipSlot } from './CharacterEquipSlot';
-import { CharacterName, CharacterSrc } from '../PartyScreen';
 
 const Wrapper = styled.div({
   display: 'flex',
@@ -38,14 +40,14 @@ const Inner = styled.div({
 });
 
 interface Props {
-  characters: Array<[string, string | null]>;
+  characters: Array<[CharacterName, ImageSrc]>;
   onClick: Function;
 }
 
 export function CharacterSimulator(props: Props) {
   return (
     <Wrapper>
-      {props.characters.map((dic: [CharacterName, CharacterSrc], index: number) => {
+      {props.characters.map((dic: [CharacterName, ImageSrc], index: number) => {
         return (
           <Inner key={dic[0]}>
             <RoundImageButton

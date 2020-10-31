@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+
+import { ImageSrc } from 'src/resources/images';
+
 import { RoundImage } from '../image/RoundImage';
 
 export interface Style {
@@ -21,7 +24,7 @@ const Container = styled.div<Style>((props: Style) => {
 });
 
 interface Props {
-  src: string | null;
+  src: ImageSrc;
   styles?: Style;
 }
 

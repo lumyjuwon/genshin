@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { ImageSrc } from 'src/resources/images';
+
 import { RoundImage } from '../image/RoundImage';
 import { FlexWrapper } from '../wrapper/FlexWrapper';
 import { Style as ImageStyle } from '../image/RoundImage';
@@ -107,7 +109,7 @@ const Description = styled.div<DescStyle>((props: DescStyle) => {
 });
 
 interface Props {
-  src: string;
+  src: ImageSrc;
   title: string;
   desc?: string;
   styles?: {

@@ -1,13 +1,15 @@
 import React from 'react';
 
+import { ImageSrc } from 'src/resources/images';
 import { RoundImage } from 'src/components';
 import { ItemBadgeBox } from 'src/components';
+
 import { Style } from '../../components/box/ItemBadgeBox';
 
 interface Props {
-  floatImagePath: string | null;
+  floatImagePath: ImageSrc;
   fillFloatBackground: boolean;
-  src: string | null;
+  src: ImageSrc;
   onClick: Function;
   item: string;
   styles?: Style;

@@ -45,9 +45,5 @@ interface Props {
 }
 
 export function UnderlineInputText(props: Props) {
-  return (
-    // <Container style={props.styles?.ContainerStyles}>
-    <Input placeholder={props.placeholder} {...props.styles?.InputStyle}></Input>
-    // </Container>
-  );
+  return <Input placeholder={props.placeholder} {...props.styles?.InputStyle}></Input>;
 }
