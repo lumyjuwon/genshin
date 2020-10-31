@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { characterInfo, weaponInfo, artifactInfo } from 'src/resources/data';
+import { ImageSrc } from 'src/resources/images';
+
 import { TooltipText, TooltipStyle } from '../text/TooltipText';
 import { ButtonStyle } from '../button/RoundButton';
 import { RoundImage, Style as RoundImageStyle } from '../image/RoundImage';
@@ -89,7 +91,7 @@ interface ItemInfo {
 
 interface Props {
   children?: JSX.Element;
-  src: string | null;
+  src: ImageSrc;
   onClick?: Function;
   item: string;
   isActive?: boolean;
@@ -113,8 +115,6 @@ export function ItemBadgeBox(props: Props) {
     return info;
   };
 
-  console.log(whatKindsOfItem(props.item));
-
   return (
     <Relative {...props.styles?.boxStyles}>
       <>
@@ -130,7 +130,7 @@ export function ItemBadgeBox(props: Props) {
         </HoverVisibleElement>
       </>
       {props.starVisible ? (
-        <StarEmoji role="img" {...props.styles?.starStyles}>
+        <StarEmoji role='img' {...props.styles?.starStyles}>
           {'⭐'.repeat(whatKindsOfItem(props.item).rank)}
         </StarEmoji>
       ) : null}

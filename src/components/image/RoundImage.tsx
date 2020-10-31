@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { ImageSrc } from 'src/resources/images';
+
 export interface Style {
   readonly width?: string;
   readonly height?: string;
@@ -38,7 +40,7 @@ const Image = styled.img<Style>((props: Style) => {
 });
 
 interface Props {
-  src: string | null;
+  src: ImageSrc;
   styles?: Style;
 }
 

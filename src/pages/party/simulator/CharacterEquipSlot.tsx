@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import { GridWrapper, Modal, RoundImageButton } from 'src/components';
 import { artifactInfo, ArtifactType, characterInfo, weaponInfo, WeaponType } from 'src/resources/data';
-import { ItemButton } from '../ItemButton';
 import { ItemTypeImages, ItemImages } from 'src/resources/images';
+import { GridWrapper, Modal, RoundImageButton } from 'src/components';
+import { ImageSrc } from 'src/resources/images';
+
+import { ItemButton } from '../ItemButton';
 
 interface Items {
   [name: string]: {
@@ -21,7 +23,7 @@ interface EquipmentButtonProps {
 
 const EquipmentButton = (props: EquipmentButtonProps) => {
   const [equipment, setEquipment] = useState<string>('');
-  const [equipmentSrc, setEquipmentSrc] = useState<string | null>(null);
+  const [equipmentSrc, setEquipmentSrc] = useState<ImageSrc>(null);
   const [isVisibleEquipmentModal, setIsVisibleEquipmentModal] = useState<boolean>(false);
 
   return (
@@ -107,7 +109,7 @@ const Container = styled.div({
 });
 
 interface Props {
-  characterSrc: string | null;
+  characterSrc: ImageSrc;
   characterName: string;
 }
 

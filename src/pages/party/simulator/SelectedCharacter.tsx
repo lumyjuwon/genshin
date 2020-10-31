@@ -1,9 +1,11 @@
 import React from 'react';
-import { RoundImage } from 'src/components';
 import styled from 'styled-components';
 
+import { RoundImage } from 'src/components';
+import { ImageSrc } from 'src/resources/images';
+
 interface Props {
-  src: string | null;
+  src: ImageSrc;
 }
 
 const Container = styled.div({

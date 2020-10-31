@@ -1,7 +1,9 @@
 import { weaponInfo, artifactInfo, characterInfo } from '../data';
 
+export type ImageSrc = string | null;
+
 interface ImageMap {
-  [name: string]: string;
+  [name: string]: ImageSrc;
 }
 
 function appendImages(map: any, info: any, path: string): void {
@@ -27,14 +29,13 @@ const ElementImages: ImageMap = {
   Pyro: require('./elements/Pyro.png')
 };
 
-
 const WeaponTypeImages: ImageMap = {
   Bow: require('./items/weapons/Bow.png'),
   Catalyst: require('./items/weapons/Catalyst.png'),
   Claymore: require('./items/weapons/Claymore.png'),
   Polearm: require('./items/weapons/Polearm.png'),
   Sword: require('./items/weapons/Sword.png')
-}
+};
 
 const ItemImages: ImageMap = {};
 appendImages(ItemImages, weaponInfo, './items/weapons');
@@ -45,8 +46,8 @@ const ArtifactTypeImages: ImageMap = {
   Feather: require('./items/artifacts/Feather.png'),
   HourGlass: require('./items/artifacts/HourGlass.png'),
   HolyGrail: require('./items/artifacts/HolyGrail.png'),
-  Crown: require('./items/artifacts/Crown.png'),
-}
+  Crown: require('./items/artifacts/Crown.png')
+};
 
 const MainScreen = {
   Gacha: require('./mainscreen/gacha.png'),

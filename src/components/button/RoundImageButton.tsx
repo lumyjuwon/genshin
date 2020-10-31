@@ -1,9 +1,12 @@
 import React from 'react';
+
+import { ImageSrc } from 'src/resources/images';
+
 import { RoundImage, Style } from '../image/RoundImage';
 import { RoundButton, ButtonStyle } from './RoundButton';
 
 interface Props {
-  readonly src: string | null;
+  readonly src: ImageSrc;
   readonly onClick: Function;
   readonly styles?: {
     readonly buttonStyles?: ButtonStyle;
