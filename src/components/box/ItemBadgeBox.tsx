@@ -23,12 +23,12 @@ interface AbsoluteStyle {
 }
 
 interface StarStyle {
-  marginLeft?: string;
+  margin?: string;
   letterSpacing?: string;
   fontSize?: string;
   small?: {
     fontSize: string;
-    marginLeft?: string;
+    margin?: string;
     letterSpacing?: string;
   };
 }
@@ -59,14 +59,14 @@ const Element = styled.div<AbsoluteStyle>((props: AbsoluteStyle) => {
 
 const StarEmoji = styled.span<StarStyle>((props: StarStyle) => {
   return {
-    marginLeft: props.marginLeft || '-5px',
     display: 'inline-block',
+    margin: props.margin || '0 0 0 -5px',
     letterSpacing: props.letterSpacing || '-10px',
     fontSize: props.fontSize || '16px',
     width: '100%',
     textAlign: 'center',
     '@media screen and (max-width: 768px)': {
-      marginLeft: props.small?.marginLeft || props.marginLeft || '-5px',
+      margin: props.small?.margin || props.margin || '-5px',
       letterSpacing: props.small?.letterSpacing || props.letterSpacing || '-10px',
       fontSize: props.small?.fontSize || props.fontSize || '14px'
     }
@@ -131,7 +131,7 @@ export function ItemBadgeBox(props: Props) {
         </HoverVisibleElement>
       </>
       {props.starVisible ? (
-        <StarEmoji role='img' {...props.styles?.starStyles}>
+        <StarEmoji role="img" {...props.styles?.starStyles}>
           {'⭐'.repeat(whatKindsOfItem(props.item).rank)}
         </StarEmoji>
       ) : null}
