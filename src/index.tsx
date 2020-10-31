@@ -1,5 +1,4 @@
-import './index.css';
-import './resources/languages/index';
+import './resources/languages';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
