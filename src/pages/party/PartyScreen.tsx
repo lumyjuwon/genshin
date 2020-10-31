@@ -4,7 +4,7 @@ import { ContentWrapper, GridWrapper, Modal } from 'src/components';
 import { characterInfo } from 'src/resources/data';
 
 import { Menu } from './Menu';
-import { SelectButton } from './SelectButton';
+import { ItemButton } from './ItemButton';
 import { CharacterSimulator } from './simulator/CharacterSimulator';
 import { ElementResult } from './element/ElementResult';
 
@@ -99,7 +99,7 @@ export function PartyScreen() {
         <GridWrapper>
           {Object.keys(characterInfo).map((name: string) => {
             return (
-              <SelectButton
+              <ItemButton
                 key={name}
                 fillFloatBackground={false}
                 floatImagePath={require(`../../resources/images/elements/${characterInfo[name].element}.png`)}

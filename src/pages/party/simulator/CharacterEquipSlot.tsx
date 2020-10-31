@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { GridWrapper, Modal, RoundImageButton } from 'src/components';
 import { artifactInfo, weaponInfo } from 'src/resources/data';
-import { SelectButton } from '../SelectButton';
+import { ItemButton } from '../ItemButton';
 
 interface EquipmentButtonProps {
   type: string;
@@ -53,7 +53,7 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
             ? Object.keys(weaponInfo).map((weaponName: string) => {
                 if (weaponInfo[weaponName].type === props.type) {
                   return (
-                    <SelectButton
+                    <ItemButton
                       key={weaponName}
                       fillFloatBackground={true}
                       floatImagePath={require(`../../../resources/images/items/weapons/${weaponInfo[weaponName].type}.png`)}
@@ -96,7 +96,7 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
             : Object.keys(artifactInfo).map((artifactName: string) => {
                 if (artifactInfo[artifactName].type && artifactInfo[artifactName].type === props.type) {
                   return (
-                    <SelectButton
+                    <ItemButton
                       key={artifactName}
                       fillFloatBackground={true}
                       floatImagePath={require(`../../../resources/images/items/artifacts/${artifactInfo[artifactName].type}.png`)}
