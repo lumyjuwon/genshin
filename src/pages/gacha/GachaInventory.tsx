@@ -2,8 +2,11 @@ import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 
 import { trans, Lang } from 'src/resources/languages';
-import { FlexWrapper, RoundImage, TextCenterWrapper, CheckBoxButton, HoverDropDown, TooltipText } from 'src/components';
+import { FlexWrapper, RoundImage, TextCenterWrapper, CheckBoxButton, HoverDropDown, TooltipText, ItemBadgeBox } from 'src/components';
 import { characterInfo, gachaInfo, weaponInfo } from 'src/resources/data';
+import { GachaImages, GachaTypeImages } from 'src/resources/images';
+
+const items = Object.assign({}, characterInfo, weaponInfo);
 
 interface Props {
   inventoryList: Array<string>;
@@ -22,15 +25,16 @@ const GridContainer = styled.div({
   justifyItems: 'center',
   alignContent: 'center',
   justifyContent: 'center',
-  gridTemplateColumns: 'repeat(10, 100px)',
+  gridTemplateColumns: 'repeat(9, 120px)',
   gridTemplateRows: 'repeat(autofit, 100px)',
   columnGap: '10px',
   rowGap: '10px',
   '@media screen and (max-width: 1380px)': {
-    gridTemplateColumns: 'repeat(6, 100px)'
+    gridTemplateColumns: 'repeat(6, 120px)',
+    columnGap: '4px'
   },
   '@media screen and (max-width: 768px)': {
-    gridTemplateColumns: 'repeat(3, 81px)'
+    gridTemplateColumns: 'repeat(3, 90px)'
   }
 });
 
@@ -45,15 +49,8 @@ const PositionAbsolute = styled.div({
   backgroundColor: '#ff0000',
   width: '25px',
   height: '25px',
+  zIndex: 1,
   boxShadow: '4px 4px 2px rgba(0,0,0,0.5)'
-});
-
-const StarEmoji = styled.span({
-  marginLeft: '-5px',
-  display: 'inline-block',
-  letterSpacing: '-10px',
-  width: '100%',
-  textAlign: 'center'
 });
 
 const HoverVisibleElement = styled.div({
@@ -217,24 +214,19 @@ export function GachaInventory(props: Props) {
         {inventoryItems.map((item: string, index: number) => {
           return (
             <Item key={index}>
-              {characterInfo[item] ? (
-                <RoundImage
-                  styles={{ borderRadius: '16px', small: { width: '80px', height: '80px' } }}
-                  src={require(`../../resources/images/gacha/${item}_sm.png`)}
-                />
-              ) : (
-                <RoundImage
-                  styles={{ borderRadius: '16px', small: { width: '80px', height: '80px' } }}
-                  src={require(`../../resources/images/items/weapons/${item}.png`)}
-                />
-              )}
-              <HoverVisibleElement>
-                <TooltipText styles={{ fontSize: '14px', small: { fontSize: '12px' } }}>
-                  {trans(Lang[item.replace(/\s|-/g, '_').replace(/'/g, '') as Lang])}
-                </TooltipText>
-              </HoverVisibleElement>
               <PositionAbsolute>{inventory.get(item)}</PositionAbsolute>
-              <StarEmoji role="img">{'⭐'.repeat(itemRank[index])}</StarEmoji>
+              <ItemBadgeBox
+                src={GachaImages[item]}
+                item={item}
+                starVisible={true}
+                styles={{
+                  roundImageStyles: { borderRadius: '16px', small: { width: '80px', height: '80px ' } },
+                  tooltipStyles: { fontSize: '14px', small: { fontSize: '12px' } },
+                  absoluteStyles: { top: '70px' }
+                }}
+              >
+                <RoundImage src={GachaTypeImages[items[item].type || items[item].element]} styles={{ width: '30px', height: '30px' }} />
+              </ItemBadgeBox>
             </Item>
           );
         })}
