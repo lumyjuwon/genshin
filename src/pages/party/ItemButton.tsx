@@ -15,7 +15,7 @@ interface Props {
   starVisible: boolean;
 }
 
-export function SelectButton(props: Props) {
+export function ItemButton(props: Props) {
   return (
     <ItemBadgeBox onClick={props.onClick} item={props.item} starVisible={props.starVisible} src={props.src} styles={props.styles}>
       <RoundImage
