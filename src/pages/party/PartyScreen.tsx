@@ -1,23 +1,21 @@
 import React, { useEffect, useState } from 'react';
 
 import { ContentWrapper, GridWrapper, Modal } from 'src/components';
-import { characterInfo } from 'src/resources/data';
-import { CharacterImages, ElementImages } from 'src/resources/images';
+import { characterInfo, CharacterName } from 'src/resources/data';
+import { CharacterImages, ElementImages, ImageSrc } from 'src/resources/images';
 
 import { Menu } from './Menu';
 import { ItemButton } from './ItemButton';
 import { CharacterSimulator } from './simulator/CharacterSimulator';
-import { ElementResult } from './element/ElementResult';
+import { BuffResult } from './BuffResult';
 
-export type CharacterName = string;
-export type CharacterSrc = string | null;
 type ElementName = string;
 type ElementCount = number;
 
 const MAX_SELECTED_CHARACTER = 4;
 
-const selectedCharacters = new Map<CharacterName, CharacterSrc>(new Map());
-const emptyCharacters = new Map<CharacterName, CharacterSrc>([
+const selectedCharacters = new Map<CharacterName, ImageSrc>(new Map());
+const emptyCharacters = new Map<CharacterName, ImageSrc>([
   ['0', null],
   ['1', null],
   ['2', null],
@@ -25,7 +23,7 @@ const emptyCharacters = new Map<CharacterName, CharacterSrc>([
 ]);
 
 export function PartyScreen() {
-  const [allCharacters, setAllCharacters] = useState<Array<[CharacterName, CharacterSrc]>>([]);
+  const [allCharacters, setAllCharacters] = useState<Array<[CharacterName, ImageSrc]>>([]);
   const [activeElements, setActiveElements] = useState<Map<ElementName, ElementCount>>(new Map());
   const [isVisibleCharacterModal, setIsVisibleCharacterModal] = useState<boolean>(false);
 
@@ -45,7 +43,7 @@ export function PartyScreen() {
     }
   }
 
-  function changeActiveElements(characters: Map<CharacterName, CharacterSrc>) {
+  function changeActiveElements(characters: Map<CharacterName, ImageSrc>) {
     const activeElems: Map<ElementName, ElementCount> = new Map();
 
     characters.forEach((value: any, name: string) => {
@@ -63,7 +61,7 @@ export function PartyScreen() {
     setActiveElements(activeElems);
   }
 
-  function selectCharacter(name: CharacterName, resource: CharacterSrc) {
+  function selectCharacter(name: CharacterName, resource: ImageSrc) {
     if (selectedCharacters.has(name)) {
       selectedCharacters.delete(name);
     } else {
@@ -89,7 +87,7 @@ export function PartyScreen() {
             setIsVisibleCharacterModal(true);
           }}
         />
-        <ElementResult activeElements={activeElements} />
+        <BuffResult activeElements={activeElements} />
       </>
       <Modal
         cancel={() => {
