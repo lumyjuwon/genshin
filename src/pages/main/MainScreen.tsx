@@ -16,9 +16,7 @@ const ImageContainer = styled.div({
   backgroundImage: `url(${require('../../resources/images/mainscreen/main.jpg')})`,
   backgroundSize: 'cover',
   '@media screen and (max-width: 768px)': {
-    height: 'auto',
-    backgroundImage: 'none',
-    backgroundColor: '#333'
+    visibility: 'hidden'
   }
 });
 
@@ -34,7 +32,9 @@ const Containter = styled.div({
     padding: '70px 100px'
   },
   '@media screen and (max-width: 768px)': {
-    padding: '50px 80px'
+    padding: '50px 80px',
+    height: '100%',
+    minHeight: '90vh'
   }
 });
 

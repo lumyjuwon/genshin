@@ -40,7 +40,8 @@ const Button = styled.div<ButtonStyle>((props: ButtonStyle) => {
       boxShadow: 'inset 0 -2px 0 #f1f2f3'
     },
     '@media screen and (max-width: 768px)': {
-      width: props.small?.width || props.width || 'fit-content'
+      width: props.small?.width || props.width || 'fit-content',
+      padding: '15px 10px'
     }
   };
 });
