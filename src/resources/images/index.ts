@@ -7,13 +7,13 @@ interface ImageMap {
 }
 
 function appendImages(map: any, info: any, path: string): void {
-  Object.keys(info).map((name: string) => {
+  for (const name of Object.keys(info)) {
     if (map[name] === undefined) {
       map[name] = require(`${path}/${name}.png`);
     } else {
       throw new Error(`중복되는 값이 있습니다: ${name}`);
     }
-  });
+  }
 }
 
 const CharacterImages: ImageMap = {};
