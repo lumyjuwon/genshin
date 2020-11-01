@@ -20,7 +20,6 @@ export function LangaugeSelector(props: Props) {
       onClick={(langCode: LangCode) => {
         changeLang(langCode);
         props.onCallBack(langCode);
-        console.log(langCode);
       }}
       content={<i className='fas fa-globe'></i>}
       defaultValue={props.defaultValue}

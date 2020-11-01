@@ -123,7 +123,6 @@ export function HoverDropDown(props: Props) {
             <List
               key={item}
               onClick={() => {
-                console.log(item);
                 props.onClick(item);
               }}
             >
