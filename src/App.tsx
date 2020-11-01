@@ -49,6 +49,10 @@ const NavList = styled.div({
   }
 });
 
+const ContactUs = styled.div({
+  verticalAlign: 'baseline'
+});
+
 const ToggleIcon = styled.div({
   display: 'none',
   fontSize: '30px',
@@ -84,6 +88,9 @@ function App() {
   const onNavClick = (ref: React.RefObject<HTMLDivElement>) => {
     deleteSelected();
     ref.current && (ref.current.className += ' selected');
+    if (window.innerWidth <= 768) {
+      onToggleClick();
+    }
   };
 
   return (
@@ -154,13 +161,13 @@ function App() {
                   <FooterText>{trans(Lang.Main_Terms_Of_Service)}</FooterText>
                 </TextUnderLineButton>
               </Link>
-              <Link to="/about">
+              <ContactUs>
                 <TextUnderLineButton>
-                  <FooterText>
-                    <a href="mailto:genshinsimul@gmail.com">Contact Us</a>
-                  </FooterText>
+                  <a href="mailto:genshinsimul@gmail.com">
+                    <FooterText>Contact Us</FooterText>
+                  </a>
                 </TextUnderLineButton>
-              </Link>
+              </ContactUs>
             </>
           </FlexWrapper>
         </>
