@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { ItemBadgeBox, RoundImage, RoundImageButton } from 'src/components';
+import { ItemBadgeBox, RoundImage, RoundImageBox } from 'src/components';
 import { CharacterName } from 'src/resources/data';
 import { ImageSrc, ElementImages } from 'src/resources/images';
 import { characterInfo } from 'src/resources/data';
@@ -54,6 +54,10 @@ export function CharacterSimulator(props: Props) {
             <ItemBadgeBox
               tooltip={dic[0]}
               rank={1}
+              hoverInnerColor={'#f1f2f3'}
+              onClick={() => {
+                props.onClick();
+              }}
               badge={
                 <RoundImage
                   src={dic[1] !== undefined ? ElementImages[characterInfo[dic[0]].element] : undefined}
@@ -68,20 +72,22 @@ export function CharacterSimulator(props: Props) {
                 />
               }
               child={
-                <RoundImageButton
+                <RoundImageBox
                   src={dic[1]}
-                  onClick={() => {
-                    props.onClick();
-                  }}
                   styles={{
-                    buttonStyles: {
+                    boxStyle: {
                       width: '120px',
                       height: '120px',
                       margin: '0',
                       medium: { width: '90px', height: '90px' },
                       small: { width: '80px', height: '80px' }
                     },
-                    imageStyles: { medium: { width: '80px', height: '80px' }, small: { width: '70px', height: '70px' } }
+                    imageStyle: {
+                      width: '100px',
+                      height: '100px',
+                      medium: { width: '90px', height: '90px' },
+                      small: { width: '80px', height: '80px' }
+                    }
                   }}
                 />
               }
