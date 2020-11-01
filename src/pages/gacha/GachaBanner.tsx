@@ -25,7 +25,7 @@ export function GachaBanner(props: Props) {
               fontSize: '20px',
               small: { width: '220px', fontSize: '16px', height: '35px' }
             },
-            listStyles: { width: '300px', top: '39px', left: '-1px', small: { width: '220px', top: '34px' } }
+            listStyles: { width: '300px', top: '39px', right: '-1px', small: { width: '220px', top: '34px' } }
           }}
           onClick={props.onClick}
           content={trans(Lang[props.content as Lang])}

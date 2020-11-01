@@ -122,7 +122,7 @@ export function GachaInventory(props: Props) {
             content={filter}
             styles={{
               containerStyles: { width: '110px', height: '30px', small: { fontSize: '14px' } },
-              listStyles: { width: '110px', top: '29px', left: '-1px' }
+              listStyles: { width: '110px', top: '29px', right: '-1px' }
             }}
           />
           <CheckBoxButton onClick={() => onLabelClicked()} refProp={inputRef} styles={{ labelStyles: { small: { fontSize: '14px' } } }}>
