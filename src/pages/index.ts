@@ -4,4 +4,3 @@ export { PartyScreen } from "./party/PartyScreen";
 export { MainScreen } from './main/MainScreen';
 export { Policy } from './footer/Policy';
 export { Terms } from './footer/Terms';
-export { About } from './footer/About';

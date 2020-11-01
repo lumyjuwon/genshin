@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 
-import { GachaScreen, PartyScreen, MainScreen, Policy, Terms, About } from 'src/pages';
+import { GachaScreen, PartyScreen, MainScreen, Policy, Terms } from 'src/pages';
 import { Header, Footer, TextBlockButton, TextUnderLineButton, FlexWrapper } from 'src/components';
 import { LangaugeSelector } from './LangaugeSelector';
 import { trans, Lang, LangCode } from './resources/languages';
@@ -138,7 +138,6 @@ function App() {
         <Route path="/party" component={PartyScreen} />
         <Route path="/policy" component={Policy} />
         <Route path="/terms" component={Terms} />
-        <Route path="/about" component={About} />
       </Switch>
       <Footer>
         <>
@@ -157,7 +156,9 @@ function App() {
               </Link>
               <Link to="/about">
                 <TextUnderLineButton>
-                  <FooterText>About Us</FooterText>
+                  <FooterText>
+                    <a href="mailto:genshinsimul@gmail.com">Contact Us</a>
+                  </FooterText>
                 </TextUnderLineButton>
               </Link>
             </>
