@@ -11,7 +11,7 @@ const Wrapper = styled.div({
   position: 'fixed',
   overflowY: 'scroll',
   overflowX: 'hidden',
-  zIndex: 20,
+  zIndex: 1000,
   top: 0,
   right: 0,
   display: 'flex',

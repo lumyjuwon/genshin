@@ -25,7 +25,7 @@ const Details = styled.div({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  zIndex: 10,
+  zIndex: 1000,
   '@media screen and (max-height: 575px)': {
     alignItems: 'flex-start',
     overflowY: 'scroll',
