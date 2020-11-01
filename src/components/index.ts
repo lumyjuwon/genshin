@@ -40,6 +40,7 @@ export { Modal } from './modal/Modal';
 // Text
 export { TooltipText } from './text/TooltipText';
 export { renderNewLine } from './text/RenderNewLine';
+export { EmojiText } from './text/EmojiText';
 
 // Box
 export { ItemBadgeBox } from './box/ItemBadgeBox';
