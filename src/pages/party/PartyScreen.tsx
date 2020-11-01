@@ -15,10 +15,10 @@ const MAX_SELECTED_CHARACTER = 4;
 
 const selectedCharacters = new Map<CharacterName, ImageSrc>(new Map());
 const emptyCharacters = new Map<CharacterName, ImageSrc>([
-  ['0', null],
-  ['1', null],
-  ['2', null],
-  ['3', null]
+  ['0', undefined],
+  ['1', undefined],
+  ['2', undefined],
+  ['3', undefined]
 ]);
 
 export function PartyScreen() {
@@ -37,7 +37,7 @@ export function PartyScreen() {
 
     let emptyCharacterCount = 0;
     while (emptyCharacterCount !== MAX_SELECTED_CHARACTER - filledCharacterSize) {
-      emptyCharacters.set(emptyCharacterCount.toString(), null);
+      emptyCharacters.set(emptyCharacterCount.toString(), undefined);
       emptyCharacterCount++;
     }
   }

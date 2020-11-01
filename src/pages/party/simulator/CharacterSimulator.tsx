@@ -56,7 +56,7 @@ export function CharacterSimulator(props: Props) {
               rank={1}
               badge={
                 <RoundImage
-                  src={dic[1] !== null ? ElementImages[characterInfo[dic[0]].element] : null}
+                  src={dic[1] !== undefined ? ElementImages[characterInfo[dic[0]].element] : undefined}
                   styles={{
                     width: '30px',
                     height: '30px',

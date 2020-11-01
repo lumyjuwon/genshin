@@ -41,7 +41,7 @@ interface Props {
 }
 
 export function SquareImage(props: Props) {
-  if (props.src === null) {
+  if (props.src === undefined) {
     return null;
   }
   return <Image {...props.styles} src={props.src} />;

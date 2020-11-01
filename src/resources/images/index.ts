@@ -1,6 +1,6 @@
 import { weaponInfo, artifactInfo, characterInfo } from '../data';
 
-export type ImageSrc = string | null | undefined;
+export type ImageSrc = string | undefined;
 
 interface ImageMap {
   [name: string]: ImageSrc;

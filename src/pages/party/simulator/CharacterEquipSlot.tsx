@@ -20,25 +20,51 @@ interface EquipmentButtonProps {
 }
 
 const EquipmentButton = (props: EquipmentButtonProps) => {
-  const [equipment, setEquipment] = useState<string>('');
-  const [equipmentSrc, setEquipmentSrc] = useState<ImageSrc>(null);
+  const [equipmentName, setEquipmentName] = useState<string>('');
+  const [equipmentSrc, setEquipmentSrc] = useState<ImageSrc>(undefined);
   const [isVisibleEquipmentModal, setIsVisibleEquipmentModal] = useState<boolean>(false);
 
   return (
     <BoxModelWrapper styles={{ margin: '0 0 0 12px', small: { margin: '0 0 3px 6px' } }}>
-      <RoundImageButton
-        src={equipmentSrc}
-        onClick={() => {
-          setIsVisibleEquipmentModal(true);
-        }}
+      <ItemBadgeBox
+        tooltip={equipmentName}
+        badge={
+          <RoundImage
+            src={equipmentSrc}
+            styles={{
+              width: '30px',
+              height: '30px',
+              small: {
+                width: '25px',
+                height: '25px'
+              }
+            }}
+          />
+        }
+        child={
+          <RoundImageButton
+            src={ItemImages[equipmentName]}
+            onClick={() => {
+              setIsVisibleEquipmentModal(true);
+            }}
+            styles={{
+              buttonStyles: {
+                width: '100px',
+                height: '100px',
+                margin: '0px',
+                medium: { width: '75px', height: '75px' },
+                small: { width: '65px', height: '65px', margin: '3px' }
+              },
+              imageStyles: {
+                width: '80px',
+                height: '80px',
+                small: { width: '55px', height: '55px' }
+              }
+            }}
+          />
+        }
         styles={{
-          buttonStyles: {
-            width: '100px',
-            height: '100px',
-            medium: { width: '75px', height: '75px' },
-            small: { width: '65px', height: '65px', margin: '3px' }
-          },
-          imageStyles: { width: '80px', height: '80px', small: { width: '55px', height: '55px' } }
+          tooltipStyles: { bottom: '0' }
         }}
       />
       <Modal
@@ -73,11 +99,11 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
                       src={ItemImages[name]}
                       onClick={() => {
                         setEquipmentSrc(ItemImages[name]);
-                        setEquipment(name);
+                        setEquipmentName(name);
                       }}
                       styles={{
                         buttonStyles: {
-                          backgroundColor: name === equipment ? '#f1f2f3' : 'transparent',
+                          backgroundColor: name === equipmentName ? '#f1f2f3' : 'transparent',
                           margin: '0px'
                         },
                         imageStyles: {
@@ -119,7 +145,7 @@ interface Props {
 }
 
 export function CharacterEquipSlot(props: Props) {
-  if (props.characterSrc !== null) {
+  if (props.characterSrc !== undefined) {
     const itemCategoryList: Array<WeaponType | ArtifactType> = [
       characterInfo[props.characterName].weapon as WeaponType,
       'Flower',
