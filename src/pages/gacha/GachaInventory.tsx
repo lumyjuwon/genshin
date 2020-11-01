@@ -71,12 +71,15 @@ const Item = styled.div`
   }
 `;
 
-const filterList: Array<string> = [
-  trans(Lang.Filter_Rarity),
-  trans(Lang.Filter_Character),
-  trans(Lang.Filter_Weapon),
-  trans(Lang.Filter_PickUp)
-];
+enum Filter {
+  Rarity = 'Filter_Rarity',
+  Character = 'Filter_Character',
+  Weapon = 'Filter_Weapon',
+  PickUps = 'Filter_PickUp'
+}
+
+type FilterKey = keyof typeof Filter;
+const filterList = Object.keys(Filter).map((criteria) => Filter[criteria as FilterKey]);
 
 export function GachaInventory(props: Props) {
   const [isHideThree, setIsHideThree] = useState<boolean>(false);
@@ -119,7 +122,7 @@ export function GachaInventory(props: Props) {
           <HoverDropDown
             items={filterList}
             onClick={onFilterClick}
-            content={filter}
+            content={trans(Lang[filter])}
             styles={{
               containerStyles: { width: '110px', height: '30px', small: { fontSize: '14px' } },
               listStyles: { width: '110px', top: '29px', right: '-1px' }
