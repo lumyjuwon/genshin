@@ -1,5 +1,6 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import { renderNewLine } from 'src/components';
 
 export enum LangCode {
   en = 'en',
@@ -252,7 +253,7 @@ i18n.use(initReactI18next).init({
 });
 
 export function trans(key: Lang): string {
-  return i18n.t(key);
+  return renderNewLine(i18n.t(key));
 }
 
 export function changeLang(code: LangCode): void {
