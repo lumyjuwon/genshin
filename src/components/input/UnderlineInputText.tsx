@@ -1,20 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-interface ContainerStyle {
-  readonly width?: string;
-  readonly height?: string;
-  readonly borderColor?: string;
-}
-
-const Container = styled.div<ContainerStyle>((props: ContainerStyle) => {
-  return {
-    width: props.width || 'fit-content',
-    height: props.height || 'auto',
-    borderColor: props.borderColor || 'white'
-  };
-});
-
 interface InputStyle {
   width?: string;
   height?: string;
@@ -38,7 +24,6 @@ const Input = styled.input<InputStyle>((props: InputStyle) => {
 interface Props {
   placeholder?: string;
   styles?: {
-    ContainerStyles?: ContainerStyle;
     InputStyle?: InputStyle;
   };
 }

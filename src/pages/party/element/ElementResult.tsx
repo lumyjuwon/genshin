@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ElementCircleList } from './ElementCircleList';
+// import { ElementCircleList } from './ElementCircleList';
 import { ElementBuffText } from './ElementBuffText';
 
 interface Props {

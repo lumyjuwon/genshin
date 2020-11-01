@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-import { ContentWrapper, GridWrapper, ItemBadgeBox, Modal, RoundImage, RoundImageBox, RoundImageButton } from 'src/components';
-import { ArtifactName, characterInfo, CharacterName } from 'src/resources/data';
+import { ContentWrapper, GridWrapper, ItemBadgeBox, Modal, RoundImage, RoundImageBox } from 'src/components';
+import { characterInfo, CharacterName } from 'src/resources/data';
 import { CharacterImages, ElementImages, ImageSrc } from 'src/resources/images';
 
 import { Menu } from './Menu';
@@ -13,7 +13,7 @@ type ElementCount = number;
 
 const MAX_SELECTED_CHARACTER = 4;
 
-const selectedArtifacts = new Map<ArtifactName, ImageSrc>(new Map());
+// const selectedArtifacts = new Map<ArtifactName, ImageSrc>(new Map());
 const selectedCharacters = new Map<CharacterName, ImageSrc>(new Map());
 const emptyCharacters = new Map<CharacterName, ImageSrc>([
   ['0', undefined],

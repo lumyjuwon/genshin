@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { artifactInfo, ArtifactType, characterInfo, weaponInfo, WeaponType } from 'src/resources/data';
 import { ItemTypeImages, ItemImages } from 'src/resources/images';
-import { GridWrapper, ItemBadgeBox, Modal, RoundImage, RoundImageButton, BoxModelWrapper, RoundImageBox } from 'src/components';
+import { GridWrapper, ItemBadgeBox, Modal, RoundImage, BoxModelWrapper, RoundImageBox } from 'src/components';
 import { ImageSrc } from 'src/resources/images';
 
 interface Items {
