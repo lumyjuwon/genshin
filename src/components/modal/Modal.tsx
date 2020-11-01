@@ -9,6 +9,8 @@ const Wrapper = styled.div({
   width: '100vw',
   height: '100vh',
   position: 'fixed',
+  overflowY: 'scroll',
+  overflowX: 'hidden',
   zIndex: 20,
   top: 0,
   right: 0,
@@ -17,10 +19,8 @@ const Wrapper = styled.div({
   justifyContent: 'center',
   alignItems: 'center',
   backgroundColor: 'rgba(0, 0, 0, 0.5)',
-  '@media screen and (max-width: 375px)': {
-    alignItems: 'flex-start',
-    overflowY: 'scroll',
-    overflowX: 'hidden'
+  '@media screen and (max-height: 670px)': {
+    alignItems: 'flex-start'
   }
 });
 

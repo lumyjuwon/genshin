@@ -3,10 +3,8 @@ import styled from 'styled-components';
 
 import { artifactInfo, ArtifactType, characterInfo, weaponInfo, WeaponType } from 'src/resources/data';
 import { ItemTypeImages, ItemImages } from 'src/resources/images';
-import { GridWrapper, MarginBox, Modal, RoundImageButton } from 'src/components';
+import { GridWrapper, MarginBox, ItemBadgeBox, Modal, RoundImage, RoundImageButton } from 'src/components';
 import { ImageSrc } from 'src/resources/images';
-
-import { ItemButton } from '../ItemButton';
 
 interface Items {
   [name: string]: {
@@ -28,83 +26,56 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
 
   return (
     <MarginBox styles={{ margin: '0 0 0 12px', small: { margin: '0 0 3px 6px' } }}>
-      <>
-        {equipment ? (
-          <ItemButton
-            fillFloatBackground={true}
-            floatImagePath={ItemTypeImages[items[equipment].type]}
-            item={equipment}
-            src={ItemImages[equipment]}
-            onClick={() => {
-              setIsVisibleEquipmentModal(true);
-            }}
-            starVisible={true}
-            styles={{
-              boxStyles: { margin: '0', small: { margin: '0' } },
-              absoluteStyles: {},
-              starStyles: {},
-              roundImageButtonStyles: {
-                buttonStyles: {
-                  width: '100px',
-                  height: '100px',
-                  margin: '0',
-                  medium: { width: '75px', height: '75px' },
-                  small: { width: '65px', height: '65px', margin: '0' }
-                },
-                imageStyles: { width: '80px', height: '80px', small: { width: '55px', height: '55px' } }
-              },
-              tooltipStyles: {
-                fontSize: '14px',
-                bottom: '0px',
-                small: { fontSize: '12px' }
-              }
-            }}
-          />
-        ) : (
-          <RoundImageButton
-            src={equipmentSrc}
-            onClick={() => {
-              setIsVisibleEquipmentModal(true);
-            }}
-            styles={{
-              buttonStyles: {
-                width: '100px',
-                height: '100px',
-                margin: '0 0 22px',
-                medium: { width: '75px', height: '75px' },
-                small: { width: '65px', height: '65px', margin: '0 0 22px' }
-              },
-              imageStyles: { width: '80px', height: '80px', small: { width: '55px', height: '55px' } }
-            }}
-          />
-        )}
-
-        <Modal
-          cancel={() => {
-            setIsVisibleEquipmentModal(false);
-          }}
-          visible={isVisibleEquipmentModal}
-        >
-          <GridWrapper>
-            {Object.keys(items).map((name: string) => {
-              if (items[name] && items[name].type === props.category) {
-                return (
-                  <ItemButton
-                    key={name}
-                    fillFloatBackground={true}
-                    floatImagePath={ItemTypeImages[items[name].type]}
-                    item={name}
-                    src={ItemImages[name]}
-                    onClick={() => {
-                      setEquipmentSrc(ItemImages[name]);
-                      setEquipment(name);
-                    }}
-                    starVisible={true}
-                    styles={{
-                      boxStyles: {},
-                      absoluteStyles: {},
-                      starStyles: {},
-                      roundImageButtonStyles: {
+      <RoundImageButton
+        src={equipmentSrc}
+        onClick={() => {
+          setIsVisibleEquipmentModal(true);
+        }}
+        styles={{
+          buttonStyles: {
+            width: '100px',
+            height: '100px',
+            medium: { width: '75px', height: '75px' },
+            small: { width: '65px', height: '65px', margin: '3px' }
+          },
+          imageStyles: { width: '80px', height: '80px', small: { width: '55px', height: '55px' } }
+        }}
+      />
+      <Modal
+        cancel={() => {
+          setIsVisibleEquipmentModal(false);
+        }}
+        visible={isVisibleEquipmentModal}
+      >
+        <GridWrapper>
+          {Object.keys(items).map((name: string) => {
+            if (items[name] && items[name].type === props.category) {
+              return (
+                <ItemBadgeBox
+                  key={name}
+                  tooltip={name}
+                  rank={items[name].rank}
+                  badge={
+                    <RoundImage
+                      src={ItemTypeImages[items[name].type]}
+                      styles={{
+                        width: '30px',
+                        height: '30px',
+                        small: {
+                          width: '25px',
+                          height: '25px'
+                        }
+                      }}
+                    />
+                  }
+                  image={
+                    <RoundImageButton
+                      src={ItemImages[name]}
+                      onClick={() => {
+                        setEquipmentSrc(ItemImages[name]);
+                        setEquipment(name);
+                      }}
+                      styles={{
                         buttonStyles: {
                           backgroundColor: name === equipment ? '#f1f2f3' : 'transparent',
                           margin: '0px'
@@ -115,22 +86,16 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
                           borderRadius: '35%',
                           small: { width: '60px', height: '60px' }
                         }
-                      },
-                      tooltipStyles: {
-                        fontSize: '14px',
-                        bottom: '0px',
-                        small: { fontSize: '12px' }
-                      }
-                    }}
-                  />
-                );
-              } else {
-                return null;
-              }
-            })}
-          </GridWrapper>
-        </Modal>
-      </>
+                      }}
+                    />
+                  }
+                />
+              );
+            }
+            return null;
+          })}
+        </GridWrapper>
+      </Modal>
     </MarginBox>
   );
 };

@@ -1,14 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { characterInfo, weaponInfo, artifactInfo } from 'src/resources/data';
-import { ImageSrc } from 'src/resources/images';
+import { Rank } from 'src/resources/data';
+import { trans, Lang } from 'src/resources/languages';
 
 import { TooltipText, TooltipStyle } from '../text/TooltipText';
-import { ButtonStyle } from '../button/RoundButton';
-import { RoundImage, Style as RoundImageStyle } from '../image/RoundImage';
-import { RoundImageButton } from '../button/RoundImageButton';
-import { trans, Lang } from 'src/resources/languages';
 
 interface BoxStyle {
   margin?: string;
@@ -17,12 +13,12 @@ interface BoxStyle {
   };
 }
 
-interface AbsoluteStyle {
+interface BadgePosition {
   top?: string;
   right?: string;
 }
 
-interface StarStyle {
+interface RankStyle {
   margin?: string;
   letterSpacing?: string;
   fontSize?: string;
@@ -48,7 +44,7 @@ const Relative = styled.div<BoxStyle>`
   }
 `;
 
-const Element = styled.div<AbsoluteStyle>((props: AbsoluteStyle) => {
+const BadgeContainer = styled.div<BadgePosition>((props: BadgePosition) => {
   return {
     position: 'absolute',
     top: props.top || '2px',
@@ -57,7 +53,7 @@ const Element = styled.div<AbsoluteStyle>((props: AbsoluteStyle) => {
   };
 });
 
-const StarEmoji = styled.span<StarStyle>((props: StarStyle) => {
+const StarEmoji = styled.span<RankStyle>((props: RankStyle) => {
   return {
     display: 'inline-block',
     margin: props.margin || '0 0 0 -5px',
@@ -74,67 +70,52 @@ const StarEmoji = styled.span<StarStyle>((props: StarStyle) => {
 });
 
 export interface Style {
+  badgePosition?: BadgePosition;
   boxStyles?: BoxStyle;
-  absoluteStyles?: AbsoluteStyle;
-  starStyles?: StarStyle;
-  roundImageButtonStyles?: {
-    buttonStyles?: ButtonStyle;
-    imageStyles?: RoundImageStyle;
-  };
-  roundImageStyles?: RoundImageStyle;
+  rankStyles?: RankStyle;
   tooltipStyles?: TooltipStyle;
 }
 
-interface ItemInfo {
-  rank: number;
-  name: string;
-}
-
 interface Props {
-  children?: JSX.Element;
-  src: ImageSrc;
-  onClick?: Function;
-  item: string;
-  isActive?: boolean;
+  badge: JSX.Element;
+  image: JSX.Element;
+  tooltip?: string;
+  rank?: Rank;
   styles?: Style;
-  starVisible: boolean;
+  onClick?: Function;
+  isActive?: boolean;
+  isToolTipVisible?: boolean;
+  isRankVisible?: boolean;
+  isBadgeVisible?: boolean;
 }
 
 export function ItemBadgeBox(props: Props) {
-  const whatKindsOfItem = (item: string): ItemInfo => {
-    let info: ItemInfo = { rank: NaN, name: '' };
-    if (characterInfo[item]) {
-      info.rank = characterInfo[item].rank;
-    } else if (weaponInfo[item]) {
-      info.rank = weaponInfo[item].rank;
-    } else if (artifactInfo[item]) {
-      info.rank = artifactInfo[item].rank;
-    }
-    info.name = item;
-    return info;
-  };
-
   return (
     <Relative {...props.styles?.boxStyles}>
       <>
-        <Element {...props.styles?.absoluteStyles}>{props.children}</Element>
-        {props.onClick ? (
-          <RoundImageButton onClick={props.onClick} src={props.src} styles={props.styles?.roundImageButtonStyles} />
-        ) : (
-          <RoundImage src={props.src} styles={props.styles?.roundImageStyles} />
-        )}
+        {props.isBadgeVisible && <BadgeContainer {...props.styles?.badgePosition}>{props.badge}</BadgeContainer>}
 
-        <HoverVisibleElement>
-          <TooltipText styles={props.styles?.tooltipStyles}>
-            {trans(Lang[whatKindsOfItem(props.item).name.replace(/\s|-/g, '_').replace(/'/g, '') as Lang])}
-          </TooltipText>
-        </HoverVisibleElement>
+        {props.image}
+
+        {props.isToolTipVisible && props.tooltip && (
+          <HoverVisibleElement>
+            <TooltipText styles={props.styles?.tooltipStyles}>
+              {trans(Lang[props.tooltip.replace(/\s|-/g, '_').replace(/'/g, '') as Lang])}
+            </TooltipText>
+          </HoverVisibleElement>
+        )}
       </>
-      {props.starVisible ? (
-        <StarEmoji role="img" {...props.styles?.starStyles}>
-          {'⭐'.repeat(whatKindsOfItem(props.item).rank)}
+      {props.isRankVisible && props.rank && (
+        <StarEmoji role='img' {...props.styles?.rankStyles}>
+          {'⭐'.repeat(props.rank)}
         </StarEmoji>
-      ) : null}
+      )}
     </Relative>
   );
 }
+
+ItemBadgeBox.defaultProps = {
+  isToolTipVisible: true,
+  isRankVisible: true,
+  isBadgeVisible: true
+};

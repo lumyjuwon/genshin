@@ -40,13 +40,11 @@ const GridContainer = styled.div({
   }
 });
 
-const PositionAbsolute = styled.div({
+const Badge = styled.div({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
   position: 'absolute',
-  top: '-8px',
-  right: '-8px',
   borderRadius: '50%',
   backgroundColor: '#ff0000',
   width: '25px',
@@ -132,7 +130,7 @@ export function GachaInventory(props: Props) {
           </CheckBoxButton>
         </>
       </FlexWrapper>
-      {!props.inventoryList.length ? (
+      {!props.inventoryList.length && (
         <TextCenterWrapper
           styles={{
             width: '1300px',
@@ -143,24 +141,21 @@ export function GachaInventory(props: Props) {
         >
           {trans(Lang.If_Inventory_Blank)}
         </TextCenterWrapper>
-      ) : null}
+      )}
       <GridContainer>
         {inventoryItems.map((item: string, index: number) => {
           return (
             <Item key={index}>
-              <PositionAbsolute>{inventory.get(item)}</PositionAbsolute>
               <ItemBadgeBox
-                src={GachaImages[item]}
-                item={item}
-                starVisible={true}
+                badge={<Badge>{inventory.get(item)}</Badge>}
+                image={<RoundImage src={GachaImages[item]} />}
+                rank={items[item].rank}
+                tooltip={item}
                 styles={{
-                  roundImageStyles: { borderRadius: '16px', small: { width: '80px', height: '80px ' } },
                   tooltipStyles: { fontSize: '14px', bottom: '0', small: { fontSize: '12px' } },
-                  absoluteStyles: { top: '70px' }
+                  badgePosition: { top: '-16px', right: '8px' }
                 }}
-              >
-                <RoundImage src={GachaTypeImages[items[item].type || items[item].element]} styles={{ width: '30px', height: '30px' }} />
-              </ItemBadgeBox>
+              />
             </Item>
           );
         })}

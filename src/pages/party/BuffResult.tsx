@@ -1,4 +1,5 @@
 import React from 'react';
+import { ArtifactResult } from './artifact/ArtifactResult';
 
 import { ElementResult } from './element/ElementResult';
 
@@ -10,6 +11,7 @@ export function BuffResult(props: Props) {
   return (
     <>
       <ElementResult activeElements={props.activeElements}></ElementResult>
+      <ArtifactResult></ArtifactResult>
     </>
   );
 }

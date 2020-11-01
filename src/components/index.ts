@@ -39,5 +39,6 @@ export { Modal } from './modal/Modal';
 // Text
 export { TooltipText } from './text/TooltipText';
 
+// Box
 export { ItemBadgeBox } from './box/ItemBadgeBox';
 export { MarginBox } from './box/MarginBox';
