@@ -17,7 +17,7 @@ export function GachaBanner(props: Props) {
     <FlexWrapper styles={{ justifyContent: 'space-between', margin: '0 0 20px' }}>
       <>
         <HoverDropDown
-          hoverList={transWishList}
+          items={transWishList}
           styles={{
             containerStyles: {
               width: '300px',
