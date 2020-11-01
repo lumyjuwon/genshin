@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-import { ContentWrapper, GridWrapper, ItemBadgeBox, Modal, RoundImage, RoundImageButton } from 'src/components';
-import { characterInfo, CharacterName } from 'src/resources/data';
+import { ContentWrapper, GridWrapper, ItemBadgeBox, Modal, RoundImage, RoundImageBox, RoundImageButton } from 'src/components';
+import { ArtifactName, characterInfo, CharacterName } from 'src/resources/data';
 import { CharacterImages, ElementImages, ImageSrc } from 'src/resources/images';
 
 import { Menu } from './Menu';
@@ -13,6 +13,7 @@ type ElementCount = number;
 
 const MAX_SELECTED_CHARACTER = 4;
 
+const selectedArtifacts = new Map<ArtifactName, ImageSrc>(new Map());
 const selectedCharacters = new Map<CharacterName, ImageSrc>(new Map());
 const emptyCharacters = new Map<CharacterName, ImageSrc>([
   ['0', undefined],
@@ -101,6 +102,10 @@ export function PartyScreen() {
                 key={name}
                 rank={characterInfo[name].rank}
                 tooltip={name}
+                hoverInnerColor={'#f1f2f3'}
+                onClick={() => {
+                  selectCharacter(name, CharacterImages[name]);
+                }}
                 badge={
                   <RoundImage
                     src={ElementImages[characterInfo[name].element]}
@@ -115,17 +120,16 @@ export function PartyScreen() {
                   />
                 }
                 child={
-                  <RoundImageButton
+                  <RoundImageBox
                     src={CharacterImages[name]}
-                    onClick={() => {
-                      selectCharacter(name, CharacterImages[name]);
-                    }}
                     styles={{
-                      buttonStyles: {
+                      boxStyle: {
+                        width: '100px',
+                        height: '100px',
                         backgroundColor: selectedCharacters.has(name) ? '#f1f2f3' : 'transparent',
                         margin: '0px'
                       },
-                      imageStyles: {
+                      imageStyle: {
                         width: '80px',
                         height: '80px',
                         borderRadius: '35%',

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { artifactInfo, ArtifactType, characterInfo, weaponInfo, WeaponType } from 'src/resources/data';
 import { ItemTypeImages, ItemImages } from 'src/resources/images';
-import { GridWrapper, ItemBadgeBox, Modal, RoundImage, RoundImageButton, BoxModelWrapper } from 'src/components';
+import { GridWrapper, ItemBadgeBox, Modal, RoundImage, RoundImageButton, BoxModelWrapper, RoundImageBox } from 'src/components';
 import { ImageSrc } from 'src/resources/images';
 
 interface Items {
@@ -28,6 +28,11 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
     <BoxModelWrapper styles={{ margin: '0 0 0 12px', small: { margin: '0 0 3px 6px' } }}>
       <ItemBadgeBox
         tooltip={equipmentName}
+        rank={items[equipmentName] !== undefined ? items[equipmentName].rank : undefined}
+        hoverInnerColor={'#f1f2f3'}
+        onClick={() => {
+          setIsVisibleEquipmentModal(true);
+        }}
         badge={
           <RoundImage
             src={equipmentSrc}
@@ -42,20 +47,17 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
           />
         }
         child={
-          <RoundImageButton
+          <RoundImageBox
             src={ItemImages[equipmentName]}
-            onClick={() => {
-              setIsVisibleEquipmentModal(true);
-            }}
             styles={{
-              buttonStyles: {
+              boxStyle: {
                 width: '100px',
                 height: '100px',
                 margin: '0px',
                 medium: { width: '75px', height: '75px' },
                 small: { width: '65px', height: '65px', margin: '3px' }
               },
-              imageStyles: {
+              imageStyle: {
                 width: '80px',
                 height: '80px',
                 small: { width: '55px', height: '55px' }
@@ -63,8 +65,10 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
             }}
           />
         }
+        isHoverdToolTip={false}
+        isRankVisible={false}
         styles={{
-          tooltipStyles: { bottom: '0' }
+          tooltipStyles: { bottom: '0px' }
         }}
       />
       <Modal
@@ -81,6 +85,11 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
                   key={name}
                   tooltip={name}
                   rank={items[name].rank}
+                  hoverInnerColor={'#f1f2f3'}
+                  onClick={() => {
+                    setEquipmentSrc(ItemImages[name]);
+                    setEquipmentName(name);
+                  }}
                   badge={
                     <RoundImage
                       src={ItemTypeImages[items[name].type]}
@@ -95,18 +104,16 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
                     />
                   }
                   child={
-                    <RoundImageButton
+                    <RoundImageBox
                       src={ItemImages[name]}
-                      onClick={() => {
-                        setEquipmentSrc(ItemImages[name]);
-                        setEquipmentName(name);
-                      }}
                       styles={{
-                        buttonStyles: {
+                        boxStyle: {
+                          width: '100px',
+                          height: '100px',
                           backgroundColor: name === equipmentName ? '#f1f2f3' : 'transparent',
                           margin: '0px'
                         },
-                        imageStyles: {
+                        imageStyle: {
                           width: '80px',
                           height: '80px',
                           borderRadius: '35%',
@@ -116,7 +123,7 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
                     />
                   }
                   styles={{
-                    tooltipStyles: { bottom: '0' }
+                    tooltipStyles: { bottom: '0px' }
                   }}
                 />
               );

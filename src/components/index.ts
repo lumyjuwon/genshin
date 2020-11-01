@@ -42,3 +42,4 @@ export { TooltipText } from './text/TooltipText';
 
 // Box
 export { ItemBadgeBox } from './box/ItemBadgeBox';
+export { RoundImageBox } from './box/RoundImageBox';
