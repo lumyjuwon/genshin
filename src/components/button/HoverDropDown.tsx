@@ -20,11 +20,11 @@ interface ListStyles {
   readonly width?: string;
   readonly backgroundColor?: string;
   readonly top?: string;
-  readonly left?: string;
+  readonly right?: string;
   readonly small?: {
     readonly width?: string;
     readonly top?: string;
-    readonly left?: string;
+    readonly right?: string;
   };
 }
 
@@ -39,7 +39,7 @@ const DropDown = styled.ul<ListStyles>((props: ListStyles) => {
     width: props.width || 'fit-content',
     backgroundColor: props.backgroundColor || 'transparent',
     top: props.top || '0',
-    left: props.left || '0',
+    right: props.right || '0',
     zIndex: 5,
     position: 'absolute',
     borderRadius: '8px',
@@ -50,7 +50,7 @@ const DropDown = styled.ul<ListStyles>((props: ListStyles) => {
     '@media screen and (max-width: 768px)': {
       width: props.small?.width || props.width || 'fit-content',
       top: props.small?.top || props.top || '0',
-      left: props.small?.left || props.left || '0'
+      right: props.small?.right || props.right || '0'
     }
   };
 });
