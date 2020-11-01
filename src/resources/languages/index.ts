@@ -253,7 +253,8 @@ i18n.use(initReactI18next).init({
 });
 
 export function trans(key: Lang): string {
-  return renderNewLine(i18n.t(key));
+  // return renderNewLine(i18n.t(key));
+  return i18n.t(key);
 }
 
 export function changeLang(code: LangCode): void {
