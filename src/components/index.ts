@@ -40,3 +40,4 @@ export { Modal } from './modal/Modal';
 export { TooltipText } from './text/TooltipText';
 
 export { ItemBadgeBox } from './box/ItemBadgeBox';
+export { MarginBox } from './box/MarginBox';
