@@ -78,7 +78,7 @@ export interface Style {
 
 interface Props {
   badge: JSX.Element;
-  image: JSX.Element;
+  child: JSX.Element;
   tooltip?: string;
   rank?: Rank;
   styles?: Style;
@@ -95,7 +95,7 @@ export function ItemBadgeBox(props: Props) {
       <>
         {props.isBadgeVisible && <BadgeContainer {...props.styles?.badgePosition}>{props.badge}</BadgeContainer>}
 
-        {props.image}
+        {props.child}
 
         {props.isToolTipVisible && props.tooltip && (
           <HoverVisibleElement>

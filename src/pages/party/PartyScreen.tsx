@@ -114,7 +114,7 @@ export function PartyScreen() {
                     }}
                   />
                 }
-                image={
+                child={
                   <RoundImageButton
                     src={CharacterImages[name]}
                     onClick={() => {
