@@ -29,6 +29,7 @@ interface ListStyles {
 }
 
 const Icon = styled.div({
+  fontSize: '12px',
   transition: '0.2s',
   transform: 'rotate(180deg)'
 });
@@ -68,8 +69,7 @@ const Container = styled.div<ContainerStyles>`
   transition: all 0.2s;
   position: relative;
   &:hover {
-    color: #212223;
-    background-color: #f1f2f3;
+    background-color: 'rgba(100, 100, 100, .7)';
   }
   &:hover ${Icon} {
     transform: rotate(0);
@@ -87,7 +87,8 @@ const Container = styled.div<ContainerStyles>`
 
 const List = styled.li({
   padding: '5px 10px',
-  backgroundColor: '#f1f2f3',
+  color: '#f1f2f3',
+  backgroundColor: 'rgba(100, 100, 100, .8)',
   width: '100%',
   borderTop: '1px solid #212223',
   borderRadius: '8px',
@@ -97,13 +98,13 @@ const List = styled.li({
 });
 
 interface Props {
-  hoverList: Array<string>;
+  hoverList: any;
   styles?: {
     containerStyles?: ContainerStyles;
     listStyles?: ListStyles;
   };
   onClick: Function;
-  content: string;
+  content: any;
 }
 
 export function HoverDropDown(props: Props) {

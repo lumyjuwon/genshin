@@ -11,14 +11,16 @@ import {
   ContentWrapper,
   TextCenterWrapper,
   FlexWrapper,
-  SquareImage
+  SquareImage,
+  HoverDropDown
 } from 'src/components';
-import { trans, Lang } from './resources/languages';
+import { trans, Lang, changeLang, LangCode } from './resources/languages';
 
 const MainLogo = styled.div({
   fontSize: '30px',
   cursor: 'pointer',
-  padding: '0 20px 0 0'
+  padding: '0 20px 0 0',
+  width: 'max-content'
 });
 
 const CopyRight = styled.div({
@@ -37,12 +39,12 @@ const FooterText = styled.div({
 
 const NavList = styled.div({
   display: 'flex',
-  justifyContent: 'center',
+  justifyContent: 'flex-start',
   alignItems: 'center',
+  width: '100%',
   '@media screen and (max-width: 768px)': {
     display: 'none',
     '&.responsive': {
-      width: '100%',
       display: 'flex',
       flexDirection: 'column',
       position: 'absolute',
@@ -91,6 +93,13 @@ function App() {
     });
   };
 
+  const languageList = ['한국어', 'English'];
+  const langCodeList = [LangCode.en, LangCode.ko];
+
+  const onLanguageClick = (index: number) => {
+    changeLang(langCodeList[index]);
+  };
+
   return (
     <BrowserRouter>
       <Header>
@@ -99,16 +108,41 @@ function App() {
             <MainLogo onClick={() => deleteSelected()}>{trans(Lang.Main_Logo)}</MainLogo>
           </Link>
           <NavList id="nav-list">
-            <Link to="/gacha">
-              <TextBlockButton refProp={gacha} onClick={() => onNavClick(gacha)} styles={{ buttonStyles: { small: { width: '100vw' } } }}>
-                {trans(Lang.Gacha)}
-              </TextBlockButton>
-            </Link>
-            <Link to="/party">
-              <TextBlockButton refProp={party} onClick={() => onNavClick(party)} styles={{ buttonStyles: { small: { width: '100vw' } } }}>
-                {trans(Lang.Party)}
-              </TextBlockButton>
-            </Link>
+            <FlexWrapper styles={{ justifyContent: 'space-between', width: '100%' }}>
+              <>
+                <FlexWrapper>
+                  <>
+                    <Link to="/gacha">
+                      <TextBlockButton
+                        refProp={gacha}
+                        onClick={() => onNavClick(gacha)}
+                        styles={{ buttonStyles: { small: { width: '100vw' } } }}
+                      >
+                        {trans(Lang.Gacha)}
+                      </TextBlockButton>
+                    </Link>
+                    <Link to="/party">
+                      <TextBlockButton
+                        refProp={party}
+                        onClick={() => onNavClick(party)}
+                        styles={{ buttonStyles: { small: { width: '100vw' } } }}
+                      >
+                        {trans(Lang.Party)}
+                      </TextBlockButton>
+                    </Link>
+                  </>
+                </FlexWrapper>
+                <HoverDropDown
+                  content={<i className="fas fa-globe"></i>}
+                  hoverList={languageList}
+                  onClick={onLanguageClick}
+                  styles={{
+                    containerStyles: { width: '70px', height: '35px', fontSize: '20px' },
+                    listStyles: { width: '100px', top: '34px', left: '-1px' }
+                  }}
+                />
+              </>
+            </FlexWrapper>
           </NavList>
           <ToggleIcon onClick={() => onToggleClick()}>
             <i className="fas fa-bars"></i>
