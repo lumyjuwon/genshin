@@ -8,6 +8,8 @@ import { GachaImages, GachaTypeImages } from 'src/resources/images';
 
 const items = Object.assign({}, characterInfo, weaponInfo);
 
+type Inventory = Map<string, number>;
+
 interface Props {
   inventoryList: Array<string>;
 }
@@ -79,78 +81,18 @@ const filterList: Array<string> = [
 ];
 
 export function GachaInventory(props: Props) {
-  const [isHide, setIsHide] = useState<boolean>(false);
+  const [isHideThree, setIsHideThree] = useState<boolean>(false);
   const [filter, setFilter] = useState(filterList[0]);
 
   const inputRef = useRef<HTMLInputElement>(null);
-
-  const sortByStars = (gachaResult: Array<string>): Array<string> => {
-    gachaResult.sort((item: string, nextItem: string): number => {
-      if (characterInfo[item]) {
-        if (characterInfo[nextItem]) {
-          return characterInfo[nextItem].rank - characterInfo[item].rank;
-        } else {
-          return weaponInfo[nextItem].rank - characterInfo[item].rank;
-        }
-      } else {
-        if (characterInfo[nextItem]) {
-          return characterInfo[nextItem].rank - weaponInfo[item].rank;
-        } else {
-          return weaponInfo[nextItem].rank - weaponInfo[item].rank;
-        }
-      }
-    });
-    return gachaResult;
-  };
-
-  const arrayToMap = (sortedInventory: Array<string>): Map<string, number> => {
-    let inventoryMap = new Map<string, number>();
-
-    sortedInventory.map((item: string) => {
-      if (!inventoryMap.has(item)) {
-        inventoryMap.set(item, 0);
-      }
-
-      const count = (inventoryMap.get(item) as number) + 1;
-      count && inventoryMap.set(item, count);
-    });
-
-    return inventoryMap;
-  };
-
-  let pickUpList: Array<string> = [];
-  Object.keys(gachaInfo).forEach((content) => {
-    pickUpList = pickUpList.concat(gachaInfo[content].fiveStars.pickUpItems);
-    pickUpList = pickUpList.concat(gachaInfo[content].fourStars.pickUpItems);
-  });
-
-  const onLabelClicked = () => {
-    inputRef.current && setIsHide(inputRef.current.checked);
-  };
-
-  const sortedGachaResult = sortByStars(props.inventoryList);
-  const inventory = arrayToMap(sortedGachaResult);
-
+  const inventory = createInventory(props.inventoryList);
   let inventoryItems: Array<string> = Array.from(inventory.keys());
 
-  if (isHide) {
-    inventoryItems = inventoryItems.filter((item: string) => {
-      if (characterInfo[item]) {
-        return characterInfo[item].rank > 3;
-      } else {
-        return weaponInfo[item].rank > 3;
-      }
-    });
-  }
+  const onLabelClicked = () => {
+    inputRef.current && setIsHideThree(inputRef.current.checked);
+  };
 
-  if (filter === filterList[0]) {
-  } else if (filter === filterList[1]) {
-    inventoryItems = inventoryItems.filter((item: string) => characterInfo[item]);
-  } else if (filter === filterList[2]) {
-    inventoryItems = inventoryItems.filter((item: string) => weaponInfo[item]);
-  } else {
-    inventoryItems = inventoryItems.filter((item: string) => pickUpList.includes(item));
-  }
+  inventoryItems = getFilteredInventory(inventoryItems, isHideThree, filter);
 
   const totalItemCount = Array.from(inventory.values()).reduce((acc: number, count: number) => {
     return acc + count;
@@ -225,4 +167,59 @@ export function GachaInventory(props: Props) {
       </GridContainer>
     </>
   );
+}
+
+export function createInventory(gachaAccResult: Array<string>): Inventory {
+  const sortByStars = (gachaResult: Array<string>): Array<string> => {
+    gachaResult.sort((item: string, nextItem: string): number => {
+      return items[nextItem].rank - items[item].rank;
+    });
+    return gachaResult;
+  };
+
+  const arrayToMap = (sortedInventory: Array<string>): Inventory => {
+    let inventoryMap = new Map<string, number>();
+
+    sortedInventory.map((item: string) => {
+      if (!inventoryMap.has(item)) {
+        inventoryMap.set(item, 0);
+      }
+
+      const count = (inventoryMap.get(item) as number) + 1;
+      count && inventoryMap.set(item, count);
+    });
+
+    return inventoryMap;
+  };
+
+  return arrayToMap(sortByStars(gachaAccResult));
+}
+
+export function getFilteredInventory(items: Array<string>, isHide: boolean, criteria: string) {
+  let pickUpList: Array<string> = [];
+  Object.keys(gachaInfo).forEach((content) => {
+    pickUpList = pickUpList.concat(gachaInfo[content].fiveStars.pickUpItems);
+    pickUpList = pickUpList.concat(gachaInfo[content].fourStars.pickUpItems);
+  });
+
+  if (isHide) {
+    items = items.filter((item: string) => {
+      if (characterInfo[item]) {
+        return characterInfo[item].rank > 3;
+      } else {
+        return weaponInfo[item].rank > 3;
+      }
+    });
+  }
+
+  if (criteria === filterList[0]) {
+  } else if (criteria === filterList[1]) {
+    items = items.filter((item: string) => characterInfo[item]);
+  } else if (criteria === filterList[2]) {
+    items = items.filter((item: string) => weaponInfo[item]);
+  } else {
+    items = items.filter((item: string) => pickUpList.includes(item));
+  }
+
+  return items;
 }
