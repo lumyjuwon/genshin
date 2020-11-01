@@ -148,7 +148,7 @@ export function GachaInventory(props: Props) {
             <Item key={index}>
               <ItemBadgeBox
                 badge={<Badge>{inventory.get(item)}</Badge>}
-                child={<RoundImage src={GachaImages[item]} />}
+                child={<RoundImage styles={{ small: { width: '80px', height: '80px' } }} src={GachaImages[item]} />}
                 rank={items[item].rank}
                 tooltip={item}
                 styles={{
