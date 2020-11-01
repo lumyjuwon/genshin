@@ -88,7 +88,7 @@ const Container = styled.div<ContainerStyles>`
 const List = styled.li({
   padding: '5px 10px',
   color: '#f1f2f3',
-  backgroundColor: 'rgba(100, 100, 100, .8)',
+  backgroundColor: 'rgba(40, 40, 40, .8)',
   width: '100%',
   borderTop: '1px solid #212223',
   borderRadius: '8px',
@@ -113,7 +113,7 @@ export function HoverDropDown(props: Props) {
     <Container {...props.styles?.containerStyles}>
       <FlexWrapper styles={{ justifyContent: 'space-between' }}>
         <>
-          <HoverDiv>{props.content}</HoverDiv>
+          <HoverDiv>{props.content || props.defaultValue}</HoverDiv>
           <Icon>▲</Icon>
         </>
       </FlexWrapper>
