@@ -50,7 +50,7 @@ export function CharacterSimulator(props: Props) {
     <Wrapper>
       {props.characters.map((dic: [CharacterName, ImageSrc], index: number) => {
         return (
-          <Inner>
+          <Inner key={index}>
             <ItemBadgeBox
               tooltip={dic[0]}
               rank={1}
