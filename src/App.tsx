@@ -11,7 +11,8 @@ const MainLogo = styled.div({
   fontSize: '30px',
   cursor: 'pointer',
   padding: '0 20px 0 0',
-  width: 'max-content'
+  width: 'max-content',
+  fontWeight: 'bolder'
 });
 
 const CopyRight = styled.div({
