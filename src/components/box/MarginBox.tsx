@@ -24,7 +24,7 @@ const Box = styled.div<Margin>((props: Margin) => {
 });
 
 interface Props {
-  children: JSX.Element;
+  children: JSX.Element | JSX.Element[];
   styles: Margin;
 }
 

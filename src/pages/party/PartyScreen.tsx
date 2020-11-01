@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
-import { ContentWrapper, GridWrapper, Modal } from 'src/components';
+import { ContentWrapper, GridWrapper, ItemBadgeBox, Modal, RoundImage, RoundImageButton } from 'src/components';
 import { characterInfo, CharacterName } from 'src/resources/data';
 import { CharacterImages, ElementImages, ImageSrc } from 'src/resources/images';
 
 import { Menu } from './Menu';
-import { ItemButton } from './ItemButton';
 import { CharacterSimulator } from './simulator/CharacterSimulator';
 import { BuffResult } from './BuffResult';
 
@@ -98,35 +97,43 @@ export function PartyScreen() {
         <GridWrapper>
           {Object.keys(characterInfo).map((name: string) => {
             return (
-              <ItemButton
+              <ItemBadgeBox
                 key={name}
-                fillFloatBackground={false}
-                floatImagePath={ElementImages[characterInfo[name].element]}
-                item={name}
-                src={CharacterImages[name]}
-                onClick={() => {
-                  selectCharacter(name, CharacterImages[name]);
-                }}
-                starVisible={true}
-                styles={{
-                  roundImageButtonStyles: {
-                    buttonStyles: {
-                      backgroundColor: selectedCharacters.has(name) ? '#f1f2f3' : 'transparent',
-                      margin: '0px'
-                    },
-                    imageStyles: {
-                      width: '80px',
-                      height: '80px',
-                      borderRadius: '35%',
-                      small: { width: '60px', height: '60px' }
-                    }
-                  },
-                  tooltipStyles: {
-                    fontSize: '14px',
-                    bottom: '0px',
-                    small: { fontSize: '12px' }
-                  }
-                }}
+                rank={characterInfo[name].rank}
+                tooltip={name}
+                badge={
+                  <RoundImage
+                    src={ElementImages[characterInfo[name].element]}
+                    styles={{
+                      width: '30px',
+                      height: '30px',
+                      small: {
+                        width: '25px',
+                        height: '25px'
+                      }
+                    }}
+                  />
+                }
+                image={
+                  <RoundImageButton
+                    src={CharacterImages[name]}
+                    onClick={() => {
+                      selectCharacter(name, CharacterImages[name]);
+                    }}
+                    styles={{
+                      buttonStyles: {
+                        backgroundColor: selectedCharacters.has(name) ? '#f1f2f3' : 'transparent',
+                        margin: '0px'
+                      },
+                      imageStyles: {
+                        width: '80px',
+                        height: '80px',
+                        borderRadius: '35%',
+                        small: { width: '60px', height: '60px' }
+                      }
+                    }}
+                  />
+                }
               />
             );
           })}

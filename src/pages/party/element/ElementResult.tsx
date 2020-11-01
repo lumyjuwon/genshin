@@ -11,7 +11,7 @@ export function ElementResult(props: Props) {
   return (
     <>
       <ElementBuffText activeElements={props.activeElements} />
-      <ElementCircleList activeElements={props.activeElements} />
+      {/* <ElementCircleList activeElements={props.activeElements} /> */}
     </>
   );
 }

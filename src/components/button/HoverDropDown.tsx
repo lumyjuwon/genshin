@@ -37,11 +37,11 @@ const DropDown = styled.ul<ListStyles>((props: ListStyles) => {
   return {
     width: props.width || 'fit-content',
     backgroundColor: props.backgroundColor || 'transparent',
+    top: props.top || '0',
+    left: props.left || '0',
     zIndex: 5,
     position: 'absolute',
     borderRadius: '8px',
-    top: props.top || '0',
-    left: props.left || '0',
     opacity: '0',
     visibility: 'hidden',
     transition: 'all 0.1s',

@@ -21,6 +21,11 @@ interface StyleProps {
 
 const CheckboxLabel = styled.label<LabelStyles>((props: LabelStyles) => {
   return {
+    width: props.width || 'auto',
+    height: props.height || 'auto',
+    '@media screen and (max-width: 768px)': {
+      fontSize: props.small?.fontSize || 'inherit'
+    },
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -29,12 +34,7 @@ const CheckboxLabel = styled.label<LabelStyles>((props: LabelStyles) => {
     WebkitUserSelect: 'none',
     msUserSelect: 'none',
     MozUserSelect: 'none',
-    userSelect: 'none',
-    width: props.width || 'auto',
-    height: props.height || 'auto',
-    '@media screen and (max-width: 768px)': {
-      fontSize: props.small?.fontSize || 'inherit'
-    }
+    userSelect: 'none'
   };
 });
 
@@ -61,7 +61,7 @@ export function CheckBoxButton(props: Props) {
       }}
     >
       {props.children}
-      <CheckboxInput ref={props.refProp} {...props.styles?.inputStyles} type="checkbox" />
+      <CheckboxInput ref={props.refProp} {...props.styles?.inputStyles} type='checkbox' />
     </CheckboxLabel>
   );
 }

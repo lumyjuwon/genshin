@@ -29,8 +29,8 @@ const CardContainer = styled.div<CardStyle>((props: CardStyle) => {
     padding: props.padding || '10px',
     margin: props.margin || '10px',
     backgroundColor: props.backgroundColor || '#313233',
-    boxShadow: '10px 10px 6px rgba(0,0,0,0.7)',
     borderRadius: props.borderRadius || '16px',
+    boxShadow: '10px 10px 6px rgba(0,0,0,0.7)',
     transition: '.2s ease-out',
     '&:hover': {
       boxShadow: '0 4px 8px rgba(38,38,38,0.5)'

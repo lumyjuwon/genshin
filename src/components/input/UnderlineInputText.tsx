@@ -4,7 +4,6 @@ import styled from 'styled-components';
 interface ContainerStyle {
   readonly width?: string;
   readonly height?: string;
-  readonly border?: string;
   readonly borderColor?: string;
 }
 
@@ -27,12 +26,12 @@ const Input = styled.input<InputStyle>((props: InputStyle) => {
   return {
     width: props.width || 'auto',
     height: props.height || 'auto',
-    padding: '6px',
-    fontSize: '16px',
-    color: 'white',
     border: props.border || 'solid',
     borderColor: props.borderColor || 'transparent',
-    backgroundColor: 'transparent'
+    backgroundColor: 'transparent',
+    padding: '6px',
+    fontSize: '16px',
+    color: 'white'
   };
 });
 

@@ -15,8 +15,7 @@ export type ArtifactType = 'Flower' | 'Feather' | 'HourGlass' | 'HolyGrail' | 'C
 interface Gacha {
   [key: string]: GachaData;
 }
-
-export const gachaInfo: Gacha = require('../data/gacha-info.json');
+const gachaInfo: Gacha = require('../data/gacha-info.json');
 
 interface Character {
   [name: string]: {
@@ -26,7 +25,7 @@ interface Character {
     region: CharacterRegion;
   };
 }
-export const characterInfo: Character = require('../data/character-info.json');
+const characterInfo: Character = require('../data/character-info.json');
 
 interface Weapon {
   [name: string]: {
@@ -34,7 +33,7 @@ interface Weapon {
     type: WeaponType;
   };
 }
-export const weaponInfo: Weapon = require('../data/weapon-info.json');
+const weaponInfo: Weapon = require('../data/weapon-info.json');
 
 interface Artifact {
   [name: string]: {
@@ -43,7 +42,7 @@ interface Artifact {
     set: string;
   };
 }
-export const artifactInfo: Artifact = require('../data/artifact-info.json');
+const artifactInfo: Artifact = require('../data/artifact-info.json');
 
 interface ArtifactSet {
   [name: string]: {
@@ -57,3 +56,5 @@ interface ArtifactSet {
     FourPieceSet: string;
   };
 }
+
+export { gachaInfo, characterInfo, weaponInfo, artifactInfo };
