@@ -6,28 +6,28 @@
     "HourGlass": "Adventurer's Pocket Watch",
     "HolyGrail": "Adventurer's Golden Goblet",
     "Crown": "Adventurer's Bandana",
-    "bonusTwo": "HP increased by 1,000",
-    "bonusFour": "Opening chest regenerates 30% HP over 5s"
+    "TwoPieceSet": "HP increased by 1,000",
+    "FourPieceSet": "Opening chest regenerates 30% HP over 5s"
   },
-  "Lucky Dog": {
+  "LuckyDog": {
     "rank": 3,
     "Flower": "Lucky Dog's Clover",
     "Feather": "Lucky Dog's Eagle Feather",
     "HourGlass": "Lucky Dog's Hourglass",
     "HolyGrail": "Lucky Dog's Goblet",
     "Crown": "Lucky Dog's Silver Circlet",
-    "bonusTwo": "DEF increased by 100",
-    "bonusFour": "Picking up Mora restores 300 HP"
+    "TwoPieceSet": "DEF increased by 100",
+    "FourPieceSet": "Picking up Mora restores 300 HP"
   },
-  "Traveling Doctor": {
+  "TravelingDoctor": {
     "rank": 3,
     "Flower": "Traveling Doctor's Silver Lotus",
     "Feather": "Traveling Doctor's Owl Feather",
     "HourGlass": "Traveling Doctor's Pocket Watch",
     "HolyGrail": "Traveling Doctor's Medicine Pot",
     "Crown": "Traveling Doctor's Handkerchief",
-    "bonusTwo": "Increases incoming healing by 20%",
-    "bonusFour": "Using Elemental Burst restores 20% HP"
+    "TwoPieceSet": "Increases incoming healing by 20%",
+    "FourPieceSet": "Using Elemental Burst restores 20% HP"
   },
   "Instructor": {
     "rank": 4,
@@ -36,8 +36,8 @@
     "HourGlass": "Instructor's Pocket Watch",
     "HolyGrail": "Instructor's Tea Cup",
     "Crown": "Instructor's Cap",
-    "bonusTwo": "Increases Elemental Mastery by 80",
-    "bonusFour": "After causing an elemental reaction, increases all party members' Elemental Mastery by 120 for 8s"
+    "TwoPieceSet": "Increases Elemental Mastery by 80",
+    "FourPieceSet": "After causing an elemental reaction, increases all party members' Elemental Mastery by 120 for 8s"
   },
   "Berserker": {
     "rank": 4,
@@ -46,68 +46,68 @@
     "HourGlass": "Berserker's Timepiece",
     "HolyGrail": "Berserker's Bone Goblet",
     "Crown": "Berserker's Battle Mask",
-    "bonusTwo": "CRIT Rate +12%",
-    "bonusFour": "When HP is below 70%, CRIT Rate increases by an additional 24%"
+    "TwoPieceSet": "CRIT Rate +12%",
+    "FourPieceSet": "When HP is below 70%, CRIT Rate increases by an additional 24%"
   },
-  "The Exile": {
+  "TheExile": {
     "rank": 4,
     "Flower": "Exile's Flower",
     "Feather": "Exile's Feather",
     "HourGlass": "Exile's Pocket Watch",
     "HolyGrail": "Exile's Goblet",
     "Crown": "Exile's Circlet",
-    "bonusTwo": "Energy Recharge +20%",
-    "bonusFour": "Using an Elemental Burst regenerates 2 Energy for all party members (excluding the wearer) every 2s for 6s. This effect cannot stack"
+    "TwoPieceSet": "Energy Recharge +20%",
+    "FourPieceSet": "Using an Elemental Burst regenerates 2 Energy for all party members (excluding the wearer) every 2s for 6s. This effect cannot stack"
   },
-  "Resolution of Sojourner": {
+  "ResolutionOfSojourner": {
     "rank": 4,
     "Flower": "Heart of Comeradeship",
     "Feather": "Feather of Homecoming",
     "HourGlass": "Sundial of the Sojourner",
     "HolyGrail": "Goblet of the Sojourner",
     "Crown": "Crown of Parting",
-    "bonusTwo": "ATK +18%",
-    "bonusFour": "Increases Charged Attack CRIT Rate by 30%"
+    "TwoPieceSet": "ATK +18%",
+    "FourPieceSet": "Increases Charged Attack CRIT Rate by 30%"
   },
-  "Martial Artist": {
+  "MartialArtist": {
     "rank": 4,
     "Flower": "Martial Artist's Red Flower",
     "Feather": "Martial Artist's Feather Accessory",
     "HourGlass": "Martial Artist's Water Hourglass",
     "HolyGrail": "Martial Artist's Wine Cup",
     "Crown": "Martial Artist's Bandana",
-    "bonusTwo": "Increases Normal Attack and Charged Attack DMG by 15%",
-    "bonusFour": "After using Elemental Skill, increases Normal Attack and Charged Attack DMG by 25% for 8s"
+    "TwoPieceSet": "Increases Normal Attack and Charged Attack DMG by 15%",
+    "FourPieceSet": "After using Elemental Skill, increases Normal Attack and Charged Attack DMG by 25% for 8s"
   },
-  "Defender's Will": {
+  "DefenderOfWill": {
     "rank": 4,
     "Flower": "Guardian's Flower",
     "Feather": "Guardian's Sigil",
     "HourGlass": "Guardian's Clock",
     "HolyGrail": "Guardian's Vessel",
     "Crown": "Guardian's Band",
-    "bonusTwo": "DEF +30%",
-    "bonusFour": "Increases Elemental RES by 30% for each element present in the party"
+    "TwoPieceSet": "DEF +30%",
+    "FourPieceSet": "Increases Elemental RES by 30% for each element present in the party"
   },
-  "Tiny Miracle": {
+  "TinyMiracle": {
     "rank": 4,
     "Flower": "Tiny Miracle's Flower",
     "Feather": "Tiny Miracle's Feather",
     "HourGlass": "Tiny Miracle's Hourglass",
     "HolyGrail": "Tiny Miracle's Goblet",
     "Crown": "Tiny Miracle's Earrings",
-    "bonusTwo": "All Elemental RES increased by 20%",
-    "bonusFour": "Incoming elemental DMG increases corresponding Elemental RES by 30% for 10s. Can only occur once every 10s"
+    "TwoPieceSet": "All Elemental RES increased by 20%",
+    "FourPieceSet": "Incoming elemental DMG increases corresponding Elemental RES by 30% for 10s. Can only occur once every 10s"
   },
-  "Brave Heart": {
+  "BraveHeart": {
     "rank": 4,
     "Flower": "Medal of the Brave",
     "Feather": "Prospect of the Brave",
     "HourGlass": "Fortitude of the Brave",
     "HolyGrail": "Outset of the Brave",
     "Crown": "Crown of the Brave",
-    "bonusTwo": "ATK +18%",
-    "bonusFour": "Increases DMG by 30% against enemies with more than 50% HP"
+    "TwoPieceSet": "ATK +18%",
+    "FourPieceSet": "Increases DMG by 30% against enemies with more than 50% HP"
   },
   "Gambler": {
     "rank": 4,
@@ -116,8 +116,8 @@
     "HourGlass": "Gambler's Pocket Watch",
     "HolyGrail": "Gambler's Dice Cup",
     "Crown": "Gambler's Earrings",
-    "bonusTwo": "Elemental Skill DMG increased by 20%",
-    "bonusFour": "Defeating an enemy has 100% chance to remove Elemental Skill CD. Can only occur once every 15s."
+    "TwoPieceSet": "Elemental Skill DMG increased by 20%",
+    "FourPieceSet": "Defeating an enemy has 100% chance to remove Elemental Skill CD. Can only occur once every 15s."
   },
   "Scholar": {
     "rank": 4,
@@ -126,78 +126,78 @@
     "HourGlass": "Scholar's Clock",
     "HolyGrail": "Scholar's Ink Cup",
     "Crown": "Scholar's Lens",
-    "bonusTwo": "Energy Recharge +20%",
-    "bonusFour": "Gaining Energy gives 3 Energy to all party members who have a bow or a catalyst equipped. Can only occurs once every 3s"
+    "TwoPieceSet": "Energy Recharge +20%",
+    "FourPieceSet": "Gaining Energy gives 3 Energy to all party members who have a bow or a catalyst equipped. Can only occurs once every 3s"
   },
-  "Gladiator's Finale": {
+  "GladiatorOfFinale": {
     "rank": 5,
     "Flower": "Gladiator's Nostalgia",
     "Feather": "Gladiator's Destiny",
     "HourGlass": "Gladiator's Longing",
     "HolyGrail": "Gladiator's Intoxication",
     "Crown": "Gladiator's Triumphus",
-    "bonusTwo": "ATK +18%",
-    "bonusFour": "If the wielder of this artifact set uses a Sword, Claymore or Polearm, increases their Normal Attack DMG by 35%"
+    "TwoPieceSet": "ATK +18%",
+    "FourPieceSet": "If the wielder of this artifact set uses a Sword, Claymore or Polearm, increases their Normal Attack DMG by 35%"
   },
-  "Maiden Beloved": {
+  "MaidenBeloved": {
     "rank": 5,
     "Flower": "Maiden's Distant Love",
     "Feather": "Maiden's Heart-stricken Infatuation",
     "HourGlass": "Maiden's Passing Youth",
     "HolyGrail": "Maiden's Fleeting Leisure",
     "Crown": "Maiden's Fading Beauty",
-    "bonusTwo": "Character Healing Effectiveness +15%",
-    "bonusFour": "Using an Elemental Skill or Burst increases healing received by all party members by 20% for 10s"
+    "TwoPieceSet": "Character Healing Effectiveness +15%",
+    "FourPieceSet": "Using an Elemental Skill or Burst increases healing received by all party members by 20% for 10s"
   },
-  "Noblesse Oblige": {
+  "NoblesseOblige": {
     "rank": 5,
     "Flower": "Royal Flora",
     "Feather": "Royal Plume",
     "HourGlass": "Royal Pocket Watch",
     "HolyGrail": "Royal Silver Urn",
     "Crown": "Royal Masque",
-    "bonusTwo": "Elemental Burst DMG +20%",
-    "bonusFour": "Using an Elemental Burst increases all party members' ATK by 20% for 12s. This effect cannot stack"
+    "TwoPieceSet": "Elemental Burst DMG +20%",
+    "FourPieceSet": "Using an Elemental Burst increases all party members' ATK by 20% for 12s. This effect cannot stack"
   },
-  "Bloodstained Chivalry": {
+  "BloodstainedChivalry": {
     "rank": 5,
     "Flower": "Bloodstained Flower of Iron",
     "Feather": "Bloodstained Black Plume",
     "HourGlass": "Bloodstained Final Hour",
     "HolyGrail": "Bloodstained Chevalier's Goblet",
     "Crown": "Bloodstained Iron Mask",
-    "bonusTwo": "Physical DMG +25%",
-    "bonusFour": "After defeating an opponent, increases Charged Attack DMG by 50%, and reduces its Stamina cost to 0 for 10s"
+    "TwoPieceSet": "Physical DMG +25%",
+    "FourPieceSet": "After defeating an opponent, increases Charged Attack DMG by 50%, and reduces its Stamina cost to 0 for 10s"
   },
-  "Wanderer's Troupe": {
+  "WandererOfTroupe": {
     "rank": 5,
     "Flower": "Troupe's Dawnlight",
     "Feather": "Bard's Arrow Feather",
     "HourGlass": "Concert's Final Hour",
     "HolyGrail": "Wanderer's String Kettle",
     "Crown": "Conductor's Top Hat",
-    "bonusTwo": "Elemental Mastery +80",
-    "bonusFour": "Increases Charged Attack DMG by 35% if the character uses a Catalyst or Bow"
+    "TwoPieceSet": "Elemental Mastery +80",
+    "FourPieceSet": "Increases Charged Attack DMG by 35% if the character uses a Catalyst or Bow"
   },
-  "Viridescent Venerer": {
+  "ViridescentVenerer": {
     "rank": 5,
     "Flower": "Thunderbird's Mercy",
     "Feather": "Survivor of Catastrophe",
     "HourGlass": "Hourglass of Thunder",
     "HolyGrail": "Omen of Thunderstorm",
     "Crown": "Thunder Summoner's Crown",
-    "bonusTwo": "Anemo DMG Bonus +15%",
-    "bonusFour": "Increases Swirl DMG by 60%. Decreases opponent's Elemental RES to the element infused in the Swirl by 40% for 10s"
+    "TwoPieceSet": "Anemo DMG Bonus +15%",
+    "FourPieceSet": "Increases Swirl DMG by 60%. Decreases opponent's Elemental RES to the element infused in the Swirl by 40% for 10s"
   },
-  "Thundering Fury": {
+  "ThunderingFury": {
     "rank": 5,
     "Flower": "In Remembrance of Viridescent Fields",
     "Feather": "Viridescent Arrow Feather",
     "HourGlass": "Viridescent Venerer's Determination",
     "HolyGrail": "Viridescent Venerer's Vessel",
     "Crown": "Viridescent Venerer's Diadem",
-    "bonusTwo": "Electro DMG Bonus +15%",
-    "bonusFour": "Increases damage caused by Overloaded, Electro-Charged, and Superconduct DMG by 40%. Triggering such effects decreases Elemental Skill CD by 1s. Can only occur once every 0.8s"
+    "TwoPieceSet": "Electro DMG Bonus +15%",
+    "FourPieceSet": "Increases damage caused by Overloaded, Electro-Charged, and Superconduct DMG by 40%. Triggering such effects decreases Elemental Skill CD by 1s. Can only occur once every 0.8s"
   },
   "Thundersoother": {
     "rank": 5,
@@ -206,18 +206,18 @@
     "HourGlass": "Hour of Soothing Thunder",
     "HolyGrail": "Thundershoother's Goblet",
     "Crown": "Thundershoother's Diadem",
-    "bonusTwo": "Electro RES increased by 40%",
-    "bonusFour": "Increases DMG against enemies affected by Electro by 35%"
+    "TwoPieceSet": "Electro RES increased by 40%",
+    "FourPieceSet": "Increases DMG against enemies affected by Electro by 35%"
   },
-  "Crimson Witch of Flames": {
+  "CrimsonWitchOfFlames": {
     "rank": 5,
     "Flower": "Witch's Flower of Blaze",
     "Feather": "Witch's Ever-Burning Plume",
     "HourGlass": "Witch's End Time",
     "HolyGrail": "Witch's Heart Flames",
     "Crown": "Witch's Scorching Hat",
-    "bonusTwo": "Pyro DMG Bonus +15%",
-    "bonusFour": "Increases Overloaded and Burning DMG by 40%. Increases Vaporize and Melt DMG by 15%. Using an Elemental Skill increases 2-Piece Set effects by 50% for 10s. Max 3 stacks"
+    "TwoPieceSet": "Pyro DMG Bonus +15%",
+    "FourPieceSet": "Increases Overloaded and Burning DMG by 40%. Increases Vaporize and Melt DMG by 15%. Using an Elemental Skill increases 2-Piece Set effects by 50% for 10s. Max 3 stacks"
   },
   "Lavawalker": {
     "rank": 5,
@@ -226,27 +226,27 @@
     "HourGlass": "Lavawalker's Torment",
     "HolyGrail": "Lavawalker's Epiphany",
     "Crown": "Lavawalker's Wisdom",
-    "bonusTwo": "Pyro RES increased by 40%",
-    "bonusFour": "Increases DMG against enemies that are Burning or affected by Pyro by 35%"
+    "TwoPieceSet": "Pyro RES increased by 40%",
+    "FourPieceSet": "Increases DMG against enemies that are Burning or affected by Pyro by 35%"
   },
-  "Archaic Petra": {
+  "ArchaicPetra": {
     "rank": 5,
     "Flower": "Flower of Creviced Cliff",
     "Feather": "Feather of Jagged Peaks",
     "HourGlass": "Sundial of Enduring Jade",
     "HolyGrail": "Goblet of Chiseled Crag",
     "Crown": "Mask of Solitude Basalt",
-    "bonusTwo": "Gain a 15% Geo DMG Bonus",
-    "bonusFour": "Upon obtaining a crystal created through a Geo Elemental Reaction, all party members gain 35% Elemental DMG Bonus to that particular element for 10s. Only one form of Elemental DMG Bonus can be gained in this manner at any one time"
+    "TwoPieceSet": "Gain a 15% Geo DMG Bonus",
+    "FourPieceSet": "Upon obtaining a crystal created through a Geo Elemental Reaction, all party members gain 35% Elemental DMG Bonus to that particular element for 10s. Only one form of Elemental DMG Bonus can be gained in this manner at any one time"
   },
-  "Retracing Bolide": {
+  "RetracingBolide": {
     "rank": 5,
     "Flower": "Summer Night's Bloom",
     "Feather": "Summer Night's Finale",
     "HourGlass": "Summer Night's Moment",
     "HolyGrail": "Summer Night's Waterballoon",
     "Crown": "Summer Night's Mask",
-    "bonusTwo": "Increases the effectiveness of shields by 35%",
-    "bonusFour": "Gain an additional 40% Normal and Charged Attack DMG while under the protection of a shield"
+    "TwoPieceSet": "Increases the effectiveness of shields by 35%",
+    "FourPieceSet": "Gain an additional 40% Normal and Charged Attack DMG while under the protection of a shield"
   }
 }

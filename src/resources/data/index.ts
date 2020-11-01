@@ -11,7 +11,6 @@ export type WeaponType = 'Bow' | 'Catalyst' | 'Claymore' | 'Polearm' | 'Sword';
 
 export type ArtifactName = string;
 export type ArtifactType = 'Flower' | 'Feather' | 'HourGlass' | 'HolyGrail' | 'Crown';
-export type ArtifactSet = string;
 
 interface Gacha {
   [key: string]: GachaData;
@@ -41,7 +40,20 @@ interface Artifact {
   [name: string]: {
     rank: Rank;
     type: ArtifactType;
-    set: ArtifactSet;
+    set: string;
   };
 }
 export const artifactInfo: Artifact = require('../data/artifact-info.json');
+
+interface ArtifactSet {
+  [name: string]: {
+    rank: Rank;
+    Flower: ArtifactName;
+    Feather: ArtifactName;
+    HourGlass: ArtifactName;
+    HolyGrail: ArtifactName;
+    Crown: ArtifactName;
+    TwoPieceSet: string;
+    FourPieceSet: string;
+  };
+}
