@@ -43,11 +43,13 @@ const Title = styled.div({
   textAlign: 'center',
   fontWeight: 'bold',
   marginBottom: '40px',
+  textShadow: '0 0 9px #333',
   '@media screen and (max-width: 1380px)': {
     fontSize: '40px'
   },
   '@media screen and (max-width: 768px)': {
-    fontSize: '30px'
+    fontSize: '30px',
+    textShadow: 'none'
   }
 });
 
