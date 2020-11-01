@@ -8,6 +8,7 @@ export { TextCenterWrapper } from './/wrapper/TextCenterWrapper';
 export { GridWrapper } from './wrapper/GridWrapper';
 export { FlexWrapper } from './wrapper/FlexWrapper';
 export { ContentWrapper } from './wrapper/ContentWrapper';
+export { BoxModelWrapper } from './wrapper/BoxModelWrapper';
 
 // Button Component
 export { RoundButton } from './button/RoundButton';
@@ -41,4 +42,3 @@ export { TooltipText } from './text/TooltipText';
 
 // Box
 export { ItemBadgeBox } from './box/ItemBadgeBox';
-export { MarginBox } from './box/MarginBox';

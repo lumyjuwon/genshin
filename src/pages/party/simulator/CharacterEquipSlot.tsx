@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { artifactInfo, ArtifactType, characterInfo, weaponInfo, WeaponType } from 'src/resources/data';
 import { ItemTypeImages, ItemImages } from 'src/resources/images';
-import { GridWrapper, MarginBox, ItemBadgeBox, Modal, RoundImage, RoundImageButton } from 'src/components';
+import { GridWrapper, ItemBadgeBox, Modal, RoundImage, RoundImageButton, BoxModelWrapper } from 'src/components';
 import { ImageSrc } from 'src/resources/images';
 
 interface Items {
@@ -25,7 +25,7 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
   const [isVisibleEquipmentModal, setIsVisibleEquipmentModal] = useState<boolean>(false);
 
   return (
-    <MarginBox styles={{ margin: '0 0 0 12px', small: { margin: '0 0 3px 6px' } }}>
+    <BoxModelWrapper styles={{ margin: '0 0 0 12px', small: { margin: '0 0 3px 6px' } }}>
       <RoundImageButton
         src={equipmentSrc}
         onClick={() => {
@@ -96,7 +96,7 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
           })}
         </GridWrapper>
       </Modal>
-    </MarginBox>
+    </BoxModelWrapper>
   );
 };
 
