@@ -15,7 +15,8 @@ import {
   SquareImage,
   FlexWrapper,
   RoundButton,
-  ContentWrapper
+  ContentWrapper,
+  MarginBox
 } from 'src/components';
 
 export function GachaScreen() {
@@ -124,7 +125,7 @@ export function GachaScreen() {
         <>
           <GachaBanner content={gachaContent} onClick={onBannerClick} pickUpList={Object.keys(gachaInfo)} />
           <GachaArrangeView result={gachaExecutionResult} />
-          <div style={{ margin: '30px 0 20px' }}>
+          <MarginBox styles={{ margin: '30px 0 20px' }}>
             <FlexWrapper>
               <>
                 <RoundTextButton
@@ -192,7 +193,7 @@ export function GachaScreen() {
                 )}
               </>
             </FlexWrapper>
-          </div>
+          </MarginBox>
           {stopBeginnerWishes ? (
             <TextCenterWrapper styles={{ width: '800px', margin: '0 auto 20px' }}>{trans(Lang.Novice_Finish)}</TextCenterWrapper>
           ) : null}
@@ -215,10 +216,12 @@ export function GachaScreen() {
               result={gachaInventoryList}
             />
           )}
-          <div style={{ margin: '50px auto 30px' }}>
-            <hr />
-            <GachaInventory inventoryList={gachaInventoryList} />
-          </div>
+          <MarginBox styles={{ margin: '50px auto 30px' }}>
+            <>
+              <hr />
+              <GachaInventory inventoryList={gachaInventoryList} />
+            </>
+          </MarginBox>
         </>
       </ScreenInnerWrapper>
     </ContentWrapper>
