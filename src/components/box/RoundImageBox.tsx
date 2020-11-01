@@ -80,16 +80,16 @@ const Wrapper = styled.div<BoxStyle>((props: BoxStyle) => {
 
 interface Props {
   src: ImageSrc;
-  styles: {
-    boxStyle: BoxStyle;
-    imageStyle: Style;
+  styles?: {
+    boxStyle?: BoxStyle;
+    imageStyle?: Style;
   };
 }
 
 export function RoundImageBox(props: Props) {
   return (
-    <Wrapper {...props.styles.boxStyle}>
-      <RoundImage src={props.src} {...props.styles.imageStyle}></RoundImage>
+    <Wrapper {...props.styles?.boxStyle}>
+      <RoundImage src={props.src} styles={props.styles?.imageStyle}></RoundImage>
     </Wrapper>
   );
 }
