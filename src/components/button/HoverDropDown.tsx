@@ -98,20 +98,17 @@ const List = styled.li({
 });
 
 interface Props {
-  hoverList: any;
+  items: { [name: string]: any };
+  onClick: Function;
+  content: any;
+  defaultValue?: any;
   styles?: {
     containerStyles?: ContainerStyles;
     listStyles?: ListStyles;
   };
-  onClick: Function;
-  content: any;
 }
 
 export function HoverDropDown(props: Props) {
-  const onListClick = (index: number): void => {
-    props.onClick(index);
-  };
-
   return (
     <Container {...props.styles?.containerStyles}>
       <FlexWrapper styles={{ justifyContent: 'space-between' }}>
@@ -121,10 +118,15 @@ export function HoverDropDown(props: Props) {
         </>
       </FlexWrapper>
       <DropDown {...props.styles?.listStyles}>
-        {props.hoverList.map((content: string, index: number) => {
+        {Object.keys(props.items).map((item: any) => {
           return (
-            <List key={index} onClick={() => onListClick(index)}>
-              {content}
+            <List
+              key={item}
+              onClick={() => {
+                props.onClick(item);
+              }}
+            >
+              {props.items[item]}
             </List>
           );
         })}
