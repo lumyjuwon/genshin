@@ -89,28 +89,28 @@ function App() {
     <BrowserRouter>
       <Header>
         <>
-          <Link to='/'>
+          <Link to="/">
             <MainLogo onClick={() => deleteSelected()}>{trans(Lang.Main_Logo)}</MainLogo>
           </Link>
-          <NavList id='nav-list'>
-            <FlexWrapper styles={{ justifyContent: 'space-between', width: '100%' }}>
+          <NavList id="nav-list">
+            <FlexWrapper styles={{ justifyContent: 'space-between', width: '100%', small: { flexDirection: 'column' } }}>
               <>
-                <FlexWrapper>
+                <FlexWrapper styles={{ small: { flexDirection: 'column', width: '100%' } }}>
                   <>
-                    <Link to='/gacha'>
+                    <Link to="/gacha">
                       <TextBlockButton
                         refProp={gacha}
                         onClick={() => onNavClick(gacha)}
-                        styles={{ buttonStyles: { small: { width: '100vw' } } }}
+                        styles={{ buttonStyles: { small: { width: '95vw' } } }}
                       >
                         {trans(Lang.Gacha)}
                       </TextBlockButton>
                     </Link>
-                    <Link to='/party'>
+                    <Link to="/party">
                       <TextBlockButton
                         refProp={party}
                         onClick={() => onNavClick(party)}
-                        styles={{ buttonStyles: { small: { width: '100vw' } } }}
+                        styles={{ buttonStyles: { small: { width: '95vw' } } }}
                       >
                         {trans(Lang.Party)}
                       </TextBlockButton>
@@ -126,35 +126,35 @@ function App() {
               </>
             </FlexWrapper>
           </NavList>
-          <ToggleIcon onClick={() => {}}>
-            <i className='fas fa-bars'></i>
+          <ToggleIcon onClick={() => onToggleClick()}>
+            <i className="fas fa-bars"></i>
           </ToggleIcon>
         </>
       </Header>
       <Switch>
-        <Route exact path='/' component={MainScreen} />
-        <Route path='/gacha' component={GachaScreen} />
-        <Route path='/party' component={PartyScreen} />
-        <Route path='/policy' component={Policy} />
-        <Route path='/terms' component={Terms} />
-        <Route path='/about' component={About} />
+        <Route exact path="/" component={MainScreen} />
+        <Route path="/gacha" component={GachaScreen} />
+        <Route path="/party" component={PartyScreen} />
+        <Route path="/policy" component={Policy} />
+        <Route path="/terms" component={Terms} />
+        <Route path="/about" component={About} />
       </Switch>
       <Footer>
         <>
           <CopyRight>Copyrightⓒ 2020</CopyRight>
           <FlexWrapper>
             <>
-              <Link to='/policy'>
+              <Link to="/policy">
                 <TextUnderLineButton>
                   <FooterText>{trans(Lang.Main_Privacy_Policy)}</FooterText>
                 </TextUnderLineButton>
               </Link>
-              <Link to='/terms'>
+              <Link to="/terms">
                 <TextUnderLineButton>
                   <FooterText>{trans(Lang.Main_Terms_Of_Service)}</FooterText>
                 </TextUnderLineButton>
               </Link>
-              <Link to='/about'>
+              <Link to="/about">
                 <TextUnderLineButton>
                   <FooterText>About Us</FooterText>
                 </TextUnderLineButton>

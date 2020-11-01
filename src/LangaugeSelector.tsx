@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { HoverDropDown } from 'src/components';
+import { HoverDropDown, FlexWrapper } from 'src/components';
 import { changeLang, LangCode } from 'src/resources/languages';
 
 const languages = {
@@ -15,18 +15,20 @@ interface Props {
 
 export function LangaugeSelector(props: Props) {
   return (
-    <HoverDropDown
-      items={languages}
-      onClick={(langCode: LangCode) => {
-        changeLang(langCode);
-        props.onCallBack(langCode);
-      }}
-      content={<i className='fas fa-globe'></i>}
-      defaultValue={props.defaultValue}
-      styles={{
-        containerStyles: { width: '70px', height: '35px', fontSize: '20px' },
-        listStyles: { width: '100px', top: '34px', left: '-1px' }
-      }}
-    />
+    <FlexWrapper styles={{ small: { width: '100%', justifyContent: 'flex-end', margin: '10px 0' } }}>
+      <HoverDropDown
+        items={languages}
+        onClick={(langCode: LangCode) => {
+          changeLang(langCode);
+          props.onCallBack(langCode);
+        }}
+        content={<i className="fas fa-globe"></i>}
+        defaultValue={props.defaultValue}
+        styles={{
+          containerStyles: { width: '70px', height: '35px', fontSize: '20px' },
+          listStyles: { width: '100px', top: '34px', right: '-1px' }
+        }}
+      />
+    </FlexWrapper>
   );
 }
