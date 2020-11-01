@@ -2,15 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 
 interface Margin {
-  margin?: string;
-  padding?: string;
-  medium?: {
-    margin?: string;
-    padding?: string;
+  readonly margin?: string;
+  readonly padding?: string;
+  readonly medium?: {
+    readonly margin?: string;
+    readonly padding?: string;
   };
-  small?: {
-    margin?: string;
-    padding?: string;
+  readonly small?: {
+    readonly margin?: string;
+    readonly padding?: string;
   };
 }
 

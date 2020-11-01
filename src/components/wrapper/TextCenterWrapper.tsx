@@ -2,17 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 
 interface DivStyle {
-  width?: string;
-  margin?: string;
-  padding?: string;
-  fontSize?: string;
-  medium?: {
-    width?: string;
-    fontSize?: string;
+  readonly width?: string;
+  readonly margin?: string;
+  readonly padding?: string;
+  readonly fontSize?: string;
+  readonly medium?: {
+    readonly width?: string;
+    readonly fontSize?: string;
   };
-  small?: {
-    width?: string;
-    fontSize?: string;
+  readonly small?: {
+    readonly width?: string;
+    readonly fontSize?: string;
   };
 }
 

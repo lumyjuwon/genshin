@@ -7,26 +7,26 @@ import { trans, Lang } from 'src/resources/languages';
 import { TooltipText, TooltipStyle } from '../text/TooltipText';
 
 interface BoxStyle {
-  hoverInnerColor?: string;
-  margin?: string;
-  small?: {
-    margin?: string;
+  readonly hoverInnerColor?: string;
+  readonly margin?: string;
+  readonly small?: {
+    readonly margin?: string;
   };
 }
 
 interface BadgePosition {
-  top?: string;
-  right?: string;
+  readonly top?: string;
+  readonly right?: string;
 }
 
 interface RankStyle {
-  margin?: string;
-  letterSpacing?: string;
-  fontSize?: string;
-  small?: {
-    fontSize: string;
-    margin?: string;
-    letterSpacing?: string;
+  readonly margin?: string;
+  readonly letterSpacing?: string;
+  readonly fontSize?: string;
+  readonly small?: {
+    readonly fontSize: string;
+    readonly margin?: string;
+    readonly letterSpacing?: string;
   };
 }
 
@@ -133,7 +133,7 @@ export function ItemBadgeBox(props: Props) {
       )}
 
       {props.isRankVisible && props.rank && (
-        <StarEmoji role='img' {...props.styles?.rankStyles}>
+        <StarEmoji role="img" {...props.styles?.rankStyles}>
           {'⭐'.repeat(props.rank)}
         </StarEmoji>
       )}
