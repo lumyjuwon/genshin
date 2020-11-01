@@ -89,6 +89,9 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
                       }}
                     />
                   }
+                  styles={{
+                    tooltipStyles: { bottom: '0' }
+                  }}
                 />
               );
             }

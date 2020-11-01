@@ -134,6 +134,9 @@ export function PartyScreen() {
                     }}
                   />
                 }
+                styles={{
+                  tooltipStyles: { bottom: '0' }
+                }}
               />
             );
           })}
