@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { trans, Lang } from '../../resources/languages';
-import { ContentWrapper, FlexWrapper, ImageContentCard } from 'src/components';
+import { FlexWrapper, ImageContentCard } from 'src/components';
 
 const ImageContainer = styled.div({
   zIndex: -1,

@@ -172,17 +172,19 @@ export function createInventory(gachaAccResult: Array<string>): Inventory {
     return gachaResult;
   };
 
+  const setItemCounts = (inven: Inventory, item: string) => {
+    if (!inven.has(item)) {
+      inven.set(item, 0);
+    }
+
+    const count = (inven.get(item) as number) + 1;
+    count && inven.set(item, count);
+  };
+
   const arrayToMap = (sortedInventory: Array<string>): Inventory => {
     let inventoryMap = new Map<string, number>();
 
-    sortedInventory.map((item: string) => {
-      if (!inventoryMap.has(item)) {
-        inventoryMap.set(item, 0);
-      }
-
-      const count = (inventoryMap.get(item) as number) + 1;
-      count && inventoryMap.set(item, count);
-    });
+    sortedInventory.map((item: string) => setItemCounts(inventoryMap, item));
 
     return inventoryMap;
   };

@@ -19,6 +19,8 @@ import {
   BoxModelWrapper
 } from 'src/components';
 
+const itemsInfo = Object.assign({}, weaponInfo, characterInfo);
+
 export function GachaScreen() {
   const [totalCount, setTotalCount] = useState(0);
   const [fiveStarCount, setFiveStarCount] = useState(0);
@@ -89,22 +91,16 @@ export function GachaScreen() {
     setUsedPrimoGem(usedPrimoGem + payedFateCount * 160);
   };
 
+  const setItemRankCount = (item: string) => {
+    if (itemsInfo[item].rank === 5) {
+      setFiveStarCount(fiveStarCount + 1);
+    } else if (itemsInfo[item].rank === 4) {
+      setFourStarCount(fourStarCount + 1);
+    }
+  };
+
   const setStarCount = (result: Array<string>) => {
-    let fiveCount: number = fiveStarCount;
-    let fourCount: number = fourStarCount;
-
-    result.map((item: string) => {
-      if (characterInfo[item]) {
-        if (characterInfo[item].rank === 5) fiveCount += 1;
-        if (characterInfo[item].rank === 4) fourCount += 1;
-      } else {
-        if (weaponInfo[item].rank === 5) fiveCount += 1;
-        if (weaponInfo[item].rank === 4) fourCount += 1;
-      }
-    });
-
-    setFiveStarCount(fiveCount);
-    setFourStarCount(fourCount);
+    result.map((item: string) => setItemRankCount(item));
   };
 
   let contentList = Object.keys(gachaInfo);
