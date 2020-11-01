@@ -133,7 +133,7 @@ export function GachaArrangeView(props: Props) {
             <SquareImage styles={{ width: '300x', height: '370px' }} src={require('../../resources/images/characters/Flying Paimon.gif')} />
             <TextCenterWrapper styles={{ fontSize: '25px', small: { fontSize: '20px' } }}>
               <>
-                <span role='img'>💬&nbsp;</span>
+                <span role="img">💬&nbsp;</span>
                 {trans(Lang.Blank_Arrange_View)}
               </>
             </TextCenterWrapper>

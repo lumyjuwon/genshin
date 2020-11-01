@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { trans, Lang } from 'src/resources/languages';
 import { FlexWrapper, RoundImage, TextCenterWrapper, CheckBoxButton, HoverDropDown, ItemBadgeBox } from 'src/components';
 import { characterInfo, gachaInfo, weaponInfo } from 'src/resources/data';
-import { GachaImages, GachaTypeImages } from 'src/resources/images';
+import { GachaImages } from 'src/resources/images';
 
 const items = Object.assign({}, characterInfo, weaponInfo);
 

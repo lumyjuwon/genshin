@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import { trans, Lang } from 'src/resources/languages';
@@ -27,8 +27,6 @@ const Result = styled.div({
 });
 
 export function GachaResult(props: Props) {
-  props.result.map((item: string) => {});
-
   return (
     <ResultBar>
       <FlexWrapper
