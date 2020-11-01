@@ -67,7 +67,7 @@ export function CharacterSimulator(props: Props) {
                   }}
                 />
               }
-              image={
+              child={
                 <RoundImageButton
                   src={dic[1]}
                   onClick={() => {

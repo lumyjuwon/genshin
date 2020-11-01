@@ -68,7 +68,7 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
                       }}
                     />
                   }
-                  image={
+                  child={
                     <RoundImageButton
                       src={ItemImages[name]}
                       onClick={() => {
