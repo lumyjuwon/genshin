@@ -2,11 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { trans, Lang } from '../../resources/languages';
-import { FlexWrapper, ImageContentCard } from 'src/components';
+import { ContentWrapper, FlexWrapper, ImageContentCard } from 'src/components';
 
 const ImageContainer = styled.div({
+  zIndex: -1,
   width: '100%',
-  height: '90vh',
+  height: '100vh',
+  position: 'absolute',
+  top: '0',
+  bottom: '0',
+  left: '0',
+  right: '0',
   backgroundImage: `url(${require('../../resources/images/mainscreen/main.jpg')})`,
   backgroundSize: 'cover',
   '@media screen and (max-width: 768px)': {
@@ -22,8 +28,7 @@ const Containter = styled.div({
   alignItems: 'center',
   flexDirection: 'column',
   width: '100%',
-  height: '100%',
-  backgroundColor: 'rgba(0,0,0,.5)',
+  height: '90vh',
   padding: '100px 150px',
   '@media screen and (max-width: 1380px)': {
     padding: '70px 100px'
@@ -48,7 +53,8 @@ const Title = styled.div({
 
 export function MainScreen() {
   return (
-    <ImageContainer>
+    <>
+      <ImageContainer />
       <Containter>
         <Title>{trans(Lang.Main_Title)}</Title>
         <FlexWrapper styles={{ width: '100%' }}>
@@ -68,6 +74,7 @@ export function MainScreen() {
                     width: '300px',
                     height: '400px',
                     padding: '20px 10px',
+                    backgroundColor: 'rgba(20, 20, 20, .8)',
                     medium: { width: '210px', margin: '20px' },
                     small: { width: '260px' }
                   },
@@ -83,6 +90,7 @@ export function MainScreen() {
                     width: '300px',
                     height: '400px',
                     padding: '20px 10px',
+                    backgroundColor: 'rgba(20, 20, 20, .8)',
                     medium: { width: '210px', margin: '20px' },
                     small: { width: '260px' }
                   },
@@ -98,6 +106,7 @@ export function MainScreen() {
                     width: '300px',
                     height: '400px',
                     padding: '20px 10px',
+                    backgroundColor: 'rgba(20, 20, 20, .8)',
                     medium: { width: '210px', margin: '20px' },
                     small: { width: '260px' }
                   },
@@ -108,6 +117,6 @@ export function MainScreen() {
           </FlexWrapper>
         </FlexWrapper>
       </Containter>
-    </ImageContainer>
+    </>
   );
 }

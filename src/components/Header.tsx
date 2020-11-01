@@ -7,8 +7,9 @@ interface Props {
 
 const HeaderOuter = styled.header({
   borderBottom: '1px solid #515253',
-  backgroundColor: '#111213',
-  position: 'relative'
+  backgroundColor: 'rgba(0, 0, 0, .7)',
+  position: 'relative',
+  zIndex: 999
 });
 
 const HeaderInner = styled.div({

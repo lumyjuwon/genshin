@@ -8,7 +8,8 @@ interface Props {
 const Wrapper = styled.div({
   width: '100%',
   minHeight: '90vh',
-  padding: '5vh 20px'
+  padding: '5vh 20px',
+  position: 'relative'
 });
 
 export function ContentWrapper({ children }: Props) {
