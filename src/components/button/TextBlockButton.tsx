@@ -21,7 +21,7 @@ const Button = styled.div<ButtonStyle>((props: ButtonStyle) => {
     width: props.width || 'fit-content',
     padding: props.padding || '20px 10px',
     fontSize: props.fontSize || '22px',
-    color: props.color || '#f1f2f3',
+    color: props.color || '#fff',
     cursor: 'pointer',
     position: 'relative',
     overflow: 'hidden',
@@ -32,7 +32,9 @@ const Button = styled.div<ButtonStyle>((props: ButtonStyle) => {
     userSelect: 'none',
     transition: '.2s ease-out',
     '&:hover': {
-      backgroundColor: props['&:hover']?.backgroundColor || '#515253'
+      // backgroundColor: props['&:hover']?.backgroundColor || '#515253',
+      textShadow: '0 0 8px #f1f2f3, 0 0 15px #f1f2f3, 0 0 20px #f1f2f3',
+      boxShadow: 'inset 0 -2px 0 #f1f2f3'
     },
     '&.selected': {
       boxShadow: 'inset 0 -2px 0 #f1f2f3'
