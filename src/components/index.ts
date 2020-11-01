@@ -39,6 +39,7 @@ export { Modal } from './modal/Modal';
 
 // Text
 export { TooltipText } from './text/TooltipText';
+export { renderNewLine } from './text/RenderNewLine';
 
 // Box
 export { ItemBadgeBox } from './box/ItemBadgeBox';
