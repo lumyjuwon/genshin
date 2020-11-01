@@ -127,7 +127,7 @@ export function ItemBadgeBox(props: Props) {
       {props.isToolTipVisible && props.tooltip && (
         <HoverVisibleElement visibillity={props.isHoverdToolTip ? 'hidden' : undefined}>
           <TooltipText styles={props.styles?.tooltipStyles}>
-            {trans(Lang[props.tooltip.replace(/\s|-/g, '_').replace(/'/g, '') as Lang])}
+            {trans(Lang[props.tooltip.replace(/\s|-/g, '_').replace(/'|\(|\)/g, '') as Lang])}
           </TooltipText>
         </HoverVisibleElement>
       )}
