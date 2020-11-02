@@ -113,7 +113,7 @@ interface Props {
   };
 }
 
-export function HoverDropDown(props: Props) {
+export function DropDownButton(props: Props) {
   const onContentClick = () => {
     document.querySelectorAll(`#${props.id}`).forEach((child) => {
       if (!child.classList.contains('show-list')) {

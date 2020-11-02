@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FlexWrapper, HoverDropDown } from 'src/components';
+import { DropDownButton, FlexWrapper } from 'src/components';
 import { trans, Lang } from 'src/resources/languages';
 import { GachaDetails } from './GachaDetails';
 
@@ -16,7 +16,7 @@ export function GachaBanner(props: Props) {
   return (
     <FlexWrapper styles={{ justifyContent: 'space-between', margin: '0 0 20px' }}>
       <>
-        <HoverDropDown
+        <DropDownButton
           id="wish"
           items={transWishList}
           styles={{

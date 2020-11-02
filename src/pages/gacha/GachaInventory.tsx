@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 
 import { trans, Lang } from 'src/resources/languages';
-import { FlexWrapper, RoundImage, TextCenterWrapper, CheckBoxButton, HoverDropDown, ItemBadgeBox } from 'src/components';
+import { FlexWrapper, RoundImage, TextCenterWrapper, CheckBoxButton, ItemBadgeBox, DropDownButton } from 'src/components';
 import { characterInfo, gachaInfo, weaponInfo } from 'src/resources/data';
 import { GachaImages } from 'src/resources/images';
 
@@ -120,7 +120,7 @@ export function GachaInventory(props: Props) {
       </FlexWrapper>
       <FlexWrapper styles={{ justifyContent: 'flex-end', margin: '0 0 40px' }}>
         <>
-          <HoverDropDown
+          <DropDownButton
             id="filter"
             items={transFilterList}
             onClick={onFilterClick}

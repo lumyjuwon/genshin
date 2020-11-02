@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { HoverDropDown, FlexWrapper } from 'src/components';
+import { FlexWrapper, DropDownButton } from 'src/components';
 import { changeLang, LangCode } from 'src/resources/languages';
 
 const languages = {
@@ -16,7 +16,7 @@ interface Props {
 export function LangaugeSelector(props: Props) {
   return (
     <FlexWrapper styles={{ small: { width: '100%', justifyContent: 'flex-end', margin: '10px 0' } }}>
-      <HoverDropDown
+      <DropDownButton
         id={'lang'}
         items={languages}
         onClick={(langCode: LangCode) => {
