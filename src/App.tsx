@@ -3,9 +3,10 @@ import styled from 'styled-components';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 
 import { GachaScreen, PartyScreen, MainScreen, Policy, Terms } from 'src/pages';
-import { Header, Footer, TextBlockButton, TextUnderLineButton, FlexWrapper, RoundImage } from 'src/components';
+import { Header, TextBlockButton, FlexWrapper, RoundImage, Footer } from 'src/components';
 import { LangaugeSelector } from './LangaugeSelector';
 import { trans, Lang, LangCode, getCurrentLanguage } from './resources/languages';
+import NotFound from './NotFound';
 
 const MainLogo = styled.div({
   fontSize: '30px',
@@ -14,20 +15,6 @@ const MainLogo = styled.div({
   width: 'max-content',
   fontWeight: 'bolder',
   margin: '0 0 0 7px'
-});
-
-const CopyRight = styled.div({
-  fontSize: '12px',
-  '@media screen and (max-width: 768px)': {
-    fontSize: '10px'
-  }
-});
-
-const FooterText = styled.div({
-  fontSize: '16px',
-  '@media screen and (max-width: 768px)': {
-    fontSize: '12px'
-  }
 });
 
 const NavList = styled.div({
@@ -48,10 +35,6 @@ const NavList = styled.div({
       zIndex: 15
     }
   }
-});
-
-const ContactUs = styled.div({
-  verticalAlign: 'baseline'
 });
 
 const ToggleIcon = styled.div({
@@ -98,7 +81,7 @@ function App() {
     <BrowserRouter>
       <Header>
         <>
-          <Link to='/'>
+          <Link to="/">
             <FlexWrapper>
               <>
                 <RoundImage styles={{ width: '50px', height: '50px' }} src={require('./resources/images/mainscreen/logo.png')} />
@@ -106,12 +89,12 @@ function App() {
               </>
             </FlexWrapper>
           </Link>
-          <NavList id='nav-list'>
+          <NavList id="nav-list">
             <FlexWrapper styles={{ justifyContent: 'space-between', width: '100%', small: { flexDirection: 'column' } }}>
               <>
                 <FlexWrapper styles={{ small: { flexDirection: 'column', width: '100%' } }}>
                   <>
-                    <Link to='/gacha'>
+                    <Link to="/gacha">
                       <TextBlockButton
                         refProp={gacha}
                         onClick={() => onNavClick(gacha)}
@@ -120,7 +103,7 @@ function App() {
                         {trans(Lang.Gacha)}
                       </TextBlockButton>
                     </Link>
-                    <Link to='/party'>
+                    <Link to="/party">
                       <TextBlockButton
                         refProp={party}
                         onClick={() => onNavClick(party)}
@@ -141,43 +124,19 @@ function App() {
             </FlexWrapper>
           </NavList>
           <ToggleIcon onClick={() => onToggleClick()}>
-            <i className='fas fa-bars'></i>
+            <i className="fas fa-bars"></i>
           </ToggleIcon>
         </>
       </Header>
       <Switch>
-        <Route exact path='/' component={MainScreen} />
-        <Route path='/gacha' component={GachaScreen} />
-        <Route path='/party' component={PartyScreen} />
-        <Route path='/policy' component={Policy} />
-        <Route path='/terms' component={Terms} />
+        <Route exact path="/" component={MainScreen} />
+        <Route path="/gacha" component={GachaScreen} />
+        <Route path="/party" component={PartyScreen} />
+        <Route path="/policy" component={Policy} />
+        <Route path="/terms" component={Terms} />
+        <Route path="*" component={NotFound} />
       </Switch>
-      <Footer>
-        <>
-          <CopyRight>Copyrightⓒ 2020</CopyRight>
-          <FlexWrapper>
-            <>
-              <Link to='/policy'>
-                <TextUnderLineButton>
-                  <FooterText>{trans(Lang.Main_Privacy_Policy)}</FooterText>
-                </TextUnderLineButton>
-              </Link>
-              <Link to='/terms'>
-                <TextUnderLineButton>
-                  <FooterText>{trans(Lang.Main_Terms_Of_Service)}</FooterText>
-                </TextUnderLineButton>
-              </Link>
-              <ContactUs>
-                <TextUnderLineButton>
-                  <a href='mailto:genshinsimul@gmail.com'>
-                    <FooterText>Contact Us</FooterText>
-                  </a>
-                </TextUnderLineButton>
-              </ContactUs>
-            </>
-          </FlexWrapper>
-        </>
-      </Footer>
+      <Footer />
     </BrowserRouter>
   );
 }
