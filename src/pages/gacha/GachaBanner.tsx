@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 
 import { DropDownButton, FlexWrapper } from 'src/components';
 import { trans, Lang } from 'src/resources/languages';
