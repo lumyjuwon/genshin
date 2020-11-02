@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import { DropDownButton, FlexWrapper } from 'src/components';
 import { trans, Lang } from 'src/resources/languages';
@@ -11,6 +11,8 @@ interface Props {
 }
 
 export function GachaBanner(props: Props) {
+  const wishListRef = useRef<HTMLUListElement>(null);
+
   const transWishList = props.pickUpList.map((wish) => trans(Lang[wish as Lang]));
 
   return (
@@ -18,6 +20,7 @@ export function GachaBanner(props: Props) {
       <>
         <DropDownButton
           id="wish"
+          ref={wishListRef}
           items={transWishList}
           styles={{
             containerStyles: {

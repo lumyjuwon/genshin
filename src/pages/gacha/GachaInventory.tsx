@@ -82,13 +82,15 @@ type FilterKey = keyof typeof Filter;
 const filterList = Object.values(Filter);
 
 export function GachaInventory(props: Props) {
-  const transFilterList = filterList.map((filter) => trans(Lang[filter]));
   const [isHideThree, setIsHideThree] = useState<boolean>(false);
   const [filter, setFilter] = useState(filterList[0]);
-
   const inputRef = useRef<HTMLInputElement>(null);
+  const filterRef = useRef<HTMLUListElement>(null);
+
   const inventory = createInventory(props.inventoryList);
   let inventoryItems: Array<string> = Array.from(inventory.keys());
+
+  const transFilterList = filterList.map((filter) => trans(Lang[filter]));
 
   const onLabelClicked = () => {
     inputRef.current && setIsHideThree(inputRef.current.checked);
@@ -121,6 +123,7 @@ export function GachaInventory(props: Props) {
       <FlexWrapper styles={{ justifyContent: 'flex-end', margin: '0 0 40px' }}>
         <>
           <DropDownButton
+            ref={filterRef}
             id="filter"
             items={transFilterList}
             onClick={onFilterClick}

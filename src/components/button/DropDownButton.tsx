@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useImperativeHandle, useRef } from 'react';
 import styled from 'styled-components';
 
 interface ContainerStyles {
@@ -68,7 +68,6 @@ const Container = styled.div<ContainerStyles>`
   width: ${(props) => props.width || 'fit-content'};
   height: ${(props) => props.height || '30px'};
   font-size: ${(props) => props.fontSize || '16px'};
-  padding: ${(props) => props.padding || '5px 10px'};
   margin: ${(props) => props.margin || '0 10px 0 0'};
   border: 1px solid #f1f2f3;
   border-radius: 8px;
@@ -98,7 +97,8 @@ const Clickable = styled.div({
   display: 'flex',
   width: '100%',
   justifyContent: 'space-between',
-  alignItems: 'center'
+  alignItems: 'center',
+  padding: '5px 10px'
 });
 
 interface Props {
@@ -113,23 +113,22 @@ interface Props {
   };
 }
 
-export function DropDownButton(props: Props) {
+export const DropDownButton = React.forwardRef<HTMLUListElement, Props>((props, forwardedRef) => {
+  const dropDownRef = useRef<HTMLUListElement>(null);
+
+  useImperativeHandle(forwardedRef, () => dropDownRef.current as HTMLUListElement);
+
   const onContentClick = () => {
-    document.querySelectorAll(`#${props.id}`).forEach((child) => {
-      if (!child.classList.contains('show-list')) {
-        child.className += ' show-list';
-        console.log(child);
-      } else {
-        child.classList.remove('show-list');
-      }
-    });
+    if (dropDownRef.current?.classList.contains('show-list')) {
+      dropDownRef.current?.classList.remove('show-list');
+    } else {
+      dropDownRef.current?.classList.add('show-list');
+    }
   };
 
   const onListClick = (item: string) => {
     props.onClick(item);
-    document.querySelectorAll(`#${props.id}`).forEach((child) => {
-      child.classList.remove('show-list');
-    });
+    dropDownRef.current?.classList.add('show-list');
   };
 
   return (
@@ -138,7 +137,7 @@ export function DropDownButton(props: Props) {
         <HoverDiv>{props.content || props.defaultValue}</HoverDiv>
         <Icon>▲</Icon>
       </Clickable>
-      <DropDown {...props.styles?.listStyles} id={props.id}>
+      <DropDown {...props.styles?.listStyles} id={props.id} ref={dropDownRef}>
         {Object.keys(props.items).map((item: any) => {
           return (
             <List key={item} onClick={(event: React.MouseEvent<HTMLLIElement, MouseEvent>) => onListClick(item)}>
@@ -149,4 +148,4 @@ export function DropDownButton(props: Props) {
       </DropDown>
     </Container>
   );
-}
+});
