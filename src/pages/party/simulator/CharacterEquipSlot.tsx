@@ -25,7 +25,7 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
   const [isVisibleEquipmentModal, setIsVisibleEquipmentModal] = useState<boolean>(false);
 
   return (
-    <BoxModelWrapper styles={{ margin: '0 0 0 12px', small: { margin: '0 0 3px 6px' } }}>
+    <BoxModelWrapper styles={{ margin: '0 0 0 6px', small: { margin: '0 0 3px 3px' } }}>
       <ItemBadgeBox
         tooltip={equipmentName}
         rank={items[equipmentName] !== undefined ? items[equipmentName].rank : undefined}
