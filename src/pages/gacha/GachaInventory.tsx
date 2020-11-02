@@ -79,9 +79,10 @@ enum Filter {
 }
 
 type FilterKey = keyof typeof Filter;
-const filterList = Object.keys(Filter).map((criteria) => Filter[criteria as FilterKey]);
+const filterList = Object.values(Filter);
 
 export function GachaInventory(props: Props) {
+  const transFilterList = filterList.map((filter) => trans(Lang[filter]));
   const [isHideThree, setIsHideThree] = useState<boolean>(false);
   const [filter, setFilter] = useState(filterList[0]);
 
@@ -120,12 +121,12 @@ export function GachaInventory(props: Props) {
       <FlexWrapper styles={{ justifyContent: 'flex-end', margin: '0 0 40px' }}>
         <>
           <HoverDropDown
-            items={filterList}
+            items={transFilterList}
             onClick={onFilterClick}
             content={trans(Lang[filter])}
             styles={{
-              containerStyles: { width: '110px', height: '30px', small: { fontSize: '14px' } },
-              listStyles: { width: '110px', top: '29px', right: '-1px' }
+              containerStyles: { width: '110px', height: '32px', small: { fontSize: '14px' } },
+              listStyles: { width: '110px', top: '31px', right: '-1px' }
             }}
           />
           <CheckBoxButton onClick={() => onLabelClicked()} refProp={inputRef} styles={{ labelStyles: { small: { fontSize: '14px' } } }}>
