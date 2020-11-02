@@ -121,6 +121,7 @@ export function GachaInventory(props: Props) {
       <FlexWrapper styles={{ justifyContent: 'flex-end', margin: '0 0 40px' }}>
         <>
           <HoverDropDown
+            id="filter"
             items={transFilterList}
             onClick={onFilterClick}
             content={trans(Lang[filter])}

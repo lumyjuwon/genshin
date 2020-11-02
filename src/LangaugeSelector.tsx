@@ -17,6 +17,7 @@ export function LangaugeSelector(props: Props) {
   return (
     <FlexWrapper styles={{ small: { width: '100%', justifyContent: 'flex-end', margin: '10px 0' } }}>
       <HoverDropDown
+        id={'lang'}
         items={languages}
         onClick={(langCode: LangCode) => {
           changeLang(langCode);

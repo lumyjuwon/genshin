@@ -29,6 +29,8 @@ interface ListStyles {
 }
 
 const Icon = styled.div({
+  zIndex: -1,
+  float: 'right',
   fontSize: '12px',
   transition: '0.2s',
   transform: 'rotate(180deg)'
@@ -47,6 +49,10 @@ const DropDown = styled.ul<ListStyles>((props: ListStyles) => {
     visibility: 'hidden',
     transition: 'all 0.1s',
     boxShadow: '6px 6px 3px rgba(0,0,0,0.6)',
+    '&.show-list': {
+      opacity: '1',
+      visibility: 'visible'
+    },
     '@media screen and (max-width: 768px)': {
       width: props.small?.width || props.width || 'fit-content',
       top: props.small?.top || props.top || '0',
@@ -55,7 +61,9 @@ const DropDown = styled.ul<ListStyles>((props: ListStyles) => {
   };
 });
 
-const HoverDiv = styled.div({});
+const HoverDiv = styled.div({
+  width: '100%'
+});
 
 const Container = styled.div<ContainerStyles>`
   width: ${(props) => props.width || 'fit-content'};
@@ -68,16 +76,6 @@ const Container = styled.div<ContainerStyles>`
   cursor: pointer;
   transition: all 0.2s;
   position: relative;
-  &:hover {
-    background-color: 'rgba(100, 100, 100, .7)';
-  }
-  &:hover ${Icon} {
-    transform: rotate(0);
-  }
-  &:hover ${DropDown} {
-    opacity: 1;
-    visibility: visible;
-  }
   @media screen and (max-width: 768px) {
     width: ${(props) => props.small?.width || props.width || 'fit-content'};
     height: ${(props) => props.small?.height || props.height || 'auto'};
@@ -88,7 +86,7 @@ const Container = styled.div<ContainerStyles>`
 const List = styled.li({
   padding: '5px 10px',
   color: '#f1f2f3',
-  backgroundColor: 'rgba(80, 80, 80, .8)',
+  backgroundColor: 'rgba(10, 10, 10, .8)',
   width: '100%',
   borderTop: '1px solid #212223',
   borderRadius: '8px',
@@ -99,6 +97,7 @@ const List = styled.li({
 
 interface Props {
   items: { [name: string]: any };
+  id: string;
   onClick: Function;
   content: any;
   defaultValue?: any;
@@ -109,23 +108,36 @@ interface Props {
 }
 
 export function HoverDropDown(props: Props) {
+  const onContentClick = () => {
+    document.querySelectorAll(`#${props.id}`).forEach((child) => {
+      if (!child.classList.contains('show-list')) {
+        child.className += ' show-list';
+        console.log(child);
+      } else {
+        child.classList.remove('show-list');
+      }
+    });
+  };
+
+  const onListClick = (item: string) => {
+    props.onClick(item);
+    document.querySelectorAll(`#${props.id}`).forEach((child) => {
+      child.classList.remove('show-list');
+    });
+  };
+
   return (
     <Container {...props.styles?.containerStyles}>
       <FlexWrapper styles={{ justifyContent: 'space-between' }}>
         <>
-          <HoverDiv>{props.content || props.defaultValue}</HoverDiv>
+          <HoverDiv onClick={() => onContentClick()}>{props.content || props.defaultValue}</HoverDiv>
           <Icon>▲</Icon>
         </>
       </FlexWrapper>
-      <DropDown {...props.styles?.listStyles}>
+      <DropDown {...props.styles?.listStyles} id={props.id}>
         {Object.keys(props.items).map((item: any) => {
           return (
-            <List
-              key={item}
-              onClick={() => {
-                props.onClick(item);
-              }}
-            >
+            <List key={item} onClick={(event: React.MouseEvent<HTMLLIElement, MouseEvent>) => onListClick(item)}>
               {props.items[item]}
             </List>
           );
