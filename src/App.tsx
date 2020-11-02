@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 
 import { GachaScreen, PartyScreen, MainScreen, Policy, Terms } from 'src/pages';
-import { Header, Footer, TextBlockButton, TextUnderLineButton, FlexWrapper } from 'src/components';
+import { Header, Footer, TextBlockButton, TextUnderLineButton, FlexWrapper, RoundImage } from 'src/components';
 import { LangaugeSelector } from './LangaugeSelector';
 import { trans, Lang, LangCode } from './resources/languages';
 
@@ -12,7 +12,8 @@ const MainLogo = styled.div({
   cursor: 'pointer',
   padding: '0 20px 0 0',
   width: 'max-content',
-  fontWeight: 'bolder'
+  fontWeight: 'bolder',
+  margin: '0 0 0 7px'
 });
 
 const CopyRight = styled.div({
@@ -98,7 +99,12 @@ function App() {
       <Header>
         <>
           <Link to="/">
-            <MainLogo onClick={() => deleteSelected()}>{trans(Lang.Main_Logo)}</MainLogo>
+            <FlexWrapper>
+              <>
+                <RoundImage styles={{ width: '50px', height: '50px' }} src={require('./resources/images/mainscreen/logo.png')} />
+                <MainLogo onClick={() => deleteSelected()}>{trans(Lang.Main_Logo)}</MainLogo>
+              </>
+            </FlexWrapper>
           </Link>
           <NavList id="nav-list">
             <FlexWrapper styles={{ justifyContent: 'space-between', width: '100%', small: { flexDirection: 'column' } }}>
