@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { FlexWrapper } from '../wrapper/FlexWrapper';
-
 interface ContainerStyles {
   readonly width?: string;
   readonly height?: string;
@@ -62,7 +60,8 @@ const DropDown = styled.ul<ListStyles>((props: ListStyles) => {
 });
 
 const HoverDiv = styled.div({
-  width: '100%'
+  width: '100%',
+  float: 'left'
 });
 
 const Container = styled.div<ContainerStyles>`
@@ -93,6 +92,13 @@ const List = styled.li({
   '&:hover': {
     backgroundColor: '#ccc'
   }
+});
+
+const Clickable = styled.div({
+  display: 'flex',
+  width: '100%',
+  justifyContent: 'space-between',
+  alignItems: 'center'
 });
 
 interface Props {
@@ -128,12 +134,10 @@ export function HoverDropDown(props: Props) {
 
   return (
     <Container {...props.styles?.containerStyles}>
-      <FlexWrapper styles={{ justifyContent: 'space-between' }}>
-        <>
-          <HoverDiv onClick={() => onContentClick()}>{props.content || props.defaultValue}</HoverDiv>
-          <Icon>▲</Icon>
-        </>
-      </FlexWrapper>
+      <Clickable onClick={() => onContentClick()}>
+        <HoverDiv>{props.content || props.defaultValue}</HoverDiv>
+        <Icon>▲</Icon>
+      </Clickable>
       <DropDown {...props.styles?.listStyles} id={props.id}>
         {Object.keys(props.items).map((item: any) => {
           return (
