@@ -129,6 +129,7 @@ export function GachaInventory(props: Props) {
               containerStyles: { width: '110px', height: '32px', small: { fontSize: '14px' } },
               listStyles: { width: '110px', top: '31px', right: '-1px' }
             }}
+            defaultValue={trans(Lang.Filter_Rarity)}
           />
           <CheckBoxButton onClick={() => onLabelClicked()} refProp={inputRef} styles={{ labelStyles: { small: { fontSize: '14px' } } }}>
             {trans(Lang.Hide_Three_Star)}
