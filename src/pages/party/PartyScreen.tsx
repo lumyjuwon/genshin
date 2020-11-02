@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import { ContentWrapper, GridWrapper, ItemBadgeBox, Modal, RoundImage, RoundImageBox } from 'src/components';
-import { characterInfo, CharacterName } from 'src/resources/data';
+import { ArtifactName, characterInfo, CharacterName, artifactInfo } from 'src/resources/data';
 import { CharacterImages, ElementImages, ImageSrc } from 'src/resources/images';
 
 import { Menu } from './Menu';
@@ -10,11 +10,13 @@ import { BuffResult } from './BuffResult';
 
 type ElementName = string;
 type ElementCount = number;
+type ArtifactCount = number;
 
 const MAX_SELECTED_CHARACTER = 4;
 
 // const selectedArtifacts = new Map<ArtifactName, ImageSrc>(new Map());
 const selectedCharacters = new Map<CharacterName, ImageSrc>(new Map());
+const selectedArtifacts = new Map<ArtifactName, ImageSrc>(new Map());
 const emptyCharacters = new Map<CharacterName, ImageSrc>([
   ['0', undefined],
   ['1', undefined],
@@ -25,12 +27,14 @@ const emptyCharacters = new Map<CharacterName, ImageSrc>([
 export function PartyScreen() {
   const [allCharacters, setAllCharacters] = useState<Array<[CharacterName, ImageSrc]>>([]);
   const [activeElements, setActiveElements] = useState<Map<ElementName, ElementCount>>(new Map());
+  const [activeArtifacts, setActiveArtifacts] = useState<Map<ArtifactName, ArtifactCount>>(new Map());
   const [isVisibleCharacterModal, setIsVisibleCharacterModal] = useState<boolean>(false);
 
   useEffect(() => {
     setAllCharacters([...selectedCharacters, ...emptyCharacters]);
     fillEmptyCharacters(selectedCharacters.size);
     changeActiveElements(selectedCharacters);
+    changeActiveArtifacts(selectedArtifacts);
   }, []);
 
   function fillEmptyCharacters(filledCharacterSize: number) {
@@ -61,6 +65,24 @@ export function PartyScreen() {
     setActiveElements(activeElems);
   }
 
+  function changeActiveArtifacts(artifacts: Map<ArtifactName, ImageSrc>) {
+    const activeElems: Map<ArtifactName, ArtifactCount> = new Map();
+
+    artifacts.forEach((value: any, name: string) => {
+      if (artifactInfo[name].set !== undefined) {
+        const set: string = artifactInfo[name].set;
+        if (activeElems.has(set)) {
+          //@ts-ignore Check Has
+          activeElems.set(set, activeElems.get(set) + 1);
+        } else {
+          activeElems.set(set, 1);
+        }
+      }
+    });
+
+    setActiveArtifacts(activeElems);
+  }
+
   function selectCharacter(name: CharacterName, resource: ImageSrc) {
     if (selectedCharacters.has(name)) {
       selectedCharacters.delete(name);
@@ -82,12 +104,13 @@ export function PartyScreen() {
       <>
         <Menu />
         <CharacterSimulator
+          activeArtifacts={activeArtifacts}
           characters={allCharacters}
           onClick={() => {
             setIsVisibleCharacterModal(true);
           }}
         />
-        <BuffResult activeElements={activeElements} />
+        <BuffResult activeArtifacts={activeArtifacts} activeElements={activeElements} />
       </>
       <Modal
         cancel={() => {

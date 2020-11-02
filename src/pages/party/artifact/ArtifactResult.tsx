@@ -1,9 +1,10 @@
 import React from 'react';
 
 import { ArtifactBuffText } from './ArtifactBuffText';
+import { ArtifactName } from 'src/resources/data';
 
 interface Props {
-  activeArtifacts: Map<string, number>;
+  activeArtifacts: Map<ArtifactName, number>;
 }
 
 export function ArtifactResult(props: Props) {
