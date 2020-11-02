@@ -19,7 +19,10 @@ const HeaderInner = styled.div({
   alignItems: 'center',
   minHeight: '10vh',
   '@media screen and (max-width: 768px)': {
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    margin: '0',
+    minWidth: '100%',
+    padding: '0 10px'
   }
 });
 

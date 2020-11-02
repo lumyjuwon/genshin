@@ -12,7 +12,7 @@ const FooterDiv = styled.footer({
   flexDirection: 'column',
   backgroundColor: '#444546',
   borderTop: '1px solid #616263',
-  padding: '20px 150px',
+  minHeight: '10vh',
   textAlign: 'center',
   '@media screen and (max-width: 768px)': {
     padding: '15px 10px'
