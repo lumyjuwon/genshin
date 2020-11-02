@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import { GachaScreen, PartyScreen, MainScreen, Policy, Terms } from 'src/pages';
 import { Header, Footer, TextBlockButton, TextUnderLineButton, FlexWrapper, RoundImage } from 'src/components';
 import { LangaugeSelector } from './LangaugeSelector';
-import { trans, Lang, LangCode } from './resources/languages';
+import { trans, Lang, LangCode, getCurrentLanguage } from './resources/languages';
 
 const MainLogo = styled.div({
   fontSize: '30px',
@@ -75,7 +75,7 @@ const onToggleClick = () => {
 };
 
 function App() {
-  const [langCode, setLangCode] = useState<LangCode>(LangCode.ko);
+  const [langCode, setLangCode] = useState<LangCode>(getCurrentLanguage());
   const gacha = useRef<HTMLDivElement>(null);
   const party = useRef<HTMLDivElement>(null);
 
@@ -98,7 +98,7 @@ function App() {
     <BrowserRouter>
       <Header>
         <>
-          <Link to="/">
+          <Link to='/'>
             <FlexWrapper>
               <>
                 <RoundImage styles={{ width: '50px', height: '50px' }} src={require('./resources/images/mainscreen/logo.png')} />
@@ -106,12 +106,12 @@ function App() {
               </>
             </FlexWrapper>
           </Link>
-          <NavList id="nav-list">
+          <NavList id='nav-list'>
             <FlexWrapper styles={{ justifyContent: 'space-between', width: '100%', small: { flexDirection: 'column' } }}>
               <>
                 <FlexWrapper styles={{ small: { flexDirection: 'column', width: '100%' } }}>
                   <>
-                    <Link to="/gacha">
+                    <Link to='/gacha'>
                       <TextBlockButton
                         refProp={gacha}
                         onClick={() => onNavClick(gacha)}
@@ -120,7 +120,7 @@ function App() {
                         {trans(Lang.Gacha)}
                       </TextBlockButton>
                     </Link>
-                    <Link to="/party">
+                    <Link to='/party'>
                       <TextBlockButton
                         refProp={party}
                         onClick={() => onNavClick(party)}
@@ -141,35 +141,35 @@ function App() {
             </FlexWrapper>
           </NavList>
           <ToggleIcon onClick={() => onToggleClick()}>
-            <i className="fas fa-bars"></i>
+            <i className='fas fa-bars'></i>
           </ToggleIcon>
         </>
       </Header>
       <Switch>
-        <Route exact path="/" component={MainScreen} />
-        <Route path="/gacha" component={GachaScreen} />
-        <Route path="/party" component={PartyScreen} />
-        <Route path="/policy" component={Policy} />
-        <Route path="/terms" component={Terms} />
+        <Route exact path='/' component={MainScreen} />
+        <Route path='/gacha' component={GachaScreen} />
+        <Route path='/party' component={PartyScreen} />
+        <Route path='/policy' component={Policy} />
+        <Route path='/terms' component={Terms} />
       </Switch>
       <Footer>
         <>
           <CopyRight>Copyrightⓒ 2020</CopyRight>
           <FlexWrapper>
             <>
-              <Link to="/policy">
+              <Link to='/policy'>
                 <TextUnderLineButton>
                   <FooterText>{trans(Lang.Main_Privacy_Policy)}</FooterText>
                 </TextUnderLineButton>
               </Link>
-              <Link to="/terms">
+              <Link to='/terms'>
                 <TextUnderLineButton>
                   <FooterText>{trans(Lang.Main_Terms_Of_Service)}</FooterText>
                 </TextUnderLineButton>
               </Link>
               <ContactUs>
                 <TextUnderLineButton>
-                  <a href="mailto:genshinsimul@gmail.com">
+                  <a href='mailto:genshinsimul@gmail.com'>
                     <FooterText>Contact Us</FooterText>
                   </a>
                 </TextUnderLineButton>
