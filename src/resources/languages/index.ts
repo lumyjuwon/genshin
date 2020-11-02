@@ -1,13 +1,13 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import detector from 'i18next-browser-languagedetector';
+import Detactor from 'i18next-browser-languagedetector';
 
-export enum LangCode {
+enum LangCode {
   en = 'en',
   ko = 'ko'
 }
 
-export enum Lang {
+enum Lang {
   Main_Logo = 'Main_Logo',
   Main_Title = 'Main_Title',
   Main_Wish_Desc = 'Main_Wish_Desc',
@@ -370,22 +370,29 @@ const languages = {
   }
 };
 
-i18n.use(detector).use(initReactI18next).init({
+const options = {
+  order: ['querystring', 'navigator'],
+  lookupQuerystring: 'lng'
+};
+const detactor = new Detactor();
+detactor.init(options);
+
+i18n.use(detactor).use(initReactI18next).init({
   resources: languages,
   fallbackLng: LangCode.en,
   debug: true
 });
 
-export function getCurrentLanguage(): LangCode {
+function getCurrentLanguage(): LangCode {
   return i18n.language as LangCode;
 }
 
-export function trans(key: Lang): string {
+function trans(key: Lang): string {
   return i18n.t(key);
 }
 
-export function changeLang(code: LangCode): void {
+function changeLang(code: LangCode): void {
   i18n.changeLanguage(code);
 }
 
-export { i18n };
+export { i18n, Lang, LangCode, getCurrentLanguage, trans, changeLang };
