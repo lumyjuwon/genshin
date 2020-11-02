@@ -11,13 +11,14 @@ const Container = styled.div({
 
 interface Props {
   activeElements: Map<string, number>;
+  activeArtifacts: Map<string, number>;
 }
 
 export function BuffResult(props: Props) {
   return (
     <Container>
       <ElementResult activeElements={props.activeElements}></ElementResult>
-      <ArtifactResult></ArtifactResult>
+      <ArtifactResult activeArtifacts={props.activeArtifacts}></ArtifactResult>
     </Container>
   );
 }
