@@ -8,6 +8,7 @@ import { GachaInventory } from './GachaInventory';
 import { GachaArrangeView } from './GachaArrangeView';
 import { GachaController, GachaContent, GachaData } from './Gacha';
 import { characterInfo, weaponInfo, gachaInfo } from 'src/resources/data';
+import { GemImages } from 'src/resources/images';
 import {
   ScreenInnerWrapper,
   RoundTextButton,
@@ -54,6 +55,10 @@ export function GachaScreen() {
     }
 
     gacha.current = gachaMap.current?.get(gachaContent);
+    if (gacha.current) {
+      setTotalCount(gacha.current.totalCount);
+      setNextPity(gacha.current.nextPity);
+    }
   }, [gachaContent, contentData]);
 
   const onResetClick = (): void => {
@@ -68,26 +73,20 @@ export function GachaScreen() {
     gachaMap.current.clear();
   };
 
-  const afterGachaCurrentChange = () => {
-    gacha.current && setTotalCount(gacha.current.totalCount);
-    gacha.current && setNextPity(gacha.current.nextPity);
-  };
-
   const onBannerClick = (index: number): void => {
     const wishContentNames = Object.keys(gachaInfo);
     setGachaContent(wishContentNames[index]);
     setGachaExecutionResult([]);
-
-    // Due to useState is asyncronous, gacha.current is prev state.
-    setTimeout(afterGachaCurrentChange);
   };
 
   const onGachaExecution = (tries: number): void => {
     setGachaExecutionResult(gacha.current?.start(tries) as never[]);
-    gacha.current && setTotalCount(gacha.current.totalCount);
-    gacha.current && setNextPity(contentData.maxPityCount - gacha.current.pityCount);
-    gacha.current && setGachaInventoryList([...gachaInventoryList, ...(gacha.current.gachaResult as never[])]);
-    gacha.current && setStarCount(gacha.current.gachaResult);
+    if (gacha.current) {
+      setTotalCount(gacha.current.totalCount);
+      setNextPity(contentData.maxPityCount - gacha.current.pityCount);
+      setGachaInventoryList([...gachaInventoryList, ...(gacha.current.gachaResult as never[])]);
+      setStarCount(gacha.current.gachaResult);
+    }
     setUsedPrimoGem(usedPrimoGem + payedFateCount * 160);
   };
 
@@ -113,7 +112,7 @@ export function GachaScreen() {
     payedFateCount = 8;
   }
 
-  let stopBeginnerWishes: boolean = gachaContent === 'Novice Wishes' && totalCount === 20;
+  let stopBeginnerWishes: boolean = gachaContent === contentList[3] && totalCount === 20;
 
   return (
     <ContentWrapper>
@@ -153,10 +152,7 @@ export function GachaScreen() {
                         <div style={{ fontSize: '14px' }}>{trans(Lang.Start)}</div>
                         <FlexWrapper>
                           <>
-                            <SquareImage
-                              styles={{ width: '25px', height: '25px' }}
-                              src={require(`../../resources/images/items/gem/${gemImage}.png`)}
-                            />
+                            <SquareImage styles={{ width: '25px', height: '25px' }} src={GemImages[gemImage]} />
                             <span style={{ fontSize: '14px' }}>&nbsp;× {payedFateCount}</span>
                           </>
                         </FlexWrapper>
@@ -193,7 +189,7 @@ export function GachaScreen() {
           {stopBeginnerWishes && (
             <TextCenterWrapper styles={{ width: '800px', margin: '0 auto 20px' }}>{trans(Lang.Novice_Finish)}</TextCenterWrapper>
           )}
-          {gachaContent === 'Novice Wishes' ? (
+          {gachaContent === contentList[3] ? (
             <GachaResult
               times={totalCount}
               four={fourStarCount}

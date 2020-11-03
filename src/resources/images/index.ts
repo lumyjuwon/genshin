@@ -41,6 +41,12 @@ const ItemImages: ImageMap = {};
 appendImages(ItemImages, weaponInfo, './items/weapons');
 appendImages(ItemImages, artifactInfo, './items/artifacts');
 
+const GemImages: ImageMap = {
+  Interwined: require('./items/gem/Intertwined Fate.png'),
+  Acquaint: require('./items/gem/Acquaint Fate.png'),
+};
+
+
 const ArtifactTypeImages: ImageMap = {
   Flower: require('./items/artifacts/Flower.png'),
   Feather: require('./items/artifacts/Feather.png'),
@@ -60,4 +66,4 @@ const ItemTypeImages: ImageMap = Object.assign({}, ArtifactTypeImages, WeaponTyp
 const GachaImages: ImageMap = Object.assign({}, CharacterImages, ItemImages);
 const GachaTypeImages: ImageMap = Object.assign({}, ElementImages, WeaponTypeImages);
 
-export { ItemTypeImages, CharacterImages, ElementImages, ItemImages, WeaponTypeImages, GachaImages, GachaTypeImages, MainScreen };
+export { ItemTypeImages, CharacterImages, ElementImages, ItemImages, WeaponTypeImages, GachaImages, GachaTypeImages, MainScreen, GemImages };
