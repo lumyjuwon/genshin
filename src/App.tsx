@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { RefObject, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 
@@ -7,6 +7,7 @@ import { Header, TextBlockButton, FlexWrapper, RoundImage, Footer } from 'src/co
 import { LangaugeSelector } from './LangaugeSelector';
 import { trans, Lang, LangCode, getCurrentLanguage } from './resources/languages';
 import NotFound from './NotFound';
+import { gachaInfo } from './resources/data';
 
 const MainLogo = styled.div({
   fontSize: '30px',
@@ -50,32 +51,39 @@ const ToggleIcon = styled.div({
   }
 });
 
-const onToggleClick = () => {
-  const target = document.querySelectorAll('#nav-list');
-  target.forEach((child) => {
-    if (child.classList.contains('responsive')) {
-      child.classList.remove('responsive');
-    } else {
-      child.className += ' responsive';
-    }
-  });
-};
+const HeaderNav = styled.div({
+  transition: '.2s ease-out',
+  '&:hover': {
+    textShadow: '0 0 8px #f1f2f3, 0 0 15px #f1f2f3, 0 0 20px #f1f2f3',
+    boxShadow: 'inset 0 -2px 0 #f1f2f3'
+  },
+  '&.selected': {
+    boxShadow: 'inset 0 -2px 0 #f1f2f3'
+  }
+});
 
 function App() {
   const [langCode, setLangCode] = useState<LangCode>(getCurrentLanguage());
+  const navList = useRef<HTMLDivElement>(null);
   const gacha = useRef<HTMLDivElement>(null);
   const party = useRef<HTMLDivElement>(null);
 
+  const onToggleClick = () => {
+    if (navList.current?.classList.contains('responsive')) {
+      navList.current?.classList.remove('responsive');
+    } else {
+      navList.current?.classList.add('responsive');
+    }
+  };
+
   const deleteSelected = () => {
-    const target = document.querySelectorAll('.selected');
-    target.forEach((child) => {
-      child.classList.remove('selected');
-    });
+    gacha.current?.classList.remove('selected');
+    party.current?.classList.remove('selected');
   };
 
   const onNavClick = (ref: React.RefObject<HTMLDivElement>) => {
     deleteSelected();
-    ref.current && (ref.current.className += ' selected');
+    ref.current && ref.current.classList.add('selected');
     if (window.innerWidth <= 768) {
       onToggleClick();
     }
@@ -92,32 +100,30 @@ function App() {
                   styles={{ width: '50px', height: '50px', small: { width: '40px', height: '40px' } }}
                   src={require('./resources/images/mainscreen/logo.png')}
                 />
-                <MainLogo onClick={() => deleteSelected()}>{trans(Lang.Main_Logo)}</MainLogo>
+                <MainLogo onClick={(event: React.MouseEvent<HTMLDivElement, MouseEvent>) => deleteSelected()}>
+                  {trans(Lang.Main_Logo)}
+                </MainLogo>
               </>
             </FlexWrapper>
           </Link>
-          <NavList id="nav-list">
+          <NavList id="nav-list" ref={navList}>
             <FlexWrapper styles={{ justifyContent: 'space-between', width: '100%', small: { flexDirection: 'column' } }}>
               <>
                 <FlexWrapper styles={{ small: { flexDirection: 'column', width: '100%' } }}>
                   <>
                     <Link to="/gacha">
-                      <TextBlockButton
-                        refProp={gacha}
-                        onClick={() => onNavClick(gacha)}
-                        styles={{ buttonStyles: { small: { width: '95vw' } } }}
-                      >
-                        {trans(Lang.Gacha)}
-                      </TextBlockButton>
+                      <HeaderNav ref={gacha}>
+                        <TextBlockButton onClick={() => onNavClick(gacha)} styles={{ buttonStyles: { small: { width: '95vw' } } }}>
+                          {trans(Lang.Gacha)}
+                        </TextBlockButton>
+                      </HeaderNav>
                     </Link>
                     <Link to="/party">
-                      <TextBlockButton
-                        refProp={party}
-                        onClick={() => onNavClick(party)}
-                        styles={{ buttonStyles: { small: { width: '95vw' } } }}
-                      >
-                        {trans(Lang.Party)}
-                      </TextBlockButton>
+                      <HeaderNav ref={party}>
+                        <TextBlockButton onClick={() => onNavClick(party)} styles={{ buttonStyles: { small: { width: '95vw' } } }}>
+                          {trans(Lang.Party)}
+                        </TextBlockButton>
+                      </HeaderNav>
                     </Link>
                   </>
                 </FlexWrapper>
