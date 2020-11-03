@@ -99,13 +99,13 @@ export function Policy() {
         <P>We use the information we collect in various ways, including to:</P>
 
         <ul>
-          <Li>Provide, operate, and maintain our webste</Li>
-          <Li>Improve, personalize, and expand our webste</Li>
-          <Li>Understand and analyze how you use our webste</Li>
+          <Li>Provide, operate, and maintain our website</Li>
+          <Li>Improve, personalize, and expand our website</Li>
+          <Li>Understand and analyze how you use our website</Li>
           <Li>Develop new products, services, features, and functionality</Li>
           <Li>
             Communicate with you, either directly or through one of our partners, including for customer service, to provide you with
-            updates and other information relating to the webste, and for marketing and promotional purposes
+            updates and other information relating to the website, and for marketing and promotional purposes
           </Li>
           <Li>Send you emails</Li>
           <Li>Find and prevent fraud</Li>
