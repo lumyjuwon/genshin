@@ -27,7 +27,7 @@ export function LangaugeSelector(props: Props) {
           props.onCallBack(langCode);
         }}
         content={<i className="fas fa-globe"></i>}
-        defaultValue={props.defaultValue}
+        defaultValue={languages[props.defaultValue]}
         styles={{
           containerStyles: { width: '70px', height: '35px', fontSize: '20px' },
           listStyles: { width: '100px', top: '34px', right: '-1px' }

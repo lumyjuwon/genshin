@@ -81,16 +81,18 @@ const Container = styled.div<ContainerStyles>`
   }
 `;
 
-const List = styled.li({
-  padding: '5px 10px',
-  color: '#f1f2f3',
-  backgroundColor: 'rgba(10, 10, 10, .8)',
-  width: '100%',
-  borderTop: '1px solid #212223',
-  borderRadius: '8px',
-  '&:hover': {
-    backgroundColor: '#ccc'
-  }
+const List = styled.li<{ default?: boolean }>((props: { default?: boolean }) => {
+  return {
+    padding: '5px 10px',
+    backgroundColor: props.default ? '#ccc' : 'rgba(10, 10, 10, .8)',
+    color: props.default ? '#212223' : '#f1f2f3',
+    width: '100%',
+    borderTop: '1px solid #212223',
+    borderRadius: '8px',
+    '&:hover': {
+      backgroundColor: '#ccc'
+    }
+  };
 });
 
 const Clickable = styled.div({
@@ -128,22 +130,30 @@ export const DropDownButton = React.forwardRef<HTMLUListElement, Props>((props, 
 
   const onListClick = (item: string) => {
     props.onClick(item);
-    dropDownRef.current?.classList.add('show-list');
+    dropDownRef.current?.classList.remove('show-list');
   };
 
   return (
     <Container {...props.styles?.containerStyles}>
       <Clickable onClick={() => onContentClick()}>
-        <HoverDiv>{props.content || props.defaultValue}</HoverDiv>
+        <HoverDiv>{props.content}</HoverDiv>
         <Icon>▲</Icon>
       </Clickable>
       <DropDown {...props.styles?.listStyles} id={props.id} ref={dropDownRef}>
         {Object.keys(props.items).map((item: any) => {
-          return (
-            <List key={item} onClick={(event: React.MouseEvent<HTMLLIElement, MouseEvent>) => onListClick(item)}>
-              {props.items[item]}
-            </List>
-          );
+          if (props.defaultValue === props.items[item]) {
+            return (
+              <List default key={item} onClick={(event: React.MouseEvent<HTMLLIElement, MouseEvent>) => onListClick(item)}>
+                {props.items[item]}
+              </List>
+            );
+          } else {
+            return (
+              <List key={item} onClick={(event: React.MouseEvent<HTMLLIElement, MouseEvent>) => onListClick(item)}>
+                {props.items[item]}
+              </List>
+            );
+          }
         })}
       </DropDown>
     </Container>
