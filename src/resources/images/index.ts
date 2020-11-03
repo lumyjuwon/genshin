@@ -42,7 +42,7 @@ appendImages(ItemImages, weaponInfo, './items/weapons');
 appendImages(ItemImages, artifactInfo, './items/artifacts');
 
 const GemImages: ImageMap = {
-  Interwined: require('./items/gem/Intertwined Fate.png'),
+  Intertwined: require('./items/gem/Intertwined Fate.png'),
   Acquaint: require('./items/gem/Acquaint Fate.png'),
 };
 

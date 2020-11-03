@@ -63,9 +63,9 @@ export function GachaScreen() {
 
   let contentList = Object.keys(gachaInfo);
   let payedFateCount: number = 10;
-  let gemImage: string = 'Acquaint Fate';
+  let gemImage: string = 'Acquaint';
   if (gachaContent === contentList[0] || gachaContent === contentList[1]) {
-    gemImage = 'Intertwined Fate';
+    gemImage = 'Intertwined';
   }
   if (gachaContent === contentList[3]) {
     payedFateCount = 8;
@@ -170,10 +170,7 @@ export function GachaScreen() {
                           <div style={{ fontSize: '14px' }}>{trans(Lang.Start)}</div>
                           <FlexWrapper>
                             <>
-                              <SquareImage
-                                styles={{ width: '25px', height: '25px' }}
-                                src={require(`../../resources/images/items/gem/${gemImage}.png`)}
-                              />
+                              <SquareImage styles={{ width: '25px', height: '25px' }} src={GemImages[gemImage]} />
                               <span style={{ fontSize: '14px' }}>&nbsp;× {payedFateCount}</span>
                             </>
                           </FlexWrapper>

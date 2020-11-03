@@ -133,7 +133,7 @@ export function GachaDetails(props: Props) {
           <TextAlignLeft styles={{ fontSize: '25px', small: { fontSize: '20px' } }}>2. {trans(Lang.Help_Item)}</TextAlignLeft>
           <TextAlignLeft styles={{ fontSize: '20px', margin: '0 0 20px', small: { fontSize: '16px' } }}>
             <>
-              {trans(Lang.Help_Content)}: {`${props.content}`}
+              {trans(Lang.Help_Content)}: {trans(Lang[props.content as Lang])}
             </>
           </TextAlignLeft>
           <FlexWrapper styles={{ width: '100%', justifyContent: 'flex-start', small: { justifyContent: 'center' } }}>
