@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div({
@@ -9,6 +9,7 @@ const Container = styled.div({
 });
 
 const Wrapper = styled.div({
+  padding: '10px 0',
   width: '800px',
   display: 'flex',
   justifyContent: 'center',
@@ -56,6 +57,11 @@ const Li = styled.li({
 });
 
 export function Terms() {
+  useEffect(() => {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }, []);
+
   return (
     <Container>
       <Wrapper>
