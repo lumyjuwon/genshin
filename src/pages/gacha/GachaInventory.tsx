@@ -87,20 +87,17 @@ export function GachaInventory(props: Props) {
   const inputRef = useRef<HTMLInputElement>(null);
   const filterRef = useRef<HTMLUListElement>(null);
 
-  const inventory = createInventory(props.inventoryList);
-  let inventoryItems: Array<string> = Array.from(inventory.keys());
-
   const transFilterList = filterList.map((filter) => trans(Lang[filter]));
-
-  const onLabelClicked = () => {
-    inputRef.current && setIsHideThree(inputRef.current.checked);
-  };
-
-  inventoryItems = getFilteredInventory(inventoryItems, isHideThree, filter);
+  const inventory = createInventory(props.inventoryList);
+  const inventoryItems: Array<string> = getFilteredInventory(Array.from(inventory.keys()), isHideThree, filter);
 
   const totalItemCount = Array.from(inventory.values()).reduce((acc: number, count: number) => {
     return acc + count;
   }, 0);
+
+  const onLabelClicked = () => {
+    inputRef.current && setIsHideThree(inputRef.current.checked);
+  };
 
   const onFilterClick = (index: number) => {
     setFilter(filterList[index]);
@@ -132,7 +129,7 @@ export function GachaInventory(props: Props) {
               containerStyles: { width: '110px', height: '32px', small: { fontSize: '14px' } },
               listStyles: { width: '110px', top: '31px', right: '-1px' }
             }}
-            defaultValue={trans(Lang.Filter_Rarity)}
+            defaultValue={trans(Lang[filter])}
           />
           <CheckBoxButton onClick={() => onLabelClicked()} refProp={inputRef} styles={{ labelStyles: { small: { fontSize: '14px' } } }}>
             {trans(Lang.Hide_Three_Star)}

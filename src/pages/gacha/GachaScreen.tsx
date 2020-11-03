@@ -61,6 +61,18 @@ export function GachaScreen() {
     }
   }, [gachaContent, contentData]);
 
+  let contentList = Object.keys(gachaInfo);
+  let payedFateCount: number = 10;
+  let gemImage: string = 'Acquaint Fate';
+  if (gachaContent === contentList[0] || gachaContent === contentList[1]) {
+    gemImage = 'Intertwined Fate';
+  }
+  if (gachaContent === contentList[3]) {
+    payedFateCount = 8;
+  }
+
+  let stopBeginnerWishes: boolean = gachaContent === contentList[3] && totalCount === 20;
+
   const onResetClick = (): void => {
     setTotalCount(0);
     setFourStarCount(0);
@@ -101,18 +113,6 @@ export function GachaScreen() {
   const setStarCount = (result: Array<string>) => {
     result.map((item: string) => setItemRankCount(item));
   };
-
-  let contentList = Object.keys(gachaInfo);
-  let payedFateCount: number = 10;
-  let gemImage: string = 'Acquaint Fate';
-  if (gachaContent === contentList[0] || gachaContent === contentList[1]) {
-    gemImage = 'Intertwined Fate';
-  }
-  if (gachaContent === contentList[3]) {
-    payedFateCount = 8;
-  }
-
-  let stopBeginnerWishes: boolean = gachaContent === contentList[3] && totalCount === 20;
 
   return (
     <ContentWrapper>

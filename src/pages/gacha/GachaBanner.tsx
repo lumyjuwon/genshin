@@ -32,7 +32,7 @@ export function GachaBanner(props: Props) {
             listStyles: { width: '300px', top: '39px', right: '-1px', small: { width: '220px', top: '34px' } }
           }}
           onClick={props.onClick}
-          defaultValue={trans(Lang.Character_Event_Wish)}
+          defaultValue={trans(Lang[props.content as Lang])}
           content={trans(Lang[props.content as Lang])}
         />
         <GachaDetails content={props.content} />
