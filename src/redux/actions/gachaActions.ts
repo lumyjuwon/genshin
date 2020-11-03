@@ -1,30 +1,15 @@
-export const ADD_WISH_COUNT = 'ADD_COUNT';
+export const CLICK_GACHA_BUTTON = 'CLICK_GACHA_BUTTON';
 export const RESET_ALL = 'RESET_ALL';
-export const GACHA_EXECUTION_RESULT = 'GACHA_EXECUTION_RESULT';
-export const SET_WISH_CONTENT = 'SET_WISH_CONTENT';
 
-export function addWishCount(count: number) {
+
+export function addWishCount() {
   return {
-    type: ADD_WISH_COUNT,
-    count
+    type: CLICK_GACHA_BUTTON
   }
 }
 
 export function resetAll() {
   return {
     type: RESET_ALL,
-  }
-}
-
-export function gachaExecutionResult() {
-  return {
-    type: GACHA_EXECUTION_RESULT
-  }
-}
-
-export function setWishContent(content: string) {
-  return {
-    type: SET_WISH_CONTENT,
-    content
   }
 }

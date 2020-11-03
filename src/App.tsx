@@ -7,7 +7,6 @@ import { Header, TextBlockButton, FlexWrapper, RoundImage, Footer } from 'src/co
 import { LangaugeSelector } from './LangaugeSelector';
 import { trans, Lang, LangCode, getCurrentLanguage } from './resources/languages';
 import NotFound from './NotFound';
-import { gachaInfo } from './resources/data';
 
 const MainLogo = styled.div({
   fontSize: '30px',
