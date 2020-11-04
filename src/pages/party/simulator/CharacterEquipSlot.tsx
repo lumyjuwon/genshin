@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import { artifactInfo, ArtifactType, characterInfo, weaponInfo, WeaponType } from 'src/resources/data';
-import { ItemTypeImages, ItemImages } from 'src/resources/images';
 import { GridWrapper, ItemBadgeBox, Modal, RoundImage, BoxModelWrapper, RoundImageBox } from 'src/components';
-import { ImageSrc } from 'src/resources/images';
+import { ImageSrc, CategoryImages, ItemImages } from 'src/resources/images';
 
 interface Items {
   [name: string]: {
@@ -21,7 +20,6 @@ interface EquipmentButtonProps {
 
 const EquipmentButton = (props: EquipmentButtonProps) => {
   const [equipmentName, setEquipmentName] = useState<string>('');
-  const [equipmentSrc, setEquipmentSrc] = useState<ImageSrc>(undefined);
   const [isVisibleEquipmentModal, setIsVisibleEquipmentModal] = useState<boolean>(false);
 
   return (
@@ -35,7 +33,7 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
         }}
         badge={
           <RoundImage
-            src={equipmentSrc}
+            src={CategoryImages[props.category]}
             styles={{
               width: '30px',
               height: '30px',
@@ -87,12 +85,11 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
                   rank={items[name].rank}
                   hoverInnerColor={'#f1f2f3'}
                   onClick={() => {
-                    setEquipmentSrc(ItemImages[name]);
                     setEquipmentName(name);
                   }}
                   badge={
                     <RoundImage
-                      src={ItemTypeImages[items[name].type]}
+                      src={CategoryImages[items[name].type]}
                       styles={{
                         width: '30px',
                         height: '30px',

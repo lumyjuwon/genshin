@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { ItemBadgeBox, RoundImage, RoundImageBox } from 'src/components';
 import { CharacterName, ArtifactName } from 'src/resources/data';
-import { ImageSrc, ElementImages } from 'src/resources/images';
+import { ImageSrc, ElementImages, CategoryImages } from 'src/resources/images';
 import { characterInfo } from 'src/resources/data';
 import { ArtifactResult } from '../artifact/ArtifactResult';
 
@@ -64,7 +64,7 @@ export function CharacterSimulator(props: Props) {
                 }}
                 badge={
                   <RoundImage
-                    src={dic[1] !== undefined ? ElementImages[characterInfo[dic[0]].element] : undefined}
+                    src={dic[1] !== undefined ? ElementImages[characterInfo[dic[0]].element] : CategoryImages.Character}
                     styles={{
                       width: '30px',
                       height: '30px',
