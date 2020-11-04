@@ -29,23 +29,14 @@ const ElementImages: ImageMap = {
   Pyro: require('./elements/Pyro.png')
 };
 
-const WeaponTypeImages: ImageMap = {
-  Bow: require('./items/weapons/Bow.png'),
-  Catalyst: require('./items/weapons/Catalyst.png'),
-  Claymore: require('./items/weapons/Claymore.png'),
-  Polearm: require('./items/weapons/Polearm.png'),
-  Sword: require('./items/weapons/Sword.png')
-};
-
 const ItemImages: ImageMap = {};
 appendImages(ItemImages, weaponInfo, './items/weapons');
 appendImages(ItemImages, artifactInfo, './items/artifacts');
 
 const GemImages: ImageMap = {
   Intertwined: require('./items/gem/Intertwined Fate.png'),
-  Acquaint: require('./items/gem/Acquaint Fate.png'),
+  Acquaint: require('./items/gem/Acquaint Fate.png')
 };
-
 
 const ArtifactTypeImages: ImageMap = {
   Flower: require('./items/artifacts/Flower.png'),
@@ -62,8 +53,20 @@ const MainScreen = {
   Party: require('./mainscreen/party.png')
 };
 
-const ItemTypeImages: ImageMap = Object.assign({}, ArtifactTypeImages, WeaponTypeImages);
-const GachaImages: ImageMap = Object.assign({}, CharacterImages, ItemImages);
-const GachaTypeImages: ImageMap = Object.assign({}, ElementImages, WeaponTypeImages);
+const CategoryImages: ImageMap = {
+  Character: require('./categories/Character.png'),
+  Bow: require('./categories/Bow.png'),
+  Catalyst: require('./categories/Catalyst.png'),
+  Polearm: require('./categories/Polearm.png'),
+  Claymore: require('./categories/Claymore.png'),
+  Sword: require('./categories/Sword.png'),
+  Flower: require('./categories/Flower.png'),
+  Feather: require('./categories/Feather.png'),
+  HourGlass: require('./categories/HourGlass.png'),
+  HolyGrail: require('./categories/HolyGrail.png'),
+  Crown: require('./categories/Crown.png')
+};
 
-export { ItemTypeImages, CharacterImages, ElementImages, ItemImages, WeaponTypeImages, GachaImages, GachaTypeImages, MainScreen, GemImages };
+const GachaImages: ImageMap = Object.assign({}, CharacterImages, ItemImages);
+
+export { CharacterImages, ElementImages, ItemImages, GachaImages, MainScreen, GemImages, CategoryImages };
