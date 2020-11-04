@@ -184,7 +184,9 @@ export function GachaScreen() {
             </FlexWrapper>
           </BoxModelWrapper>
           {stopBeginnerWishes && (
-            <TextCenterWrapper styles={{ width: '800px', margin: '0 auto 20px' }}>{trans(Lang.Novice_Finish)}</TextCenterWrapper>
+            <TextCenterWrapper styles={{ width: '800px', margin: '0 auto 20px', medium: { width: '700px' }, small: { width: '100%' } }}>
+              {trans(Lang.Novice_Finish)}
+            </TextCenterWrapper>
           )}
           {gachaContent === contentList[3] ? (
             <GachaResult
