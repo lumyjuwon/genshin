@@ -131,7 +131,7 @@ export function GachaInventory(props: Props) {
             }}
             defaultValue={trans(Lang[filter])}
           />
-          <CheckBoxButton onClick={() => onLabelClicked()} refProp={inputRef} styles={{ labelStyles: { small: { fontSize: '14px' } } }}>
+          <CheckBoxButton onClick={() => onLabelClicked()} ref={inputRef} styles={{ labelStyles: { small: { fontSize: '14px' } } }}>
             {trans(Lang.Hide_Three_Star)}
           </CheckBoxButton>
         </>

@@ -49,10 +49,9 @@ interface Props {
   readonly onClick?: Function;
   readonly children?: JSX.Element | string;
   readonly styles?: StyleProps;
-  readonly refProp?: React.RefObject<HTMLInputElement>;
 }
 
-export function CheckBoxButton(props: Props) {
+export const CheckBoxButton = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
   return (
     <CheckboxLabel
       {...props.styles?.labelStyles}
@@ -61,7 +60,7 @@ export function CheckBoxButton(props: Props) {
       }}
     >
       {props.children}
-      <CheckboxInput ref={props.refProp} {...props.styles?.inputStyles} type="checkbox" />
+      <CheckboxInput ref={ref} {...props.styles?.inputStyles} type="checkbox" />
     </CheckboxLabel>
   );
-}
+});
