@@ -13,7 +13,7 @@ enum Lang {
   Main_Wish_Desc = 'Main_Wish_Desc',
   Main_Party_Desc = 'Main_Party_Desc',
   Main_Privacy_Policy = 'Main_Privacy_Policy',
-  Main_Terms_Of_Service = 'Main_Terms_Of_Service',
+  Main_Notice = 'Main_Notice',
   Filter_Rarity = 'Filter_Rarity',
   Filter_Character = 'Filter_Character',
   Filter_Weapon = 'Filter_Weapon',
@@ -65,6 +65,10 @@ enum Lang {
   Policy_Children = "Policy_Children",
   Policy_Children_Content1 = "Policy_Children_Content1",
   Policy_Children_Content2 = "Policy_Children_Content2",
+
+  Notice_Content1 = "Notice_Content1",
+  Notice_Content2 = "Notice_Content2",
+  Notice_Content3 = "Notice_Content3",
 
   Gacha = 'Gacha',
   Character_Event_Wish = 'Character_Event_Wish',
