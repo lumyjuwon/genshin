@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 import { gachaInfo } from '../../resources/data';
 import { FlexWrapper, TextCenterWrapper, SquareImage, EmojiText } from 'src/components';
-import { trans, Lang } from 'src/resources/languages';
+import { trans, Lang, KeyLang } from 'src/resources/languages';
+import { changeItemNameToKeyLang } from 'src/utils';
 
 interface Styles {
   styles: {
@@ -94,6 +95,9 @@ interface Props {
 }
 
 export function GachaDetails(props: Props) {
+  const transFivePickUpList = gachaInfo[props.content].pickUpTarget.map((item) => trans(Lang[changeItemNameToKeyLang(item)]));
+  const transFourStarPickUpList = gachaInfo[props.content].fourStars.pickUpItems.map((item) => trans(Lang[changeItemNameToKeyLang(item)]));
+
   const onExitClick = () => {
     const help = document.getElementById('help');
     help && (help.style.visibility = help.style.visibility === 'hidden' ? 'visible' : 'hidden');
@@ -133,7 +137,7 @@ export function GachaDetails(props: Props) {
           <TextAlignLeft styles={{ fontSize: '25px', small: { fontSize: '20px' } }}>2. {trans(Lang.Help_Item)}</TextAlignLeft>
           <TextAlignLeft styles={{ fontSize: '20px', margin: '0 0 20px', small: { fontSize: '16px' } }}>
             <>
-              {trans(Lang.Help_Content)}: {trans(Lang[props.content as Lang])}
+              {trans(Lang.Help_Content)}: {trans(Lang[props.content as KeyLang])}
             </>
           </TextAlignLeft>
           <FlexWrapper styles={{ width: '100%', justifyContent: 'flex-start', small: { justifyContent: 'center' } }}>
@@ -145,10 +149,10 @@ export function GachaDetails(props: Props) {
             </>
           </FlexWrapper>
           <TextAlignLeft styles={{ fontSize: '20px', small: { fontSize: '16px' } }}>
-            {trans(Lang.Five_Pick_Up)}: {gachaInfo[props.content].pickUpTarget.join(', ') || 'None'}
+            {trans(Lang.Five_Pick_Up)}: {transFivePickUpList.join(', ') || 'None'}
           </TextAlignLeft>
           <TextAlignLeft styles={{ fontSize: '20px', margin: '0', small: { fontSize: '16px' } }}>
-            {trans(Lang.Four_Pick_Up)}: {gachaInfo[props.content].fourStars.pickUpItems.join(', ') || 'None'}
+            {trans(Lang.Four_Pick_Up)}: {transFourStarPickUpList.join(', ') || 'None'}
           </TextAlignLeft>
           <TextAlignLeft styles={{ fontSize: '22px', small: { fontSize: '18px' } }}>
             <span role="img">⚠</span>&nbsp;{trans(Lang.Help_Warning)}

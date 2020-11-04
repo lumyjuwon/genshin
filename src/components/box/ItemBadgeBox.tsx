@@ -5,6 +5,7 @@ import { Rank } from 'src/resources/data';
 import { trans, Lang } from 'src/resources/languages';
 
 import { TooltipText, TooltipStyle } from '../text/TooltipText';
+import { changeItemNameToKeyLang } from 'src/utils';
 
 interface BoxStyle {
   readonly hoverInnerColor?: string;
@@ -126,9 +127,7 @@ export function ItemBadgeBox(props: Props) {
 
       {props.isToolTipVisible && props.tooltip && (
         <HoverVisibleElement visibillity={props.isHoverdToolTip ? 'hidden' : undefined}>
-          <TooltipText styles={props.styles?.tooltipStyles}>
-            {trans(Lang[props.tooltip.replace(/\s|-/g, '_').replace(/'|\(|\)/g, '') as Lang])}
-          </TooltipText>
+          <TooltipText styles={props.styles?.tooltipStyles}>{trans(Lang[changeItemNameToKeyLang(props.tooltip)])}</TooltipText>
         </HoverVisibleElement>
       )}
 

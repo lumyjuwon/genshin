@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { characterInfo, weaponInfo } from 'src/resources/data';
 import { FlexWrapper, SquareImage, TextCenterWrapper, TooltipText } from 'src/components';
 import { trans, Lang } from 'src/resources/languages';
+import { changeItemNameToKeyLang } from 'src/utils';
 
 const GridContainer = styled.div({
   backgroundColor: '#333',
@@ -110,9 +111,7 @@ export function GachaArrangeView(props: Props) {
                     src={imagePath}
                   />
                   <HoverVisibleElement>
-                    <TooltipText styles={{ small: { fontSize: '14px' } }}>
-                      {trans(Lang[item.replace(/\s|-/g, '_').replace(/'/g, '') as Lang])}
-                    </TooltipText>
+                    <TooltipText styles={{ small: { fontSize: '14px' } }}>{trans(Lang[changeItemNameToKeyLang(item)])}</TooltipText>
                   </HoverVisibleElement>
                 </HoverTransform>
               );
