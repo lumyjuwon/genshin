@@ -90,6 +90,7 @@ enum Lang {
   Five_Pick_Up = 'Five_Pick_Up',
   Four_Pick_Up = 'Four_Pick_Up',
   Help_Warning = 'Help_Warning',
+  Help_No_Pick_UP = 'Help_No_Pick_Up',
 
   Klee = 'Klee',
   Diluc = 'Diluc',
@@ -407,6 +408,8 @@ enum Lang {
   Active_Party_Buff = 'Active_Party_Buff',
   Active_Artifact_Buff = 'Active_Artifact_Buff'
 }
+
+export type KeyLang = keyof typeof Lang;
 
 const languages = {
   [LangCode.en]: {
