@@ -166,7 +166,8 @@
     "type": "Bow",
     "stats": {
       "Level": "No Data",
-      "Additional": "No Data" 
+      "ATK": "No Data",
+      "Additional": "None"
     }
   },
   "Hunter's Bow": {
@@ -174,682 +175,683 @@
     "type": "Bow",
     "stats": {
       "Level": "MAX70 70Lv",
-      "Additional": "ATK 185"
+      "ATK": "ATK 185",
+      "Additional": "None"
     }
   },
   "Lost Prayer to the Sacred Winds": {
     "rank": 5,
     "type": "Catalyst",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 90Lv",
+      "ATK": "608",
+      "Additional": "CRIT Rate 33.1%"
     }
   },
   "Skyward Atlas": {
     "rank": 5,
     "type": "Catalyst",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 90Lv",
+      "ATK": "674",
+      "Additional": "ATK 33.1%"
     }
   },
   "Wine and Song": {
     "rank": 4,
     "type": "Catalyst",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "Energy Recharge 41.9%"
     }
   },
   "Blackcliff Amulet": {
     "rank": 4,
     "type": "Catalyst",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "CRIT DMG 50.3%"
     }
   },
   "Eye of Perception": {
     "rank": 4,
     "type": "Catalyst",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "427",
+      "Additional": "ATK 50.3%"
     }
   },
   "Favonius Codex": {
     "rank": 4,
     "type": "Catalyst",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "Energy Recharge 41.9%"
     }
   },
   "Mappa Mare": {
     "rank": 4,
     "type": "Catalyst",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "523",
+      "Additional": "Elemental Mastery 101"
     }
   },
   "The Widsith": {
     "rank": 4,
     "type": "Catalyst",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "CRIT DMG 50.3%"
     }
   },
   "Solar Pearl": {
     "rank": 4,
     "type": "Catalyst",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "CRIT Rate 25.1%"
     }
   },
   "Prototype Malice": {
     "rank": 4,
     "type": "Catalyst",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "Base HP 37.7%"
     }
   },
   "Royal Grimoire": {
     "rank": 4,
     "type": "Catalyst",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "523",
+      "Additional": "ATK 25.1%"
     }
   },
   "Sacrificial Fragments": {
     "rank": 4,
     "type": "Catalyst",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX80 70Lv",
+      "ATK": "373",
+      "Additional": "Elemental Mastery 182"
     }
   },
   "Twin Nephrite": {
     "rank": 3,
     "type": "Catalyst",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "415",
+      "Additional": "No Data"
     }
   },
   "Thrilling Tales of Dragon Slayers": {
     "rank": 3,
     "type": "Catalyst",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "375",
+      "Additional": "32.1%"
     }
   },
   "Amber Catalyst": {
     "rank": 3,
     "type": "Catalyst",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "415",
+      "Additional": "No Data"
     }
   },
   "Magic Guide": {
     "rank": 3,
     "type": "Catalyst",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX80 70Lv",
+      "ATK": "294",
+      "Additional": "Elemantal Mastery 154"
     }
   },
   "Otherworldly Story": {
     "rank": 3,
     "type": "Catalyst",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "375",
+      "Additional": "No Data"
     }
   },
   "Emerald Orb": {
     "rank": 3,
     "type": "Catalyst",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "415",
+      "Additional": "No Data"
     }
   },
   "Pocket Grimoire": {
     "rank": 2,
     "type": "Catalyst",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX60 50Lv",
+      "ATK": "186",
+      "Additional": "None"
     }
   },
   "Apprentice's Notes": {
     "rank": 1,
     "type": "Catalyst",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX70 70Lv",
+      "ATK": "185",
+      "Additional": "None"
     }
   },
   "Wolf's Gravestone": {
     "rank": 5,
     "type": "Claymore",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 90Lv",
+      "ATK": "608",
+      "Additional": "ATK 49.6"
     }
   },
   "Skyward Pride": {
     "rank": 5,
     "type": "Claymore",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "621",
+      "Additional": "Energy Recharge 33.5%"
     }
   },
   "Rainslasher": {
     "rank": 4,
     "type": "Claymore",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "Elemental Mastery 151"
     }
   },
   "Whiteblind": {
     "rank": 4,
     "type": "Claymore",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX80 70Lv",
+      "ATK": "414",
+      "Additional": "DEF 42.6%"
     }
   },
   "The Bell": {
     "rank": 4,
     "type": "Claymore",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "Base HP 37.7%"
     }
   },
   "Serpent Spine": {
     "rank": 4,
     "type": "Claymore",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "CRIT Rate 25.1%"
     }
   },
   "Sacrificial Greatsword": {
     "rank": 4,
     "type": "Claymore",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX70 60Lv",
+      "ATK": "387",
+      "Additional": "Energy Recharge 22.6%"
     }
   },
   "Blackcliff Slasher": {
     "rank": 4,
     "type": "Claymore",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "CRIT DMG 50.3%"
     }
   },
   "Prototype Aminus": {
     "rank": 4,
     "type": "Claymore",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "523",
+      "Additional": "ATK 25.1%"
     }
   },
   "Lithic Blade": {
     "rank": 4,
     "type": "Claymore",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX70 60Lv",
+      "ATK": "319",
+      "Additional": "CRIT DMG 54.1"
     }
   },
   "Favonius Greatsword": {
     "rank": 4,
     "type": "Claymore",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "427",
+      "Additional": "Energy Recharge 55.9%"
     }
   },
   "Royal Greatsword": {
     "rank": 4,
     "type": "Claymore",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "523",
+      "Additional": "ATK 25.1%"
     }
   },
   "Quartz": {
     "rank": 3,
     "type": "Claymore",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "415",
+      "Additional": "Elemental Mastery(No Data)"
     }
   },
   "Bloodtainted Greatsword": {
     "rank": 3,
     "type": "Claymore",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX80 70Lv",
+      "ATK": "294",
+      "Additional": "Elemenatl Mastery 154"
     }
   },
   "Skyrider Greatsword": {
     "rank": 3,
     "type": "Claymore",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "375",
+      "Additional": "Physical DMG Bonus(No Data)"
     }
   },
   "Ferrous Shadow": {
     "rank": 3,
     "type": "Claymore",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "375",
+      "Additional": "Base HP 32.1%"
     }
   },
   "White Iron Greatsword": {
     "rank": 3,
     "type": "Claymore",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX60 50Lv",
+      "ATK": "236",
+      "Additional": "DEF 28.5%"
     }
   },
   "Debate Club": {
     "rank": 3,
     "type": "Claymore",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "375",
+      "Additional": "ATK 32.1%"
     }
   },
   "Old Merc's Pal": {
     "rank": 2,
     "type": "Claymore",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX60 50Lv",
+      "ATK": "186",
+      "Additional": "None"
     }
   },
   "Waster Greatsword": {
     "rank": 1,
     "type": "Claymore",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX70 70Lv",
+      "ATK": "185",
+      "Additional": "None"
     }
   },
   "Kunwu's Iris Rift": {
     "rank": 5,
-     "type": "Polearm",
-     "stats": {
-       "Level": "",
-       "ATK" : "",
-       "Additional": ""
-     }
+    "type": "Polearm",
+    "stats": {
+      "Level": "MAX90 90Lv",
+      "ATK" : "608",
+      "Additional": "ATK 49.6%"
+    }
   },
   "Primordial Jade Winged-Spear": {
     "rank": 5,
-     "type": "Polearm",
-     "stats": {
-       "Level": "",
-       "ATK" : "",
-       "Additional": ""
-     }
+    "type": "Polearm",
+    "stats": {
+      "Level": "MAX90 90Lv",
+      "ATK" : "674",
+      "Additional": "CRIT Rate 22.1%"
+    }
   },
   "Skyward Spine": {
-    "rank": 4,
-     "type": "Polearm",
-     "stats": {
-       "Level": "",
-       "ATK" : "",
-       "Additional": ""
-     }
+    "rank": 5,
+    "type": "Polearm",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK" : "621",
+      "Additional": "Energy Recharge 33.5%"
+    }
   },
   "Blackcliff Pole": {
     "rank": 4,
-     "type": "Polearm",
-     "stats": {
-       "Level": "",
-       "ATK" : "",
-       "Additional": ""
-     }
+    "type": "Polearm",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK" : "475",
+      "Additional": "CRIT DMG 50.3%"
+    }
   },
   "Crescent Pike": {
     "rank": 4,
-     "type": "Polearm",
-     "stats": {
-       "Level": "",
-       "ATK" : "",
-       "Additional": ""
-     }
+    "type": "Polearm",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK" : "523",
+      "Additional": "Physical DMG Bonus 31.5%"
+    }
   },
   "Deathmatch": {
     "rank": 4,
-     "type": "Polearm",
-     "stats": {
-       "Level": "",
-       "ATK" : "",
-       "Additional": ""
-     }
+    "type": "Polearm",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK" : "427",
+      "Additional": "CRIT Rate 33.5%"
+    }
   },
   "Dragon's Bane": {
     "rank": 4,
-     "type": "Polearm",
-     "stats": {
-       "Level": "",
-       "ATK" : "",
-       "Additional": ""
-     }
+    "type": "Polearm",
+    "stats": {
+      "Level": "MAX80 70Lv",
+      "ATK" : "373",
+      "Additional": "Elemental Mastery 182"
+    }
   },
   "Favonius Lance": {
     "rank": 4,
-     "type": "Polearm",
-     "stats": {
-       "Level": "",
-       "ATK" : "",
-       "Additional": ""
-     }
+    "type": "Polearm",
+    "stats": {
+      "Level": "MAX70 60Lv",
+      "ATK" : "387",
+      "Additional": "Energy Recharge 22.6%"
+    }
   },
   "Lithic Spear": {
     "rank": 4,
-     "type": "Polearm",
-     "stats": {
-       "Level": "",
-       "ATK" : "",
-       "Additional": ""
-     }
+    "type": "Polearm",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK" : "475",
+      "Additional": "Physical DMG Bonus 37.7%"
+    }
   },
   "Prototype Grudge": {
     "rank": 4,
-     "type": "Polearm",
-     "stats": {
-       "Level": "",
-       "ATK" : "",
-       "Additional": ""
-     }
+    "type": "Polearm",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK" : "475",
+      "Additional": "Energy Recharge 41.9%"
+    }
   },
   "Black Tassel": {
     "rank": 3,
-     "type": "Polearm",
-     "stats": {
-       "Level": "",
-       "ATK" : "",
-       "Additional": ""
-     }
+    "type": "Polearm",
+    "stats": {
+      "Level": "MAX60 50Lv",
+      "ATK" : "212",
+      "Additional": "Base HP 30.4%"
+    }
   },
   "Halberd": {
     "rank": 3,
-     "type": "Polearm",
-     "stats": {
-       "Level": "",
-       "ATK" : "",
-       "Additional": ""
-     }
+    "type": "Polearm",
+    "stats": {
+    "Level": "MAX70 60Lv",
+    "ATK" : "311",
+    "Additional": "ATK 17.3%"
+    }
   },
   "White Tassel": {
     "rank": 3,
-     "type": "Polearm",
-     "stats": {
-       "Level": "",
-       "ATK" : "",
-       "Additional": ""
-     }
+    "type": "Polearm",
+    "stats": {
+      "Level": "MAX70 60Lv",
+      "ATK" : "282",
+      "Additional": "CRIT Rate 17.3%"
+    }
   },
   "Iron Point": {
     "rank": 2,
-     "type": "Polearm",
-     "stats": {
-       "Level": "",
-       "ATK" : "",
-       "Additional": ""
-     }
+    "type": "Polearm",
+    "stats": {
+      "Level": "MAX60 50Lv",
+      "ATK" : "186",
+      "Additional": "None"
+    }
   },
   "Beginner's Protector": {
     "rank": 1,
-     "type": "Polearm",
-     "stats": {
-       "Level": "",
-       "ATK" : "",
-       "Additional": ""
-     }
+    "type": "Polearm",
+    "stats": {
+      "Level": "MAX70 70Lv",
+      "ATK" : "185",
+      "Additional": "None"
+    }
   },
   "Skyward Blade": {
     "rank": 5,
     "type": "Sword",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 90Lv",
+      "ATK": "608",
+      "Additional": "Energy Recharge 55.1%"
     }
   },
   "Aquila Favonia": {
     "rank": 5,
     "type": "Sword",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "621",
+      "Additional": "Physical DMG Bonus 37.7%"
     }
   },
   "Blackcliff Longsword": {
     "rank": 4,
     "type": "Sword",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "523",
+      "Additional": "CRIT DMG 33.5%"
     }
   },
   "The Flute": {
     "rank": 4,
     "type": "Sword",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "ATK 37.7%"
     }
   },
   "The Black Sword": {
     "rank": 4,
     "type": "Sword",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "CRIT Rate 25.1%"
     }
   },
   "The Alley Flash": {
     "rank": 4,
     "type": "Sword",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX80 70Lv",
+      "ATK": "455",
+      "Additional": "CRIT Rate 15.1%"
     }
   },
   "Sacrificial Sword": {
     "rank": 4,
     "type": "Sword",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "427",
+      "Additional": "Energy Recharge 55.9%"
     }
   },
   "Royal Longsword": {
     "rank": 4,
     "type": "Sword",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "ATK 37.7%"
     }
   },
   "Prototype Rancour": {
     "rank": 4,
     "type": "Sword",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "523",
+      "Additional": "Physical DMG Bonus 31.5%"
     }
   },
   "Lion's Roar": {
     "rank": 4,
     "type": "Sword",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "ATK 37.7%"
     }
   },
   "Iron Sting": {
     "rank": 4,
     "type": "Sword",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "Elemental Mastery 151"
     }
   },
   "Favonius Sword": {
     "rank": 4,
     "type": "Sword",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "427",
+      "Additional": "55.9%"
     }
   },
   "Harbinger of Dawn": {
     "rank": 3,
     "type": "Sword",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX60 50Lv",
+      "ATK": "216",
+      "Additional": "CRIT DMG 30.4%"
     }
   },
   "Skyrider Sword": {
     "rank": 3,
     "type": "Sword",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX80 70Lv",
+      "ATK": "294",
+      "Additional": "Energy Recharge 42.6%"
     }
   },
   "Fillet Blade": {
     "rank": 3,
     "type": "Sword",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "375",
+      "Additional": "ATK 32.1%"
     }
   },
   "Dark Iron Sword": {
     "rank": 3,
     "type": "Sword",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "375",
+      "Additional": "Elemental Mastery(No Data)"
     }
   },
   "Cool Steel": {
     "rank": 3,
     "type": "Sword",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX90 80Lv",
+      "ATK": "375",
+      "Additional": "ATK 32.1%"
     }
   },
   "Traveler's Handy Sword": {
     "rank": 3,
     "type": "Sword",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX80 70Lv",
+      "ATK": "363",
+      "Additional": "DEF 24.1%"
     }
   },
   "Silver Sword": {
     "rank": 2,
     "type": "Sword",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX60 50Lv",
+      "ATK": "186",
+      "Additional": "None"
     }
   },
   "Dull Blade": {
     "rank": 1,
     "type": "Sword",
     "stats": {
-      "Level": "",
-      "ATK": "",
-      "Additional": ""
+      "Level": "MAX70 70Lv",
+      "ATK": "185",
+      "Additional": "None"
     }
   }
 }
