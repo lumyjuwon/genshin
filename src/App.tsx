@@ -2,7 +2,7 @@ import React, { RefObject, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 
-import { GachaScreen, PartyScreen, MainScreen, Policy, Terms } from 'src/pages';
+import { GachaScreen, PartyScreen, MainScreen, Policy, Notice } from 'src/pages';
 import { Header, TextBlockButton, FlexWrapper, RoundImage, Footer } from 'src/components';
 import { LangaugeSelector } from './LangaugeSelector';
 import { trans, Lang, LangCode, getCurrentLanguage } from './resources/languages';
@@ -145,7 +145,7 @@ function App() {
         <Route path="/gacha" component={GachaScreen} />
         <Route path="/party" component={PartyScreen} />
         <Route path="/policy" component={Policy} />
-        <Route path="/terms" component={Terms} />
+        <Route path="/notice" component={Notice} />
         <Route path="*" component={NotFound} />
       </Switch>
       <Footer />

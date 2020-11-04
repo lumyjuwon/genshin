@@ -49,9 +49,9 @@ export function Footer() {
                 <FooterText>{trans(Lang.Main_Privacy_Policy)}</FooterText>
               </TextUnderLineButton>
             </Link>
-            <Link to="/terms">
+            <Link to="/notice">
               <TextUnderLineButton>
-                <FooterText>{trans(Lang.Main_Terms_Of_Service)}</FooterText>
+                <FooterText>{trans(Lang.Main_Notice)}</FooterText>
               </TextUnderLineButton>
             </Link>
             <ContactUs>
