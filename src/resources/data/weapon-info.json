@@ -1,382 +1,855 @@
 {
   "Amos' Bow": {
     "rank": 5,
-    "type": "Bow"
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX90 90Lv",
+      "ATK": 608,
+      "ATK(%)": 49.6
+    }
   },
   "Skyward Harp": {
     "rank": 5,
-    "type": "Bow"
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX90 90Lv",
+      "ATK": 674,
+      "CRIT Rate(%)": 22.1
+    }
   },
   "Alley Hunter": {
     "rank": 4,
-    "type": "Bow"
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": 427,
+      "CRIT Rate(%)": 33.5
+    }
   },
   "The Stringless": {
     "rank": 4,
-    "type": "Bow"
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": 475,
+      "Element Mastery": 150
+    }
   },
   "Sacrificial Bow": {
     "rank": 4,
-    "type": "Bow"
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX70 60Lv",
+      "ATK": 387,
+      "Energy Recharge(%)": 22.6
+    }
   },
   "Rust": {
     "rank": 4,
-    "type": "Bow"
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": 475,
+      "ATK(%)": 37.7
+    }
   },
   "Royal Bow": {
     "rank": 4,
-    "type": "Bow"
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": 475,
+      "ATK(%)": 37.7
+    }
   },
   "The Viridescent Hunt": {
     "rank": 4,
-    "type": "Bow"
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": 475,
+      "CRIT Rate(%)": 25.1
+    }
   },
   "Prototype Crescent": {
     "rank": 4,
-    "type": "Bow"
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": 475,
+      "ATK(%)": 37.7
+    }
   },
   "Favonius Warbow": {
     "rank": 4,
-    "type": "Bow"
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": 427,
+      "Energy Recharge(%)": 55.9
+    }
   },
   "Compound Bow": {
     "rank": 4,
-    "type": "Bow"
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": 427,
+      "Physical DMG Bonus(%)": 62.9
+    }
   },
   "Blackcliff Warbow": {
     "rank": 4,
-    "type": "Bow"
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": 523,
+      "ATK(%)": 25.1
+    }
   },
   "Raven Bow": {
     "rank": 3,
-    "type": "Bow"
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX60 50Lv",
+      "ATK": 259,
+      "Elemantal Mastery": 61
+    }
   },
   "Messenger": {
     "rank": 3,
-    "type": "Bow"
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX80 70Lv",
+      "ATK": 363,
+      "CRIT DMG(%)": 25.7
+    }
   },
   "Ebony Bow": {
     "rank": 3,
-    "type": "Bow"
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX80 70Lv",
+      "ATK": 363,
+      "ATK(%)": "Unknown"
+    }
   },
   "Sharpshooter's Oath": {
     "rank": 3,
-    "type": "Bow"
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX60 50Lv",
+      "ATK": 236,
+      "CRIT DMG(%)": 30.4
+    }
   },
   "Slingshot": {
     "rank": 3,
-    "type": "Bow"
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": 334,
+      "CRIT Rate(%)": 28.5
+    }
   },
   "Recurve Bow": {
     "rank": 3,
-    "type": "Bow"
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX60 50Lv",
+      "ATK": 212,
+      "Base HP(%)": 30.4
+    }
   },
   "Seasoned Hunter's Bow": {
     "rank": 2,
-    "type": "Bow"
+    "type": "Bow",
+    "stats": {
+      "Level": "No Data",
+      "ATK": "No Data" 
+    }
   },
   "Hunter's Bow": {
     "rank": 1,
-    "type": "Bow"
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX70 70Lv",
+      "ATK": 185
+    }
   },
   "Lost Prayer to the Sacred Winds": {
     "rank": 5,
-    "type": "Catalyst"
+    "type": "Catalyst",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Skyward Atlas": {
     "rank": 5,
-    "type": "Catalyst"
+    "type": "Catalyst",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Wine and Song": {
     "rank": 4,
-    "type": "Catalyst"
+    "type": "Catalyst",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Blackcliff Amulet": {
     "rank": 4,
-    "type": "Catalyst"
+    "type": "Catalyst",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Eye of Perception": {
     "rank": 4,
-    "type": "Catalyst"
+    "type": "Catalyst",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Favonius Codex": {
     "rank": 4,
-    "type": "Catalyst"
+    "type": "Catalyst",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Mappa Mare": {
     "rank": 4,
-    "type": "Catalyst"
+    "type": "Catalyst",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "The Widsith": {
     "rank": 4,
-    "type": "Catalyst"
+    "type": "Catalyst",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Solar Pearl": {
     "rank": 4,
-    "type": "Catalyst"
+    "type": "Catalyst",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Prototype Malice": {
     "rank": 4,
-    "type": "Catalyst"
+    "type": "Catalyst",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Royal Grimoire": {
     "rank": 4,
-    "type": "Catalyst"
+    "type": "Catalyst",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Sacrificial Fragments": {
     "rank": 4,
-    "type": "Catalyst"
+    "type": "Catalyst",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Twin Nephrite": {
     "rank": 3,
-    "type": "Catalyst"
+    "type": "Catalyst",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Thrilling Tales of Dragon Slayers": {
     "rank": 3,
-    "type": "Catalyst"
+    "type": "Catalyst",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Amber Catalyst": {
     "rank": 3,
-    "type": "Catalyst"
+    "type": "Catalyst",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Magic Guide": {
     "rank": 3,
-    "type": "Catalyst"
+    "type": "Catalyst",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Otherworldly Story": {
     "rank": 3,
-    "type": "Catalyst"
+    "type": "Catalyst",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Emerald Orb": {
     "rank": 3,
-    "type": "Catalyst"
+    "type": "Catalyst",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Pocket Grimoire": {
     "rank": 2,
-    "type": "Catalyst"
+    "type": "Catalyst",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Apprentice's Notes": {
     "rank": 1,
-    "type": "Catalyst"
+    "type": "Catalyst",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Wolf's Gravestone": {
     "rank": 5,
-    "type": "Claymore"
+    "type": "Claymore",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Skyward Pride": {
     "rank": 5,
-    "type": "Claymore"
+    "type": "Claymore",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Rainslasher": {
     "rank": 4,
-    "type": "Claymore"
+    "type": "Claymore",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Whiteblind": {
     "rank": 4,
-    "type": "Claymore"
+    "type": "Claymore",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "The Bell": {
     "rank": 4,
-    "type": "Claymore"
+    "type": "Claymore",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Serpent Spine": {
     "rank": 4,
-    "type": "Claymore"
+    "type": "Claymore",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Sacrificial Greatsword": {
     "rank": 4,
-    "type": "Claymore"
+    "type": "Claymore",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Blackcliff Slasher": {
     "rank": 4,
-    "type": "Claymore"
+    "type": "Claymore",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Prototype Aminus": {
     "rank": 4,
-    "type": "Claymore"
+    "type": "Claymore",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Lithic Blade": {
     "rank": 4,
-    "type": "Claymore"
+    "type": "Claymore",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Favonius Greatsword": {
     "rank": 4,
-    "type": "Claymore"
+    "type": "Claymore",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Royal Greatsword": {
     "rank": 4,
-    "type": "Claymore"
+    "type": "Claymore",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Quartz": {
     "rank": 3,
-    "type": "Claymore"
+    "type": "Claymore",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Bloodtainted Greatsword": {
     "rank": 3,
-    "type": "Claymore"
+    "type": "Claymore",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Skyrider Greatsword": {
     "rank": 3,
-    "type": "Claymore"
+    "type": "Claymore",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Ferrous Shadow": {
     "rank": 3,
-    "type": "Claymore"
+    "type": "Claymore",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "White Iron Greatsword": {
     "rank": 3,
-    "type": "Claymore"
+    "type": "Claymore",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Debate Club": {
     "rank": 3,
-    "type": "Claymore"
+    "type": "Claymore",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Old Merc's Pal": {
     "rank": 2,
-    "type": "Claymore"
+    "type": "Claymore",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Waster Greatsword": {
     "rank": 1,
-    "type": "Claymore"
+    "type": "Claymore",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Kunwu's Iris Rift": {
     "rank": 5,
-     "type": "Polearm"
+     "type": "Polearm",
+     "stats": {
+       "Level": "",
+       "ATK" : "",
+       "Blank": ""
+     }
   },
   "Primordial Jade Winged-Spear": {
     "rank": 5,
-     "type": "Polearm"
+     "type": "Polearm",
+     "stats": {
+       "Level": "",
+       "ATK" : "",
+       "Blank": ""
+     }
   },
   "Skyward Spine": {
     "rank": 4,
-     "type": "Polearm"
+     "type": "Polearm",
+     "stats": {
+       "Level": "",
+       "ATK" : "",
+       "Blank": ""
+     }
   },
   "Blackcliff Pole": {
     "rank": 4,
-     "type": "Polearm"
+     "type": "Polearm",
+     "stats": {
+       "Level": "",
+       "ATK" : "",
+       "Blank": ""
+     }
   },
   "Crescent Pike": {
     "rank": 4,
-     "type": "Polearm"
+     "type": "Polearm",
+     "stats": {
+       "Level": "",
+       "ATK" : "",
+       "Blank": ""
+     }
   },
   "Deathmatch": {
     "rank": 4,
-     "type": "Polearm"
+     "type": "Polearm",
+     "stats": {
+       "Level": "",
+       "ATK" : "",
+       "Blank": ""
+     }
   },
   "Dragon's Bane": {
     "rank": 4,
-     "type": "Polearm"
+     "type": "Polearm",
+     "stats": {
+       "Level": "",
+       "ATK" : "",
+       "Blank": ""
+     }
   },
   "Favonius Lance": {
     "rank": 4,
-     "type": "Polearm"
+     "type": "Polearm",
+     "stats": {
+       "Level": "",
+       "ATK" : "",
+       "Blank": ""
+     }
   },
   "Lithic Spear": {
     "rank": 4,
-     "type": "Polearm"
+     "type": "Polearm",
+     "stats": {
+       "Level": "",
+       "ATK" : "",
+       "Blank": ""
+     }
   },
   "Prototype Grudge": {
     "rank": 4,
-     "type": "Polearm"
+     "type": "Polearm",
+     "stats": {
+       "Level": "",
+       "ATK" : "",
+       "Blank": ""
+     }
   },
   "Black Tassel": {
     "rank": 3,
-     "type": "Polearm"
+     "type": "Polearm",
+     "stats": {
+       "Level": "",
+       "ATK" : "",
+       "Blank": ""
+     }
   },
   "Halberd": {
     "rank": 3,
-     "type": "Polearm"
+     "type": "Polearm",
+     "stats": {
+       "Level": "",
+       "ATK" : "",
+       "Blank": ""
+     }
   },
   "White Tassel": {
     "rank": 3,
-     "type": "Polearm"
+     "type": "Polearm",
+     "stats": {
+       "Level": "",
+       "ATK" : "",
+       "Blank": ""
+     }
   },
   "Iron Point": {
     "rank": 2,
-     "type": "Polearm"
+     "type": "Polearm",
+     "stats": {
+       "Level": "",
+       "ATK" : "",
+       "Blank": ""
+     }
   },
   "Beginner's Protector": {
     "rank": 1,
-     "type": "Polearm"
+     "type": "Polearm",
+     "stats": {
+       "Level": "",
+       "ATK" : "",
+       "Blank": ""
+     }
   },
   "Skyward Blade": {
     "rank": 5,
-    "type": "Sword"
+    "type": "Sword",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Aquila Favonia": {
     "rank": 5,
-    "type": "Sword"
+    "type": "Sword",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Blackcliff Longsword": {
     "rank": 4,
-    "type": "Sword"
+    "type": "Sword",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "The Flute": {
     "rank": 4,
-    "type": "Sword"
+    "type": "Sword",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "The Black Sword": {
     "rank": 4,
-    "type": "Sword"
+    "type": "Sword",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "The Alley Flash": {
     "rank": 4,
-    "type": "Sword"
+    "type": "Sword",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Sacrificial Sword": {
     "rank": 4,
-    "type": "Sword"
+    "type": "Sword",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Royal Longsword": {
     "rank": 4,
-    "type": "Sword"
+    "type": "Sword",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Prototype Rancour": {
     "rank": 4,
-    "type": "Sword"
+    "type": "Sword",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Lion's Roar": {
     "rank": 4,
-    "type": "Sword"
+    "type": "Sword",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Iron Sting": {
     "rank": 4,
-    "type": "Sword"
+    "type": "Sword",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Favonius Sword": {
     "rank": 4,
-    "type": "Sword"
+    "type": "Sword",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Harbinger of Dawn": {
     "rank": 3,
-    "type": "Sword"
+    "type": "Sword",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Skyrider Sword": {
     "rank": 3,
-    "type": "Sword"
+    "type": "Sword",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Fillet Blade": {
     "rank": 3,
-    "type": "Sword"
+    "type": "Sword",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Dark Iron Sword": {
     "rank": 3,
-    "type": "Sword"
+    "type": "Sword",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Cool Steel": {
     "rank": 3,
-    "type": "Sword"
+    "type": "Sword",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Traveler's Handy Sword": {
     "rank": 3,
-    "type": "Sword"
+    "type": "Sword",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Silver Sword": {
     "rank": 2,
-    "type": "Sword"
+    "type": "Sword",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   },
   "Dull Blade": {
     "rank": 1,
-    "type": "Sword"
+    "type": "Sword",
+    "stats": {
+      "Level": "",
+      "ATK": "",
+      "Blank": ""
+    }
   }
 }
