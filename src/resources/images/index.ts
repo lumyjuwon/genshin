@@ -38,14 +38,6 @@ const GemImages: ImageMap = {
   Acquaint: require('./items/gem/Acquaint Fate.png')
 };
 
-const ArtifactTypeImages: ImageMap = {
-  Flower: require('./items/artifacts/Flower.png'),
-  Feather: require('./items/artifacts/Feather.png'),
-  HourGlass: require('./items/artifacts/HourGlass.png'),
-  HolyGrail: require('./items/artifacts/HolyGrail.png'),
-  Crown: require('./items/artifacts/Crown.png')
-};
-
 const MainScreen = {
   Gacha: require('./mainscreen/gacha.png'),
   Main: require('./mainscreen/main.jpg'),
