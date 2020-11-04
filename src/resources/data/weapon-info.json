@@ -5,7 +5,7 @@
     "stats": {
       "Level": "MAX90 90Lv",
       "ATK": 608,
-      "ATK(%)": 49.6
+      "Additional": "ATK 49.6%"
     }
   },
   "Skyward Harp": {
@@ -14,7 +14,7 @@
     "stats": {
       "Level": "MAX90 90Lv",
       "ATK": 674,
-      "CRIT Rate(%)": 22.1
+      "Additional": "CRIT Rate 22.1%"
     }
   },
   "Alley Hunter": {
@@ -23,7 +23,7 @@
     "stats": {
       "Level": "MAX90 80Lv",
       "ATK": 427,
-      "CRIT Rate(%)": 33.5
+      "Additional": "CRIT Rate 33.5%"
     }
   },
   "The Stringless": {
@@ -32,7 +32,7 @@
     "stats": {
       "Level": "MAX90 80Lv",
       "ATK": 475,
-      "Element Mastery": 150
+      "Additional": "Element Mastery 150"
     }
   },
   "Sacrificial Bow": {
@@ -41,7 +41,7 @@
     "stats": {
       "Level": "MAX70 60Lv",
       "ATK": 387,
-      "Energy Recharge(%)": 22.6
+      "Additional": "Energy Recharge 22.6%"
     }
   },
   "Rust": {
@@ -50,7 +50,7 @@
     "stats": {
       "Level": "MAX90 80Lv",
       "ATK": 475,
-      "ATK(%)": 37.7
+      "Additional": "ATK 37.7%"
     }
   },
   "Royal Bow": {
@@ -59,7 +59,7 @@
     "stats": {
       "Level": "MAX90 80Lv",
       "ATK": 475,
-      "ATK(%)": 37.7
+      "Additional": "ATK 37.7%"
     }
   },
   "The Viridescent Hunt": {
@@ -68,7 +68,7 @@
     "stats": {
       "Level": "MAX90 80Lv",
       "ATK": 475,
-      "CRIT Rate(%)": 25.1
+      "Addtional": "CRIT Rate 25.1%"
     }
   },
   "Prototype Crescent": {
@@ -77,7 +77,7 @@
     "stats": {
       "Level": "MAX90 80Lv",
       "ATK": 475,
-      "ATK(%)": 37.7
+      "Addtional": "ATK 37.7%"
     }
   },
   "Favonius Warbow": {
@@ -86,7 +86,7 @@
     "stats": {
       "Level": "MAX90 80Lv",
       "ATK": 427,
-      "Energy Recharge(%)": 55.9
+      "Addtional": "Energy Recharge 55.9%"
     }
   },
   "Compound Bow": {
@@ -95,7 +95,7 @@
     "stats": {
       "Level": "MAX90 80Lv",
       "ATK": 427,
-      "Physical DMG Bonus(%)": 62.9
+      "Additional": "Physical DMG Bonus 62.9%"
     }
   },
   "Blackcliff Warbow": {
@@ -104,7 +104,7 @@
     "stats": {
       "Level": "MAX90 80Lv",
       "ATK": 523,
-      "ATK(%)": 25.1
+      "Additional": "ATK 25.1%"
     }
   },
   "Raven Bow": {
@@ -113,7 +113,7 @@
     "stats": {
       "Level": "MAX60 50Lv",
       "ATK": 259,
-      "Elemantal Mastery": 61
+      "Additional": "Elemantal Mastery 61"
     }
   },
   "Messenger": {
@@ -122,7 +122,7 @@
     "stats": {
       "Level": "MAX80 70Lv",
       "ATK": 363,
-      "CRIT DMG(%)": 25.7
+      "Additional": "CRIT DMG 25.7%"
     }
   },
   "Ebony Bow": {
@@ -131,7 +131,7 @@
     "stats": {
       "Level": "MAX80 70Lv",
       "ATK": 363,
-      "ATK(%)": "Unknown"
+      "Additional": "No Data"
     }
   },
   "Sharpshooter's Oath": {
@@ -140,7 +140,7 @@
     "stats": {
       "Level": "MAX60 50Lv",
       "ATK": 236,
-      "CRIT DMG(%)": 30.4
+      "Additional": "CRIT DMG 30.4%"
     }
   },
   "Slingshot": {
@@ -149,7 +149,7 @@
     "stats": {
       "Level": "MAX90 80Lv",
       "ATK": 334,
-      "CRIT Rate(%)": 28.5
+      "Additional": "CRIT Rate 28.5%"
     }
   },
   "Recurve Bow": {
@@ -158,7 +158,7 @@
     "stats": {
       "Level": "MAX60 50Lv",
       "ATK": 212,
-      "Base HP(%)": 30.4
+      "Additional": "Base HP 30.4%"
     }
   },
   "Seasoned Hunter's Bow": {
@@ -166,7 +166,7 @@
     "type": "Bow",
     "stats": {
       "Level": "No Data",
-      "ATK": "No Data" 
+      "Additional": "No Data" 
     }
   },
   "Hunter's Bow": {
@@ -174,7 +174,7 @@
     "type": "Bow",
     "stats": {
       "Level": "MAX70 70Lv",
-      "ATK": 185
+      "Additional": "ATK 185"
     }
   },
   "Lost Prayer to the Sacred Winds": {
@@ -183,7 +183,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Skyward Atlas": {
@@ -192,7 +192,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Wine and Song": {
@@ -201,7 +201,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Blackcliff Amulet": {
@@ -210,7 +210,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Eye of Perception": {
@@ -219,7 +219,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Favonius Codex": {
@@ -228,7 +228,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Mappa Mare": {
@@ -237,7 +237,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "The Widsith": {
@@ -246,7 +246,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Solar Pearl": {
@@ -255,7 +255,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Prototype Malice": {
@@ -264,7 +264,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Royal Grimoire": {
@@ -273,7 +273,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Sacrificial Fragments": {
@@ -282,7 +282,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Twin Nephrite": {
@@ -291,7 +291,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Thrilling Tales of Dragon Slayers": {
@@ -300,7 +300,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Amber Catalyst": {
@@ -309,7 +309,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Magic Guide": {
@@ -318,7 +318,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Otherworldly Story": {
@@ -327,7 +327,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Emerald Orb": {
@@ -336,7 +336,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Pocket Grimoire": {
@@ -345,7 +345,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Apprentice's Notes": {
@@ -354,7 +354,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Wolf's Gravestone": {
@@ -363,7 +363,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Skyward Pride": {
@@ -372,7 +372,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Rainslasher": {
@@ -381,7 +381,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Whiteblind": {
@@ -390,7 +390,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "The Bell": {
@@ -399,7 +399,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Serpent Spine": {
@@ -408,7 +408,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Sacrificial Greatsword": {
@@ -417,7 +417,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Blackcliff Slasher": {
@@ -426,7 +426,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Prototype Aminus": {
@@ -435,7 +435,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Lithic Blade": {
@@ -444,7 +444,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Favonius Greatsword": {
@@ -453,7 +453,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Royal Greatsword": {
@@ -462,7 +462,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Quartz": {
@@ -471,7 +471,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Bloodtainted Greatsword": {
@@ -480,7 +480,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Skyrider Greatsword": {
@@ -489,7 +489,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Ferrous Shadow": {
@@ -498,7 +498,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "White Iron Greatsword": {
@@ -507,7 +507,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Debate Club": {
@@ -516,7 +516,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Old Merc's Pal": {
@@ -525,7 +525,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Waster Greatsword": {
@@ -534,7 +534,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Kunwu's Iris Rift": {
@@ -543,7 +543,7 @@
      "stats": {
        "Level": "",
        "ATK" : "",
-       "Blank": ""
+       "Additional": ""
      }
   },
   "Primordial Jade Winged-Spear": {
@@ -552,7 +552,7 @@
      "stats": {
        "Level": "",
        "ATK" : "",
-       "Blank": ""
+       "Additional": ""
      }
   },
   "Skyward Spine": {
@@ -561,7 +561,7 @@
      "stats": {
        "Level": "",
        "ATK" : "",
-       "Blank": ""
+       "Additional": ""
      }
   },
   "Blackcliff Pole": {
@@ -570,7 +570,7 @@
      "stats": {
        "Level": "",
        "ATK" : "",
-       "Blank": ""
+       "Additional": ""
      }
   },
   "Crescent Pike": {
@@ -579,7 +579,7 @@
      "stats": {
        "Level": "",
        "ATK" : "",
-       "Blank": ""
+       "Additional": ""
      }
   },
   "Deathmatch": {
@@ -588,7 +588,7 @@
      "stats": {
        "Level": "",
        "ATK" : "",
-       "Blank": ""
+       "Additional": ""
      }
   },
   "Dragon's Bane": {
@@ -597,7 +597,7 @@
      "stats": {
        "Level": "",
        "ATK" : "",
-       "Blank": ""
+       "Additional": ""
      }
   },
   "Favonius Lance": {
@@ -606,7 +606,7 @@
      "stats": {
        "Level": "",
        "ATK" : "",
-       "Blank": ""
+       "Additional": ""
      }
   },
   "Lithic Spear": {
@@ -615,7 +615,7 @@
      "stats": {
        "Level": "",
        "ATK" : "",
-       "Blank": ""
+       "Additional": ""
      }
   },
   "Prototype Grudge": {
@@ -624,7 +624,7 @@
      "stats": {
        "Level": "",
        "ATK" : "",
-       "Blank": ""
+       "Additional": ""
      }
   },
   "Black Tassel": {
@@ -633,7 +633,7 @@
      "stats": {
        "Level": "",
        "ATK" : "",
-       "Blank": ""
+       "Additional": ""
      }
   },
   "Halberd": {
@@ -642,7 +642,7 @@
      "stats": {
        "Level": "",
        "ATK" : "",
-       "Blank": ""
+       "Additional": ""
      }
   },
   "White Tassel": {
@@ -651,7 +651,7 @@
      "stats": {
        "Level": "",
        "ATK" : "",
-       "Blank": ""
+       "Additional": ""
      }
   },
   "Iron Point": {
@@ -660,7 +660,7 @@
      "stats": {
        "Level": "",
        "ATK" : "",
-       "Blank": ""
+       "Additional": ""
      }
   },
   "Beginner's Protector": {
@@ -669,7 +669,7 @@
      "stats": {
        "Level": "",
        "ATK" : "",
-       "Blank": ""
+       "Additional": ""
      }
   },
   "Skyward Blade": {
@@ -678,7 +678,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Aquila Favonia": {
@@ -687,7 +687,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Blackcliff Longsword": {
@@ -696,7 +696,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "The Flute": {
@@ -705,7 +705,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "The Black Sword": {
@@ -714,7 +714,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "The Alley Flash": {
@@ -723,7 +723,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Sacrificial Sword": {
@@ -732,7 +732,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Royal Longsword": {
@@ -741,7 +741,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Prototype Rancour": {
@@ -750,7 +750,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Lion's Roar": {
@@ -759,7 +759,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Iron Sting": {
@@ -768,7 +768,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Favonius Sword": {
@@ -777,7 +777,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Harbinger of Dawn": {
@@ -786,7 +786,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Skyrider Sword": {
@@ -795,7 +795,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Fillet Blade": {
@@ -804,7 +804,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Dark Iron Sword": {
@@ -813,7 +813,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Cool Steel": {
@@ -822,7 +822,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Traveler's Handy Sword": {
@@ -831,7 +831,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Silver Sword": {
@@ -840,7 +840,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   },
   "Dull Blade": {
@@ -849,7 +849,7 @@
     "stats": {
       "Level": "",
       "ATK": "",
-      "Blank": ""
+      "Additional": ""
     }
   }
 }
