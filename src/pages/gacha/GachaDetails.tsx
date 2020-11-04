@@ -116,23 +116,14 @@ export function GachaDetails(props: Props) {
           <TextCenterWrapper styles={{ fontSize: '35px', margin: '0', padding: '0', small: { fontSize: '25px' } }}>
             {trans(Lang.Help_Title)}
           </TextCenterWrapper>
-          <TextAlignLeft styles={{ fontSize: '25px', small: { fontSize: '20px' } }}>1. {trans(Lang.Help_Rules)}</TextAlignLeft>
+          <TextAlignLeft styles={{ fontSize: '25px', small: { fontSize: '20px' } }}>1. {trans(Lang.Help_Prob)}</TextAlignLeft>
           <TextAlignLeft styles={{ fontSize: '20px', margin: '0 0 20px', small: { fontSize: '16px' } }}>
-            <>
-              {trans(Lang.Help_Rules_Desc)}
-              <a
-                href="https://genshin-impact.fandom.com/wiki/Wishes"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ fontSize: '16px' }}
-              >
-                &nbsp;({trans(Lang.Go_To_Wiki)}
-                <span role="img" aria-label="click">
-                  &nbsp;👆
-                </span>
-                )
-              </a>
-            </>
+            {trans(Lang.Help_Prob_Five)}: {gachaInfo[props.content].fiveStars.percent}%,&nbsp;
+            {trans(Lang.Help_Prob_Four)}: {gachaInfo[props.content].fourStars.percent}%
+          </TextAlignLeft>
+          <TextAlignLeft styles={{ fontSize: '20px', margin: '0 0 20px', small: { fontSize: '16px' } }}>
+            {trans(Lang.Help_Prob_Five_Pick_Up)}: {gachaInfo[props.content].fiveStars.pickUpPercent}%,&nbsp;
+            {trans(Lang.Help_Prob_Four_Pick_Up)}: {gachaInfo[props.content].fourStars.pickUpPercent}%
           </TextAlignLeft>
           <TextAlignLeft styles={{ fontSize: '25px', small: { fontSize: '20px' } }}>2. {trans(Lang.Help_Item)}</TextAlignLeft>
           <TextAlignLeft styles={{ fontSize: '20px', margin: '0 0 20px', small: { fontSize: '16px' } }}>
