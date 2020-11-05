@@ -4,7 +4,7 @@
     "type": "Bow",
     "stats": {
       "Level": "MAX90 90Lv",
-      "ATK": 608,
+      "ATK": "608",
       "Additional": "ATK 49.6%"
     }
   },
@@ -13,7 +13,7 @@
     "type": "Bow",
     "stats": {
       "Level": "MAX90 90Lv",
-      "ATK": 674,
+      "ATK": "674",
       "Additional": "CRIT Rate 22.1%"
     }
   },
@@ -22,7 +22,7 @@
     "type": "Bow",
     "stats": {
       "Level": "MAX90 80Lv",
-      "ATK": 427,
+      "ATK": "427",
       "Additional": "CRIT Rate 33.5%"
     }
   },
@@ -31,7 +31,7 @@
     "type": "Bow",
     "stats": {
       "Level": "MAX90 80Lv",
-      "ATK": 475,
+      "ATK": "475",
       "Additional": "Element Mastery 150"
     }
   },
@@ -40,7 +40,7 @@
     "type": "Bow",
     "stats": {
       "Level": "MAX70 60Lv",
-      "ATK": 387,
+      "ATK": "387",
       "Additional": "Energy Recharge 22.6%"
     }
   },
@@ -49,7 +49,7 @@
     "type": "Bow",
     "stats": {
       "Level": "MAX90 80Lv",
-      "ATK": 475,
+      "ATK": "475",
       "Additional": "ATK 37.7%"
     }
   },
@@ -58,7 +58,7 @@
     "type": "Bow",
     "stats": {
       "Level": "MAX90 80Lv",
-      "ATK": 475,
+      "ATK": "475",
       "Additional": "ATK 37.7%"
     }
   },
@@ -67,7 +67,7 @@
     "type": "Bow",
     "stats": {
       "Level": "MAX90 80Lv",
-      "ATK": 475,
+      "ATK": "475",
       "Addtional": "CRIT Rate 25.1%"
     }
   },
@@ -76,7 +76,7 @@
     "type": "Bow",
     "stats": {
       "Level": "MAX90 80Lv",
-      "ATK": 475,
+      "ATK": "475",
       "Addtional": "ATK 37.7%"
     }
   },
@@ -85,7 +85,7 @@
     "type": "Bow",
     "stats": {
       "Level": "MAX90 80Lv",
-      "ATK": 427,
+      "ATK": "427",
       "Addtional": "Energy Recharge 55.9%"
     }
   },
@@ -94,7 +94,7 @@
     "type": "Bow",
     "stats": {
       "Level": "MAX90 80Lv",
-      "ATK": 427,
+      "ATK": "427",
       "Additional": "Physical DMG Bonus 62.9%"
     }
   },
@@ -103,7 +103,7 @@
     "type": "Bow",
     "stats": {
       "Level": "MAX90 80Lv",
-      "ATK": 523,
+      "ATK": "523",
       "Additional": "ATK 25.1%"
     }
   },
@@ -112,7 +112,7 @@
     "type": "Bow",
     "stats": {
       "Level": "MAX60 50Lv",
-      "ATK": 259,
+      "ATK": "259",
       "Additional": "Elemantal Mastery 61"
     }
   },
@@ -121,7 +121,7 @@
     "type": "Bow",
     "stats": {
       "Level": "MAX80 70Lv",
-      "ATK": 363,
+      "ATK": "363",
       "Additional": "CRIT DMG 25.7%"
     }
   },
@@ -130,7 +130,7 @@
     "type": "Bow",
     "stats": {
       "Level": "MAX80 70Lv",
-      "ATK": 363,
+      "ATK": "363",
       "Additional": "No Data"
     }
   },
@@ -139,7 +139,7 @@
     "type": "Bow",
     "stats": {
       "Level": "MAX60 50Lv",
-      "ATK": 236,
+      "ATK": "236",
       "Additional": "CRIT DMG 30.4%"
     }
   },
@@ -148,7 +148,7 @@
     "type": "Bow",
     "stats": {
       "Level": "MAX90 80Lv",
-      "ATK": 334,
+      "ATK": "334",
       "Additional": "CRIT Rate 28.5%"
     }
   },
@@ -157,7 +157,7 @@
     "type": "Bow",
     "stats": {
       "Level": "MAX60 50Lv",
-      "ATK": 212,
+      "ATK": "212",
       "Additional": "Base HP 30.4%"
     }
   },
@@ -544,7 +544,7 @@
     "type": "Polearm",
     "stats": {
       "Level": "MAX90 90Lv",
-      "ATK" : "608",
+      "ATK": "608",
       "Additional": "ATK 49.6%"
     }
   },
@@ -553,7 +553,7 @@
     "type": "Polearm",
     "stats": {
       "Level": "MAX90 90Lv",
-      "ATK" : "674",
+      "ATK": "674",
       "Additional": "CRIT Rate 22.1%"
     }
   },
@@ -562,7 +562,7 @@
     "type": "Polearm",
     "stats": {
       "Level": "MAX90 80Lv",
-      "ATK" : "621",
+      "ATK": "621",
       "Additional": "Energy Recharge 33.5%"
     }
   },
@@ -571,7 +571,7 @@
     "type": "Polearm",
     "stats": {
       "Level": "MAX90 80Lv",
-      "ATK" : "475",
+      "ATK": "475",
       "Additional": "CRIT DMG 50.3%"
     }
   },
@@ -580,7 +580,7 @@
     "type": "Polearm",
     "stats": {
       "Level": "MAX90 80Lv",
-      "ATK" : "523",
+      "ATK": "523",
       "Additional": "Physical DMG Bonus 31.5%"
     }
   },
@@ -589,7 +589,7 @@
     "type": "Polearm",
     "stats": {
       "Level": "MAX90 80Lv",
-      "ATK" : "427",
+      "ATK": "427",
       "Additional": "CRIT Rate 33.5%"
     }
   },
@@ -598,7 +598,7 @@
     "type": "Polearm",
     "stats": {
       "Level": "MAX80 70Lv",
-      "ATK" : "373",
+      "ATK": "373",
       "Additional": "Elemental Mastery 182"
     }
   },
@@ -607,7 +607,7 @@
     "type": "Polearm",
     "stats": {
       "Level": "MAX70 60Lv",
-      "ATK" : "387",
+      "ATK": "387",
       "Additional": "Energy Recharge 22.6%"
     }
   },
@@ -616,7 +616,7 @@
     "type": "Polearm",
     "stats": {
       "Level": "MAX90 80Lv",
-      "ATK" : "475",
+      "ATK": "475",
       "Additional": "Physical DMG Bonus 37.7%"
     }
   },
@@ -625,7 +625,7 @@
     "type": "Polearm",
     "stats": {
       "Level": "MAX90 80Lv",
-      "ATK" : "475",
+      "ATK": "475",
       "Additional": "Energy Recharge 41.9%"
     }
   },
@@ -634,7 +634,7 @@
     "type": "Polearm",
     "stats": {
       "Level": "MAX60 50Lv",
-      "ATK" : "212",
+      "ATK": "212",
       "Additional": "Base HP 30.4%"
     }
   },
@@ -642,9 +642,9 @@
     "rank": 3,
     "type": "Polearm",
     "stats": {
-    "Level": "MAX70 60Lv",
-    "ATK" : "311",
-    "Additional": "ATK 17.3%"
+      "Level": "MAX70 60Lv",
+      "ATK": "311",
+      "Additional": "ATK 17.3%"
     }
   },
   "White Tassel": {
@@ -652,7 +652,7 @@
     "type": "Polearm",
     "stats": {
       "Level": "MAX70 60Lv",
-      "ATK" : "282",
+      "ATK": "282",
       "Additional": "CRIT Rate 17.3%"
     }
   },
@@ -661,7 +661,7 @@
     "type": "Polearm",
     "stats": {
       "Level": "MAX60 50Lv",
-      "ATK" : "186",
+      "ATK": "186",
       "Additional": "None"
     }
   },
@@ -670,7 +670,7 @@
     "type": "Polearm",
     "stats": {
       "Level": "MAX70 70Lv",
-      "ATK" : "185",
+      "ATK": "185",
       "Additional": "None"
     }
   },
