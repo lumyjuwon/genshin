@@ -141,7 +141,7 @@ function App() {
         </>
       </Header>
       <Switch>
-        <Route exact path="/" component={MainScreen} />
+        <Route exact path="/" render={() => <MainScreen gacha={gacha} party={party} onNavClick={onNavClick} />} />
         <Route path="/gacha" component={GachaScreen} />
         <Route path="/party" component={PartyScreen} />
         <Route path="/policy" component={Policy} />

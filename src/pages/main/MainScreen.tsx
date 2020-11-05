@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import { trans, Lang } from '../../resources/languages';
 import { FlexWrapper, ImageContentCard } from 'src/components';
@@ -53,7 +54,13 @@ const Title = styled.div({
   }
 });
 
-export function MainScreen() {
+interface Props {
+  gacha: React.RefObject<HTMLDivElement>;
+  party: React.RefObject<HTMLDivElement>;
+  onNavClick: Function;
+}
+
+export function MainScreen(props: Props) {
   return (
     <>
       <ImageContainer />
@@ -67,38 +74,46 @@ export function MainScreen() {
             }}
           >
             <>
-              <ImageContentCard
-                src={`${require('../../resources/images/mainscreen/gacha.png')}`}
-                title={trans(Lang.Gacha)}
-                desc={trans(Lang.Main_Wish_Desc)}
-                styles={{
-                  cardStyles: {
-                    width: '300px',
-                    height: '400px',
-                    padding: '20px 10px',
-                    backgroundColor: 'rgba(20, 20, 20, .8)',
-                    medium: { width: '210px', margin: '20px' },
-                    small: { width: '260px' }
-                  },
-                  imageStyles: { width: '200px', height: '200px', medium: { width: '150px', height: '150px' } }
-                }}
-              />
-              <ImageContentCard
-                src={`${require('../../resources/images/mainscreen/party.png')}`}
-                title={trans(Lang.Party)}
-                desc={trans(Lang.Main_Party_Desc)}
-                styles={{
-                  cardStyles: {
-                    width: '300px',
-                    height: '400px',
-                    padding: '20px 10px',
-                    backgroundColor: 'rgba(20, 20, 20, .8)',
-                    medium: { width: '210px', margin: '20px' },
-                    small: { width: '260px' }
-                  },
-                  imageStyles: { width: '200px', height: '200px', medium: { width: '150px', height: '150px' } }
-                }}
-              />
+              <Link to="/gacha">
+                <div onClick={() => props.onNavClick(props.gacha)}>
+                  <ImageContentCard
+                    src={`${require('../../resources/images/mainscreen/gacha.png')}`}
+                    title={trans(Lang.Gacha)}
+                    desc={trans(Lang.Main_Wish_Desc)}
+                    styles={{
+                      cardStyles: {
+                        width: '300px',
+                        height: '400px',
+                        padding: '20px 10px',
+                        backgroundColor: 'rgba(20, 20, 20, .8)',
+                        medium: { width: '210px', margin: '20px' },
+                        small: { width: '260px' }
+                      },
+                      imageStyles: { width: '200px', height: '200px', medium: { width: '150px', height: '150px' } }
+                    }}
+                  />
+                </div>
+              </Link>
+              <Link to="/party">
+                <div onClick={() => props.onNavClick(props.party)}>
+                  <ImageContentCard
+                    src={`${require('../../resources/images/mainscreen/party.png')}`}
+                    title={trans(Lang.Party)}
+                    desc={trans(Lang.Main_Party_Desc)}
+                    styles={{
+                      cardStyles: {
+                        width: '300px',
+                        height: '400px',
+                        padding: '20px 10px',
+                        backgroundColor: 'rgba(20, 20, 20, .8)',
+                        medium: { width: '210px', margin: '20px' },
+                        small: { width: '260px' }
+                      },
+                      imageStyles: { width: '200px', height: '200px', medium: { width: '150px', height: '150px' } }
+                    }}
+                  />
+                </div>
+              </Link>
               <ImageContentCard
                 src={`${require('../../resources/images/mainscreen/Paimon.jpg')}`}
                 title="Coming Soon..."
