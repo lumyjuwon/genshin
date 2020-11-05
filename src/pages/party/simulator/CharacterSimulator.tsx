@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import { ItemBadgeBox, RoundImage, RoundImageBox } from 'src/components';
@@ -43,15 +43,23 @@ const Inner = styled.div({
 
 interface Props {
   characters: Array<[CharacterName, ImageSrc]>;
-  activeArtifacts: Map<ArtifactName, number>;
+  // activeArtifacts: Map<ArtifactName, number>;
   onClick: Function;
 }
 
+type ArtifactCount = number;
+
 export function CharacterSimulator(props: Props) {
+  const [activeArtifacts, setActiveArtifacts] = useState<Map<ArtifactName, ArtifactCount>>(new Map());
+
+  function getActiveArtifacts(activeArtifs: Map<ArtifactName, ArtifactCount>) {
+    setActiveArtifacts(activeArtifs);
+  }
+  console.log('function call', activeArtifacts);
+
   return (
     <Wrapper>
       {props.characters.map((dic: [CharacterName, ImageSrc], index: number) => {
-        console.log(dic);
         return (
           <>
             <Inner key={index}>
@@ -98,9 +106,14 @@ export function CharacterSimulator(props: Props) {
                 isToolTipVisible={false}
                 isRankVisible={false}
               />
-              <CharacterEquipSlot key={index} characterName={dic[0]} characterSrc={dic[1]}></CharacterEquipSlot>
+              <CharacterEquipSlot
+                onClick={getActiveArtifacts}
+                key={index}
+                characterName={dic[0]}
+                characterSrc={dic[1]}
+              ></CharacterEquipSlot>
             </Inner>
-            {dic[1] && <ArtifactResult activeArtifacts={props.activeArtifacts} />}
+            {dic[1] && <ArtifactResult activeArtifacts={activeArtifacts} />}
           </>
         );
       })}

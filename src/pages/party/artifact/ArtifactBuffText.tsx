@@ -206,8 +206,6 @@ interface Props {
 export function ArtifactBuffText(props: Props) {
   const descriptions = getDescription(props.activeArtifacts);
 
-  console.log(descriptions);
-
   return (
     <Container>
       <TextDesc>{trans(Lang.Active_Artifact_Buff)}</TextDesc>

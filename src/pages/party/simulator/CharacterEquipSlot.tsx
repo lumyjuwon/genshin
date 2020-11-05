@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
-import { artifactInfo, ArtifactType, characterInfo, weaponInfo, WeaponType } from 'src/resources/data';
+import { artifactInfo, ArtifactType, characterInfo, weaponInfo, WeaponType, WeaponName, ArtifactName } from 'src/resources/data';
 import { GridWrapper, ItemBadgeBox, Modal, RoundImage, BoxModelWrapper, RoundImageBox } from 'src/components';
 import { ImageSrc, CategoryImages, ItemImages } from 'src/resources/images';
 
@@ -12,20 +12,57 @@ interface Items {
   };
 }
 
-const items: Items = Object.assign({}, weaponInfo, artifactInfo);
+type ItemName = WeaponName | ArtifactName;
+type ArtifactCount = number;
+type ArtifactSetName = string;
+type Category = 'Bow' | 'Catalyst' | 'Claymore' | 'Polearm' | 'Sword' | 'Flower' | 'Feather' | 'HourGlass' | 'HolyGrail' | 'Crown';
 
 interface EquipmentButtonProps {
   category: string;
+  onClick: Function;
 }
 
+const items: Items = Object.assign({}, weaponInfo, artifactInfo);
+const selectedItems = new Map<Category, ItemName>(new Map());
+
 const EquipmentButton = (props: EquipmentButtonProps) => {
+  let activeArtifacts = new Map<ArtifactName, ArtifactCount>(new Map());
   const [equipmentName, setEquipmentName] = useState<string>('');
   const [isVisibleEquipmentModal, setIsVisibleEquipmentModal] = useState<boolean>(false);
+
+  function setSelectedItems(category: Category, name: ItemName) {
+    selectedItems.set(category, name);
+  }
+
+  function getArtifactMap(selected: Map<Category, ItemName>) {
+    let artifactMap: Map<Category, ItemName> = new Map(selected);
+    artifactMap.has('Bow') && artifactMap.delete('Bow');
+    artifactMap.has('Catalyst') && artifactMap.delete('Catalyst');
+    artifactMap.has('Claymore') && artifactMap.delete('Claymore');
+    artifactMap.has('Polearm') && artifactMap.delete('Polearm');
+    artifactMap.has('Sword') && artifactMap.delete('Sword');
+
+    return artifactMap;
+  }
+
+  function setActiveArtifacts(artifacts: Map<Category, ItemName>) {
+    const activeArtifs: Map<ArtifactSetName, ArtifactCount> = new Map();
+
+    artifacts.forEach((name: string, category: string) => {
+      if (activeArtifs.has(artifactInfo[name].set)) {
+        //@ts-ignore Check Has
+        activeArtifs.set(artifactInfo[name].set, activeArtifs.get(artifactInfo[name].set) + 1);
+      } else {
+        activeArtifs.set(artifactInfo[name].set, 1);
+      }
+    });
+    activeArtifacts = activeArtifs;
+  }
 
   return (
     <BoxModelWrapper styles={{ margin: '0 0 0 6px', small: { margin: '0 0 3px 3px' } }}>
       <ItemBadgeBox
-        tooltip={equipmentName}
+        tooltip={selectedItems.get(props.category as Category)}
         rank={items[equipmentName] !== undefined ? items[equipmentName].rank : undefined}
         hoverInnerColor={'#f1f2f3'}
         onClick={() => {
@@ -86,6 +123,12 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
                   hoverInnerColor={'#f1f2f3'}
                   onClick={() => {
                     setEquipmentName(name);
+                    setSelectedItems(props.category as Category, name);
+                    console.log('selected', selectedItems);
+                    setActiveArtifacts(getArtifactMap(selectedItems));
+                    console.log('after selected', selectedItems);
+                    console.log('active', activeArtifacts);
+                    props.onClick(activeArtifacts);
                   }}
                   badge={
                     <RoundImage
@@ -144,6 +187,7 @@ const Container = styled.div({
 });
 
 interface Props {
+  onClick: Function;
   characterSrc: ImageSrc;
   characterName: string;
 }
@@ -162,7 +206,7 @@ export function CharacterEquipSlot(props: Props) {
     return (
       <Container>
         {itemCategoryList.map((cateogry: WeaponType | ArtifactType) => {
-          return <EquipmentButton key={cateogry} category={cateogry} />;
+          return <EquipmentButton onClick={props.onClick} key={cateogry} category={cateogry} />;
         })}
       </Container>
     );
