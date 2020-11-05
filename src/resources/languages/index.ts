@@ -412,7 +412,9 @@ enum Lang {
   Crushing_Ice = 'Crushing_Ice',
   Floating_Rock = 'Floating_Rock',
   Active_Party_Buff = 'Active_Party_Buff',
-  Active_Artifact_Buff = 'Active_Artifact_Buff'
+  Active_Artifact_Buff = 'Active_Artifact_Buff',
+
+  Map = 'Map'
 }
 
 export type KeyLang = keyof typeof Lang;

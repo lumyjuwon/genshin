@@ -404,5 +404,7 @@
   "Crushing_Ice": "Affected by Electro for 40% less time.\nIncreases CRIT Rate against enemies that are Frozen or affected by Cryo by 15%.",
   "Floating_Rock": "Increases resistance to interruption.\nWhen protected by a shield, increases Attack DMG by 15%.",
   "Active_Party_Buff": "Active Elemental Resonance",
-  "Active_Artifact_Buff": "Active Artifacts Set Buff"
+  "Active_Artifact_Buff": "Active Artifacts Set Buff",
+
+  "Map": "Map"
 }
