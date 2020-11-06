@@ -20,49 +20,72 @@ type Category = 'Bow' | 'Catalyst' | 'Claymore' | 'Polearm' | 'Sword' | 'Flower'
 interface EquipmentButtonProps {
   category: string;
   onClick: Function;
+  characterName: string;
 }
 
 const items: Items = Object.assign({}, weaponInfo, artifactInfo);
-const selectedItems = new Map<Category, ItemName>(new Map());
+// const selectedItems = new Map<Category, ItemName>(new Map());
+const dictionary = new Map<string, Map<Category, ItemName>>(new Map());
 
 const EquipmentButton = (props: EquipmentButtonProps) => {
-  let activeArtifacts = new Map<ArtifactName, ArtifactCount>(new Map());
+  let activeArtifacts = new Map<string, Map<ArtifactName, ArtifactCount>>(new Map());
   const [equipmentName, setEquipmentName] = useState<string>('');
   const [isVisibleEquipmentModal, setIsVisibleEquipmentModal] = useState<boolean>(false);
 
-  function setSelectedItems(category: Category, name: ItemName) {
-    selectedItems.set(category, name);
+  // function setSelectedItems(category: Category, name: ItemName) {
+  //   selectedItems.set(category, name);
+  // }
+
+  function setDictionary(characterName: string, category: Category, itemName: ItemName) {
+    if (dictionary.has(characterName)) {
+      //@ts-ignore Check Has
+      if (dictionary.get(characterName)?.has(category)) {
+        dictionary.get(characterName)?.delete(category);
+        dictionary.get(characterName)?.set(category, itemName);
+      } else {
+        dictionary.get(characterName)?.set(category, itemName);
+      }
+    } else {
+      dictionary.set(props.characterName, new Map().set(category, itemName));
+    }
   }
 
-  function getArtifactMap(selected: Map<Category, ItemName>) {
-    let artifactMap: Map<Category, ItemName> = new Map(selected);
-    artifactMap.has('Bow') && artifactMap.delete('Bow');
-    artifactMap.has('Catalyst') && artifactMap.delete('Catalyst');
-    artifactMap.has('Claymore') && artifactMap.delete('Claymore');
-    artifactMap.has('Polearm') && artifactMap.delete('Polearm');
-    artifactMap.has('Sword') && artifactMap.delete('Sword');
+  function getArtifactMap(dic: Map<string, Map<Category, ItemName>>) {
+    let artifactMap = new Map(dic);
+
+    artifactMap.forEach((selectedItem, characterName) => {
+      selectedItem.has('Bow') && selectedItem.delete('Bow');
+      selectedItem.has('Catalyst') && selectedItem.delete('Catalyst');
+      selectedItem.has('Claymore') && selectedItem.delete('Claymore');
+      selectedItem.has('Polearm') && selectedItem.delete('Polearm');
+      selectedItem.has('Sword') && selectedItem.delete('Sword');
+    });
 
     return artifactMap;
   }
 
-  function setActiveArtifacts(artifacts: Map<Category, ItemName>) {
-    const activeArtifs: Map<ArtifactSetName, ArtifactCount> = new Map();
+  function setActiveArtifacts(dic: Map<string, Map<Category, ItemName>>) {
+    const activeArtifs: Map<string, Map<ArtifactSetName, ArtifactCount>> = new Map();
 
-    artifacts.forEach((name: string, category: string) => {
-      if (activeArtifs.has(artifactInfo[name].set)) {
-        //@ts-ignore Check Has
-        activeArtifs.set(artifactInfo[name].set, activeArtifs.get(artifactInfo[name].set) + 1);
-      } else {
-        activeArtifs.set(artifactInfo[name].set, 1);
-      }
+    dic.forEach((artifacts, characterName) => {
+      activeArtifs.set(characterName, new Map());
+      artifacts.forEach((name, category) => {
+        if (activeArtifs.get(characterName)?.has(artifactInfo[name].set)) {
+          //@ts-ignore Check Has
+          activeArtifs.get(characterName)?.set(artifactInfo[name].set, activeArtifs.get(characterName)?.get(artifactInfo[name].set) + 1);
+        } else {
+          activeArtifs.get(characterName)?.set(artifactInfo[name].set, 1);
+        }
+      });
     });
+
     activeArtifacts = activeArtifs;
   }
 
   return (
     <BoxModelWrapper styles={{ margin: '0 0 0 6px', small: { margin: '0 0 3px 3px' } }}>
       <ItemBadgeBox
-        tooltip={selectedItems.get(props.category as Category)}
+        tooltip={dictionary.get(props.characterName)?.get(props.category as Category)}
         rank={items[equipmentName] !== undefined ? items[equipmentName].rank : undefined}
         hoverInnerColor={'#f1f2f3'}
         onClick={() => {
@@ -123,11 +146,10 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
                   hoverInnerColor={'#f1f2f3'}
                   onClick={() => {
                     setEquipmentName(name);
-                    setSelectedItems(props.category as Category, name);
-                    console.log('selected', selectedItems);
-                    setActiveArtifacts(getArtifactMap(selectedItems));
-                    console.log('after selected', selectedItems);
-                    console.log('active', activeArtifacts);
+                    setDictionary(props.characterName, props.category as Category, name);
+                    console.log('dictionary', dictionary);
+                    setActiveArtifacts(getArtifactMap(dictionary));
+                    console.log('after dictionary', dictionary);
                     props.onClick(activeArtifacts);
                   }}
                   badge={
@@ -206,7 +228,7 @@ export function CharacterEquipSlot(props: Props) {
     return (
       <Container>
         {itemCategoryList.map((cateogry: WeaponType | ArtifactType) => {
-          return <EquipmentButton onClick={props.onClick} key={cateogry} category={cateogry} />;
+          return <EquipmentButton characterName={props.characterName} onClick={props.onClick} key={cateogry} category={cateogry} />;
         })}
       </Container>
     );

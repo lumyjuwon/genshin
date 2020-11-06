@@ -50,9 +50,9 @@ interface Props {
 type ArtifactCount = number;
 
 export function CharacterSimulator(props: Props) {
-  const [activeArtifacts, setActiveArtifacts] = useState<Map<ArtifactName, ArtifactCount>>(new Map());
+  const [activeArtifacts, setActiveArtifacts] = useState<Map<string, Map<ArtifactName, ArtifactCount>>>(new Map());
 
-  function getActiveArtifacts(activeArtifs: Map<ArtifactName, ArtifactCount>) {
+  function getActiveArtifacts(activeArtifs: Map<string, Map<ArtifactName, ArtifactCount>>) {
     setActiveArtifacts(activeArtifs);
   }
   console.log('function call', activeArtifacts);
@@ -113,7 +113,7 @@ export function CharacterSimulator(props: Props) {
                 characterSrc={dic[1]}
               ></CharacterEquipSlot>
             </Inner>
-            {dic[1] && <ArtifactResult activeArtifacts={activeArtifacts} />}
+            {dic[1] && <ArtifactResult activeArtifacts={activeArtifacts.get(dic[0]) || new Map()} />}
           </>
         );
       })}
