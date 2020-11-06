@@ -51,7 +51,7 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
   }
 
   function getArtifactMap(dic: Map<string, Map<Category, ItemName>>) {
-    let artifactMap = new Map(dic);
+    let artifactMap: Map<string, Map<Category, ItemName>> = new Map(dic.entries());
 
     artifactMap.forEach((selectedItem, characterName) => {
       selectedItem.has('Bow') && selectedItem.delete('Bow');
@@ -106,7 +106,7 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
         }
         child={
           <RoundImageBox
-            src={ItemImages[equipmentName]}
+            src={ItemImages[dictionary.get(props.characterName)?.get(props.category as Category) || equipmentName]}
             styles={{
               boxStyle: {
                 width: '100px',
