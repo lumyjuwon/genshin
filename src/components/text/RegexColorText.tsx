@@ -4,7 +4,7 @@ function parseColorText(text: string, regex: RegExp, color?: string, isBold?: bo
   const matchedText: string[] | null = text.match(regex);
 
   if (matchedText === null) {
-    return [];
+    return [text];
   }
 
   const coloredText: Array<string | JSX.Element> = [];
@@ -36,7 +36,7 @@ interface Props {
 export function RegexColorText(props: Props) {
   const coloredText = parseColorText(props.children, props.regex, props.color, props.isBold);
   return (
-    <p style={{ lineHeight: '150%' }}>
+    <p style={{ lineHeight: '140%' }}>
       {coloredText?.map((text) => {
         return text;
       })}

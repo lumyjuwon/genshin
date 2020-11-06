@@ -62,7 +62,7 @@ function getDescription(artifacts: Map<string, number>) {
         case 'The Exile':
           descriptions.push(trans(Lang.TheExile_FourPieceSet));
           break;
-        case 'Resoultion of Sojourner':
+        case 'Resolution of Sojourner':
           descriptions.push(trans(Lang.ResolutionOfSojourner_FourPieceSet));
           break;
         case 'Martial Artist':
@@ -140,7 +140,7 @@ function getDescription(artifacts: Map<string, number>) {
         case 'The Exile':
           descriptions.push(trans(Lang.TheExile_TwoPieceSet));
           break;
-        case 'Resoultion of Sojourner':
+        case 'Resolution of Sojourner':
           descriptions.push(trans(Lang.ResolutionOfSojourner_TwoPieceSet));
           break;
         case 'Martial Artist':
@@ -209,13 +209,11 @@ interface Props {
 
 export function ArtifactBuffText(props: Props) {
   const descriptions = getDescription(props.activeArtifacts);
-  // console.log(descriptions);
 
   return (
     <Container>
       <TextDesc>{trans(Lang.Active_Artifact_Buff)}</TextDesc>
       {descriptions.map((description: string, index: number) => {
-        console.log(description);
         return (
           <RegexColorText key={index} regex={/\d+%/g} color={'red'} isBold={true}>
             {description}
