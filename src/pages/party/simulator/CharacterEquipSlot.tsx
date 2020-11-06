@@ -1,7 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
-import { artifactInfo, ArtifactType, characterInfo, weaponInfo, WeaponType, WeaponName, ArtifactName } from 'src/resources/data';
+import {
+  artifactInfo,
+  ArtifactType,
+  characterInfo,
+  weaponInfo,
+  WeaponType,
+  WeaponName,
+  ArtifactName,
+  CharacterName
+} from 'src/resources/data';
 import { GridWrapper, ItemBadgeBox, Modal, RoundImage, BoxModelWrapper, RoundImageBox } from 'src/components';
 import { ImageSrc, CategoryImages, ItemImages } from 'src/resources/images';
 
@@ -12,82 +21,49 @@ interface Items {
   };
 }
 
-type ItemName = WeaponName | ArtifactName;
+type EquipmentName = WeaponName | ArtifactName;
+type EquipmentCategory = ArtifactType | WeaponType;
 type ArtifactCount = number;
 type ArtifactSetName = string;
-type Category = 'Bow' | 'Catalyst' | 'Claymore' | 'Polearm' | 'Sword' | 'Flower' | 'Feather' | 'HourGlass' | 'HolyGrail' | 'Crown';
 
-interface EquipmentButtonProps {
-  category: string;
+interface EquipmentSlotProps {
+  category: EquipmentCategory;
   onClick: Function;
-  characterName: string;
+  characterName: CharacterName;
+  characterEquipment: Map<EquipmentCategory, EquipmentName>;
 }
 
 const items: Items = Object.assign({}, weaponInfo, artifactInfo);
-// const selectedItems = new Map<Category, ItemName>(new Map());
-const globalItemMap = new Map<string, Map<Category, ItemName>>(new Map());
-let activeArtifacts = new Map<string, Map<ArtifactName, ArtifactCount>>(new Map());
 
-const EquipmentButton = (props: EquipmentButtonProps) => {
+function EquipmentSlot(props: EquipmentSlotProps) {
   const [equipmentName, setEquipmentName] = useState<string>('');
   const [isVisibleEquipmentModal, setIsVisibleEquipmentModal] = useState<boolean>(false);
 
-  useEffect(() => {
-    props.onClick(activeArtifacts);
-  }, [props]);
-
-  function setDictionary(characterName: string, category: Category, itemName: ItemName) {
-    if (globalItemMap.has(characterName)) {
-      //@ts-ignore Check Has
-      if (globalItemMap.get(characterName)?.has(category)) {
-        globalItemMap.get(characterName)?.delete(category);
-        globalItemMap.get(characterName)?.set(category, itemName);
-      } else {
-        globalItemMap.get(characterName)?.set(category, itemName);
-      }
-    } else {
-      globalItemMap.set(props.characterName, new Map().set(category, itemName));
-    }
+  function putEquipment(name: EquipmentName) {
+    props.characterEquipment.set(props.category, name);
   }
 
-  function getArtifactMap(dic: Map<string, Map<Category, ItemName>>) {
-    // need to copy maintaining immutable...
-    let artifactMap: Map<string, Map<Category, ItemName>> = new Map(dic.entries());
+  // function setActiveArtifacts(dic: Map<string, Map<EquipmentCategory, EquipmentName>>) {
+  //   const activeArtifs: Map<string, Map<ArtifactSetName, ArtifactCount>> = new Map();
 
-    artifactMap.forEach((selectedItem, characterName) => {
-      selectedItem.has('Bow') && selectedItem.delete('Bow');
-      selectedItem.has('Catalyst') && selectedItem.delete('Catalyst');
-      selectedItem.has('Claymore') && selectedItem.delete('Claymore');
-      selectedItem.has('Polearm') && selectedItem.delete('Polearm');
-      selectedItem.has('Sword') && selectedItem.delete('Sword');
-    });
-
-    return artifactMap;
-  }
-
-  function setActiveArtifacts(dic: Map<string, Map<Category, ItemName>>) {
-    const activeArtifs: Map<string, Map<ArtifactSetName, ArtifactCount>> = new Map();
-
-    dic.forEach((artifacts, characterName) => {
-      activeArtifs.set(characterName, new Map());
-      artifacts.forEach((name, category) => {
-        if (activeArtifs.get(characterName)?.has(artifactInfo[name].set)) {
-          //@ts-ignore Check Has
-          activeArtifs.get(characterName)?.set(artifactInfo[name].set, activeArtifs.get(characterName)?.get(artifactInfo[name].set) + 1);
-        } else {
-          activeArtifs.get(characterName)?.set(artifactInfo[name].set, 1);
-        }
-      });
-    });
-    activeArtifacts = activeArtifs;
-  }
-
-  console.log(globalItemMap);
+  //   dic.forEach((artifacts, characterName) => {
+  //     activeArtifs.set(characterName, new Map());
+  //     artifacts.forEach((name, category) => {
+  //       if (activeArtifs.get(characterName)?.has(artifactInfo[name].set)) {
+  //         //@ts-ignore Check Has
+  //         activeArtifs.get(characterName)?.set(artifactInfo[name].set, activeArtifs.get(characterName)?.get(artifactInfo[name].set) + 1);
+  //       } else {
+  //         activeArtifs.get(characterName)?.set(artifactInfo[name].set, 1);
+  //       }
+  //     });
+  //   });
+  //   activeArtifacts = activeArtifs;
+  // }
 
   return (
     <BoxModelWrapper styles={{ margin: '0 0 0 6px', small: { margin: '0 0 3px 3px' } }}>
       <ItemBadgeBox
-        tooltip={globalItemMap.get(props.characterName)?.get(props.category as Category)}
+        tooltip={''}
         rank={items[equipmentName] !== undefined ? items[equipmentName].rank : undefined}
         hoverInnerColor={'#f1f2f3'}
         onClick={() => {
@@ -108,7 +84,7 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
         }
         child={
           <RoundImageBox
-            src={ItemImages[globalItemMap.get(props.characterName)?.get(props.category as Category) || equipmentName]}
+            src={ItemImages[equipmentName]}
             styles={{
               boxStyle: {
                 width: '100px',
@@ -138,7 +114,7 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
         visible={isVisibleEquipmentModal}
       >
         <GridWrapper>
-          {Object.keys(items).map((name: string) => {
+          {Object.keys(items).map((name: EquipmentName) => {
             if (items[name] && items[name].type === props.category) {
               return (
                 <ItemBadgeBox
@@ -148,10 +124,7 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
                   hoverInnerColor={'#f1f2f3'}
                   onClick={() => {
                     setEquipmentName(name);
-                    setDictionary(props.characterName, props.category as Category, name);
-                    setActiveArtifacts(getArtifactMap(globalItemMap));
-                    console.log('active', activeArtifacts);
-                    props.onClick(activeArtifacts);
+                    putEquipment(name);
                   }}
                   badge={
                     <RoundImage
@@ -197,7 +170,7 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
       </Modal>
     </BoxModelWrapper>
   );
-};
+}
 
 const Container = styled.div({
   display: 'flex',
@@ -216,6 +189,8 @@ interface Props {
 }
 
 export function CharacterEquipSlot(props: Props) {
+  const [characterEquipment, setCharacterEquipment] = useState<Map<EquipmentCategory, EquipmentName>>(new Map());
+
   if (props.characterSrc !== undefined) {
     const itemCategoryList: Array<WeaponType | ArtifactType> = [
       characterInfo[props.characterName].weapon as WeaponType,
@@ -229,7 +204,15 @@ export function CharacterEquipSlot(props: Props) {
     return (
       <Container>
         {itemCategoryList.map((cateogry: WeaponType | ArtifactType) => {
-          return <EquipmentButton characterName={props.characterName} onClick={props.onClick} key={cateogry} category={cateogry} />;
+          return (
+            <EquipmentSlot
+              key={cateogry}
+              characterEquipment={characterEquipment}
+              characterName={props.characterName}
+              onClick={props.onClick}
+              category={cateogry}
+            />
+          );
         })}
       </Container>
     );

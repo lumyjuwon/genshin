@@ -69,19 +69,19 @@ function App() {
   const map = useRef<HTMLDivElement>(null);
   let selectedNav = useRef<HTMLDivElement>(null);
 
-  const onToggleClick = () => {
+  function onToggleClick() {
     if (navList.current?.classList.contains('responsive')) {
       navList.current?.classList.remove('responsive');
     } else {
       navList.current?.classList.add('responsive');
     }
-  };
+  }
 
-  const deleteSelected = (ref: React.RefObject<HTMLDivElement>) => {
+  function deleteSelected(ref: React.RefObject<HTMLDivElement>) {
     ref.current?.classList.remove('selected');
-  };
+  }
 
-  const onNavClick = (ref: React.RefObject<HTMLDivElement>) => {
+  function onNavClick(ref: React.RefObject<HTMLDivElement>) {
     deleteSelected(selectedNav);
     selectedNav = ref;
     selectedNav.current?.classList.add('selected');
@@ -89,13 +89,13 @@ function App() {
     if (window.innerWidth <= 768) {
       onToggleClick();
     }
-  };
+  }
 
   return (
     <BrowserRouter>
       <Header>
         <>
-          <Link to='/'>
+          <Link to="/">
             <FlexWrapper>
               <>
                 <RoundImage
@@ -108,26 +108,26 @@ function App() {
               </>
             </FlexWrapper>
           </Link>
-          <NavList id='nav-list' ref={navList}>
+          <NavList id="nav-list" ref={navList}>
             <FlexWrapper styles={{ justifyContent: 'space-between', width: '100%', small: { flexDirection: 'column' } }}>
               <>
                 <FlexWrapper styles={{ small: { flexDirection: 'column', width: '100%' } }}>
                   <>
-                    <Link to='/gacha'>
+                    <Link to="/gacha">
                       <HeaderNav ref={gacha}>
                         <TextBlockButton onClick={() => onNavClick(gacha)} styles={{ buttonStyles: { small: { width: '95vw' } } }}>
                           {trans(Lang.Gacha)}
                         </TextBlockButton>
                       </HeaderNav>
                     </Link>
-                    <Link to='/party'>
+                    <Link to="/party">
                       <HeaderNav ref={party}>
                         <TextBlockButton onClick={() => onNavClick(party)} styles={{ buttonStyles: { small: { width: '95vw' } } }}>
                           {trans(Lang.Party)}
                         </TextBlockButton>
                       </HeaderNav>
                     </Link>
-                    <Link to='/map'>
+                    <Link to="/map">
                       <HeaderNav ref={map}>
                         <TextBlockButton onClick={() => onNavClick(map)} styles={{ buttonStyles: { small: { width: '95vw' } } }}>
                           {trans(Lang.Map)}
@@ -146,18 +146,18 @@ function App() {
             </FlexWrapper>
           </NavList>
           <ToggleIcon onClick={() => onToggleClick()}>
-            <i className='fas fa-bars'></i>
+            <i className="fas fa-bars"></i>
           </ToggleIcon>
         </>
       </Header>
       <Switch>
-        <Route exact path='/' render={() => <MainScreen gacha={gacha} party={party} onNavClick={onNavClick} />} />
-        <Route path='/gacha' component={GachaScreen} />
-        <Route path='/party' component={PartyScreen} />
-        <Route path='/map' component={MapScreen} />
-        <Route path='/policy' component={Policy} />
-        <Route path='/notice' component={Notice} />
-        <Route path='*' component={NotFound} />
+        <Route exact path="/" render={() => <MainScreen gacha={gacha} party={party} onNavClick={onNavClick} />} />
+        <Route path="/gacha" component={GachaScreen} />
+        <Route path="/party" component={PartyScreen} />
+        <Route path="/map" component={MapScreen} />
+        <Route path="/policy" component={Policy} />
+        <Route path="/notice" component={Notice} />
+        <Route path="*" component={NotFound} />
       </Switch>
       <Footer />
     </BrowserRouter>
