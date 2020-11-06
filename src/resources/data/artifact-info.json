@@ -625,5 +625,25 @@
     "rank": 3,
     "type": "Crown",
     "set": "Adventurer"
+  },
+  "Tiara of Torrents": {
+    "rank": 4,
+    "type": "Crown",
+    "set": "Prayers for Destiny"
+  },
+  "Tiara of Flame": {
+    "rank": 4,
+    "type": "Crown",
+    "set": "Prayers for Illumination"
+  },
+  "Tiara of Frost": {
+    "rank": 4,
+    "type": "Crown",
+    "set": "Prayers to Springtime"
+  },
+  "Tiara of Thunder": {
+    "rank": 5,
+    "type": "Crown",
+    "set": "Prayers for Wisdom"
   }
 }

@@ -248,5 +248,25 @@
     "Crown": "Summer Night's Mask",
     "TwoPieceSet": "Increases the effectiveness of shields by 35%",
     "FourPieceSet": "Gain an additional 40% Normal and Charged Attack DMG while under the protection of a shield"
+  },
+  "Prayers for Wisdom": {
+    "rank": 4,
+    "Crown": "Tiara of Thunder",
+    "OnePieceSet": "Affected by Electro for 40% less time."
+  },
+  "Prayers for Illumination": {
+    "rank": 4,
+    "Crown": "Tiara of Flame",
+    "OnePieceSet": "Affected by Pyro for 40% less time."
+  },
+  "Prayers to Springtime": {
+    "rank": 4,
+    "Crown": "Tiara of Frost",
+    "OnePieceSet": "Affected by Cryo for 40% less time."
+  },
+  "Prayers for Destiny": {
+    "rank": 4,
+    "Crown": "Tiara of Torrents",
+    "OnePieceSet": "Affected by Hydro for 40% less time."
   }
 }

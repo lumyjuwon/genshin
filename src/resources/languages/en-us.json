@@ -340,6 +340,10 @@
   "Summer_Nights_Moment": "Retracing Bolide",
   "Summer_Nights_Waterballoon": "Retracing Bolide",
   "Summer_Nights_Mask": "Retracing Bolide",
+  "Tiara_of_Thunder": "Prayers for Wisdom",
+  "Tiara_of_Flame": "Prayers for Illumination",
+  "Tiara_of_Frost": "Prayers to Springtime",
+  "Tiara_of_Torrents": "Prayers for Destiny",
 
   "Adventurer_TwoPieceSet": "HP increased by 1,000",
   "LuckyDog_TwoPieceSet": "DEF increased by 100",
@@ -392,6 +396,11 @@
   "Lavawalker_FourPieceSet": "Increases DMG against enemies that are Burning or affected by Pyro by 35%",
   "ArchaicPetra_FourPieceSet": "Upon obtaining a crystal created through a Geo Elemental Reaction, all party members gain 35% Elemental DMG Bonus to that particular element for 10s.\nOnly one form of Elemental DMG Bonus can be gained in this manner at any one time",
   "RetracingBolide_FourPieceSet": "Gain an additional 40% Normal and Charged Attack DMG while under the protection of a shield",
+
+  "Prayers_for_Destiny": "Affected by Hydro for 40% less time.",
+  "Prayers_for_Illumination": "Affected by Pyro for 40% less time.",
+  "Prayers_to_Springtime": "Affected by Cryo for 40% less time.",
+  "Prayers_for_Wisdom": "Affected by Electro for 40% less time.",
 
   "Party": "Party",
   "Party_Save_Text": "Save Party",

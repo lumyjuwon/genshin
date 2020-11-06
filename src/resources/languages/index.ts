@@ -275,6 +275,11 @@ enum Lang {
   ArchaicPetra_FourPieceSet = 'ArchaicPetra_FourPieceSet',
   RetracingBolide_FourPieceSet = 'RetracingBolide_FourPieceSet',
 
+  Prayers_for_Destiny = 'Prayers_for_Destiny',
+  Prayers_for_Illumination = 'Prayers_for_Illumination',
+  Prayers_to_Springtime = 'Prayers_to_Springtime',
+  Prayers_for_Wisdom = 'Prayers_for_Wisdom',
+
   Adventurers_Flower = 'Adventurers_Flower',
   Adventurers_Tail_Feather = 'Adventurers_Tail_Feather',
   Adventurers_Pocket_Watch = 'Adventurers_Pocket_Watch',
@@ -400,6 +405,10 @@ enum Lang {
   Summer_Nights_Moment = 'Summer_Nights_Moment',
   Summer_Nights_Waterballoon = 'Summer_Nights_Waterballoon',
   Summer_Nights_Mask = 'Summer_Nights_Mask',
+  Tiara_of_Thunder = 'Tiara_of_Thunder',
+  Tiara_of_Flame = 'Tiara_of_Flame',
+  Tiara_of_Frost = 'Tiara_of_Frost',
+  Tiara_of_Torrents = 'Tiara_of_Torrents',
 
   Party = 'Party',
   Party_Save_Text = 'Party_Save_Text',

@@ -340,6 +340,10 @@
   "Summer_Nights_Moment": "날아오르는 유성",
   "Summer_Nights_Waterballoon": "날아오르는 유성",
   "Summer_Nights_Mask": "날아오르는 유성",
+  "Tiara_of_Thunder": "뇌명을 모시는 자",
+  "Tiara_of_Flame": "불을 모시는 자",
+  "Tiara_of_Frost": "얼음을 모시는 자",
+  "Tiara_of_Torrents": "물을 모시는 자",
 
   "Adventurer_TwoPieceSet": "HP 최대치 +1000pt",
   "LuckyDog_TwoPieceSet": "방어력+100pt",
@@ -392,6 +396,11 @@
   "Lavawalker_FourPieceSet": "불 원소의 영향을 받은 적에게 가하는 피해가 35% 증가한다",
   "ArchaicPetra_FourPieceSet": "바위 원소 반응으로 만들어진 결정을 획득 시 파티 내 모든 캐릭터는 해당 원소 피해 보너스를 35% 획득한다. 지속 시간: 10초. 이러한 효과로 1가지의 원소 피해 보너스만 획득할 수 있다",
   "RetracingBolide_FourPieceSet": "보호막이 존재 시 추가로 일반 공격과 강공격 보너스를 40% 획득한다",
+
+  "Prayers_for_Destiny": "받는 물 원소 부여 효과 지속시간 40% 감소",
+  "Prayers_for_Illumination": "받는 불 원소 부여 효과 지속시간 40% 감소",
+  "Prayers_to_Springtime": "받는 얼음 원소 부여 효과 지속시간 40% 감소",
+  "Prayers_for_Wisdom": "받는 번개 원소 부여 효과 지속시간 40% 감소",
 
   "Party": "파티",
   "Party_Save_Text": "파티 저장",

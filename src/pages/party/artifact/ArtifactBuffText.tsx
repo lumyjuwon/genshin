@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { trans, Lang } from 'src/resources/languages';
+import { trans, Lang, KeyLang } from 'src/resources/languages';
 import { RegexColorText } from 'src/components/text/RegexColorText';
 
 const Container = styled.div({
@@ -37,6 +37,10 @@ function getDescription(artifacts: Map<string, number>) {
   for (const artifact of artifacts) {
     const artifactSetName = artifact[0];
     const artifactCount = artifact[1];
+
+    if (artifactSetName === 'Prayers for Destiny' || 'Prayers for Illumination' || 'Prayers to Springtime' || 'Prayers for Wisdom') {
+      descriptions.push(trans(Lang[artifactSetName.replace(/\s/g, '_') as KeyLang]));
+    }
 
     if (artifactCount >= 4) {
       switch (artifactSetName) {
