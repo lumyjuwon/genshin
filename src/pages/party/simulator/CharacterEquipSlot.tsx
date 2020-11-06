@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import { artifactInfo, ArtifactType, characterInfo, weaponInfo, WeaponType, WeaponName, ArtifactName } from 'src/resources/data';
@@ -25,32 +25,33 @@ interface EquipmentButtonProps {
 
 const items: Items = Object.assign({}, weaponInfo, artifactInfo);
 // const selectedItems = new Map<Category, ItemName>(new Map());
-const dictionary = new Map<string, Map<Category, ItemName>>(new Map());
+const globalItemMap = new Map<string, Map<Category, ItemName>>(new Map());
+let activeArtifacts = new Map<string, Map<ArtifactName, ArtifactCount>>(new Map());
 
 const EquipmentButton = (props: EquipmentButtonProps) => {
-  let activeArtifacts = new Map<string, Map<ArtifactName, ArtifactCount>>(new Map());
   const [equipmentName, setEquipmentName] = useState<string>('');
   const [isVisibleEquipmentModal, setIsVisibleEquipmentModal] = useState<boolean>(false);
 
-  // function setSelectedItems(category: Category, name: ItemName) {
-  //   selectedItems.set(category, name);
-  // }
+  useEffect(() => {
+    props.onClick(activeArtifacts);
+  }, [props]);
 
   function setDictionary(characterName: string, category: Category, itemName: ItemName) {
-    if (dictionary.has(characterName)) {
+    if (globalItemMap.has(characterName)) {
       //@ts-ignore Check Has
-      if (dictionary.get(characterName)?.has(category)) {
-        dictionary.get(characterName)?.delete(category);
-        dictionary.get(characterName)?.set(category, itemName);
+      if (globalItemMap.get(characterName)?.has(category)) {
+        globalItemMap.get(characterName)?.delete(category);
+        globalItemMap.get(characterName)?.set(category, itemName);
       } else {
-        dictionary.get(characterName)?.set(category, itemName);
+        globalItemMap.get(characterName)?.set(category, itemName);
       }
     } else {
-      dictionary.set(props.characterName, new Map().set(category, itemName));
+      globalItemMap.set(props.characterName, new Map().set(category, itemName));
     }
   }
 
   function getArtifactMap(dic: Map<string, Map<Category, ItemName>>) {
+    // need to copy maintaining immutable...
     let artifactMap: Map<string, Map<Category, ItemName>> = new Map(dic.entries());
 
     artifactMap.forEach((selectedItem, characterName) => {
@@ -78,14 +79,15 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
         }
       });
     });
-
     activeArtifacts = activeArtifs;
   }
+
+  console.log(globalItemMap);
 
   return (
     <BoxModelWrapper styles={{ margin: '0 0 0 6px', small: { margin: '0 0 3px 3px' } }}>
       <ItemBadgeBox
-        tooltip={dictionary.get(props.characterName)?.get(props.category as Category)}
+        tooltip={globalItemMap.get(props.characterName)?.get(props.category as Category)}
         rank={items[equipmentName] !== undefined ? items[equipmentName].rank : undefined}
         hoverInnerColor={'#f1f2f3'}
         onClick={() => {
@@ -106,7 +108,7 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
         }
         child={
           <RoundImageBox
-            src={ItemImages[dictionary.get(props.characterName)?.get(props.category as Category) || equipmentName]}
+            src={ItemImages[globalItemMap.get(props.characterName)?.get(props.category as Category) || equipmentName]}
             styles={{
               boxStyle: {
                 width: '100px',
@@ -147,9 +149,8 @@ const EquipmentButton = (props: EquipmentButtonProps) => {
                   onClick={() => {
                     setEquipmentName(name);
                     setDictionary(props.characterName, props.category as Category, name);
-                    console.log('dictionary', dictionary);
-                    setActiveArtifacts(getArtifactMap(dictionary));
-                    console.log('after dictionary', dictionary);
+                    setActiveArtifacts(getArtifactMap(globalItemMap));
+                    console.log('active', activeArtifacts);
                     props.onClick(activeArtifacts);
                   }}
                   badge={

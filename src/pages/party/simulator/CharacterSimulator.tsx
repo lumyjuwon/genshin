@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import { ItemBadgeBox, RoundImage, RoundImageBox } from 'src/components';
@@ -43,11 +43,11 @@ const Inner = styled.div({
 
 interface Props {
   characters: Array<[CharacterName, ImageSrc]>;
-  // activeArtifacts: Map<ArtifactName, number>;
   onClick: Function;
 }
 
 type ArtifactCount = number;
+let globalActiveArtifacts: Map<string, Map<ArtifactName, ArtifactCount>> = new Map();
 
 export function CharacterSimulator(props: Props) {
   const [activeArtifacts, setActiveArtifacts] = useState<Map<string, Map<ArtifactName, ArtifactCount>>>(new Map());
@@ -55,7 +55,6 @@ export function CharacterSimulator(props: Props) {
   function getActiveArtifacts(activeArtifs: Map<string, Map<ArtifactName, ArtifactCount>>) {
     setActiveArtifacts(activeArtifs);
   }
-  console.log('function call', activeArtifacts);
 
   return (
     <Wrapper>
