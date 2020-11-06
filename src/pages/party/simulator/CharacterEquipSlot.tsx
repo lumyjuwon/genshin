@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import {
@@ -31,6 +31,7 @@ interface EquipmentSlotProps {
   onClick: Function;
   characterName: CharacterName;
   characterEquipment: Map<EquipmentCategory, EquipmentName>;
+  changeCharacterEquipment: Function;
 }
 
 const items: Items = Object.assign({}, weaponInfo, artifactInfo);
@@ -39,31 +40,33 @@ function EquipmentSlot(props: EquipmentSlotProps) {
   const [equipmentName, setEquipmentName] = useState<string>('');
   const [isVisibleEquipmentModal, setIsVisibleEquipmentModal] = useState<boolean>(false);
 
-  function putEquipment(name: EquipmentName) {
-    props.characterEquipment.set(props.category, name);
+  function countArtifactSet(equiped: Map<EquipmentCategory, EquipmentName>) {
+    let activeArtif: Map<ArtifactSetName, ArtifactCount> = new Map();
+    equiped.forEach((name, category) => {
+      if (artifactInfo[name]) {
+        const artifactSet = artifactInfo[name].set;
+
+        if (activeArtif.has(artifactSet)) {
+          // @ts-ignore Check Has
+          activeArtif.set(artifactSet, activeArtif.get(artifactSet) + 1);
+        } else {
+          activeArtif.set(artifactSet, 1);
+        }
+      }
+    });
+    props.onClick(activeArtif);
   }
 
-  // function setActiveArtifacts(dic: Map<string, Map<EquipmentCategory, EquipmentName>>) {
-  //   const activeArtifs: Map<string, Map<ArtifactSetName, ArtifactCount>> = new Map();
-
-  //   dic.forEach((artifacts, characterName) => {
-  //     activeArtifs.set(characterName, new Map());
-  //     artifacts.forEach((name, category) => {
-  //       if (activeArtifs.get(characterName)?.has(artifactInfo[name].set)) {
-  //         //@ts-ignore Check Has
-  //         activeArtifs.get(characterName)?.set(artifactInfo[name].set, activeArtifs.get(characterName)?.get(artifactInfo[name].set) + 1);
-  //       } else {
-  //         activeArtifs.get(characterName)?.set(artifactInfo[name].set, 1);
-  //       }
-  //     });
-  //   });
-  //   activeArtifacts = activeArtifs;
-  // }
+  function putEquipment(name: EquipmentName) {
+    props.characterEquipment.set(props.category, name);
+    props.changeCharacterEquipment(props.characterEquipment);
+    countArtifactSet(props.characterEquipment);
+  }
 
   return (
     <BoxModelWrapper styles={{ margin: '0 0 0 6px', small: { margin: '0 0 3px 3px' } }}>
       <ItemBadgeBox
-        tooltip={''}
+        tooltip={equipmentName}
         rank={items[equipmentName] !== undefined ? items[equipmentName].rank : undefined}
         hoverInnerColor={'#f1f2f3'}
         onClick={() => {
@@ -191,6 +194,10 @@ interface Props {
 export function CharacterEquipSlot(props: Props) {
   const [characterEquipment, setCharacterEquipment] = useState<Map<EquipmentCategory, EquipmentName>>(new Map());
 
+  function changeCharacterEquipment(equiped: Map<EquipmentCategory, EquipmentName>) {
+    setCharacterEquipment(equiped);
+  }
+
   if (props.characterSrc !== undefined) {
     const itemCategoryList: Array<WeaponType | ArtifactType> = [
       characterInfo[props.characterName].weapon as WeaponType,
@@ -209,6 +216,7 @@ export function CharacterEquipSlot(props: Props) {
               key={cateogry}
               characterEquipment={characterEquipment}
               characterName={props.characterName}
+              changeCharacterEquipment={changeCharacterEquipment}
               onClick={props.onClick}
               category={cateogry}
             />
