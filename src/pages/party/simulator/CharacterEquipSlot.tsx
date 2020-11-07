@@ -67,6 +67,7 @@ function EquipmentSlot(props: EquipmentSlotProps) {
     <BoxModelWrapper styles={{ margin: '0 0 0 6px', small: { margin: '0 0 3px 3px' } }}>
       <ItemBadgeBox
         tooltip={equipmentName}
+        isToolTipVisible={false}
         rank={items[equipmentName] !== undefined ? items[equipmentName].rank : undefined}
         hoverInnerColor={'#f1f2f3'}
         onClick={() => {
@@ -131,7 +132,7 @@ function EquipmentSlot(props: EquipmentSlotProps) {
                   }}
                   badge={
                     <RoundImage
-                      src={CategoryImages[items[name].type]}
+                      src={CategoryImages[props.category]}
                       styles={{
                         width: '30px',
                         height: '30px',

@@ -47,11 +47,11 @@ const MainScreen = {
 
 const CategoryImages: ImageMap = {
   Character: require('./categories/Character.png'),
-  Bow: require('./categories/Bow.png'),
-  Catalyst: require('./categories/Catalyst.png'),
-  Polearm: require('./categories/Polearm.png'),
-  Claymore: require('./categories/Claymore.png'),
-  Sword: require('./categories/Sword.png'),
+  Bow: require('./categories/Weapon.png'),
+  Catalyst: require('./categories/Weapon.png'),
+  Polearm: require('./categories/Weapon.png'),
+  Claymore: require('./categories/Weapon.png'),
+  Sword: require('./categories/Weapon.png'),
   Flower: require('./categories/Flower.png'),
   Feather: require('./categories/Feather.png'),
   HourGlass: require('./categories/HourGlass.png'),
