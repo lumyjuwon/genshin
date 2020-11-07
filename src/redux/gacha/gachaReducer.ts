@@ -1,4 +1,4 @@
-import { CLICK_GACHA_BUTTON, RESET_ALL } from '../actions/gachaActions';
+import { CLICK_GACHA_BUTTON, RESET_ALL } from './gachaActions';
 
 export interface State {
   totalCount: number;
@@ -20,11 +20,11 @@ const initialState: State = {
   // 임시로 'Character Event Wish'사용, 바꿀예정
   gachaContent: 'Character Event Wish',
   gachaInventoryList: [],
-  gachaExecutionResult: [],
-}
+  gachaExecutionResult: []
+};
 
 export function gachaReducer(state: State = initialState, action: any) {
-  switch(action.type) {
+  switch (action.type) {
     case RESET_ALL:
       return {
         ...state,
@@ -33,8 +33,7 @@ export function gachaReducer(state: State = initialState, action: any) {
     case CLICK_GACHA_BUTTON:
       return {
         ...state,
-        totalCount: state.totalCount + 10,
-        
-      }    
+        totalCount: state.totalCount + 10
+      };
   }
 }
