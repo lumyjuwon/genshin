@@ -22,6 +22,8 @@ const ItemTooltip = styled.div<TooltipStyle>((props: TooltipStyle) => {
     opacity: '0.8',
     overflow: 'hidden',
     zIndex: 2,
+    // not supported in Opera
+    wordBreak: 'keep-all',
     fontSize: props.fontSize || '16px',
     '@media screen and (max-width: 768px)': {
       fontSize: props.small?.fontSize || props.fontSize || '12px'
