@@ -414,6 +414,7 @@
   "Floating_Rock": "Increases resistance to interruption.\nWhen protected by a shield, increases Attack DMG by 15%.",
   "Active_Party_Buff": "Active Elemental Resonance",
   "Active_Artifact_Buff": "Active Artifacts Set Buff",
+  "Character_Stat": "Character Stat",
 
   "Map": "Map"
 }

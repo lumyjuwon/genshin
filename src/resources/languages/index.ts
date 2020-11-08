@@ -422,6 +422,7 @@ enum Lang {
   Floating_Rock = 'Floating_Rock',
   Active_Party_Buff = 'Active_Party_Buff',
   Active_Artifact_Buff = 'Active_Artifact_Buff',
+  Character_Stat = 'Character_Stat',
 
   Map = 'Map'
 }

@@ -414,6 +414,7 @@
   "Floating_Rock": "경직 저항력이 상승한다. 보호막 존재 시 가하는 피해가 15% 증가한다.",
   "Active_Party_Buff": "활성화 원소 공명 효과",
   "Active_Artifact_Buff": "활성화 성유물 효과",
+  "Character_Stat": "캐릭터 능력치",
 
   "Map": "지도"
 }

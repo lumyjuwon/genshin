@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { ArtifactName } from 'src/resources/data';
-import { ArtifactResult } from './artifact/ArtifactResult';
+import { ArtifactResult } from './character/artifact/ArtifactResult';
 import { ElementResult } from './element/ElementResult';
 
 const Container = styled.div({

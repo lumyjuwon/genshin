@@ -99,6 +99,7 @@ const Description = styled.div<DescStyle>((props: DescStyle) => {
     fontWeight: 'lighter',
     textAlign: 'center',
     marginTop: '20px',
+    wordBreak: 'keep-all',
     '@media screen and (max-width: 1380px)': {
       fontSize: props.medium?.fontSize || props.fontSize || '20px'
     },

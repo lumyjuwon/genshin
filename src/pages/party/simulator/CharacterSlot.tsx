@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { ItemBadgeBox, RoundImage, RoundImageBox, Modal, GridWrapper, FlexWrapper } from 'src/components';
 import { characterInfo, CharacterName } from 'src/resources/data';
 import { ElementImages, CategoryImages, CharacterImages, ImageSrc } from 'src/resources/images';
-import { ArtifactResult } from '../artifact/ArtifactResult';
+import { CharacterResult } from '../character/CharacteResult';
 import { CharacterEquipSlot } from './CharacterEquipSlot';
 
 const Inner = styled.div({
@@ -144,7 +144,7 @@ export function CharacterSlot(props: Props) {
           <CharacterEquipSlot onClick={changeActiveArtifacts} characterName={props.dic[0]} characterSrc={props.dic[1]} />
         </>
       </FlexWrapper>
-      {props.dic[1] && <ArtifactResult activeArtifacts={activeArtifacts} />}
+      {props.dic[1] && <CharacterResult activeWeapon={''} activeArtifacts={activeArtifacts} />}
     </Inner>
   );
 }
