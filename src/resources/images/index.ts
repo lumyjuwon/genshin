@@ -47,6 +47,7 @@ const MainScreen = {
 
 const CategoryImages: ImageMap = {
   Character: require('./categories/Character.png'),
+  Weapon: require('./categories/Weapon.png'),
   Bow: require('./categories/Weapon.png'),
   Catalyst: require('./categories/Weapon.png'),
   Polearm: require('./categories/Weapon.png'),

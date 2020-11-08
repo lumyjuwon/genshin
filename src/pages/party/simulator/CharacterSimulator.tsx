@@ -2,9 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { CharacterName } from 'src/resources/data';
-import { ImageSrc } from 'src/resources/images';
+import { CharacterImages } from 'src/resources/images';
 
 import { CharacterSlot } from './CharacterSlot';
+import { useSelector } from 'react-redux';
+import { PartyData } from 'src/redux/party/types';
+import { RootState } from 'src/redux/rootReducer';
+
+export const maxCharacterLength = 4;
 
 const Wrapper = styled.div({
   display: 'flex',
@@ -25,37 +30,20 @@ const Wrapper = styled.div({
   }
 });
 
-interface Props {
-  characters: Array<[CharacterName, ImageSrc]>;
-  // onClick: Function;
-  selectedCharacter: Map<CharacterName, ImageSrc>;
-  fillEmptyCharacters: Function;
-  changeActiveElements: Function;
-  emptyCharacters: Map<CharacterName, ImageSrc>;
-}
-
-type ArtifactCount = number;
-
-const MAX_SELECTED_CHARACTER = 4;
+interface Props {}
 
 export function CharacterSimulator(props: Props) {
-  function selectCharacter(name: CharacterName, resource: ImageSrc) {
-    if (props.selectedCharacter.has(name)) {
-      props.selectedCharacter.delete(name);
-    } else {
-      if (props.selectedCharacter.size < MAX_SELECTED_CHARACTER) {
-        props.selectedCharacter.set(name, resource);
-      }
-    }
-
-    props.fillEmptyCharacters(props.selectedCharacter.size);
-    props.changeActiveElements(props.selectedCharacter);
-  }
+  const characters: PartyData = useSelector<RootState, any>((state) => state.party.partyData);
+  const charactersArray = Object.keys(characters);
+  const emptyCharacterSize = maxCharacterLength - charactersArray.length;
 
   return (
     <Wrapper>
-      {props.characters.map((dic: [CharacterName, ImageSrc], index: number) => {
-        return <CharacterSlot key={dic[0]} selectedCharacter={props.selectedCharacter} onClick={selectCharacter} dic={dic} />;
+      {charactersArray.map((characterName: CharacterName) => {
+        return <CharacterSlot key={characterName} name={characterName} src={CharacterImages[characterName]} />;
+      })}
+      {Array.from({ length: emptyCharacterSize }, () => '').map((characterName: CharacterName, index: number) => {
+        return <CharacterSlot key={index} name={characterName} src={CharacterImages[characterName]} />;
       })}
     </Wrapper>
   );

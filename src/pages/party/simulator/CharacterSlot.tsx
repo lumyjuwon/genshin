@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
 
+import { partyDispatch } from 'src/redux';
+import { RootState } from 'src/redux/rootReducer';
+import { PartyData } from 'src/redux/party/types';
 import { ItemBadgeBox, RoundImage, RoundImageBox, Modal, GridWrapper, FlexWrapper } from 'src/components';
 import { characterInfo, CharacterName, WeaponName } from 'src/resources/data';
 import { ElementImages, CategoryImages, CharacterImages, ImageSrc } from 'src/resources/images';
-import { CharacterResult } from '../character/CharacteResult';
+// import { CharacterResult } from '../character/CharacteResult';
+// import { ArtifactResult } from '../artifact/ArtifactResult';
 import { CharacterEquipSlot } from './CharacterEquipSlot';
+import { maxCharacterLength } from './CharacterSimulator';
 
 const Inner = styled.div({
   display: 'flex',
@@ -21,18 +27,41 @@ const Inner = styled.div({
 });
 
 interface Props {
-  onClick: Function;
-  dic: [CharacterName, ImageSrc];
-  selectedCharacter: Map<CharacterName, ImageSrc>;
+  name: CharacterName;
+  src: ImageSrc;
 }
 
 type ArtifactSetName = string;
 type Count = number;
 
 export function CharacterSlot(props: Props) {
+  const characters: PartyData = useSelector<RootState, any>((state) => state.party.partyData);
+
   const [isVisibleCharacterModal, setIsVisibleCharacterModal] = useState<boolean>(false);
   const [selectedWeapon, setSelectedWeapon] = useState<WeaponName>('');
   const [activeArtifacts, setActiveArtifacts] = useState<Map<ArtifactSetName, Count>>(new Map());
+
+  function selectCharacter(name: CharacterName) {
+    const partySize = Object.keys(characters).length;
+    const partyData = Object.assign({}, characters);
+
+    if (characters[name] === undefined && partySize < maxCharacterLength) {
+      Object.assign(partyData, {
+        [name]: {
+          Weapon: '',
+          Flower: '',
+          Feather: '',
+          HourGlass: '',
+          HolyGrail: '',
+          Crown: ''
+        }
+      });
+    } else {
+      delete partyData[name];
+    }
+
+    partyDispatch.SetParty(partyData);
+  }
 
   function changeActiveArtifacts(activeArtifs: Map<ArtifactSetName, Count>) {
     setActiveArtifacts(activeArtifs);
@@ -47,8 +76,7 @@ export function CharacterSlot(props: Props) {
       <FlexWrapper styles={{ flexDirection: 'row', margin: '0 0 5px' }}>
         <>
           <ItemBadgeBox
-            tooltip={props.dic[0]}
-            rank={1}
+            tooltip={props.name}
             hoverInnerColor={'#f1f2f3'}
             isToolTipVisible={false}
             isRankVisible={false}
@@ -57,7 +85,7 @@ export function CharacterSlot(props: Props) {
             }}
             badge={
               <RoundImage
-                src={props.dic[1] !== undefined ? ElementImages[characterInfo[props.dic[0]].element] : CategoryImages.Character}
+                src={props.src !== undefined ? ElementImages[characterInfo[props.name].element] : CategoryImages.Character}
                 styles={{
                   width: '30px',
                   height: '30px',
@@ -70,7 +98,7 @@ export function CharacterSlot(props: Props) {
             }
             child={
               <RoundImageBox
-                src={props.dic[1]}
+                src={props.src}
                 styles={{
                   boxStyle: {
                     width: '120px',
@@ -104,7 +132,7 @@ export function CharacterSlot(props: Props) {
                     tooltip={name}
                     hoverInnerColor={'#f1f2f3'}
                     onClick={() => {
-                      props.onClick(name, CharacterImages[name]);
+                      selectCharacter(name);
                     }}
                     badge={
                       <RoundImage
@@ -126,7 +154,7 @@ export function CharacterSlot(props: Props) {
                           boxStyle: {
                             width: '100px',
                             height: '100px',
-                            backgroundColor: props.selectedCharacter.has(name) ? '#f1f2f3' : 'transparent',
+                            backgroundColor: characters[name] !== undefined ? '#f1f2f3' : 'transparent',
                             margin: '0px'
                           },
                           imageStyle: {
@@ -146,15 +174,14 @@ export function CharacterSlot(props: Props) {
               })}
             </GridWrapper>
           </Modal>
-          <CharacterEquipSlot
-            changeActiveArtifacts={changeActiveArtifacts}
-            changeSelectedWeapon={changeSelectedWeapon}
-            characterName={props.dic[0]}
-            characterSrc={props.dic[1]}
-          />
+          <CharacterEquipSlot characterName={props.name} characterSrc={props.src} />
         </>
       </FlexWrapper>
-      {props.dic[1] && <CharacterResult selectedCharacter={props.dic[0]} activeWeapon={selectedWeapon} activeArtifacts={activeArtifacts} />}
+      {/* {props.dic[1] && <CharacterResult selectedCharacter={props.dic[0]} activeWeapon={selectedWeapon} activeArtifacts={activeArtifacts} />}
+          <CharacterEquipSlot characterName={props.name} />
+        </>
+      </FlexWrapper>
+      {props.name && <ArtifactResult activeArtifacts={activeArtifacts} />} */}
     </Inner>
   );
 }

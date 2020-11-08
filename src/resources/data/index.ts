@@ -21,7 +21,7 @@ interface Character {
   [name: string]: {
     rank: Rank;
     element: CharacterElementType;
-    weapon: WeaponName;
+    weapon: WeaponType;
     region: CharacterRegion;
     stats: {
       Level: string;

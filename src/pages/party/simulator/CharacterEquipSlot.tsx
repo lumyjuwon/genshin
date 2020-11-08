@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
 
+import { PartyData } from 'src/redux/party/types';
+import { RootState } from 'src/redux/rootReducer';
 import {
   artifactInfo,
   ArtifactType,
@@ -12,7 +15,7 @@ import {
   CharacterName
 } from 'src/resources/data';
 import { GridWrapper, ItemBadgeBox, Modal, RoundImage, BoxModelWrapper, RoundImageBox } from 'src/components';
-import { ImageSrc, CategoryImages, ItemImages } from 'src/resources/images';
+import { CategoryImages, ImageSrc, ItemImages } from 'src/resources/images';
 
 interface Items {
   [name: string]: {
@@ -21,6 +24,8 @@ interface Items {
   };
 }
 
+const items: Items = Object.assign({}, weaponInfo, artifactInfo);
+
 type EquipmentName = WeaponName | ArtifactName;
 type EquipmentCategory = ArtifactType | WeaponType;
 type ArtifactCount = number;
@@ -28,51 +33,46 @@ type ArtifactSetName = string;
 
 interface EquipmentSlotProps {
   category: EquipmentCategory;
-  changeActiveArtifacts: Function;
-  changeSelectedWeapon: Function;
   characterName: CharacterName;
-  characterEquipment: Map<EquipmentCategory, EquipmentName>;
-  changeCharacterEquipment: Function;
+  isActive?: boolean;
 }
 
-const items: Items = Object.assign({}, weaponInfo, artifactInfo);
-
 function EquipmentSlot(props: EquipmentSlotProps) {
+  const characters: PartyData = useSelector<RootState, any>((state) => state.party.partyData);
+
   const [equipmentName, setEquipmentName] = useState<string>('');
   const [isVisibleEquipmentModal, setIsVisibleEquipmentModal] = useState<boolean>(false);
 
-  function countArtifactSet(equiped: Map<EquipmentCategory, EquipmentName>) {
-    let activeArtif: Map<ArtifactSetName, ArtifactCount> = new Map();
-    equiped.forEach((name, category) => {
-      if (artifactInfo[name]) {
-        const artifactSet = artifactInfo[name].set;
+  // function countArtifactSet(equiped: Map<EquipmentCategory, EquipmentName>) {
+  //   let activeArtif: Map<ArtifactSetName, ArtifactCount> = new Map();
+  //   equiped.forEach((name, category) => {
+  //     if (artifactInfo[name]) {
+  //       const artifactSet = artifactInfo[name].set;
 
-        if (activeArtif.has(artifactSet)) {
-          // @ts-ignore Check Has
-          activeArtif.set(artifactSet, activeArtif.get(artifactSet) + 1);
-        } else {
-          activeArtif.set(artifactSet, 1);
-        }
-      }
-    });
-    props.changeActiveArtifacts(activeArtif);
-  }
+  //       if (activeArtif.has(artifactSet)) {
+  //         // @ts-ignore Check Has
+  //         activeArtif.set(artifactSet, activeArtif.get(artifactSet) + 1);
+  //       } else {
+  //         activeArtif.set(artifactSet, 1);
+  //       }
+  //     }
+  //   });
+  //   // props.onClick(activeArtif);
+  // }
 
   function putEquipment(name: EquipmentName) {
-    props.characterEquipment.set(props.category, name);
-    props.changeCharacterEquipment(props.characterEquipment);
-
-    if (weaponInfo[name]) {
-      props.changeSelectedWeapon(name);
-    }
-
-    countArtifactSet(props.characterEquipment);
+    // if (characters[props.characterName][props.category] === '') {
+    // }
+    // props.characterEquipment.set(props.category, name);
+    // props.changeCharacterEquipment(props.characterEquipment);
+    // countArtifactSet(props.characterEquipment);
   }
 
   return (
     <BoxModelWrapper styles={{ margin: '0 0 0 6px', small: { margin: '0 0 3px 3px' } }}>
       <ItemBadgeBox
         tooltip={equipmentName}
+        isActive={props.isActive}
         isToolTipVisible={false}
         rank={items[equipmentName] !== undefined ? items[equipmentName].rank : undefined}
         hoverInnerColor={'#f1f2f3'}
@@ -125,7 +125,7 @@ function EquipmentSlot(props: EquipmentSlotProps) {
       >
         <GridWrapper>
           {Object.keys(items).map((name: EquipmentName) => {
-            if (items[name] && items[name].type === props.category) {
+            if (items[name].type === props.category) {
               return (
                 <ItemBadgeBox
                   key={name}
@@ -138,7 +138,7 @@ function EquipmentSlot(props: EquipmentSlotProps) {
                   }}
                   badge={
                     <RoundImage
-                      src={CategoryImages[props.category]}
+                      src={CategoryImages['Weapon']}
                       styles={{
                         width: '30px',
                         height: '30px',
@@ -193,49 +193,34 @@ const Container = styled.div({
 });
 
 interface Props {
-  changeActiveArtifacts: Function;
-  changeSelectedWeapon: Function;
+  // changeActiveArtifacts: Function;
+  // changeSelectedWeapon: Function;
   characterSrc: ImageSrc;
-  characterName: string;
+  characterName: CharacterName;
 }
 
 export function CharacterEquipSlot(props: Props) {
-  const [characterEquipment, setCharacterEquipment] = useState<Map<EquipmentCategory, EquipmentName>>(new Map());
+  const itemCategoryList: Array<WeaponType | ArtifactType> = [
+    characterInfo[props.characterName] !== undefined ? characterInfo[props.characterName].weapon : 'Bow',
+    'Flower',
+    'Feather',
+    'HourGlass',
+    'HolyGrail',
+    'Crown'
+  ];
 
-  function changeCharacterEquipment(equiped: Map<EquipmentCategory, EquipmentName>) {
-    setCharacterEquipment(equiped);
-  }
-
-  console.log(characterEquipment);
-
-  if (props.characterSrc !== undefined) {
-    const itemCategoryList: Array<WeaponType | ArtifactType> = [
-      characterInfo[props.characterName].weapon as WeaponType,
-      'Flower',
-      'Feather',
-      'HourGlass',
-      'HolyGrail',
-      'Crown'
-    ];
-
-    return (
-      <Container>
-        {itemCategoryList.map((cateogry: WeaponType | ArtifactType) => {
-          return (
-            <EquipmentSlot
-              key={cateogry}
-              changeSelectedWeapon={props.changeSelectedWeapon}
-              characterEquipment={characterEquipment}
-              characterName={props.characterName}
-              changeCharacterEquipment={changeCharacterEquipment}
-              changeActiveArtifacts={props.changeActiveArtifacts}
-              category={cateogry}
-            />
-          );
-        })}
-      </Container>
-    );
-  } else {
-    return null;
-  }
+  return (
+    <Container>
+      {itemCategoryList.map((cateogry: WeaponType | ArtifactType) => {
+        return (
+          <EquipmentSlot
+            key={cateogry}
+            category={cateogry}
+            characterName={props.characterName}
+            isActive={characterInfo[props.characterName] !== undefined}
+          />
+        );
+      })}
+    </Container>
+  );
 }

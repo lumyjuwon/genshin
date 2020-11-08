@@ -1,4 +1,4 @@
-import { ArtifactName, CharacterName, WeaponType } from 'src/resources/data';
+import { ArtifactName, CharacterName, WeaponName, WeaponType } from 'src/resources/data';
 
 export interface PartyState {
   partyData: PartyData;
@@ -12,8 +12,8 @@ export enum ActionTypes {
 
 export interface PartyData {
   [characterName: string]: {
-    weapon: WeaponType;
-    flower: ArtifactName;
+    Weapon: WeaponName;
+    Flower: ArtifactName;
     Feather: ArtifactName;
     HourGlass: ArtifactName;
     HolyGrail: ArtifactName;
