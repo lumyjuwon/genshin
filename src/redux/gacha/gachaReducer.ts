@@ -17,13 +17,12 @@ const initialState: State = {
   fourStarCount: 0,
   nextPity: 0,
   usedPrimoGem: 0,
-  // 임시로 'Character Event Wish'사용, 바꿀예정
-  gachaContent: 'Character Event Wish',
+  gachaContent: Object.keys(gachaInfo)[0],
   gachaInventoryList: [],
   gachaExecutionResult: []
 };
 
-export function gachaReducer(state: State = initialState, action: any) {
+export function gachaReducer(state: State = initialState, action: GachaActions) {
   switch (action.type) {
     case RESET_ALL:
       return {
@@ -32,8 +31,23 @@ export function gachaReducer(state: State = initialState, action: any) {
       };
     case CLICK_GACHA_BUTTON:
       return {
-        ...state,
-        totalCount: state.totalCount + 10
+        ...state
+        // totalCount: +10,
+        // fiveStarCount: ,
+        // fourStarCount: ,
+        // nextPity: ,
+        // usedPrimoGem: state.totalCount * 160,
+        // gachaContent: ,
+        // gachaInventoryList: ,
+        // gachaExecutionResult ,
       };
+    case CHANGE_WISH_CONTENT:
+      return {
+        ...state
+        // gachaContent: action.gacha
+        // Change ref
+      };
+    default:
+      return state;
   }
 }
