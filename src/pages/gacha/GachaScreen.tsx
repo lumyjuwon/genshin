@@ -120,74 +120,6 @@ export function GachaScreen() {
         <>
           <GachaBanner content={gachaContent} onClick={onBannerClick} pickUpList={Object.keys(gachaInfo)} />
           <GachaArrangeView result={gachaExecutionResult} />
-          <BoxModelWrapper styles={{ margin: '30px 0 20px' }}>
-            <FlexWrapper>
-              <>
-                <RoundTextButton
-                  styles={{
-                    buttonStyles: { display: 'inline-block', backgroundColor: '#cc0000', margin: '10px', padding: '12px' },
-                    textStyles: { fontSize: '20px' }
-                  }}
-                  onClick={() => onResetClick()}
-                >
-                  <>
-                    {trans(Lang.Reset)}
-                    <Ripple />
-                  </>
-                </RoundTextButton>
-                {stopBeginnerWishes ? (
-                  <RoundButton
-                    styles={{ border: '2px solid #f1f2f3', width: '150px', display: 'inline-block', pointerEvents: 'none' }}
-                    onClick={() => onGachaExecution(10)}
-                  >
-                    <FlexWrapper
-                      styles={{
-                        flexDirection: 'column',
-                        width: '100%',
-                        medium: { flexDirection: 'column' },
-                        small: { flexDirection: 'column' }
-                      }}
-                    >
-                      <>
-                        <div style={{ fontSize: '14px' }}>{trans(Lang.Start)}</div>
-                        <FlexWrapper>
-                          <>
-                            <SquareImage styles={{ width: '25px', height: '25px' }} src={GemImages[gemImage]} />
-                            <span style={{ fontSize: '14px' }}>&nbsp;× {payedFateCount}</span>
-                          </>
-                        </FlexWrapper>
-                      </>
-                    </FlexWrapper>
-                  </RoundButton>
-                ) : (
-                  <RoundButton
-                    styles={{ border: '2px solid #f1f2f3', width: '150px', display: 'inline-block' }}
-                    onClick={() => onGachaExecution(10)}
-                  >
-                    <>
-                      <FlexWrapper styles={{ flexDirection: 'column', width: '100%' }}>
-                        <>
-                          <div style={{ fontSize: '14px' }}>{trans(Lang.Start)}</div>
-                          <FlexWrapper>
-                            <>
-                              <SquareImage styles={{ width: '25px', height: '25px' }} src={GemImages[gemImage]} />
-                              <span style={{ fontSize: '14px' }}>&nbsp;× {payedFateCount}</span>
-                            </>
-                          </FlexWrapper>
-                        </>
-                      </FlexWrapper>
-                      <Ripple />
-                    </>
-                  </RoundButton>
-                )}
-              </>
-            </FlexWrapper>
-          </BoxModelWrapper>
-          {stopBeginnerWishes && (
-            <TextCenterWrapper styles={{ width: '800px', margin: '0 auto 20px', medium: { width: '700px' }, small: { width: '100%' } }}>
-              {trans(Lang.Novice_Finish)}
-            </TextCenterWrapper>
-          )}
           {gachaContent === contentList[3] ? (
             <GachaResult
               times={totalCount}
@@ -206,6 +138,72 @@ export function GachaScreen() {
               pity={nextPity}
               result={gachaInventoryList}
             />
+          )}
+          <FlexWrapper>
+            <>
+              <RoundTextButton
+                styles={{
+                  buttonStyles: { display: 'inline-block', backgroundColor: '#cc0000', margin: '10px', padding: '12px' },
+                  textStyles: { fontSize: '20px' }
+                }}
+                onClick={() => onResetClick()}
+              >
+                <>
+                  {trans(Lang.Reset)}
+                  <Ripple />
+                </>
+              </RoundTextButton>
+              {stopBeginnerWishes ? (
+                <RoundButton
+                  styles={{ border: '2px solid #f1f2f3', width: '150px', display: 'inline-block', pointerEvents: 'none' }}
+                  onClick={() => onGachaExecution(10)}
+                >
+                  <FlexWrapper
+                    styles={{
+                      flexDirection: 'column',
+                      width: '100%',
+                      medium: { flexDirection: 'column' },
+                      small: { flexDirection: 'column' }
+                    }}
+                  >
+                    <>
+                      <div style={{ fontSize: '14px' }}>{trans(Lang.Start)}</div>
+                      <FlexWrapper>
+                        <>
+                          <SquareImage styles={{ width: '25px', height: '25px' }} src={GemImages[gemImage]} />
+                          <span style={{ fontSize: '14px' }}>&nbsp;× {payedFateCount}</span>
+                        </>
+                      </FlexWrapper>
+                    </>
+                  </FlexWrapper>
+                </RoundButton>
+              ) : (
+                <RoundButton
+                  styles={{ border: '2px solid #f1f2f3', width: '150px', display: 'inline-block' }}
+                  onClick={() => onGachaExecution(10)}
+                >
+                  <>
+                    <FlexWrapper styles={{ flexDirection: 'column', width: '100%' }}>
+                      <>
+                        <div style={{ fontSize: '14px' }}>{trans(Lang.Start)}</div>
+                        <FlexWrapper>
+                          <>
+                            <SquareImage styles={{ width: '25px', height: '25px' }} src={GemImages[gemImage]} />
+                            <span style={{ fontSize: '14px' }}>&nbsp;× {payedFateCount}</span>
+                          </>
+                        </FlexWrapper>
+                      </>
+                    </FlexWrapper>
+                    <Ripple />
+                  </>
+                </RoundButton>
+              )}
+            </>
+          </FlexWrapper>
+          {stopBeginnerWishes && (
+            <TextCenterWrapper styles={{ width: '800px', margin: '0 auto 20px', medium: { width: '700px' }, small: { width: '100%' } }}>
+              {trans(Lang.Novice_Finish)}
+            </TextCenterWrapper>
           )}
           <BoxModelWrapper styles={{ margin: '50px auto 30px' }}>
             <>

@@ -16,7 +16,7 @@ interface Props {
 const ResultBar = styled.div({
   display: 'flex',
   width: 'fit-content',
-  margin: '0 auto',
+  margin: '30px auto 20px',
   borderRadius: '16px',
   border: '2px dashed #f1f2f3',
   '@media screen and (max-width: 768px)': {
