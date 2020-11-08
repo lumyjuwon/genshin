@@ -11,7 +11,7 @@ function appendImages(map: any, info: any, path: string): void {
     if (map[name] === undefined) {
       map[name] = require(`${path}/${name}.png`);
     } else {
-      throw new Error(`중복되는 값이 있습니다: ${name}`);
+      throw new Error(`${name} 해당 값이 없거나 중복 됩니다.`);
     }
   }
 }

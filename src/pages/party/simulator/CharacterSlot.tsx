@@ -38,37 +38,24 @@ export function CharacterSlot(props: Props) {
   const characters: PartyData = useSelector<RootState, any>((state) => state.party.partyData);
 
   const [isVisibleCharacterModal, setIsVisibleCharacterModal] = useState<boolean>(false);
-  const [selectedWeapon, setSelectedWeapon] = useState<WeaponName>('');
-  const [activeArtifacts, setActiveArtifacts] = useState<Map<ArtifactSetName, Count>>(new Map());
 
   function selectCharacter(name: CharacterName) {
     const partySize = Object.keys(characters).length;
     const partyData = Object.assign({}, characters);
 
     if (characters[name] === undefined && partySize < maxCharacterLength) {
-      Object.assign(partyData, {
+      const data: PartyData = {
         [name]: {
-          Weapon: '',
-          Flower: '',
-          Feather: '',
-          HourGlass: '',
-          HolyGrail: '',
-          Crown: ''
+          Weapon: {},
+          Artifact: {}
         }
-      });
+      };
+      Object.assign(partyData, data);
     } else {
       delete partyData[name];
     }
 
     partyDispatch.SetParty(partyData);
-  }
-
-  function changeActiveArtifacts(activeArtifs: Map<ArtifactSetName, Count>) {
-    setActiveArtifacts(activeArtifs);
-  }
-
-  function changeSelectedWeapon(weapon: WeaponName) {
-    setSelectedWeapon(weapon);
   }
 
   return (

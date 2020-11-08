@@ -1,4 +1,4 @@
-import { ArtifactName, CharacterName, WeaponName, WeaponType } from 'src/resources/data';
+import { ArtifactName, ArtifactType, CharacterName, WeaponName, WeaponType } from 'src/resources/data';
 
 export interface PartyState {
   partyData: PartyData;
@@ -12,12 +12,20 @@ export enum ActionTypes {
 
 export interface PartyData {
   [characterName: string]: {
-    Weapon: WeaponName;
-    Flower: ArtifactName;
-    Feather: ArtifactName;
-    HourGlass: ArtifactName;
-    HolyGrail: ArtifactName;
-    Crown: ArtifactName;
+    Weapon: {
+      Bow?: WeaponName;
+      Catalyst?: WeaponName;
+      Claymore?: WeaponName;
+      Polearm?: WeaponName;
+      Sword?: WeaponName;
+    };
+    Artifact: {
+      Flower?: ArtifactName;
+      Feather?: ArtifactName;
+      HourGlass?: ArtifactName;
+      HolyGrail?: ArtifactName;
+      Crown?: ArtifactName;
+    };
   };
 }
 

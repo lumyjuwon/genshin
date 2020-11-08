@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 
@@ -16,6 +16,7 @@ import {
 } from 'src/resources/data';
 import { GridWrapper, ItemBadgeBox, Modal, RoundImage, BoxModelWrapper, RoundImageBox } from 'src/components';
 import { CategoryImages, ImageSrc, ItemImages } from 'src/resources/images';
+import { partyDispatch } from 'src/redux';
 
 interface Items {
   [name: string]: {
@@ -32,16 +33,26 @@ type ArtifactCount = number;
 type ArtifactSetName = string;
 
 interface EquipmentSlotProps {
-  category: EquipmentCategory;
+  equipmentCateogry: EquipmentCategory;
   characterName: CharacterName;
   isActive?: boolean;
 }
 
 function EquipmentSlot(props: EquipmentSlotProps) {
   const characters: PartyData = useSelector<RootState, any>((state) => state.party.partyData);
-
+  const weaponOrArtifact = ['Bow', 'Catalyst', 'Claymore', 'Polearm', 'Sword'].includes(props.equipmentCateogry) ? 'Weapon' : 'Artifact';
   const [equipmentName, setEquipmentName] = useState<string>('');
   const [isVisibleEquipmentModal, setIsVisibleEquipmentModal] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (props.characterName !== '') {
+      //@ts-ignore
+      const equipment = characters[props.characterName][weaponOrArtifact][props.equipmentCateogry];
+      if (equipment) {
+        setEquipmentName(equipment);
+      }
+    }
+  }, []);
 
   // function countArtifactSet(equiped: Map<EquipmentCategory, EquipmentName>) {
   //   let activeArtif: Map<ArtifactSetName, ArtifactCount> = new Map();
@@ -61,11 +72,14 @@ function EquipmentSlot(props: EquipmentSlotProps) {
   // }
 
   function putEquipment(name: EquipmentName) {
-    // if (characters[props.characterName][props.category] === '') {
-    // }
-    // props.characterEquipment.set(props.category, name);
-    // props.changeCharacterEquipment(props.characterEquipment);
-    // countArtifactSet(props.characterEquipment);
+    console.log(name);
+    const partyData = Object.assign({}, characters);
+    if (partyData[props.characterName]) {
+      //@ts-ignore
+      partyData[props.characterName][weaponOrArtifact][props.equipmentCateogry] = name;
+    }
+
+    partyDispatch.SetParty(partyData);
   }
 
   return (
@@ -81,7 +95,7 @@ function EquipmentSlot(props: EquipmentSlotProps) {
         }}
         badge={
           <RoundImage
-            src={CategoryImages[props.category]}
+            src={CategoryImages[props.equipmentCateogry]}
             styles={{
               width: '30px',
               height: '30px',
@@ -125,7 +139,7 @@ function EquipmentSlot(props: EquipmentSlotProps) {
       >
         <GridWrapper>
           {Object.keys(items).map((name: EquipmentName) => {
-            if (items[name].type === props.category) {
+            if (items[name].type === props.equipmentCateogry) {
               return (
                 <ItemBadgeBox
                   key={name}
@@ -215,7 +229,7 @@ export function CharacterEquipSlot(props: Props) {
         return (
           <EquipmentSlot
             key={cateogry}
-            category={cateogry}
+            equipmentCateogry={cateogry}
             characterName={props.characterName}
             isActive={characterInfo[props.characterName] !== undefined}
           />
