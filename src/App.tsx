@@ -1,6 +1,7 @@
 import React, { RefObject, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import { GachaScreen, PartyScreen, MainScreen, Policy, Notice, MapScreen } from 'src/pages';
 import { Header, TextBlockButton, FlexWrapper, RoundImage, Footer } from 'src/components';
@@ -62,6 +63,8 @@ const HeaderNav = styled.div({
 });
 
 function App() {
+  useSelector((state) => state);
+
   const [langCode, setLangCode] = useState<LangCode>(getCurrentLanguage());
   const navList = useRef<HTMLDivElement>(null);
   const gacha = useRef<HTMLDivElement>(null);
@@ -95,7 +98,7 @@ function App() {
     <BrowserRouter>
       <Header>
         <>
-          <Link to="/">
+          <Link to='/'>
             <FlexWrapper>
               <>
                 <RoundImage
@@ -108,26 +111,26 @@ function App() {
               </>
             </FlexWrapper>
           </Link>
-          <NavList id="nav-list" ref={navList}>
+          <NavList id='nav-list' ref={navList}>
             <FlexWrapper styles={{ justifyContent: 'space-between', width: '100%', small: { flexDirection: 'column' } }}>
               <>
                 <FlexWrapper styles={{ small: { flexDirection: 'column', width: '100%' } }}>
                   <>
-                    <Link to="/gacha">
+                    <Link to='/gacha'>
                       <HeaderNav ref={gacha}>
                         <TextBlockButton onClick={() => onNavClick(gacha)} styles={{ buttonStyles: { small: { width: '95vw' } } }}>
                           {trans(Lang.Gacha)}
                         </TextBlockButton>
                       </HeaderNav>
                     </Link>
-                    <Link to="/party">
+                    <Link to='/party'>
                       <HeaderNav ref={party}>
                         <TextBlockButton onClick={() => onNavClick(party)} styles={{ buttonStyles: { small: { width: '95vw' } } }}>
                           {trans(Lang.Party)}
                         </TextBlockButton>
                       </HeaderNav>
                     </Link>
-                    <Link to="/map">
+                    <Link to='/map'>
                       <HeaderNav ref={map}>
                         <TextBlockButton onClick={() => onNavClick(map)} styles={{ buttonStyles: { small: { width: '95vw' } } }}>
                           {trans(Lang.Map)}
@@ -146,18 +149,18 @@ function App() {
             </FlexWrapper>
           </NavList>
           <ToggleIcon onClick={() => onToggleClick()}>
-            <i className="fas fa-bars"></i>
+            <i className='fas fa-bars'></i>
           </ToggleIcon>
         </>
       </Header>
       <Switch>
-        <Route exact path="/" render={() => <MainScreen gacha={gacha} party={party} onNavClick={onNavClick} />} />
-        <Route path="/gacha" component={GachaScreen} />
-        <Route path="/party" component={PartyScreen} />
-        <Route path="/map" component={MapScreen} />
-        <Route path="/policy" component={Policy} />
-        <Route path="/notice" component={Notice} />
-        <Route path="*" component={NotFound} />
+        <Route exact path='/' render={() => <MainScreen gacha={gacha} party={party} onNavClick={onNavClick} />} />
+        <Route path='/gacha' component={GachaScreen} />
+        <Route path='/party' component={PartyScreen} />
+        <Route path='/map' component={MapScreen} />
+        <Route path='/policy' component={Policy} />
+        <Route path='/notice' component={Notice} />
+        <Route path='*' component={NotFound} />
       </Switch>
       <Footer />
     </BrowserRouter>

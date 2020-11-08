@@ -1,6 +1,13 @@
-import { ActionTypes, PartyAction, PartyData } from './types';
+import { ActionTypes, PartyData, PartyAction, PartyPreset } from './types';
 
-export function SaveParty(partyData: PartyData): PartyAction {
+export function SetParty(partyData: PartyData) {
+  return {
+    type: ActionTypes.SetParty,
+    payload: partyData
+  };
+}
+
+export function SaveParty(partyData: PartyPreset): PartyAction {
   return {
     type: ActionTypes.SaveParty,
     payload: partyData

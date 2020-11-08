@@ -1,21 +1,21 @@
-import { ActionTypes, PartyAction, PartyData } from './types';
-
-interface PartyState {
-  partyPreset: {
-    [partyName: string]: PartyData;
-  };
-}
+import { ActionTypes, PartyAction, PartyState } from './types';
 
 const initialState: PartyState = {
+  partyData: {},
   partyPreset: {}
 };
 
 export function partyReducer(state = initialState, action: PartyAction): PartyState {
   switch (action.type) {
+    case ActionTypes.SetParty:
+      return {
+        ...state,
+        partyData: action.payload
+      };
     case ActionTypes.SaveParty:
       return {
         ...state,
-        ...action.payload
+        partyPreset: Object.assign({}, state.partyPreset, action.payload)
       };
     default:
       return state;
