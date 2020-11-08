@@ -23,7 +23,7 @@ const Container = styled.div({
   }
 });
 
-const TextDesc = styled.p({
+const Title = styled.p({
   fontSize: '20px',
   marginBottom: '16px',
   fontWeight: 'bold',
@@ -214,7 +214,7 @@ export function ArtifactBuffText(props: Props) {
 
   return (
     <Container>
-      <TextDesc>{trans(Lang.Active_Artifact_Buff)}</TextDesc>
+      <Title>{trans(Lang.Active_Artifact_Buff)}</Title>
       {descriptions.map((description: string, index: number) => {
         return (
           <RegexColorText key={index} regex={/\d+%/g} color={'red'} isBold={true}>

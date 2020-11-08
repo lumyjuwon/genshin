@@ -28,7 +28,8 @@ type ArtifactSetName = string;
 
 interface EquipmentSlotProps {
   category: EquipmentCategory;
-  onClick: Function;
+  changeActiveArtifacts: Function;
+  changeSelectedWeapon: Function;
   characterName: CharacterName;
   characterEquipment: Map<EquipmentCategory, EquipmentName>;
   changeCharacterEquipment: Function;
@@ -54,12 +55,17 @@ function EquipmentSlot(props: EquipmentSlotProps) {
         }
       }
     });
-    props.onClick(activeArtif);
+    props.changeActiveArtifacts(activeArtif);
   }
 
   function putEquipment(name: EquipmentName) {
     props.characterEquipment.set(props.category, name);
     props.changeCharacterEquipment(props.characterEquipment);
+
+    if (weaponInfo[name]) {
+      props.changeSelectedWeapon(name);
+    }
+
     countArtifactSet(props.characterEquipment);
   }
 
@@ -187,7 +193,8 @@ const Container = styled.div({
 });
 
 interface Props {
-  onClick: Function;
+  changeActiveArtifacts: Function;
+  changeSelectedWeapon: Function;
   characterSrc: ImageSrc;
   characterName: string;
 }
@@ -198,6 +205,8 @@ export function CharacterEquipSlot(props: Props) {
   function changeCharacterEquipment(equiped: Map<EquipmentCategory, EquipmentName>) {
     setCharacterEquipment(equiped);
   }
+
+  console.log(characterEquipment);
 
   if (props.characterSrc !== undefined) {
     const itemCategoryList: Array<WeaponType | ArtifactType> = [
@@ -215,10 +224,11 @@ export function CharacterEquipSlot(props: Props) {
           return (
             <EquipmentSlot
               key={cateogry}
+              changeSelectedWeapon={props.changeSelectedWeapon}
               characterEquipment={characterEquipment}
               characterName={props.characterName}
               changeCharacterEquipment={changeCharacterEquipment}
-              onClick={props.onClick}
+              changeActiveArtifacts={props.changeActiveArtifacts}
               category={cateogry}
             />
           );

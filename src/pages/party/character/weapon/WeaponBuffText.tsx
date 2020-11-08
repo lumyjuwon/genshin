@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { WeaponName } from 'src/resources/data';
+import { WeaponName, CharacterName, weaponInfo, characterInfo } from 'src/resources/data';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
 import { RegexColorText } from 'src/components/text/RegexColorText';
 
@@ -23,7 +23,7 @@ const Container = styled.div({
   }
 });
 
-const TextDesc = styled.p({
+const Title = styled.p({
   fontSize: '20px',
   marginBottom: '16px',
   fontWeight: 'bold',
@@ -33,16 +33,23 @@ const TextDesc = styled.p({
   }
 });
 
+const TextDesc = styled.div({
+  textAlign: 'left'
+});
+
 function getWeaponStat(weapon: WeaponName) {}
 
 interface Props {
   activeWeapon: WeaponName;
+  selectedCharacter: CharacterName;
 }
 
 export function WeaponBuffText(props: Props) {
   return (
     <Container>
-      <TextDesc>{trans(Lang.Character_Stat)}</TextDesc>
+      <Title>{trans(Lang.Character_Stat)}</Title>
+      {props.selectedCharacter && <TextDesc>Character: {characterInfo[props.selectedCharacter].stats.Level}&nbsp;</TextDesc>}
+      {props.activeWeapon && <TextDesc>Weapon: {weaponInfo[props.activeWeapon].stats.Level}&nbsp;</TextDesc>}
     </Container>
   );
 }

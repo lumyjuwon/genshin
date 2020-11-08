@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import { ItemBadgeBox, RoundImage, RoundImageBox, Modal, GridWrapper, FlexWrapper } from 'src/components';
-import { characterInfo, CharacterName } from 'src/resources/data';
+import { characterInfo, CharacterName, WeaponName } from 'src/resources/data';
 import { ElementImages, CategoryImages, CharacterImages, ImageSrc } from 'src/resources/images';
 import { CharacterResult } from '../character/CharacteResult';
 import { CharacterEquipSlot } from './CharacterEquipSlot';
@@ -31,10 +31,15 @@ type Count = number;
 
 export function CharacterSlot(props: Props) {
   const [isVisibleCharacterModal, setIsVisibleCharacterModal] = useState<boolean>(false);
+  const [selectedWeapon, setSelectedWeapon] = useState<WeaponName>('');
   const [activeArtifacts, setActiveArtifacts] = useState<Map<ArtifactSetName, Count>>(new Map());
 
   function changeActiveArtifacts(activeArtifs: Map<ArtifactSetName, Count>) {
     setActiveArtifacts(activeArtifs);
+  }
+
+  function changeSelectedWeapon(weapon: WeaponName) {
+    setSelectedWeapon(weapon);
   }
 
   return (
@@ -141,10 +146,15 @@ export function CharacterSlot(props: Props) {
               })}
             </GridWrapper>
           </Modal>
-          <CharacterEquipSlot onClick={changeActiveArtifacts} characterName={props.dic[0]} characterSrc={props.dic[1]} />
+          <CharacterEquipSlot
+            changeActiveArtifacts={changeActiveArtifacts}
+            changeSelectedWeapon={changeSelectedWeapon}
+            characterName={props.dic[0]}
+            characterSrc={props.dic[1]}
+          />
         </>
       </FlexWrapper>
-      {props.dic[1] && <CharacterResult activeWeapon={''} activeArtifacts={activeArtifacts} />}
+      {props.dic[1] && <CharacterResult selectedCharacter={props.dic[0]} activeWeapon={selectedWeapon} activeArtifacts={activeArtifacts} />}
     </Inner>
   );
 }
