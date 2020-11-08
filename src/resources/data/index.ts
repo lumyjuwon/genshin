@@ -23,6 +23,12 @@ interface Character {
     element: CharacterElementType;
     weapon: WeaponName;
     region: CharacterRegion;
+    stats: {
+      Level: string;
+      HP: number;
+      ATK: number;
+      DEF: number;
+    };
   };
 }
 const characterInfo: Character = require('../data/character-info.json');
@@ -31,6 +37,11 @@ interface Weapon {
   [name: string]: {
     rank: Rank;
     type: WeaponType;
+    stats: {
+      Level: string;
+      ATK: string;
+      Additional: string;
+    };
   };
 }
 const weaponInfo: Weapon = require('../data/weapon-info.json');
