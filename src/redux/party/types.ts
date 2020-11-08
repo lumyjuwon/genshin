@@ -1,4 +1,4 @@
-import { ArtifactName, ArtifactType, CharacterName, WeaponName, WeaponType } from 'src/resources/data';
+import { ArtifactName, WeaponName } from 'src/resources/data';
 
 export interface PartyState {
   partyData: PartyData;
