@@ -115,7 +115,9 @@ export function ItemBadgeBox(props: Props) {
     <Relative
       {...props.styles?.boxStyles}
       onClick={() => {
-        props.onClick?.();
+        if (props.isActive) {
+          props.onClick?.();
+        }
       }}
       hoverInnerColor={props.hoverInnerColor}
     >
@@ -132,7 +134,7 @@ export function ItemBadgeBox(props: Props) {
       )}
 
       {props.isRankVisible && props.rank && (
-        <StarEmoji role="img" {...props.styles?.rankStyles}>
+        <StarEmoji role='img' {...props.styles?.rankStyles}>
           {'⭐'.repeat(props.rank)}
         </StarEmoji>
       )}
@@ -142,6 +144,7 @@ export function ItemBadgeBox(props: Props) {
 
 ItemBadgeBox.defaultProps = {
   hoverInnerColor: '',
+  isActive: true,
   isHoverdToolTip: true,
   isToolTipVisible: true,
   isRankVisible: true,
