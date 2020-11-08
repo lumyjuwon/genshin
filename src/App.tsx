@@ -1,7 +1,6 @@
 import React, { RefObject, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 
 import { GachaScreen, PartyScreen, MainScreen, Policy, Notice, MapScreen } from 'src/pages';
 import { Header, TextBlockButton, FlexWrapper, RoundImage, Footer } from 'src/components';
@@ -63,8 +62,6 @@ const HeaderNav = styled.div({
 });
 
 function App() {
-  useSelector((state) => state);
-
   const [langCode, setLangCode] = useState<LangCode>(getCurrentLanguage());
   const navList = useRef<HTMLDivElement>(null);
   const gacha = useRef<HTMLDivElement>(null);
