@@ -11,7 +11,7 @@ interface Props {
 }
 
 export function GachaBanner(props: Props) {
-  const wishListRef = useRef<HTMLUListElement>(null);
+  const wishListRef = useRef<HTMLDivElement>(null);
 
   const transWishList = props.pickUpList.map((wish) => trans(Lang[wish as KeyLang]));
 

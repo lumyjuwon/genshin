@@ -1,4 +1,4 @@
-import React, { useImperativeHandle, useRef } from 'react';
+import React, { useImperativeHandle, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 
 interface ContainerStyles {
@@ -115,31 +115,45 @@ interface Props {
   };
 }
 
-export const DropDownButton = React.forwardRef<HTMLUListElement, Props>((props, forwardedRef) => {
-  const dropDownRef = useRef<HTMLUListElement>(null);
+export const DropDownButton = React.forwardRef<HTMLDivElement, Props>((props, forwardedRef) => {
+  const dropDownRef = useRef<HTMLDivElement>(null);
 
-  useImperativeHandle(forwardedRef, () => dropDownRef.current as HTMLUListElement);
+  useImperativeHandle(forwardedRef, () => dropDownRef.current as HTMLDivElement);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropDownRef.current?.lastElementChild?.classList.contains('show-list') && !dropDownRef.current.contains(event.target as Node)) {
+        dropDownRef.current.lastElementChild.classList.remove('show-list');
+      }
+    }
+
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [dropDownRef]);
 
   const onContentClick = () => {
-    if (dropDownRef.current?.classList.contains('show-list')) {
-      dropDownRef.current?.classList.remove('show-list');
+    if (dropDownRef.current?.lastElementChild?.classList.contains('show-list')) {
+      dropDownRef.current?.lastElementChild?.classList.remove('show-list');
     } else {
-      dropDownRef.current?.classList.add('show-list');
+      dropDownRef.current?.lastElementChild?.classList.add('show-list');
     }
   };
 
   const onListClick = (item: string) => {
     props.onClick(item);
-    dropDownRef.current?.classList.remove('show-list');
+    dropDownRef.current?.lastElementChild?.classList.remove('show-list');
   };
 
   return (
-    <Container {...props.styles?.containerStyles}>
+    <Container {...props.styles?.containerStyles} ref={dropDownRef}>
       <Clickable onClick={() => onContentClick()}>
         <HoverDiv>{props.content}</HoverDiv>
         <Icon>▲</Icon>
       </Clickable>
-      <DropDown {...props.styles?.listStyles} id={props.id} ref={dropDownRef}>
+      <DropDown {...props.styles?.listStyles} id={props.id}>
         {Object.keys(props.items).map((item: any) => {
           if (props.defaultValue === props.items[item]) {
             return (

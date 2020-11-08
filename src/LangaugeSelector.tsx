@@ -14,7 +14,7 @@ interface Props {
 }
 
 export function LangaugeSelector(props: Props) {
-  const languageRef = React.createRef<HTMLUListElement>();
+  const languageRef = React.createRef<HTMLDivElement>();
 
   return (
     <FlexWrapper styles={{ small: { width: '100%', justifyContent: 'flex-end', margin: '10px 0' } }}>

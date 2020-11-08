@@ -85,7 +85,7 @@ export function GachaInventory(props: Props) {
   const [isHideThree, setIsHideThree] = useState<boolean>(false);
   const [filter, setFilter] = useState(filterList[0]);
   const inputRef = useRef<HTMLInputElement>(null);
-  const filterRef = useRef<HTMLUListElement>(null);
+  const filterRef = useRef<HTMLDivElement>(null);
 
   const transFilterList = filterList.map((filter) => trans(Lang[filter]));
   const inventory = createInventory(props.inventoryList);
