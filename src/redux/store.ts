@@ -1,19 +1,18 @@
-import { applyMiddleware, createStore } from 'redux';
-import { persistReducer, persistStore } from 'redux-persist';
+import { applyMiddleware, createStore, Store } from 'redux';
+import { PersistConfig, persistReducer, persistStore } from 'redux-persist';
 import logger from 'redux-logger';
 import storage from 'redux-persist/lib/storage';
 
-import rootReducer from './rootReducer';
+import rootReducer, { RootState } from './rootReducer';
 
-const persistConfig = {
+const persistConfig: PersistConfig<any> = {
   key: 'root',
-  storage
+  storage: storage,
+  whitelist: ['party']
 };
 
-// const store = createStore(rootReducer, applyMiddleware(logger));
 const enhancedReducer = persistReducer(persistConfig, rootReducer);
-const store = createStore(enhancedReducer, applyMiddleware(logger));
-//@ts-ignore
+const store: Store<RootState, any> = createStore(enhancedReducer, applyMiddleware(logger));
 const persistor = persistStore(store);
 
 export { store, persistor };
