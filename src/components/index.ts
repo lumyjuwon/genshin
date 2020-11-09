@@ -25,6 +25,7 @@ export { DropDownButton } from './button/DropDownButton';
 
 // Input Component
 export { UnderlineInputText } from './input/UnderlineInputText';
+export { ForwardedInputText } from './input/ForwardedInputText';
 
 // Image Component
 export { RoundImage } from './image/RoundImage';
