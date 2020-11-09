@@ -66,7 +66,7 @@ const FlexDiv = styled.div<DivProps>((props: DivProps) => {
     },
     '@media screen and (max-width: 768px)': {
       flexDirection: props.small?.flexDirection || props.flexDirection || 'row',
-      width: props.small?.width || props.flexDirection || 'auto',
+      width: props.small?.width || props.width || 'auto',
       justifyContent: props.small?.justifyContent || props.justifyContent || 'center',
       margin: props.small?.margin || props.margin || '0'
     }
