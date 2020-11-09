@@ -12,7 +12,9 @@ import { PartyData } from 'src/redux/party/types';
 import { RootState } from 'src/redux/rootReducer';
 
 const FloatRight = styled.div({
-  float: 'right'
+  position: 'absolute',
+  top: '50px',
+  right: '0'
 });
 
 const Clear = styled.div({
