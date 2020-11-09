@@ -121,6 +121,7 @@ function EquipmentSlot(props: EquipmentSlotProps) {
                   rank={items[name].rank}
                   hoverInnerColor={'#f1f2f3'}
                   onClick={() => {
+                    setIsVisibleEquipmentModal(false);
                     putEquipment(name);
                   }}
                   badge={
