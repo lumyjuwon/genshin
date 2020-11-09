@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
+import { useSelector } from 'react-redux';
 
 import { SavedPartyList } from './SavedPartyList';
+import { partyDispatch } from 'src/redux';
+import { RootState } from 'src/redux/rootReducer';
+import { PartyData } from 'src/redux/party/types';
 import { SquareTextButton, UnderlineInputText, FlexWrapper, BoxModelWrapper } from 'src/components';
 import { Lang, trans } from 'src/resources/languages';
 
@@ -21,6 +25,14 @@ const Container = styled.div({
 interface Props {}
 
 export function Menu(props: Props) {
+  const InputRef = useRef<HTMLInputElement>(null);
+  const characters: PartyData = useSelector<RootState, any>((state) => state.party.partyData);
+
+  function saveCurrentParty() {
+    // partyDispatch.SaveParty();
+    console.log(InputRef.current?.value);
+  }
+
   return (
     <Container>
       <>
