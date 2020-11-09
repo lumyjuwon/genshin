@@ -6,10 +6,10 @@
     "region": "Mondstadt",
     "stats": {
       "Level": "MAX90 80Lv",
-      "HP": 9563,
-      "ATK": 289,
-      "DEF": 572,
-      "Pyro DMG(%)": 28.8
+      "HP": "9563",
+      "ATK": "289",
+      "DEF": "572",
+      "Additional": "Pyro DMG 28.8%"
     }
   },
   "Keqing": {
@@ -19,10 +19,10 @@
     "region": "Liyue",
     "stats": {
       "Level": "MAX90 80Lv",
-      "HP": 12182,
-      "ATK": 300,
-      "DEF": 743,
-      "CRIT DMG(%)": 188.4
+      "HP": "12182",
+      "ATK": "300",
+      "DEF": "743",
+      "Additional": "CRIT DMG 188.4%"
     }
   },
   "Diluc": {
@@ -32,10 +32,10 @@
     "region": "Mondstadt",
     "stats": {
       "Level":"MAX90 80Lv",
-      "HP": 12068,
-      "ATK": 312,
-      "DEF": 729,
-      "CRIT Rate(%)": 24.2
+      "HP": "12068",
+      "ATK": "312",
+      "DEF": "729",
+      "Additional": "CRIT Rate 24.2%"
     }
   },
   "Jean": {
@@ -45,10 +45,10 @@
     "region": "Mondstadt",
     "stats": {
       "Level": "MAX80 80Lv",
-      "HP": 12965,
-      "ATK": 211,
-      "DEF": 678,
-      "Healing(%)": 16.6
+      "HP": "12965",
+      "ATK": "211",
+      "DEF": "678",
+      "Additional": "Healing 16.6%"
     }
   },
   "Qiqi": {
@@ -58,10 +58,10 @@
     "region": "Liyue",
     "stats": {
       "Level": "MAX90 80Lv",
-      "HP": 11499,
-      "ATK": 266,
-      "DEF": 857,
-      "Healing Bonus(%)": 22.2 
+      "HP": "11499",
+      "ATK": "266",
+      "DEF": "857",
+      "Additional": "Healing Bonus 22.2%"
     }
   },
   "Mona": {
@@ -71,10 +71,10 @@
     "region": "Mondstadt",
     "stats": {
       "Level":"MAX90 80Lv",
-      "HP": 9677,
-      "ATK": 266,
-      "DEF": 607,
-      "Energy Recharge(%)": 32.0
+      "HP": "9677",
+      "ATK": "266",
+      "DEF": "607",
+      "Additional": "Energy Recharge 32.0%"
     }
   },
   "Venti": {
@@ -84,10 +84,10 @@
     "region": "Mondstadt",
     "stats": {
       "Level": "MAX80 70Lv",
-      "HP": 8557,
-      "ATK": 214,
-      "DEF": 543,
-      "Recharge(%)": 24.0
+      "HP": "8557",
+      "ATK": "214",
+      "DEF": "543",
+      "Additional": "Recharge 24.0%"
     }
   },
   "Traveler (Anemo)": {
@@ -97,10 +97,10 @@
     "region": "unknown",
     "stats": {
       "Level": "MAX80 80Lv",
-      "HP": 10444,
-      "ATK": 204,
-      "DEF": 669,
-      "ATK(%)": 24.0
+      "HP": "10444",
+      "ATK": "204",
+      "DEF": "669",
+      "Additional": "ATK 24.0%"
     }
   },
   "Traveler (Geo)": {
@@ -110,10 +110,10 @@
     "region": "unknown",
     "stats": {
       "Level": "MAX80 80Lv",
-      "HP": 10444,
-      "ATK": 204,
-      "DEF": 669,
-      "ATK(%)": 24.0
+      "HP": "10444",
+      "ATK": "204",
+      "DEF": "669",
+      "Additional": "ATK 24.0%"
     }
   },
   "Noelle": {
@@ -123,10 +123,10 @@
     "region": "Mondstadt",
     "stats": {
       "Level":"MAX90 80Lv",
-      "HP": 11235,
-      "ATK": 178,
-      "DEF": 743,
-      "DEF(%)": 30.0
+      "HP": "11235",
+      "ATK": "178",
+      "DEF": "743",
+      "Additional": "DEF 30.0%"
     }
   },
   "Razor": {
@@ -136,10 +136,10 @@
     "region": "Mondstadt",
     "stats": {
       "Level": "MAX90 80Lv",
-      "HP": 11134,
-      "ATK": 217,
-      "DEF": 699,
-      "Physical DMG(%)": 30.0
+      "HP": "11134",
+      "ATK": "217",
+      "DEF": "699",
+      "Additional": "Physical DMG 30.0%"
     }
   },
   "Ningguang": {
@@ -149,10 +149,10 @@
     "region": "Liyue",
     "stats": {
       "Level":"MAX80 80Lv",
-      "HP": 8764,
-      "ATK": 188,
-      "DEF": 508,
-      "Geo DMG(%)": 18.0
+      "HP": "8764",
+      "ATK": "188",
+      "DEF": "508",
+      "Additional": "Geo DMG 18.0%"
     }
   },
   "Lisa": {
@@ -162,10 +162,10 @@
     "region": "Mondstadt",
     "stats": {
       "Level":"MAX80 70Lv",
-      "HP": 7818,
-      "ATK": 212,
-      "DEF": 468,
-      "Element Mastery": 72
+      "HP": "7818",
+      "ATK": "212",
+      "DEF": "468",
+      "Additional": "Element Mastery +72"
     }
   },
   "Kaeya": {
@@ -175,10 +175,10 @@
     "region": "Mondstadt",
     "stats": {
       "Level": "MAX70 60Lv",
-      "HP": 8184,
-      "ATK": 156,
-      "DEF": 557,
-      "Recharge(%)": 113.3
+      "HP": "8184",
+      "ATK": "156",
+      "DEF": "557",
+      "Additional": "Recharge 113.3%"
     }
   },
   "Fischl": {
@@ -188,10 +188,10 @@
     "region": "Mondstadt",
     "stats": {
       "Level":"MAX90 80Lv",
-      "HP": 8553,
-      "ATK": 227,
-      "DEF": 553,
-      "ATK(%)": 24.0
+      "HP": "8553",
+      "ATK": "227",
+      "DEF": "553",
+      "Additional": "ATK 24.0%"
     }
   },
   "Chongyun": {
@@ -201,10 +201,10 @@
     "region": "Liyue",
     "stats": {
       "Level": "MAX90 80Lv",
-      "HP": 10223,
-      "ATK": 208,
-      "DEF": 603,
-      "ATK(%)": 24.0
+      "HP": "10223",
+      "ATK": "208",
+      "DEF": "603",
+      "Additional": "ATK 24.0%"
     }
   },
   "Bennett": {
@@ -214,10 +214,10 @@
     "region": "Mondstadt",
     "stats": {
       "Level": "MAX80 70Lv",
-      "HP": 10129,
-      "ATK": 156,
-      "DEF": 630,
-      "Energy Recharge(%)": 20.0
+      "HP": "10129",
+      "ATK": "156",
+      "DEF": "630",
+      "Additional": "Energy Recharge 20.0%"
     }
   },
   "Beidou": {
@@ -227,10 +227,10 @@
     "region": "Liyue",
     "stats": {
       "Level": "MAX90 80Lv",
-      "HP": 12146,
-      "ATK": 209,
-      "DEF": 658,
-      "Electro DMG(%)": 24.0
+      "HP": "12146",
+      "ATK": "209",
+      "DEF": "658",
+      "Additional": "Electro DMG 24.0%"
     }
   },
   "Barbara": {
@@ -240,10 +240,10 @@
     "region": "Mondstadt",
     "stats": {
       "Level": "MAX70 70Lv",
-      "HP": 7561,
-      "ATK": 123,
-      "DEF": 517,
-      "HP(%)": 12.0 
+      "HP": "7561",
+      "ATK": "123",
+      "DEF": "517",
+      "Additional": "HP 12.0%"
     }
   },
   "Amber": {
@@ -253,10 +253,10 @@
     "region": "Mondstadt",
     "stats": {
       "Level": "MAX80 70Lv",
-      "HP": 7730,
-      "ATK": 182,
-      "DEF": 491,
-      "ATK(%)": 18.0
+      "HP": "7730",
+      "ATK": "182",
+      "DEF": "491",
+      "Additional": "ATK 18.0%"
     }
   }, 
   "Sucrose": {
@@ -266,10 +266,10 @@
     "region": "Mondstadt",
     "stats": {
       "Level":"MAX80 70Lv",
-      "HP": 7552,
-      "ATK": 129,
-      "DEF": 574,
-      "Anemo DMG(%)": 18.0 
+      "HP": "7552",
+      "ATK": "129",
+      "DEF": "574",
+      "Additional": "Anemo DMG 18.0%"
     }
   },
   "Xiangling": {
@@ -279,10 +279,10 @@
     "region": "Liyue",
     "stats": {
       "Level":"MAX90 80Lv",
-      "HP": 10122,
-      "ATK": 210,
-      "DEF": 623,
-      "Element Mastery": 96
+      "HP": "10122",
+      "ATK": "210",
+      "DEF": "623",
+      "Additional": "Element Mastery +96"
     }
   },
   "Xingqiu": {
@@ -292,10 +292,10 @@
     "region": "Liyue",
     "stats": {
       "Level": "MAX80 70Lv",
-      "HP": 8352,
-      "ATK": 165,
-      "DEF": 619,
-      "ATK(%)": 18.0
+      "HP": "8352",
+      "ATK": "165",
+      "DEF": "619",
+      "Additional": "ATK 18.0%"
     }
   }
 }

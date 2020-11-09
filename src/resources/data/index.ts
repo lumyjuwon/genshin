@@ -25,9 +25,10 @@ interface Character {
     region: CharacterRegion;
     stats: {
       Level: string;
-      HP: number;
-      ATK: number;
-      DEF: number;
+      HP: string;
+      ATK: string;
+      DEF: string;
+      Additional: string;
     };
   };
 }
