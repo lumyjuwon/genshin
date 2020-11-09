@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import { ContentWrapper } from 'src/components';
@@ -7,18 +7,10 @@ import { Menu } from './menu/Menu';
 import { CharacterSimulator } from './simulator/CharacterSimulator';
 import { ElementResult } from './element/ElementResult';
 
-import { useSelector } from 'react-redux';
-import { PartyData } from 'src/redux/party/types';
-import { RootState } from 'src/redux/rootReducer';
-
-const FloatRight = styled.div({
+const PositionAbsolute = styled.div({
   position: 'absolute',
   top: '50px',
   right: '0'
-});
-
-const Clear = styled.div({
-  clear: 'both'
 });
 
 type ElementName = string;
@@ -28,13 +20,11 @@ export function PartyScreen() {
   return (
     <ContentWrapper>
       <>
-        <FloatRight>
+        <PositionAbsolute>
           <Menu />
-        </FloatRight>
-        <Clear>
-          <CharacterSimulator />
-          <ElementResult />
-        </Clear>
+        </PositionAbsolute>
+        <CharacterSimulator />
+        <ElementResult />
       </>
     </ContentWrapper>
   );

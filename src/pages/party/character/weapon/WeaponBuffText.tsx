@@ -2,14 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { WeaponName, CharacterName, weaponInfo, characterInfo } from 'src/resources/data';
-import { trans, Lang, KeyLang } from 'src/resources/languages';
+import { trans, Lang } from 'src/resources/languages';
 import { RegexColorText } from 'src/components/text/RegexColorText';
 import { FlexWrapper, SquareImage } from 'src/components';
 import { CategoryImages } from 'src/resources/images';
 
 const Container = styled.div({
   display: 'flex',
-  flex: '1 1',
+  flex: '2 1',
   width: '100%',
   textAlign: 'center',
   flexDirection: 'column',
@@ -44,7 +44,6 @@ const Level = styled.div({
 
 const TextDesc = styled.div<{ marginTop?: boolean }>`
   display: flex;
-  width: 100%;
   justify-content: center;
   align-items: center;
   margin-top: ${(props) => props.marginTop && '5px'};
@@ -93,13 +92,13 @@ export function WeaponBuffText(props: Props) {
               <TextDesc>
                 {trans(Lang.Character_DEF)}: {characterInfo[props.selectedCharacter].stats.DEF}
               </TextDesc>
+              <TextDesc>
+                {trans(Lang.Character_ATK)}: {characterInfo[props.selectedCharacter].stats.ATK}
+                {props.activeWeapon && <WeaponStat>(+{weaponInfo[props.activeWeapon].stats.ATK})</WeaponStat>}
+              </TextDesc>
             </>
           </FlexWrapper>
           {/* 기본공격력 + 무기 공격력 + (파티버프 + 무기버프 + 캐릭터버프 %합산) */}
-          <TextDesc>
-            {trans(Lang.Character_ATK)}: {characterInfo[props.selectedCharacter].stats.ATK}
-            {props.activeWeapon && <WeaponStat>(+{weaponInfo[props.activeWeapon].stats.ATK})</WeaponStat>}
-          </TextDesc>
           <TextDesc marginTop>
             <SquareImage styles={{ width: '20px', height: '20px' }} src={CategoryImages.Character} />
             &nbsp;

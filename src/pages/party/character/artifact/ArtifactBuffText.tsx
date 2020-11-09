@@ -7,7 +7,7 @@ import { RegexColorText } from 'src/components/text/RegexColorText';
 
 const Container = styled.div({
   display: 'flex',
-  flex: '2 1',
+  flex: '3 1',
   width: '100%',
   textAlign: 'center',
   flexDirection: 'column',

@@ -6,7 +6,7 @@ import { partyDispatch } from 'src/redux';
 import { RootState } from 'src/redux/rootReducer';
 import { PartyData } from 'src/redux/party/types';
 import { ItemBadgeBox, RoundImage, RoundImageBox, Modal, GridWrapper, FlexWrapper } from 'src/components';
-import { characterInfo, CharacterName, WeaponName } from 'src/resources/data';
+import { characterInfo, CharacterName } from 'src/resources/data';
 import { ElementImages, CategoryImages, CharacterImages, ImageSrc } from 'src/resources/images';
 import { CharacterResult } from '../character/CharacteResult';
 import { CharacterEquipSlot } from './CharacterEquipSlot';
