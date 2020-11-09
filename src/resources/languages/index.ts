@@ -423,7 +423,7 @@ enum Lang {
   Active_Party_Buff = 'Active_Party_Buff',
   Active_Artifact_Buff = 'Active_Artifact_Buff',
   Character_Stat = 'Character_Stat',
-  Chracter_HP = 'Character_HP',
+  Character_HP = 'Character_HP',
   Character_ATK = 'Character_ATK',
   Character_DEF = 'Character_DEF',
   Character_Additional = 'Character_Additional',
