@@ -5,11 +5,17 @@ import { ArtifactResult } from './artifact/ArtifactResult';
 import { ArtifactName, CharacterName, WeaponName } from 'src/resources/data';
 import { FlexWrapper } from 'src/components';
 
-type ArtifactCount = number;
+interface Artifacts {
+  Flower?: ArtifactName;
+  Feather?: ArtifactName;
+  HourGlass?: ArtifactName;
+  HolyGrail?: ArtifactName;
+  Crown?: ArtifactName;
+}
 
 interface Props {
-  activeWeapon: WeaponName;
-  activeArtifacts: Map<ArtifactName, ArtifactCount>;
+  activeWeapon?: WeaponName;
+  activeArtifacts: Artifacts;
   selectedCharacter: CharacterName;
 }
 

@@ -52,24 +52,7 @@ function EquipmentSlot(props: EquipmentSlotProps) {
         setEquipmentName(equipment);
       }
     }
-  }, []);
-
-  // function countArtifactSet(equiped: Map<EquipmentCategory, EquipmentName>) {
-  //   let activeArtif: Map<ArtifactSetName, ArtifactCount> = new Map();
-  //   equiped.forEach((name, category) => {
-  //     if (artifactInfo[name]) {
-  //       const artifactSet = artifactInfo[name].set;
-
-  //       if (activeArtif.has(artifactSet)) {
-  //         // @ts-ignore Check Has
-  //         activeArtif.set(artifactSet, activeArtif.get(artifactSet) + 1);
-  //       } else {
-  //         activeArtif.set(artifactSet, 1);
-  //       }
-  //     }
-  //   });
-  //   // props.onClick(activeArtif);
-  // }
+  }, [characters, props.characterName, props.equipmentCateogry, weaponOrArtifact]);
 
   function putEquipment(name: EquipmentName) {
     console.log(name);

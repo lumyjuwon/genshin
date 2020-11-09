@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { ArtifactName, artifactInfo } from 'src/resources/data';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
 import { RegexColorText } from 'src/components/text/RegexColorText';
 
@@ -12,7 +13,7 @@ const Container = styled.div({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  marginBottom: '50px',
+  margin: '0 0 50px 20px',
   '@media screen and (max-width: 1380px)': {
     // width: '700px',
     margin: '0 auto 50px'
@@ -32,6 +33,20 @@ const Title = styled.p({
     marginBottom: '0'
   }
 });
+
+function convertToArtifactsSetCountMap(artifacts: Artifacts): Map<string, number> {
+  let artifactsCount: Map<string, number> = new Map();
+  Object.values(artifacts).forEach((artif) => {
+    let setName: string = artifactInfo[artif].set;
+    if (artifactsCount.has(setName)) {
+      // @ts-ignore Check Has
+      artifactsCount.set(setName, artifactsCount.get(setName) + 1);
+    } else {
+      artifactsCount.set(setName, 1);
+    }
+  });
+  return artifactsCount;
+}
 
 function getDescription(artifacts: Map<string, number>) {
   const descriptions: string[] = [];
@@ -205,12 +220,20 @@ function getDescription(artifacts: Map<string, number>) {
   return descriptions;
 }
 
+interface Artifacts {
+  Flower?: ArtifactName;
+  Feather?: ArtifactName;
+  HourGlass?: ArtifactName;
+  HolyGrail?: ArtifactName;
+  Crown?: ArtifactName;
+}
+
 interface Props {
-  activeArtifacts: Map<string, number>;
+  activeArtifacts: Artifacts;
 }
 
 export function ArtifactBuffText(props: Props) {
-  const descriptions = getDescription(props.activeArtifacts);
+  const descriptions = getDescription(convertToArtifactsSetCountMap(props.activeArtifacts));
 
   return (
     <Container>

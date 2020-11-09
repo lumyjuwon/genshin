@@ -38,19 +38,24 @@ const Title = styled.p({
 const Level = styled.div({
   display: 'flex',
   alignItems: 'center',
-  width: '100%',
   justifyContent: 'flex-start',
   fontSize: '12px'
 });
 
-const TextDesc = styled.div({
-  width: '100%'
+const TextDesc = styled.div<{ marginTop?: boolean }>`
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: ${(props) => props.marginTop && '5px'};
+`;
+
+const WeaponStat = styled.span({
+  color: '#ff0000'
 });
 
-function getWeaponStat(weapon: WeaponName) {}
-
 interface Props {
-  activeWeapon: WeaponName;
+  activeWeapon?: WeaponName;
   selectedCharacter: CharacterName;
 }
 
@@ -63,22 +68,41 @@ export function WeaponBuffText(props: Props) {
           {props.selectedCharacter && (
             <Level>
               <SquareImage styles={{ width: '20px', height: '20px' }} src={CategoryImages.Character} />:{' '}
-              {characterInfo[props.selectedCharacter].stats.Level}&nbsp;
+              {characterInfo[props.selectedCharacter].stats.Level}
             </Level>
           )}
           {props.activeWeapon && (
             <Level>
               <SquareImage styles={{ width: '20px', height: '20px' }} src={CategoryImages[characterInfo[props.selectedCharacter].weapon]} />
-              : {weaponInfo[props.activeWeapon].stats.Level}&nbsp;
+              : {weaponInfo[props.activeWeapon].stats.Level}
             </Level>
           )}
         </>
       </FlexWrapper>
-      <FlexWrapper styles={{ width: '100%', justifyContent: 'space-between' }}>
+      <FlexWrapper styles={{ width: '100%', flexDirection: 'column', margin: '5px 0 0' }}>
         <>
           <TextDesc>HP: {characterInfo[props.selectedCharacter].stats.HP}</TextDesc>
-          <TextDesc>ATK: {characterInfo[props.selectedCharacter].stats.ATK}</TextDesc>
+          <TextDesc>
+            ATK: {characterInfo[props.selectedCharacter].stats.ATK}
+            {props.activeWeapon && <WeaponStat>(+{weaponInfo[props.activeWeapon].stats.ATK})</WeaponStat>}
+          </TextDesc>
           <TextDesc>DEF: {characterInfo[props.selectedCharacter].stats.DEF}</TextDesc>
+          <TextDesc marginTop>
+            <SquareImage styles={{ width: '20px', height: '20px' }} src={CategoryImages.Character} />
+            Extra:&nbsp;
+            <RegexColorText regex={/\d.+%/g} color={'red'}>
+              {characterInfo[props.selectedCharacter].stats.Additional}
+            </RegexColorText>
+          </TextDesc>
+          {props.activeWeapon && (
+            <TextDesc>
+              <SquareImage styles={{ width: '20px', height: '20px' }} src={CategoryImages[characterInfo[props.selectedCharacter].weapon]} />
+              Extra:&nbsp;
+              <RegexColorText regex={/\d.+%/g} color={'red'}>
+                {weaponInfo[props.activeWeapon].stats.Additional}
+              </RegexColorText>
+            </TextDesc>
+          )}
         </>
       </FlexWrapper>
     </Container>

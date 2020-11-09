@@ -3,10 +3,16 @@ import React from 'react';
 import { ArtifactBuffText } from './ArtifactBuffText';
 import { ArtifactName } from 'src/resources/data';
 
-type ArtifactCount = number;
+interface Artifacts {
+  Flower?: ArtifactName;
+  Feather?: ArtifactName;
+  HourGlass?: ArtifactName;
+  HolyGrail?: ArtifactName;
+  Crown?: ArtifactName;
+}
 
 interface Props {
-  activeArtifacts: Map<ArtifactName, ArtifactCount>;
+  activeArtifacts: Artifacts;
 }
 
 export function ArtifactResult(props: Props) {

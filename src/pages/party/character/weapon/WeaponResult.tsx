@@ -4,7 +4,7 @@ import { WeaponBuffText } from './WeaponBuffText';
 import { WeaponName, CharacterName } from 'src/resources/data';
 
 interface Props {
-  activeWeapon: WeaponName;
+  activeWeapon?: WeaponName;
   selectedCharacter: CharacterName;
 }
 

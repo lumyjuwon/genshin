@@ -19,7 +19,7 @@ export function BuffResult(props: Props) {
   return (
     <Container>
       <ElementResult activeElements={props.activeElements}></ElementResult>
-      <ArtifactResult activeArtifacts={props.activeArtifacts}></ArtifactResult>
+      {/* <ArtifactResult activeArtifacts={props.activeArtifacts}></ArtifactResult> */}
     </Container>
   );
 }
