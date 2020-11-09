@@ -427,6 +427,7 @@ enum Lang {
   Character_ATK = 'Character_ATK',
   Character_DEF = 'Character_DEF',
   Character_Additional = 'Character_Additional',
+  Save_Party_Cotnent = 'Save_Party_Cotnent',
 
   Map = 'Map'
 }

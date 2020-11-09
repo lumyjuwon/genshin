@@ -38,7 +38,7 @@ export function CharacterSimulator(props: Props) {
   const emptyCharacterSize = maxCharacterLength - charactersArray.length;
 
   return (
-    <Wrapper>
+    <Wrapper id={'party-content'}>
       {charactersArray.map((characterName: CharacterName) => {
         return <CharacterSlot key={characterName} name={characterName} src={CharacterImages[characterName]} />;
       })}

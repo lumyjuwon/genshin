@@ -8,6 +8,7 @@ import { RootState } from 'src/redux/rootReducer';
 import { PartyData } from 'src/redux/party/types';
 import { SquareTextButton, UnderlineInputText, FlexWrapper, BoxModelWrapper } from 'src/components';
 import { Lang, trans } from 'src/resources/languages';
+import html2canvas from 'html2canvas';
 
 const Container = styled.div({
   display: 'flex',
@@ -60,6 +61,32 @@ export function Menu(props: Props) {
                 onClick={() => {}}
               >
                 {trans(Lang.Party_Save_Text)}
+              </SquareTextButton>
+            </BoxModelWrapper>
+            <BoxModelWrapper styles={{ margin: '0 0 0 -1px' }}>
+              <SquareTextButton
+                styles={{
+                  buttonStyles: {
+                    display: 'inline-block',
+                    height: '42px',
+                    padding: '6px'
+                  }
+                }}
+                onClick={async () => {
+                  const partyContent = document.getElementById('party-content');
+                  if (partyContent) {
+                    const canvans = await html2canvas(partyContent, { backgroundColor: '#212223' });
+
+                    const link = document.createElement('a');
+                    link.href = canvans.toDataURL();
+                    link.download = InputRef.current !== null ? `${InputRef.current.value}.png` : 'Party.png';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                  }
+                }}
+              >
+                {trans(Lang.Save_Party_Cotnent)}
               </SquareTextButton>
             </BoxModelWrapper>
           </>
