@@ -1,4 +1,10 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const P = styled.p({
+  lineHeight: '140%',
+  wordBreak: 'keep-all'
+});
 
 function parseColorText(text: string, regex: RegExp, color?: string, isBold?: boolean) {
   const matchedText: string[] | null = text.match(regex);
@@ -36,10 +42,10 @@ interface Props {
 export function RegexColorText(props: Props) {
   const coloredText = parseColorText(props.children, props.regex, props.color, props.isBold);
   return (
-    <p style={{ lineHeight: '140%' }}>
+    <P>
       {coloredText?.map((text) => {
         return text;
       })}
-    </p>
+    </P>
   );
 }
