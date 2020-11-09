@@ -125,7 +125,7 @@ function EquipmentSlot(props: EquipmentSlotProps) {
                   }}
                   badge={
                     <RoundImage
-                      src={CategoryImages['Weapon']}
+                      src={CategoryImages[props.equipmentCateogry]}
                       styles={{
                         width: '30px',
                         height: '30px',
