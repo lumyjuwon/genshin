@@ -68,7 +68,7 @@
     "stats": {
       "Level": "MAX90 80Lv",
       "ATK": "475",
-      "Addtional": "CRIT Rate 25.1%"
+      "Additional": "CRIT Rate 25.1%"
     }
   },
   "Prototype Crescent": {
@@ -77,7 +77,7 @@
     "stats": {
       "Level": "MAX90 80Lv",
       "ATK": "475",
-      "Addtional": "ATK 37.7%"
+      "Additional": "ATK 37.7%"
     }
   },
   "Favonius Warbow": {
@@ -86,7 +86,7 @@
     "stats": {
       "Level": "MAX90 80Lv",
       "ATK": "427",
-      "Addtional": "Energy Recharge 55.9%"
+      "Additional": "Energy Recharge 55.9%"
     }
   },
   "Compound Bow": {
