@@ -41,18 +41,9 @@ interface EquipmentSlotProps {
 function EquipmentSlot(props: EquipmentSlotProps) {
   const characters: PartyData = useSelector<RootState, any>((state) => state.party.partyData);
   const weaponOrArtifact = ['Bow', 'Catalyst', 'Claymore', 'Polearm', 'Sword'].includes(props.equipmentCateogry) ? 'Weapon' : 'Artifact';
-  const [equipmentName, setEquipmentName] = useState<string>('');
+  // @ts-ignore
+  const equipmentName = props.characterName !== '' ? characters[props.characterName][weaponOrArtifact][props.equipmentCateogry] : '';
   const [isVisibleEquipmentModal, setIsVisibleEquipmentModal] = useState<boolean>(false);
-
-  useEffect(() => {
-    if (props.characterName !== '') {
-      //@ts-ignore
-      const equipment = characters[props.characterName][weaponOrArtifact][props.equipmentCateogry];
-      if (equipment) {
-        setEquipmentName(equipment);
-      }
-    }
-  }, [characters, props.characterName, props.equipmentCateogry, weaponOrArtifact]);
 
   function putEquipment(name: EquipmentName) {
     console.log(name);
@@ -130,7 +121,6 @@ function EquipmentSlot(props: EquipmentSlotProps) {
                   rank={items[name].rank}
                   hoverInnerColor={'#f1f2f3'}
                   onClick={() => {
-                    setEquipmentName(name);
                     putEquipment(name);
                   }}
                   badge={
