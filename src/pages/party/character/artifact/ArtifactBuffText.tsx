@@ -59,6 +59,86 @@ function getDescription(artifacts: Map<string, number>) {
       descriptions.push(trans(Lang[artifactSetName.replace(/\s/g, '_') as KeyLang]));
     }
 
+    if (artifactCount >= 2) {
+      switch (artifactSetName) {
+        case 'Adventurer':
+          descriptions.push(trans(Lang.Adventurer_TwoPieceSet));
+          break;
+        case 'Lucky Dog':
+          descriptions.push(trans(Lang.LuckyDog_TwoPieceSet));
+          break;
+        case 'Traveling Doctor':
+          descriptions.push(trans(Lang.TravelingDoctor_TwoPieceSet));
+          break;
+        case 'Instructor':
+          descriptions.push(trans(Lang.Instructor_TwoPieceSet));
+          break;
+        case 'Berserker':
+          descriptions.push(trans(Lang.Berserker_TwoPieceSet));
+          break;
+        case 'The Exile':
+          descriptions.push(trans(Lang.TheExile_TwoPieceSet));
+          break;
+        case 'Resolution of Sojourner':
+          descriptions.push(trans(Lang.ResolutionOfSojourner_TwoPieceSet));
+          break;
+        case 'Martial Artist':
+          descriptions.push(trans(Lang.MartialArtist_TwoPieceSet));
+          break;
+        case "Defender's Will":
+          descriptions.push(trans(Lang.DefenderOfWill_TwoPieceSet));
+          break;
+        case "Tiny Miracle's":
+          descriptions.push(trans(Lang.TinyMiracle_TwoPieceSet));
+          break;
+        case 'Heart of Bravery':
+          descriptions.push(trans(Lang.BraveHeart_TwoPieceSet));
+          break;
+        case 'Gambler':
+          descriptions.push(trans(Lang.Gambler_TwoPieceSet));
+          break;
+        case 'Scholar':
+          descriptions.push(trans(Lang.Scholar_TwoPieceSet));
+          break;
+        case "Gladiator's Finale":
+          descriptions.push(trans(Lang.GladiatorOfFinaleFinale_TwoPieceSet));
+          break;
+        case 'Maiden Beloved':
+          descriptions.push(trans(Lang.MaidenBeloved_TwoPieceSet));
+          break;
+        case 'Noblesse Oblige':
+          descriptions.push(trans(Lang.NoblesseOblige_TwoPieceSet));
+          break;
+        case 'Bloodstained Chivalry':
+          descriptions.push(trans(Lang.BloodstainedChivalry_TwoPieceSet));
+          break;
+        case "Wanderer's Troupe":
+          descriptions.push(trans(Lang.WandererOfTroupe_TwoPieceSet));
+          break;
+        case 'Viridescent Venerer':
+          descriptions.push(trans(Lang.ViridescentVenerer_TwoPieceSet));
+          break;
+        case 'Thundering Fury':
+          descriptions.push(trans(Lang.ThunderingFury_TwoPieceSet));
+          break;
+        case 'Thundershoother':
+          descriptions.push(trans(Lang.Thundersoother_TwoPieceSet));
+          break;
+        case 'Crimson Witch of Flames':
+          descriptions.push(trans(Lang.CrimsonWitchOfFlames_TwoPieceSet));
+          break;
+        case 'Lavawalker':
+          descriptions.push(trans(Lang.Lavawalker_TwoPieceSet));
+          break;
+        case 'Archaic Petra':
+          descriptions.push(trans(Lang.ArchaicPetra_TwoPieceSet));
+          break;
+        case 'Retracing Bolide':
+          descriptions.push(trans(Lang.RetracingBolide_TwoPieceSet));
+          break;
+      }
+    }
+
     if (artifactCount >= 4) {
       switch (artifactSetName) {
         case 'Adventurer':
@@ -135,84 +215,6 @@ function getDescription(artifacts: Map<string, number>) {
           break;
         case 'Retracing Bolide':
           descriptions.push(trans(Lang.RetracingBolide_FourPieceSet));
-          break;
-      }
-    } else if (artifactCount >= 2) {
-      switch (artifactSetName) {
-        case 'Adventurer':
-          descriptions.push(trans(Lang.Adventurer_TwoPieceSet));
-          break;
-        case 'Lucky Dog':
-          descriptions.push(trans(Lang.LuckyDog_TwoPieceSet));
-          break;
-        case 'Traveling Doctor':
-          descriptions.push(trans(Lang.TravelingDoctor_TwoPieceSet));
-          break;
-        case 'Instructor':
-          descriptions.push(trans(Lang.Instructor_TwoPieceSet));
-          break;
-        case 'Berserker':
-          descriptions.push(trans(Lang.Berserker_TwoPieceSet));
-          break;
-        case 'The Exile':
-          descriptions.push(trans(Lang.TheExile_TwoPieceSet));
-          break;
-        case 'Resolution of Sojourner':
-          descriptions.push(trans(Lang.ResolutionOfSojourner_TwoPieceSet));
-          break;
-        case 'Martial Artist':
-          descriptions.push(trans(Lang.MartialArtist_TwoPieceSet));
-          break;
-        case "Defender's Will":
-          descriptions.push(trans(Lang.DefenderOfWill_TwoPieceSet));
-          break;
-        case "Tiny Miracle's":
-          descriptions.push(trans(Lang.TinyMiracle_TwoPieceSet));
-          break;
-        case 'Heart of Bravery':
-          descriptions.push(trans(Lang.BraveHeart_TwoPieceSet));
-          break;
-        case 'Gambler':
-          descriptions.push(trans(Lang.Gambler_TwoPieceSet));
-          break;
-        case 'Scholar':
-          descriptions.push(trans(Lang.Scholar_TwoPieceSet));
-          break;
-        case "Gladiator's Finale":
-          descriptions.push(trans(Lang.GladiatorOfFinaleFinale_TwoPieceSet));
-          break;
-        case 'Maiden Beloved':
-          descriptions.push(trans(Lang.MaidenBeloved_TwoPieceSet));
-          break;
-        case 'Noblesse Oblige':
-          descriptions.push(trans(Lang.NoblesseOblige_TwoPieceSet));
-          break;
-        case 'Bloodstained Chivalry':
-          descriptions.push(trans(Lang.BloodstainedChivalry_TwoPieceSet));
-          break;
-        case "Wanderer's Troupe":
-          descriptions.push(trans(Lang.WandererOfTroupe_TwoPieceSet));
-          break;
-        case 'Viridescent Venerer':
-          descriptions.push(trans(Lang.ViridescentVenerer_TwoPieceSet));
-          break;
-        case 'Thundering Fury':
-          descriptions.push(trans(Lang.ThunderingFury_TwoPieceSet));
-          break;
-        case 'Thundershoother':
-          descriptions.push(trans(Lang.Thundersoother_TwoPieceSet));
-          break;
-        case 'Crimson Witch of Flames':
-          descriptions.push(trans(Lang.CrimsonWitchOfFlames_TwoPieceSet));
-          break;
-        case 'Lavawalker':
-          descriptions.push(trans(Lang.Lavawalker_TwoPieceSet));
-          break;
-        case 'Archaic Petra':
-          descriptions.push(trans(Lang.ArchaicPetra_TwoPieceSet));
-          break;
-        case 'Retracing Bolide':
-          descriptions.push(trans(Lang.RetracingBolide_TwoPieceSet));
           break;
       }
     }
