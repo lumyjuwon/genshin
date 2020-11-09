@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 
 import { CloseBlackButton } from 'src/resources/svg';
@@ -52,21 +52,32 @@ const Header = styled.div({
 });
 
 interface Props {
-  cancel: Function;
   visible: boolean;
+  cancel: Function;
   children?: JSX.Element;
   onCancel?: Function;
 }
 
 export function Modal(props: Props) {
+  useEffect(() => {
+    if (props.visible) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [props.visible]);
+
   if (props.visible) {
-    document.body.style.overflow = 'hidden';
     return (
       <Wrapper>
         <WrapperInner>
           <Header>
-            <CircleButton onClick={props.cancel}>
-              <CloseBlackButton></CloseBlackButton>
+            <CircleButton
+              onClick={() => {
+                props.cancel();
+              }}
+            >
+              <CloseBlackButton />
             </CircleButton>
           </Header>
           {props.children}
@@ -74,7 +85,6 @@ export function Modal(props: Props) {
       </Wrapper>
     );
   } else {
-    document.body.style.overflow = 'unset';
     return null;
   }
 }
