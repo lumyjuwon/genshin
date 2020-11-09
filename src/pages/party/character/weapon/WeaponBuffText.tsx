@@ -45,13 +45,13 @@ const Level = styled.div({
 const TextDesc = styled.div<{ marginTop?: boolean }>`
   display: flex;
   width: 100%;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   margin-top: ${(props) => props.marginTop && '5px'};
 `;
 
 const WeaponStat = styled.span({
-  color: '#ff0000'
+  color: '#ffff00'
 });
 
 interface Props {
@@ -81,12 +81,17 @@ export function WeaponBuffText(props: Props) {
       </FlexWrapper>
       <FlexWrapper styles={{ width: '100%', flexDirection: 'column', margin: '5px 0 0' }}>
         <>
-          <TextDesc>HP: {characterInfo[props.selectedCharacter].stats.HP}</TextDesc>
+          <FlexWrapper styles={{ justifyContent: 'space-between', width: '100%' }}>
+            <>
+              <TextDesc>HP: {characterInfo[props.selectedCharacter].stats.HP}</TextDesc>
+              <TextDesc>DEF: {characterInfo[props.selectedCharacter].stats.DEF}</TextDesc>
+            </>
+          </FlexWrapper>
+          {/* 기본공격력 + 무기 공격력 + (파티버프 + 무기버프 + 캐릭터버프 %합산) */}
           <TextDesc>
             ATK: {characterInfo[props.selectedCharacter].stats.ATK}
             {props.activeWeapon && <WeaponStat>(+{weaponInfo[props.activeWeapon].stats.ATK})</WeaponStat>}
           </TextDesc>
-          <TextDesc>DEF: {characterInfo[props.selectedCharacter].stats.DEF}</TextDesc>
           <TextDesc marginTop>
             <SquareImage styles={{ width: '20px', height: '20px' }} src={CategoryImages.Character} />
             Extra:&nbsp;

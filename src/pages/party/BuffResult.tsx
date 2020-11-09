@@ -18,7 +18,7 @@ interface Props {
 export function BuffResult(props: Props) {
   return (
     <Container>
-      <ElementResult activeElements={props.activeElements}></ElementResult>
+      {/* <ElementResult activeElements={props.activeElements}></ElementResult> */}
       {/* <ArtifactResult activeArtifacts={props.activeArtifacts}></ArtifactResult> */}
     </Container>
   );

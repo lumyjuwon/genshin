@@ -6,18 +6,20 @@ import { Menu } from './Menu';
 import { CharacterSimulator } from './simulator/CharacterSimulator';
 import { ElementResult } from './element/ElementResult';
 
+import { useSelector } from 'react-redux';
+import { PartyData } from 'src/redux/party/types';
+import { RootState } from 'src/redux/rootReducer';
+
 type ElementName = string;
 type ElementCount = number;
 
 export function PartyScreen() {
-  const [activeElements, setActiveElements] = useState<Map<ElementName, ElementCount>>(new Map());
-
   return (
     <ContentWrapper>
       <>
         <Menu />
         <CharacterSimulator />
-        <ElementResult activeElements={activeElements} />
+        <ElementResult />
       </>
     </ContentWrapper>
   );
