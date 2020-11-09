@@ -74,7 +74,7 @@ export function MainScreen(props: Props) {
             }}
           >
             <>
-              <Link to="/gacha">
+              <Link to='/gacha'>
                 <div onClick={() => props.onNavClick(props.gacha)}>
                   <ImageContentCard
                     src={`${require('../../resources/images/mainscreen/gacha.png')}`}
@@ -94,7 +94,7 @@ export function MainScreen(props: Props) {
                   />
                 </div>
               </Link>
-              <Link to="/party">
+              <Link to='/party'>
                 <div onClick={() => props.onNavClick(props.party)}>
                   <ImageContentCard
                     src={`${require('../../resources/images/mainscreen/party.png')}`}
@@ -116,8 +116,8 @@ export function MainScreen(props: Props) {
               </Link>
               <ImageContentCard
                 src={`${require('../../resources/images/mainscreen/Paimon.jpg')}`}
-                title="Coming Soon..."
-                desc="Coming Soon..."
+                title='Coming Soon...'
+                desc='Coming Soon...'
                 styles={{
                   cardStyles: {
                     width: '300px',

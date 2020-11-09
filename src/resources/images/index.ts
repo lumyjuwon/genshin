@@ -62,4 +62,8 @@ const CategoryImages: ImageMap = {
 
 const GachaImages: ImageMap = Object.assign({}, CharacterImages, ItemImages);
 
-export { CharacterImages, ElementImages, ItemImages, GachaImages, MainScreen, GemImages, CategoryImages };
+const MapImages: ImageMap = {
+  Map: require('./map/map.png')
+};
+
+export { CharacterImages, ElementImages, ItemImages, GachaImages, MainScreen, GemImages, CategoryImages, MapImages };
