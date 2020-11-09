@@ -12,8 +12,10 @@ const Container = styled.div({
   textAlign: 'left'
 });
 
-const DeleteButton = styled.div({});
-
 export function SavedPartyList() {
-  return <Container>TEST</Container>;
+  return (
+    <Container>
+      <div>TEST</div>
+    </Container>
+  );
 }
