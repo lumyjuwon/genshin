@@ -1,9 +1,9 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 
 import { partyDispatch } from 'src/redux';
 import { CharacterImages } from 'src/resources/images';
-import { EmojiText, RoundImage } from 'src/components';
+import { EmojiText, RoundImage, YesOrNo } from 'src/components';
 import { PartyPreset } from 'src/redux/party/types';
 
 const Container = styled.div({
@@ -45,14 +45,20 @@ interface Props {
 
 export function SavedParty(props: Props) {
   const partyNameRef = useRef<HTMLDivElement>(null);
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   function setPartyData(name: string) {
     partyDispatch.SetParty(props.parties[name]);
   }
 
   function deleletPartyData() {
+    setIsModalVisible(false);
     const name = partyNameRef.current?.textContent;
     name && partyDispatch.DeleteParty({ [name]: props.parties[name] });
+  }
+
+  function noButtonClick() {
+    setIsModalVisible(false);
   }
 
   return (
@@ -63,9 +69,19 @@ export function SavedParty(props: Props) {
           return <RoundImage src={CharacterImages[character]} styles={{ width: '30px', height: '30px' }} />;
         })}
       </Party>
-      <DeleteButton onClick={() => deleletPartyData()}>
+      <DeleteButton
+        onClick={() => {
+          setIsModalVisible(true);
+        }}
+      >
         <EmojiText label="delete" symbol="🗑"></EmojiText>
       </DeleteButton>
+      <YesOrNo
+        isVisible={isModalVisible}
+        question={`Are you sure to delete party '${partyNameRef.current?.textContent}'?`}
+        yesButtonClick={deleletPartyData}
+        noButtonClick={noButtonClick}
+      />
     </Container>
   );
 }
