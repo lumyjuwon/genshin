@@ -1,21 +1,12 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 
 import { partyDispatch } from 'src/redux';
 import { RootState } from 'src/redux/rootReducer';
 import { PartyData, PartyPreset } from 'src/redux/party/types';
-import {
-  FocusWrapper,
-  SquareTextButton,
-  ForwardedInputText,
-  FlexWrapper,
-  BoxModelWrapper,
-  YesOrNo,
-  RoundTextButton,
-  useHandleClickOutside
-} from 'src/components';
-import { KeyLang, Lang, trans } from 'src/resources/languages';
+import { FocusWrapper, SquareTextButton, ForwardedInputText, FlexWrapper, BoxModelWrapper, YesOrNo, RoundTextButton } from 'src/components';
+import { Lang, trans } from 'src/resources/languages';
 import html2canvas from 'html2canvas';
 import { SavedPartyList } from './save_party/SavedPartyList';
 import { Ripple } from 'src/components/effect';
@@ -52,26 +43,10 @@ export function Menu(props: Props) {
   const [isResetModalVisible, setIsResetModalVisible] = useState(false);
   const [isImageModalVisible, setIsImageModalVisible] = useState(false);
   const [isPartyListVisible, setIsPartyVisible] = useState(false);
-  const [partyToggleButtonText, setPartyToggleButtonText] = useState('Show_Party');
   const InputRef = useRef<HTMLInputElement>(null);
   const partyListRef = useRef<HTMLDivElement>(null);
   const characters: PartyData = useSelector<RootState, any>((state) => state.party.partyData);
   const parties: PartyPreset = useSelector<RootState, any>((state) => state.party.partyPreset);
-
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (isPartyListVisible && !partyListRef.current?.contains(event.target as Node)) {
-        setIsPartyVisible(false);
-        setPartyToggleButtonText('Show_Party');
-      }
-    }
-
-    document.addEventListener('click', handleClickOutside);
-    return () => {
-      // Unbind the event listener on clean up
-      document.removeEventListener('click', handleClickOutside);
-    };
-  }, [isPartyListVisible]);
 
   function saveCurrentParty() {
     const partyName = InputRef.current?.value;
@@ -89,6 +64,10 @@ export function Menu(props: Props) {
     InputRef.current && (InputRef.current.value = '');
   }
 
+  function setVisible(bool: boolean) {
+    setIsPartyVisible(bool);
+  }
+
   function resetCurrentParty() {
     setIsResetModalVisible(false);
     partyDispatch.SetParty({});
@@ -97,10 +76,8 @@ export function Menu(props: Props) {
   function toggleShowPartyButton() {
     if (!isPartyListVisible) {
       setIsPartyVisible(true);
-      setPartyToggleButtonText('Hide_Party');
     } else {
       setIsPartyVisible(false);
-      setPartyToggleButtonText('Show_Party');
     }
   }
 
@@ -230,13 +207,13 @@ export function Menu(props: Props) {
                   }}
                 >
                   <>
-                    {trans(Lang[partyToggleButtonText as KeyLang])}
+                    Party List
                     <Ripple />
                   </>
                 </RoundTextButton>
               </BoxModelWrapper>
               {isPartyListVisible && (
-                <FocusWrapper ref={partyListRef}>
+                <FocusWrapper ref={partyListRef} visible={isPartyListVisible} setVisible={() => setVisible(false)}>
                   <PartyList>
                     <BoxModelWrapper styles={{ padding: '20px 10px' }}>
                       <SavedPartyList parties={parties} toggle={() => toggleShowPartyButton()} />
