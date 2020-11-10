@@ -1,4 +1,5 @@
 import { ActionTypes, PartyAction, PartyState, PartyPreset } from './types';
+import * as loadsh from 'lodash';
 
 const initialState: PartyState = {
   partyData: {},
@@ -15,7 +16,7 @@ export function partyReducer(state = initialState, action: PartyAction): PartySt
     case ActionTypes.SaveParty:
       return {
         ...state,
-        partyPreset: Object.assign({}, state.partyPreset, action.payload)
+        partyPreset: loadsh.cloneDeep(Object.assign({}, state.partyPreset, action.payload))
       };
     case ActionTypes.DeleteParty:
       const notDeleted = Object.keys(state.partyPreset).filter((name) => name !== Object.keys(action.payload)[0]);

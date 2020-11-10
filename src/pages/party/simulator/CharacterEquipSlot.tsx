@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
+import * as Loadsh from 'lodash';
 
 import { PartyData } from 'src/redux/party/types';
 import { RootState } from 'src/redux/rootReducer';
@@ -46,7 +47,7 @@ function EquipmentSlot(props: EquipmentSlotProps) {
   const [isVisibleEquipmentModal, setIsVisibleEquipmentModal] = useState<boolean>(false);
 
   function equipItem(name: EquipmentName) {
-    const partyData = Object.assign({}, characters);
+    const partyData = Loadsh.cloneDeep(characters);
     if (partyData[props.characterName]) {
       //@ts-ignore
       partyData[props.characterName][weaponOrArtifact][props.equipmentCateogry] = name;
