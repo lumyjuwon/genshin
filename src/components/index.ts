@@ -47,3 +47,6 @@ export { EmojiText } from './text/EmojiText';
 // Box
 export { ItemBadgeBox } from './box/ItemBadgeBox';
 export { RoundImageBox } from './box/RoundImageBox';
+
+// Hook
+export { useHandleClickOutside } from './hooks/useHandleClickOutside';
