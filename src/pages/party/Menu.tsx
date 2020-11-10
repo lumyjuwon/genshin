@@ -1,11 +1,11 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 
 import { partyDispatch } from 'src/redux';
 import { RootState } from 'src/redux/rootReducer';
 import { PartyData } from 'src/redux/party/types';
-import { SquareTextButton, ForwardedInputText, FlexWrapper, BoxModelWrapper } from 'src/components';
+import { SquareTextButton, ForwardedInputText, FlexWrapper, BoxModelWrapper, YesOrNo } from 'src/components';
 import { Lang, trans } from 'src/resources/languages';
 import html2canvas from 'html2canvas';
 
@@ -24,6 +24,7 @@ const Container = styled.div({
 interface Props {}
 
 export function Menu(props: Props) {
+  const [isModalVisible, setIsModalVisible] = useState(false);
   const InputRef = useRef<HTMLInputElement>(null);
   const characters: PartyData = useSelector<RootState, any>((state) => state.party.partyData);
 
@@ -38,6 +39,7 @@ export function Menu(props: Props) {
   }
 
   function resetCurrentParty() {
+    setIsModalVisible(false);
     partyDispatch.SetParty({});
   }
 
@@ -98,9 +100,15 @@ export function Menu(props: Props) {
           </BoxModelWrapper>
         </>
       </FlexWrapper>
-      <SquareTextButton onClick={() => resetCurrentParty()} styles={{ buttonStyles: { height: '42px', padding: '6px' } }}>
+      <SquareTextButton onClick={() => setIsModalVisible(true)} styles={{ buttonStyles: { height: '42px', padding: '6px' } }}>
         Reset Current Party
       </SquareTextButton>
+      <YesOrNo
+        isVisible={isModalVisible}
+        question="Are you sure to reset current party?"
+        yesButtonClick={resetCurrentParty}
+        noButtonClick={() => setIsModalVisible(false)}
+      />
     </Container>
   );
 }
