@@ -57,10 +57,6 @@ export function SavedParty(props: Props) {
     name && partyDispatch.DeleteParty({ [name]: props.parties[name] });
   }
 
-  function noButtonClick() {
-    setIsModalVisible(false);
-  }
-
   return (
     <Container>
       <Party onClick={() => setPartyData(props.partyName)}>
@@ -80,7 +76,9 @@ export function SavedParty(props: Props) {
         isVisible={isModalVisible}
         question={`Are you sure to delete party '${partyNameRef.current?.textContent}'?`}
         yesButtonClick={deleletPartyData}
-        noButtonClick={noButtonClick}
+        noButtonClick={() => {
+          setIsModalVisible(false);
+        }}
       />
     </Container>
   );
