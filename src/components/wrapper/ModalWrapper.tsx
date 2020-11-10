@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div({
@@ -41,19 +41,52 @@ const WrapperInner = styled.div({
   }
 });
 
+let ModalWrapperHashId = 0;
+let usedLockHashId = -1;
+let callBack = () => {};
+
+function lockScroll(hashId: number | undefined) {
+  if (usedLockHashId === -1 && typeof hashId === 'number') {
+    usedLockHashId = hashId;
+
+    const yOffset = window.pageYOffset;
+    callBack = () => {
+      window.scrollTo(0, yOffset);
+    };
+    window.addEventListener('scroll', callBack);
+  }
+}
+
+function unLockScroll(hashId: number | undefined) {
+  if (usedLockHashId === hashId) {
+    window.removeEventListener('scroll', callBack);
+    usedLockHashId = -1;
+  }
+}
+
 interface Props {
   visible: boolean;
   children: JSX.Element | JSX.Element[];
 }
 
 export function ModalWrapper(props: Props) {
+  const hashId = useRef<number>();
+
+  useEffect(() => {
+    hashId.current = ModalWrapperHashId;
+    ModalWrapperHashId++;
+    console.log(hashId.current);
+  }, []);
+
   if (props.visible) {
+    lockScroll(hashId.current);
     return (
       <Wrapper>
         <WrapperInner>{props.children}</WrapperInner>
       </Wrapper>
     );
   } else {
+    unLockScroll(hashId.current);
     return null;
   }
 }
