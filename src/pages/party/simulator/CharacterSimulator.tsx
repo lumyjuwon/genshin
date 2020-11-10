@@ -3,13 +3,13 @@ import styled from 'styled-components';
 
 import { CharacterName } from 'src/resources/data';
 import { CharacterImages } from 'src/resources/images';
-import { Menu } from '../menu/Menu';
+import { Menu } from '../Menu';
 
 import { CharacterSlot } from './CharacterSlot';
 import { useSelector } from 'react-redux';
 import { PartyData } from 'src/redux/party/types';
 import { RootState } from 'src/redux/rootReducer';
-import { SavedPartyList } from '../menu/SavedPartyList';
+import { SavedPartyList } from '../save_party/SavedPartyList';
 
 export const maxCharacterLength = 4;
 

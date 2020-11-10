@@ -2,7 +2,6 @@ import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 
-import { SavedPartyList } from './SavedPartyList';
 import { partyDispatch } from 'src/redux';
 import { RootState } from 'src/redux/rootReducer';
 import { PartyData } from 'src/redux/party/types';
