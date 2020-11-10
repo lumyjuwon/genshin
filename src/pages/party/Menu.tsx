@@ -174,7 +174,16 @@ export function Menu(props: Props) {
         <>
           <RoundTextButton
             onClick={() => setIsResetModalVisible(true)}
-            styles={{ buttonStyles: { width: '100px', height: '42px', padding: '6px', margin: '0', borderRadius: '12px 0 0 12px' } }}
+            styles={{
+              buttonStyles: {
+                width: '100px',
+                height: '42px',
+                padding: '6px',
+                margin: '0',
+                borderRadius: '12px 0 0 12px',
+                backgroundColor: '#cc0000'
+              }
+            }}
           >
             <>
               {trans(Lang.Reset_Party)}
