@@ -40,14 +40,16 @@ export function CharacterSimulator(props: Props) {
   const emptyCharacterSize = maxCharacterLength - charactersArray.length;
 
   return (
-    <Wrapper id={'party-content'}>
+    <Wrapper>
       <Menu />
-      {charactersArray.map((characterName: CharacterName) => {
-        return <CharacterSlot key={characterName} name={characterName} src={CharacterImages[characterName]} />;
-      })}
-      {Array.from({ length: emptyCharacterSize }, () => '').map((characterName: CharacterName, index: number) => {
-        return <CharacterSlot key={index} name={characterName} src={CharacterImages[characterName]} />;
-      })}
+      <div id={'party-content'}>
+        {charactersArray.map((characterName: CharacterName) => {
+          return <CharacterSlot key={characterName} name={characterName} src={CharacterImages[characterName]} />;
+        })}
+        {Array.from({ length: emptyCharacterSize }, () => '').map((characterName: CharacterName, index: number) => {
+          return <CharacterSlot key={index} name={characterName} src={CharacterImages[characterName]} />;
+        })}
+      </div>
     </Wrapper>
   );
 }

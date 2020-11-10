@@ -1,5 +1,5 @@
 /**
- * @returns YYYY-mm-dd 형식으로 반환
+ * @returns YYYY-mm-dd HH:MM:SS 형식으로 반환
  */
 export function getFormatDate() {
   const nowDate = new Date();
@@ -10,9 +10,5 @@ export function getFormatDate() {
   const minutes = nowDate.getMinutes();
   const seconds = nowDate.getSeconds();
 
-  console.log(`${year}-${month}-${day}-${hour}-${minutes}-${seconds}`);
-
-  return `${year}-${month}-${day}-${hour}-${minutes}-${seconds}`;
+  return `${year}-${month}-${day} ${hour}:${minutes}:${seconds}`;
 }
-
-getFormatDate();

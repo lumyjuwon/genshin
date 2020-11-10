@@ -5,7 +5,7 @@ import { RoundTextButton } from '../button/RoundTextButton';
 import { ModalWrapper } from '../wrapper/ModalWrapper';
 
 const Container = styled.div({
-  width: '500px'
+  width: '480px'
 });
 
 const Title = styled.div({
@@ -24,7 +24,7 @@ const ContentContainer = styled.div({
 const ButtonContainer = styled.div({
   display: 'flex',
   justifyContent: 'flex-end',
-  marginTop: '24px',
+  marginTop: '12px',
   bottom: '10px'
 });
 
