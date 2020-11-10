@@ -9,6 +9,7 @@ export { GridWrapper } from './wrapper/GridWrapper';
 export { FlexWrapper } from './wrapper/FlexWrapper';
 export { ContentWrapper } from './wrapper/ContentWrapper';
 export { BoxModelWrapper } from './wrapper/BoxModelWrapper';
+export { FocusWrapper } from './wrapper/FocusWrapper';
 
 // Button Component
 export { RoundButton } from './button/RoundButton';

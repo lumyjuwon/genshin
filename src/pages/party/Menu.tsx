@@ -1,11 +1,20 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 
 import { partyDispatch } from 'src/redux';
 import { RootState } from 'src/redux/rootReducer';
 import { PartyData, PartyPreset } from 'src/redux/party/types';
-import { SquareTextButton, ForwardedInputText, FlexWrapper, BoxModelWrapper, YesOrNo, RoundTextButton } from 'src/components';
+import {
+  FocusWrapper,
+  SquareTextButton,
+  ForwardedInputText,
+  FlexWrapper,
+  BoxModelWrapper,
+  YesOrNo,
+  RoundTextButton,
+  useHandleClickOutside
+} from 'src/components';
 import { KeyLang, Lang, trans } from 'src/resources/languages';
 import html2canvas from 'html2canvas';
 import { SavedPartyList } from './save_party/SavedPartyList';
@@ -23,7 +32,7 @@ const Container = styled.div({
   }
 });
 
-const RightSidebar = styled.div({
+const PartyList = styled.div({
   position: 'absolute',
   top: '50px',
   right: '0',
@@ -31,10 +40,7 @@ const RightSidebar = styled.div({
   boxShadow: '4px 4px 3px #111',
   backgroundColor: 'rgba(0, 0, 0, .9)',
   zIndex: 3,
-  display: 'none',
-  '&.show-party-list': {
-    display: 'block'
-  },
+  display: 'block',
   '@media screen and (max-width: 768px)': {
     top: '142px'
   }
@@ -45,11 +51,27 @@ interface Props {}
 export function Menu(props: Props) {
   const [isResetModalVisible, setIsResetModalVisible] = useState(false);
   const [isImageModalVisible, setIsImageModalVisible] = useState(false);
+  const [isPartyListVisible, setIsPartyVisible] = useState(false);
   const [partyToggleButtonText, setPartyToggleButtonText] = useState('Show_Party');
   const InputRef = useRef<HTMLInputElement>(null);
   const partyListRef = useRef<HTMLDivElement>(null);
   const characters: PartyData = useSelector<RootState, any>((state) => state.party.partyData);
   const parties: PartyPreset = useSelector<RootState, any>((state) => state.party.partyPreset);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (isPartyListVisible && !partyListRef.current?.contains(event.target as Node)) {
+        setIsPartyVisible(false);
+        setPartyToggleButtonText('Show_Party');
+      }
+    }
+
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [isPartyListVisible]);
 
   function saveCurrentParty() {
     const partyName = InputRef.current?.value;
@@ -73,12 +95,12 @@ export function Menu(props: Props) {
   }
 
   function toggleShowPartyButton() {
-    if (partyListRef.current?.classList.contains('show-party-list')) {
-      partyListRef.current.classList.remove('show-party-list');
-      setPartyToggleButtonText('Show_Party');
-    } else {
-      partyListRef.current?.classList.add('show-party-list');
+    if (!isPartyListVisible) {
+      setIsPartyVisible(true);
       setPartyToggleButtonText('Hide_Party');
+    } else {
+      setIsPartyVisible(false);
+      setPartyToggleButtonText('Show_Party');
     }
   }
 
@@ -190,27 +212,40 @@ export function Menu(props: Props) {
               <Ripple />
             </>
           </RoundTextButton>
-          <BoxModelWrapper styles={{ margin: '0 0 0 -2px', small: { margin: '0 0 0 -2px' } }}>
-            <RoundTextButton
-              onClick={() => toggleShowPartyButton()}
-              styles={{
-                buttonStyles: {
-                  padding: '6px',
-                  width: '150px',
-                  height: '42px',
-                  margin: '0',
-                  borderRadius: '0 12px 12px 0',
-                  medium: { width: '120px' },
-                  small: { width: '120px' }
-                }
-              }}
-            >
-              <>
-                {trans(Lang[partyToggleButtonText as KeyLang])}
-                <Ripple />
-              </>
-            </RoundTextButton>
-          </BoxModelWrapper>
+          <FlexWrapper styles={{ flexDirection: 'column' }}>
+            <>
+              <BoxModelWrapper styles={{ margin: '0 0 0 -2px', small: { margin: '0 0 0 -2px' } }}>
+                <RoundTextButton
+                  onClick={() => toggleShowPartyButton()}
+                  styles={{
+                    buttonStyles: {
+                      padding: '6px',
+                      width: '150px',
+                      height: '42px',
+                      margin: '0',
+                      borderRadius: '0 12px 12px 0',
+                      medium: { width: '120px' },
+                      small: { width: '120px' }
+                    }
+                  }}
+                >
+                  <>
+                    {trans(Lang[partyToggleButtonText as KeyLang])}
+                    <Ripple />
+                  </>
+                </RoundTextButton>
+              </BoxModelWrapper>
+              {isPartyListVisible && (
+                <FocusWrapper ref={partyListRef}>
+                  <PartyList>
+                    <BoxModelWrapper styles={{ padding: '20px 10px' }}>
+                      <SavedPartyList parties={parties} toggle={() => toggleShowPartyButton()} />
+                    </BoxModelWrapper>
+                  </PartyList>
+                </FocusWrapper>
+              )}
+            </>
+          </FlexWrapper>
         </>
       </FlexWrapper>
       <YesOrNo
@@ -225,11 +260,6 @@ export function Menu(props: Props) {
         yesButtonClick={downloadImage}
         noButtonClick={() => setIsImageModalVisible(false)}
       />
-      <RightSidebar ref={partyListRef}>
-        <BoxModelWrapper styles={{ padding: '20px 10px' }}>
-          <SavedPartyList parties={parties} toggle={() => toggleShowPartyButton()} />
-        </BoxModelWrapper>
-      </RightSidebar>
     </Container>
   );
 }
