@@ -11,7 +11,8 @@ interface TextStyle {
 const Text = styled.a<TextStyle>((props: TextStyle) => {
   return {
     fontSize: props.fontSize || '16px',
-    color: props.color || '#f1f2f3'
+    color: props.color || '#f1f2f3',
+    cursor: 'pointer'
   };
 });
 

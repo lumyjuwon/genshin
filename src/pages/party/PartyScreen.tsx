@@ -3,14 +3,14 @@ import styled from 'styled-components';
 
 import { ContentWrapper } from 'src/components';
 
-import { Menu } from './menu/Menu';
 import { CharacterSimulator } from './simulator/CharacterSimulator';
 import { ElementResult } from './element/ElementResult';
+import { SavedPartyList } from './menu/SavedPartyList';
 
 const PositionAbsolute = styled.div({
   position: 'absolute',
-  top: '50px',
-  right: '0'
+  top: '80px',
+  right: '250px'
 });
 
 type ElementName = string;
@@ -20,9 +20,9 @@ export function PartyScreen() {
   return (
     <ContentWrapper>
       <>
-        <PositionAbsolute>
-          <Menu />
-        </PositionAbsolute>
+        {/* <PositionAbsolute>
+          <SavedPartyList />
+        </PositionAbsolute> */}
         <CharacterSimulator />
         <ElementResult />
       </>

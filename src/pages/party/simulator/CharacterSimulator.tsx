@@ -3,11 +3,13 @@ import styled from 'styled-components';
 
 import { CharacterName } from 'src/resources/data';
 import { CharacterImages } from 'src/resources/images';
+import { Menu } from '../menu/Menu';
 
 import { CharacterSlot } from './CharacterSlot';
 import { useSelector } from 'react-redux';
 import { PartyData } from 'src/redux/party/types';
 import { RootState } from 'src/redux/rootReducer';
+import { SavedPartyList } from '../menu/SavedPartyList';
 
 export const maxCharacterLength = 4;
 
@@ -21,6 +23,7 @@ const Wrapper = styled.div({
   alignItems: 'flex-start',
   margin: '0 auto',
   marginBottom: '5vh',
+  position: 'relative',
   '@media screen and (max-width: 1380px)': {
     width: '655px'
   },
@@ -28,6 +31,12 @@ const Wrapper = styled.div({
     width: '100%',
     padding: '0'
   }
+});
+
+const PositionAbsolute = styled.div({
+  position: 'absolute',
+  top: '80px',
+  left: '-250px'
 });
 
 interface Props {}
@@ -39,6 +48,10 @@ export function CharacterSimulator(props: Props) {
 
   return (
     <Wrapper id={'party-content'}>
+      <Menu />
+      <PositionAbsolute>
+        <SavedPartyList />
+      </PositionAbsolute>
       {charactersArray.map((characterName: CharacterName) => {
         return <CharacterSlot key={characterName} name={characterName} src={CharacterImages[characterName]} />;
       })}

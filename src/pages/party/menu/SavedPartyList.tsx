@@ -13,8 +13,12 @@ const Container = styled.div({
   flexDirection: 'column',
   margin: '10px 0 0',
   padding: '0 10px',
-  width: '100%',
+  width: '250px',
   textAlign: 'left'
+});
+
+const Title = styled.div({
+  fontSize: '20px'
 });
 
 export function SavedPartyList() {
@@ -22,8 +26,11 @@ export function SavedPartyList() {
 
   return (
     <Container>
+      <Title>
+        Party List <hr />
+      </Title>
       {Object.keys(parties).map((partyName) => {
-        return <SavedParty partyName={partyName} />;
+        return <SavedParty partyName={partyName} parties={parties} />;
       })}
     </Container>
   );
