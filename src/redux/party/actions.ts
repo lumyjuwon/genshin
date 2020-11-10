@@ -13,3 +13,10 @@ export function SaveParty(partyData: PartyPreset): PartyAction {
     payload: partyData
   };
 }
+
+export function DeleteParty(partyData: PartyPreset) {
+  return {
+    type: ActionTypes.DeleteParty,
+    payload: partyData
+  };
+}

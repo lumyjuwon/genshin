@@ -1,4 +1,4 @@
-import { ActionTypes, PartyAction, PartyState } from './types';
+import { ActionTypes, PartyAction, PartyState, PartyPreset } from './types';
 
 const initialState: PartyState = {
   partyData: {},
@@ -16,6 +16,16 @@ export function partyReducer(state = initialState, action: PartyAction): PartySt
       return {
         ...state,
         partyPreset: Object.assign({}, state.partyPreset, action.payload)
+      };
+    case ActionTypes.DeleteParty:
+      const notDeleted = Object.keys(state.partyPreset).filter((name) => name !== Object.keys(action.payload)[0]);
+      let parties: PartyPreset = {};
+      notDeleted.forEach((name) => {
+        parties[name] = state.partyPreset[name];
+      });
+      return {
+        ...state,
+        partyPreset: parties
       };
     default:
       return state;

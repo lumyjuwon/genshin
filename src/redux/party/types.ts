@@ -7,7 +7,8 @@ export interface PartyState {
 
 export enum ActionTypes {
   SetParty = 'SetParty',
-  SaveParty = 'SaveParty'
+  SaveParty = 'SaveParty',
+  DeleteParty = 'DeleteParty'
 }
 
 export interface PartyData {
@@ -43,4 +44,9 @@ interface SaveParty {
   payload: PartyPreset;
 }
 
-export type PartyAction = SetParty | SaveParty;
+interface DeleteParty {
+  type: ActionTypes.DeleteParty;
+  payload: PartyPreset;
+}
+
+export type PartyAction = SetParty | SaveParty | DeleteParty;
