@@ -45,8 +45,7 @@ function EquipmentSlot(props: EquipmentSlotProps) {
   const equipmentName = props.characterName !== '' ? characters[props.characterName][weaponOrArtifact][props.equipmentCateogry] : '';
   const [isVisibleEquipmentModal, setIsVisibleEquipmentModal] = useState<boolean>(false);
 
-  function putEquipment(name: EquipmentName) {
-    console.log(name);
+  function equipItem(name: EquipmentName) {
     const partyData = Object.assign({}, characters);
     if (partyData[props.characterName]) {
       //@ts-ignore
@@ -122,7 +121,7 @@ function EquipmentSlot(props: EquipmentSlotProps) {
                   hoverInnerColor={'#f1f2f3'}
                   onClick={() => {
                     setIsVisibleEquipmentModal(false);
-                    putEquipment(name);
+                    equipItem(name);
                   }}
                   badge={
                     <RoundImage
