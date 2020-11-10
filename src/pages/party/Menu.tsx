@@ -43,6 +43,7 @@ interface Props {}
 export function Menu(props: Props) {
   const [isResetModalVisible, setIsResetModalVisible] = useState(false);
   const [isImageModalVisible, setIsImageModalVisible] = useState(false);
+  const [isOverrideConfirmVisible, setIsOverrideConfirmVisible] = useState(false);
   const [isPartyListVisible, setIsPartyVisible] = useState(false);
   const InputRef = useRef<HTMLInputElement>(null);
   const partyListRef = useRef<HTMLDivElement>(null);
@@ -56,7 +57,7 @@ export function Menu(props: Props) {
       return alert(trans(Lang.Party_Name_Blank));
     }
     if (Object.keys(parties).includes(partyName)) {
-      return alert(trans(Lang.Party_Name_Overlap));
+      setIsOverrideConfirmVisible(true);
     }
     if (!Object.keys(characters).length) {
       return alert(trans(Lang.Party_Blank_Space));
@@ -85,6 +86,10 @@ export function Menu(props: Props) {
     } else {
       setIsPartyVisible(false);
     }
+  }
+
+  function setInputPartyNameFromList(name: string) {
+    InputRef.current && (InputRef.current.value = name);
   }
 
   async function downloadImage() {
@@ -221,8 +226,8 @@ export function Menu(props: Props) {
               {isPartyListVisible && (
                 <FocusWrapper ref={partyListRef} visible={isPartyListVisible} setVisible={() => setVisible(false)}>
                   <PartyList>
-                    <BoxModelWrapper styles={{ padding: '20px 10px' }}>
-                      <SavedPartyList parties={parties} toggle={() => toggleShowPartyButton()} />
+                    <BoxModelWrapper styles={{ padding: '20px 10px', medium: { padding: '20px 10px' }, small: { padding: '10px 8px' } }}>
+                      <SavedPartyList parties={parties} getPartyName={setInputPartyNameFromList} toggle={() => toggleShowPartyButton()} />
                     </BoxModelWrapper>
                   </PartyList>
                 </FocusWrapper>
@@ -242,6 +247,15 @@ export function Menu(props: Props) {
         title={trans(Lang.Image_Save_Question)}
         confirm={downloadImage}
         cancel={() => setIsImageModalVisible(false)}
+      />
+      <Dialog
+        isVisible={isOverrideConfirmVisible}
+        title="Override Okay?"
+        confirm={() => {
+          partyDispatch.SetParty(characters);
+          setIsOverrideConfirmVisible(false);
+        }}
+        cancel={() => setIsOverrideConfirmVisible(false)}
       />
     </Container>
   );

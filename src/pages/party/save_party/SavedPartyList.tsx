@@ -13,6 +13,7 @@ const Container = styled.div({
   margin: '10px 0 0',
   padding: '0 10px',
   width: '250px',
+  height: 'max-content',
   textAlign: 'left'
 });
 
@@ -23,6 +24,7 @@ const Title = styled.div({
 interface Props {
   toggle: Function;
   parties: PartyPreset;
+  getPartyName: Function;
 }
 
 export function SavedPartyList(props: Props) {
@@ -32,7 +34,15 @@ export function SavedPartyList(props: Props) {
         {trans(Lang.Party_List)} <hr />
       </Title>
       {Object.keys(props.parties).map((partyName) => {
-        return <SavedParty key={partyName} partyName={partyName} parties={props.parties} toggle={props.toggle} />;
+        return (
+          <SavedParty
+            key={partyName}
+            getPartyName={props.getPartyName}
+            partyName={partyName}
+            parties={props.parties}
+            toggle={props.toggle}
+          />
+        );
       })}
     </Container>
   );

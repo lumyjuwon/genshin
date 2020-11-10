@@ -43,6 +43,7 @@ interface Props {
   partyName: string;
   parties: PartyPreset;
   toggle: Function;
+  getPartyName: Function;
 }
 
 export function SavedParty(props: Props) {
@@ -65,6 +66,7 @@ export function SavedParty(props: Props) {
         onClick={() => {
           props.toggle();
           setPartyData(props.partyName);
+          props.getPartyName(partyNameRef.current?.textContent);
         }}
       >
         <Name ref={partyNameRef}>{props.partyName}</Name>
@@ -77,7 +79,7 @@ export function SavedParty(props: Props) {
           setIsModalVisible(true);
         }}
       >
-        <EmojiText label='delete' symbol='🗑'></EmojiText>
+        <EmojiText label="delete" symbol="🗑"></EmojiText>
       </DeleteButton>
       <Dialog
         isVisible={isModalVisible}
