@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { partyDispatch } from 'src/redux';
 import { CharacterImages } from 'src/resources/images';
-import { EmojiText, RoundImage, YesOrNo } from 'src/components';
+import { EmojiText, RoundImage, Dialog } from 'src/components';
 import { PartyPreset } from 'src/redux/party/types';
 import { trans, Lang } from 'src/resources/languages';
 
@@ -50,7 +50,7 @@ export function SavedParty(props: Props) {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   function setPartyData(name: string) {
-    partyDispatch.SetParty(props.parties[name]);
+    partyDispatch.SetParty(props.parties[name]['partyData']);
   }
 
   function deleletPartyData() {
@@ -77,16 +77,16 @@ export function SavedParty(props: Props) {
           setIsModalVisible(true);
         }}
       >
-        <EmojiText label="delete" symbol="🗑"></EmojiText>
+        <EmojiText label='delete' symbol='🗑'></EmojiText>
       </DeleteButton>
-      <YesOrNo
+      <Dialog
         isVisible={isModalVisible}
-        question={`${trans(Lang.Party_Delete_Question)}'${partyNameRef.current?.textContent}'?`}
-        yesButtonClick={() => {
+        title={`${trans(Lang.Party_Delete_Question)}'${partyNameRef.current?.textContent}'?`}
+        confirm={() => {
           deleletPartyData();
           props.toggle();
         }}
-        noButtonClick={() => {
+        cancel={() => {
           setIsModalVisible(false);
           props.toggle();
         }}

@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div({
-  width: '100vw',
-  height: '100vh',
+  width: '100%',
+  height: '100%',
   position: 'fixed',
   overflowX: 'hidden',
   zIndex: 1000,
@@ -43,7 +43,7 @@ const WrapperInner = styled.div({
 
 interface Props {
   visible: boolean;
-  children: JSX.Element | JSX.Element[] | undefined;
+  children: JSX.Element | JSX.Element[];
 }
 
 export function ModalWrapper(props: Props) {

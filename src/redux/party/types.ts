@@ -36,7 +36,10 @@ interface SetParty {
 }
 
 export interface PartyPreset {
-  [partyName: string]: PartyData;
+  [partyName: string]: {
+    partyData: PartyData;
+    latestTime: string;
+  };
 }
 
 interface SaveParty {

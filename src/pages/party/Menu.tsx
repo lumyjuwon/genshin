@@ -5,11 +5,12 @@ import { useSelector } from 'react-redux';
 import { partyDispatch } from 'src/redux';
 import { RootState } from 'src/redux/rootReducer';
 import { PartyData, PartyPreset } from 'src/redux/party/types';
-import { FocusWrapper, SquareTextButton, ForwardedInputText, FlexWrapper, BoxModelWrapper, YesOrNo, RoundTextButton } from 'src/components';
+import { FocusWrapper, SquareTextButton, ForwardedInputText, FlexWrapper, BoxModelWrapper, RoundTextButton, Dialog } from 'src/components';
 import { Lang, trans } from 'src/resources/languages';
 import html2canvas from 'html2canvas';
 import { SavedPartyList } from './save_party/SavedPartyList';
 import { Ripple } from 'src/components/effect';
+import { getFormatDate } from 'src/utils';
 
 const Container = styled.div({
   display: 'flex',
@@ -60,7 +61,12 @@ export function Menu(props: Props) {
     if (!Object.keys(characters).length) {
       return alert(trans(Lang.Party_Blank_Space));
     }
-    partyDispatch.SaveParty({ [`${partyName}`]: characters });
+    partyDispatch.SaveParty({
+      [`${partyName}`]: {
+        partyData: characters,
+        latestTime: getFormatDate()
+      }
+    });
     InputRef.current && (InputRef.current.value = '');
   }
 
@@ -89,7 +95,7 @@ export function Menu(props: Props) {
 
       const link = document.createElement('a');
       link.href = canvans.toDataURL();
-      link.download = InputRef.current !== null ? `${InputRef.current.value}.png` : 'Party.png';
+      link.download = InputRef.current?.value !== '' ? `${InputRef.current?.value}.png` : 'Party.png';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -160,7 +166,7 @@ export function Menu(props: Props) {
                   }}
                 >
                   <>
-                    {trans(Lang.Save_Party_Cotnent)}
+                    {trans(Lang.Save_Party_Image)}
                     <Ripple />
                   </>
                 </SquareTextButton>
@@ -225,17 +231,17 @@ export function Menu(props: Props) {
           </FlexWrapper>
         </>
       </FlexWrapper>
-      <YesOrNo
+      <Dialog
         isVisible={isResetModalVisible}
-        question={trans(Lang.Party_Reset_Question)}
-        yesButtonClick={resetCurrentParty}
-        noButtonClick={() => setIsResetModalVisible(false)}
+        title={trans(Lang.Party_Reset_Question)}
+        confirm={resetCurrentParty}
+        cancel={() => setIsResetModalVisible(false)}
       />
-      <YesOrNo
+      <Dialog
         isVisible={isImageModalVisible}
-        question={trans(Lang.Image_Save_Question)}
-        yesButtonClick={downloadImage}
-        noButtonClick={() => setIsImageModalVisible(false)}
+        title={trans(Lang.Image_Save_Question)}
+        confirm={downloadImage}
+        cancel={() => setIsImageModalVisible(false)}
       />
     </Container>
   );

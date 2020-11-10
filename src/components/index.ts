@@ -38,7 +38,7 @@ export { TextContentCard } from './card/TextContentCard';
 
 // Modal
 export { Modal } from './modal/Modal';
-export { YesOrNo } from './modal/YesOrNo';
+export { Dialog } from './modal/Dialog';
 
 // Text
 export { TooltipText } from './text/TooltipText';
