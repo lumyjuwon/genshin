@@ -9,7 +9,6 @@ import { CharacterSlot } from './CharacterSlot';
 import { useSelector } from 'react-redux';
 import { PartyData } from 'src/redux/party/types';
 import { RootState } from 'src/redux/rootReducer';
-import { SavedPartyList } from '../save_party/SavedPartyList';
 
 export const maxCharacterLength = 4;
 
@@ -33,12 +32,6 @@ const Wrapper = styled.div({
   }
 });
 
-const PositionAbsolute = styled.div({
-  position: 'absolute',
-  top: '80px',
-  left: '-250px'
-});
-
 interface Props {}
 
 export function CharacterSimulator(props: Props) {
@@ -49,9 +42,6 @@ export function CharacterSimulator(props: Props) {
   return (
     <Wrapper id={'party-content'}>
       <Menu />
-      <PositionAbsolute>
-        <SavedPartyList />
-      </PositionAbsolute>
       {charactersArray.map((characterName: CharacterName) => {
         return <CharacterSlot key={characterName} name={characterName} src={CharacterImages[characterName]} />;
       })}

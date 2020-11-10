@@ -41,6 +41,7 @@ const DeleteButton = styled.div({
 interface Props {
   partyName: string;
   parties: PartyPreset;
+  toggle: Function;
 }
 
 export function SavedParty(props: Props) {
@@ -59,7 +60,12 @@ export function SavedParty(props: Props) {
 
   return (
     <Container>
-      <Party onClick={() => setPartyData(props.partyName)}>
+      <Party
+        onClick={() => {
+          setPartyData(props.partyName);
+          props.toggle();
+        }}
+      >
         <Name ref={partyNameRef}>{props.partyName}</Name>
         {Object.keys(props.parties[props.partyName]).map((character) => {
           return <RoundImage src={CharacterImages[character]} styles={{ width: '30px', height: '30px' }} />;

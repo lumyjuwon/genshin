@@ -21,7 +21,11 @@ const Title = styled.div({
   fontSize: '20px'
 });
 
-export function SavedPartyList() {
+interface Props {
+  toggle: Function;
+}
+
+export function SavedPartyList(props: Props) {
   const parties: PartyPreset = useSelector<RootState, any>((state) => state.party.partyPreset);
 
   return (
@@ -30,7 +34,7 @@ export function SavedPartyList() {
         Party List <hr />
       </Title>
       {Object.keys(parties).map((partyName) => {
-        return <SavedParty partyName={partyName} parties={parties} />;
+        return <SavedParty partyName={partyName} parties={parties} toggle={props.toggle} />;
       })}
     </Container>
   );
