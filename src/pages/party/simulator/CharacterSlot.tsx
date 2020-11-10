@@ -59,7 +59,7 @@ export function CharacterSlot(props: Props) {
 
   return (
     <Inner>
-      <FlexWrapper styles={{ flexDirection: 'row', margin: '0 0 5px' }}>
+      <FlexWrapper styles={{ flexDirection: 'row', margin: '0 0 5px', small: { flexDirection: 'column' } }}>
         <>
           <ItemBadgeBox
             tooltip={props.name}

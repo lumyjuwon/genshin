@@ -62,8 +62,8 @@ export function SavedParty(props: Props) {
     <Container>
       <Party
         onClick={() => {
-          setPartyData(props.partyName);
           props.toggle();
+          setPartyData(props.partyName);
         }}
       >
         <Name ref={partyNameRef}>{props.partyName}</Name>
@@ -81,9 +81,13 @@ export function SavedParty(props: Props) {
       <YesOrNo
         isVisible={isModalVisible}
         question={`Are you sure to delete party '${partyNameRef.current?.textContent}'?`}
-        yesButtonClick={deleletPartyData}
+        yesButtonClick={() => {
+          deleletPartyData();
+          props.toggle();
+        }}
         noButtonClick={() => {
           setIsModalVisible(false);
+          props.toggle();
         }}
       />
     </Container>

@@ -19,7 +19,7 @@ const Wrapper = styled.div({
   justifyContent: 'center',
   alignItems: 'center',
   backgroundColor: 'rgba(0, 0, 0, 0.5)',
-  '@media screen and (max-height: 670px)': {
+  '@media screen and (max-width: 500px)': {
     alignItems: 'flex-start'
   }
 });

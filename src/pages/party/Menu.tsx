@@ -1,11 +1,11 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 
 import { partyDispatch } from 'src/redux';
 import { RootState } from 'src/redux/rootReducer';
 import { PartyData } from 'src/redux/party/types';
-import { SquareTextButton, ForwardedInputText, FlexWrapper, BoxModelWrapper, YesOrNo, useHandleClickOutside } from 'src/components';
+import { SquareTextButton, ForwardedInputText, FlexWrapper, BoxModelWrapper, YesOrNo, RoundTextButton } from 'src/components';
 import { Lang, trans } from 'src/resources/languages';
 import html2canvas from 'html2canvas';
 import { SavedPartyList } from './save_party/SavedPartyList';
@@ -17,9 +17,9 @@ const Container = styled.div({
   justifyContent: 'space-between',
   alignItems: 'center',
   marginBottom: '25px',
+  '@media screen and (max-width: 1380px)': {},
   '@media screen and (max-width: 768px)': {
-    paddingRight: '0',
-    justifyContent: 'center'
+    flexDirection: 'column'
   }
 });
 
@@ -27,24 +27,24 @@ const RightSidebar = styled.div({
   position: 'absolute',
   top: '50px',
   right: '0',
+  borderRadius: '16px',
+  boxShadow: '4px 4px 3px #111',
   backgroundColor: 'rgba(0, 0, 0, .9)',
   zIndex: 3,
   display: 'none',
   '&.show-party-list': {
     display: 'block'
+  },
+  '@media screen and (max-width: 768px)': {
+    top: '142px'
   }
-});
-
-const Relative = styled.div({
-  position: 'relative',
-  margin: '0 0 0 -2px',
-  overflow: 'hidden'
 });
 
 interface Props {}
 
 export function Menu(props: Props) {
-  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [isResetModalVisible, setIsResetModalVisible] = useState(false);
+  const [isImageModalVisible, setIsImageModalVisible] = useState(false);
   const [partyToggleButtonText, setPartyToggleButtonText] = useState('Show Parties');
   const InputRef = useRef<HTMLInputElement>(null);
   const partyListRef = useRef<HTMLDivElement>(null);
@@ -61,7 +61,7 @@ export function Menu(props: Props) {
   }
 
   function resetCurrentParty() {
-    setIsModalVisible(false);
+    setIsResetModalVisible(false);
     partyDispatch.SetParty({});
   }
 
@@ -75,95 +75,139 @@ export function Menu(props: Props) {
     }
   }
 
+  async function downloadImage() {
+    setIsImageModalVisible(false);
+    const partyContent = document.getElementById('party-content');
+    if (partyContent) {
+      const canvans = await html2canvas(partyContent, { backgroundColor: '#212223' });
+
+      const link = document.createElement('a');
+      link.href = canvans.toDataURL();
+      link.download = InputRef.current !== null ? `${InputRef.current.value}.png` : 'Party.png';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  }
+
   return (
     <Container>
-      <FlexWrapper>
+      <FlexWrapper styles={{ small: { flexDirection: 'column' } }}>
         <>
           <ForwardedInputText
             ref={InputRef}
             placeholder={trans(Lang.Party_Save_Text_Placeholder)}
             styles={{
               InputStyle: {
-                height: '39px',
+                height: '42px',
                 border: '1px solid #f1f2f3',
-                borderRadius: '12px 0 0 12px'
+                borderRadius: '12px 0 0 12px',
+                medium: {
+                  width: '140px',
+                  borderRadius: '12px 0 0 12px'
+                },
+                small: {
+                  width: '250px',
+                  height: '36px',
+                  borderRadius: '12px',
+                  fontSize: '14px'
+                }
               }
             }}
           />
-          <BoxModelWrapper styles={{ margin: '0 0 0 -1px' }}>
-            <SquareTextButton
-              styles={{
-                buttonStyles: {
-                  display: 'inline-block',
-                  height: '42px',
-                  padding: '6px'
-                }
-              }}
-              onClick={() => saveCurrentParty()}
-            >
-              <>
-                {trans(Lang.Party_Save_Text)}
-                <Ripple />
-              </>
-            </SquareTextButton>
-          </BoxModelWrapper>
-          <BoxModelWrapper styles={{ margin: '0 0 0 -3px' }}>
-            <SquareTextButton
-              styles={{
-                buttonStyles: {
-                  display: 'inline-block',
-                  height: '42px',
-                  padding: '6px'
-                }
-              }}
-              onClick={async () => {
-                const partyContent = document.getElementById('party-content');
-                if (partyContent) {
-                  const canvans = await html2canvas(partyContent, { backgroundColor: '#212223' });
-
-                  const link = document.createElement('a');
-                  link.href = canvans.toDataURL();
-                  link.download = InputRef.current !== null ? `${InputRef.current.value}.png` : 'Party.png';
-                  document.body.appendChild(link);
-                  link.click();
-                  document.body.removeChild(link);
-                }
-              }}
-            >
-              <>
-                {trans(Lang.Save_Party_Cotnent)}
-                <Ripple />
-              </>
-            </SquareTextButton>
-          </BoxModelWrapper>
+          <FlexWrapper styles={{ small: { width: '100%', margin: '5px 0 0' } }}>
+            <>
+              <BoxModelWrapper styles={{ margin: '0 0 0 -1px' }}>
+                <SquareTextButton
+                  styles={{
+                    buttonStyles: {
+                      display: 'inline-block',
+                      height: '42px',
+                      padding: '6px',
+                      border: '2px solid #f1f2f3',
+                      medium: { height: '42px' },
+                      small: { width: '100%' }
+                    }
+                  }}
+                  onClick={() => saveCurrentParty()}
+                >
+                  <>
+                    {trans(Lang.Party_Save_Text)}
+                    <Ripple />
+                  </>
+                </SquareTextButton>
+              </BoxModelWrapper>
+              <BoxModelWrapper styles={{ margin: '0 0 0 -2px', medium: { margin: '0 0 0 -2px' } }}>
+                <SquareTextButton
+                  styles={{
+                    buttonStyles: {
+                      display: 'inline-block',
+                      height: '42px',
+                      padding: '6px',
+                      border: '2px solid #f1f2f3',
+                      medium: { height: '42px' },
+                      small: { width: '100%' }
+                    }
+                  }}
+                  onClick={() => {
+                    setIsImageModalVisible(true);
+                  }}
+                >
+                  <>
+                    {trans(Lang.Save_Party_Cotnent)}
+                    <Ripple />
+                  </>
+                </SquareTextButton>
+              </BoxModelWrapper>
+            </>
+          </FlexWrapper>
         </>
       </FlexWrapper>
-      <FlexWrapper>
+      <FlexWrapper styles={{ alignItems: 'center', small: { margin: '10px 0 0' } }}>
         <>
-          <SquareTextButton onClick={() => setIsModalVisible(true)} styles={{ buttonStyles: { height: '42px', padding: '6px' } }}>
+          <RoundTextButton
+            onClick={() => setIsResetModalVisible(true)}
+            styles={{ buttonStyles: { height: '42px', padding: '6px', margin: '0', borderRadius: '12px 0 0 12px' } }}
+          >
             <>
-              Reset Current Party
+              Reset Party
               <Ripple />
             </>
-          </SquareTextButton>
-          <BoxModelWrapper styles={{ margin: '0 0 0 -2px' }}>
-            <SquareTextButton
+          </RoundTextButton>
+          <BoxModelWrapper styles={{ margin: '0 0 0 -2px', small: { margin: '0 0 0 -2px' } }}>
+            <RoundTextButton
               onClick={() => toggleShowPartyButton()}
-              styles={{ buttonStyles: { padding: '6px', width: '150px', height: '42px' } }}
+              styles={{
+                buttonStyles: {
+                  padding: '6px',
+                  width: '150px',
+                  height: '42px',
+                  margin: '0',
+                  borderRadius: '0 12px 12px 0',
+                  medium: { width: '120px' },
+                  small: { width: '120px' }
+                }
+              }}
             >
               <>
                 {partyToggleButtonText}
                 <Ripple />
               </>
-            </SquareTextButton>
+            </RoundTextButton>
           </BoxModelWrapper>
         </>
       </FlexWrapper>
       <YesOrNo
-        isVisible={isModalVisible}
+        isVisible={isResetModalVisible}
         question="Are you sure to reset current party?"
         yesButtonClick={resetCurrentParty}
-        noButtonClick={() => setIsModalVisible(false)}
+        noButtonClick={() => setIsResetModalVisible(false)}
+      />
+      <YesOrNo
+        isVisible={isImageModalVisible}
+        question="Download Image"
+        yesButtonClick={downloadImage}
+        noButtonClick={() => setIsImageModalVisible(false)}
       />
       <RightSidebar ref={partyListRef}>
         <BoxModelWrapper styles={{ padding: '20px 10px' }}>

@@ -32,6 +32,7 @@ interface DivProps {
       | undefined;
     readonly width?: string;
     readonly justifyContent?: string;
+    readonly alignItems?: string;
   };
   readonly small?: {
     readonly flexDirection?:
@@ -46,6 +47,7 @@ interface DivProps {
       | 'row-reverse'
       | undefined;
     readonly width?: string;
+    readonly alignItems?: string;
     readonly justifyContent?: string;
     readonly margin?: string;
   };
@@ -62,11 +64,13 @@ const FlexDiv = styled.div<DivProps>((props: DivProps) => {
     '@media screen and (max-width: 1380px)': {
       flexDirection: props.medium?.flexDirection || props.flexDirection || 'row',
       width: props.medium?.width || props.width || 'auto',
-      justifyContent: props.medium?.justifyContent || props.justifyContent || 'center'
+      justifyContent: props.medium?.justifyContent || props.justifyContent || 'center',
+      alignItems: props.medium?.alignItems || props.alignItems || 'center'
     },
     '@media screen and (max-width: 768px)': {
       flexDirection: props.small?.flexDirection || props.flexDirection || 'row',
       width: props.small?.width || props.width || 'auto',
+      alignItems: props.small?.alignItems || props.alignItems || 'center',
       justifyContent: props.small?.justifyContent || props.justifyContent || 'center',
       margin: props.small?.margin || props.margin || '0'
     }

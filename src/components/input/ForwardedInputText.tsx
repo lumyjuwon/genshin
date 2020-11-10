@@ -7,6 +7,17 @@ interface InputStyle {
   border?: string;
   borderColor?: string;
   borderRadius?: string;
+  medium?: {
+    width?: string;
+    height?: string;
+    borderRadius?: string;
+  };
+  small?: {
+    fontSize?: string;
+    width?: string;
+    height?: string;
+    borderRadius?: string;
+  };
 }
 
 const Input = styled.input<InputStyle>((props: InputStyle) => {
@@ -18,7 +29,18 @@ const Input = styled.input<InputStyle>((props: InputStyle) => {
     backgroundColor: 'transparent',
     padding: '6px',
     fontSize: '16px',
-    color: 'white'
+    color: 'white',
+    '@media screen and (max-width: 1380px)': {
+      width: props.medium?.width || props.width || 'auto',
+      height: props.medium?.height || props.height || 'auto',
+      borderRadius: props.medium?.borderRadius || props.borderRadius || '0'
+    },
+    '@media screen and (max-width: 768px)': {
+      width: props.small?.width || props.width || 'auto',
+      height: props.small?.height || props.height || 'auto',
+      fontSize: props.small?.fontSize || '16px',
+      borderRadius: props.small?.borderRadius || props.borderRadius || '0'
+    }
   };
 });
 
