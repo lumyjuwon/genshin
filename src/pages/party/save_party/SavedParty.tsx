@@ -5,6 +5,7 @@ import { partyDispatch } from 'src/redux';
 import { CharacterImages } from 'src/resources/images';
 import { EmojiText, RoundImage, YesOrNo } from 'src/components';
 import { PartyPreset } from 'src/redux/party/types';
+import { trans, Lang } from 'src/resources/languages';
 
 const Container = styled.div({
   width: '100%',
@@ -80,7 +81,7 @@ export function SavedParty(props: Props) {
       </DeleteButton>
       <YesOrNo
         isVisible={isModalVisible}
-        question={`Are you sure to delete party '${partyNameRef.current?.textContent}'?`}
+        question={`${trans(Lang.Party_Delete_Question)}'${partyNameRef.current?.textContent}'?`}
         yesButtonClick={() => {
           deleletPartyData();
           props.toggle();

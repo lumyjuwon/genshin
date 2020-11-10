@@ -420,6 +420,16 @@
   "Character_DEF": "방어력",
   "Character_Additional": "추가 능력",
   "Save_Party_Cotnent": "이미지 저장",
+  "Party_List": "파티 리스트",
+  "Reset_Party": "초기화",
+  "Show_Party": "저장된 파티",
+  "Hide_Party": "숨기기",
+  "Image_Save_Question": "이미지를 다운받겠습니까?",
+  "Party_Name_Blank": "1글자 이상 입력해주세요.",
+  "Party_Delete_Question": "정말 지우시겠습니끼? 파티 이름: ",
+  "Party_Reset_Question": "현재 파티를 초기화 합니다.(리스트 영향 없음)",
+  "Party_Name_Overlap": "이미 사용중인 이름입니다.",
+  "Party_Blank_Space": "적어도 하나 이상의 캐릭터를 배치해야 합니다.",
 
   "Map": "지도"
 }

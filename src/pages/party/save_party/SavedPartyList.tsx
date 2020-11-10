@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useSelector } from 'react-redux';
 
 import { PartyPreset } from 'src/redux/party/types';
-import { RootState } from 'src/redux/rootReducer';
 import { SavedParty } from './SavedParty';
+import { trans, Lang } from 'src/resources/languages';
 
 const Container = styled.div({
   display: 'flex',
@@ -23,18 +22,17 @@ const Title = styled.div({
 
 interface Props {
   toggle: Function;
+  parties: PartyPreset;
 }
 
 export function SavedPartyList(props: Props) {
-  const parties: PartyPreset = useSelector<RootState, any>((state) => state.party.partyPreset);
-
   return (
     <Container>
       <Title>
-        Party List <hr />
+        {trans(Lang.Party_List)} <hr />
       </Title>
-      {Object.keys(parties).map((partyName) => {
-        return <SavedParty partyName={partyName} parties={parties} toggle={props.toggle} />;
+      {Object.keys(props.parties).map((partyName) => {
+        return <SavedParty partyName={partyName} parties={props.parties} toggle={props.toggle} />;
       })}
     </Container>
   );

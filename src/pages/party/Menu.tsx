@@ -4,9 +4,9 @@ import { useSelector } from 'react-redux';
 
 import { partyDispatch } from 'src/redux';
 import { RootState } from 'src/redux/rootReducer';
-import { PartyData } from 'src/redux/party/types';
+import { PartyData, PartyPreset } from 'src/redux/party/types';
 import { SquareTextButton, ForwardedInputText, FlexWrapper, BoxModelWrapper, YesOrNo, RoundTextButton } from 'src/components';
-import { Lang, trans } from 'src/resources/languages';
+import { KeyLang, Lang, trans } from 'src/resources/languages';
 import html2canvas from 'html2canvas';
 import { SavedPartyList } from './save_party/SavedPartyList';
 import { Ripple } from 'src/components/effect';
@@ -45,16 +45,23 @@ interface Props {}
 export function Menu(props: Props) {
   const [isResetModalVisible, setIsResetModalVisible] = useState(false);
   const [isImageModalVisible, setIsImageModalVisible] = useState(false);
-  const [partyToggleButtonText, setPartyToggleButtonText] = useState('Show Parties');
+  const [partyToggleButtonText, setPartyToggleButtonText] = useState('Show_Party');
   const InputRef = useRef<HTMLInputElement>(null);
   const partyListRef = useRef<HTMLDivElement>(null);
   const characters: PartyData = useSelector<RootState, any>((state) => state.party.partyData);
+  const parties: PartyPreset = useSelector<RootState, any>((state) => state.party.partyPreset);
 
   function saveCurrentParty() {
     const partyName = InputRef.current?.value;
     if (!partyName) {
       InputRef.current?.focus();
-      return alert('Write Text!');
+      return alert(trans(Lang.Party_Name_Blank));
+    }
+    if (Object.keys(parties).includes(partyName)) {
+      return alert(trans(Lang.Party_Name_Overlap));
+    }
+    if (!Object.keys(characters).length) {
+      return alert(trans(Lang.Party_Blank_Space));
     }
     partyDispatch.SaveParty({ [`${partyName}`]: characters });
     InputRef.current && (InputRef.current.value = '');
@@ -68,10 +75,10 @@ export function Menu(props: Props) {
   function toggleShowPartyButton() {
     if (partyListRef.current?.classList.contains('show-party-list')) {
       partyListRef.current.classList.remove('show-party-list');
-      setPartyToggleButtonText('Show Parties');
+      setPartyToggleButtonText('Show_Party');
     } else {
       partyListRef.current?.classList.add('show-party-list');
-      setPartyToggleButtonText('Hide Parties');
+      setPartyToggleButtonText('Hide_Party');
     }
   }
 
@@ -167,10 +174,10 @@ export function Menu(props: Props) {
         <>
           <RoundTextButton
             onClick={() => setIsResetModalVisible(true)}
-            styles={{ buttonStyles: { height: '42px', padding: '6px', margin: '0', borderRadius: '12px 0 0 12px' } }}
+            styles={{ buttonStyles: { width: '100px', height: '42px', padding: '6px', margin: '0', borderRadius: '12px 0 0 12px' } }}
           >
             <>
-              Reset Party
+              {trans(Lang.Reset_Party)}
               <Ripple />
             </>
           </RoundTextButton>
@@ -190,7 +197,7 @@ export function Menu(props: Props) {
               }}
             >
               <>
-                {partyToggleButtonText}
+                {trans(Lang[partyToggleButtonText as KeyLang])}
                 <Ripple />
               </>
             </RoundTextButton>
@@ -199,19 +206,19 @@ export function Menu(props: Props) {
       </FlexWrapper>
       <YesOrNo
         isVisible={isResetModalVisible}
-        question="Are you sure to reset current party?"
+        question={trans(Lang.Party_Reset_Question)}
         yesButtonClick={resetCurrentParty}
         noButtonClick={() => setIsResetModalVisible(false)}
       />
       <YesOrNo
         isVisible={isImageModalVisible}
-        question="Download Image"
+        question={trans(Lang.Image_Save_Question)}
         yesButtonClick={downloadImage}
         noButtonClick={() => setIsImageModalVisible(false)}
       />
       <RightSidebar ref={partyListRef}>
         <BoxModelWrapper styles={{ padding: '20px 10px' }}>
-          <SavedPartyList toggle={() => toggleShowPartyButton()} />
+          <SavedPartyList parties={parties} toggle={() => toggleShowPartyButton()} />
         </BoxModelWrapper>
       </RightSidebar>
     </Container>
