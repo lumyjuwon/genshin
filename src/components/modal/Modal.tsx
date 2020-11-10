@@ -20,7 +20,7 @@ interface Props {
 
 export function Modal(props: Props) {
   return (
-    <ModalWrapper visible={props.visible}>
+    <ModalWrapper visible={props.visible} dialogMoblieAlignCenter={false}>
       <Header>
         <CircleButton
           onClick={() => {

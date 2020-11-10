@@ -30,6 +30,11 @@ const Input = styled.input<InputStyle>((props: InputStyle) => {
     padding: '6px',
     fontSize: '16px',
     color: 'white',
+    '&:focus': {
+      outline: 'none',
+      backgroundColor: '#f1f2f3',
+      color: '#111'
+    },
     '@media screen and (max-width: 1380px)': {
       width: props.medium?.width || props.width || 'auto',
       height: props.medium?.height || props.height || 'auto',

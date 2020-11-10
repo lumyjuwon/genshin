@@ -145,7 +145,8 @@ function EquipmentSlot(props: EquipmentSlotProps) {
                           width: '100px',
                           height: '100px',
                           backgroundColor: name === equipmentName ? '#f1f2f3' : 'transparent',
-                          margin: '0px'
+                          margin: '0px',
+                          small: { width: '70px', height: '70px' }
                         },
                         imageStyle: {
                           width: '80px',

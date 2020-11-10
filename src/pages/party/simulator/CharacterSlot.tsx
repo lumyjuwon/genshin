@@ -141,13 +141,14 @@ export function CharacterSlot(props: Props) {
                             width: '100px',
                             height: '100px',
                             backgroundColor: characters[name] !== undefined ? '#f1f2f3' : 'transparent',
-                            margin: '0px'
+                            margin: '0px',
+                            small: { width: '80px', height: '80px' }
                           },
                           imageStyle: {
                             width: '80px',
                             height: '80px',
                             borderRadius: '35%',
-                            small: { width: '60px', height: '60px' }
+                            small: { width: '70px', height: '70px' }
                           }
                         }}
                       />

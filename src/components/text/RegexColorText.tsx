@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const P = styled.p({
-  lineHeight: '140%',
-  wordBreak: 'keep-all'
+  lineHeight: '140%'
 });
 
 function parseColorText(text: string, regex: RegExp, color?: string, isBold?: boolean) {

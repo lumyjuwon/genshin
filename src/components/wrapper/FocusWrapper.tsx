@@ -1,4 +1,9 @@
 import React, { useImperativeHandle, useRef, useEffect } from 'react';
+import styled from 'styled-components';
+
+const Wrapper = styled.div({
+  position: 'relative'
+});
 
 interface Props {
   children: JSX.Element;
@@ -24,10 +29,8 @@ export const FocusWrapper = React.forwardRef<HTMLDivElement, Props>((props: Prop
   }, [props]);
 
   if (props.visible) {
-    console.log('render');
-    return <div ref={forwardedRef}>{props.children}</div>;
+    return <Wrapper ref={forwardedRef}>{props.children}</Wrapper>;
   } else {
-    console.log('else');
     return null;
   }
 });

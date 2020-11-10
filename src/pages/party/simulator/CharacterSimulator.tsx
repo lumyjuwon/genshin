@@ -19,7 +19,7 @@ const Wrapper = styled.div({
   flexWrap: 'wrap',
   flexDirection: 'column',
   justifyContent: 'flex-start',
-  alignItems: 'flex-start',
+  alignItems: 'center',
   margin: '0 auto',
   marginBottom: '5vh',
   position: 'relative',

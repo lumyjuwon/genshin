@@ -1,23 +1,25 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
-const Wrapper = styled.div({
-  width: '100%',
-  height: '100%',
-  position: 'fixed',
-  overflowX: 'hidden',
-  zIndex: 1000,
-  top: 0,
-  right: 0,
-  display: 'flex',
-  tabIndex: -1,
-  justifyContent: 'center',
-  alignItems: 'center',
-  backgroundColor: 'rgba(0, 0, 0, 0.5)',
-  '@media screen and (max-width: 500px)': {
-    alignItems: 'flex-start',
-    overflowY: 'scroll'
-  }
+const Wrapper = styled.div<{ dialogMoblieAlignCenter: boolean }>((props) => {
+  return {
+    width: '100%',
+    height: '100%',
+    position: 'fixed',
+    overflowX: 'hidden',
+    zIndex: 1000,
+    top: 0,
+    right: 0,
+    display: 'flex',
+    tabIndex: -1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    '@media screen and (max-width: 500px)': {
+      alignItems: props.dialogMoblieAlignCenter ? 'center' : 'flex-start',
+      overflowY: 'scroll'
+    }
+  };
 });
 
 const WrapperInner = styled.div({
@@ -32,12 +34,12 @@ const WrapperInner = styled.div({
   backgroundColor: '#2B2B2B',
   borderRadius: '12px',
   '@media screen and (max-width: 1380px)': {
-    width: '80%',
+    // width: '80%',
     justifyContent: 'center'
   },
   '@media screen and (max-width: 768px)': {
-    width: '100%',
-    padding: '0'
+    // width: '100%',
+    padding: '10px'
   }
 });
 
@@ -67,6 +69,7 @@ function unLockScroll(hashId: number | undefined) {
 interface Props {
   visible: boolean;
   children: JSX.Element | JSX.Element[];
+  dialogMoblieAlignCenter: boolean;
 }
 
 export function ModalWrapper(props: Props) {
@@ -81,7 +84,7 @@ export function ModalWrapper(props: Props) {
   if (props.visible) {
     lockScroll(hashId.current);
     return (
-      <Wrapper>
+      <Wrapper dialogMoblieAlignCenter={props.dialogMoblieAlignCenter}>
         <WrapperInner>{props.children}</WrapperInner>
       </Wrapper>
     );

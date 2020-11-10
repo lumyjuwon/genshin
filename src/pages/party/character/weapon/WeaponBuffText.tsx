@@ -21,7 +21,7 @@ const Container = styled.div({
     margin: '0 auto 50px'
   },
   '@media screen and (max-width: 768px)': {
-    width: '280px'
+    width: '220px'
   }
 });
 
@@ -84,18 +84,26 @@ export function WeaponBuffText(props: Props) {
       </FlexWrapper>
       <FlexWrapper styles={{ width: '100%', flexDirection: 'column', margin: '5px 0 0' }}>
         <>
-          <FlexWrapper styles={{ justifyContent: 'space-between', width: '100%' }}>
+          <FlexWrapper
+            styles={{ justifyContent: 'space-between', width: '100%', small: { flexDirection: 'column', justifyContent: 'center' } }}
+          >
             <>
-              <TextDesc>
-                {trans(Lang.Character_HP)}: {characterInfo[props.selectedCharacter].stats.HP}
-              </TextDesc>
-              <TextDesc>
-                {trans(Lang.Character_DEF)}: {characterInfo[props.selectedCharacter].stats.DEF}
-              </TextDesc>
-              <TextDesc>
-                {trans(Lang.Character_ATK)}: {characterInfo[props.selectedCharacter].stats.ATK}
-                {props.activeWeapon && <WeaponStat>(+{weaponInfo[props.activeWeapon].stats.ATK})</WeaponStat>}
-              </TextDesc>
+              <FlexWrapper styles={{ small: { width: '100%', justifyContent: 'space-between' } }}>
+                <>
+                  <TextDesc>
+                    {trans(Lang.Character_HP)}: {characterInfo[props.selectedCharacter].stats.HP}
+                  </TextDesc>
+                  <TextDesc>
+                    {trans(Lang.Character_DEF)}: {characterInfo[props.selectedCharacter].stats.DEF}
+                  </TextDesc>
+                </>
+              </FlexWrapper>
+              <FlexWrapper>
+                <TextDesc>
+                  {trans(Lang.Character_ATK)}: {characterInfo[props.selectedCharacter].stats.ATK}
+                  {props.activeWeapon && <WeaponStat>(+{weaponInfo[props.activeWeapon].stats.ATK})</WeaponStat>}
+                </TextDesc>
+              </FlexWrapper>
             </>
           </FlexWrapper>
           {/* 기본공격력 + 무기 공격력 + (파티버프 + 무기버프 + 캐릭터버프 %합산) */}

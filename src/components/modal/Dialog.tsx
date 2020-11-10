@@ -5,7 +5,10 @@ import { RoundTextButton } from '../button/RoundTextButton';
 import { ModalWrapper } from '../wrapper/ModalWrapper';
 
 const Container = styled.div({
-  width: '480px'
+  width: '480px',
+  '@media screen and (max-width: 768px)': {
+    width: '250px'
+  }
 });
 
 const Title = styled.div({
@@ -38,7 +41,7 @@ interface Props {
 
 export function Dialog(props: Props) {
   return (
-    <ModalWrapper visible={props.isVisible}>
+    <ModalWrapper visible={props.isVisible} dialogMoblieAlignCenter={true}>
       <Container>
         <Title>{props.title}</Title>
         <ContentContainer>

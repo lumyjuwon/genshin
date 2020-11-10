@@ -26,15 +26,27 @@ const Container = styled.div({
 
 const PartyList = styled.div({
   position: 'absolute',
-  top: '50px',
-  right: '0',
+  top: '0',
+  right: '-75px',
   borderRadius: '16px',
   boxShadow: '4px 4px 3px #111',
   backgroundColor: 'rgba(0, 0, 0, .9)',
   zIndex: 3,
   display: 'block',
+  '@media screen and (max-width: 1380px)': {
+    right: '-60px'
+  },
   '@media screen and (max-width: 768px)': {
-    top: '142px'
+    right: '-80px'
+  }
+});
+
+const PartyWrapper = styled.div({
+  width: 'fit-content',
+  '@media screen and (max-width: 768px)': {
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'center'
   }
 });
 
@@ -225,11 +237,13 @@ export function Menu(props: Props) {
               </BoxModelWrapper>
               {isPartyListVisible && (
                 <FocusWrapper ref={partyListRef} visible={isPartyListVisible} setVisible={() => setVisible(false)}>
-                  <PartyList>
-                    <BoxModelWrapper styles={{ padding: '20px 10px', medium: { padding: '20px 10px' }, small: { padding: '10px 8px' } }}>
-                      <SavedPartyList parties={parties} getPartyName={setInputPartyNameFromList} toggle={() => toggleShowPartyButton()} />
-                    </BoxModelWrapper>
-                  </PartyList>
+                  <PartyWrapper>
+                    <PartyList>
+                      <BoxModelWrapper styles={{ padding: '20px 10px', medium: { padding: '20px 10px' }, small: { padding: '10px 8px' } }}>
+                        <SavedPartyList parties={parties} getPartyName={setInputPartyNameFromList} toggle={() => toggleShowPartyButton()} />
+                      </BoxModelWrapper>
+                    </PartyList>
+                  </PartyWrapper>
                 </FocusWrapper>
               )}
             </>

@@ -14,7 +14,7 @@ const Container = styled.div({
     margin: '0 auto 50px'
   },
   '@media screen and (max-width: 768px)': {
-    width: '280px',
+    width: '220px'
   }
 });
 
@@ -26,7 +26,7 @@ const TextDesc = styled.p({
     fontSize: '16px',
     marginBottom: '0'
   }
-})
+});
 
 function getDescription(elements: Map<string, number>) {
   const descriptions: string[] = [];
