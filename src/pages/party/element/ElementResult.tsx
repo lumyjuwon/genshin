@@ -7,6 +7,11 @@ import { useSelector } from 'react-redux';
 import { PartyData } from 'src/redux/party/types';
 import { RootState } from 'src/redux/rootReducer';
 import { characterInfo } from 'src/resources/data';
+import styled from 'styled-components';
+
+const Container = styled.div({
+  marginTop: '128px'
+});
 
 export function ElementResult() {
   const characters: PartyData = useSelector<RootState, any>((state) => state.party.partyData);
@@ -28,9 +33,9 @@ export function ElementResult() {
   }
 
   return (
-    <>
+    <Container>
       <ElementCircleList activeElements={getActiveElements(characters)} />
       <ElementBuffText activeElements={getActiveElements(characters)} />
-    </>
+    </Container>
   );
 }
