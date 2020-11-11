@@ -32,12 +32,12 @@ type EquipmentName = WeaponName | ArtifactName;
 type EquipmentCategory = ArtifactType | WeaponType;
 
 interface EquipmentSlotProps {
+  equipmentName: string;
   equipmentCateogry: EquipmentCategory;
   characterName: CharacterName;
   onModalEquipmentName: Function;
   onModalEquipmentCategory: Function;
   onModalVisible: Function;
-  equipmentName: string;
   isActive?: boolean;
 }
 
@@ -130,7 +130,7 @@ export function CharacterEquipSlot(props: Props) {
   const [modalEquipmentName, setModalEquipmentName] = useState<EquipmentName>('');
   const [modalEquipmentCategory, setModalEquipmentCategory] = useState<WeaponType | ArtifactType>();
 
-  function getSlotCategory(category: WeaponType | ArtifactType) {
+  function getCharacterEquipCategory(category: WeaponType | ArtifactType) {
     const weaponOrArtifact = ['Bow', 'Catalyst', 'Claymore', 'Polearm', 'Sword'].includes(category) ? 'Weapon' : 'Artifact';
     return weaponOrArtifact;
   }
@@ -138,9 +138,9 @@ export function CharacterEquipSlot(props: Props) {
   function equipItem(name: EquipmentName) {
     const partyData = Loadsh.cloneDeep(characters);
     if (partyData[props.characterName] && modalEquipmentCategory) {
-      const slotCategory = getSlotCategory(modalEquipmentCategory);
+      const equipCategory = getCharacterEquipCategory(modalEquipmentCategory);
       //@ts-ignore
-      partyData[props.characterName][slotCategory][modalEquipmentCategory] = name;
+      partyData[props.characterName][equipCategory][modalEquipmentCategory] = name;
     }
 
     partyDispatch.SetParty(partyData);
@@ -149,9 +149,9 @@ export function CharacterEquipSlot(props: Props) {
   return (
     <Container>
       {itemCategoryList.map((category: WeaponType | ArtifactType) => {
-        const slotCategory = getSlotCategory(category);
+        const equipCategory = getCharacterEquipCategory(category);
         // @ts-ignore
-        const equipmentName = props.characterName !== '' ? characters[props.characterName][slotCategory][category] : '';
+        const equipmentName = props.characterName !== '' ? characters[props.characterName][equipCategory][category] : '';
 
         return (
           <EquipmentSlot
