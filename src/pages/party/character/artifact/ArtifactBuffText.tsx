@@ -21,7 +21,7 @@ const Container = styled.div({
   '@media screen and (max-width: 768px)': {
     width: '220px',
     flex: 'none',
-    margin: '0 0 20px'
+    margin: '0 auto 20px'
   }
 });
 
