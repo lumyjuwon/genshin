@@ -8,7 +8,7 @@ import { PartyData, PartyPreset } from 'src/redux/party/types';
 import { FocusWrapper, SquareTextButton, ForwardedInputText, FlexWrapper, BoxModelWrapper, RoundTextButton, Dialog } from 'src/components';
 import { Lang, trans } from 'src/resources/languages';
 import html2canvas from 'html2canvas';
-import { SavedPartyList } from './save_party/SavedPartyList';
+import { PresetList } from './preset/PresetList';
 import { Ripple } from 'src/components/effect';
 import { getFormatDate } from 'src/utils';
 
@@ -37,7 +37,7 @@ const PartyList = styled.div({
     right: '-60px'
   },
   '@media screen and (max-width: 768px)': {
-    right: '-80px'
+    right: '-75px'
   }
 });
 
@@ -158,7 +158,9 @@ export function Menu(props: Props) {
                       small: { width: '100%' }
                     }
                   }}
-                  onClick={() => saveCurrentParty()}
+                  onClick={() => {
+                    saveCurrentParty();
+                  }}
                 >
                   <>
                     {trans(Lang.Party_Save_Text)}
@@ -203,7 +205,8 @@ export function Menu(props: Props) {
                 padding: '6px',
                 margin: '0',
                 borderRadius: '12px 0 0 12px',
-                backgroundColor: '#cc0000'
+                backgroundColor: '#cc0000',
+                small: { width: '120px' }
               }
             }}
           >
@@ -230,7 +233,7 @@ export function Menu(props: Props) {
                   }}
                 >
                   <>
-                    Party List
+                    {trans(Lang.Party_List)}
                     <Ripple />
                   </>
                 </RoundTextButton>
@@ -240,7 +243,7 @@ export function Menu(props: Props) {
                   <PartyWrapper>
                     <PartyList>
                       <BoxModelWrapper styles={{ padding: '20px 10px', medium: { padding: '20px 10px' }, small: { padding: '10px 8px' } }}>
-                        <SavedPartyList parties={parties} getPartyName={setInputPartyNameFromList} toggle={() => toggleShowPartyButton()} />
+                        <PresetList parties={parties} getPartyName={setInputPartyNameFromList} toggle={() => toggleShowPartyButton()} />
                       </BoxModelWrapper>
                     </PartyList>
                   </PartyWrapper>
@@ -264,7 +267,7 @@ export function Menu(props: Props) {
       />
       <Dialog
         isVisible={isOverrideConfirmVisible}
-        title="Override Okay?"
+        title={`${trans(Lang.Party_Override_Question)}${InputRef.current?.value}`}
         confirm={() => {
           partyDispatch.SetParty(characters);
           setIsOverrideConfirmVisible(false);
