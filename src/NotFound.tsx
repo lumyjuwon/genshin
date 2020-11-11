@@ -134,7 +134,7 @@ export default function NotFound() {
           </>
         </FlexWrapper>
       </Container>
-      <Footer />
+      <Footer onClick={() => {}} />
     </PositionFixed>
   );
 }
