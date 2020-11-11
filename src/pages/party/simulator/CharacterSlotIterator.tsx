@@ -8,6 +8,11 @@ import { maxCharacterLength } from './CharacterSimulator';
 
 import { partyDispatch } from 'src/redux/party/dispatch';
 import { PartyData } from 'src/redux/party/types';
+import styled from 'styled-components';
+
+const Container = styled.div({
+  marginTop: '64px'
+});
 
 interface Props {
   characters: PartyData;
@@ -42,7 +47,7 @@ export function CharacterSlotIterator(props: Props) {
   }
 
   return (
-    <div>
+    <Container>
       {Array.from({ length: maxCharacterSlot }, () => '').map((name: string, index: number) => {
         const characterName = charactersArray[index] !== undefined ? charactersArray[index] : '';
         return (
@@ -112,6 +117,6 @@ export function CharacterSlotIterator(props: Props) {
           })}
         </GridWrapper>
       </Modal>
-    </div>
+    </Container>
   );
 }
