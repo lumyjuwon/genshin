@@ -17,13 +17,15 @@ const Container = styled.div({
   width: '845px',
   justifyContent: 'space-between',
   alignItems: 'center',
-  marginBottom: '25px',
+  marginBottom: '64px',
   '@media screen and (max-width: 1380px)': {
-    width: '655px'
+    width: '655px',
+    marginBottom: '48px'
   },
   '@media screen and (max-width: 768px)': {
     width: '100%',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    marginBottom: '32px'
   }
 });
 
