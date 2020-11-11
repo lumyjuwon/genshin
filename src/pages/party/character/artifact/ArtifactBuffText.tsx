@@ -16,11 +16,12 @@ const Container = styled.div({
   margin: '0 0 50px 20px',
   '@media screen and (max-width: 1380px)': {
     // width: '700px',
-    margin: '0 auto 50px'
+    margin: '0 0 50px 10px'
   },
   '@media screen and (max-width: 768px)': {
-    // width: '280px'
-    flex: 'none'
+    width: '220px',
+    flex: 'none',
+    margin: '0 0 20px'
   }
 });
 
