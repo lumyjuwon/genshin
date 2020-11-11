@@ -90,6 +90,10 @@ function App() {
     if (window.innerWidth <= 768) {
       onToggleClick();
     }
+
+    onToggleClick();
+
+    window.scrollTo(0, 0);
   }
 
   return (

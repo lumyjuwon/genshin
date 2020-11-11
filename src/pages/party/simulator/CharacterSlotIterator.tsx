@@ -11,7 +11,7 @@ import { PartyData } from 'src/redux/party/types';
 import styled from 'styled-components';
 
 const Container = styled.div({
-  padding: '20px 20px'
+  padding: '32px 32px'
 });
 
 interface Props {
