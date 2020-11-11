@@ -54,12 +54,9 @@ export function Preset(props: Props) {
   }
 
   function deleletPartyData() {
-    setIsModalVisible(false);
     const name = partyNameRef.current?.textContent;
     name && partyDispatch.DeleteParty(name);
   }
-
-  console.log(isModalVisible);
 
   return (
     <Container>
@@ -77,9 +74,7 @@ export function Preset(props: Props) {
       </Party>
       <DeleteButton
         onClick={() => {
-          console.log('true');
-          // setIsModalVisible(true);
-          deleletPartyData();
+          setIsModalVisible(true);
         }}
       >
         <EmojiText label="delete" symbol="🗑"></EmojiText>
@@ -89,11 +84,9 @@ export function Preset(props: Props) {
         title={`${trans(Lang.Party_Delete_Question)}'${partyNameRef.current?.textContent}'?`}
         confirm={() => {
           deleletPartyData();
-          props.toggle();
         }}
         cancel={() => {
           setIsModalVisible(false);
-          props.toggle();
         }}
       />
     </Container>
