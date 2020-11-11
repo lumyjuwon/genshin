@@ -32,7 +32,7 @@
     "stats": {
       "Level": "MAX90 80Lv",
       "ATK": "475",
-      "Additional": "Element Mastery 150"
+      "Additional": "Elemental Mastery 150"
     }
   },
   "Sacrificial Bow": {
@@ -95,7 +95,7 @@
     "stats": {
       "Level": "MAX90 80Lv",
       "ATK": "427",
-      "Additional": "Physical DMG Bonus 62.9%"
+      "Additional": "Physical DMG 62.9%"
     }
   },
   "Blackcliff Warbow": {
@@ -158,7 +158,7 @@
     "stats": {
       "Level": "MAX60 50Lv",
       "ATK": "212",
-      "Additional": "Base HP 30.4%"
+      "Additional": "HP 30.4%"
     }
   },
   "Seasoned Hunter's Bow": {
@@ -275,7 +275,7 @@
     "stats": {
       "Level": "MAX90 80Lv",
       "ATK": "475",
-      "Additional": "Base HP 37.7%"
+      "Additional": "HP 37.7%"
     }
   },
   "Royal Grimoire": {
@@ -329,7 +329,7 @@
     "stats": {
       "Level": "MAX80 70Lv",
       "ATK": "294",
-      "Additional": "Elemantal Mastery 154"
+      "Additional": "Elemant Mastery 154"
     }
   },
   "Otherworldly Story": {
@@ -410,7 +410,7 @@
     "stats": {
       "Level": "MAX90 80Lv",
       "ATK": "475",
-      "Additional": "Base HP 37.7%"
+      "Additional": "HP 37.7%"
     }
   },
   "Serpent Spine": {
@@ -482,7 +482,7 @@
     "stats": {
       "Level": "MAX90 80Lv",
       "ATK": "415",
-      "Additional": "Elemental Mastery(No Data)"
+      "Additional": "No Data"
     }
   },
   "Bloodtainted Greatsword": {
@@ -500,7 +500,7 @@
     "stats": {
       "Level": "MAX90 80Lv",
       "ATK": "375",
-      "Additional": "Physical DMG Bonus(No Data)"
+      "Additional": "No Data"
     }
   },
   "Ferrous Shadow": {
@@ -509,7 +509,7 @@
     "stats": {
       "Level": "MAX90 80Lv",
       "ATK": "375",
-      "Additional": "Base HP 32.1%"
+      "Additional": "HP 32.1%"
     }
   },
   "White Iron Greatsword": {
@@ -590,7 +590,7 @@
     "stats": {
       "Level": "MAX90 80Lv",
       "ATK": "523",
-      "Additional": "Physical DMG Bonus 31.5%"
+      "Additional": "Physical DMG 31.5%"
     }
   },
   "Deathmatch": {
@@ -626,7 +626,7 @@
     "stats": {
       "Level": "MAX90 80Lv",
       "ATK": "475",
-      "Additional": "Physical DMG Bonus 37.7%"
+      "Additional": "Physical DMG 37.7%"
     }
   },
   "Prototype Grudge": {
@@ -644,7 +644,7 @@
     "stats": {
       "Level": "MAX60 50Lv",
       "ATK": "212",
-      "Additional": "Base HP 30.4%"
+      "Additional": "HP 30.4%"
     }
   },
   "Halberd": {
@@ -698,7 +698,7 @@
     "stats": {
       "Level": "MAX90 80Lv",
       "ATK": "621",
-      "Additional": "Physical DMG Bonus 37.7%"
+      "Additional": "Physical DMG 37.7%"
     }
   },
   "Blackcliff Longsword": {
@@ -761,7 +761,7 @@
     "stats": {
       "Level": "MAX90 80Lv",
       "ATK": "523",
-      "Additional": "Physical DMG Bonus 31.5%"
+      "Additional": "Physical DMG 31.5%"
     }
   },
   "Lion's Roar": {
@@ -824,7 +824,7 @@
     "stats": {
       "Level": "MAX90 80Lv",
       "ATK": "375",
-      "Additional": "Elemental Mastery(No Data)"
+      "Additional": "No Data"
     }
   },
   "Cool Steel": {
