@@ -430,12 +430,11 @@ enum Lang {
   Save_Party_Image = 'Save_Party_Image',
   Party_List = 'Party_List',
   Reset_Party = 'Reset_Party',
-  Show_Party = 'Show_Party',
-  Hide_Party = 'Hide_Party',
   Image_Save_Question = 'Image_Save_Question',
   Party_Name_Blank = 'Party_Name_Blank',
   Party_Delete_Question = 'Party_Delete_Question',
   Party_Reset_Question = 'Party_Reset_Question',
+  Party_Override_Question = 'Party_Override_Question',
   Party_Name_Overlap = 'Party_Name_Overlap',
   Party_Blank_Space = 'Party_Blank_Space',
 

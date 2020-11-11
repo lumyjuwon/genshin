@@ -422,12 +422,11 @@
   "Save_Party_Image": "Save Image",
   "Party_List": "Party List",
   "Reset_Party": "Reset Party",
-  "Show_Party": "Show Party",
-  "Hide_Party": "Hide Party",
   "Image_Save_Question": "Do you want to save image?",
   "Party_Name_Blank": "You have to write at least 1 letter",
   "Party_Delete_Question": "Are you sure to delete party named ",
   "Party_Reset_Question": "Are you sure to reset current party?(ONLY current party)",
+  "Party_Override_Question": "Are you sure to override party?",
   "Party_Name_Overlap": "You have already used this name!",
   "Party_Blank_Space": "You have to arrange at least 1 character",
 
