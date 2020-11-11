@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { CharacterName } from 'src/resources/data';
 import { CharacterImages } from 'src/resources/images';
 import { Menu } from '../Menu';
+import { ElementResult } from '../element/ElementResult';
 
 import { CharacterSlot } from './CharacterSlot';
 import { useSelector } from 'react-redux';
@@ -37,18 +38,17 @@ interface Props {}
 export function CharacterSimulator(props: Props) {
   const characters: PartyData = useSelector<RootState, any>((state) => state.party.partyData);
   const charactersArray = Object.keys(characters);
-  const emptyCharacterSize = maxCharacterLength - charactersArray.length;
+  const maxCharacterSlot = 4;
 
   return (
     <Wrapper>
       <Menu />
       <div id={'party-content'}>
-        {charactersArray.map((characterName: CharacterName) => {
-          return <CharacterSlot key={characterName} name={characterName} src={CharacterImages[characterName]} />;
-        })}
-        {Array.from({ length: emptyCharacterSize }, () => '').map((characterName: CharacterName, index: number) => {
+        {Array.from({ length: maxCharacterSlot }, () => '').map((name: string, index: number) => {
+          const characterName = charactersArray[index] !== undefined ? charactersArray[index] : '';
           return <CharacterSlot key={index} name={characterName} src={CharacterImages[characterName]} />;
         })}
+        <ElementResult />
       </div>
     </Wrapper>
   );
