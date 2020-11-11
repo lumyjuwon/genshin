@@ -29,7 +29,7 @@ export const FocusWrapper = React.forwardRef<HTMLDivElement, Props>((props: Prop
   }, [props]);
 
   if (props.visible) {
-    return <Wrapper ref={forwardedRef}>{props.children}</Wrapper>;
+    return <Wrapper ref={focusRef}>{props.children}</Wrapper>;
   } else {
     return null;
   }
