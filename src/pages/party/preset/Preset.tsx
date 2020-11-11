@@ -19,7 +19,6 @@ const Party = styled.div({
   alignItems: 'center',
   width: '100%',
   cursor: 'pointer',
-  textDecoration: 'underline',
   padding: '10px 0',
   '&:hover': {
     backgroundColor: '#333'
@@ -46,7 +45,7 @@ interface Props {
   getPartyName: Function;
 }
 
-export function SavedParty(props: Props) {
+export function Preset(props: Props) {
   const partyNameRef = useRef<HTMLDivElement>(null);
   const [isModalVisible, setIsModalVisible] = useState(false);
 
@@ -57,8 +56,10 @@ export function SavedParty(props: Props) {
   function deleletPartyData() {
     setIsModalVisible(false);
     const name = partyNameRef.current?.textContent;
-    name && partyDispatch.DeleteParty({ [name]: props.parties[name] });
+    name && partyDispatch.DeleteParty(name);
   }
+
+  console.log(isModalVisible);
 
   return (
     <Container>
@@ -70,13 +71,15 @@ export function SavedParty(props: Props) {
         }}
       >
         <Name ref={partyNameRef}>{props.partyName}</Name>
-        {Object.keys(props.parties[props.partyName]).map((character) => {
-          return <RoundImage src={CharacterImages[character]} styles={{ width: '30px', height: '30px' }} />;
+        {Object.keys(props.parties[props.partyName].partyData).map((character) => {
+          return <RoundImage key={character} src={CharacterImages[character]} styles={{ width: '30px', height: '30px' }} />;
         })}
       </Party>
       <DeleteButton
         onClick={() => {
-          setIsModalVisible(true);
+          console.log('true');
+          // setIsModalVisible(true);
+          deleletPartyData();
         }}
       >
         <EmojiText label="delete" symbol="🗑"></EmojiText>

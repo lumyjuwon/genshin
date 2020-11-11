@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { PartyPreset } from 'src/redux/party/types';
-import { SavedParty } from './SavedParty';
+import { Preset } from './Preset';
 import { trans, Lang } from 'src/resources/languages';
 
 const Container = styled.div({
@@ -27,21 +27,22 @@ interface Props {
   getPartyName: Function;
 }
 
-export function SavedPartyList(props: Props) {
+export function PresetList(props: Props) {
+  const sortedByLatestParty = Object.keys(props.parties).sort((name, nextName) => {
+    if (props.parties[nextName].latestTime > props.parties[name].latestTime) {
+      return 1;
+    } else {
+      return -1;
+    }
+  });
   return (
     <Container>
       <Title>
         {trans(Lang.Party_List)} <hr />
       </Title>
-      {Object.keys(props.parties).map((partyName) => {
+      {sortedByLatestParty.map((partyName) => {
         return (
-          <SavedParty
-            key={partyName}
-            getPartyName={props.getPartyName}
-            partyName={partyName}
-            parties={props.parties}
-            toggle={props.toggle}
-          />
+          <Preset key={partyName} getPartyName={props.getPartyName} partyName={partyName} parties={props.parties} toggle={props.toggle} />
         );
       })}
     </Container>
