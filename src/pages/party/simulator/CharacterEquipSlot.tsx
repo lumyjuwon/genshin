@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 import * as Loadsh from 'lodash';
@@ -30,17 +30,15 @@ const items: Items = Object.assign({}, weaponInfo, artifactInfo);
 
 type EquipmentName = WeaponName | ArtifactName;
 type EquipmentCategory = ArtifactType | WeaponType;
-type ArtifactCount = number;
-type ArtifactSetName = string;
 
 interface EquipmentSlotProps {
   equipmentCateogry: EquipmentCategory;
   characterName: CharacterName;
-  isActive?: boolean;
-  getCategory: Function;
-  setVisible: Function;
-  characters: PartyData;
+  onModalEquipmentName: Function;
+  onModalEquipmentCategory: Function;
+  onModalVisible: Function;
   equipmentName: string;
+  isActive?: boolean;
 }
 
 function EquipmentSlot(props: EquipmentSlotProps) {
@@ -53,8 +51,9 @@ function EquipmentSlot(props: EquipmentSlotProps) {
         rank={items[props.equipmentName] !== undefined ? items[props.equipmentName].rank : undefined}
         hoverInnerColor={'#f1f2f3'}
         onClick={() => {
-          props.getCategory(props.equipmentCateogry);
-          props.setVisible(true);
+          props.onModalEquipmentName(props.equipmentName);
+          props.onModalEquipmentCategory(props.equipmentCateogry);
+          props.onModalVisible(true);
         }}
         badge={
           <RoundImage
@@ -71,7 +70,6 @@ function EquipmentSlot(props: EquipmentSlotProps) {
         }
         child={
           <RoundImageBox
-            // This is problem...
             src={
               props.equipmentName && items[props.equipmentName].type === props.equipmentCateogry
                 ? ItemImages[props.equipmentName]
@@ -114,8 +112,6 @@ const Container = styled.div({
 });
 
 interface Props {
-  // changeActiveArtifacts: Function;
-  // changeSelectedWeapon: Function;
   characterSrc: ImageSrc;
   characterName: CharacterName;
 }
@@ -129,30 +125,22 @@ export function CharacterEquipSlot(props: Props) {
     'HolyGrail',
     'Crown'
   ];
-
-  const [isVisibleEquipmentModal, setIsVisibleEquipmentModal] = useState<boolean>(false);
   const characters: PartyData = useSelector<RootState, any>((state) => state.party.partyData);
-  const [equipmentCategory, setEquipmentCategory] = useState('');
+  const [isVisibleEquipmentModal, setIsVisibleEquipmentModal] = useState<boolean>(false);
+  const [modalEquipmentName, setModalEquipmentName] = useState<EquipmentName>('');
+  const [modalEquipmentCategory, setModalEquipmentCategory] = useState<WeaponType | ArtifactType>();
 
-  const weaponOrArtifact = ['Bow', 'Catalyst', 'Claymore', 'Polearm', 'Sword'].includes(equipmentCategory) ? 'Weapon' : 'Artifact';
-  // @ts-ignore
-  const equipmentName = props.characterName !== '' ? characters[props.characterName][weaponOrArtifact][equipmentCategory] : '';
-
-  console.log('equipmentName', equipmentName, 'equipmentCategory', equipmentCategory);
-
-  function callbackSetIsVisibleEquipmentModal(bool: boolean) {
-    setIsVisibleEquipmentModal(bool);
-  }
-
-  function callbackGetCategory(category: string) {
-    setEquipmentCategory(category);
+  function getSlotCategory(category: WeaponType | ArtifactType) {
+    const weaponOrArtifact = ['Bow', 'Catalyst', 'Claymore', 'Polearm', 'Sword'].includes(category) ? 'Weapon' : 'Artifact';
+    return weaponOrArtifact;
   }
 
   function equipItem(name: EquipmentName) {
     const partyData = Loadsh.cloneDeep(characters);
-    if (partyData[props.characterName]) {
+    if (partyData[props.characterName] && modalEquipmentCategory) {
+      const slotCategory = getSlotCategory(modalEquipmentCategory);
       //@ts-ignore
-      partyData[props.characterName][weaponOrArtifact][equipmentCategory] = name;
+      partyData[props.characterName][slotCategory][modalEquipmentCategory] = name;
     }
 
     partyDispatch.SetParty(partyData);
@@ -160,15 +148,19 @@ export function CharacterEquipSlot(props: Props) {
 
   return (
     <Container>
-      {itemCategoryList.map((cateogry: WeaponType | ArtifactType) => {
+      {itemCategoryList.map((category: WeaponType | ArtifactType) => {
+        const slotCategory = getSlotCategory(category);
+        // @ts-ignore
+        const equipmentName = props.characterName !== '' ? characters[props.characterName][slotCategory][category] : '';
+
         return (
           <EquipmentSlot
-            key={cateogry}
-            getCategory={callbackGetCategory}
+            key={category}
+            onModalEquipmentName={setModalEquipmentName}
+            onModalEquipmentCategory={setModalEquipmentCategory}
+            onModalVisible={setIsVisibleEquipmentModal}
             equipmentName={equipmentName}
-            characters={characters}
-            setVisible={callbackSetIsVisibleEquipmentModal}
-            equipmentCateogry={cateogry}
+            equipmentCateogry={category}
             characterName={props.characterName}
             isActive={characterInfo[props.characterName] !== undefined}
           />
@@ -182,7 +174,7 @@ export function CharacterEquipSlot(props: Props) {
       >
         <GridWrapper>
           {Object.keys(items).map((name: EquipmentName) => {
-            if (items[name].type === equipmentCategory) {
+            if (items[name].type === modalEquipmentCategory) {
               return (
                 <ItemBadgeBox
                   key={name}
@@ -195,7 +187,7 @@ export function CharacterEquipSlot(props: Props) {
                   }}
                   badge={
                     <RoundImage
-                      src={CategoryImages[equipmentCategory]}
+                      src={CategoryImages[modalEquipmentCategory]}
                       styles={{
                         width: '30px',
                         height: '30px',
@@ -213,7 +205,7 @@ export function CharacterEquipSlot(props: Props) {
                         boxStyle: {
                           width: '100px',
                           height: '100px',
-                          backgroundColor: name === equipmentName ? '#f1f2f3' : 'transparent',
+                          backgroundColor: name === modalEquipmentName ? '#f1f2f3' : 'transparent',
                           margin: '0px',
                           small: { width: '70px', height: '70px' }
                         },
