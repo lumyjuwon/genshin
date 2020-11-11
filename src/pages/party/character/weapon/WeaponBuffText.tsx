@@ -86,17 +86,16 @@ export function WeaponBuffText(props: Props) {
         <>
           <FlexWrapper
             styles={{
-              justifyContent: 'space-between',
-              width: '100%',
-              medium: { flexDirection: 'column', justifyContent: 'center' },
-              small: { flexDirection: 'column', justifyContent: 'center' }
+              flexDirection: 'column',
+              justifyContent: 'center',
+              width: '100%'
             }}
           >
             <>
               <FlexWrapper
                 styles={{
-                  medium: { width: '100%', justifyContent: 'space-evenly' },
-                  small: { width: '100%', justifyContent: 'space-evenly' }
+                  width: '100%',
+                  justifyContent: 'space-around'
                 }}
               >
                 <>
