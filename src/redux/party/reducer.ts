@@ -19,7 +19,7 @@ export function partyReducer(state = initialState, action: PartyAction): PartySt
         partyPreset: loadsh.cloneDeep(Object.assign({}, state.partyPreset, action.payload))
       };
     case ActionTypes.DeleteParty:
-      const notDeleted = Object.keys(state.partyPreset).filter((name) => name !== Object.keys(action.payload)[0]);
+      const notDeleted = Object.keys(state.partyPreset).filter((name) => name !== action.payload);
       let parties: PartyPreset = {};
       notDeleted.forEach((name) => {
         parties[name] = state.partyPreset[name];

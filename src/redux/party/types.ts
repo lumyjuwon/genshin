@@ -49,7 +49,7 @@ interface SaveParty {
 
 interface DeleteParty {
   type: ActionTypes.DeleteParty;
-  payload: PartyPreset;
+  payload: string;
 }
 
 export type PartyAction = SetParty | SaveParty | DeleteParty;

@@ -14,9 +14,9 @@ export function SaveParty(partyData: PartyPreset): PartyAction {
   };
 }
 
-export function DeleteParty(partyData: PartyPreset) {
+export function DeleteParty(partyName: string) {
   return {
     type: ActionTypes.DeleteParty,
-    payload: partyData
+    payload: partyName
   };
 }
