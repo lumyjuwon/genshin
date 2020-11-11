@@ -12,7 +12,7 @@ const ElementLayout = styled.div({
   marginBottom: '5vh',
   '@media screen and (max-width: 1380px)': {
     width: '500px',
-    margin: '0 auto'
+    margin: '0 auto 10px'
   },
   '@media screen and (max-width: 768px)': {
     width: '220px'

@@ -21,7 +21,7 @@ interface Props {
 
 export function CharacterResult(props: Props) {
   return (
-    <FlexWrapper styles={{ alignItems: 'flex-start', small: { flexDirection: 'column' } }}>
+    <FlexWrapper styles={{ alignItems: 'flex-start', medium: { width: '670px' }, small: { flexDirection: 'column' } }}>
       <>
         <WeaponResult activeWeapon={props.activeWeapon} selectedCharacter={props.selectedCharacter} />
         <ArtifactResult activeArtifacts={props.activeArtifacts} />

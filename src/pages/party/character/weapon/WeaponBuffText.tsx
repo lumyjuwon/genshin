@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 import { WeaponName, CharacterName, weaponInfo, characterInfo } from 'src/resources/data';
 import { trans, Lang } from 'src/resources/languages';
-import { RegexColorText } from 'src/components/text/RegexColorText';
 import { FlexWrapper, SquareImage, CharacterStatRegexText } from 'src/components';
 import { CategoryImages } from 'src/resources/images';
 
@@ -21,7 +20,8 @@ const Container = styled.div({
     margin: '0 auto 50px'
   },
   '@media screen and (max-width: 768px)': {
-    width: '220px'
+    width: '220px',
+    margin: '0 auto 20px'
   }
 });
 
@@ -85,10 +85,20 @@ export function WeaponBuffText(props: Props) {
       <FlexWrapper styles={{ width: '100%', flexDirection: 'column', margin: '5px 0 0' }}>
         <>
           <FlexWrapper
-            styles={{ justifyContent: 'space-between', width: '100%', small: { flexDirection: 'column', justifyContent: 'center' } }}
+            styles={{
+              justifyContent: 'space-between',
+              width: '100%',
+              medium: { flexDirection: 'column', justifyContent: 'center' },
+              small: { flexDirection: 'column', justifyContent: 'center' }
+            }}
           >
             <>
-              <FlexWrapper styles={{ small: { width: '100%', justifyContent: 'space-between' } }}>
+              <FlexWrapper
+                styles={{
+                  medium: { width: '100%', justifyContent: 'space-evenly' },
+                  small: { width: '100%', justifyContent: 'space-evenly' }
+                }}
+              >
                 <>
                   <TextDesc>
                     {trans(Lang.Character_HP)}: {characterInfo[props.selectedCharacter].stats.HP}
