@@ -10,7 +10,13 @@ import { characterInfo } from 'src/resources/data';
 import styled from 'styled-components';
 
 const Container = styled.div({
-  marginTop: '128px'
+  marginTop: '128px',
+  '@media screen and (max-width: 1380px)': {
+    marginTop: '60px'
+  },
+  '@media screen and (max-width: 768px)': {
+    marginTop: '30px'
+  }
 });
 
 export function ElementResult() {
