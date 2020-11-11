@@ -37,7 +37,12 @@ const CopyRight = styled.div({
   }
 });
 
-export function Footer() {
+interface Props {
+  onClick: Function;
+  selectedNav?: React.RefObject<HTMLDivElement>;
+}
+
+export function Footer(props: Props) {
   return (
     <FooterDiv>
       <>
@@ -45,14 +50,18 @@ export function Footer() {
         <FlexWrapper>
           <>
             <Link to="/policy">
-              <TextUnderLineButton>
-                <FooterText>{trans(Lang.Main_Privacy_Policy)}</FooterText>
-              </TextUnderLineButton>
+              <div onClick={() => props.onClick(props.selectedNav)}>
+                <TextUnderLineButton>
+                  <FooterText>{trans(Lang.Main_Privacy_Policy)}</FooterText>
+                </TextUnderLineButton>
+              </div>
             </Link>
             <Link to="/notice">
-              <TextUnderLineButton>
-                <FooterText>{trans(Lang.Main_Notice)}</FooterText>
-              </TextUnderLineButton>
+              <div onClick={() => props.onClick(props.selectedNav)}>
+                <TextUnderLineButton>
+                  <FooterText>{trans(Lang.Main_Notice)}</FooterText>
+                </TextUnderLineButton>
+              </div>
             </Link>
             <ContactUs>
               <TextUnderLineButton>

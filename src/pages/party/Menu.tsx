@@ -74,7 +74,7 @@ export function Menu(props: Props) {
       return alert(trans(Lang.Party_Name_Blank));
     }
     if (Object.keys(parties).includes(partyName)) {
-      setIsOverrideConfirmVisible(true);
+      return setIsOverrideConfirmVisible(true);
     }
     if (!Object.keys(characters).length) {
       return alert(trans(Lang.Party_Blank_Space));
@@ -272,10 +272,11 @@ export function Menu(props: Props) {
       />
       <Dialog
         isVisible={isOverrideConfirmVisible}
-        title={`${trans(Lang.Party_Override_Question)}${InputRef.current?.value}`}
+        title={`${trans(Lang.Party_Override_Question)}'${InputRef.current?.value}'`}
         confirm={() => {
           partyDispatch.SetParty(characters);
           setIsOverrideConfirmVisible(false);
+          InputRef.current && (InputRef.current.value = '');
         }}
         cancel={() => setIsOverrideConfirmVisible(false)}
       />
