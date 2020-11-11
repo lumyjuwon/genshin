@@ -37,35 +37,24 @@ interface EquipmentSlotProps {
   equipmentCateogry: EquipmentCategory;
   characterName: CharacterName;
   isActive?: boolean;
+  getCategory: Function;
+  setVisible: Function;
+  characters: PartyData;
+  equipmentName: string;
 }
 
 function EquipmentSlot(props: EquipmentSlotProps) {
-  const characters: PartyData = useSelector<RootState, any>((state) => state.party.partyData);
-  const weaponOrArtifact = ['Bow', 'Catalyst', 'Claymore', 'Polearm', 'Sword'].includes(props.equipmentCateogry) ? 'Weapon' : 'Artifact';
-  // @ts-ignore
-  const equipmentName = props.characterName !== '' ? characters[props.characterName][weaponOrArtifact][props.equipmentCateogry] : '';
-  const [isVisibleEquipmentModal, setIsVisibleEquipmentModal] = useState<boolean>(false);
-
-  function equipItem(name: EquipmentName) {
-    const partyData = Loadsh.cloneDeep(characters);
-    if (partyData[props.characterName]) {
-      //@ts-ignore
-      partyData[props.characterName][weaponOrArtifact][props.equipmentCateogry] = name;
-    }
-
-    partyDispatch.SetParty(partyData);
-  }
-
   return (
     <BoxModelWrapper styles={{ margin: '0 0 0 6px', small: { margin: '0 0 3px 3px' } }}>
       <ItemBadgeBox
-        tooltip={equipmentName}
+        tooltip={props.equipmentName}
         isActive={props.isActive}
         isToolTipVisible={false}
-        rank={items[equipmentName] !== undefined ? items[equipmentName].rank : undefined}
+        rank={items[props.equipmentName] !== undefined ? items[props.equipmentName].rank : undefined}
         hoverInnerColor={'#f1f2f3'}
         onClick={() => {
-          setIsVisibleEquipmentModal(true);
+          props.getCategory(props.equipmentCateogry);
+          props.setVisible(true);
         }}
         badge={
           <RoundImage
@@ -82,7 +71,12 @@ function EquipmentSlot(props: EquipmentSlotProps) {
         }
         child={
           <RoundImageBox
-            src={ItemImages[equipmentName]}
+            // This is problem...
+            src={
+              props.equipmentName && items[props.equipmentName].type === props.equipmentCateogry
+                ? ItemImages[props.equipmentName]
+                : undefined
+            }
             styles={{
               boxStyle: {
                 width: '100px',
@@ -105,6 +99,81 @@ function EquipmentSlot(props: EquipmentSlotProps) {
           tooltipStyles: { bottom: '0px' }
         }}
       />
+    </BoxModelWrapper>
+  );
+}
+
+const Container = styled.div({
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'center',
+  alignItems: 'center',
+  '@media screen and (max-width: 768px)': {
+    flexWrap: 'wrap'
+  }
+});
+
+interface Props {
+  // changeActiveArtifacts: Function;
+  // changeSelectedWeapon: Function;
+  characterSrc: ImageSrc;
+  characterName: CharacterName;
+}
+
+export function CharacterEquipSlot(props: Props) {
+  const itemCategoryList: Array<WeaponType | ArtifactType> = [
+    characterInfo[props.characterName] !== undefined ? characterInfo[props.characterName].weapon : 'Bow',
+    'Flower',
+    'Feather',
+    'HourGlass',
+    'HolyGrail',
+    'Crown'
+  ];
+
+  const [isVisibleEquipmentModal, setIsVisibleEquipmentModal] = useState<boolean>(false);
+  const characters: PartyData = useSelector<RootState, any>((state) => state.party.partyData);
+  const [equipmentCategory, setEquipmentCategory] = useState('');
+
+  const weaponOrArtifact = ['Bow', 'Catalyst', 'Claymore', 'Polearm', 'Sword'].includes(equipmentCategory) ? 'Weapon' : 'Artifact';
+  // @ts-ignore
+  const equipmentName = props.characterName !== '' ? characters[props.characterName][weaponOrArtifact][equipmentCategory] : '';
+
+  console.log('equipmentName', equipmentName, 'equipmentCategory', equipmentCategory);
+
+  function callbackSetIsVisibleEquipmentModal(bool: boolean) {
+    setIsVisibleEquipmentModal(bool);
+  }
+
+  function callbackGetCategory(category: string) {
+    setEquipmentCategory(category);
+  }
+
+  function equipItem(name: EquipmentName) {
+    const partyData = Loadsh.cloneDeep(characters);
+    if (partyData[props.characterName]) {
+      //@ts-ignore
+      partyData[props.characterName][weaponOrArtifact][equipmentCategory] = name;
+    }
+
+    partyDispatch.SetParty(partyData);
+  }
+
+  return (
+    <Container>
+      {itemCategoryList.map((cateogry: WeaponType | ArtifactType) => {
+        return (
+          <EquipmentSlot
+            key={cateogry}
+            getCategory={callbackGetCategory}
+            equipmentName={equipmentName}
+            characters={characters}
+            setVisible={callbackSetIsVisibleEquipmentModal}
+            equipmentCateogry={cateogry}
+            characterName={props.characterName}
+            isActive={characterInfo[props.characterName] !== undefined}
+          />
+        );
+      })}
       <Modal
         cancel={() => {
           setIsVisibleEquipmentModal(false);
@@ -113,7 +182,7 @@ function EquipmentSlot(props: EquipmentSlotProps) {
       >
         <GridWrapper>
           {Object.keys(items).map((name: EquipmentName) => {
-            if (items[name].type === props.equipmentCateogry) {
+            if (items[name].type === equipmentCategory) {
               return (
                 <ItemBadgeBox
                   key={name}
@@ -126,7 +195,7 @@ function EquipmentSlot(props: EquipmentSlotProps) {
                   }}
                   badge={
                     <RoundImage
-                      src={CategoryImages[props.equipmentCateogry]}
+                      src={CategoryImages[equipmentCategory]}
                       styles={{
                         width: '30px',
                         height: '30px',
@@ -167,49 +236,6 @@ function EquipmentSlot(props: EquipmentSlotProps) {
           })}
         </GridWrapper>
       </Modal>
-    </BoxModelWrapper>
-  );
-}
-
-const Container = styled.div({
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'center',
-  alignItems: 'center',
-  '@media screen and (max-width: 768px)': {
-    flexWrap: 'wrap'
-  }
-});
-
-interface Props {
-  // changeActiveArtifacts: Function;
-  // changeSelectedWeapon: Function;
-  characterSrc: ImageSrc;
-  characterName: CharacterName;
-}
-
-export function CharacterEquipSlot(props: Props) {
-  const itemCategoryList: Array<WeaponType | ArtifactType> = [
-    characterInfo[props.characterName] !== undefined ? characterInfo[props.characterName].weapon : 'Bow',
-    'Flower',
-    'Feather',
-    'HourGlass',
-    'HolyGrail',
-    'Crown'
-  ];
-
-  return (
-    <Container>
-      {itemCategoryList.map((cateogry: WeaponType | ArtifactType) => {
-        return (
-          <EquipmentSlot
-            key={cateogry}
-            equipmentCateogry={cateogry}
-            characterName={props.characterName}
-            isActive={characterInfo[props.characterName] !== undefined}
-          />
-        );
-      })}
     </Container>
   );
 }
