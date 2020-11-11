@@ -78,7 +78,6 @@ export function ModalWrapper(props: Props) {
   useEffect(() => {
     hashId.current = ModalWrapperHashId;
     ModalWrapperHashId++;
-    console.log(hashId.current);
   }, []);
 
   if (props.visible) {
