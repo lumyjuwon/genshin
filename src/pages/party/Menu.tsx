@@ -14,12 +14,15 @@ import { getFormatDate } from 'src/utils';
 
 const Container = styled.div({
   display: 'flex',
-  width: '100%',
+  width: '845px',
   justifyContent: 'space-between',
   alignItems: 'center',
   marginBottom: '25px',
-  '@media screen and (max-width: 1380px)': {},
+  '@media screen and (max-width: 1380px)': {
+    width: '655px'
+  },
   '@media screen and (max-width: 768px)': {
+    width: '100%',
     flexDirection: 'column'
   }
 });

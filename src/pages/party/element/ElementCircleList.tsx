@@ -15,7 +15,7 @@ const ElementLayout = styled.div({
     margin: '0 auto 10px'
   },
   '@media screen and (max-width: 768px)': {
-    width: '220px'
+    width: '100%'
   }
 });
 

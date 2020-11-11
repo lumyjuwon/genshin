@@ -11,18 +11,7 @@ import { PartyData } from 'src/redux/party/types';
 import styled from 'styled-components';
 
 const Container = styled.div({
-  marginTop: '64px',
-  marginRight: '64px',
-  marginLeft: '64px',
-
-  '@media screen and (max-width: 1380px)': {
-    marginRight: '8px',
-    marginLeft: '8px'
-  },
-  '@media screen and (max-width: 768px)': {
-    marginRight: '0px',
-    marginLeft: '0px'
-  }
+  padding: '20px 20px'
 });
 
 interface Props {
