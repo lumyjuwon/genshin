@@ -17,12 +17,12 @@ const initialState: State = {
   fourStarCount: 0,
   nextPity: 0,
   usedPrimoGem: 0,
-  gachaContent: Object.keys(gachaInfo)[0],
+  gachaContent: '',
   gachaInventoryList: [],
   gachaExecutionResult: []
 };
 
-export function gachaReducer(state: State = initialState, action: GachaActions) {
+export function gachaReducer(state: State = initialState, action: any) {
   switch (action.type) {
     case RESET_ALL:
       return {
@@ -41,12 +41,12 @@ export function gachaReducer(state: State = initialState, action: GachaActions) 
         // gachaInventoryList: ,
         // gachaExecutionResult ,
       };
-    case CHANGE_WISH_CONTENT:
-      return {
-        ...state
-        // gachaContent: action.gacha
-        // Change ref
-      };
+    // case CHANGE_WISH_CONTENT:
+    //   return {
+    //     ...state
+    //     // gachaContent: action.gacha
+    //     // Change ref
+    //   };
     default:
       return state;
   }
