@@ -90,6 +90,19 @@
       "Additional": "Recharge 24.0%"
     }
   },
+  "Tartaglia": {
+    "rank": 5,
+    "element": "Hydro",
+    "weapon": "Bow",
+    "region": "Snezhnaya",
+    "stats": {
+      "Level": "MAX50 40Lv",
+      "HP": "5889",
+      "ATK": "137",
+      "DEF": "366",
+      "Additional": "Hydro DMG 7.2%"
+    }
+  },
   "Traveler (Anemo)": {
     "rank": 5,
     "element": "Anemo",
@@ -296,6 +309,19 @@
       "ATK": "165",
       "DEF": "619",
       "Additional": "ATK 18.0%"
+    }
+  },
+  "Diona": {
+    "rank": 4,
+    "element": "Cryo",
+    "weapon": "Bow",
+    "region": "Mondstadt",
+    "stats": {
+      "Level": "No Data",
+      "HP": "No Data",
+      "ATK": "No Data",
+      "DEF": "No Data",
+      "Additional": "No Data"
     }
   }
 }

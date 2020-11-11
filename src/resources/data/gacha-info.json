@@ -1,6 +1,6 @@
 {
   "Character_Event_Wish": {
-    "pickUpTarget": ["Klee"],
+    "pickUpTarget": ["Tartaglia"],
     "maxPityCount": 90,
     "maxPickUpCount": 180,
     "maxBonusCount": 10,
@@ -8,24 +8,25 @@
     "fiveStars": {
       "percent": 0.6,
       "pickUpPercent": 50,
-      "items": ["Klee", "Keqing", "Mona", "Qiqi", "Jean", "Diluc"],
-      "pickUpItems": ["Klee"]
+      "items": ["Tartaglia", "Keqing", "Mona", "Qiqi", "Jean", "Diluc"],
+      "pickUpItems": ["Tartaglia"]
     },
     "fourStars": {
       "percent": 5.1,
       "pickUpPercent": 75,
       "items": [
-        "Fischl",
-        "Xiangling",
-        "Barbara",
+        "Diona",
+        "Ningguang",
+        "Beidou",
         "Sucrose",
         "Chongyun",
         "Noelle",
-        "Ningguang",
-        "Xingqiu",
         "Bennett",
-        "Beidou",
+        "Fischl",
+        "Xingqiu",
+        "Xiangling",
         "Razor",
+        "Barbara",
         "Rust",
         "Sacrificial Bow",
         "The Stringless",
@@ -45,7 +46,7 @@
         "The Flute",
         "Favonius Sword"
       ],
-      "pickUpItems": ["Sucrose", "Noelle", "Xingqiu"]
+      "pickUpItems": ["Diona", "Ningguang", "Beidou"]
     },
     "threeStars": {
       "percent": 94.3,
@@ -70,7 +71,7 @@
   },
 
   "Weapon_Event_Wish": {
-    "pickUpTarget": ["Lost Prayer to the Sacred Winds", "Wolf's Gravestone"],
+    "pickUpTarget": ["Skyward Harp", "Memeory of Dust"],
     "maxPityCount": 80,
     "maxPickUpCount": 160,
     "maxBonusCount": 10,
@@ -79,27 +80,28 @@
       "percent": 0.7,
       "pickUpPercent": 75,
       "items": [
-        "Amos' Bow",
-        "Aquila Favonia",
         "Skyward Harp",
+        "Memory of Dust",
+        "Amos' Bow",
         "Lost Prayer to the Sacred Winds",
         "Skyward Atlas",
         "Primordial Jade Winged-Spear",
         "Skyward Spine",
         "Wolf's Gravestone",
         "Skyward Pride",
-        "Skyward Blade"
+        "Skyward Blade",
+        "Aquila Favonia"
       ],
-      "pickUpItems": ["Lost Prayer to the Sacred Winds", "Wolf's Gravestone"]
+      "pickUpItems": ["Skyward Harp", "Memeory of Dust"]
     },
     "fourStars": {
       "percent": 6.0,
       "pickUpPercent": 75,
       "items": [
-        "The Stringless",
-        "The Widsith",
+        "Rust",
+        "Eye of Perception",
         "Favonius Lance",
-        "The Bell",
+        "Rainslasher",
         "The Flute",
         "Sucrose",
         "Chongyun",
@@ -112,26 +114,26 @@
         "Xiangling",
         "Razor",
         "Barbara",
-        "Rust",
         "Sacrificial Bow",
+        "The Stringless",
         "Favonius Warbow",
-        "Eye of Perception",
         "Sacrificial Fragments",
+        "The Widsith",
         "Favonius Codex",
         "Dragon's Bane",
-        "Rainslasher",
-        "Favonius Greatsword",
         "Sacrificial Greatsword",
+        "The Bell",
+        "Favonius Greatsword",
         "Lion's Roar",
         "Sacrificial Sword",
         "Favonius Sword"
       ],
       "pickUpItems": [
-        "Sacrificial Sword",
-        "Sacrificial Greatsword",
-        "Sacrificial Bow",
-        "Sacrificial Fragments",
-        "Dragon's Bane"
+        "Rust",
+        "Eye of Perception",
+        "Favonius Lance",
+        "Rainslasher",
+        "The Flute"
       ]
     },
     "threeStars": {
@@ -169,8 +171,8 @@
         "Keqing",
         "Mona",
         "Qiqi",
-        "Jean",
         "Diluc",
+        "Jean",
         "Amos' Bow",
         "Skyward Harp",
         "Lost Prayer to the Sacred Winds",

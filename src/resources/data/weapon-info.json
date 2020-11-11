@@ -197,6 +197,15 @@
       "Additional": "ATK 33.1%"
     }
   },
+  "Memory of Dust": {
+    "rank": 5,
+    "type": "Catalyst",
+    "stats": {
+      "Level": "No Data",
+      "ATK": "No Data",
+      "Additional": "No Data"
+    }
+  },
   "Wine and Song": {
     "rank": 4,
     "type": "Catalyst",
