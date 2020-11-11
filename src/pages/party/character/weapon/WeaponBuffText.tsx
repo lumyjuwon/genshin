@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { WeaponName, CharacterName, weaponInfo, characterInfo } from 'src/resources/data';
 import { trans, Lang } from 'src/resources/languages';
 import { RegexColorText } from 'src/components/text/RegexColorText';
-import { FlexWrapper, SquareImage } from 'src/components';
+import { FlexWrapper, SquareImage, CharacterStatRegexText } from 'src/components';
 import { CategoryImages } from 'src/resources/images';
 
 const Container = styled.div({
@@ -111,18 +111,14 @@ export function WeaponBuffText(props: Props) {
             <SquareImage styles={{ width: '20px', height: '20px' }} src={CategoryImages.Character} />
             &nbsp;
             {trans(Lang.Character_Additional)}:&nbsp;
-            <RegexColorText regex={/\d.+%/g} color={'red'}>
-              {characterInfo[props.selectedCharacter].stats.Additional}
-            </RegexColorText>
+            <CharacterStatRegexText>{characterInfo[props.selectedCharacter].stats.Additional}</CharacterStatRegexText>
           </TextDesc>
           {props.activeWeapon && (
             <TextDesc>
               <SquareImage styles={{ width: '20px', height: '20px' }} src={CategoryImages[characterInfo[props.selectedCharacter].weapon]} />
               &nbsp;
               {trans(Lang.Character_Additional)}:&nbsp;
-              <RegexColorText regex={/\d.+%/g} color={'red'}>
-                {weaponInfo[props.activeWeapon].stats.Additional}
-              </RegexColorText>
+              <CharacterStatRegexText>{weaponInfo[props.activeWeapon].stats.Additional}</CharacterStatRegexText>
             </TextDesc>
           )}
         </>

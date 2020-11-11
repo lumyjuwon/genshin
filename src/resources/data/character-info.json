@@ -48,7 +48,7 @@
       "HP": "12965",
       "ATK": "211",
       "DEF": "678",
-      "Additional": "Healing 16.6%"
+      "Additional": "Healing Bonus 16.6%"
     }
   },
   "Qiqi": {
@@ -87,7 +87,7 @@
       "HP": "8557",
       "ATK": "214",
       "DEF": "543",
-      "Additional": "Recharge 24.0%"
+      "Additional": "Energy Recharge 24.0%"
     }
   },
   "Tartaglia": {
@@ -191,7 +191,7 @@
       "HP": "8184",
       "ATK": "156",
       "DEF": "557",
-      "Additional": "Recharge 113.3%"
+      "Additional": "Energy Recharge 113.3%"
     }
   },
   "Fischl": {

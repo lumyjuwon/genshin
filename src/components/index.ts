@@ -44,6 +44,7 @@ export { Dialog } from './modal/Dialog';
 export { TooltipText } from './text/TooltipText';
 export { renderNewLine } from './text/RenderNewLine';
 export { EmojiText } from './text/EmojiText';
+export { CharacterStatRegexText } from './text/CharacterStatRegexTrans';
 
 // Box
 export { ItemBadgeBox } from './box/ItemBadgeBox';
