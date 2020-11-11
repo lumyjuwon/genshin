@@ -1,16 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 
-import { partyDispatch } from 'src/redux';
 import { RootState } from 'src/redux/rootReducer';
 import { PartyData } from 'src/redux/party/types';
-import { ItemBadgeBox, RoundImage, RoundImageBox, Modal, GridWrapper, FlexWrapper } from 'src/components';
+import { ItemBadgeBox, RoundImage, RoundImageBox, FlexWrapper } from 'src/components';
 import { characterInfo, CharacterName } from 'src/resources/data';
-import { ElementImages, CategoryImages, CharacterImages, ImageSrc } from 'src/resources/images';
+import { ElementImages, CategoryImages, ImageSrc } from 'src/resources/images';
 import { CharacterResult } from '../character/CharacteResult';
 import { CharacterEquipSlot } from './CharacterEquipSlot';
-import { maxCharacterLength } from './CharacterSimulator';
 
 const Inner = styled.div({
   display: 'flex',
@@ -28,6 +26,7 @@ const Inner = styled.div({
 interface Props {
   name: CharacterName;
   src: ImageSrc;
+  setVisible: Function;
 }
 
 type ArtifactSetName = string;
@@ -35,27 +34,6 @@ type Count = number;
 
 export function CharacterSlot(props: Props) {
   const characters: PartyData = useSelector<RootState, any>((state) => state.party.partyData);
-
-  const [isVisibleCharacterModal, setIsVisibleCharacterModal] = useState<boolean>(false);
-
-  function selectCharacter(name: CharacterName) {
-    const partySize = Object.keys(characters).length;
-    const partyData = Object.assign({}, characters);
-
-    if (characters[name] === undefined && partySize < maxCharacterLength) {
-      const data: PartyData = {
-        [name]: {
-          Weapon: {},
-          Artifact: {}
-        }
-      };
-      Object.assign(partyData, data);
-    } else {
-      delete partyData[name];
-    }
-
-    partyDispatch.SetParty(partyData);
-  }
 
   return (
     <Inner>
@@ -67,7 +45,7 @@ export function CharacterSlot(props: Props) {
             isToolTipVisible={false}
             isRankVisible={false}
             onClick={() => {
-              setIsVisibleCharacterModal(true);
+              props.setVisible(true);
             }}
             badge={
               <RoundImage
@@ -103,64 +81,6 @@ export function CharacterSlot(props: Props) {
               />
             }
           />
-          <Modal
-            cancel={() => {
-              setIsVisibleCharacterModal(false);
-            }}
-            visible={isVisibleCharacterModal}
-          >
-            <GridWrapper>
-              {Object.keys(characterInfo).map((name: string) => {
-                return (
-                  <ItemBadgeBox
-                    key={name}
-                    rank={characterInfo[name].rank}
-                    tooltip={name}
-                    hoverInnerColor={'#f1f2f3'}
-                    onClick={() => {
-                      selectCharacter(name);
-                    }}
-                    badge={
-                      <RoundImage
-                        src={ElementImages[characterInfo[name].element]}
-                        styles={{
-                          width: '30px',
-                          height: '30px',
-                          small: {
-                            width: '25px',
-                            height: '25px'
-                          }
-                        }}
-                      />
-                    }
-                    child={
-                      <RoundImageBox
-                        src={CharacterImages[name]}
-                        styles={{
-                          boxStyle: {
-                            width: '100px',
-                            height: '100px',
-                            backgroundColor: characters[name] !== undefined ? '#f1f2f3' : 'transparent',
-                            margin: '0px',
-                            small: { width: '80px', height: '80px' }
-                          },
-                          imageStyle: {
-                            width: '80px',
-                            height: '80px',
-                            borderRadius: '35%',
-                            small: { width: '70px', height: '70px' }
-                          }
-                        }}
-                      />
-                    }
-                    styles={{
-                      tooltipStyles: { bottom: '0' }
-                    }}
-                  />
-                );
-              })}
-            </GridWrapper>
-          </Modal>
           <CharacterEquipSlot characterName={props.name} characterSrc={props.src} />
         </>
       </FlexWrapper>

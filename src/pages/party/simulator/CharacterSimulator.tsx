@@ -1,12 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { CharacterName } from 'src/resources/data';
-import { CharacterImages } from 'src/resources/images';
 import { Menu } from '../Menu';
+import { CharacterSlotIterator } from './CharacterSlotIterator';
 import { ElementResult } from '../element/ElementResult';
 
-import { CharacterSlot } from './CharacterSlot';
 import { useSelector } from 'react-redux';
 import { PartyData } from 'src/redux/party/types';
 import { RootState } from 'src/redux/rootReducer';
@@ -37,17 +35,12 @@ interface Props {}
 
 export function CharacterSimulator(props: Props) {
   const characters: PartyData = useSelector<RootState, any>((state) => state.party.partyData);
-  const charactersArray = Object.keys(characters);
-  const maxCharacterSlot = 4;
 
   return (
     <Wrapper>
       <Menu />
       <div id={'party-content'}>
-        {Array.from({ length: maxCharacterSlot }, () => '').map((name: string, index: number) => {
-          const characterName = charactersArray[index] !== undefined ? charactersArray[index] : '';
-          return <CharacterSlot key={index} name={characterName} src={CharacterImages[characterName]} />;
-        })}
+        <CharacterSlotIterator characters={characters} />
         <ElementResult />
       </div>
     </Wrapper>
