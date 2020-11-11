@@ -71,7 +71,7 @@
   },
 
   "Weapon_Event_Wish": {
-    "pickUpTarget": ["Skyward Harp", "Memeory of Dust"],
+    "pickUpTarget": ["Skyward Harp", "Memory of Dust"],
     "maxPityCount": 80,
     "maxPickUpCount": 160,
     "maxBonusCount": 10,
@@ -92,7 +92,7 @@
         "Skyward Blade",
         "Aquila Favonia"
       ],
-      "pickUpItems": ["Skyward Harp", "Memeory of Dust"]
+      "pickUpItems": ["Skyward Harp", "Memory of Dust"]
     },
     "fourStars": {
       "percent": 6.0,
