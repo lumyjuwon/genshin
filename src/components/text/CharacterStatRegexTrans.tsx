@@ -20,7 +20,7 @@ export function CharacterStatRegexText(props: Props) {
   console.log(props.children.replace(/\s/g, '_').replace(/\d.+%/g, ''));
   return (
     <P>
-      <RegexColorText regex={/\d.+%/g} color={'#cc0000'} isBold>
+      <RegexColorText regex={/\d.+%/g} color={'#ff0000'} isBold>
         {trans(Lang[props.children.replace(/\s/g, '_').replace(/_\d.+%/g, '') as KeyLang]).concat(` ${statPercent}`)}
       </RegexColorText>
     </P>
