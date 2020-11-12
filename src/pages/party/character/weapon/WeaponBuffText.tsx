@@ -119,14 +119,12 @@ export function WeaponBuffText(props: Props) {
           <TextDesc marginTop>
             <SquareImage styles={{ width: '20px', height: '20px' }} src={CategoryImages.Character} />
             &nbsp;
-            {trans(Lang.Character_Additional)}:&nbsp;
             <CharacterStatRegexText>{characterInfo[props.selectedCharacter].stats.Additional}</CharacterStatRegexText>
           </TextDesc>
           {props.activeWeapon && (
             <TextDesc>
               <SquareImage styles={{ width: '20px', height: '20px' }} src={CategoryImages[characterInfo[props.selectedCharacter].weapon]} />
               &nbsp;
-              {trans(Lang.Character_Additional)}:&nbsp;
               <CharacterStatRegexText>{weaponInfo[props.activeWeapon].stats.Additional}</CharacterStatRegexText>
             </TextDesc>
           )}
