@@ -91,9 +91,16 @@ function App() {
       onToggleClick();
     }
 
-    onToggleClick();
-
     window.scrollTo(0, 0);
+  }
+
+  function onCardClick(ref: React.RefObject<HTMLDivElement>) {
+    deleteSelected(selectedNav);
+    selectedNav = ref;
+    selectedNav.current?.classList.add('selected');
+    if (window.innerWidth <= 768) {
+      navList.current?.classList.remove('responsive');
+    }
   }
 
   return (
@@ -158,7 +165,7 @@ function App() {
         </>
       </Header>
       <Switch>
-        <Route exact path="/" render={() => <MainScreen gacha={gacha} party={party} onNavClick={onNavClick} />} />
+        <Route exact path="/" render={() => <MainScreen gacha={gacha} party={party} onNavClick={onCardClick} />} />
         <Route path="/gacha" component={GachaScreen} />
         <Route path="/party" component={PartyScreen} />
         <Route path="/map" component={MapScreen} />
