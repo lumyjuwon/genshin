@@ -3,12 +3,9 @@ import styled from 'styled-components';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 
 import { GachaScreen, PartyScreen, MainScreen, Policy, Notice, MapScreen } from 'src/pages';
-import { Header, TextBlockButton, FlexWrapper, RoundImage, Footer, FocusWrapper } from 'src/components';
-import { LangaugeSelector } from './LangaugeSelector';
-import { trans, Lang, LangCode, getCurrentLanguage } from './resources/languages';
+import { Header, FlexWrapper, RoundImage, Footer, FocusWrapper, HeaderNavigation } from 'src/components';
+import { trans, Lang } from './resources/languages';
 import NotFound from './NotFound';
-import { isDev } from './utils';
-import { HeaderNavigation } from './components/HeaderNavigation';
 
 const MainLogo = styled.div({
   fontSize: '30px',
@@ -49,17 +46,6 @@ const ToggleIcon = styled.div({
   }
 });
 
-const HeaderNav = styled.div({
-  transition: '.2s ease-out',
-  '&:hover': {
-    textShadow: '0 0 8px #f1f2f3, 0 0 15px #f1f2f3, 0 0 20px #f1f2f3',
-    boxShadow: 'inset 0 -2px 0 #f1f2f3'
-  },
-  '&.selected': {
-    boxShadow: 'inset 0 -2px 0 #f1f2f3'
-  }
-});
-
 function App() {
   const [isHeaderNavVisible, setIsHeaderNavVisible] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -69,14 +55,10 @@ function App() {
   const map = useRef<HTMLDivElement>(null);
   let selectedNav = useRef<HTMLDivElement>(null);
   const headerNavRefs = {
-    selectedNav,
-    navList,
     gacha,
     party,
     map
   };
-
-  console.log(selectedNav);
 
   useEffect(() => {
     function handleResize() {
@@ -92,9 +74,7 @@ function App() {
   }
 
   function deleteSelected(ref: React.RefObject<HTMLDivElement>) {
-    console.log('before remove', ref.current?.textContent);
     ref.current?.classList.remove('selected');
-    console.log('after remove', ref.current?.textContent);
   }
 
   function onCardClick(ref: React.RefObject<HTMLDivElement>) {
@@ -109,10 +89,13 @@ function App() {
     setIsHeaderNavVisible(bool);
   }
 
-  function callbackSetSelectedNav(ref: React.RefObject<HTMLDivElement>) {
-    console.log('callback', ref.current?.textContent);
+  function calllbackGetSelectedNav() {
+    return selectedNav;
+  }
+
+  function callbackSetSelectedNav(ref: React.RefObject<HTMLDivElement>): React.RefObject<HTMLDivElement> {
     selectedNav = ref;
-    console.log('set selected', selectedNav.current?.textContent);
+    return selectedNav;
   }
 
   return (
@@ -148,6 +131,7 @@ function App() {
                     onDelete={deleteSelected}
                     onToggle={onToggleClick}
                     setSelectedNav={callbackSetSelectedNav}
+                    getSelectedNav={calllbackGetSelectedNav}
                   />
                 </FocusWrapper>
               ) : (
@@ -156,6 +140,7 @@ function App() {
                   onDelete={deleteSelected}
                   onToggle={onToggleClick}
                   setSelectedNav={callbackSetSelectedNav}
+                  getSelectedNav={calllbackGetSelectedNav}
                 />
               )}
             </NavList>
