@@ -1,8 +1,8 @@
-import React, { RefObject, useRef, useState, useEffect } from 'react';
+import React, { RefObject, useState } from 'react';
 import styled from 'styled-components';
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-import { Header, TextBlockButton, FlexWrapper, RoundImage, Footer, FocusWrapper } from 'src/components';
+import { TextBlockButton, FlexWrapper } from 'src/components';
 import { LangaugeSelector } from '../LangaugeSelector';
 import { trans, Lang, LangCode, getCurrentLanguage } from '../resources/languages';
 import { isDev } from '../utils';
@@ -20,8 +20,6 @@ const HeaderNav = styled.div({
 
 interface Props {
   refs: {
-    selectedNav: React.RefObject<HTMLDivElement>;
-    navList: React.RefObject<HTMLDivElement>;
     gacha: React.RefObject<HTMLDivElement>;
     party: React.RefObject<HTMLDivElement>;
     map: React.RefObject<HTMLDivElement>;
@@ -29,18 +27,16 @@ interface Props {
   onDelete: Function;
   onToggle: Function;
   setSelectedNav: Function;
+  getSelectedNav: Function;
 }
 
 export function HeaderNavigation(props: Props) {
   const [langCode, setLangCode] = useState<LangCode>(getCurrentLanguage());
 
   function onNavClick(ref: React.RefObject<HTMLDivElement>) {
-    console.log('clicked ref', ref.current?.textContent);
-    props.onDelete(props.refs.selectedNav);
-    props.setSelectedNav(ref);
-    // why this always undefined??...
-    console.log(props.refs.selectedNav.current?.textContent);
-    props.refs.selectedNav.current?.classList.add('selected');
+    props.onDelete(props.getSelectedNav());
+    let selected = props.setSelectedNav(ref);
+    selected.current?.classList.add('selected');
 
     if (window.innerWidth <= 768) {
       props.onToggle();
