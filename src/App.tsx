@@ -110,7 +110,7 @@ function App() {
     <BrowserRouter>
       <Header>
         <>
-          <Link to="/">
+          <Link to='/'>
             <div
               onClick={() => {
                 deleteSelected(selectedNav);
@@ -127,9 +127,9 @@ function App() {
               </FlexWrapper>
             </div>
           </Link>
-          <Navigation id="nav-list">
+          <Navigation id='nav-list'>
             <ToggleIcon onClick={() => onToggleClick()}>
-              <i className="fas fa-bars"></i>
+              <i className='fas fa-bars'></i>
             </ToggleIcon>
             <NavList>
               {windowWidth < 768 ? (
@@ -156,13 +156,13 @@ function App() {
         </>
       </Header>
       <Switch>
-        <Route exact path="/" render={() => <MainScreen gacha={gacha} party={party} onNavClick={onCardClick} />} />
-        <Route path="/gacha" component={GachaScreen} />
-        <Route path="/party" component={PartyScreen} />
-        <Route path="/map" component={MapScreen} />
-        <Route path="/policy" component={Policy} />
-        <Route path="/notice" component={Notice} />
-        <Route path="*" component={NotFound} />
+        <Route exact path='/' render={() => <MainScreen gacha={gacha} party={party} onNavClick={onCardClick} />} />
+        <Route path='/gacha' component={GachaScreen} />
+        <Route path='/party' component={PartyScreen} />
+        <Route path='/map' component={MapScreen} />
+        <Route path='/policy' component={Policy} />
+        <Route path='/notice' component={Notice} />
+        <Route path='*' component={NotFound} />
       </Switch>
       <Footer selectedNav={selectedNav} onClick={() => deleteSelected(selectedNav)} />
     </BrowserRouter>
