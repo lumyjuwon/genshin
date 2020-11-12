@@ -17,7 +17,6 @@ export function CharacterStatRegexText(props: Props) {
   // @ts-ignore
   if (props.children.match(/\d.+%/g)?.length > 0) statPercent = props.children.match(/\d.+%/g)[0];
 
-  console.log(props.children.replace(/\s/g, '_').replace(/\d.+%/g, ''));
   return (
     <P>
       <RegexColorText regex={/\d.+%/g} color={'#ff0000'} isBold>

@@ -1,13 +1,14 @@
-import React, { RefObject, useRef, useState } from 'react';
+import React, { RefObject, useRef, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 
 import { GachaScreen, PartyScreen, MainScreen, Policy, Notice, MapScreen } from 'src/pages';
-import { Header, TextBlockButton, FlexWrapper, RoundImage, Footer } from 'src/components';
+import { Header, TextBlockButton, FlexWrapper, RoundImage, Footer, FocusWrapper } from 'src/components';
 import { LangaugeSelector } from './LangaugeSelector';
 import { trans, Lang, LangCode, getCurrentLanguage } from './resources/languages';
 import NotFound from './NotFound';
 import { isDev } from './utils';
+import { HeaderNavigation } from './components/HeaderNavigation';
 
 const MainLogo = styled.div({
   fontSize: '30px',
@@ -28,17 +29,14 @@ const NavList = styled.div({
   alignItems: 'center',
   width: '100%',
   '@media screen and (max-width: 768px)': {
-    display: 'none',
-    '&.responsive': {
-      display: 'flex',
-      flexDirection: 'column',
-      position: 'absolute',
-      top: '10vh',
-      left: '0',
-      backgroundColor: '#111',
-      textAlign: 'center',
-      zIndex: 15
-    }
+    display: 'flex',
+    flexDirection: 'column',
+    position: 'absolute',
+    top: '10vh',
+    left: '0',
+    backgroundColor: '#111',
+    textAlign: 'center',
+    zIndex: 15
   }
 });
 
@@ -63,44 +61,58 @@ const HeaderNav = styled.div({
 });
 
 function App() {
-  const [langCode, setLangCode] = useState<LangCode>(getCurrentLanguage());
+  const [isHeaderNavVisible, setIsHeaderNavVisible] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const navList = useRef<HTMLDivElement>(null);
   const gacha = useRef<HTMLDivElement>(null);
   const party = useRef<HTMLDivElement>(null);
   const map = useRef<HTMLDivElement>(null);
   let selectedNav = useRef<HTMLDivElement>(null);
+  const headerNavRefs = {
+    selectedNav,
+    navList,
+    gacha,
+    party,
+    map
+  };
+
+  console.log(selectedNav);
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowWidth(window.innerWidth);
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  });
 
   function onToggleClick() {
-    if (navList.current?.classList.contains('responsive')) {
-      navList.current?.classList.remove('responsive');
-    } else {
-      navList.current?.classList.add('responsive');
-    }
+    setIsHeaderNavVisible(!isHeaderNavVisible);
   }
 
   function deleteSelected(ref: React.RefObject<HTMLDivElement>) {
+    console.log('before remove', ref.current?.textContent);
     ref.current?.classList.remove('selected');
-  }
-
-  function onNavClick(ref: React.RefObject<HTMLDivElement>) {
-    deleteSelected(selectedNav);
-    selectedNav = ref;
-    selectedNav.current?.classList.add('selected');
-
-    if (window.innerWidth <= 768) {
-      onToggleClick();
-    }
-
-    window.scrollTo(0, 0);
+    console.log('after remove', ref.current?.textContent);
   }
 
   function onCardClick(ref: React.RefObject<HTMLDivElement>) {
     deleteSelected(selectedNav);
     selectedNav = ref;
     selectedNav.current?.classList.add('selected');
-    if (window.innerWidth <= 768) {
-      navList.current?.classList.remove('responsive');
-    }
+
+    window.scrollTo(0, 0);
+  }
+
+  function callbackSetIsHeaderNavVisible(bool: boolean) {
+    setIsHeaderNavVisible(bool);
+  }
+
+  function callbackSetSelectedNav(ref: React.RefObject<HTMLDivElement>) {
+    console.log('callback', ref.current?.textContent);
+    selectedNav = ref;
+    console.log('set selected', selectedNav.current?.textContent);
   }
 
   return (
@@ -108,7 +120,11 @@ function App() {
       <Header>
         <>
           <Link to="/">
-            <div onClick={(event: React.MouseEvent<HTMLDivElement, MouseEvent>) => deleteSelected(selectedNav)}>
+            <div
+              onClick={() => {
+                deleteSelected(selectedNav);
+              }}
+            >
               <FlexWrapper>
                 <>
                   <RoundImage
@@ -120,48 +136,30 @@ function App() {
               </FlexWrapper>
             </div>
           </Link>
-          <NavList id="nav-list" ref={navList}>
-            <FlexWrapper styles={{ justifyContent: 'space-between', width: '100%', small: { flexDirection: 'column' } }}>
-              <>
-                <FlexWrapper styles={{ small: { flexDirection: 'column', width: '100%' } }}>
-                  <>
-                    <Link to="/gacha">
-                      <HeaderNav ref={gacha}>
-                        <TextBlockButton onClick={() => onNavClick(gacha)} styles={{ buttonStyles: { small: { width: '95vw' } } }}>
-                          {trans(Lang.Gacha)}
-                        </TextBlockButton>
-                      </HeaderNav>
-                    </Link>
-                    <Link to="/party">
-                      <HeaderNav ref={party}>
-                        <TextBlockButton onClick={() => onNavClick(party)} styles={{ buttonStyles: { small: { width: '95vw' } } }}>
-                          {trans(Lang.Party)}
-                        </TextBlockButton>
-                      </HeaderNav>
-                    </Link>
-                    {isDev() && (
-                      <Link to="/map">
-                        <HeaderNav ref={map}>
-                          <TextBlockButton onClick={() => onNavClick(map)} styles={{ buttonStyles: { small: { width: '95vw' } } }}>
-                            {trans(Lang.Map)}
-                          </TextBlockButton>
-                        </HeaderNav>
-                      </Link>
-                    )}
-                  </>
-                </FlexWrapper>
-                <LangaugeSelector
-                  defaultValue={langCode}
-                  onCallBack={(_langCode: LangCode) => {
-                    setLangCode(_langCode);
-                  }}
+          <div id="nav-list">
+            <ToggleIcon onClick={() => onToggleClick()}>
+              <i className="fas fa-bars"></i>
+            </ToggleIcon>
+            <NavList>
+              {windowWidth < 768 ? (
+                <FocusWrapper ref={navList} visible={isHeaderNavVisible} setVisible={callbackSetIsHeaderNavVisible}>
+                  <HeaderNavigation
+                    refs={headerNavRefs}
+                    onDelete={deleteSelected}
+                    onToggle={onToggleClick}
+                    setSelectedNav={callbackSetSelectedNav}
+                  />
+                </FocusWrapper>
+              ) : (
+                <HeaderNavigation
+                  refs={headerNavRefs}
+                  onDelete={deleteSelected}
+                  onToggle={onToggleClick}
+                  setSelectedNav={callbackSetSelectedNav}
                 />
-              </>
-            </FlexWrapper>
-          </NavList>
-          <ToggleIcon onClick={() => onToggleClick()}>
-            <i className="fas fa-bars"></i>
-          </ToggleIcon>
+              )}
+            </NavList>
+          </div>
         </>
       </Header>
       <Switch>
