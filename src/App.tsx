@@ -46,6 +46,14 @@ const ToggleIcon = styled.div({
   }
 });
 
+const Navigation = styled.div({
+  flaot: 'right',
+  width: '100%',
+  '@media screen and (max-width: 768px)': {
+    textAlign: 'right'
+  }
+});
+
 function App() {
   const [isHeaderNavVisible, setIsHeaderNavVisible] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -119,7 +127,7 @@ function App() {
               </FlexWrapper>
             </div>
           </Link>
-          <div id="nav-list">
+          <Navigation id="nav-list">
             <ToggleIcon onClick={() => onToggleClick()}>
               <i className="fas fa-bars"></i>
             </ToggleIcon>
@@ -144,7 +152,7 @@ function App() {
                 />
               )}
             </NavList>
-          </div>
+          </Navigation>
         </>
       </Header>
       <Switch>
