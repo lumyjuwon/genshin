@@ -8,7 +8,6 @@ import {
   CharacterTalentItem,
   serverTimeInfo
 } from 'src/resources/data';
-import { setServers } from 'dns';
 import { FlexWrapper, RoundImage, TooltipText, DropDownButton, BoxModelWrapper } from 'src/components';
 import { DailySetImages } from 'src/resources/images';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
@@ -68,15 +67,10 @@ export function DailyAbyssal() {
 
   const serverTime = new Date();
   serverTime.setUTCHours(serverTime.getUTCHours() + serverTimeInfo[serverTimeZone]);
-  let serverDay: string = convertToTextDay(serverTime.getUTCDay());
+  let serverDay: string = convertToTextDay(serverTime.getUTCHours() < 4 ? serverTime.getUTCDay() - 1 : serverTime.getUTCDay());
 
   const weaponAscesionItemSet = Object.keys(weaponAscesionItemInfo);
   const characterTalentItemSet = Object.keys(characterTalentItemInfo);
-
-  // Server Time reset in 4 AM of serverTime
-  if (serverTime.getUTCHours() < 4) {
-    serverDay = convertToTextDay(serverTime.getUTCDay() - 1);
-  }
 
   function changeServerTime(index: number) {
     setServerTimeZone(servers[index]);
