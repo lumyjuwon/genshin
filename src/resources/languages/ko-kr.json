@@ -451,5 +451,21 @@
   "Party_Name_Overlap": "이미 사용중인 이름입니다.",
   "Party_Blank_Space": "적어도 하나 이상의 캐릭터를 배치해야 합니다.",
 
+  "Daily_Abyssal_MainScreen": "오늘의 비경탐색 재료",
+  "Daily_Character": "캐릭터 특성 재료",
+  "Daily_Weapon": "무기 승급 재료",
+  "Freedom": "자유",
+  "Resistance": "투쟁",
+  "Ballad": "시문",
+  "Prosperity": "번영",
+  "Diligence": "근면",
+  "Gold": "황금",
+  "Decarabian": "고탑 왕",
+  "Boreal_Wolf": "나팔",
+  "Dandelion_Gladiator": "라이언 투사",
+  "Guyun": "고운한림",
+  "Elixir": "연단",
+  "Aerosiderite": "흑운철",
+
   "Map": "지도"
 }

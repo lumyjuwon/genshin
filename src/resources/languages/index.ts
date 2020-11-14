@@ -462,6 +462,22 @@ enum Lang {
   Party_Name_Overlap = 'Party_Name_Overlap',
   Party_Blank_Space = 'Party_Blank_Space',
 
+  Daily_Abyssal_MainScreen = 'Daily_Abyssal_MainScreen',
+  Daily_Character = 'Daily_Character',
+  Daily_Weapon = 'Daily_Weapon',
+  Freedom = 'Freedom',
+  Resistance = 'Resistance',
+  Ballad = 'Ballad',
+  Prosperity = 'Prosperity',
+  Diligence = 'Diligence',
+  Gold = 'Gold',
+  Decarabian = 'Decarabian',
+  Boreal_Wolf = 'Boreal_Wolf',
+  Dandelion_Gladiator = 'Dandelion_Gladiator',
+  Guyun = 'Guyun',
+  Elixir = 'Elixir',
+  Aerosiderite = 'Aerosiderite',
+
   Map = 'Map'
 }
 

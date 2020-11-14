@@ -450,5 +450,21 @@
   "Party_Name_Overlap": "You have already used this name!",
   "Party_Blank_Space": "You have to arrange at least 1 character",
 
+  "Daily_Abyssal_MainScreen": "Today's Abyssal Items",
+  "Daily_Character": "Character Talent",
+  "Daily_Weapon": "Weapon Ascesion",
+  "Freedom": "Freedom",
+  "Resistance": "Resistance",
+  "Ballad": "Ballad",
+  "Prosperity": "Prosperity",
+  "Diligence": "Diligence",
+  "Gold": "Gold",
+  "Decarabian": "Decarabian",
+  "Boreal_Wolf": "Boreal Wolf",
+  "Dandelion_Gladiator": "Dandelion Gladiator",
+  "Guyun": "Guyun",
+  "Elixir": "Elixir",
+  "Aerosiderite": "Aerosiderite",
+
   "Map": "Map"
 }
