@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import { trans, Lang } from '../../resources/languages';
 import { FlexWrapper, ImageContentCard } from 'src/components';
+import { DailyAbyssal } from './DailyAbyssal';
 
 const ImageContainer = styled.div({
   zIndex: -1,
@@ -66,7 +67,7 @@ export function MainScreen(props: Props) {
     <>
       <ImageContainer />
       <Containter>
-        <Title>{trans(Lang.Main_Title)}</Title>
+        <DailyAbyssal />
         <FlexWrapper styles={{ width: '100%' }}>
           <FlexWrapper
             styles={{
