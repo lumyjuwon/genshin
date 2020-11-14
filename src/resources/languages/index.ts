@@ -463,6 +463,7 @@ enum Lang {
   Party_Blank_Space = 'Party_Blank_Space',
 
   Daily_Abyssal_MainScreen = 'Daily_Abyssal_MainScreen',
+  Change_Server = 'Change_Server',
   Daily_Character = 'Daily_Character',
   Daily_Weapon = 'Daily_Weapon',
   Freedom = 'Freedom',
