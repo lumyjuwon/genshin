@@ -1,0 +1,86 @@
+{
+  "Freedom": {
+    "day": ["Monday", "Thursday", "Sunday"],
+    "items": {
+      "Teachings of 'Freedom'": {
+        "rank": 2
+      },
+      "Guide to 'Freedom'": {
+        "rank": 3
+      },
+      "Philosophies of 'Freedom'": {
+        "rank": 4
+      }      
+    }
+  },
+  "Resistance": {
+    "day": ["Tuesday", "Friday", "Sunday"],
+    "items": {
+      "Teachings of 'Resistance'": {
+        "rank": 2
+      },
+      "Guide to 'Resistance'": {
+        "rank": 3
+      },
+      "Philosophies of 'Resistance'": {
+        "rank": 4
+      }
+    }
+  },
+  "Ballad": {
+    "day": ["Wednesday", "Saturday", "Sunday"],
+    "items": {
+      "Teachings of 'Ballad'": {
+        "rank": 2
+      },
+      "Guide to 'Ballad'": {
+        "rank": 3
+      },
+      "Philosophies of 'Ballad'": {
+        "rank": 4
+      }
+    }
+  },
+  "Prosperity": {
+    "day": ["Monday", "Thursday", "Sunday"],
+    "items": {
+      "Teachings of 'Prosperity'": {
+        "rank": 2
+      },
+      "Guide to 'Prosperity'": {
+        "rank": 3
+      },
+      "Philosophies of 'Prosperity'": {
+        "rank": 4
+      }
+    }
+  },
+  "Diligence": {
+    "day": ["Tuesday", "Friday", "Sunday"],
+    "items": {
+      "Teachings of 'Diligence'": {
+        "rank": 2
+      },
+      "Guide to 'Diligence'": {
+        "rank": 3
+      },
+      "Philosophies of 'Diligence'": {
+        "rank": 4
+      }
+    }
+  },
+  "Gold": {
+    "day": ["Wednesday", "Saturday", "Sunday"],
+    "items": {
+      "Teachings of 'Gold'": {
+        "rank": 2
+      },
+      "Guide to 'Gold'": {
+        "rank": 3
+      },
+      "Philosophies of 'Gold'": {
+        "rank": 4
+      }
+    }
+  }
+}

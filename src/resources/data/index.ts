@@ -69,4 +69,28 @@ interface ArtifactSet {
   };
 }
 
-export { gachaInfo, characterInfo, weaponInfo, artifactInfo };
+export interface CharacterTalentItem {
+  [setName: string]: {
+    day: Array<string>;
+    items: {
+      [itemName: string]: {
+        rank: number;
+      };
+    };
+  };
+}
+const characterTalentItemInfo: CharacterTalentItem = require('../data/character-talent-item-info.json');
+
+export interface WeaponAscesionItem {
+  [setName: string]: {
+    day: Array<string>;
+    items: {
+      [itemName: string]: {
+        rank: number;
+      };
+    };
+  };
+}
+const weaponAscesionItemInfo: WeaponAscesionItem = require('../data/weapon-ascension-item-info.json');
+
+export { gachaInfo, characterInfo, weaponInfo, artifactInfo, characterTalentItemInfo, weaponAscesionItemInfo };

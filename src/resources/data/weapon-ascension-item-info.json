@@ -1,0 +1,104 @@
+{
+  "Decarabian": {
+    "day": ["Monday", "Thursday", "Sunday"],
+    "items": {
+      "Tile of Decarabian's Tower": {
+        "rank": 2
+      },
+      "Debris of Decarabian's City": {
+        "rank": 3
+      },
+      "Fragment of Decarabian's Epic":{
+        "rank": 4
+      },
+      "Scattered Piece of Decarabian's Dream": {
+        "rank": 5
+      }
+    }
+  },
+  "Boreal_Wolf": {
+    "day": ["Tuesday", "Friday", "Sunday"],
+    "items": {
+      "Boreal Wolf's Milk Tooth":{
+        "rank": 2
+      },
+      "Boreal Wolf's Cracked Tooth": {
+        "rank": 3
+      },
+      "Boreal Wolf's Broken Fang": {
+        "rank": 4
+      },
+      "Boreal Wolf's Nostalgia": {
+        "rank": 5
+      }
+    }
+  },
+  "Dandelion_Gladiator": {
+    "day": ["Wednesday", "Saturday", "Sunday"],
+    "items": {
+      "Fetters of the Dandelion Gladiator": {
+        "rank": 2
+      },
+      "Chains of the Dandelion Gladiator": {
+        "rank": 3
+      },
+      "Shackles of the Dandelion Gladiator": {
+        "rank": 4
+      },
+      "Dream of the Dandelion Gladiator": {
+        "rank": 5
+      }
+    }
+  },
+  "Guyun": {
+    "day": ["Monday", "Thursday", "Sunday"],
+    "items": {
+      "Luminous Sands from Guyun": {
+        "rank": 2
+      },
+      "Lustrous Stone from Guyun": {
+        "rank": 3
+      },
+      "Relic from Guyun": {
+        "rank": 4
+      },
+      "Divine Body from Guyun": {
+        "rank": 5
+      }
+    }
+  },
+  "Elixir": {
+    "day": ["Tuesday", "Friday", "Sunday"],
+    "items": {
+      "Mist Veiled Lead Elixir": {
+        "rank": 2
+      },
+      "Mist Veiled Mercury Elixir": {
+        "rank": 3
+      },
+      "Mist Veiled Gold Elixir": {
+        "rank": 4
+      },
+      "Mist Veiled Primo Elixir": {
+        "rank": 5
+      }
+    }
+  },
+  "Aerosiderite": {
+    "day": ["Wednesday", "Saturday", "Sunday"],
+    "items": {
+      "Grain of Aerosiderite": {
+        "rank": 2
+      },
+      "Piece of Aerosiderite": {
+        "rank": 3
+      },
+      "Bit of Aerosiderite": {
+        "rank": 4
+      },
+      "Chunk of Aerosiderite": {
+        "rank": 5
+      }
+    }
+  }
+}

@@ -66,4 +66,19 @@ const MapImages: ImageMap = {
   Map: require('./map/map.png')
 };
 
-export { CharacterImages, ElementImages, ItemImages, GachaImages, MainScreen, GemImages, CategoryImages, MapImages };
+const DailySetImages: ImageMap = {
+  Freedom: require('./items/daily-set/Freedom.png'),
+  Resistance: require('./items/daily-set/Resistance.png'),
+  Ballad: require('./items/daily-set/Ballad.png'),
+  Prosperity: require('./items/daily-set/Prosperity.png'),
+  Diligence: require('./items/daily-set/Diligence.png'),
+  Gold: require('./items/daily-set/Gold.png'),
+  Decarabian: require('./items/daily-set/Decarabian.png'),
+  Boreal_Wolf: require('./items/daily-set/Boreal_Wolf.png'),
+  Dandelion_Gladiator: require('./items/daily-set/Dandelion_Gladiator.png'),
+  Guyun: require('./items/daily-set/Guyun.png'),
+  Elixir: require('./items/daily-set/Elixir.png'),
+  Aerosiderite: require('./items/daily-set/Aerosiderite.png')
+};
+
+export { CharacterImages, ElementImages, ItemImages, GachaImages, MainScreen, GemImages, CategoryImages, MapImages, DailySetImages };
