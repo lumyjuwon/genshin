@@ -13,7 +13,7 @@ const Container = styled.div({
   justifyContent: 'center',
   alignItems: 'center',
   flexDirection: 'column',
-  backgroundColor: 'rgba(0,0,0,.7)',
+  backgroundColor: 'rgba(20,20,20,.8)',
   fontSize: '20px',
   borderRadius: '16px',
   boxShadow: '10px 10px 6px rgba(0,0,0,0.7)',
@@ -27,7 +27,10 @@ const SetContainer = styled.div({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  margin: '10px 10px 0'
+  margin: '10px 10px 0',
+  '@media screen and (max-width: 768px)': {
+    flexDirection: 'column'
+  }
 });
 
 const InnerContainer = styled.div({
@@ -91,8 +94,7 @@ export function DailyAbyssal() {
             </InnerContainer>
           </>
         </FlexWrapper>
-        |<br />|
-        <FlexWrapper styles={{ flexDirection: 'column' }}>
+        <FlexWrapper styles={{ flexDirection: 'column', small: { margin: '10px 0 0' } }}>
           <>
             <div>{trans(Lang.Daily_Weapon)}</div>
             <InnerContainer>
