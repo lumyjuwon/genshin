@@ -93,4 +93,9 @@ export interface WeaponAscesionItem {
 }
 const weaponAscesionItemInfo: WeaponAscesionItem = require('../data/weapon-ascension-item-info.json');
 
-export { gachaInfo, characterInfo, weaponInfo, artifactInfo, characterTalentItemInfo, weaponAscesionItemInfo };
+interface ServerTime {
+  [timezone: string]: number;
+}
+const serverTimeInfo: ServerTime = require('../data/server-time.json');
+
+export { gachaInfo, characterInfo, weaponInfo, artifactInfo, characterTalentItemInfo, weaponAscesionItemInfo, serverTimeInfo };
