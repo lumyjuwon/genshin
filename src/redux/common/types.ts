@@ -1,6 +1,6 @@
 export enum Continent {
   Asia = 'Asia',
-  NA = 'NA',
+  US = 'US',
   EU = 'EU'
 }
 
