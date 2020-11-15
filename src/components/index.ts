@@ -1,7 +1,7 @@
 // Common
-export { Header } from './Header';
+export { Header } from './header/Header';
 export { Footer } from './Footer';
-export { HeaderNavigation } from './HeaderNavigation';
+export { HeaderNavigation } from './header/HeaderNavigation';
 
 // Wrapper
 export { ScreenInnerWrapper } from './wrapper/ScreenInnerWrapper';

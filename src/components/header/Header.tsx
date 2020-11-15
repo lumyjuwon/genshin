@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-
-interface Props {
-  children: JSX.Element;
-}
+import { Navs } from 'src/App';
+import { HeaderNavigation } from './HeaderNavigation';
+import { LangaugeSelector } from './LangaugeSelector';
+import { MainLogo } from './MainLogo';
 
 const HeaderOuter = styled.header({
   borderBottom: '1px solid #515253',
@@ -26,10 +26,18 @@ const HeaderInner = styled.div({
   }
 });
 
+interface Props {
+  navs: Navs;
+}
+
 export function Header(props: Props) {
   return (
     <HeaderOuter>
-      <HeaderInner>{props.children}</HeaderInner>
+      <HeaderInner>
+        <MainLogo />
+        <HeaderNavigation navs={props.navs} />
+        <LangaugeSelector />
+      </HeaderInner>
     </HeaderOuter>
   );
 }

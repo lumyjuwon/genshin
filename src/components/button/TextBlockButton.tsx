@@ -43,13 +43,8 @@ interface Props {
   styles?: {
     buttonStyles?: ButtonStyle;
   };
-  onClick?: Function;
 }
 
 export function TextBlockButton(props: Props) {
-  return (
-    <Button {...props.styles?.buttonStyles} onClick={() => props.onClick?.()}>
-      {props.children}
-    </Button>
-  );
+  return <Button {...props.styles?.buttonStyles}>{props.children}</Button>;
 }

@@ -37,10 +37,7 @@ const CopyRight = styled.div({
   }
 });
 
-interface Props {
-  onClick: Function;
-  selectedNav?: React.RefObject<HTMLDivElement>;
-}
+interface Props {}
 
 export function Footer(props: Props) {
   return (
@@ -49,23 +46,19 @@ export function Footer(props: Props) {
         <CopyRight>Copyrightⓒ 2020</CopyRight>
         <FlexWrapper>
           <>
-            <Link to="/policy">
-              <div onClick={() => props.onClick(props.selectedNav)}>
-                <TextUnderLineButton>
-                  <FooterText>{trans(Lang.Main_Privacy_Policy)}</FooterText>
-                </TextUnderLineButton>
-              </div>
+            <Link to='/policy'>
+              <TextUnderLineButton>
+                <FooterText>{trans(Lang.Main_Privacy_Policy)}</FooterText>
+              </TextUnderLineButton>
             </Link>
-            <Link to="/notice">
-              <div onClick={() => props.onClick(props.selectedNav)}>
-                <TextUnderLineButton>
-                  <FooterText>{trans(Lang.Main_Notice)}</FooterText>
-                </TextUnderLineButton>
-              </div>
+            <Link to='/notice'>
+              <TextUnderLineButton>
+                <FooterText>{trans(Lang.Main_Notice)}</FooterText>
+              </TextUnderLineButton>
             </Link>
             <ContactUs>
               <TextUnderLineButton>
-                <a href="mailto:genshinsimul@gmail.com">
+                <a href='mailto:genshinsimul@gmail.com'>
                   <FooterText>Contact Us</FooterText>
                 </a>
               </TextUnderLineButton>
