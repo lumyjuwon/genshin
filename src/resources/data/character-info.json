@@ -66,26 +66,43 @@
     },
     "Ascesion": {
       "first": {
-
+        "Vajrada Amethyst Sliver": 1,
+        "Cor Lapis": 3,
+        "Whopperflower Nectar": 3
       },
       "second": {
-
+        "Vajrada Amethyst Fragment": 3,
+        "Lightning Prism": 2,
+        "Cor Lapis": 10,
+        "Whopperflower Nectar": 15
       },
       "third": {
-
+        "Vajrada Amethyst Fragment": 6,
+        "Lightning Prism": 4,
+        "Cor Lapis": 20,
+        "Shimmering Nectar": 12
       },
       "fourth": {
-
+        "Vajrada Amethyst Chunk": 3,
+        "Lightning Prism": 8,
+        "Cor Lapis": 30,
+        "Shimmering Nectar": 18
       },
       "fifth": {
-
+        "Vajrada Amethyst Chunk": 6,
+        "Lightning Prism": 12,
+        "Cor Lapis": 45,
+        "Energy Nectar": 12
       },
       "sixth": {
-
+        "Vajrada Amethyst Gemstone": 6,
+        "Lightning Prism": 20,
+        "Cor Lapis": 60,
+        "Energy Nectar": 24
       }
     },
     "Talent": {
-      "item": ""
+      "item": "Prosperity"
     }
   },
   "Diluc": {
@@ -102,26 +119,43 @@
     },
     "Ascesion": {
       "first": {
-
+        "Agnidus Agate Sliver": 1,
+        "Small Lamp Grass": 3,
+        "Recruit's Insignia": 3
       },
       "second": {
-
+        "Agnidus Agate Fragment": 3,
+        "Everflame Seed": 2,
+        "Small Lamp Grass": 10,
+        "Recruit's Insignia": 15
       },
       "third": {
-
+        "Agnidus Agate Fragment": 6,
+        "Everflame Seed": 4,
+        "Small Lamp Grass": 20,
+        "Sergeant's Insignia": 12
       },
       "fourth": {
-
+        "Agnidus Agate Chunk": 3,
+        "Everflame Seed": 8,
+        "Small Lamp Grass": 30,
+        "Sergeant's Insignia": 18
       },
       "fifth": {
-
+        "Agnidus Agate Chunk": 6,
+        "Everflame Seed": 12,
+        "Small Lamp Grass": 45,
+        "Lieutenant's Insignia": 12
       },
       "sixth": {
-
+        "Agnidus Agate Gemstone": 6,
+        "Everflame Seed": 20,
+        "Small Lamp Grass": 60,
+        "Lieutenant's Insignia": 24
       }
     },
     "Talent": {
-      "item": ""
+      "item": "Resistance"
     }
   },
   "Jean": {
@@ -138,26 +172,43 @@
     },
     "Ascesion": {
       "first": {
-
+        "Vayuda Turquoise Sliver": 1,
+        "Dandelion Seed": 3,
+        "Damaged Mask": 3
       },
       "second": {
-
+        "Vayuda Turquoise Fragment": 3,
+        "Hurricane Seed": 2,
+        "Dandelion Seed": 10,
+        "Damaged Mask": 15
       },
       "third": {
-
+        "Vayuda Turquoise Fragment": 6,
+        "Hurricane Seed": 4,
+        "Dandelion Seed": 20,
+        "Stained Mask": 12 
       },
       "fourth": {
-
+        "Vayuda Turquoise Chunk": 3,
+        "Hurricane Seed": 8,
+        "Dandelion Seed": 30,
+        "Stained Mask": 18
       },
       "fifth": {
-
+        "Vayuda Turquoise Chunk": 6,
+        "Hurricane Seed": 12,
+        "Dandelion Seed": 45,
+        "Ominous Mask": 12
       },
       "sixth": {
-
+        "Vayuda Turquoise Gemstone": 6,
+        "Hurricane Seed": 20,
+        "Dandelion Seed": 60,
+        "Ominous Mask": 24
       }
     },
     "Talent": {
-      "item": ""
+      "item": "Resistance"
     }
   },
   "Qiqi": {
@@ -174,26 +225,43 @@
     },
     "Ascesion": {
       "first": {
-
+        "Shivada Jade Sliver": 1,
+        "Violetgrass": 3,
+        "Divining Scroll": 3
       },
       "second": {
-
+        "Shivada Jade Fragment": 3,
+        "Hoarfrost Core": 2,
+        "Violetgrass": 10,
+        "Divining Scroll": 15
       },
       "third": {
-
+        "Shivada Jade Fragment": 6,
+        "Hoarfrost Core": 4,
+        "Violetgrass": 20,
+        "Sealed Scroll": 12
       },
       "fourth": {
-
+        "Shivada Jade Chunk": 3,
+        "Hoarfrost Core": 8,
+        "Violetgrass": 30,
+        "Sealed Scroll": 18
       },
       "fifth": {
-
+        "Shivada Jade Chunk": 6,
+        "Hoarfrost Core": 12,
+        "Violetgrass": 45,
+        "Forbidden Curse Scroll": 12
       },
       "sixth": {
-
+        "Shivada Jade Gemstone": 6,
+        "Hoarfrost Core": 20,
+        "Violetgrass": 60,
+        "Forbidden Curse Scroll": 24
       }
     },
     "Talent": {
-      "item": ""
+      "item": "Prosperity"
     }
   },
   "Mona": {
@@ -210,26 +278,43 @@
     },
     "Ascesion": {
       "first": {
-
+        "Varunada Lazurite Sliver": 1,
+        "Philanemo Mushroom": 3,
+        "Whopperflower Nectar": 3
       },
       "second": {
-
+        "Varunada Lazurite Fragment": 3,
+        "Cleansing Heart": 2,
+        "Philanemo Mushroom": 10,
+        "Whopperflower Nectar": 15
       },
       "third": {
-
+        "Varunada Lazurite Fragment": 6,
+        "Cleansing Heart": 4,
+        "Philanemo Mushroom": 20,
+        "Shimmering Nectar": 12
       },
       "fourth": {
-
+        "Varunada Lazurite Chunk": 3,
+        "Cleansing Heart": 8,
+        "Philanemo Mushroom": 30,
+        "Shimmering Nectar": 18
       },
       "fifth": {
-
+        "Varunada Lazurite Chunk": 6,
+        "Cleansing Heart": 12,
+        "Philanemo Mushroom": 45,
+        "Energy Nectar": 12
       },
       "sixth": {
-
+        "Varunada Lazurite Gemstone": 6,
+        "Cleansing Heart": 20,
+        "Philanemo Mushroom": 60,
+        "Energy Nectar": 24
       }
     },
     "Talent": {
-      "item": ""
+      "item": "Resistance"
     }
   },
   "Venti": {
@@ -246,26 +331,43 @@
     },
     "Ascesion": {
       "first": {
-
+        "Vayuda Turquoise Sliver": 1,
+        "Cecilia": 3,
+        "Slime Condensate": 3
       },
       "second": {
-
+        "Vayuda Turquoise Fragment": 3,
+        "Hurricane Seed": 2,
+        "Cecilia": 10,
+        "Slime Condensate": 15
       },
       "third": {
-
+        "Vayuda Turquoise Fragment": 6,
+        "Hurricane Seed": 4,
+        "Cecilia": 20,
+        "Slime Secretions": 12
       },
       "fourth": {
-
+        "Vayuda Turquoise Chunk": 3,
+        "Hurricane Seed": 8,
+        "Cecilia": 30,
+        "Slime Secretions": 18
       },
       "fifth": {
-
+        "Vayuda Turquoise Chunk": 6,
+        "Hurricane Seed": 12,
+        "Cecilia": 45,
+        "Slime Concentrate": 12
       },
       "sixth": {
-
+        "Vayuda Turquoise Gemstone": 6,
+        "Hurricane Seed": 20,
+        "Cecilia": 60,
+        "Slime Concentrate": 24
       }
     },
     "Talent": {
-      "item": ""
+      "item": "Ballad"
     }
   },
   "Tartaglia": {
@@ -282,26 +384,43 @@
     },
     "Ascesion": {
       "first": {
-
+        "Varunada Lazurite Sliver": 1,
+        "Starconch": 3,
+        "Recruit's Insignia": 3
       },
       "second": {
-
+        "Varunada Lazurite Fragment": 3,
+        "Cleansing Heart": 2,
+        "Starconch": 10,
+        "Recruit's Insignia": 15
       },
       "third": {
-
+        "Varunada Lazurite Fragment": 6,
+        "Cleansing Heart": 4,
+        "Starconch": 20,
+        "Sergeant's Insignia": 12
       },
       "fourth": {
-
+        "Varunada Lazurite Chunk": 3,
+        "Cleansing Heart": 8,
+        "Starconch": 30,
+        "Sergeant's Insignia": 18
       },
       "fifth": {
-
+        "Varunada Lazurite Chunk": 6,
+        "Cleansing Heart": 12,
+        "Starconch": 45,
+        "Lieutenant's Insignia": 12
       },
       "sixth": {
-
+        "Varunada Lazurite Gemstone": 6,
+        "Cleansing Heart": 20,
+        "Starconch": 60,
+        "Lieutenant's Insignia": 24
       }
     },
     "Talent": {
-      "item": ""
+      "item": "Freedom"
     }
   },
   "Traveler (Anemo)": {
@@ -318,22 +437,34 @@
     },
     "Ascesion": {
       "first": {
-
+        "Brilliant Diamond Sliver": 1,
+        "Windwheel Aster": 3,
+        "Damaged Mask": 3
       },
       "second": {
-
+        "Brilliant Diamond Fragment": 3,
+        "Windwheel Aster": 10,
+        "Damaged Mask": 15
       },
       "third": {
-
+        "Brilliant Diamond Fragment": 6,
+        "Windwheel Aster": 20,
+        "Stained Mask": 12
       },
       "fourth": {
-
+        "Brilliant Diamond Chunk": 3,
+        "Windwheel Aster": 30,
+        "Stained Mask": 18
       },
       "fifth": {
-
+        "Brilliant Diamond Chunk": 6,
+        "Windwheel Aster": 45,
+        "Ominous Mask": 12
       },
       "sixth": {
-
+        "Brilliant Diamond Gemstone": 6,
+        "Windwheel Aster": 60,
+        "Ominous Mask": 24
       }
     },
     "Talent": {
@@ -354,22 +485,34 @@
     },
     "Ascesion": {
       "first": {
-
+        "Brilliant Diamond Sliver": 1,
+        "Windwheel Aster": 3,
+        "Damaged Mask": 3
       },
       "second": {
-
+        "Brilliant Diamond Fragment": 3,
+        "Windwheel Aster": 10,
+        "Damaged Mask": 15
       },
       "third": {
-
+        "Brilliant Diamond Fragment": 6,
+        "Windwheel Aster": 20,
+        "Stained Mask": 12
       },
       "fourth": {
-
+        "Brilliant Diamond Chunk": 3,
+        "Windwheel Aster": 30,
+        "Stained Mask": 18
       },
       "fifth": {
-
+        "Brilliant Diamond Chunk": 6,
+        "Windwheel Aster": 45,
+        "Ominous Mask": 12
       },
       "sixth": {
-
+        "Brilliant Diamond Gemstone": 6,
+        "Windwheel Aster": 60,
+        "Ominous Mask": 24
       }
     },
     "Talent": {
