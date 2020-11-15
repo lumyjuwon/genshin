@@ -72,7 +72,7 @@ export function MainScreen(props: Props) {
             }}
           >
             <>
-              <Link to='/gacha'>
+              <Link to="/gacha">
                 <ImageContentCard
                   src={`${require('../../resources/images/mainscreen/gacha.png')}`}
                   title={trans(Lang.Gacha)}
@@ -83,14 +83,14 @@ export function MainScreen(props: Props) {
                       height: '400px',
                       padding: '20px 10px',
                       backgroundColor: 'rgba(20, 20, 20, .8)',
-                      medium: { width: '210px', margin: '20px' },
+                      medium: { width: '210px', margin: '20px', height: '350px' },
                       small: { width: '260px' }
                     },
                     imageStyles: { width: '200px', height: '200px', medium: { width: '150px', height: '150px' } }
                   }}
                 />
               </Link>
-              <Link to='/party'>
+              <Link to="/party">
                 <ImageContentCard
                   src={`${require('../../resources/images/mainscreen/party.png')}`}
                   title={trans(Lang.Party)}
@@ -101,7 +101,7 @@ export function MainScreen(props: Props) {
                       height: '400px',
                       padding: '20px 10px',
                       backgroundColor: 'rgba(20, 20, 20, .8)',
-                      medium: { width: '210px', margin: '20px' },
+                      medium: { width: '210px', margin: '20px', height: '350px' },
                       small: { width: '260px' }
                     },
                     imageStyles: { width: '200px', height: '200px', medium: { width: '150px', height: '150px' } }
@@ -110,15 +110,15 @@ export function MainScreen(props: Props) {
               </Link>
               <ImageContentCard
                 src={`${require('../../resources/images/mainscreen/Paimon.jpg')}`}
-                title='Coming Soon...'
-                desc='Coming Soon...'
+                title="Coming Soon..."
+                desc="Coming Soon..."
                 styles={{
                   cardStyles: {
                     width: '300px',
                     height: '400px',
                     padding: '20px 10px',
                     backgroundColor: 'rgba(20, 20, 20, .8)',
-                    medium: { width: '210px', margin: '20px' },
+                    medium: { width: '210px', margin: '20px', height: '350px' },
                     small: { width: '260px' }
                   },
                   imageStyles: { width: '200px', height: '200px', medium: { width: '150px', height: '150px' } }
