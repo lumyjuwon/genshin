@@ -8,9 +8,10 @@ import {
   CharacterTalentItem,
   serverTimeInfo
 } from 'src/resources/data';
-import { FlexWrapper, RoundImage, TooltipText, DropDownButton, BoxModelWrapper } from 'src/components';
+import { FlexWrapper, RoundImage, TooltipText, DropDownButton, BoxModelWrapper, GridWrapper } from 'src/components';
 import { DailySetImages } from 'src/resources/images';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
+import { image } from 'html2canvas/dist/types/css/types/image';
 
 const Container = styled.div({
   display: 'flex',
@@ -37,25 +38,18 @@ const SetContainer = styled.div({
   alignItems: 'center',
   margin: '10px 10px 0',
   '@media screen and (max-width: 768px)': {
-    flexDirection: 'column'
+    flexDirection: 'column',
+    margin: '10px 0 0'
   }
 });
 
-const InnerContainer = styled.div({
-  display: 'flex',
-  margin: '10px 0 0',
-  padding: '0 10px'
+const SubTitle = styled.div({
+  margin: '0 0 10px'
 });
 
 const ImageContainer = styled.div({
   position: 'relative',
   margin: '0 8px'
-});
-
-const All = styled.div({
-  width: '170px',
-  textAlign: 'center',
-  color: '#ff0000'
 });
 
 type Items = WeaponAscesionItem | CharacterTalentItem;
@@ -74,6 +68,9 @@ export function DailyAbyssal() {
   const serverTime = new Date();
   serverTime.setUTCHours(serverTime.getUTCHours() + serverTimeInfo[serverTimeZone]);
   let serverDay: string = convertToTextDay(serverTime.getUTCHours() < 4 ? serverTime.getUTCDay() - 1 : serverTime.getUTCDay());
+  let imageSize: { width: string; height: string } = { width: '80px', height: '80px' };
+
+  serverDay === 'Sunday' && (imageSize = { width: '60px', height: '60px' });
 
   const weaponAscesionItemSet = Object.keys(weaponAscesionItemInfo);
   const characterTalentItemSet = Object.keys(characterTalentItemInfo);
@@ -126,42 +123,34 @@ export function DailyAbyssal() {
         </>
       </FlexWrapper>
       <SetContainer>
-        <FlexWrapper styles={{ margin: '0 10px 0 0', flexDirection: 'column' }}>
+        <FlexWrapper styles={{ margin: '0 10px 0 0', flexDirection: 'column', small: { margin: '0' } }}>
           <>
-            <div>{trans(Lang.Daily_Character)}</div>
-            <InnerContainer>
-              {serverDay === 'Sunday' ? (
-                <All>{trans(Lang.Daily_Sunday)}</All>
-              ) : (
-                getTodayAbyssalItems(characterTalentItemSet, characterTalentItemInfo).map((name) => {
-                  return (
-                    <ImageContainer key={name}>
-                      <RoundImage src={DailySetImages[name]} styles={{ width: '80px', height: '80px' }} />
-                      <TooltipText styles={{ bottom: '0', fontSize: '14px' }}>{trans(Lang[name as KeyLang])}</TooltipText>
-                    </ImageContainer>
-                  );
-                })
-              )}
-            </InnerContainer>
+            <SubTitle>{trans(Lang.Daily_Character)}</SubTitle>
+            <GridWrapper styles={{ width: '240px', medium: { width: '240px' }, small: { width: '240px' } }}>
+              {getTodayAbyssalItems(characterTalentItemSet, characterTalentItemInfo).map((name) => {
+                return (
+                  <ImageContainer key={name}>
+                    <RoundImage src={DailySetImages[name]} styles={imageSize} />
+                    <TooltipText styles={{ bottom: '0', fontSize: '14px' }}>{trans(Lang[name as KeyLang])}</TooltipText>
+                  </ImageContainer>
+                );
+              })}
+            </GridWrapper>
           </>
         </FlexWrapper>
         <FlexWrapper styles={{ flexDirection: 'column', small: { margin: '10px 0 0' } }}>
           <>
-            <div>{trans(Lang.Daily_Weapon)}</div>
-            <InnerContainer>
-              {serverDay === 'Sunday' ? (
-                <All>{trans(Lang.Daily_Sunday)}</All>
-              ) : (
-                getTodayAbyssalItems(weaponAscesionItemSet, weaponAscesionItemInfo).map((name) => {
-                  return (
-                    <ImageContainer key={name}>
-                      <RoundImage src={DailySetImages[name]} styles={{ width: '80px', height: '80px' }} />
-                      <TooltipText styles={{ bottom: '0', fontSize: '14px' }}>{trans(Lang[name as KeyLang])}</TooltipText>
-                    </ImageContainer>
-                  );
-                })
-              )}
-            </InnerContainer>
+            <SubTitle>{trans(Lang.Daily_Weapon)}</SubTitle>
+            <GridWrapper styles={{ width: '240px', medium: { width: '240px' }, small: { width: '240px' } }}>
+              {getTodayAbyssalItems(weaponAscesionItemSet, weaponAscesionItemInfo).map((name) => {
+                return (
+                  <ImageContainer key={name}>
+                    <RoundImage src={DailySetImages[name]} styles={imageSize} />
+                    <TooltipText styles={{ bottom: '0', fontSize: '14px' }}>{trans(Lang[name as KeyLang])}</TooltipText>
+                  </ImageContainer>
+                );
+              })}
+            </GridWrapper>
           </>
         </FlexWrapper>
       </SetContainer>
