@@ -66,6 +66,9 @@ export function Menu(props: Props) {
   const partyListRef = useRef<HTMLDivElement>(null);
   const characters: PartyData = useSelector<RootState, any>((state) => state.party.partyData);
   const parties: PartyPreset = useSelector<RootState, any>((state) => state.party.partyPreset);
+  let partyName: string;
+
+  InputRef.current?.value && (partyName = InputRef.current.value);
 
   function saveCurrentParty() {
     const partyName = InputRef.current?.value;
@@ -274,7 +277,12 @@ export function Menu(props: Props) {
         isVisible={isOverrideConfirmVisible}
         title={`${trans(Lang.Party_Override_Question)}'${InputRef.current?.value}'`}
         confirm={() => {
-          partyDispatch.SetParty(characters);
+          partyDispatch.SaveParty({
+            [partyName]: {
+              partyData: characters,
+              latestTime: getFormatDate()
+            }
+          });
           setIsOverrideConfirmVisible(false);
           InputRef.current && (InputRef.current.value = '');
         }}
