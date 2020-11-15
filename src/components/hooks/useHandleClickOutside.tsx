@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 
-export function useHandleClickOutside(ref: React.RefObject<HTMLElement>, className: string, node: any = ref) {
+export function useHandleClickOutside(ref: React.RefObject<HTMLElement>, visible: boolean, onOutsideClick: Function) {
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (node.classList?.contains(className) && !ref.current?.contains(event.target as Node)) {
-        node.classList.remove(className);
+      if (visible && !ref.current?.contains(event.target as Node)) {
+        onOutsideClick();
       }
     }
 
@@ -13,5 +13,5 @@ export function useHandleClickOutside(ref: React.RefObject<HTMLElement>, classNa
       // Unbind the event listener on clean up
       document.removeEventListener('click', handleClickOutside);
     };
-  }, [ref, className, node.classList]);
+  }, [ref, visible, onOutsideClick]);
 }

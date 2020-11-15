@@ -21,7 +21,7 @@ const Logo = styled.div({
 
 export function MainLogo() {
   return (
-    <Link to='/'>
+    <Link to="/">
       <FlexWrapper>
         <>
           <RoundImage

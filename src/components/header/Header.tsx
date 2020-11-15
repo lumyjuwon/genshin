@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 
 import { HeaderNavigation, Navs } from './HeaderNavigation';
-import { LangaugeSelector } from './LangaugeSelector';
 import { MainLogo } from './MainLogo';
+import { useHandleClickOutside } from 'src/components';
 
 const HeaderOuter = styled.header({
   borderBottom: '1px solid #515253',
@@ -26,17 +26,55 @@ const HeaderInner = styled.div({
   }
 });
 
+const ToggleIcon = styled.div({
+  display: 'none',
+  fontSize: '30px',
+  color: '#f1f2f3',
+  '@media screen and (max-width: 768px)': {
+    display: 'block'
+  }
+});
+
 interface Props {
   navs: Navs;
 }
 
 export function Header(props: Props) {
+  const [isNavVisible, setIsNavVisible] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const navigationRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowWidth(window.innerWidth);
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useHandleClickOutside(navigationRef, isNavVisible, onClickNavOrOutside);
+
+  function onClickNavOrOutside() {
+    setIsNavVisible(false);
+  }
+
   return (
     <HeaderOuter>
       <HeaderInner>
         <MainLogo />
-        <HeaderNavigation navs={props.navs} />
-        <LangaugeSelector />
+        {windowWidth < 768 ? (
+          isNavVisible && <HeaderNavigation ref={navigationRef} navs={props.navs} onClick={onClickNavOrOutside} />
+        ) : (
+          <HeaderNavigation navs={props.navs} />
+        )}
+        <ToggleIcon
+          onClick={() => {
+            setIsNavVisible(!isNavVisible);
+          }}
+        >
+          <i className="fas fa-bars"></i>
+        </ToggleIcon>
       </HeaderInner>
     </HeaderOuter>
   );

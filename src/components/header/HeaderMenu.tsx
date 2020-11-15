@@ -23,12 +23,13 @@ interface Props {
   isSelected: boolean;
   link: string;
   title: string;
+  onClick?: Function;
 }
 
 export function HeaderMenu(props: Props) {
   return (
     <Link to={props.link}>
-      <HeaderNav isSelected={props.isSelected}>
+      <HeaderNav isSelected={props.isSelected} onClick={() => props.onClick?.()}>
         <TextBlockButton styles={{ buttonStyles: { small: { width: '95vw' } } }}>{props.title}</TextBlockButton>
       </HeaderNav>
     </Link>
