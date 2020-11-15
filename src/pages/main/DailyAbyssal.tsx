@@ -12,6 +12,10 @@ import { FlexWrapper, RoundImage, TooltipText, DropDownButton, BoxModelWrapper, 
 import { DailySetImages } from 'src/resources/images';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
 
+import { CommonState } from 'src/redux/common/types';
+import { useSelector } from 'react-redux';
+import { RootState } from 'src/redux/rootReducer';
+
 const Container = styled.div({
   display: 'flex',
   padding: '10px 20px',
@@ -54,8 +58,7 @@ const ImageContainer = styled.div({
 type Items = WeaponAscesionItem | CharacterTalentItem;
 
 export function DailyAbyssal() {
-  const servers = Object.keys(serverTimeInfo);
-  const [serverTimeZone, setServerTimeZone] = useState<string>(servers[0]);
+  const server: string = useSelector<RootState, any>((state) => state.common.server);
 
   /*
   0. 현재 utc 시간을 가져온다.
@@ -65,7 +68,7 @@ export function DailyAbyssal() {
   */
 
   const serverTime = new Date();
-  serverTime.setUTCHours(serverTime.getUTCHours() + serverTimeInfo[serverTimeZone]);
+  serverTime.setUTCHours(serverTime.getUTCHours() + serverTimeInfo[server]);
   let serverDay: string = convertToTextDay(serverTime.getUTCHours() < 4 ? serverTime.getUTCDay() - 1 : serverTime.getUTCDay());
   let imageSize: { width: string; height: string } = { width: '80px', height: '80px' };
   let fontSize = '14px';
@@ -77,10 +80,6 @@ export function DailyAbyssal() {
 
   const weaponAscesionItemSet = Object.keys(weaponAscesionItemInfo);
   const characterTalentItemSet = Object.keys(characterTalentItemInfo);
-
-  function changeServerTime(index: number) {
-    setServerTimeZone(servers[index]);
-  }
 
   function getTodayAbyssalItems(sets: Array<string>, info: Items): string[] {
     let todayItems: string[] = [];
@@ -94,36 +93,8 @@ export function DailyAbyssal() {
 
   return (
     <Container>
-      <FlexWrapper styles={{ width: '100%', justifyContent: 'space-between', small: { flexDirection: 'column' } }}>
-        <>
-          {trans(Lang.Daily_Abyssal_MainScreen)}
-          <FlexWrapper styles={{ margin: '0 0 0 15px', small: { margin: '10px 0 0' } }}>
-            <>
-              <BoxModelWrapper styles={{ margin: '0 5px 0 0', medium: { margin: '0 5px 0 0' }, small: { margin: '0 5px 0 0' } }}>
-                <div>{trans(Lang.Change_Server)}</div>
-              </BoxModelWrapper>
-              <DropDownButton
-                id='server-time'
-                onClick={changeServerTime}
-                items={servers}
-                content={serverTimeZone}
-                defaultValue={serverTimeZone}
-                styles={{
-                  containerStyles: {
-                    width: '80px',
-                    height: 'max-content',
-                    margin: '0'
-                  },
-                  listStyles: {
-                    width: '80px',
-                    top: '33px',
-                    right: '-1px'
-                  }
-                }}
-              />
-            </>
-          </FlexWrapper>
-        </>
+      <FlexWrapper styles={{ width: '100%', small: { flexDirection: 'column' } }}>
+        <>{trans(Lang.Daily_Abyssal_MainScreen)}</>
       </FlexWrapper>
       <SetContainer>
         <FlexWrapper styles={{ margin: '0 10px 0 0', flexDirection: 'column', small: { margin: '0' } }}>
