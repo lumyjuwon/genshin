@@ -20,7 +20,7 @@ export function LangaugeSelector(props: Props) {
         ref={languageRef}
         id={'lang'}
         items={languages}
-        defaultValue={langCode}
+        defaultValue={languages[langCode]}
         onClick={(langCode: LangCode) => {
           changeLang(langCode);
         }}
