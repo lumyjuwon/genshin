@@ -11,7 +11,6 @@ import {
 import { FlexWrapper, RoundImage, TooltipText, DropDownButton, BoxModelWrapper, GridWrapper } from 'src/components';
 import { DailySetImages } from 'src/resources/images';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
-import { image } from 'html2canvas/dist/types/css/types/image';
 
 const Container = styled.div({
   display: 'flex',
@@ -104,7 +103,7 @@ export function DailyAbyssal() {
                 <div>{trans(Lang.Change_Server)}</div>
               </BoxModelWrapper>
               <DropDownButton
-                id="server-time"
+                id='server-time'
                 onClick={changeServerTime}
                 items={servers}
                 content={serverTimeZone}

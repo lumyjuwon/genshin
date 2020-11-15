@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { FlexWrapper } from 'src/components';
 import { HeaderMenu } from './HeaderMenu';
 import { useHistory } from 'react-router-dom';
-import { RegionSelector } from './RegionSelector';
+import { ServerSelector } from './ServerSelector';
 import { LangaugeSelector } from './LangaugeSelector';
 
 export interface Navs {
@@ -75,7 +75,7 @@ export const HeaderNavigation = React.forwardRef<HTMLDivElement, Props>((props, 
           </FlexWrapper>
         </FlexWrapper>
         <FlexWrapper>
-          <RegionSelector />
+          <ServerSelector />
           <LangaugeSelector />
         </FlexWrapper>
       </NavList>

@@ -7,6 +7,10 @@ import { Header, FlexWrapper, RoundImage, Footer, FocusWrapper, HeaderNavigation
 import { trans, Lang } from './resources/languages';
 import NotFound from './NotFound';
 import { Navs } from './components/header/HeaderNavigation';
+import { fetchIpApi } from './api';
+import { useTranslation } from 'react-i18next';
+import { RootState } from './redux/rootReducer';
+import { useSelector } from 'react-redux';
 
 const ToggleIcon = styled.div({
   display: 'none',
@@ -34,6 +38,7 @@ function App() {
     map: { path: '/map', title: trans(Lang.Map), component: MapScreen },
     character: { path: '/character', title: trans(Lang.Character), component: CharacterScreen }
   };
+  useTranslation();
 
   // useEffect(() => {
   //   function handleResize() {

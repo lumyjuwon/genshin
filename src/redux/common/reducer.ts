@@ -1,15 +1,15 @@
-import { ActionTypes, CommonAction, CommonState } from './types';
+import { ActionTypes, CommonAction, CommonState, Continent } from './types';
 
 const initialState: CommonState = {
-  region: ''
+  server: Continent.NA
 };
 
 export function commonReducer(state = initialState, action: CommonAction) {
   switch (action.type) {
-    case ActionTypes.SetRegion:
+    case ActionTypes.SetServer:
       return {
         ...state,
-        region: action.payload
+        server: action.payload
       };
     default:
       return state;

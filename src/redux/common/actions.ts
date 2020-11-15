@@ -1,8 +1,8 @@
-import { ActionTypes } from './types';
+import { ActionTypes, Continent } from './types';
 
-export function SetRegion(region: string) {
+export function SetServer(server: Continent) {
   return {
-    type: ActionTypes.SetRegion,
-    payload: region
+    type: ActionTypes.SetServer,
+    payload: server
   };
 }

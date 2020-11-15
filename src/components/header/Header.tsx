@@ -73,7 +73,7 @@ export function Header(props: Props) {
             setIsNavVisible(!isNavVisible);
           }}
         >
-          <i className="fas fa-bars"></i>
+          <i className='fas fa-bars'></i>
         </ToggleIcon>
       </HeaderInner>
     </HeaderOuter>

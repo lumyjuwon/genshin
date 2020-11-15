@@ -1,14 +1,20 @@
+export enum Continent {
+  Asia = 'Asia',
+  NA = 'NA',
+  EU = 'EU'
+}
+
 export interface CommonState {
-  region: string;
+  server: Continent;
 }
 
 export enum ActionTypes {
-  SetRegion = 'SetRegion'
+  SetServer = 'SetServer'
 }
 
-interface SetRegion {
-  type: ActionTypes.SetRegion;
-  payload: string;
+interface SetServer {
+  type: ActionTypes.SetServer;
+  payload: Continent;
 }
 
-export type CommonAction = SetRegion;
+export type CommonAction = SetServer;

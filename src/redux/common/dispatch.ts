@@ -1,6 +1,7 @@
 import { store } from '../store';
-import { SetRegion } from './actions';
+import { SetServer } from './actions';
+import { Continent } from './types';
 
 export const commonDispatch = {
-  SetRegion: (region: string) => store.dispatch(SetRegion(region))
+  SetServer: (server: Continent) => store.dispatch(SetServer(server))
 };
