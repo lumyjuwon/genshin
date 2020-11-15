@@ -46,7 +46,7 @@ interface Props {
 
 export function HeaderNavigation(props: Props) {
   const history = useHistory();
-  const [selectedNavPath, setSelectedNavPath] = useState<string>('');
+  const [selectedNavPath, setSelectedNavPath] = useState<string>('/');
 
   history.listen((location) => {
     setSelectedNavPath(location.pathname);
