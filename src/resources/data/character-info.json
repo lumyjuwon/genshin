@@ -10,6 +10,46 @@
       "ATK": "289",
       "DEF": "572",
       "Additional": "Pyro DMG 28.8%"
+    },
+    "Ascesion": {
+      "first": {
+        "Agnidus Agate Sliver": 1,
+        "Philanemo Mushroom": 3,
+        "Divining Scroll": 3
+      },
+      "second": {
+        "Agnidus Agate Fragment": 3,
+        "Everflame Seed": 2,
+        "Philanemo Mushroom": 10,
+        "Divining Scroll": 15
+      },
+      "third": {
+        "Agnidus Agate Fragment": 6,
+        "Everflame Seed": 4,
+        "Philanemo Mushroom": 20,
+        "Sealed Scroll": 12
+      },
+      "fourth": {
+        "Agnidus Agate Chunk": 3,
+        "Everflame Seed": 8,
+        "Philanemo Mushroom": 30,
+        "Sealed Scroll": 18
+      },
+      "fifth": {
+        "Agnidus Agate Chunk": 6,
+        "Everflame Seed": 12,
+        "Philanemo Mushroom": 45,
+        "Forbidden Curse Scroll": 12
+      },
+      "sixth": {
+        "Agnidus Agate Gemstone": 6,
+        "Everflame Seed": 20,
+        "Philanemo Mushroom": 60,
+        "Forbidden Curse Scroll": 24
+      }
+    },
+    "Talent": {
+      "item": "Freedom"
     }
   },
   "Keqing": {
@@ -23,6 +63,29 @@
       "ATK": "300",
       "DEF": "743",
       "Additional": "CRIT DMG 188.4%"
+    },
+    "Ascesion": {
+      "first": {
+
+      },
+      "second": {
+
+      },
+      "third": {
+
+      },
+      "fourth": {
+
+      },
+      "fifth": {
+
+      },
+      "sixth": {
+
+      }
+    },
+    "Talent": {
+      "item": ""
     }
   },
   "Diluc": {
@@ -36,6 +99,29 @@
       "ATK": "312",
       "DEF": "729",
       "Additional": "CRIT Rate 24.2%"
+    },
+    "Ascesion": {
+      "first": {
+
+      },
+      "second": {
+
+      },
+      "third": {
+
+      },
+      "fourth": {
+
+      },
+      "fifth": {
+
+      },
+      "sixth": {
+
+      }
+    },
+    "Talent": {
+      "item": ""
     }
   },
   "Jean": {
@@ -49,6 +135,29 @@
       "ATK": "211",
       "DEF": "678",
       "Additional": "Healing Bonus 16.6%"
+    },
+    "Ascesion": {
+      "first": {
+
+      },
+      "second": {
+
+      },
+      "third": {
+
+      },
+      "fourth": {
+
+      },
+      "fifth": {
+
+      },
+      "sixth": {
+
+      }
+    },
+    "Talent": {
+      "item": ""
     }
   },
   "Qiqi": {
@@ -62,6 +171,29 @@
       "ATK": "266",
       "DEF": "857",
       "Additional": "Healing Bonus 22.2%"
+    },
+    "Ascesion": {
+      "first": {
+
+      },
+      "second": {
+
+      },
+      "third": {
+
+      },
+      "fourth": {
+
+      },
+      "fifth": {
+
+      },
+      "sixth": {
+
+      }
+    },
+    "Talent": {
+      "item": ""
     }
   },
   "Mona": {
@@ -75,6 +207,29 @@
       "ATK": "266",
       "DEF": "607",
       "Additional": "Energy Recharge 32.0%"
+    },
+    "Ascesion": {
+      "first": {
+
+      },
+      "second": {
+
+      },
+      "third": {
+
+      },
+      "fourth": {
+
+      },
+      "fifth": {
+
+      },
+      "sixth": {
+
+      }
+    },
+    "Talent": {
+      "item": ""
     }
   },
   "Venti": {
@@ -88,6 +243,29 @@
       "ATK": "214",
       "DEF": "543",
       "Additional": "Energy Recharge 24.0%"
+    },
+    "Ascesion": {
+      "first": {
+
+      },
+      "second": {
+
+      },
+      "third": {
+
+      },
+      "fourth": {
+
+      },
+      "fifth": {
+
+      },
+      "sixth": {
+
+      }
+    },
+    "Talent": {
+      "item": ""
     }
   },
   "Tartaglia": {
@@ -101,6 +279,29 @@
       "ATK": "137",
       "DEF": "366",
       "Additional": "Hydro DMG 7.2%"
+    },
+    "Ascesion": {
+      "first": {
+
+      },
+      "second": {
+
+      },
+      "third": {
+
+      },
+      "fourth": {
+
+      },
+      "fifth": {
+
+      },
+      "sixth": {
+
+      }
+    },
+    "Talent": {
+      "item": ""
     }
   },
   "Traveler (Anemo)": {
@@ -114,6 +315,29 @@
       "ATK": "204",
       "DEF": "669",
       "Additional": "ATK 24.0%"
+    },
+    "Ascesion": {
+      "first": {
+
+      },
+      "second": {
+
+      },
+      "third": {
+
+      },
+      "fourth": {
+
+      },
+      "fifth": {
+
+      },
+      "sixth": {
+
+      }
+    },
+    "Talent": {
+      "item": ""
     }
   },
   "Traveler (Geo)": {
@@ -127,6 +351,29 @@
       "ATK": "204",
       "DEF": "669",
       "Additional": "ATK 24.0%"
+    },
+    "Ascesion": {
+      "first": {
+
+      },
+      "second": {
+
+      },
+      "third": {
+
+      },
+      "fourth": {
+
+      },
+      "fifth": {
+
+      },
+      "sixth": {
+
+      }
+    },
+    "Talent": {
+      "item": ""
     }
   },
   "Noelle": {
@@ -140,6 +387,29 @@
       "ATK": "178",
       "DEF": "743",
       "Additional": "DEF 30.0%"
+    },
+    "Ascesion": {
+      "first": {
+
+      },
+      "second": {
+
+      },
+      "third": {
+
+      },
+      "fourth": {
+
+      },
+      "fifth": {
+
+      },
+      "sixth": {
+
+      }
+    },
+    "Talent": {
+      "item": ""
     }
   },
   "Razor": {
@@ -153,6 +423,29 @@
       "ATK": "217",
       "DEF": "699",
       "Additional": "Physical DMG 30.0%"
+    },
+    "Ascesion": {
+      "first": {
+
+      },
+      "second": {
+
+      },
+      "third": {
+
+      },
+      "fourth": {
+
+      },
+      "fifth": {
+
+      },
+      "sixth": {
+
+      }
+    },
+    "Talent": {
+      "item": ""
     }
   },
   "Ningguang": {
@@ -166,6 +459,29 @@
       "ATK": "188",
       "DEF": "508",
       "Additional": "Geo DMG 18.0%"
+    },
+    "Ascesion": {
+      "first": {
+
+      },
+      "second": {
+
+      },
+      "third": {
+
+      },
+      "fourth": {
+
+      },
+      "fifth": {
+
+      },
+      "sixth": {
+
+      }
+    },
+    "Talent": {
+      "item": ""
     }
   },
   "Lisa": {
@@ -179,6 +495,29 @@
       "ATK": "212",
       "DEF": "468",
       "Additional": "Element Mastery +72"
+    },
+    "Ascesion": {
+      "first": {
+
+      },
+      "second": {
+
+      },
+      "third": {
+
+      },
+      "fourth": {
+
+      },
+      "fifth": {
+
+      },
+      "sixth": {
+
+      }
+    },
+    "Talent": {
+      "item": ""
     }
   },
   "Kaeya": {
@@ -192,6 +531,29 @@
       "ATK": "156",
       "DEF": "557",
       "Additional": "Energy Recharge 113.3%"
+    },
+    "Ascesion": {
+      "first": {
+
+      },
+      "second": {
+
+      },
+      "third": {
+
+      },
+      "fourth": {
+
+      },
+      "fifth": {
+
+      },
+      "sixth": {
+
+      }
+    },
+    "Talent": {
+      "item": ""
     }
   },
   "Fischl": {
@@ -205,6 +567,29 @@
       "ATK": "227",
       "DEF": "553",
       "Additional": "ATK 24.0%"
+    },
+    "Ascesion": {
+      "first": {
+
+      },
+      "second": {
+
+      },
+      "third": {
+
+      },
+      "fourth": {
+
+      },
+      "fifth": {
+
+      },
+      "sixth": {
+
+      }
+    },
+    "Talent": {
+      "item": ""
     }
   },
   "Chongyun": {
@@ -218,6 +603,29 @@
       "ATK": "208",
       "DEF": "603",
       "Additional": "ATK 24.0%"
+    },
+    "Ascesion": {
+      "first": {
+
+      },
+      "second": {
+
+      },
+      "third": {
+
+      },
+      "fourth": {
+
+      },
+      "fifth": {
+
+      },
+      "sixth": {
+
+      }
+    },
+    "Talent": {
+      "item": ""
     }
   },
   "Bennett": {
@@ -231,6 +639,29 @@
       "ATK": "156",
       "DEF": "630",
       "Additional": "Energy Recharge 20.0%"
+    },
+    "Ascesion": {
+      "first": {
+
+      },
+      "second": {
+
+      },
+      "third": {
+
+      },
+      "fourth": {
+
+      },
+      "fifth": {
+
+      },
+      "sixth": {
+
+      }
+    },
+    "Talent": {
+      "item": ""
     }
   },
   "Beidou": {
@@ -244,6 +675,29 @@
       "ATK": "209",
       "DEF": "658",
       "Additional": "Electro DMG 24.0%"
+    },
+    "Ascesion": {
+      "first": {
+
+      },
+      "second": {
+
+      },
+      "third": {
+
+      },
+      "fourth": {
+
+      },
+      "fifth": {
+
+      },
+      "sixth": {
+
+      }
+    },
+    "Talent": {
+      "item": ""
     }
   },
   "Barbara": {
@@ -257,6 +711,29 @@
       "ATK": "123",
       "DEF": "517",
       "Additional": "HP 12.0%"
+    },
+    "Ascesion": {
+      "first": {
+
+      },
+      "second": {
+
+      },
+      "third": {
+
+      },
+      "fourth": {
+
+      },
+      "fifth": {
+
+      },
+      "sixth": {
+
+      }
+    },
+    "Talent": {
+      "item": ""
     }
   },
   "Amber": {
@@ -270,6 +747,29 @@
       "ATK": "182",
       "DEF": "491",
       "Additional": "ATK 18.0%"
+    },
+    "Ascesion": {
+      "first": {
+
+      },
+      "second": {
+
+      },
+      "third": {
+
+      },
+      "fourth": {
+
+      },
+      "fifth": {
+
+      },
+      "sixth": {
+
+      }
+    },
+    "Talent": {
+      "item": ""
     }
   }, 
   "Sucrose": {
@@ -283,6 +783,29 @@
       "ATK": "129",
       "DEF": "574",
       "Additional": "Anemo DMG 18.0%"
+    },
+    "Ascesion": {
+      "first": {
+
+      },
+      "second": {
+
+      },
+      "third": {
+
+      },
+      "fourth": {
+
+      },
+      "fifth": {
+
+      },
+      "sixth": {
+
+      }
+    },
+    "Talent": {
+      "item": ""
     }
   },
   "Xiangling": {
@@ -296,6 +819,29 @@
       "ATK": "210",
       "DEF": "623",
       "Additional": "Element Mastery +96"
+    },
+    "Ascesion": {
+      "first": {
+
+      },
+      "second": {
+
+      },
+      "third": {
+
+      },
+      "fourth": {
+
+      },
+      "fifth": {
+
+      },
+      "sixth": {
+
+      }
+    },
+    "Talent": {
+      "item": ""
     }
   },
   "Xingqiu": {
@@ -309,6 +855,29 @@
       "ATK": "165",
       "DEF": "619",
       "Additional": "ATK 18.0%"
+    },
+    "Ascesion": {
+      "first": {
+
+      },
+      "second": {
+
+      },
+      "third": {
+
+      },
+      "fourth": {
+
+      },
+      "fifth": {
+
+      },
+      "sixth": {
+
+      }
+    },
+    "Talent": {
+      "item": ""
     }
   },
   "Diona": {
@@ -322,6 +891,29 @@
       "ATK": "No Data",
       "DEF": "No Data",
       "Additional": "No Data"
+    },
+    "Ascesion": {
+      "first": {
+
+      },
+      "second": {
+
+      },
+      "third": {
+
+      },
+      "fourth": {
+
+      },
+      "fifth": {
+
+      },
+      "sixth": {
+
+      }
+    },
+    "Talent": {
+      "item": ""
     }
   }
 }
