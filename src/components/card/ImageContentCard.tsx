@@ -73,7 +73,7 @@ const CardContainer = styled.div<CardStyle>((props: CardStyle) => {
       width: props.small?.width || props.width || 'fit-content',
       height: props.small?.height || props.height || 'auto',
       padding: props.small?.padding || props.padding || '10px',
-      margin: props.small?.margin || props.margin || '30px'
+      margin: props.small?.margin || props.margin || '30px 0 0'
     }
   };
 });
