@@ -49,10 +49,7 @@ const SubTitle = styled.div({
 
 const ImageContainer = styled.div({
   position: 'relative',
-  margin: '0 8px',
-  '@media screen and (max-width: 768px)': {
-    margin: '0 3px'
-  }
+  margin: '0 3px'
 });
 
 type Items = WeaponAscesionItem | CharacterTalentItem;
@@ -75,7 +72,7 @@ export function DailyAbyssal() {
   let fontSize = '14px';
 
   if (serverDay === 'Sunday') {
-    imageSize = { width: '67px', height: '67px' };
+    imageSize = { width: '70px', height: '70px' };
     fontSize = '12px';
   }
 
