@@ -49,7 +49,10 @@ const SubTitle = styled.div({
 
 const ImageContainer = styled.div({
   position: 'relative',
-  margin: '0 8px'
+  margin: '0 8px',
+  '@media screen and (max-width: 768px)': {
+    margin: '0 3px'
+  }
 });
 
 type Items = WeaponAscesionItem | CharacterTalentItem;
@@ -69,8 +72,12 @@ export function DailyAbyssal() {
   serverTime.setUTCHours(serverTime.getUTCHours() + serverTimeInfo[serverTimeZone]);
   let serverDay: string = convertToTextDay(serverTime.getUTCHours() < 4 ? serverTime.getUTCDay() - 1 : serverTime.getUTCDay());
   let imageSize: { width: string; height: string } = { width: '80px', height: '80px' };
+  let fontSize = '14px';
 
-  serverDay === 'Sunday' && (imageSize = { width: '60px', height: '60px' });
+  if (serverDay === 'Sunday') {
+    imageSize = { width: '67px', height: '67px' };
+    fontSize = '12px';
+  }
 
   const weaponAscesionItemSet = Object.keys(weaponAscesionItemInfo);
   const characterTalentItemSet = Object.keys(characterTalentItemInfo);
@@ -126,12 +133,12 @@ export function DailyAbyssal() {
         <FlexWrapper styles={{ margin: '0 10px 0 0', flexDirection: 'column', small: { margin: '0' } }}>
           <>
             <SubTitle>{trans(Lang.Daily_Character)}</SubTitle>
-            <GridWrapper styles={{ width: '240px', medium: { width: '240px' }, small: { width: '240px' } }}>
+            <GridWrapper styles={{ width: '250px', medium: { width: '250px' }, small: { width: '250px' } }}>
               {getTodayAbyssalItems(characterTalentItemSet, characterTalentItemInfo).map((name) => {
                 return (
                   <ImageContainer key={name}>
                     <RoundImage src={DailySetImages[name]} styles={imageSize} />
-                    <TooltipText styles={{ bottom: '0', fontSize: '14px' }}>{trans(Lang[name as KeyLang])}</TooltipText>
+                    <TooltipText styles={{ bottom: '0', fontSize: fontSize }}>{trans(Lang[name as KeyLang])}</TooltipText>
                   </ImageContainer>
                 );
               })}
@@ -141,12 +148,12 @@ export function DailyAbyssal() {
         <FlexWrapper styles={{ flexDirection: 'column', small: { margin: '10px 0 0' } }}>
           <>
             <SubTitle>{trans(Lang.Daily_Weapon)}</SubTitle>
-            <GridWrapper styles={{ width: '240px', medium: { width: '240px' }, small: { width: '240px' } }}>
+            <GridWrapper styles={{ width: '250px', medium: { width: '250px' }, small: { width: '250px' } }}>
               {getTodayAbyssalItems(weaponAscesionItemSet, weaponAscesionItemInfo).map((name) => {
                 return (
                   <ImageContainer key={name}>
                     <RoundImage src={DailySetImages[name]} styles={imageSize} />
-                    <TooltipText styles={{ bottom: '0', fontSize: '14px' }}>{trans(Lang[name as KeyLang])}</TooltipText>
+                    <TooltipText styles={{ bottom: '0', fontSize: fontSize }}>{trans(Lang[name as KeyLang])}</TooltipText>
                   </ImageContainer>
                 );
               })}
