@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { HeaderNavigation, Navs } from './HeaderNavigation';
 import { MainLogo } from './MainLogo';
 import { useHandleClickOutside } from 'src/components';
-import { RegionSelector } from './RegionSelector';
 
 const HeaderOuter = styled.header({
   borderBottom: '1px solid #515253',
