@@ -451,7 +451,7 @@
   "Party_Name_Overlap": "이미 사용중인 이름입니다.",
   "Party_Blank_Space": "적어도 하나 이상의 캐릭터를 배치해야 합니다.",
 
-  "Daily_Abyssal_MainScreen": "오늘의 비경탐색 재료",
+  "Daily_Abyssal_MainScreen": "파밍 가능한 비경탐색 재료",
   "Change_Server": "서버 변경",
   "Daily_Character": "캐릭터 특성 재료",
   "Daily_Weapon": "무기 승급 재료",
@@ -467,7 +467,6 @@
   "Guyun": "고운한림",
   "Elixir": "연단",
   "Aerosiderite": "흑운철",
-  "Daily_Sunday": "모두 가능(일요일)",
 
   "Map": "지도",
 
