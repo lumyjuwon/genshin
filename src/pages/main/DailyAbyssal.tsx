@@ -52,6 +52,12 @@ const ImageContainer = styled.div({
   margin: '0 8px'
 });
 
+const All = styled.div({
+  width: '170px',
+  textAlign: 'center',
+  color: '#ff0000'
+});
+
 type Items = WeaponAscesionItem | CharacterTalentItem;
 
 export function DailyAbyssal() {
@@ -91,7 +97,7 @@ export function DailyAbyssal() {
       <FlexWrapper styles={{ width: '100%', justifyContent: 'space-between', small: { flexDirection: 'column' } }}>
         <>
           {trans(Lang.Daily_Abyssal_MainScreen)}
-          <FlexWrapper>
+          <FlexWrapper styles={{ margin: '0 0 0 15px', small: { margin: '10px 0 0' } }}>
             <>
               <BoxModelWrapper styles={{ margin: '0 5px 0 0', medium: { margin: '0 5px 0 0' }, small: { margin: '0 5px 0 0' } }}>
                 <div>{trans(Lang.Change_Server)}</div>
@@ -105,7 +111,8 @@ export function DailyAbyssal() {
                 styles={{
                   containerStyles: {
                     width: '80px',
-                    height: 'max-content'
+                    height: 'max-content',
+                    margin: '0'
                   },
                   listStyles: {
                     width: '80px',
@@ -119,12 +126,12 @@ export function DailyAbyssal() {
         </>
       </FlexWrapper>
       <SetContainer>
-        <FlexWrapper styles={{ flexDirection: 'column' }}>
+        <FlexWrapper styles={{ margin: '0 10px 0 0', flexDirection: 'column' }}>
           <>
             <div>{trans(Lang.Daily_Character)}</div>
             <InnerContainer>
               {serverDay === 'Sunday' ? (
-                <div>All</div>
+                <All>{trans(Lang.Daily_Sunday)}</All>
               ) : (
                 getTodayAbyssalItems(characterTalentItemSet, characterTalentItemInfo).map((name) => {
                   return (
@@ -143,7 +150,7 @@ export function DailyAbyssal() {
             <div>{trans(Lang.Daily_Weapon)}</div>
             <InnerContainer>
               {serverDay === 'Sunday' ? (
-                <div>All</div>
+                <All>{trans(Lang.Daily_Sunday)}</All>
               ) : (
                 getTodayAbyssalItems(weaponAscesionItemSet, weaponAscesionItemInfo).map((name) => {
                   return (

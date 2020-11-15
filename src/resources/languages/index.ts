@@ -466,6 +466,7 @@ enum Lang {
   Change_Server = 'Change_Server',
   Daily_Character = 'Daily_Character',
   Daily_Weapon = 'Daily_Weapon',
+  Daily_Sunday = 'Daily_Sunday',
   Freedom = 'Freedom',
   Resistance = 'Resistance',
   Ballad = 'Ballad',
