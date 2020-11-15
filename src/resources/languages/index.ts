@@ -480,7 +480,9 @@ enum Lang {
   Elixir = 'Elixir',
   Aerosiderite = 'Aerosiderite',
 
-  Map = 'Map'
+  Map = 'Map',
+
+  Character = 'Character'
 }
 
 export type KeyLang = keyof typeof Lang;

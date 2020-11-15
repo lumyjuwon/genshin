@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Navs } from 'src/App';
-import { HeaderNavigation } from './HeaderNavigation';
+
+import { HeaderNavigation, Navs } from './HeaderNavigation';
 import { LangaugeSelector } from './LangaugeSelector';
 import { MainLogo } from './MainLogo';
 

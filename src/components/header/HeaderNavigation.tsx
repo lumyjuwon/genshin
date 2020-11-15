@@ -1,10 +1,19 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import { Navs } from 'src/App';
 import { FlexWrapper } from 'src/components';
 import { HeaderMenu } from './HeaderMenu';
 import { useHistory } from 'react-router-dom';
+
+export interface Navs {
+  [navName: string]: Nav;
+}
+
+export interface Nav {
+  path: string;
+  title: string;
+  component: React.FunctionComponent;
+}
 
 const Navigation = styled.div({
   flaot: 'right',

@@ -6,6 +6,7 @@ import { GachaScreen, PartyScreen, MainScreen, Policy, Notice, MapScreen, Charac
 import { Header, FlexWrapper, RoundImage, Footer, FocusWrapper, HeaderNavigation } from 'src/components';
 import { trans, Lang } from './resources/languages';
 import NotFound from './NotFound';
+import { Navs } from './components/header/HeaderNavigation';
 
 const ToggleIcon = styled.div({
   display: 'none',
@@ -24,16 +25,6 @@ const Navigation = styled.div({
   }
 });
 
-export interface Navs {
-  [navName: string]: Nav;
-}
-
-export interface Nav {
-  path: string;
-  title: string;
-  component: React.FunctionComponent;
-}
-
 function App() {
   const [isHeaderNavVisible, setIsHeaderNavVisible] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -41,7 +32,7 @@ function App() {
     gacha: { path: '/gacha', title: trans(Lang.Gacha), component: GachaScreen },
     party: { path: '/party', title: trans(Lang.Party), component: PartyScreen },
     map: { path: '/map', title: trans(Lang.Map), component: MapScreen },
-    character: { path: '/character', title: '캐릭터', component: CharacterScreen }
+    character: { path: '/character', title: trans(Lang.Character), component: CharacterScreen }
   };
 
   // useEffect(() => {
