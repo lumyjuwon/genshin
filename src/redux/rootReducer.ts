@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
 
+import { commonReducer } from './common/reducer';
 import { partyReducer } from './party/reducer';
 
 const rootReducer = combineReducers({
+  common: commonReducer,
   party: partyReducer
 });
 

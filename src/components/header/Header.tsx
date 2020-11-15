@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { HeaderNavigation, Navs } from './HeaderNavigation';
 import { LangaugeSelector } from './LangaugeSelector';
 import { MainLogo } from './MainLogo';
+import { RegionSelector } from './RegionSelector';
 
 const HeaderOuter = styled.header({
   borderBottom: '1px solid #515253',
@@ -36,6 +37,7 @@ export function Header(props: Props) {
       <HeaderInner>
         <MainLogo />
         <HeaderNavigation navs={props.navs} />
+        <RegionSelector />
         <LangaugeSelector />
       </HeaderInner>
     </HeaderOuter>
