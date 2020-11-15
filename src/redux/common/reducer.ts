@@ -1,7 +1,7 @@
 import { ActionTypes, CommonAction, CommonState, Continent } from './types';
 
 const initialState: CommonState = {
-  server: Continent.NA
+  server: Continent.Asia
 };
 
 export function commonReducer(state = initialState, action: CommonAction) {
