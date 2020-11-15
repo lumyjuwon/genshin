@@ -533,26 +533,43 @@
     },
     "Ascesion": {
       "first": {
-
+        "Prithiva Topaz Sliver": 1,
+        "Valberry": 3,
+        "Damaged Mask": 3
       },
       "second": {
-
+        "Prithiva Topaz Fragment": 3,
+        "Basalt Pillar": 2,
+        "Valberry": 10,
+        "Damaged Mask": 15
       },
       "third": {
-
+        "Prithiva Topaz Fragment": 6,
+        "Basalt Pillar": 4,
+        "Valberry": 20,
+        "Stained Mask": 12
       },
       "fourth": {
-
+        "Prithiva Topaz Chunk": 3,
+        "Basalt Pillar": 8,
+        "Valberry": 30,
+        "Stained Mask": 18
       },
       "fifth": {
-
+        "Prithiva Topaz Chunk": 6,
+        "Basalt Pillar": 12,
+        "Valberry": 45,
+        "Ominous Mask": 12
       },
       "sixth": {
-
+        "Prithiva Topaz Gemstone": 6,
+        "Basalt Pillar": 20,
+        "Valberry": 60,
+        "Ominous Mask": 24
       }
     },
     "Talent": {
-      "item": ""
+      "item": "Resistance"
     }
   },
   "Razor": {
@@ -569,26 +586,43 @@
     },
     "Ascesion": {
       "first": {
-
+        "Vajrada Amethyst Sliver": 1,
+        "Wolfhook": 3,
+        "Damaged Mask": 3
       },
       "second": {
-
+        "Vajrada Amethyst Fragment": 3,
+        "Lightning Prism": 2,
+        "Wolfhook": 10,
+        "Damaged Mask": 15
       },
       "third": {
-
+        "Vajrada Amethyst Fragment": 6,
+        "Lightning Prism": 4,
+        "Wolfhook": 20,
+        "Stained Mask": 12
       },
       "fourth": {
-
+        "Vajrada Amethyst Chunk": 3,
+        "Lightning Prism": 8,
+        "Wolfhook": 30,
+        "Stained Mask": 18
       },
       "fifth": {
-
+        "Vajrada Amethyst Chunk": 6,
+        "Lightning Prism": 12,
+        "Wolfhook": 45,
+        "Ominous Mask": 12
       },
       "sixth": {
-
+        "Vajrada Amethyst Gemstone": 6,
+        "Lightning Prism": 20,
+        "Wolfhook": 60,
+        "Ominous Mask": 24
       }
     },
     "Talent": {
-      "item": ""
+      "item": "Resistance"
     }
   },
   "Ningguang": {
@@ -605,26 +639,43 @@
     },
     "Ascesion": {
       "first": {
-
+        "Prithiva Topaz Sliver": 1,
+        "Glaze Lily": 3,
+        "Recruit's Insignia": 3
       },
       "second": {
-
+        "Prithiva Topaz Fragment": 3,
+        "Basalt Pillar": 2,
+        "Glaze Lily": 10,
+        "Recruit's Insignia": 15
       },
       "third": {
-
+        "Prithiva Topaz Fragment": 6,
+        "Basalt Pillar": 4,
+        "Glaze Lily": 20,
+        "Sergeant's Insignia": 12
       },
       "fourth": {
-
+        "Prithiva Topaz Chunk": 3,
+        "Basalt Pillar": 8,
+        "Glaze Lily": 30,
+        "Sergeant's Insignia": 18
       },
       "fifth": {
-
+        "Prithiva Topaz Chunk": 6,
+        "Basalt Pillar": 12,
+        "Glaze Lily": 45,
+        "Lieutenant's Insignia": 12
       },
       "sixth": {
-
+        "Prithiva Topaz Gemstone": 6,
+        "Basalt Pillar": 20,
+        "Glaze Lily": 60,
+        "Lieutenant's Insignia": 24
       }
     },
     "Talent": {
-      "item": ""
+      "item": "Prosperity"
     }
   },
   "Lisa": {
@@ -641,26 +692,43 @@
     },
     "Ascesion": {
       "first": {
-
+        "Vajrada Amethyst Sliver": 1,
+        "Valberry": 3,
+        "Slime Condensate": 3
       },
       "second": {
-
+        "Vajrada Amethyst Fragment": 3,
+        "Lightning Prism": 2,
+        "Valberry": 10,
+        "Slime Condensate": 15
       },
       "third": {
-
+        "Vajrada Amethyst Fragment": 6,
+        "Lightning Prism": 4,
+        "Valberry": 20,
+        "Slime Secretions": 12
       },
       "fourth": {
-
+        "Vajrada Amethyst Chunk": 3,
+        "Lightning Prism": 8,
+        "Valberry": 30,
+        "Slime Secretions": 18
       },
       "fifth": {
-
+        "Vajrada Amethyst Chunk": 6,
+        "Lightning Prism": 12,
+        "Valberry": 45,
+        "Slime Concentrate": 12
       },
       "sixth": {
-
+        "Vajrada Amethyst Gemstone": 6,
+        "Lightning Prism": 20,
+        "Valberry": 60,
+        "Slime Concentrate": 24
       }
     },
     "Talent": {
-      "item": ""
+      "item": "Ballad"
     }
   },
   "Kaeya": {
@@ -677,26 +745,43 @@
     },
     "Ascesion": {
       "first": {
-
+        "Shivada Jade Sliver": 1,
+        "Calla Lily": 3,
+        "Treasure Hoarder Insignia": 3
       },
       "second": {
-
+        "Shivada Jade Fragment": 3,
+        "Hoarfrost Core": 2,
+        "Calla Lily": 10,
+        "Treasure Hoarder Insignia": 15
       },
       "third": {
-
+        "Shivada Jade Fragment": 6,
+        "Hoarfrost Core": 4,
+        "Calla Lily": 20,
+        "Silver Raven Insignia": 12
       },
       "fourth": {
-
+        "Shivada Jade Chunk": 3,
+        "Hoarfrost Core": 8,
+        "Calla Lily": 30,
+        "Silver Raven Insignia": 12
       },
       "fifth": {
-
+        "Shivada Jade Chunk": 6,
+        "Hoarfrost Core": 12,
+        "Calla Lily": 45,
+        "Golden Raven Insignia": 12
       },
       "sixth": {
-
+        "Shivada Jade Gemstone": 6,
+        "Hoarfrost Core": 20,
+        "Calla Lily": 60,
+        "Golden Raven Insignia": 24
       }
     },
     "Talent": {
-      "item": ""
+      "item": "Ballad"
     }
   },
   "Fischl": {
@@ -713,26 +798,43 @@
     },
     "Ascesion": {
       "first": {
-
+        "Vajrada Amethyst Sliver": 1,
+        "Small Lamp Grass": 3,
+        "Firm Arrowhead": 3
       },
       "second": {
-
+        "Vajrada Amethyst Fragment": 3,
+        "Lightning Prism": 2,
+        "Small Lamp Grass": 10,
+        "Firm Arrowhead": 15
       },
       "third": {
-
+        "Vajrada Amethyst Fragment": 6,
+        "Lightning Prism": 4,
+        "Small Lamp Grass": 20,
+        "Sharp Arrowhead": 12
       },
       "fourth": {
-
+        "Vajrada Amethyst Chunk": 3,
+        "Lightning Prism": 8,
+        "Small Lamp Grass": 30,
+        "Sharp Arrowhead": 18
       },
       "fifth": {
-
+        "Vajrada Amethyst Chunk": 6,
+        "Lightning Prism": 12,
+        "Small Lamp Grass": 45,
+        "Weathered Arrowhead": 12
       },
       "sixth": {
-
+        "Vajrada Amethyst Gemstone": 6,
+        "Lightning Prism": 20,
+        "Small Lamp Grass": 60,
+        "Weathered Arrowhead": 24
       }
     },
     "Talent": {
-      "item": ""
+      "item": "Ballad"
     }
   },
   "Chongyun": {
@@ -749,26 +851,43 @@
     },
     "Ascesion": {
       "first": {
-
+        "Shivada Jade Sliver": 1,
+        "Cor Lapis": 3,
+        "Damaged Mask": 3
       },
       "second": {
-
+        "Shivada Jade Fragment": 3,
+        "Hoarfrost Core": 2,
+        "Cor Lapis": 10,
+        "Damaged Mask": 15
       },
       "third": {
-
+        "Shivada Jade Fragment": 6,
+        "Hoarfrost Core": 4,
+        "Cor Lapis": 20,
+        "Stained Mask": 12
       },
       "fourth": {
-
+        "Shivada Jade Chunk": 3,
+        "Hoarfrost Core": 8,
+        "Cor Lapis": 30,
+        "Stained Mask": 18
       },
       "fifth": {
-
+        "Shivada Jade Chunk": 6,
+        "Hoarfrost Core": 12,
+        "Cor Lapis": 45,
+        "Ominous Mask": 12
       },
       "sixth": {
-
+        "Shivada Jade Gemstone": 6,
+        "Hoarfrost Core": 20,
+        "Cor Lapis": 60,
+        "Ominous Mask": 24
       }
     },
     "Talent": {
-      "item": ""
+      "item": "Diligence"
     }
   },
   "Bennett": {
@@ -785,26 +904,43 @@
     },
     "Ascesion": {
       "first": {
-
+        "Agnidus Agate Sliver": 1,
+        "Windwheel Aster": 3,
+        "Treasure Hoarder Insignia": 3
       },
       "second": {
-
+        "Agnidus Agate Fragment": 3,
+        "Everflame Seed": 2,
+        "Windwheel Aster": 10,
+        "Treasure Hoarder Insignia": 15
       },
       "third": {
-
+        "Agnidus Agate Fragment": 6,
+        "Everflame Seed": 4,
+        "Windwheel Aster": 20,
+        "Silver Raven Insignia": 12
       },
       "fourth": {
-
+        "Agnidus Agate Chunk": 3,
+        "Everflame Seed": 8,
+        "Windwheel Aster": 30,
+        "Silver Raven Insignia": 18
       },
       "fifth": {
-
+        "Agnidus Agate Chunk": 6,
+        "Everflame Seed": 12,
+        "Windwheel Aster": 45,
+        "Golden Raven Insignia": 12
       },
       "sixth": {
-
+        "Agnidus Agate Gemstone": 6,
+        "Everflame Seed": 20,
+        "Windwheel Aster": 60,
+        "Golden Raven Insignia": 24
       }
     },
     "Talent": {
-      "item": ""
+      "item": "Resistance"
     }
   },
   "Beidou": {
@@ -821,26 +957,43 @@
     },
     "Ascesion": {
       "first": {
-
+        "Vajrada Amethyst Sliver": 1,
+        "Noctilous Jade": 3,
+        "Treasure Hoarder Insignia": 3
       },
       "second": {
-
+        "Vajrada Amethyst Fragment": 3,
+        "Lightning Prism": 2,
+        "Noctilous Jade": 10,
+        "Treasure Hoarder Insignia": 15
       },
       "third": {
-
+        "Vajrada Amethyst Fragment": 6,
+        "Lightning Prism": 4,
+        "Noctilous Jade": 20,
+        "Silver Raven Insignia": 12
       },
       "fourth": {
-
+        "Vajrada Amethyst Chunk": 3,
+        "Lightning Prism": 8,
+        "Noctilous Jade": 30,
+        "Silver Raven Insignia": 18
       },
       "fifth": {
-
+        "Vajrada Amethyst Chunk": 6,
+        "Lightning Prism": 12,
+        "Noctilous Jade": 45,
+        "Golden Raven Insignia": 12
       },
       "sixth": {
-
+        "Vajrada Amethyst Gemstone": 6,
+        "Lightning Prism": 20,
+        "Noctilous Jade": 60,
+        "Golden Raven Insignia": 24
       }
     },
     "Talent": {
-      "item": ""
+      "item": "Gold"
     }
   },
   "Barbara": {
@@ -857,26 +1010,43 @@
     },
     "Ascesion": {
       "first": {
-
+        "Varunada Lazurite Sliver": 1,
+        "Philanemo Mushroom": 3,
+        "Divining Scroll": 3
       },
       "second": {
-
+        "Varunada Lazurite Fragment": 3,
+        "Cleansing Heart": 2,
+        "Philanemo Mushroom": 10,
+        "Divining Scroll": 15
       },
       "third": {
-
+        "Varunada Lazurite Fragment": 6,
+        "Cleansing Heart": 4,
+        "Philanemo Mushroom": 20,
+        "Sealed Scroll": 12
       },
       "fourth": {
-
+        "Varunada Lazurite Chunk": 3,
+        "Cleansing Heart": 8,
+        "Philanemo Mushroom": 30,
+        "Sealed Scroll": 18
       },
       "fifth": {
-
+        "Varunada Lazurite Chunk": 6,
+        "Cleansing Heart": 12,
+        "Philanemo Mushroom": 45,
+        "Forbidden Curse Scroll": 12
       },
       "sixth": {
-
+        "Varunada Lazurite Gemstone": 6,
+        "Cleansing Heart": 20,
+        "Philanemo Mushroom": 60,
+        "Forbidden Curse Scroll": 24
       }
     },
     "Talent": {
-      "item": ""
+      "item": "Freedom"
     }
   },
   "Amber": {
@@ -893,26 +1063,43 @@
     },
     "Ascesion": {
       "first": {
-
+        "Agnidus Agate Sliver": 1,
+        "Small Lamp Grass": 3,
+        "Firm Arrowhead": 3
       },
       "second": {
-
+        "Agnidus Agate Fragment": 3,
+        "Everflame Seed": 2,
+        "Small Lamp Grass": 10,
+        "Firm Arrowhead": 15
       },
       "third": {
-
+        "Agnidus Agate Fragment": 6,
+        "Everflame Seed": 4,
+        "Small Lamp Grass": 20,
+        "Sharp Arrowhead": 12
       },
       "fourth": {
-
+        "Agnidus Agate Chunk": 3,
+        "Everflame Seed": 8,
+        "Small Lamp Grass": 30,
+        "Sharp Arrowhead": 18
       },
       "fifth": {
-
+        "Agnidus Agate Chunk": 6,
+        "Everflame Seed": 12,
+        "Small Lamp Grass": 45,
+        "Weathered Arrowhead": 12
       },
       "sixth": {
-
+        "Agnidus Agate Gemstone": 6,
+        "Everflame Seed": 20,
+        "Small Lamp Grass": 60,
+        "Weathered Arrowhead": 24
       }
     },
     "Talent": {
-      "item": ""
+      "item": "Freedom"
     }
   }, 
   "Sucrose": {
@@ -929,26 +1116,43 @@
     },
     "Ascesion": {
       "first": {
-
+        "Vayuda Turquoise Sliver": 1,
+        "Windwheel Aster": 3,
+        "Whopperflower Nectar": 3
       },
       "second": {
-
+        "Vayuda Turquoise Fragment": 3,
+        "Hurricane Seed": 2,
+        "Windwheel Aster": 10,
+        "Whopperflower Nectar": 15
       },
       "third": {
-
+        "Vayuda Turquoise Fragment": 6,
+        "Hurricane Seed": 4,
+        "Windwheel Aster": 20,
+        "Shimmering Nectar": 12
       },
       "fourth": {
-
+        "Vayuda Turquoise Chunk": 3,
+        "Hurricane Seed": 8,
+        "Windwheel Aster": 30,
+        "Shimmering Nectar": 18
       },
       "fifth": {
-
+        "Vayuda Turquoise Chunk": 6,
+        "Hurricane Seed": 12,
+        "Windwheel Aster": 45,
+        "Energy Nectar": 12
       },
       "sixth": {
-
+        "Vayuda Turquoise Gemstone": 6,
+        "Hurricane Seed": 20,
+        "Windwheel Aster": 60,
+        "Energy Nectar": 24
       }
     },
     "Talent": {
-      "item": ""
+      "item": "Freedom"
     }
   },
   "Xiangling": {
@@ -965,26 +1169,43 @@
     },
     "Ascesion": {
       "first": {
-
+        "Agnidus Agate Sliver": 1,
+        "Jueyun Chili": 3,
+        "Slime Condensate": 3
       },
       "second": {
-
+        "Agnidus Agate Fragment": 3,
+        "Everflame Seed": 2,
+        "Jueyun Chili": 10,
+        "Slime Condensate": 15
       },
       "third": {
-
+        "Agnidus Agate Fragment": 6,
+        "Everflame Seed": 4,
+        "Jueyun Chili": 20,
+        "Slime Secretions": 12
       },
       "fourth": {
-
+        "Agnidus Agate Chunk": 3,
+        "Everflame Seed": 8,
+        "Jueyun Chili": 30,
+        "Slime Secretions": 18
       },
       "fifth": {
-
+        "Agnidus Agate Chunk": 6,
+        "Everflame Seed": 12,
+        "Jueyun Chili": 45,
+        "Slime Concentrate": 12
       },
       "sixth": {
-
+        "Agnidus Agate Gemstone": 6,
+        "Everflame Seed": 20,
+        "Jueyun Chili": 60,
+        "Slime Concentrate": 24
       }
     },
     "Talent": {
-      "item": ""
+      "item": "Diligence"
     }
   },
   "Xingqiu": {
@@ -1001,26 +1222,43 @@
     },
     "Ascesion": {
       "first": {
-
+        "Varunada Lazurite Sliver": 1,
+        "Silk Flower": 3,
+        "Damaged Mask": 3
       },
       "second": {
-
+        "Varunada Lazurite Fragment": 3,
+        "Cleansing Heart": 2,
+        "Silk Flower": 10,
+        "Damaged Mask": 15
       },
       "third": {
-
+        "Varunada Lazurite Fragment": 6,
+        "Cleansing Heart": 4,
+        "Silk Flower": 20,
+        "Stained Mask": 12
       },
       "fourth": {
-
+        "Varunada Lazurite Chunk": 3,
+        "Cleansing Heart": 8,
+        "Silk Flower": 30,
+        "Stained Mask": 18
       },
       "fifth": {
-
+        "Varunada Lazurite Chunk": 6,
+        "Cleansing Heart": 12,
+        "Silk Flower": 45,
+        "Ominous Mask": 12
       },
       "sixth": {
-
+        "Varunada Lazurite Gemstone": 6,
+        "Cleansing Heart": 20,
+        "Silk Flower": 60,
+        "Ominous Mask": 24
       }
     },
     "Talent": {
-      "item": ""
+      "item": "Gold"
     }
   },
   "Diona": {
@@ -1037,26 +1275,43 @@
     },
     "Ascesion": {
       "first": {
-
+        "Shivada Jade Sliver": 1,
+        "Calla Lily": 3,
+        "Firm Arrowhead": 3
       },
       "second": {
-
+        "Shivada Jade Fragment": 3,
+        "Hoarfrost Core": 2,
+        "Calla Lily": 10,
+        "Firm Arrowhead": 15
       },
       "third": {
-
+        "Shivada Jade Fragment": 6,
+        "Hoarfrost Core": 4,
+        "Calla Lily": 20,
+        "Sharp Arrowhead": 12
       },
       "fourth": {
-
+        "Shivada Jade Chunk": 3,
+        "Hoarfrost Core": 8,
+        "Calla Lily": 30,
+        "Sharp Arrowhead": 18
       },
       "fifth": {
-
+        "Shivada Jade Chunk": 6,
+        "Hoarfrost Core": 12,
+        "Calla Lily": 45,
+        "Weathered Arrowhead": 12
       },
       "sixth": {
-
+        "Shivada Jade Gemstone": 6,
+        "Hoarfrost Core": 20,
+        "Calla Lily": 60,
+        "Weathered Arrowhead": 24
       }
     },
     "Talent": {
-      "item": ""
+      "item": "Freedom"
     }
   }
 }
