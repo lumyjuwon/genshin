@@ -1,4 +1,4 @@
-import { weaponInfo, artifactInfo, characterInfo, characterAscensionItemInfo } from '../data';
+import { weaponInfo, artifactInfo, characterInfo, characterAscensionItemInfo, characterAscensionAlchemyItemInfo } from '../data';
 
 export type ImageSrc = string | undefined;
 
@@ -83,6 +83,7 @@ const DailySetImages: ImageMap = {
 
 const CharacterAscentionItemImages: ImageMap = {};
 appendImages(CharacterAscentionItemImages, characterAscensionItemInfo, './items/character-ascension');
+appendImages(CharacterAscentionItemImages, characterAscensionAlchemyItemInfo, './items/character-ascension');
 
 export {
   CharacterImages,
