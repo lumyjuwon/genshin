@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import { FlexWrapper } from 'src/components';
@@ -6,6 +6,7 @@ import { HeaderMenu } from './HeaderMenu';
 import { useHistory } from 'react-router-dom';
 import { ServerSelector } from './ServerSelector';
 import { LangaugeSelector } from './LangaugeSelector';
+import { ApplyMeta } from 'src/utils/DocumentMeta';
 
 export interface Navs {
   [navName: string]: Nav;
@@ -14,6 +15,7 @@ export interface Navs {
 export interface Nav {
   path: string;
   title: string;
+  content: string;
   component: React.FunctionComponent;
 }
 
@@ -51,9 +53,20 @@ export const HeaderNavigation = React.forwardRef<HTMLDivElement, Props>((props, 
   const history = useHistory();
   const [selectedNavPath, setSelectedNavPath] = useState<string>('/');
 
-  history.listen((location) => {
-    setSelectedNavPath(location.pathname);
-  });
+  useEffect(() => {
+    history.listen((location) => {
+      const path = location.pathname.replace('/', '');
+      const key = path === '' ? 'main' : path;
+
+      const title = props.navs[key].title;
+      const content = props.navs[key].content;
+
+      console.log(title, content);
+
+      ApplyMeta(title, content);
+      setSelectedNavPath(location.pathname);
+    });
+  }, []);
 
   return (
     <Navigation ref={forwardedRef}>
@@ -61,16 +74,19 @@ export const HeaderNavigation = React.forwardRef<HTMLDivElement, Props>((props, 
         <FlexWrapper styles={{ justifyContent: 'space-between', width: '100%', small: { flexDirection: 'column' } }}>
           <FlexWrapper styles={{ small: { flexDirection: 'column', width: '100%' } }}>
             {Object.keys(props.navs).map((navName: string) => {
-              const nav = props.navs[navName];
-              return (
-                <HeaderMenu
-                  key={navName}
-                  link={nav.path}
-                  title={nav.title}
-                  isSelected={selectedNavPath === nav.path}
-                  onClick={props.onClick}
-                />
-              );
+              if (navName !== 'main') {
+                const nav = props.navs[navName];
+                return (
+                  <HeaderMenu
+                    key={navName}
+                    link={nav.path}
+                    title={nav.title}
+                    isSelected={selectedNavPath === nav.path}
+                    onClick={props.onClick}
+                  />
+                );
+              }
+              return null;
             })}
           </FlexWrapper>
         </FlexWrapper>

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import { trans, Lang } from '../../resources/languages';
 import { FlexWrapper, ImageContentCard } from 'src/components';
@@ -40,22 +40,6 @@ const Containter = styled.div({
   }
 });
 
-const Title = styled.div({
-  fontSize: '50px',
-  textAlign: 'center',
-  fontWeight: 'bold',
-  marginBottom: '40px',
-  wordBreak: 'keep-all',
-  textShadow: '0 0 9px #333',
-  '@media screen and (max-width: 1380px)': {
-    fontSize: '40px'
-  },
-  '@media screen and (max-width: 768px)': {
-    fontSize: '30px',
-    textShadow: 'none'
-  }
-});
-
 interface Props {}
 
 export function MainScreen(props: Props) {
@@ -72,7 +56,7 @@ export function MainScreen(props: Props) {
             }}
           >
             <>
-              <Link to="/gacha">
+              <Link to='/gacha'>
                 <ImageContentCard
                   src={`${require('../../resources/images/mainscreen/gacha.png')}`}
                   title={trans(Lang.Gacha)}
@@ -90,7 +74,7 @@ export function MainScreen(props: Props) {
                   }}
                 />
               </Link>
-              <Link to="/party">
+              <Link to='/party'>
                 <ImageContentCard
                   src={`${require('../../resources/images/mainscreen/party.png')}`}
                   title={trans(Lang.Party)}
@@ -110,8 +94,8 @@ export function MainScreen(props: Props) {
               </Link>
               <ImageContentCard
                 src={`${require('../../resources/images/mainscreen/Paimon.jpg')}`}
-                title="Coming Soon..."
-                desc="Coming Soon..."
+                title='Coming Soon...'
+                desc='Coming Soon...'
                 styles={{
                   cardStyles: {
                     width: '300px',
