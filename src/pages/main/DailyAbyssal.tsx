@@ -47,7 +47,8 @@ const SetContainer = styled.div({
 });
 
 const SubTitle = styled.div({
-  margin: '0 0 10px'
+  margin: '0 0 10px',
+  fontSize: '16px'
 });
 
 const ImageContainer = styled.div({
@@ -71,11 +72,11 @@ export function DailyAbyssal() {
   serverTime.setUTCHours(serverTime.getUTCHours() + serverTimeInfo[server]);
   let serverDay: string = convertToTextDay(serverTime.getUTCHours() < 4 ? serverTime.getUTCDay() - 1 : serverTime.getUTCDay());
   let imageSize: { width: string; height: string } = { width: '80px', height: '80px' };
-  let fontSize = '14px';
+  let tooltipoFontSize = '14px';
 
   if (serverDay === 'Sunday') {
     imageSize = { width: '70px', height: '70px' };
-    fontSize = '12px';
+    tooltipoFontSize = '12px';
   }
 
   const weaponAscesionItemSet = Object.keys(weaponAscesionItemInfo);
@@ -105,7 +106,7 @@ export function DailyAbyssal() {
                 return (
                   <ImageContainer key={name}>
                     <RoundImage src={DailySetImages[name]} styles={imageSize} />
-                    <TooltipText styles={{ bottom: '0', fontSize: fontSize }}>{trans(Lang[name as KeyLang])}</TooltipText>
+                    <TooltipText styles={{ bottom: '0', fontSize: tooltipoFontSize }}>{trans(Lang[name as KeyLang])}</TooltipText>
                   </ImageContainer>
                 );
               })}
@@ -120,7 +121,7 @@ export function DailyAbyssal() {
                 return (
                   <ImageContainer key={name}>
                     <RoundImage src={DailySetImages[name]} styles={imageSize} />
-                    <TooltipText styles={{ bottom: '0', fontSize: fontSize }}>{trans(Lang[name as KeyLang])}</TooltipText>
+                    <TooltipText styles={{ bottom: '0', fontSize: tooltipoFontSize }}>{trans(Lang[name as KeyLang])}</TooltipText>
                   </ImageContainer>
                 );
               })}
