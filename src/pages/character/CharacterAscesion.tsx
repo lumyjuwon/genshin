@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { characterAscensionItemInfo, characterInfo } from 'src/resources/data';
 import { CharacterAscentionItemImages, ElementImages } from 'src/resources/images';
-import { RoundImage, RoundImageBox, GridWrapper, ItemBadgeBox } from 'src/components';
+import { RoundImage, GridWrapper, ItemBadgeBox } from 'src/components';
 import { CharacterImages } from 'src/resources/images';
 
 const Container = styled.div({
@@ -39,7 +39,9 @@ const ItemName = styled.div({
   fontSize: '14px'
 });
 
-interface Props {}
+interface Props {
+  onClick: Function;
+}
 
 export function CharacterAscesion(props: Props) {
   const ascensionItems = Object.keys(characterAscensionItemInfo);
@@ -55,7 +57,7 @@ export function CharacterAscesion(props: Props) {
         <div>Characters</div>
         {ascensionItems.map((item) => {
           return (
-            <>
+            <React.Fragment key={item}>
               <RelativeBox>
                 <RoundImage src={CharacterAscentionItemImages[item]} styles={{ width: '60px', height: '60px' }} />
               </RelativeBox>
@@ -66,6 +68,7 @@ export function CharacterAscesion(props: Props) {
                   if (characterInfo[character].ascension.items.includes(item)) {
                     return (
                       <ItemBadgeBox
+                        key={character.concat('_ascension')}
                         badge={
                           <RoundImage src={ElementImages[characterInfo[character].element]} styles={{ width: '20px', height: '20px' }} />
                         }
@@ -74,7 +77,7 @@ export function CharacterAscesion(props: Props) {
                           boxStyles: { margin: '3px' }
                         }}
                         isActive={true}
-                        onClick={() => {}}
+                        onClick={() => props.onClick(character)}
                         hoverInnerColor="#f1f2f3"
                         isToolTipVisible={false}
                         isRankVisible={false}
@@ -83,7 +86,7 @@ export function CharacterAscesion(props: Props) {
                   } else return null;
                 })}
               </GridWrapper>
-            </>
+            </React.Fragment>
           );
         })}
       </GridTable>

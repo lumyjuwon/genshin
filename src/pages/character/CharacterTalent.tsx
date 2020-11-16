@@ -37,7 +37,9 @@ const RelativeBox = styled.div({
   position: 'relative'
 });
 
-interface Props {}
+interface Props {
+  onClick: Function;
+}
 
 export function CharacterTalent(props: Props) {
   const talentSet = Object.keys(characterTalentItemInfo);
@@ -52,7 +54,7 @@ export function CharacterTalent(props: Props) {
         <div>Characters</div>
         {talentSet.map((set) => {
           return (
-            <>
+            <React.Fragment key={set}>
               <RelativeBox>
                 <RoundImage src={DailySetImages[set]} styles={{ width: '60px', height: '60px' }} />
                 <TooltipText styles={{ bottom: '0', fontSize: '12px' }}>{trans(Lang[set as KeyLang])}</TooltipText>
@@ -71,7 +73,7 @@ export function CharacterTalent(props: Props) {
                           boxStyles: { margin: '3px' }
                         }}
                         isActive={true}
-                        onClick={() => {}}
+                        onClick={() => props.onClick(character)}
                         hoverInnerColor="#f1f2f3"
                         isToolTipVisible={false}
                         isRankVisible={false}
@@ -80,7 +82,7 @@ export function CharacterTalent(props: Props) {
                   } else return null;
                 })}
               </GridWrapper>
-            </>
+            </React.Fragment>
           );
         })}
       </GridTable>
