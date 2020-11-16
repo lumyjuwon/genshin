@@ -1,4 +1,4 @@
-import { weaponInfo, artifactInfo, characterInfo } from '../data';
+import { weaponInfo, artifactInfo, characterInfo, characterAscensionItemInfo } from '../data';
 
 export type ImageSrc = string | undefined;
 
@@ -81,4 +81,18 @@ const DailySetImages: ImageMap = {
   Aerosiderite: require('./items/daily-set/Aerosiderite.png')
 };
 
-export { CharacterImages, ElementImages, ItemImages, GachaImages, MainScreen, GemImages, CategoryImages, MapImages, DailySetImages };
+const CharacterAscentionItemImages: ImageMap = {};
+appendImages(CharacterAscentionItemImages, characterAscensionItemInfo, './items/character-ascension');
+
+export {
+  CharacterImages,
+  ElementImages,
+  ItemImages,
+  GachaImages,
+  MainScreen,
+  GemImages,
+  CategoryImages,
+  MapImages,
+  DailySetImages,
+  CharacterAscentionItemImages
+};
