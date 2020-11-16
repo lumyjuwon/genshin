@@ -31,6 +31,7 @@ interface Character {
       Additional: string;
     };
     ascension: {
+      items: Array<string>;
       first: {
         [itemName: string]: number;
       };
@@ -127,7 +128,7 @@ interface CharacterAscensionItem {
     rank: number;
   };
 }
-const characterAscensionItems: CharacterAscensionItem = require('../data/character-ascension-item-info.json');
+const characterAscensionItemInfo: CharacterAscensionItem = require('../data/character-ascension-item-info.json');
 
 export {
   gachaInfo,
@@ -137,5 +138,5 @@ export {
   characterTalentItemInfo,
   weaponAscesionItemInfo,
   serverTimeInfo,
-  characterAscensionItems
+  characterAscensionItemInfo
 };

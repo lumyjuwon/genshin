@@ -12,6 +12,7 @@
       "Additional": "Pyro DMG 28.8%"
     },
     "ascension": {
+      "items": ["Agnidus Agate Sliver", "Philanemo Mushroom", "Everflame Seed", "Divining Scroll"],
       "first": {
         "Agnidus Agate Sliver": 1,
         "Philanemo Mushroom": 3,
@@ -65,6 +66,7 @@
       "Additional": "CRIT DMG 188.4%"
     },
     "ascension": {
+      "items": ["Vajrada Amethyst Sliver", "Cor Lapis", "Whopperflower Nectar", "Lightning Prism"],
       "first": {
         "Vajrada Amethyst Sliver": 1,
         "Cor Lapis": 3,
@@ -118,6 +120,7 @@
       "Additional": "CRIT Rate 24.2%"
     },
     "ascension": {
+      "items": ["Agnidus Agate Sliver", "Everflame Seed", "Small Lamp Grass", "Recruit's Insignia"],
       "first": {
         "Agnidus Agate Sliver": 1,
         "Small Lamp Grass": 3,
@@ -171,6 +174,7 @@
       "Additional": "Healing Bonus 16.6%"
     },
     "ascension": {
+      "items": ["Vayuda Turquoise Sliver", "Dandelion Seed", "Damaged Mask", "Hurricane Seed"],
       "first": {
         "Vayuda Turquoise Sliver": 1,
         "Dandelion Seed": 3,
@@ -224,6 +228,7 @@
       "Additional": "Healing Bonus 22.2%"
     },
     "ascension": {
+      "items": ["Shivada Jade Sliver", "Violetgrass", "Divining Scroll", "Hoarfrost Core"],
       "first": {
         "Shivada Jade Sliver": 1,
         "Violetgrass": 3,
@@ -277,6 +282,7 @@
       "Additional": "Energy Recharge 32.0%"
     },
     "ascension": {
+      "items": ["Varunada Lazurite Sliver", "Philanemo Mushroom", "Whopperflower Nectar", "Cleansing Heart"],
       "first": {
         "Varunada Lazurite Sliver": 1,
         "Philanemo Mushroom": 3,
@@ -330,6 +336,7 @@
       "Additional": "Energy Recharge 24.0%"
     },
     "ascension": {
+      "items": ["Vayuda Turquoise Sliver", "Cecilia", "Slime Condensate", "Hurricane Seed"],
       "first": {
         "Vayuda Turquoise Sliver": 1,
         "Cecilia": 3,
@@ -383,6 +390,7 @@
       "Additional": "Hydro DMG 7.2%"
     },
     "ascension": {
+      "items": ["Varunada Lazurite Sliver", "Starconch", "Recruit's Insignia", "Cleansing Heart"],
       "first": {
         "Varunada Lazurite Sliver": 1,
         "Starconch": 3,
@@ -436,6 +444,7 @@
       "Additional": "ATK 24.0%"
     },
     "ascension": {
+      "items": ["Brilliant Diamond Sliver", "Windwheel Aster", "Damaged Mask"],
       "first": {
         "Brilliant Diamond Sliver": 1,
         "Windwheel Aster": 3,
@@ -484,6 +493,7 @@
       "Additional": "ATK 24.0%"
     },
     "ascension": {
+      "items": ["Brilliant Diamond Sliver", "Windwheel Aster", "Damaged Mask"],
       "first": {
         "Brilliant Diamond Sliver": 1,
         "Windwheel Aster": 3,
@@ -532,6 +542,7 @@
       "Additional": "DEF 30.0%"
     },
     "ascension": {
+      "items": ["Prithiva Topaz Sliver", "Valberry", "Damaged Mask", "Basalt Pillar"],
       "first": {
         "Prithiva Topaz Sliver": 1,
         "Valberry": 3,
@@ -585,6 +596,7 @@
       "Additional": "Physical DMG 30.0%"
     },
     "ascension": {
+      "items": ["Vajrada Amethyst Sliver", "Wolfhook", "Damaged Mask", "Lightning Prism"],
       "first": {
         "Vajrada Amethyst Sliver": 1,
         "Wolfhook": 3,
@@ -638,6 +650,7 @@
       "Additional": "Geo DMG 18.0%"
     },
     "ascension": {
+      "items": ["Prithiva Topaz Sliver", "Glaze Lily", "Recruit's Insignia", "Basalt Pillar"],
       "first": {
         "Prithiva Topaz Sliver": 1,
         "Glaze Lily": 3,
@@ -691,6 +704,7 @@
       "Additional": "Element Mastery +72"
     },
     "ascension": {
+      "items": ["Vajrada Amethyst Sliver", "Valberry", "Lightning Prism", "Slime Condensate"],
       "first": {
         "Vajrada Amethyst Sliver": 1,
         "Valberry": 3,
@@ -744,6 +758,7 @@
       "Additional": "Energy Recharge 113.3%"
     },
     "ascension": {
+      "items": ["Shivada Jade Sliver", "Calla Lily", "Treasure Hoarder Insignia", "Hoarfrost Core"],
       "first": {
         "Shivada Jade Sliver": 1,
         "Calla Lily": 3,
@@ -797,6 +812,7 @@
       "Additional": "ATK 24.0%"
     },
     "ascension": {
+      "items": ["Vajrada Amethyst Sliver", "Small Lamp Grass", "Firm Arrowhead", "Lightning Prism"],
       "first": {
         "Vajrada Amethyst Sliver": 1,
         "Small Lamp Grass": 3,
@@ -850,6 +866,7 @@
       "Additional": "ATK 24.0%"
     },
     "ascension": {
+      "items": ["Shivada Jade Sliver", "Cor Lapis", "Damaged Mask", "Lightning Prism"],
       "first": {
         "Shivada Jade Sliver": 1,
         "Cor Lapis": 3,
@@ -903,6 +920,7 @@
       "Additional": "Energy Recharge 20.0%"
     },
     "ascension": {
+      "items": ["Agnidus Agate Sliver", "Windwheel Aster", "Treasure Hoarder Insignia", "Everflame Seed"],
       "first": {
         "Agnidus Agate Sliver": 1,
         "Windwheel Aster": 3,
@@ -956,39 +974,40 @@
       "Additional": "Electro DMG 24.0%"
     },
     "ascension": {
+      "items": ["Vajrada Amethyst Sliver", "Noctilucous Jade", "Treasure Hoarder Insignia", "Lightning Prism"],
       "first": {
         "Vajrada Amethyst Sliver": 1,
-        "Noctilous Jade": 3,
+        "Noctilucous Jade": 3,
         "Treasure Hoarder Insignia": 3
       },
       "second": {
         "Vajrada Amethyst Fragment": 3,
         "Lightning Prism": 2,
-        "Noctilous Jade": 10,
+        "Noctilucous Jade": 10,
         "Treasure Hoarder Insignia": 15
       },
       "third": {
         "Vajrada Amethyst Fragment": 6,
         "Lightning Prism": 4,
-        "Noctilous Jade": 20,
+        "Noctilucous Jade": 20,
         "Silver Raven Insignia": 12
       },
       "fourth": {
         "Vajrada Amethyst Chunk": 3,
         "Lightning Prism": 8,
-        "Noctilous Jade": 30,
+        "Noctilucous Jade": 30,
         "Silver Raven Insignia": 18
       },
       "fifth": {
         "Vajrada Amethyst Chunk": 6,
         "Lightning Prism": 12,
-        "Noctilous Jade": 45,
+        "Noctilucous Jade": 45,
         "Golden Raven Insignia": 12
       },
       "sixth": {
         "Vajrada Amethyst Gemstone": 6,
         "Lightning Prism": 20,
-        "Noctilous Jade": 60,
+        "Noctilucous Jade": 60,
         "Golden Raven Insignia": 24
       }
     },
@@ -1009,6 +1028,7 @@
       "Additional": "HP 12.0%"
     },
     "ascension": {
+      "items": ["Varunada Lazurite Sliver", "Philanemo Mushroom", "Divining Scroll", "Cleansing Heart"],
       "first": {
         "Varunada Lazurite Sliver": 1,
         "Philanemo Mushroom": 3,
@@ -1062,6 +1082,7 @@
       "Additional": "ATK 18.0%"
     },
     "ascension": {
+      "items": ["Agnidus Agate Sliver", "Small Lamp Grass", "Firm Arrowhead", "Everflame Seed"],
       "first": {
         "Agnidus Agate Sliver": 1,
         "Small Lamp Grass": 3,
@@ -1115,6 +1136,7 @@
       "Additional": "Anemo DMG 18.0%"
     },
     "ascension": {
+      "items": ["Vayuda Turquoise Sliver", "Windwheel Aster", "Whopperflower Nectar", "Hurricane Seed"],
       "first": {
         "Vayuda Turquoise Sliver": 1,
         "Windwheel Aster": 3,
@@ -1168,6 +1190,7 @@
       "Additional": "Element Mastery +96"
     },
     "ascension": {
+      "items": ["Agnidus Agate Sliver", "Jueyun Chili", "Slime Condensate", "Everflame Seed"],
       "first": {
         "Agnidus Agate Sliver": 1,
         "Jueyun Chili": 3,
@@ -1221,6 +1244,7 @@
       "Additional": "ATK 18.0%"
     },
     "ascension": {
+      "items": ["Varunada Lazurite Sliver", "Silk Flower", "Damaged Mask", "Cleansing Heart"],
       "first": {
         "Varunada Lazurite Sliver": 1,
         "Silk Flower": 3,
@@ -1274,6 +1298,7 @@
       "Additional": "No Data"
     },
     "ascension": {
+      "items": ["Shivada Jade Sliver", "Calla Lily", "Firm Arrowhead", "Hoarfrost Core"],
       "first": {
         "Shivada Jade Sliver": 1,
         "Calla Lily": 3,
