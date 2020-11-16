@@ -53,7 +53,7 @@ const SubTitle = styled.div({
 
 const ImageContainer = styled.div({
   position: 'relative',
-  margin: '0 3px'
+  margin: '3px 3px'
 });
 
 type Items = WeaponAscesionItem | CharacterTalentItem;
