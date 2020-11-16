@@ -30,7 +30,7 @@ interface Character {
       DEF: string;
       Additional: string;
     };
-    Ascesion: {
+    ascension: {
       first: {
         [itemName: string]: number;
       };
@@ -50,7 +50,7 @@ interface Character {
         [itemName: string]: number;
       };
     };
-    Talent: {
+    talent: {
       item: string;
     };
   };

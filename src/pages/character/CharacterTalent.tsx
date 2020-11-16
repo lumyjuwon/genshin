@@ -25,7 +25,8 @@ const GridTable = styled.div({
 });
 
 const Title = styled.div({
-  fontSize: '20px'
+  fontSize: '20px',
+  fontWeight: 'bold'
 });
 
 const DayText = styled.p({
@@ -59,7 +60,7 @@ export function CharacterTalent(props: Props) {
               <DayText>{characterTalentItemInfo[set].day.join(', ')}</DayText>
               <GridWrapper styles={{ width: '100%' }}>
                 {characters.map((character) => {
-                  if (characterInfo[character].Talent.item === set) {
+                  if (characterInfo[character].talent.item === set) {
                     return (
                       <a href={`#${character}`}>
                         <RoundImageBox

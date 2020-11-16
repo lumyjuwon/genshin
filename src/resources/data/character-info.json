@@ -11,7 +11,7 @@
       "DEF": "572",
       "Additional": "Pyro DMG 28.8%"
     },
-    "Ascesion": {
+    "ascension": {
       "first": {
         "Agnidus Agate Sliver": 1,
         "Philanemo Mushroom": 3,
@@ -48,7 +48,7 @@
         "Forbidden Curse Scroll": 24
       }
     },
-    "Talent": {
+    "talent": {
       "item": "Freedom"
     }
   },
@@ -64,7 +64,7 @@
       "DEF": "743",
       "Additional": "CRIT DMG 188.4%"
     },
-    "Ascesion": {
+    "ascension": {
       "first": {
         "Vajrada Amethyst Sliver": 1,
         "Cor Lapis": 3,
@@ -101,7 +101,7 @@
         "Energy Nectar": 24
       }
     },
-    "Talent": {
+    "talent": {
       "item": "Prosperity"
     }
   },
@@ -117,7 +117,7 @@
       "DEF": "729",
       "Additional": "CRIT Rate 24.2%"
     },
-    "Ascesion": {
+    "ascension": {
       "first": {
         "Agnidus Agate Sliver": 1,
         "Small Lamp Grass": 3,
@@ -154,7 +154,7 @@
         "Lieutenant's Insignia": 24
       }
     },
-    "Talent": {
+    "talent": {
       "item": "Resistance"
     }
   },
@@ -170,7 +170,7 @@
       "DEF": "678",
       "Additional": "Healing Bonus 16.6%"
     },
-    "Ascesion": {
+    "ascension": {
       "first": {
         "Vayuda Turquoise Sliver": 1,
         "Dandelion Seed": 3,
@@ -207,7 +207,7 @@
         "Ominous Mask": 24
       }
     },
-    "Talent": {
+    "talent": {
       "item": "Resistance"
     }
   },
@@ -223,7 +223,7 @@
       "DEF": "857",
       "Additional": "Healing Bonus 22.2%"
     },
-    "Ascesion": {
+    "ascension": {
       "first": {
         "Shivada Jade Sliver": 1,
         "Violetgrass": 3,
@@ -260,7 +260,7 @@
         "Forbidden Curse Scroll": 24
       }
     },
-    "Talent": {
+    "talent": {
       "item": "Prosperity"
     }
   },
@@ -276,7 +276,7 @@
       "DEF": "607",
       "Additional": "Energy Recharge 32.0%"
     },
-    "Ascesion": {
+    "ascension": {
       "first": {
         "Varunada Lazurite Sliver": 1,
         "Philanemo Mushroom": 3,
@@ -313,7 +313,7 @@
         "Energy Nectar": 24
       }
     },
-    "Talent": {
+    "talent": {
       "item": "Resistance"
     }
   },
@@ -329,7 +329,7 @@
       "DEF": "543",
       "Additional": "Energy Recharge 24.0%"
     },
-    "Ascesion": {
+    "ascension": {
       "first": {
         "Vayuda Turquoise Sliver": 1,
         "Cecilia": 3,
@@ -366,7 +366,7 @@
         "Slime Concentrate": 24
       }
     },
-    "Talent": {
+    "talent": {
       "item": "Ballad"
     }
   },
@@ -382,7 +382,7 @@
       "DEF": "366",
       "Additional": "Hydro DMG 7.2%"
     },
-    "Ascesion": {
+    "ascension": {
       "first": {
         "Varunada Lazurite Sliver": 1,
         "Starconch": 3,
@@ -419,7 +419,7 @@
         "Lieutenant's Insignia": 24
       }
     },
-    "Talent": {
+    "talent": {
       "item": "Freedom"
     }
   },
@@ -435,7 +435,7 @@
       "DEF": "669",
       "Additional": "ATK 24.0%"
     },
-    "Ascesion": {
+    "ascension": {
       "first": {
         "Brilliant Diamond Sliver": 1,
         "Windwheel Aster": 3,
@@ -467,7 +467,7 @@
         "Ominous Mask": 24
       }
     },
-    "Talent": {
+    "talent": {
       "item": ""
     }
   },
@@ -483,7 +483,7 @@
       "DEF": "669",
       "Additional": "ATK 24.0%"
     },
-    "Ascesion": {
+    "ascension": {
       "first": {
         "Brilliant Diamond Sliver": 1,
         "Windwheel Aster": 3,
@@ -515,7 +515,7 @@
         "Ominous Mask": 24
       }
     },
-    "Talent": {
+    "talent": {
       "item": ""
     }
   },
@@ -531,7 +531,7 @@
       "DEF": "743",
       "Additional": "DEF 30.0%"
     },
-    "Ascesion": {
+    "ascension": {
       "first": {
         "Prithiva Topaz Sliver": 1,
         "Valberry": 3,
@@ -568,7 +568,7 @@
         "Ominous Mask": 24
       }
     },
-    "Talent": {
+    "talent": {
       "item": "Resistance"
     }
   },
@@ -584,7 +584,7 @@
       "DEF": "699",
       "Additional": "Physical DMG 30.0%"
     },
-    "Ascesion": {
+    "ascension": {
       "first": {
         "Vajrada Amethyst Sliver": 1,
         "Wolfhook": 3,
@@ -621,7 +621,7 @@
         "Ominous Mask": 24
       }
     },
-    "Talent": {
+    "talent": {
       "item": "Resistance"
     }
   },
@@ -637,7 +637,7 @@
       "DEF": "508",
       "Additional": "Geo DMG 18.0%"
     },
-    "Ascesion": {
+    "ascension": {
       "first": {
         "Prithiva Topaz Sliver": 1,
         "Glaze Lily": 3,
@@ -674,7 +674,7 @@
         "Lieutenant's Insignia": 24
       }
     },
-    "Talent": {
+    "talent": {
       "item": "Prosperity"
     }
   },
@@ -690,7 +690,7 @@
       "DEF": "468",
       "Additional": "Element Mastery +72"
     },
-    "Ascesion": {
+    "ascension": {
       "first": {
         "Vajrada Amethyst Sliver": 1,
         "Valberry": 3,
@@ -727,7 +727,7 @@
         "Slime Concentrate": 24
       }
     },
-    "Talent": {
+    "talent": {
       "item": "Ballad"
     }
   },
@@ -743,7 +743,7 @@
       "DEF": "557",
       "Additional": "Energy Recharge 113.3%"
     },
-    "Ascesion": {
+    "ascension": {
       "first": {
         "Shivada Jade Sliver": 1,
         "Calla Lily": 3,
@@ -780,7 +780,7 @@
         "Golden Raven Insignia": 24
       }
     },
-    "Talent": {
+    "talent": {
       "item": "Ballad"
     }
   },
@@ -796,7 +796,7 @@
       "DEF": "553",
       "Additional": "ATK 24.0%"
     },
-    "Ascesion": {
+    "ascension": {
       "first": {
         "Vajrada Amethyst Sliver": 1,
         "Small Lamp Grass": 3,
@@ -833,7 +833,7 @@
         "Weathered Arrowhead": 24
       }
     },
-    "Talent": {
+    "talent": {
       "item": "Ballad"
     }
   },
@@ -849,7 +849,7 @@
       "DEF": "603",
       "Additional": "ATK 24.0%"
     },
-    "Ascesion": {
+    "ascension": {
       "first": {
         "Shivada Jade Sliver": 1,
         "Cor Lapis": 3,
@@ -886,7 +886,7 @@
         "Ominous Mask": 24
       }
     },
-    "Talent": {
+    "talent": {
       "item": "Diligence"
     }
   },
@@ -902,7 +902,7 @@
       "DEF": "630",
       "Additional": "Energy Recharge 20.0%"
     },
-    "Ascesion": {
+    "ascension": {
       "first": {
         "Agnidus Agate Sliver": 1,
         "Windwheel Aster": 3,
@@ -939,7 +939,7 @@
         "Golden Raven Insignia": 24
       }
     },
-    "Talent": {
+    "talent": {
       "item": "Resistance"
     }
   },
@@ -955,7 +955,7 @@
       "DEF": "658",
       "Additional": "Electro DMG 24.0%"
     },
-    "Ascesion": {
+    "ascension": {
       "first": {
         "Vajrada Amethyst Sliver": 1,
         "Noctilous Jade": 3,
@@ -992,7 +992,7 @@
         "Golden Raven Insignia": 24
       }
     },
-    "Talent": {
+    "talent": {
       "item": "Gold"
     }
   },
@@ -1008,7 +1008,7 @@
       "DEF": "517",
       "Additional": "HP 12.0%"
     },
-    "Ascesion": {
+    "ascension": {
       "first": {
         "Varunada Lazurite Sliver": 1,
         "Philanemo Mushroom": 3,
@@ -1045,7 +1045,7 @@
         "Forbidden Curse Scroll": 24
       }
     },
-    "Talent": {
+    "talent": {
       "item": "Freedom"
     }
   },
@@ -1061,7 +1061,7 @@
       "DEF": "491",
       "Additional": "ATK 18.0%"
     },
-    "Ascesion": {
+    "ascension": {
       "first": {
         "Agnidus Agate Sliver": 1,
         "Small Lamp Grass": 3,
@@ -1098,7 +1098,7 @@
         "Weathered Arrowhead": 24
       }
     },
-    "Talent": {
+    "talent": {
       "item": "Freedom"
     }
   }, 
@@ -1114,7 +1114,7 @@
       "DEF": "574",
       "Additional": "Anemo DMG 18.0%"
     },
-    "Ascesion": {
+    "ascension": {
       "first": {
         "Vayuda Turquoise Sliver": 1,
         "Windwheel Aster": 3,
@@ -1151,7 +1151,7 @@
         "Energy Nectar": 24
       }
     },
-    "Talent": {
+    "talent": {
       "item": "Freedom"
     }
   },
@@ -1167,7 +1167,7 @@
       "DEF": "623",
       "Additional": "Element Mastery +96"
     },
-    "Ascesion": {
+    "ascension": {
       "first": {
         "Agnidus Agate Sliver": 1,
         "Jueyun Chili": 3,
@@ -1204,7 +1204,7 @@
         "Slime Concentrate": 24
       }
     },
-    "Talent": {
+    "talent": {
       "item": "Diligence"
     }
   },
@@ -1220,7 +1220,7 @@
       "DEF": "619",
       "Additional": "ATK 18.0%"
     },
-    "Ascesion": {
+    "ascension": {
       "first": {
         "Varunada Lazurite Sliver": 1,
         "Silk Flower": 3,
@@ -1257,7 +1257,7 @@
         "Ominous Mask": 24
       }
     },
-    "Talent": {
+    "talent": {
       "item": "Gold"
     }
   },
@@ -1273,7 +1273,7 @@
       "DEF": "No Data",
       "Additional": "No Data"
     },
-    "Ascesion": {
+    "ascension": {
       "first": {
         "Shivada Jade Sliver": 1,
         "Calla Lily": 3,
@@ -1310,7 +1310,7 @@
         "Weathered Arrowhead": 24
       }
     },
-    "Talent": {
+    "talent": {
       "item": "Freedom"
     }
   }
