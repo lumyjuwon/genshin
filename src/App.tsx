@@ -1,60 +1,50 @@
-import React, { RefObject, useRef, useState, useEffect } from 'react';
-import styled from 'styled-components';
-import { BrowserRouter, Route, Switch, Link, useLocation, useHistory } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import { GachaScreen, PartyScreen, MainScreen, Policy, Notice, MapScreen, CharacterScreen } from 'src/pages';
-import { Header, FlexWrapper, RoundImage, Footer, FocusWrapper, HeaderNavigation } from 'src/components';
+import { Header, Footer } from 'src/components';
 import { trans, Lang } from './resources/languages';
 import NotFound from './NotFound';
 import { Navs } from './components/header/HeaderNavigation';
-import { fetchIpApi } from './api';
 import { useTranslation } from 'react-i18next';
 import { RootState } from './redux/rootReducer';
 import { useSelector } from 'react-redux';
 
-const ToggleIcon = styled.div({
-  display: 'none',
-  fontSize: '30px',
-  color: '#f1f2f3',
-  '@media screen and (max-width: 768px)': {
-    display: 'block'
+const pages: Navs = {
+  main: {
+    path: '/',
+    title: 'Genshin Impact Simul',
+    content: 'Genshin Impact Simulator with Wish System, Party, Character!',
+    component: MainScreen
+  },
+  gacha: { path: '/gacha', title: 'Gacha', content: 'Test Your Luck!', component: GachaScreen },
+  party: {
+    path: '/party',
+    title: 'Party',
+    content: 'Elemental Resonance and Character Equipment System',
+    component: PartyScreen
+  },
+  // map: { path: '/map', title: trans(Lang.Map), content: "D", component: MapScreen },
+  character: {
+    path: '/character',
+    title: 'Character',
+    content: 'Genshin Impact Simulator with Wish System, Party, Character!',
+    component: CharacterScreen
   }
-});
-
-const Navigation = styled.div({
-  flaot: 'right',
-  width: '100%',
-  '@media screen and (max-width: 768px)': {
-    textAlign: 'right'
-  }
-});
+};
 
 function App() {
-  const [isHeaderNavVisible, setIsHeaderNavVisible] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const pages: Navs = {
-    gacha: { path: '/gacha', title: trans(Lang.Gacha), component: GachaScreen },
-    party: { path: '/party', title: trans(Lang.Party), component: PartyScreen },
-    map: { path: '/map', title: trans(Lang.Map), component: MapScreen },
-    character: { path: '/character', title: trans(Lang.Character), component: CharacterScreen }
-  };
+  useSelector<RootState, any>((state) => state.common.server);
   useTranslation();
-
-  // useEffect(() => {
-  //   function handleResize() {
-  //     setWindowWidth(window.innerWidth);
-  //   }
-
-  //   window.addEventListener('resize', handleResize);
-  //   return () => window.removeEventListener('resize', handleResize);
-  // });
 
   return (
     <BrowserRouter>
       <Header navs={pages} />
       <Switch>
-        <Route exact path='/' component={MainScreen} />
         {Object.keys(pages).map((page) => {
+          if (page === 'main') {
+            return <Route exact key={page} path={pages[page].path} component={pages[page].component} />;
+          }
           return <Route key={page} path={pages[page].path} component={pages[page].component} />;
         })}
         <Route path='/policy' component={Policy} />
