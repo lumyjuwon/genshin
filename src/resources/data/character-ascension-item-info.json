@@ -75,6 +75,10 @@
     "region": "",
     "rank": 1
   },
+  "Whopperflower Nectar": {
+    "region": "",
+    "rank": 1
+  },
   "Silk Flower": {
     "region": "Liyue",
     "rank": 0
@@ -110,5 +114,29 @@
   "Wolfhook": {
     "region": "Mondstadt",
     "rank": 0
+  },
+  "Vajrada Amethyst Sliver": { 
+    "region": "",
+    "rank": 2
+  },
+  "Vayuda Turquoise Sliver": { 
+    "region": "",
+    "rank": 2
+  },
+  "Shivada Jade Sliver": { 
+    "region": "",
+    "rank": 2
+  },
+  "Varunada Lazurite Sliver": { 
+    "region": "",
+    "rank": 2
+  },
+  "Prithiva Topaz Sliver": { 
+    "region": "",
+    "rank": 2
+  },
+  "Agnidus Agate Sliver": { 
+    "region": "",
+    "rank": 2
   }
 }
