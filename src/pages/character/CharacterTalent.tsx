@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { characterTalentItemInfo, characterInfo } from 'src/resources/data';
-import { RoundImage, GridWrapper, RoundImageBox } from 'src/components';
+import { RoundImage, GridWrapper, RoundImageBox, TooltipText } from 'src/components';
 import { DailySetImages, CharacterImages } from 'src/resources/images';
+import { trans, Lang, KeyLang } from 'src/resources/languages';
 
 const Container = styled.div({
   width: '100%',
@@ -15,7 +16,7 @@ const Container = styled.div({
 
 const GridTable = styled.div({
   display: 'grid',
-  gridTemplateColumns: '65px 220px 500px',
+  gridTemplateColumns: '70px 220px 500px',
   gridTemplateRows: 'repeat(auto-fit)',
   rowGap: '10px',
   margin: '20px 0 30px',
@@ -27,8 +28,12 @@ const Title = styled.div({
   fontSize: '20px'
 });
 
-const DayText = styled.div({
+const DayText = styled.p({
   fontSize: '14px'
+});
+
+const RelativeBox = styled.div({
+  position: 'relative'
 });
 
 interface Props {}
@@ -47,7 +52,10 @@ export function CharacterTalent(props: Props) {
         {talentSet.map((set) => {
           return (
             <>
-              <RoundImage src={DailySetImages[set]} styles={{ width: '60px', height: '60px' }} />
+              <RelativeBox>
+                <RoundImage src={DailySetImages[set]} styles={{ width: '60px', height: '60px' }} />
+                <TooltipText styles={{ bottom: '0', fontSize: '12px' }}>{trans(Lang[set as KeyLang])}</TooltipText>
+              </RelativeBox>
               <DayText>{characterTalentItemInfo[set].day.join(', ')}</DayText>
               <GridWrapper styles={{ width: '100%' }}>
                 {characters.map((character) => {
@@ -66,31 +74,6 @@ export function CharacterTalent(props: Props) {
             </>
           );
         })}
-        {/* {days.map((day) => {
-          let talentBook: string[] = [];
-          return (
-            <>
-              <div>{day}</div>
-              <div>
-                {talentSet.map((set) => {
-                  if (characterTalentItemInfo[set].day.includes(day)) {
-                    talentBook.push(set);
-                    return <RoundImage src={DailySetImages[set]} />;
-                  } else {
-                    return null;
-                  }
-                })}
-              </div>
-              <div>
-                {characters.map((character) => {
-                  if (talentBook.includes(characterInfo[character].Talent.item)) {
-                    return <RoundImage src={CharacterImages[character]} />;
-                  } else return null;
-                })}
-              </div>
-            </>
-          );
-        })} */}
       </GridTable>
     </Container>
   );
