@@ -10,8 +10,12 @@ interface ButtonStyle {
   readonly '&:hover'?: {
     readonly backgroundColor?: string;
   };
+  readonly medium?: {
+    readonly fontSize?: string;
+  };
   readonly small?: {
-    readonly width: string;
+    readonly width?: string;
+    readonly fontSize?: string;
   };
 }
 
@@ -31,9 +35,13 @@ const Button = styled.div<ButtonStyle>((props: ButtonStyle) => {
     MozUserSelect: 'none',
     userSelect: 'none',
     transition: '.2s ease-out',
+    '@media screen and (max-width: 1380px)': {
+      fontSize: props.medium?.fontSize || props.fontSize || '22px'
+    },
     '@media screen and (max-width: 768px)': {
       width: props.small?.width || props.width || 'fit-content',
-      padding: '15px 10px'
+      padding: '15px 10px',
+      fontSize: props.small?.fontSize || props.fontSize || '22px'
     }
   };
 });

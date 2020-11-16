@@ -18,6 +18,9 @@ const HeaderInner = styled.div({
   display: 'flex',
   alignItems: 'center',
   minHeight: '10vh',
+  '@media screen and (max-width: 1380px)': {
+    maxWidth: '90vw'
+  },
   '@media screen and (max-width: 768px)': {
     justifyContent: 'space-between',
     margin: '0',
@@ -73,7 +76,7 @@ export function Header(props: Props) {
             setIsNavVisible(!isNavVisible);
           }}
         >
-          <i className='fas fa-bars'></i>
+          <i className="fas fa-bars"></i>
         </ToggleIcon>
       </HeaderInner>
     </HeaderOuter>

@@ -13,6 +13,9 @@ const Logo = styled.div({
   width: 'max-content',
   fontWeight: 'bolder',
   margin: '0 0 0 7px',
+  '@media screen and (max-width: 1380px)': {
+    fontSize: '22px'
+  },
   '@media screen and (max-width: 768px)': {
     fontSize: '18px',
     margin: '0 0 0 4px'
