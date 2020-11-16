@@ -54,24 +54,23 @@ export function CharacterAscensionDetailModal(props: Props) {
             <FlexWrapper styles={{ flexDirection: 'column' }}>
               {Object.values(AscensionStep).map((step: Step) => {
                 return (
-                  <FlexWrapper>
-                    {getAscensionItems(AscensionStep[step]).map((item: string) => {
-                      return (
-                        <>
-                          <RoundImage src={CharacterAscentionItemImages[item]} styles={{ width: '60px', height: '60px' }} />
-                          <div>{ascensionItems.get(item)}</div>
-                        </>
-                      );
-                    })}
+                  <FlexWrapper styles={{ margin: '10px 0 0' }}>
+                    <>
+                      <FlexWrapper styles={{ width: '70px' }}>{AscensionStep[step]}</FlexWrapper>
+                      <FlexWrapper styles={{ width: '350px' }}>
+                        {getAscensionItems(AscensionStep[step]).map((item: string) => {
+                          return (
+                            <FlexWrapper styles={{ margin: '0 3px' }}>
+                              <RoundImage src={CharacterAscentionItemImages[item]} styles={{ width: '60px', height: '60px' }} />
+                              <div>x{ascensionItems.get(item)}</div>
+                            </FlexWrapper>
+                          );
+                        })}
+                      </FlexWrapper>
+                    </>
                   </FlexWrapper>
                 );
               })}
-
-              {/* <div>{characterInfo[props.character].ascension.second}</div>
-              <div>{characterInfo[props.character].ascension.third}</div>
-              <div>{characterInfo[props.character].ascension.fourth}</div>
-              <div>{characterInfo[props.character].ascension.fifth}</div>
-              <div>{characterInfo[props.character].ascension.sixth}</div> */}
             </FlexWrapper>
           </>
         </FlexWrapper>

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
 
 import { ContentWrapper } from 'src/components';
 import { CharacterAscesion } from './CharacterAscesion';

@@ -50,8 +50,7 @@ export function CharacterAscesion(props: Props) {
       <FlexWrapper styles={{ flexDirection: 'column', alignItems: 'flex-start', margin: '20px 0 0' }}>
         <>
           <FlexWrapper>
-            <FlexWrapper styles={{ width: '70px' }}>Item</FlexWrapper>
-            <FlexWrapper styles={{ width: '170px' }}>Name</FlexWrapper>
+            <FlexWrapper styles={{ width: '240px' }}>Item</FlexWrapper>
             <FlexWrapper styles={{ width: '100px' }}>Region</FlexWrapper>
             <FlexWrapper styles={{ width: '450px' }}>Characters</FlexWrapper>
           </FlexWrapper>
