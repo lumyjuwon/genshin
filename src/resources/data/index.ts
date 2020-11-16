@@ -30,6 +30,29 @@ interface Character {
       DEF: string;
       Additional: string;
     };
+    Ascesion: {
+      first: {
+        [itemName: string]: number;
+      };
+      second: {
+        [itemName: string]: number;
+      };
+      third: {
+        [itemName: string]: number;
+      };
+      fourth: {
+        [itemName: string]: number;
+      };
+      fifth: {
+        [itemName: string]: number;
+      };
+      sixth: {
+        [itemName: string]: number;
+      };
+    };
+    Talent: {
+      item: string;
+    };
   };
 }
 const characterInfo: Character = require('../data/character-info.json');
