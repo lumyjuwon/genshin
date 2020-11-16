@@ -121,4 +121,21 @@ interface ServerTime {
 }
 const serverTimeInfo: ServerTime = require('../data/server-time.json');
 
-export { gachaInfo, characterInfo, weaponInfo, artifactInfo, characterTalentItemInfo, weaponAscesionItemInfo, serverTimeInfo };
+interface CharacterAscensionItem {
+  [name: string]: {
+    region: string;
+    rank: number;
+  };
+}
+const characterAscensionItems: CharacterAscensionItem = require('../data/character-ascension-item-info.json');
+
+export {
+  gachaInfo,
+  characterInfo,
+  weaponInfo,
+  artifactInfo,
+  characterTalentItemInfo,
+  weaponAscesionItemInfo,
+  serverTimeInfo,
+  characterAscensionItems
+};
