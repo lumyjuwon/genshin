@@ -129,6 +129,7 @@ interface CharacterAscensionItem {
   };
 }
 const characterAscensionItemInfo: CharacterAscensionItem = require('../data/character-ascension-item-info.json');
+const characterAscensionAlchemyItemInfo: CharacterAscensionItem = require('../data/character-ascension-alchemy-item.json');
 
 export {
   gachaInfo,
@@ -138,5 +139,6 @@ export {
   characterTalentItemInfo,
   weaponAscesionItemInfo,
   serverTimeInfo,
-  characterAscensionItemInfo
+  characterAscensionItemInfo,
+  characterAscensionAlchemyItemInfo
 };
