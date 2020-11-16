@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { characterTalentItemInfo, characterInfo } from 'src/resources/data';
-import { RoundImage, GridWrapper, ItemBadgeBox, TooltipText } from 'src/components';
+import { RoundImage, GridWrapper, ItemBadgeBox, TooltipText, FlexWrapper } from 'src/components';
 import { DailySetImages, CharacterImages, ElementImages } from 'src/resources/images';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
 
@@ -14,13 +14,10 @@ const Container = styled.div({
   alignItems: 'center'
 });
 
-const GridTable = styled.div({
-  display: 'grid',
-  gridTemplateColumns: '70px 220px 500px',
-  gridTemplateRows: 'repeat(auto-fit)',
-  rowGap: '10px',
-  margin: '20px 0 30px',
-  justifyItems: 'center',
+const ImageWrapper = styled.div({
+  display: 'flex',
+  width: '70px',
+  justifyContent: 'center',
   alignItems: 'center'
 });
 
@@ -29,7 +26,8 @@ const Title = styled.div({
   fontWeight: 'bold'
 });
 
-const DayText = styled.p({
+const DayText = styled.div({
+  width: '220px',
   fontSize: '14px'
 });
 
@@ -48,44 +46,56 @@ export function CharacterTalent(props: Props) {
   return (
     <Container>
       <Title>Character Talent</Title>
-      <GridTable>
-        <div>Item</div>
-        <div>Day</div>
-        <div>Characters</div>
-        {talentSet.map((set) => {
-          return (
-            <React.Fragment key={set}>
-              <RelativeBox>
-                <RoundImage src={DailySetImages[set]} styles={{ width: '60px', height: '60px' }} />
-                <TooltipText styles={{ bottom: '0', fontSize: '12px' }}>{trans(Lang[set as KeyLang])}</TooltipText>
-              </RelativeBox>
-              <DayText>{characterTalentItemInfo[set].day.join(', ')}</DayText>
-              <GridWrapper styles={{ width: '100%' }}>
-                {characters.map((character) => {
-                  if (characterInfo[character].talent.item === set) {
-                    return (
-                      <ItemBadgeBox
-                        badge={
-                          <RoundImage src={ElementImages[characterInfo[character].element]} styles={{ width: '20px', height: '20px' }} />
-                        }
-                        child={<RoundImage src={CharacterImages[character]} styles={{ width: '60px', height: '60px' }} />}
-                        styles={{
-                          boxStyles: { margin: '3px' }
-                        }}
-                        isActive={true}
-                        onClick={() => props.onClick(character)}
-                        hoverInnerColor="#f1f2f3"
-                        isToolTipVisible={false}
-                        isRankVisible={false}
-                      />
-                    );
-                  } else return null;
-                })}
-              </GridWrapper>
-            </React.Fragment>
-          );
-        })}
-      </GridTable>
+      <FlexWrapper styles={{ flexDirection: 'column', alignItems: 'flex-start', margin: '20px 0 0' }}>
+        <>
+          <FlexWrapper>
+            <FlexWrapper styles={{ width: '70px' }}>Item</FlexWrapper>
+            <FlexWrapper styles={{ width: '220px' }}>Day</FlexWrapper>
+            <FlexWrapper styles={{ width: '500px' }}>Characters</FlexWrapper>
+          </FlexWrapper>
+          {talentSet.map((set) => {
+            return (
+              <FlexWrapper styles={{ margin: '10px 0 0' }} key={set}>
+                <>
+                  <ImageWrapper>
+                    <RelativeBox>
+                      <RoundImage src={DailySetImages[set]} styles={{ width: '60px', height: '60px' }} />
+                      <TooltipText styles={{ bottom: '0', fontSize: '12px' }}>{trans(Lang[set as KeyLang])}</TooltipText>
+                    </RelativeBox>
+                  </ImageWrapper>
+                  <DayText>{characterTalentItemInfo[set].day.join(', ')}</DayText>
+                  <GridWrapper styles={{ width: '500px' }}>
+                    {characters.map((character) => {
+                      if (characterInfo[character].talent.item === set) {
+                        return (
+                          <ItemBadgeBox
+                            key={character.concat('_talent')}
+                            badge={
+                              <RoundImage
+                                src={ElementImages[characterInfo[character].element]}
+                                styles={{ width: '20px', height: '20px' }}
+                              />
+                            }
+                            child={<RoundImage src={CharacterImages[character]} styles={{ width: '60px', height: '60px' }} />}
+                            styles={{
+                              boxStyles: { margin: '3px' }
+                            }}
+                            isActive={true}
+                            onClick={() => props.onClick(character)}
+                            hoverInnerColor="#f1f2f3"
+                            isToolTipVisible={false}
+                            isRankVisible={false}
+                          />
+                        );
+                      } else return null;
+                    })}
+                  </GridWrapper>
+                </>
+              </FlexWrapper>
+            );
+          })}
+        </>
+      </FlexWrapper>
     </Container>
   );
 }

@@ -78,7 +78,7 @@ const FlexDiv = styled.div<DivProps>((props: DivProps) => {
 });
 
 interface Props {
-  children: JSX.Element | JSX.Element[];
+  children: JSX.Element | JSX.Element[] | string;
   styles?: DivProps;
 }
 
