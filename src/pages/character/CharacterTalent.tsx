@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { characterTalentItemInfo, characterInfo } from 'src/resources/data';
-import { RoundImage, GridWrapper, RoundImageBox, TooltipText } from 'src/components';
-import { DailySetImages, CharacterImages } from 'src/resources/images';
+import { RoundImage, GridWrapper, ItemBadgeBox, TooltipText } from 'src/components';
+import { DailySetImages, CharacterImages, ElementImages } from 'src/resources/images';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
 
 const Container = styled.div({
@@ -62,12 +62,20 @@ export function CharacterTalent(props: Props) {
                 {characters.map((character) => {
                   if (characterInfo[character].talent.item === set) {
                     return (
-                      <a href={`#${character}`}>
-                        <RoundImageBox
-                          src={CharacterImages[character]}
-                          styles={{ boxStyle: { margin: '0', border: 'none' }, imageStyle: { width: '60px', height: '60px' } }}
-                        />
-                      </a>
+                      <ItemBadgeBox
+                        badge={
+                          <RoundImage src={ElementImages[characterInfo[character].element]} styles={{ width: '20px', height: '20px' }} />
+                        }
+                        child={<RoundImage src={CharacterImages[character]} styles={{ width: '60px', height: '60px' }} />}
+                        styles={{
+                          boxStyles: { margin: '3px' }
+                        }}
+                        isActive={true}
+                        onClick={() => {}}
+                        hoverInnerColor="#f1f2f3"
+                        isToolTipVisible={false}
+                        isRankVisible={false}
+                      />
                     );
                   } else return null;
                 })}

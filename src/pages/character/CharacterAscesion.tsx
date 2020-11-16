@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { characterAscensionItemInfo, characterInfo } from 'src/resources/data';
-import { CharacterAscentionItemImages } from 'src/resources/images';
-import { RoundImage, RoundImageBox, GridWrapper } from 'src/components';
+import { CharacterAscentionItemImages, ElementImages } from 'src/resources/images';
+import { RoundImage, RoundImageBox, GridWrapper, ItemBadgeBox } from 'src/components';
 import { CharacterImages } from 'src/resources/images';
 
 const Container = styled.div({
@@ -65,9 +65,19 @@ export function CharacterAscesion(props: Props) {
                 {characters.map((character) => {
                   if (characterInfo[character].ascension.items.includes(item)) {
                     return (
-                      <RoundImageBox
-                        src={CharacterImages[character]}
-                        styles={{ boxStyle: { margin: '0', border: 'none' }, imageStyle: { width: '60px', height: '60px' } }}
+                      <ItemBadgeBox
+                        badge={
+                          <RoundImage src={ElementImages[characterInfo[character].element]} styles={{ width: '20px', height: '20px' }} />
+                        }
+                        child={<RoundImage src={CharacterImages[character]} styles={{ width: '60px', height: '60px' }} />}
+                        styles={{
+                          boxStyles: { margin: '3px' }
+                        }}
+                        isActive={true}
+                        onClick={() => {}}
+                        hoverInnerColor="#f1f2f3"
+                        isToolTipVisible={false}
+                        isRankVisible={false}
                       />
                     );
                   } else return null;
