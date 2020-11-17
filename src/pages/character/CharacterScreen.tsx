@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { ContentWrapper } from 'src/components';
 import { CharacterAscesion } from './CharacterAscesion';
 import { CharacterTalent } from './CharacterTalent';
-import { CharacterAscensionDetailModal } from './CharacterAscensionDetailModal';
+import { CharacterAscensionDetailModal } from './modal/CharacterAscensionDetailModal';
 
 interface Props {}
 

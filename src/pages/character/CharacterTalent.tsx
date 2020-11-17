@@ -66,7 +66,7 @@ export function CharacterTalent(props: Props) {
                   <DayText>{characterTalentItemInfo[set].day.join(', ')}</DayText>
                   <GridWrapper styles={{ width: '500px' }}>
                     {characters.map((character) => {
-                      if (characterInfo[character].talent.item === set) {
+                      if (characterInfo[character].talent.book === set) {
                         return (
                           <ItemBadgeBox
                             key={character.concat('_talent')}
