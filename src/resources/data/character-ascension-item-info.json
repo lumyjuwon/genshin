@@ -1,28 +1,4 @@
 {
-  "Hurricane Seed": {
-    "region": "",
-    "rank": 4
-  },
-  "Hoarfrost Core": {
-    "region": "",
-    "rank": 4
-  },
-  "Lightning Prism": {
-    "region": "",
-    "rank": 4
-  },
-  "Basalt Pillar": {
-    "region": "",
-    "rank": 4
-  },
-  "Cleansing Heart": {
-    "region": "",
-    "rank": 4
-  },
-  "Everflame Seed": {
-    "region": "",
-    "rank": 4
-  },
   "Calla Lily": {
     "region": "Mondstadt",
     "rank": 0
@@ -138,5 +114,29 @@
   "Agnidus Agate Sliver": { 
     "region": "",
     "rank": 2
+  },
+  "Hurricane Seed": {
+    "region": "",
+    "rank": 4
+  },
+  "Hoarfrost Core": {
+    "region": "",
+    "rank": 4
+  },
+  "Lightning Prism": {
+    "region": "",
+    "rank": 4
+  },
+  "Basalt Pillar": {
+    "region": "",
+    "rank": 4
+  },
+  "Cleansing Heart": {
+    "region": "",
+    "rank": 4
+  },
+  "Everflame Seed": {
+    "region": "",
+    "rank": 4
   }
 }

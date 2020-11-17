@@ -131,6 +131,14 @@ interface CharacterAscensionItem {
 const characterAscensionItemInfo: CharacterAscensionItem = require('../data/character-ascension-item-info.json');
 const characterAscensionAlchemyItemInfo: CharacterAscensionItem = require('../data/character-ascension-alchemy-item.json');
 
+interface WeeklyBossItem {
+  [name: string]: {
+    rank: number;
+    obtain: Array<string>;
+  };
+}
+const weeklyBossItemInfo: WeeklyBossItem = require('../data/weekly-boss-item-info.json');
+
 export {
   gachaInfo,
   characterInfo,
@@ -140,5 +148,6 @@ export {
   weaponAscesionItemInfo,
   serverTimeInfo,
   characterAscensionItemInfo,
-  characterAscensionAlchemyItemInfo
+  characterAscensionAlchemyItemInfo,
+  weeklyBossItemInfo
 };
