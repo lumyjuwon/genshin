@@ -52,7 +52,9 @@ interface Character {
       };
     };
     talent: {
-      item: string;
+      book: string;
+      boss: string;
+      drop: string;
     };
   };
 }
@@ -129,7 +131,14 @@ interface CharacterAscensionItem {
   };
 }
 const characterAscensionItemInfo: CharacterAscensionItem = require('../data/character-ascension-item-info.json');
-const characterAscensionAlchemyItemInfo: CharacterAscensionItem = require('../data/character-ascension-alchemy-item.json');
+
+interface AlchemyItem {
+  [name: string]: {
+    rank: number;
+    source: string;
+  };
+}
+const alchemyItemInfo: AlchemyItem = require('../data/alchemy-item-info.json');
 
 interface WeeklyBossItem {
   [name: string]: {
@@ -148,6 +157,6 @@ export {
   weaponAscesionItemInfo,
   serverTimeInfo,
   characterAscensionItemInfo,
-  characterAscensionAlchemyItemInfo,
+  alchemyItemInfo,
   weeklyBossItemInfo
 };

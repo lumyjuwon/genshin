@@ -1,4 +1,4 @@
-import { weaponInfo, artifactInfo, characterInfo, characterAscensionItemInfo, characterAscensionAlchemyItemInfo } from '../data';
+import { weaponInfo, artifactInfo, characterInfo, characterAscensionItemInfo, alchemyItemInfo, weeklyBossItemInfo } from '../data';
 
 export type ImageSrc = string | undefined;
 
@@ -83,7 +83,10 @@ const DailySetImages: ImageMap = {
 
 const CharacterAscentionItemImages: ImageMap = {};
 appendImages(CharacterAscentionItemImages, characterAscensionItemInfo, './items/character-ascension');
-appendImages(CharacterAscentionItemImages, characterAscensionAlchemyItemInfo, './items/character-ascension');
+appendImages(CharacterAscentionItemImages, alchemyItemInfo, './items/character-ascension');
+
+const WeeklyBossItemImages: ImageMap = {};
+appendImages(WeeklyBossItemImages, weeklyBossItemInfo, './items/weekly-boss');
 
 export {
   CharacterImages,
@@ -95,5 +98,6 @@ export {
   CategoryImages,
   MapImages,
   DailySetImages,
-  CharacterAscentionItemImages
+  CharacterAscentionItemImages,
+  WeeklyBossItemImages
 };

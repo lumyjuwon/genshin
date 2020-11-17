@@ -50,7 +50,9 @@
       }
     },
     "talent": {
-      "item": "Freedom"
+      "book": "Freedom",
+      "boss": "Ring of Boreas",
+      "drop": "Divining Scroll"
     }
   },
   "Keqing": {
@@ -104,7 +106,9 @@
       }
     },
     "talent": {
-      "item": "Prosperity"
+      "book": "Prosperity",
+      "boss": "Ring of Boreas",
+      "drop": "Whopperflower Nectar"
     }
   },
   "Diluc": {
@@ -158,7 +162,9 @@
       }
     },
     "talent": {
-      "item": "Resistance"
+      "book": "Resistance",
+      "boss": "Dvalin's Plume",
+      "drop": "Recruit's Insignia"
     }
   },
   "Jean": {
@@ -212,7 +218,9 @@
       }
     },
     "talent": {
-      "item": "Resistance"
+      "book": "Resistance",
+      "boss": "Dvalin's Plume",
+      "drop": "Damaged Mask"
     }
   },
   "Qiqi": {
@@ -266,7 +274,9 @@
       }
     },
     "talent": {
-      "item": "Prosperity"
+      "book": "Prosperity",
+      "boss": "Tail of Boreas",
+      "drop": "Divining Scroll"
     }
   },
   "Mona": {
@@ -320,7 +330,9 @@
       }
     },
     "talent": {
-      "item": "Resistance"
+      "book": "Resistance",
+      "boss": "Ring of Boreas",
+      "drop": "Whopperflower Nectar"
     }
   },
   "Venti": {
@@ -374,7 +386,9 @@
       }
     },
     "talent": {
-      "item": "Ballad"
+      "book": "Ballad",
+      "boss": "Tail of Boreas",
+      "drop": "Slime Condensate"
     }
   },
   "Tartaglia": {
@@ -428,7 +442,9 @@
       }
     },
     "talent": {
-      "item": "Freedom"
+      "book": "Freedom",
+      "boss": "Shard of a Foul Legacy",
+      "drop": "Recruit's Insignia"
     }
   },
   "Traveler (Anemo)": {
@@ -477,7 +493,9 @@
       }
     },
     "talent": {
-      "item": ""
+      "book": "",
+      "boss": "",
+      "drop": ""
     }
   },
   "Traveler (Geo)": {
@@ -526,7 +544,9 @@
       }
     },
     "talent": {
-      "item": ""
+      "book": "",
+      "boss": "",
+      "drop": ""
     }
   },
   "Noelle": {
@@ -580,7 +600,9 @@
       }
     },
     "talent": {
-      "item": "Resistance"
+      "book": "Resistance",
+      "boss": "Dvalin's Claw",
+      "drop": "Damaged Mask"
     }
   },
   "Razor": {
@@ -634,7 +656,9 @@
       }
     },
     "talent": {
-      "item": "Resistance"
+      "book": "Resistance",
+      "boss": "Dvalin's Claw",
+      "drop": "Damaged Mask"
     }
   },
   "Ningguang": {
@@ -688,7 +712,9 @@
       }
     },
     "talent": {
-      "item": "Prosperity"
+      "book": "Prosperity",
+      "boss": "Spirit Locket of Boreas",
+      "drop": "Recruit's Insignia"
     }
   },
   "Lisa": {
@@ -742,7 +768,9 @@
       }
     },
     "talent": {
-      "item": "Ballad"
+      "book": "Ballad",
+      "boss": "Dvalin's Claw",
+      "drop": "Slime Condensate"
     }
   },
   "Kaeya": {
@@ -796,7 +824,9 @@
       }
     },
     "talent": {
-      "item": "Ballad"
+      "book": "Ballad",
+      "boss": "Spirit Locket of Boreas",
+      "drop": "Treasure Hoarder Insignia"
     }
   },
   "Fischl": {
@@ -850,7 +880,9 @@
       }
     },
     "talent": {
-      "item": "Ballad"
+      "book": "Ballad",
+      "boss": "Spirit Locket of Boreas",
+      "drop": "Firm Arrowhead"
     }
   },
   "Chongyun": {
@@ -904,7 +936,9 @@
       }
     },
     "talent": {
-      "item": "Diligence"
+      "book": "Diligence",
+      "boss": "Dvalin's Sigh",
+      "drop": "Damaged Mask"
     }
   },
   "Bennett": {
@@ -958,7 +992,9 @@
       }
     },
     "talent": {
-      "item": "Resistance"
+      "book": "Resistance",
+      "boss": "Dvalin's Plume",
+      "drop": "Treasure Hoarder Insignia"
     }
   },
   "Beidou": {
@@ -1012,7 +1048,9 @@
       }
     },
     "talent": {
-      "item": "Gold"
+      "book": "Gold",
+      "boss": "Dvalin's Sigh",
+      "drop": "Treasure Hoarder Insignia"
     }
   },
   "Barbara": {
@@ -1066,7 +1104,9 @@
       }
     },
     "talent": {
-      "item": "Freedom"
+      "book": "Freedom",
+      "boss": "Ring of Boreas",
+      "drop": "Divining Scroll"
     }
   },
   "Amber": {
@@ -1120,7 +1160,9 @@
       }
     },
     "talent": {
-      "item": "Freedom"
+      "book": "Freedom",
+      "boss": "Dvalin's Sigh",
+      "drop": "Firm Arrowhead"
     }
   }, 
   "Sucrose": {
@@ -1174,7 +1216,9 @@
       }
     },
     "talent": {
-      "item": "Freedom"
+      "book": "Freedom",
+      "boss": "Spirit Locket of Boreas",
+      "drop": "Whopperflower Nectar"
     }
   },
   "Xiangling": {
@@ -1228,7 +1272,9 @@
       }
     },
     "talent": {
-      "item": "Diligence"
+      "book": "Diligence",
+      "boss": "Dvalin's Claw",
+      "drop": "Slime Condensate"
     }
   },
   "Xingqiu": {
@@ -1282,7 +1328,9 @@
       }
     },
     "talent": {
-      "item": "Gold"
+      "book": "Gold",
+      "boss": "Tail of Boreas",
+      "drop": "Damaged Mask"
     }
   },
   "Diona": {
@@ -1336,7 +1384,9 @@
       }
     },
     "talent": {
-      "item": "Freedom"
+      "book": "Freedom",
+      "boss": "Shard of a Foul Legacy",
+      "drop": "Firm Arrowhead"
     }
   }
 }

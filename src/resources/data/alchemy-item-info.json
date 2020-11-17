@@ -1,0 +1,130 @@
+{
+  "Agnidus Agate Fragment": { 
+    "rank": 3,
+    "source": "Agnidus Agate Silver"
+  },
+  "Agnidus Agate Chunk": {
+    "rank": 4,
+    "source": "Agnidus Agate Silver"
+  },
+  "Agnidus Agate Gemstone": {
+    "rank": 5,
+    "source": "Agnidus Agate Silver"
+  },
+  "Prithiva Topaz Fragment": { 
+    "rank": 3,
+    "source": "Prithiva Topaz Silver"
+  },
+  "Prithiva Topaz Chunk": {
+    "rank": 4,
+    "source": "Prithiva Topaz Silver"
+  },
+  "Prithiva Topaz Gemstone": {
+    "rank": 5,
+    "source": "Prithiva Topaz Silver"
+  },
+  "Varunada Lazurite Fragment": { 
+    "rank": 3,
+    "source": "Varunada Lazurite Silver"
+  },
+  "Varunada Lazurite Chunk": {
+    "rank": 4,
+    "source": "Varunada Lazurite Silver"
+  },
+  "Varunada Lazurite Gemstone": {
+    "rank": 5,
+    "source": "Varunada Lazurite Silver"
+  },
+  "Shivada Jade Fragment": { 
+    "rank": 3,
+    "source": "Shivada Jade Silver"
+  },
+  "Shivada Jade Chunk": {
+    "rank": 4,
+    "source": "Shivada Jade Silver"
+  },
+  "Shivada Jade Gemstone": {
+    "rank": 5,
+    "source": "Shivada Jade Silver"
+  },
+  "Vayuda Turquoise Fragment": { 
+    "rank": 3,
+    "source": "Shivada Jade Silver"
+  },
+  "Vayuda Turquoise Chunk": {
+    "rank": 4,
+    "source": "Shivada Jade Silver"
+  },
+  "Vayuda Turquoise Gemstone": {
+    "rank": 5,
+    "source": "Shivada Jade Silver"
+  },
+  "Vajrada Amethyst Fragment": { 
+    "rank": 3,
+    "source": "Vajrada Amethyst Silver"
+  },
+  "Vajrada Amethyst Chunk": {
+    "rank": 4,
+    "source": "Vajrada Amethyst Silver"
+  },
+  "Vajrada Amethyst Gemstone": {
+    "rank": 5,
+    "source": "Vajrada Amethyst Silver"
+  },
+  "Sharp Arrowhead": {
+    "rank": 2,
+    "source": "Firm Arrowhead"
+  },
+  "Weathered Arrowhead": {
+    "rank": 3,
+    "source": "Firm Arrowhead"
+  },
+  "Sealed Scroll": {
+    "rank": 2,
+    "source": "Divining Scroll"
+  },
+  "Forbidden Curse Scroll": {
+    "rank": 3,
+    "source": "Divining Scroll"
+  },
+  "Silver Raven Insignia": {
+    "rank": 2,
+    "source": "Treasure Hoarder Insignia"
+  },
+  "Golden Raven Insignia": {
+    "rank": 3,
+    "source": "Treasure Hoarder Insignia"
+  },
+  "Sergeant's Insignia": {
+    "rank": 2,
+    "source": "Recruit's Insignia"
+  },
+  "Lieutenant's Insignia": {
+    "rank": 3,
+    "source": "Recruit's Insignia"
+  },
+  "Slime Secretions": {
+    "rank": 2,
+    "source": "Slime Condensate"
+  },
+  "Slime Concentrate": {
+    "rank": 3,
+    "source": "Slime Condensate"
+  },
+  "Stained Mask": {
+    "rank": 2,
+    "source": "Damaged Mask"
+  },
+  "Ominous Mask": {
+    "rank": 3,
+    "source": "Damaged Mask"
+  },
+  "Shimmering Nectar": {
+    "rank": 2,
+    "source": "Whopperflower Nectar"
+  },
+  "Energy Nectar": {
+    "rank": 3,
+    "source": "Whopperflower Nectar"
+  }
+}
