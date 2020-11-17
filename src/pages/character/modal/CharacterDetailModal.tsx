@@ -7,7 +7,7 @@ import { TalentDetail } from './TalentDetail';
 import { AscensionDetail } from './AscensionDetail';
 
 const Name = styled.span({
-  fontSize: '20px',
+  fontSize: '25px',
   fontWeight: 'bold',
   margin: '0 0 0 10px'
 });
@@ -18,7 +18,7 @@ interface Props {
   character: string;
 }
 
-export function CharacterAscensionDetailModal(props: Props) {
+export function CharacterDetailModal(props: Props) {
   if (props.character) {
     return (
       <Modal visible={props.visible} cancel={props.cancel}>

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { ContentWrapper } from 'src/components';
 import { CharacterAscesion } from './CharacterAscesion';
 import { CharacterTalent } from './CharacterTalent';
-import { CharacterAscensionDetailModal } from './modal/CharacterAscensionDetailModal';
+import { CharacterDetailModal } from './modal/CharacterDetailModal';
 
 interface Props {}
 
@@ -28,11 +28,7 @@ export function CharacterScreen(props: Props) {
     <ContentWrapper>
       <CharacterTalent onClick={onCharacterClick} />
       <CharacterAscesion onClick={onCharacterClick} />
-      <>
-        {characterName && (
-          <CharacterAscensionDetailModal visible={detailModalVisible} cancel={() => onCancelClick()} character={characterName} />
-        )}
-      </>
+      <>{characterName && <CharacterDetailModal visible={detailModalVisible} cancel={() => onCancelClick()} character={characterName} />}</>
     </ContentWrapper>
   );
 }
