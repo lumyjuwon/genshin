@@ -70,20 +70,15 @@ export function DailyAbyssal() {
 
   const serverTime = new Date();
   serverTime.setUTCHours(serverTime.getUTCHours() + serverTimeInfo[server]);
-  let serverDay: string = convertToTextDay(serverTime.getUTCHours() < 4 ? serverTime.getUTCDay() - 1 : serverTime.getUTCDay());
-  let imageSize: { width: string; height: string } = { width: '80px', height: '80px' };
-  let tooltipoFontSize = '14px';
-
-  if (serverDay === 'Sunday') {
-    imageSize = { width: '70px', height: '70px' };
-    tooltipoFontSize = '12px';
-  }
+  const serverDay: string = convertToTextDay(serverTime.getUTCHours() < 4 ? serverTime.getUTCDay() - 1 : serverTime.getUTCDay());
+  const imageSize: { width: string; height: string } = { width: '70px', height: '65px' };
+  const tooltipoFontSize = '12px';
 
   const weaponAscesionItemSet = Object.keys(weaponAscesionItemInfo);
   const characterTalentItemSet = Object.keys(characterTalentItemInfo);
 
   function getTodayAbyssalItems(sets: Array<string>, info: Items): string[] {
-    let todayItems: string[] = [];
+    const todayItems: string[] = [];
     sets.forEach((setName) => {
       if (info[setName].day.includes(serverDay)) {
         todayItems.push(setName);
@@ -134,34 +129,24 @@ export function DailyAbyssal() {
 }
 
 function convertToTextDay(day: number): string {
-  let textDay: string;
   switch (day) {
     case -1:
-      textDay = 'Saturday';
-      break;
+      return 'Saturday';
     case 0:
-      textDay = 'Sunday';
-      break;
+      return 'Sunday';
     case 1:
-      textDay = 'Monday';
-      break;
+      return 'Monday';
     case 2:
-      textDay = 'Tuesday';
-      break;
+      return 'Tuesday';
     case 3:
-      textDay = 'Wednesday';
-      break;
+      return 'Wednesday';
     case 4:
-      textDay = 'Thursday';
-      break;
+      return 'Thursday';
     case 5:
-      textDay = 'Friday';
-      break;
+      return 'Friday';
     case 6:
-      textDay = 'Saturday';
-      break;
+      return 'Saturday';
     default:
-      textDay = '';
+      return '';
   }
-  return textDay;
 }
