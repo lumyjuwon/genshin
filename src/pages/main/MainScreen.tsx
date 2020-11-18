@@ -40,7 +40,7 @@ const Containter = styled.div({
   }
 });
 
-interface Props {}
+interface Props { }
 
 export function MainScreen(props: Props) {
   return (
@@ -70,7 +70,8 @@ export function MainScreen(props: Props) {
                       medium: { width: '210px', margin: '20px', height: '350px' },
                       small: { width: '260px' }
                     },
-                    imageStyles: { width: '200px', height: '200px', medium: { width: '150px', height: '150px' } }
+                    imageStyles: { width: '200px', height: '200px', medium: { width: '150px', height: '150px' } },
+                    descStyles: { medium: { fontSize: '16px' } }
                   }}
                 />
               </Link>
@@ -88,7 +89,8 @@ export function MainScreen(props: Props) {
                       medium: { width: '210px', margin: '20px', height: '350px' },
                       small: { width: '260px' }
                     },
-                    imageStyles: { width: '200px', height: '200px', medium: { width: '150px', height: '150px' } }
+                    imageStyles: { width: '200px', height: '200px', medium: { width: '150px', height: '150px' } },
+                    descStyles: { medium: { fontSize: '16px' } }
                   }}
                 />
               </Link>
@@ -105,7 +107,8 @@ export function MainScreen(props: Props) {
                     medium: { width: '210px', margin: '20px', height: '350px' },
                     small: { width: '260px' }
                   },
-                  imageStyles: { width: '200px', height: '200px', medium: { width: '150px', height: '150px' } }
+                  imageStyles: { width: '200px', height: '200px', medium: { width: '150px', height: '150px' } },
+                  descStyles: { medium: { fontSize: '16px' } }
                 }}
               />
             </>
