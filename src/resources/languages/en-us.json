@@ -470,6 +470,10 @@
 
   "Map": "Map",
 
+  "Item": "Item",
+  "Viewer_Open": "Open",
+  "Viewer_Close": "Close",
+
   "Character": "Character",
   "Max_40": "Max 40",
   "Max_50": "Max 50",
@@ -477,6 +481,9 @@
   "Max_70": "Max 70",
   "Max_80": "Max 80",
   "Max_90": "Max 90",
+  "Character_Talent": "",
+  "Character_Weekly_Boss": "",
+  "Chracter_Ascension": "",
   "Character_Item": "Item",
   "Character_Day": "Day",
   "Character_Region": "Region",

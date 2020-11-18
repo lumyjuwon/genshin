@@ -469,6 +469,10 @@
   "Aerosiderite": "흑운철",
 
   "Map": "지도",
+  
+  "Item": "아이템",
+  "Viewer_Open": "펼치기",
+  "Viewer_Close": "닫기",
 
   "Character": "캐릭터",
   "Max_40": "Max 40",
@@ -477,6 +481,9 @@
   "Max_70": "Max 70",
   "Max_80": "Max 80",
   "Max_90": "Max 90",
+  "Character_Talent": "",
+  "Character_Weekly_Boss": "",
+  "Chracter_Ascension": "",
   "Character_Item": "아이템",
   "Character_Day": "요일",
   "Character_Region": "지역",

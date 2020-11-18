@@ -482,9 +482,16 @@ enum Lang {
 
   Map = 'Map',
 
+  Item = 'Item',
+  Viewer_Open = 'Viewer_Open',
+  Viewer_Close = 'Viewer_Close',
+
   Character = 'Character',
   Character_Talent = 'Character_Talent',
+  Character_Talent_Daily = 'Character_Talent_Daily',
+  Character_Talent_Weekly_Boss = 'Character_Weekly_Boss',
   Chracter_Ascension = 'Chracter_Ascension',
+  Character_Ascension_Field_Drop = 'Character_Ascension_Field_Drop',
   Max_40 = 'Max_40',
   Max_50 = 'Max_50',
   Max_60 = 'Max_60',
