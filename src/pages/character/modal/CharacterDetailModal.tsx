@@ -25,7 +25,7 @@ export function CharacterDetailModal(props: Props) {
         <FlexWrapper styles={{ flexDirection: 'column' }}>
           <>
             <FlexWrapper>
-              <RoundImage src={CharacterImages[props.character]} />
+              <RoundImage src={CharacterImages[props.character]} styles={{ small: { width: '80px', height: '80px' } }} />
               <Name>{props.character}</Name>
             </FlexWrapper>
             <AscensionDetail character={props.character} />

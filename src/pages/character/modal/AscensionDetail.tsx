@@ -1,14 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { FlexWrapper, RoundImage } from 'src/components';
+import { FlexWrapper, GridWrapper, RoundImage } from 'src/components';
 import { characterInfo } from 'src/resources/data';
 import { CharacterAscentionItemImages } from 'src/resources/images';
 
 const Title = styled.div({
   width: '100%',
   textAlign: 'center',
-  fontSize: '20px'
+  fontSize: '20px',
+  fontWeight: 'bold',
+  '@media screen and (max-width: 768px)': {
+    fontSize: '16px'
+  }
+});
+
+const Count = styled.div({
+  fontSize: '16px',
+  margin: '0 0 0 3px',
+  '@media screen and (max-width: 768px)': {
+    fontSize: '14px'
+  }
 });
 
 enum AscensionStep {
@@ -44,10 +56,10 @@ export function AscensionDetail(props: Props) {
         <Title>Ascension Steps</Title>
         {Object.values(AscensionStep).map((step: Step) => {
           return (
-            <FlexWrapper styles={{ margin: '10px 0 0' }}>
+            <FlexWrapper styles={{ margin: '10px 0 0', small: { flexDirection: 'column' } }}>
               <>
                 <FlexWrapper styles={{ width: '70px' }}>{AscensionStep[step]}</FlexWrapper>
-                <FlexWrapper styles={{ width: '400px' }}>
+                <GridWrapper>
                   {getAscensionItems(AscensionStep[step]).map((item: string) => {
                     return (
                       <FlexWrapper styles={{ margin: '0 3px' }}>
@@ -55,11 +67,11 @@ export function AscensionDetail(props: Props) {
                           src={CharacterAscentionItemImages[item]}
                           styles={{ width: '60px', height: '60px', medium: { width: '50px', height: '50px' } }}
                         />
-                        <div style={{ margin: '0 0 0 3px' }}>x{ascensionItems.get(item)}</div>
+                        <Count>x{ascensionItems.get(item)}</Count>
                       </FlexWrapper>
                     );
                   })}
-                </FlexWrapper>
+                </GridWrapper>
               </>
             </FlexWrapper>
           );

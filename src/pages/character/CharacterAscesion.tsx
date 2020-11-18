@@ -17,7 +17,8 @@ const Container = styled.div({
 
 const Title = styled.div({
   fontSize: '20px',
-  fontWeight: 'bold'
+  fontWeight: 'bold',
+  textAlign: 'center'
 });
 
 const ImageWrapper = styled.div({
@@ -33,7 +34,11 @@ const RelativeBox = styled.div({
 
 const ItemName = styled.div({
   fontSize: '14px',
-  width: '170px'
+  width: '170px',
+  '@media screen and (max-width: 768px)': {
+    width: '100px',
+    fontSize: '12px'
+  }
 });
 
 const ItemRegion = styled.div({
@@ -42,6 +47,18 @@ const ItemRegion = styled.div({
   textAlign: 'center',
   '@media screen and (max-width: 1380px)': {
     width: '80px'
+  },
+  '@media screen and (max-width: 768px)': {
+    fontSize: '12px'
+  }
+});
+
+const DisplayNone = styled.div({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  '@media screen and (max-width: 768px)': {
+    display: 'none'
   }
 });
 
@@ -56,26 +73,30 @@ export function CharacterAscesion(props: Props) {
   return (
     <Container>
       <Title>Character Ascension Items</Title>
-      <FlexWrapper styles={{ flexDirection: 'column', alignItems: 'flex-start', margin: '20px 0 0' }}>
+      <FlexWrapper styles={{ flexDirection: 'column', alignItems: 'flex-start', margin: '20px 0 0', small: { alignItems: 'center' } }}>
         <>
-          <FlexWrapper>
-            <FlexWrapper styles={{ width: '240px' }}>Item</FlexWrapper>
-            <FlexWrapper styles={{ width: '100px', medium: { width: '80px' } }}>Region</FlexWrapper>
-            <FlexWrapper styles={{ width: '450px', medium: { width: '400px' } }}>Characters</FlexWrapper>
-          </FlexWrapper>
+          <DisplayNone>
+            <FlexWrapper>
+              <FlexWrapper styles={{ width: '240px' }}>Item</FlexWrapper>
+              <FlexWrapper styles={{ width: '100px', medium: { width: '80px' } }}>Region</FlexWrapper>
+              <FlexWrapper styles={{ width: '450px', medium: { width: '400px' } }}>Characters</FlexWrapper>
+            </FlexWrapper>
+          </DisplayNone>
           {ascensionItems.map((item) => {
             return (
-              <FlexWrapper styles={{ margin: '10px 0 0' }} key={item}>
-                <ImageWrapper>
-                  <RelativeBox>
-                    <RoundImage
-                      src={CharacterAscentionItemImages[item]}
-                      styles={{ width: '60px', height: '60px', medium: { width: '50px', height: '50px' } }}
-                    />
-                  </RelativeBox>
-                </ImageWrapper>
-                <ItemName>{item}</ItemName>
-                <ItemRegion>{characterAscensionItemInfo[item].region}</ItemRegion>
+              <FlexWrapper styles={{ margin: '10px 0 0', small: { flexDirection: 'column' } }} key={item}>
+                <FlexWrapper>
+                  <ImageWrapper>
+                    <RelativeBox>
+                      <RoundImage
+                        src={CharacterAscentionItemImages[item]}
+                        styles={{ width: '60px', height: '60px', medium: { width: '50px', height: '50px' } }}
+                      />
+                    </RelativeBox>
+                  </ImageWrapper>
+                  <ItemName>{item}</ItemName>
+                  <ItemRegion>{characterAscensionItemInfo[item].region}</ItemRegion>
+                </FlexWrapper>
                 <GridWrapper styles={{ width: '450px', medium: { width: '400px' } }}>
                   {characters.map((character) => {
                     if (characterInfo[character].ascension.items.includes(item)) {
@@ -88,11 +109,16 @@ export function CharacterAscesion(props: Props) {
                           child={
                             <RoundImage
                               src={CharacterImages[character]}
-                              styles={{ width: '60px', height: '60px', medium: { width: '50px', height: '50px' } }}
+                              styles={{
+                                width: '60px',
+                                height: '60px',
+                                medium: { width: '50px', height: '50px' },
+                                small: { width: '50px', height: '50px' }
+                              }}
                             />
                           }
                           styles={{
-                            boxStyles: { margin: '3px' }
+                            boxStyles: { margin: '3px', small: { margin: '6px 3px 3px' } }
                           }}
                           isActive={true}
                           onClick={() => props.onClick(character)}

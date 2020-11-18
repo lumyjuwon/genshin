@@ -29,11 +29,24 @@ const Title = styled.div({
 const DayText = styled.div({
   width: '220px',
   fontSize: '14px',
-  textAlign: 'center'
+  textAlign: 'center',
+  '@media screen and (max-width: 768px)': {
+    fontSize: '12px',
+    width: '180px'
+  }
 });
 
 const RelativeBox = styled.div({
   position: 'relative'
+});
+
+const DisplayNone = styled.div({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  '@media screen and (max-width: 768px)': {
+    display: 'none'
+  }
 });
 
 interface Props {
@@ -50,21 +63,27 @@ export function CharacterTalent(props: Props) {
       <FlexWrapper styles={{ flexDirection: 'column', alignItems: 'flex-start', margin: '20px 0 0' }}>
         <>
           <FlexWrapper>
-            <FlexWrapper styles={{ width: '70px' }}>Item</FlexWrapper>
-            <FlexWrapper styles={{ width: '220px' }}>Day</FlexWrapper>
-            <FlexWrapper styles={{ width: '500px', medium: { width: '400px' } }}>Characters</FlexWrapper>
+            <DisplayNone>
+              <FlexWrapper styles={{ width: '70px' }}>Item</FlexWrapper>
+              <FlexWrapper styles={{ width: '220px' }}>Day</FlexWrapper>
+            </DisplayNone>
+            <DisplayNone>
+              <FlexWrapper styles={{ width: '500px', medium: { width: '400px' } }}>Characters</FlexWrapper>
+            </DisplayNone>
           </FlexWrapper>
           {talentSet.map((set) => {
             return (
-              <FlexWrapper styles={{ margin: '10px 0 0', width: '100%' }} key={set}>
+              <FlexWrapper styles={{ margin: '10px 0 0', width: '100%', small: { flexDirection: 'column' } }} key={set}>
                 <>
-                  <ImageWrapper>
-                    <RelativeBox>
-                      <RoundImage src={DailySetImages[set]} styles={{ width: '60px', height: '60px' }} />
-                      <TooltipText styles={{ bottom: '0', fontSize: '12px' }}>{trans(Lang[set as KeyLang])}</TooltipText>
-                    </RelativeBox>
-                  </ImageWrapper>
-                  <DayText>{characterTalentItemInfo[set].day.join(', ')}</DayText>
+                  <FlexWrapper>
+                    <ImageWrapper>
+                      <RelativeBox>
+                        <RoundImage src={DailySetImages[set]} styles={{ width: '60px', height: '60px' }} />
+                        <TooltipText styles={{ bottom: '0', fontSize: '12px' }}>{trans(Lang[set as KeyLang])}</TooltipText>
+                      </RelativeBox>
+                    </ImageWrapper>
+                    <DayText>{characterTalentItemInfo[set].day.join(', ')}</DayText>
+                  </FlexWrapper>
                   <GridWrapper styles={{ width: '500px', medium: { width: '400px' } }}>
                     {characters.map((character) => {
                       if (characterInfo[character].talent.book === set) {
@@ -80,11 +99,16 @@ export function CharacterTalent(props: Props) {
                             child={
                               <RoundImage
                                 src={CharacterImages[character]}
-                                styles={{ width: '60px', height: '60px', medium: { width: '50px', height: '50px' } }}
+                                styles={{
+                                  width: '60px',
+                                  height: '60px',
+                                  medium: { width: '50px', height: '50px' },
+                                  small: { width: '50px', height: '50px' }
+                                }}
                               />
                             }
                             styles={{
-                              boxStyles: { margin: '3px' }
+                              boxStyles: { margin: '3px', small: { margin: '6px 3px 3px' } }
                             }}
                             isActive={true}
                             onClick={() => props.onClick(character)}

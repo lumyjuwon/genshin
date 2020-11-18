@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { FlexWrapper, RoundImage } from 'src/components';
+import { BoxModelWrapper, FlexWrapper, RoundImage } from 'src/components';
 import { characterTalentItemInfo, alchemyItemInfo, characterInfo } from 'src/resources/data';
 import { CharacterAscentionItemImages, WeeklyBossItemImages } from 'src/resources/images';
 
@@ -9,7 +9,18 @@ const Title = styled.div({
   width: '100%',
   fontSize: '20px',
   textAlign: 'center',
-  margin: '15px 0 0'
+  margin: '15px 0 0',
+  fontWeight: 'bold',
+  '@media screen and (max-width: 768px)': {
+    fontSize: '16px'
+  }
+});
+
+const Name = styled.div({
+  fontSize: '16px',
+  '@media screen and (max-width: 768px)': {
+    fontSize: '14px'
+  }
 });
 
 interface Props {
@@ -22,46 +33,56 @@ export function TalentDetail(props: Props) {
   return (
     <>
       <Title>Talent Level Up Items</Title>
-      <FlexWrapper styles={{ margin: '10px 0 0' }}>
-        <FlexWrapper styles={{ flexDirection: 'column' }}>
-          <FlexWrapper>
-            {Object.keys(characterTalentItemInfo[characterTalentInfo.book].items).map((item) => {
-              return (
-                <RoundImage
-                  src={require(`../../../resources/images/items/character-talent/${item}.png`)}
-                  styles={{ width: '60px', height: '60px', medium: { width: '50px', height: '50px' } }}
-                />
-              );
-            })}
-          </FlexWrapper>
-          <FlexWrapper>{characterTalentInfo.book}</FlexWrapper>
-        </FlexWrapper>
-        <FlexWrapper styles={{ margin: '0 0 0 10px', flexDirection: 'column' }}>
-          <FlexWrapper>
-            <RoundImage src={CharacterAscentionItemImages[characterTalentInfo.drop]} styles={{ width: '60px', height: '60px' }} />
-            <>
-              {Object.keys(alchemyItemInfo)
-                .filter((item) => alchemyItemInfo[item].source === characterTalentInfo.drop)
-                .map((item) => {
-                  return (
+      {characterTalentInfo.book ? (
+        <FlexWrapper styles={{ margin: '10px 0 0', small: { flexDirection: 'column' } }}>
+          <FlexWrapper styles={{ flexDirection: 'column' }}>
+            <FlexWrapper>
+              {Object.keys(characterTalentItemInfo[characterTalentInfo.book].items).map((item) => {
+                return (
+                  <BoxModelWrapper styles={{ margin: '3px', medium: { margin: '3px' }, small: { margin: '3px' } }}>
                     <RoundImage
-                      src={CharacterAscentionItemImages[item]}
+                      src={require(`../../../resources/images/items/character-talent/${item}.png`)}
                       styles={{ width: '60px', height: '60px', medium: { width: '50px', height: '50px' } }}
                     />
-                  );
-                })}
-            </>
+                  </BoxModelWrapper>
+                );
+              })}
+            </FlexWrapper>
+            <Name>{characterTalentInfo.book}</Name>
           </FlexWrapper>
-          <FlexWrapper>{characterTalentInfo.drop}</FlexWrapper>
+          <FlexWrapper styles={{ margin: '0 0 0 10px', flexDirection: 'column', small: { margin: '10px 0 0' } }}>
+            <FlexWrapper>
+              <BoxModelWrapper styles={{ margin: '3px', medium: { margin: '3px' }, small: { margin: '3px' } }}>
+                <RoundImage src={CharacterAscentionItemImages[characterTalentInfo.drop]} styles={{ width: '60px', height: '60px' }} />
+              </BoxModelWrapper>
+              <>
+                {Object.keys(alchemyItemInfo)
+                  .filter((item) => alchemyItemInfo[item].source === characterTalentInfo.drop)
+                  .map((item) => {
+                    return (
+                      <BoxModelWrapper styles={{ margin: '3px', medium: { margin: '3px' }, small: { margin: '3px' } }}>
+                        <RoundImage
+                          src={CharacterAscentionItemImages[item]}
+                          styles={{ width: '60px', height: '60px', medium: { width: '50px', height: '50px' } }}
+                        />
+                      </BoxModelWrapper>
+                    );
+                  })}
+              </>
+            </FlexWrapper>
+            <Name>{characterTalentInfo.drop}</Name>
+          </FlexWrapper>
+          <FlexWrapper styles={{ margin: '0 0 0 10px', flexDirection: 'column', small: { margin: '10px 0 0' } }}>
+            <RoundImage
+              src={WeeklyBossItemImages[characterTalentInfo.boss]}
+              styles={{ width: '60px', height: '60px', medium: { width: '50px', height: '50px' } }}
+            />
+            <Name>{characterTalentInfo.boss}</Name>
+          </FlexWrapper>
         </FlexWrapper>
-        <FlexWrapper styles={{ margin: '0 0 0 10px', flexDirection: 'column' }}>
-          <RoundImage
-            src={WeeklyBossItemImages[characterTalentInfo.boss]}
-            styles={{ width: '60px', height: '60px', medium: { width: '50px', height: '50px' } }}
-          />
-          <FlexWrapper>{characterTalentInfo.boss}</FlexWrapper>
-        </FlexWrapper>
-      </FlexWrapper>
+      ) : (
+        <FlexWrapper>None</FlexWrapper>
+      )}
     </>
   );
 }
