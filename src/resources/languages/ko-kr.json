@@ -493,7 +493,7 @@
   "Damaged_Mask": "부서진 가면",
   "Dandelion_Seed": "민들레 씨앗",
   "Divining_Scroll": "이능 두루마리",
-  "Firm_ArrowHead": "견고한 화살촉",
+  "Firm_Arrowhead": "견고한 화살촉",
   "Glaze_Lily": "유리백합",
   "Jueyun_Chili": "절운고추",
   "Noctilucous_Jade": "야박석",
@@ -553,5 +553,18 @@
   "Stained_Mask": "오염된 가면",
   "Ominous_Mask": "불길한 가면",
   "Shimmering_Nectar": "반짝반짝 꽃꿀",
-  "Energy_Nectar": "원소 꽃꿀"
+  "Energy_Nectar": "원소 꽃꿀",
+  "Mondstadt": "몬드",
+  "Liyue": "리월",
+  "Dvalins_Sigh": "동풍의 숨결",
+  "Ring_of_Boreas": "북풍의 고리",
+  "Dvalins_Plume": "동풍의 깃털",
+  "Shard_of_a_Foul_Legacy": "마왕의 칼날 조각",
+  "Spirit_Locket_of_Boreas": "북풍의 영혼상자",
+  "Dvalins_Claw": "동풍의 발톱",
+  "Tail_of_Boreas": "북풍의 꼬리",
+  "Confront_Stormterror": "바람 드래곤의 폐허로",
+  "Wolf_of_the_North_Challenge": "북풍의 왕랑, 울프의 영주",
+  "Enter_the_Golden_House": "Enter the Golden House",
+  "Childe_Challenge_Reward": "Childe Challenge Reward"
 }

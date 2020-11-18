@@ -483,6 +483,8 @@ enum Lang {
   Map = 'Map',
 
   Character = 'Character',
+  Character_Talent = 'Character_Talent',
+  Chracter_Ascension = 'Chracter_Ascension',
   Max_40 = 'Max_40',
   Max_50 = 'Max_50',
   Max_60 = 'Max_60',
@@ -492,6 +494,8 @@ enum Lang {
   Character_Item = 'Character_Item',
   Character_Day = 'Character_Day',
   Character_Region = 'Character_Region',
+  Mondstadt = 'Mondstadt',
+  Liyue = 'Liyue',
   Monday = 'Monday',
   Tuesday = 'Tuesday',
   Wednesday = 'Wednesday',
@@ -505,7 +509,7 @@ enum Lang {
   Damaged_Mask = 'Damaged_Mask',
   Dandelion_Seed = 'Dandelion_Seed',
   Divining_Scroll = 'Divining_Scroll',
-  Firm_ArrowHead = 'Firm_ArrowHead',
+  Firm_Arrowhead = 'Firm_Arrowhead',
   Glaze_Lily = 'Glaze_Lily',
   Jueyun_Chili = 'Jueyun_Chili',
   Noctilucous_Jade = 'Noctilucous_Jade',
@@ -565,7 +569,18 @@ enum Lang {
   Stained_Mask = 'Stained_Mask',
   Ominous_Mask = 'Ominous_Mask',
   Shimmering_Nectar = 'Shimmering_Nectar',
-  Energy_Nectar = 'Energy_Nectar'
+  Energy_Nectar = 'Energy_Nectar',
+  Dvalins_Sigh = 'Dvalins_Sigh',
+  Ring_of_Boreas = 'Ring_of_Boreas',
+  Dvalins_Plume = 'Dvalins_Plume',
+  Shard_of_a_Foul_Legacy = 'Shard_of_a_Foul_Legacy',
+  Spirit_Locket_of_Boreas = 'Spirit_Locket_of_Boreas',
+  Dvalins_Claw = 'Dvalins_Claw',
+  Tail_of_Boreas = 'Tail_of_Boreas',
+  Confront_Stormterror = 'Confront_Stormterror',
+  Wolf_of_the_North_Challenge = 'Wolf_of_the_North_Challenge',
+  Enter_the_Golden_House = 'Enter_the_Golden_House',
+  Childe_Challenge_Reward = 'Childe_Challenge_Reward'
 }
 
 export type KeyLang = keyof typeof Lang;

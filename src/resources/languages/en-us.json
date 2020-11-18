@@ -493,7 +493,7 @@
   "Damaged_Mask": "Damaged Mask",
   "Dandelion_Seed": "Dandelion Seed",
   "Divining_Scroll": "Divining Scroll",
-  "Firm_ArrowHead": "Firm ArrowHead",
+  "Firm_Arrowhead": "Firm Arrowhead",
   "Glaze_Lily": "Glaze Lily",
   "Jueyun_Chili": "Jueyun Chili",
   "Noctilucous_Jade": "Noctilucous Jade",
@@ -553,5 +553,18 @@
   "Stained_Mask": "Stained Mask",
   "Ominous_Mask": "Ominous Mask",
   "Shimmering_Nectar": "Shimmering Nectar",
-  "Energy_Nectar": "Energy Nectar"
+  "Energy_Nectar": "Energy Nectar",
+  "Mondstadt": "Mondstadt",
+  "Liyue": "Liyue",
+  "Dvalins_Sigh": "Dvalin's Sigh",
+  "Ring_of_Boreas": "Ring of Boreas",
+  "Dvalins_Plume": "Dvalin's Plume",
+  "Shard_of_a_Foul_Legacy": "Shard of a Foul Legacy",
+  "Spirit_Locket_of_Boreas": "Spirit Locket of Boreas",
+  "Dvalins_Claw": "Dvalin's Claw",
+  "Tail_of_Boreas": "Tail of Boreas",
+  "Confront_Stormterror": "Confront Stormterror",
+  "Wolf_of_the_North_Challenge": "Wolf of the North",
+  "Enter_the_Golden_House": "Enter the Golden House",
+  "Childe_Challenge_Reward": "Childe Challenge Reward"
 }
