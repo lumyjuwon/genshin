@@ -4,6 +4,7 @@ import { ContentWrapper } from 'src/components';
 import { CharacterAscesion } from './CharacterAscesion';
 import { CharacterTalent } from './CharacterTalent';
 import { CharacterDetailModal } from './modal/CharacterDetailModal';
+import { TalentWeeklyBoss } from './TalentWeeklyBoss';
 
 interface Props {}
 
@@ -27,6 +28,7 @@ export function CharacterScreen(props: Props) {
   return (
     <ContentWrapper>
       <CharacterTalent onClick={onCharacterClick} />
+      <TalentWeeklyBoss onClick={onCharacterClick} />
       <CharacterAscesion onClick={onCharacterClick} />
       <>{characterName && <CharacterDetailModal visible={detailModalVisible} cancel={() => onCancelClick()} character={characterName} />}</>
     </ContentWrapper>
