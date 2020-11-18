@@ -29,7 +29,7 @@ export function TalentDetail(props: Props) {
               return (
                 <RoundImage
                   src={require(`../../../resources/images/items/character-talent/${item}.png`)}
-                  styles={{ width: '60px', height: '60px' }}
+                  styles={{ width: '60px', height: '60px', medium: { width: '50px', height: '50px' } }}
                 />
               );
             })}
@@ -43,14 +43,22 @@ export function TalentDetail(props: Props) {
               {Object.keys(alchemyItemInfo)
                 .filter((item) => alchemyItemInfo[item].source === characterTalentInfo.drop)
                 .map((item) => {
-                  return <RoundImage src={CharacterAscentionItemImages[item]} styles={{ width: '60px', height: '60px' }} />;
+                  return (
+                    <RoundImage
+                      src={CharacterAscentionItemImages[item]}
+                      styles={{ width: '60px', height: '60px', medium: { width: '50px', height: '50px' } }}
+                    />
+                  );
                 })}
             </>
           </FlexWrapper>
           <FlexWrapper>{characterTalentInfo.drop}</FlexWrapper>
         </FlexWrapper>
         <FlexWrapper styles={{ margin: '0 0 0 10px', flexDirection: 'column' }}>
-          <RoundImage src={WeeklyBossItemImages[characterTalentInfo.boss]} styles={{ width: '60px', height: '60px' }} />
+          <RoundImage
+            src={WeeklyBossItemImages[characterTalentInfo.boss]}
+            styles={{ width: '60px', height: '60px', medium: { width: '50px', height: '50px' } }}
+          />
           <FlexWrapper>{characterTalentInfo.boss}</FlexWrapper>
         </FlexWrapper>
       </FlexWrapper>

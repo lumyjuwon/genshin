@@ -28,7 +28,8 @@ const Title = styled.div({
 
 const DayText = styled.div({
   width: '220px',
-  fontSize: '14px'
+  fontSize: '14px',
+  textAlign: 'center'
 });
 
 const RelativeBox = styled.div({
@@ -51,11 +52,11 @@ export function CharacterTalent(props: Props) {
           <FlexWrapper>
             <FlexWrapper styles={{ width: '70px' }}>Item</FlexWrapper>
             <FlexWrapper styles={{ width: '220px' }}>Day</FlexWrapper>
-            <FlexWrapper styles={{ width: '500px' }}>Characters</FlexWrapper>
+            <FlexWrapper styles={{ width: '500px', medium: { width: '400px' } }}>Characters</FlexWrapper>
           </FlexWrapper>
           {talentSet.map((set) => {
             return (
-              <FlexWrapper styles={{ margin: '10px 0 0' }} key={set}>
+              <FlexWrapper styles={{ margin: '10px 0 0', width: '100%' }} key={set}>
                 <>
                   <ImageWrapper>
                     <RelativeBox>
@@ -64,7 +65,7 @@ export function CharacterTalent(props: Props) {
                     </RelativeBox>
                   </ImageWrapper>
                   <DayText>{characterTalentItemInfo[set].day.join(', ')}</DayText>
-                  <GridWrapper styles={{ width: '500px' }}>
+                  <GridWrapper styles={{ width: '500px', medium: { width: '400px' } }}>
                     {characters.map((character) => {
                       if (characterInfo[character].talent.book === set) {
                         return (
@@ -76,7 +77,12 @@ export function CharacterTalent(props: Props) {
                                 styles={{ width: '20px', height: '20px' }}
                               />
                             }
-                            child={<RoundImage src={CharacterImages[character]} styles={{ width: '60px', height: '60px' }} />}
+                            child={
+                              <RoundImage
+                                src={CharacterImages[character]}
+                                styles={{ width: '60px', height: '60px', medium: { width: '50px', height: '50px' } }}
+                              />
+                            }
                             styles={{
                               boxStyles: { margin: '3px' }
                             }}

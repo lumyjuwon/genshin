@@ -36,6 +36,15 @@ const ItemName = styled.div({
   width: '170px'
 });
 
+const ItemRegion = styled.div({
+  width: '100px',
+  fontSize: '14px',
+  textAlign: 'center',
+  '@media screen and (max-width: 1380px)': {
+    width: '80px'
+  }
+});
+
 interface Props {
   onClick: Function;
 }
@@ -51,20 +60,23 @@ export function CharacterAscesion(props: Props) {
         <>
           <FlexWrapper>
             <FlexWrapper styles={{ width: '240px' }}>Item</FlexWrapper>
-            <FlexWrapper styles={{ width: '100px' }}>Region</FlexWrapper>
-            <FlexWrapper styles={{ width: '450px' }}>Characters</FlexWrapper>
+            <FlexWrapper styles={{ width: '100px', medium: { width: '80px' } }}>Region</FlexWrapper>
+            <FlexWrapper styles={{ width: '450px', medium: { width: '400px' } }}>Characters</FlexWrapper>
           </FlexWrapper>
           {ascensionItems.map((item) => {
             return (
               <FlexWrapper styles={{ margin: '10px 0 0' }} key={item}>
                 <ImageWrapper>
                   <RelativeBox>
-                    <RoundImage src={CharacterAscentionItemImages[item]} styles={{ width: '60px', height: '60px' }} />
+                    <RoundImage
+                      src={CharacterAscentionItemImages[item]}
+                      styles={{ width: '60px', height: '60px', medium: { width: '50px', height: '50px' } }}
+                    />
                   </RelativeBox>
                 </ImageWrapper>
                 <ItemName>{item}</ItemName>
-                <FlexWrapper styles={{ width: '100px' }}>{characterAscensionItemInfo[item].region}</FlexWrapper>
-                <GridWrapper styles={{ width: '450px' }}>
+                <ItemRegion>{characterAscensionItemInfo[item].region}</ItemRegion>
+                <GridWrapper styles={{ width: '450px', medium: { width: '400px' } }}>
                   {characters.map((character) => {
                     if (characterInfo[character].ascension.items.includes(item)) {
                       return (
@@ -73,7 +85,12 @@ export function CharacterAscesion(props: Props) {
                           badge={
                             <RoundImage src={ElementImages[characterInfo[character].element]} styles={{ width: '20px', height: '20px' }} />
                           }
-                          child={<RoundImage src={CharacterImages[character]} styles={{ width: '60px', height: '60px' }} />}
+                          child={
+                            <RoundImage
+                              src={CharacterImages[character]}
+                              styles={{ width: '60px', height: '60px', medium: { width: '50px', height: '50px' } }}
+                            />
+                          }
                           styles={{
                             boxStyles: { margin: '3px' }
                           }}

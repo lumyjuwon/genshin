@@ -51,7 +51,10 @@ export function AscensionDetail(props: Props) {
                   {getAscensionItems(AscensionStep[step]).map((item: string) => {
                     return (
                       <FlexWrapper styles={{ margin: '0 3px' }}>
-                        <RoundImage src={CharacterAscentionItemImages[item]} styles={{ width: '60px', height: '60px' }} />
+                        <RoundImage
+                          src={CharacterAscentionItemImages[item]}
+                          styles={{ width: '60px', height: '60px', medium: { width: '50px', height: '50px' } }}
+                        />
                         <div style={{ margin: '0 0 0 3px' }}>x{ascensionItems.get(item)}</div>
                       </FlexWrapper>
                     );
