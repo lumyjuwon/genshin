@@ -15,7 +15,7 @@ const Wrapper = styled.div<{ dialogMoblieAlignCenter: boolean }>((props) => {
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    '@media screen and (max-width: 500px)': {
+    '@media screen and (max-width: 768px)': {
       alignItems: props.dialogMoblieAlignCenter ? 'center' : 'flex-start',
       overflowY: 'scroll'
     }
@@ -74,16 +74,23 @@ interface Props {
 
 export function ModalWrapper(props: Props) {
   const hashId = useRef<number>();
+  const modalRef = useRef<HTMLDivElement>(null);
+  // let height = modalRef.current?.scrollHeight;
 
   useEffect(() => {
     hashId.current = ModalWrapperHashId;
     ModalWrapperHashId++;
   }, []);
 
+  // console.log(height);
+  // if (height && height > window.innerHeight) {
+  //   modalRef.current && (modalRef.current.style.alignItems = 'flex-start');
+  // }
+
   if (props.visible) {
     lockScroll(hashId.current);
     return (
-      <Wrapper dialogMoblieAlignCenter={props.dialogMoblieAlignCenter}>
+      <Wrapper dialogMoblieAlignCenter={props.dialogMoblieAlignCenter} ref={modalRef}>
         <WrapperInner>{props.children}</WrapperInner>
       </Wrapper>
     );
