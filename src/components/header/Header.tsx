@@ -66,7 +66,7 @@ export function Header(props: Props) {
     <HeaderOuter>
       <HeaderInner>
         <MainLogo />
-        {windowWidth < 768 ? (
+        {windowWidth <= 768 ? (
           isNavVisible && <HeaderNavigation ref={navigationRef} navs={props.navs} onClick={onClickNavOrOutside} />
         ) : (
           <HeaderNavigation navs={props.navs} />
