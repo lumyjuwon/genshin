@@ -32,22 +32,22 @@ interface Character {
     };
     ascension: {
       items: Array<string>;
-      first: {
+      Max_40: {
         [itemName: string]: number;
       };
-      second: {
+      Max_50: {
         [itemName: string]: number;
       };
-      third: {
+      Max_60: {
         [itemName: string]: number;
       };
-      fourth: {
+      Max_70: {
         [itemName: string]: number;
       };
-      fifth: {
+      Max_80: {
         [itemName: string]: number;
       };
-      sixth: {
+      Max_90: {
         [itemName: string]: number;
       };
     };

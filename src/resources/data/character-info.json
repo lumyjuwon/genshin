@@ -13,36 +13,36 @@
     },
     "ascension": {
       "items": ["Agnidus Agate Sliver", "Philanemo Mushroom", "Everflame Seed", "Divining Scroll"],
-      "first": {
+      "Max_40": {
         "Agnidus Agate Sliver": 1,
         "Philanemo Mushroom": 3,
         "Divining Scroll": 3
       },
-      "second": {
+      "Max_50": {
         "Agnidus Agate Fragment": 3,
         "Everflame Seed": 2,
         "Philanemo Mushroom": 10,
         "Divining Scroll": 15
       },
-      "third": {
+      "Max_60": {
         "Agnidus Agate Fragment": 6,
         "Everflame Seed": 4,
         "Philanemo Mushroom": 20,
         "Sealed Scroll": 12
       },
-      "fourth": {
+      "Max_70": {
         "Agnidus Agate Chunk": 3,
         "Everflame Seed": 8,
         "Philanemo Mushroom": 30,
         "Sealed Scroll": 18
       },
-      "fifth": {
+      "Max_80": {
         "Agnidus Agate Chunk": 6,
         "Everflame Seed": 12,
         "Philanemo Mushroom": 45,
         "Forbidden Curse Scroll": 12
       },
-      "sixth": {
+      "Max_90": {
         "Agnidus Agate Gemstone": 6,
         "Everflame Seed": 20,
         "Philanemo Mushroom": 60,
@@ -69,36 +69,36 @@
     },
     "ascension": {
       "items": ["Vajrada Amethyst Sliver", "Cor Lapis", "Whopperflower Nectar", "Lightning Prism"],
-      "first": {
+      "Max_40": {
         "Vajrada Amethyst Sliver": 1,
         "Cor Lapis": 3,
         "Whopperflower Nectar": 3
       },
-      "second": {
+      "Max_50": {
         "Vajrada Amethyst Fragment": 3,
         "Lightning Prism": 2,
         "Cor Lapis": 10,
         "Whopperflower Nectar": 15
       },
-      "third": {
+      "Max_60": {
         "Vajrada Amethyst Fragment": 6,
         "Lightning Prism": 4,
         "Cor Lapis": 20,
         "Shimmering Nectar": 12
       },
-      "fourth": {
+      "Max_70": {
         "Vajrada Amethyst Chunk": 3,
         "Lightning Prism": 8,
         "Cor Lapis": 30,
         "Shimmering Nectar": 18
       },
-      "fifth": {
+      "Max_80": {
         "Vajrada Amethyst Chunk": 6,
         "Lightning Prism": 12,
         "Cor Lapis": 45,
         "Energy Nectar": 12
       },
-      "sixth": {
+      "Max_90": {
         "Vajrada Amethyst Gemstone": 6,
         "Lightning Prism": 20,
         "Cor Lapis": 60,
@@ -125,36 +125,36 @@
     },
     "ascension": {
       "items": ["Agnidus Agate Sliver", "Everflame Seed", "Small Lamp Grass", "Recruit's Insignia"],
-      "first": {
+      "Max_40": {
         "Agnidus Agate Sliver": 1,
         "Small Lamp Grass": 3,
         "Recruit's Insignia": 3
       },
-      "second": {
+      "Max_50": {
         "Agnidus Agate Fragment": 3,
         "Everflame Seed": 2,
         "Small Lamp Grass": 10,
         "Recruit's Insignia": 15
       },
-      "third": {
+      "Max_60": {
         "Agnidus Agate Fragment": 6,
         "Everflame Seed": 4,
         "Small Lamp Grass": 20,
         "Sergeant's Insignia": 12
       },
-      "fourth": {
+      "Max_70": {
         "Agnidus Agate Chunk": 3,
         "Everflame Seed": 8,
         "Small Lamp Grass": 30,
         "Sergeant's Insignia": 18
       },
-      "fifth": {
+      "Max_80": {
         "Agnidus Agate Chunk": 6,
         "Everflame Seed": 12,
         "Small Lamp Grass": 45,
         "Lieutenant's Insignia": 12
       },
-      "sixth": {
+      "Max_90": {
         "Agnidus Agate Gemstone": 6,
         "Everflame Seed": 20,
         "Small Lamp Grass": 60,
@@ -181,36 +181,36 @@
     },
     "ascension": {
       "items": ["Vayuda Turquoise Sliver", "Dandelion Seed", "Damaged Mask", "Hurricane Seed"],
-      "first": {
+      "Max_40": {
         "Vayuda Turquoise Sliver": 1,
         "Dandelion Seed": 3,
         "Damaged Mask": 3
       },
-      "second": {
+      "Max_50": {
         "Vayuda Turquoise Fragment": 3,
         "Hurricane Seed": 2,
         "Dandelion Seed": 10,
         "Damaged Mask": 15
       },
-      "third": {
+      "Max_60": {
         "Vayuda Turquoise Fragment": 6,
         "Hurricane Seed": 4,
         "Dandelion Seed": 20,
         "Stained Mask": 12 
       },
-      "fourth": {
+      "Max_70": {
         "Vayuda Turquoise Chunk": 3,
         "Hurricane Seed": 8,
         "Dandelion Seed": 30,
         "Stained Mask": 18
       },
-      "fifth": {
+      "Max_80": {
         "Vayuda Turquoise Chunk": 6,
         "Hurricane Seed": 12,
         "Dandelion Seed": 45,
         "Ominous Mask": 12
       },
-      "sixth": {
+      "Max_90": {
         "Vayuda Turquoise Gemstone": 6,
         "Hurricane Seed": 20,
         "Dandelion Seed": 60,
@@ -237,36 +237,36 @@
     },
     "ascension": {
       "items": ["Shivada Jade Sliver", "Violetgrass", "Divining Scroll", "Hoarfrost Core"],
-      "first": {
+      "Max_40": {
         "Shivada Jade Sliver": 1,
         "Violetgrass": 3,
         "Divining Scroll": 3
       },
-      "second": {
+      "Max_50": {
         "Shivada Jade Fragment": 3,
         "Hoarfrost Core": 2,
         "Violetgrass": 10,
         "Divining Scroll": 15
       },
-      "third": {
+      "Max_60": {
         "Shivada Jade Fragment": 6,
         "Hoarfrost Core": 4,
         "Violetgrass": 20,
         "Sealed Scroll": 12
       },
-      "fourth": {
+      "Max_70": {
         "Shivada Jade Chunk": 3,
         "Hoarfrost Core": 8,
         "Violetgrass": 30,
         "Sealed Scroll": 18
       },
-      "fifth": {
+      "Max_80": {
         "Shivada Jade Chunk": 6,
         "Hoarfrost Core": 12,
         "Violetgrass": 45,
         "Forbidden Curse Scroll": 12
       },
-      "sixth": {
+      "Max_90": {
         "Shivada Jade Gemstone": 6,
         "Hoarfrost Core": 20,
         "Violetgrass": 60,
@@ -293,36 +293,36 @@
     },
     "ascension": {
       "items": ["Varunada Lazurite Sliver", "Philanemo Mushroom", "Whopperflower Nectar", "Cleansing Heart"],
-      "first": {
+      "Max_40": {
         "Varunada Lazurite Sliver": 1,
         "Philanemo Mushroom": 3,
         "Whopperflower Nectar": 3
       },
-      "second": {
+      "Max_50": {
         "Varunada Lazurite Fragment": 3,
         "Cleansing Heart": 2,
         "Philanemo Mushroom": 10,
         "Whopperflower Nectar": 15
       },
-      "third": {
+      "Max_60": {
         "Varunada Lazurite Fragment": 6,
         "Cleansing Heart": 4,
         "Philanemo Mushroom": 20,
         "Shimmering Nectar": 12
       },
-      "fourth": {
+      "Max_70": {
         "Varunada Lazurite Chunk": 3,
         "Cleansing Heart": 8,
         "Philanemo Mushroom": 30,
         "Shimmering Nectar": 18
       },
-      "fifth": {
+      "Max_80": {
         "Varunada Lazurite Chunk": 6,
         "Cleansing Heart": 12,
         "Philanemo Mushroom": 45,
         "Energy Nectar": 12
       },
-      "sixth": {
+      "Max_90": {
         "Varunada Lazurite Gemstone": 6,
         "Cleansing Heart": 20,
         "Philanemo Mushroom": 60,
@@ -349,36 +349,36 @@
     },
     "ascension": {
       "items": ["Vayuda Turquoise Sliver", "Cecilia", "Slime Condensate", "Hurricane Seed"],
-      "first": {
+      "Max_40": {
         "Vayuda Turquoise Sliver": 1,
         "Cecilia": 3,
         "Slime Condensate": 3
       },
-      "second": {
+      "Max_50": {
         "Vayuda Turquoise Fragment": 3,
         "Hurricane Seed": 2,
         "Cecilia": 10,
         "Slime Condensate": 15
       },
-      "third": {
+      "Max_60": {
         "Vayuda Turquoise Fragment": 6,
         "Hurricane Seed": 4,
         "Cecilia": 20,
         "Slime Secretions": 12
       },
-      "fourth": {
+      "Max_70": {
         "Vayuda Turquoise Chunk": 3,
         "Hurricane Seed": 8,
         "Cecilia": 30,
         "Slime Secretions": 18
       },
-      "fifth": {
+      "Max_80": {
         "Vayuda Turquoise Chunk": 6,
         "Hurricane Seed": 12,
         "Cecilia": 45,
         "Slime Concentrate": 12
       },
-      "sixth": {
+      "Max_90": {
         "Vayuda Turquoise Gemstone": 6,
         "Hurricane Seed": 20,
         "Cecilia": 60,
@@ -405,36 +405,36 @@
     },
     "ascension": {
       "items": ["Varunada Lazurite Sliver", "Starconch", "Recruit's Insignia", "Cleansing Heart"],
-      "first": {
+      "Max_40": {
         "Varunada Lazurite Sliver": 1,
         "Starconch": 3,
         "Recruit's Insignia": 3
       },
-      "second": {
+      "Max_50": {
         "Varunada Lazurite Fragment": 3,
         "Cleansing Heart": 2,
         "Starconch": 10,
         "Recruit's Insignia": 15
       },
-      "third": {
+      "Max_60": {
         "Varunada Lazurite Fragment": 6,
         "Cleansing Heart": 4,
         "Starconch": 20,
         "Sergeant's Insignia": 12
       },
-      "fourth": {
+      "Max_70": {
         "Varunada Lazurite Chunk": 3,
         "Cleansing Heart": 8,
         "Starconch": 30,
         "Sergeant's Insignia": 18
       },
-      "fifth": {
+      "Max_80": {
         "Varunada Lazurite Chunk": 6,
         "Cleansing Heart": 12,
         "Starconch": 45,
         "Lieutenant's Insignia": 12
       },
-      "sixth": {
+      "Max_90": {
         "Varunada Lazurite Gemstone": 6,
         "Cleansing Heart": 20,
         "Starconch": 60,
@@ -461,32 +461,32 @@
     },
     "ascension": {
       "items": ["Brilliant Diamond Sliver", "Windwheel Aster", "Damaged Mask"],
-      "first": {
+      "Max_40": {
         "Brilliant Diamond Sliver": 1,
         "Windwheel Aster": 3,
         "Damaged Mask": 3
       },
-      "second": {
+      "Max_50": {
         "Brilliant Diamond Fragment": 3,
         "Windwheel Aster": 10,
         "Damaged Mask": 15
       },
-      "third": {
+      "Max_60": {
         "Brilliant Diamond Fragment": 6,
         "Windwheel Aster": 20,
         "Stained Mask": 12
       },
-      "fourth": {
+      "Max_70": {
         "Brilliant Diamond Chunk": 3,
         "Windwheel Aster": 30,
         "Stained Mask": 18
       },
-      "fifth": {
+      "Max_80": {
         "Brilliant Diamond Chunk": 6,
         "Windwheel Aster": 45,
         "Ominous Mask": 12
       },
-      "sixth": {
+      "Max_90": {
         "Brilliant Diamond Gemstone": 6,
         "Windwheel Aster": 60,
         "Ominous Mask": 24
@@ -512,32 +512,32 @@
     },
     "ascension": {
       "items": ["Brilliant Diamond Sliver", "Windwheel Aster", "Damaged Mask"],
-      "first": {
+      "Max_40": {
         "Brilliant Diamond Sliver": 1,
         "Windwheel Aster": 3,
         "Damaged Mask": 3
       },
-      "second": {
+      "Max_50": {
         "Brilliant Diamond Fragment": 3,
         "Windwheel Aster": 10,
         "Damaged Mask": 15
       },
-      "third": {
+      "Max_60": {
         "Brilliant Diamond Fragment": 6,
         "Windwheel Aster": 20,
         "Stained Mask": 12
       },
-      "fourth": {
+      "Max_70": {
         "Brilliant Diamond Chunk": 3,
         "Windwheel Aster": 30,
         "Stained Mask": 18
       },
-      "fifth": {
+      "Max_80": {
         "Brilliant Diamond Chunk": 6,
         "Windwheel Aster": 45,
         "Ominous Mask": 12
       },
-      "sixth": {
+      "Max_90": {
         "Brilliant Diamond Gemstone": 6,
         "Windwheel Aster": 60,
         "Ominous Mask": 24
@@ -563,36 +563,36 @@
     },
     "ascension": {
       "items": ["Prithiva Topaz Sliver", "Valberry", "Damaged Mask", "Basalt Pillar"],
-      "first": {
+      "Max_40": {
         "Prithiva Topaz Sliver": 1,
         "Valberry": 3,
         "Damaged Mask": 3
       },
-      "second": {
+      "Max_50": {
         "Prithiva Topaz Fragment": 3,
         "Basalt Pillar": 2,
         "Valberry": 10,
         "Damaged Mask": 15
       },
-      "third": {
+      "Max_60": {
         "Prithiva Topaz Fragment": 6,
         "Basalt Pillar": 4,
         "Valberry": 20,
         "Stained Mask": 12
       },
-      "fourth": {
+      "Max_70": {
         "Prithiva Topaz Chunk": 3,
         "Basalt Pillar": 8,
         "Valberry": 30,
         "Stained Mask": 18
       },
-      "fifth": {
+      "Max_80": {
         "Prithiva Topaz Chunk": 6,
         "Basalt Pillar": 12,
         "Valberry": 45,
         "Ominous Mask": 12
       },
-      "sixth": {
+      "Max_90": {
         "Prithiva Topaz Gemstone": 6,
         "Basalt Pillar": 20,
         "Valberry": 60,
@@ -619,36 +619,36 @@
     },
     "ascension": {
       "items": ["Vajrada Amethyst Sliver", "Wolfhook", "Damaged Mask", "Lightning Prism"],
-      "first": {
+      "Max_40": {
         "Vajrada Amethyst Sliver": 1,
         "Wolfhook": 3,
         "Damaged Mask": 3
       },
-      "second": {
+      "Max_50": {
         "Vajrada Amethyst Fragment": 3,
         "Lightning Prism": 2,
         "Wolfhook": 10,
         "Damaged Mask": 15
       },
-      "third": {
+      "Max_60": {
         "Vajrada Amethyst Fragment": 6,
         "Lightning Prism": 4,
         "Wolfhook": 20,
         "Stained Mask": 12
       },
-      "fourth": {
+      "Max_70": {
         "Vajrada Amethyst Chunk": 3,
         "Lightning Prism": 8,
         "Wolfhook": 30,
         "Stained Mask": 18
       },
-      "fifth": {
+      "Max_80": {
         "Vajrada Amethyst Chunk": 6,
         "Lightning Prism": 12,
         "Wolfhook": 45,
         "Ominous Mask": 12
       },
-      "sixth": {
+      "Max_90": {
         "Vajrada Amethyst Gemstone": 6,
         "Lightning Prism": 20,
         "Wolfhook": 60,
@@ -675,36 +675,36 @@
     },
     "ascension": {
       "items": ["Prithiva Topaz Sliver", "Glaze Lily", "Recruit's Insignia", "Basalt Pillar"],
-      "first": {
+      "Max_40": {
         "Prithiva Topaz Sliver": 1,
         "Glaze Lily": 3,
         "Recruit's Insignia": 3
       },
-      "second": {
+      "Max_50": {
         "Prithiva Topaz Fragment": 3,
         "Basalt Pillar": 2,
         "Glaze Lily": 10,
         "Recruit's Insignia": 15
       },
-      "third": {
+      "Max_60": {
         "Prithiva Topaz Fragment": 6,
         "Basalt Pillar": 4,
         "Glaze Lily": 20,
         "Sergeant's Insignia": 12
       },
-      "fourth": {
+      "Max_70": {
         "Prithiva Topaz Chunk": 3,
         "Basalt Pillar": 8,
         "Glaze Lily": 30,
         "Sergeant's Insignia": 18
       },
-      "fifth": {
+      "Max_80": {
         "Prithiva Topaz Chunk": 6,
         "Basalt Pillar": 12,
         "Glaze Lily": 45,
         "Lieutenant's Insignia": 12
       },
-      "sixth": {
+      "Max_90": {
         "Prithiva Topaz Gemstone": 6,
         "Basalt Pillar": 20,
         "Glaze Lily": 60,
@@ -731,36 +731,36 @@
     },
     "ascension": {
       "items": ["Vajrada Amethyst Sliver", "Valberry", "Lightning Prism", "Slime Condensate"],
-      "first": {
+      "Max_40": {
         "Vajrada Amethyst Sliver": 1,
         "Valberry": 3,
         "Slime Condensate": 3
       },
-      "second": {
+      "Max_50": {
         "Vajrada Amethyst Fragment": 3,
         "Lightning Prism": 2,
         "Valberry": 10,
         "Slime Condensate": 15
       },
-      "third": {
+      "Max_60": {
         "Vajrada Amethyst Fragment": 6,
         "Lightning Prism": 4,
         "Valberry": 20,
         "Slime Secretions": 12
       },
-      "fourth": {
+      "Max_70": {
         "Vajrada Amethyst Chunk": 3,
         "Lightning Prism": 8,
         "Valberry": 30,
         "Slime Secretions": 18
       },
-      "fifth": {
+      "Max_80": {
         "Vajrada Amethyst Chunk": 6,
         "Lightning Prism": 12,
         "Valberry": 45,
         "Slime Concentrate": 12
       },
-      "sixth": {
+      "Max_90": {
         "Vajrada Amethyst Gemstone": 6,
         "Lightning Prism": 20,
         "Valberry": 60,
@@ -787,36 +787,36 @@
     },
     "ascension": {
       "items": ["Shivada Jade Sliver", "Calla Lily", "Treasure Hoarder Insignia", "Hoarfrost Core"],
-      "first": {
+      "Max_40": {
         "Shivada Jade Sliver": 1,
         "Calla Lily": 3,
         "Treasure Hoarder Insignia": 3
       },
-      "second": {
+      "Max_50": {
         "Shivada Jade Fragment": 3,
         "Hoarfrost Core": 2,
         "Calla Lily": 10,
         "Treasure Hoarder Insignia": 15
       },
-      "third": {
+      "Max_60": {
         "Shivada Jade Fragment": 6,
         "Hoarfrost Core": 4,
         "Calla Lily": 20,
         "Silver Raven Insignia": 12
       },
-      "fourth": {
+      "Max_70": {
         "Shivada Jade Chunk": 3,
         "Hoarfrost Core": 8,
         "Calla Lily": 30,
         "Silver Raven Insignia": 12
       },
-      "fifth": {
+      "Max_80": {
         "Shivada Jade Chunk": 6,
         "Hoarfrost Core": 12,
         "Calla Lily": 45,
         "Golden Raven Insignia": 12
       },
-      "sixth": {
+      "Max_90": {
         "Shivada Jade Gemstone": 6,
         "Hoarfrost Core": 20,
         "Calla Lily": 60,
@@ -843,36 +843,36 @@
     },
     "ascension": {
       "items": ["Vajrada Amethyst Sliver", "Small Lamp Grass", "Firm Arrowhead", "Lightning Prism"],
-      "first": {
+      "Max_40": {
         "Vajrada Amethyst Sliver": 1,
         "Small Lamp Grass": 3,
         "Firm Arrowhead": 3
       },
-      "second": {
+      "Max_50": {
         "Vajrada Amethyst Fragment": 3,
         "Lightning Prism": 2,
         "Small Lamp Grass": 10,
         "Firm Arrowhead": 15
       },
-      "third": {
+      "Max_60": {
         "Vajrada Amethyst Fragment": 6,
         "Lightning Prism": 4,
         "Small Lamp Grass": 20,
         "Sharp Arrowhead": 12
       },
-      "fourth": {
+      "Max_70": {
         "Vajrada Amethyst Chunk": 3,
         "Lightning Prism": 8,
         "Small Lamp Grass": 30,
         "Sharp Arrowhead": 18
       },
-      "fifth": {
+      "Max_80": {
         "Vajrada Amethyst Chunk": 6,
         "Lightning Prism": 12,
         "Small Lamp Grass": 45,
         "Weathered Arrowhead": 12
       },
-      "sixth": {
+      "Max_90": {
         "Vajrada Amethyst Gemstone": 6,
         "Lightning Prism": 20,
         "Small Lamp Grass": 60,
@@ -899,36 +899,36 @@
     },
     "ascension": {
       "items": ["Shivada Jade Sliver", "Cor Lapis", "Damaged Mask", "Lightning Prism"],
-      "first": {
+      "Max_40": {
         "Shivada Jade Sliver": 1,
         "Cor Lapis": 3,
         "Damaged Mask": 3
       },
-      "second": {
+      "Max_50": {
         "Shivada Jade Fragment": 3,
         "Hoarfrost Core": 2,
         "Cor Lapis": 10,
         "Damaged Mask": 15
       },
-      "third": {
+      "Max_60": {
         "Shivada Jade Fragment": 6,
         "Hoarfrost Core": 4,
         "Cor Lapis": 20,
         "Stained Mask": 12
       },
-      "fourth": {
+      "Max_70": {
         "Shivada Jade Chunk": 3,
         "Hoarfrost Core": 8,
         "Cor Lapis": 30,
         "Stained Mask": 18
       },
-      "fifth": {
+      "Max_80": {
         "Shivada Jade Chunk": 6,
         "Hoarfrost Core": 12,
         "Cor Lapis": 45,
         "Ominous Mask": 12
       },
-      "sixth": {
+      "Max_90": {
         "Shivada Jade Gemstone": 6,
         "Hoarfrost Core": 20,
         "Cor Lapis": 60,
@@ -955,36 +955,36 @@
     },
     "ascension": {
       "items": ["Agnidus Agate Sliver", "Windwheel Aster", "Treasure Hoarder Insignia", "Everflame Seed"],
-      "first": {
+      "Max_40": {
         "Agnidus Agate Sliver": 1,
         "Windwheel Aster": 3,
         "Treasure Hoarder Insignia": 3
       },
-      "second": {
+      "Max_50": {
         "Agnidus Agate Fragment": 3,
         "Everflame Seed": 2,
         "Windwheel Aster": 10,
         "Treasure Hoarder Insignia": 15
       },
-      "third": {
+      "Max_60": {
         "Agnidus Agate Fragment": 6,
         "Everflame Seed": 4,
         "Windwheel Aster": 20,
         "Silver Raven Insignia": 12
       },
-      "fourth": {
+      "Max_70": {
         "Agnidus Agate Chunk": 3,
         "Everflame Seed": 8,
         "Windwheel Aster": 30,
         "Silver Raven Insignia": 18
       },
-      "fifth": {
+      "Max_80": {
         "Agnidus Agate Chunk": 6,
         "Everflame Seed": 12,
         "Windwheel Aster": 45,
         "Golden Raven Insignia": 12
       },
-      "sixth": {
+      "Max_90": {
         "Agnidus Agate Gemstone": 6,
         "Everflame Seed": 20,
         "Windwheel Aster": 60,
@@ -1011,36 +1011,36 @@
     },
     "ascension": {
       "items": ["Vajrada Amethyst Sliver", "Noctilucous Jade", "Treasure Hoarder Insignia", "Lightning Prism"],
-      "first": {
+      "Max_40": {
         "Vajrada Amethyst Sliver": 1,
         "Noctilucous Jade": 3,
         "Treasure Hoarder Insignia": 3
       },
-      "second": {
+      "Max_50": {
         "Vajrada Amethyst Fragment": 3,
         "Lightning Prism": 2,
         "Noctilucous Jade": 10,
         "Treasure Hoarder Insignia": 15
       },
-      "third": {
+      "Max_60": {
         "Vajrada Amethyst Fragment": 6,
         "Lightning Prism": 4,
         "Noctilucous Jade": 20,
         "Silver Raven Insignia": 12
       },
-      "fourth": {
+      "Max_70": {
         "Vajrada Amethyst Chunk": 3,
         "Lightning Prism": 8,
         "Noctilucous Jade": 30,
         "Silver Raven Insignia": 18
       },
-      "fifth": {
+      "Max_80": {
         "Vajrada Amethyst Chunk": 6,
         "Lightning Prism": 12,
         "Noctilucous Jade": 45,
         "Golden Raven Insignia": 12
       },
-      "sixth": {
+      "Max_90": {
         "Vajrada Amethyst Gemstone": 6,
         "Lightning Prism": 20,
         "Noctilucous Jade": 60,
@@ -1067,36 +1067,36 @@
     },
     "ascension": {
       "items": ["Varunada Lazurite Sliver", "Philanemo Mushroom", "Divining Scroll", "Cleansing Heart"],
-      "first": {
+      "Max_40": {
         "Varunada Lazurite Sliver": 1,
         "Philanemo Mushroom": 3,
         "Divining Scroll": 3
       },
-      "second": {
+      "Max_50": {
         "Varunada Lazurite Fragment": 3,
         "Cleansing Heart": 2,
         "Philanemo Mushroom": 10,
         "Divining Scroll": 15
       },
-      "third": {
+      "Max_60": {
         "Varunada Lazurite Fragment": 6,
         "Cleansing Heart": 4,
         "Philanemo Mushroom": 20,
         "Sealed Scroll": 12
       },
-      "fourth": {
+      "Max_70": {
         "Varunada Lazurite Chunk": 3,
         "Cleansing Heart": 8,
         "Philanemo Mushroom": 30,
         "Sealed Scroll": 18
       },
-      "fifth": {
+      "Max_80": {
         "Varunada Lazurite Chunk": 6,
         "Cleansing Heart": 12,
         "Philanemo Mushroom": 45,
         "Forbidden Curse Scroll": 12
       },
-      "sixth": {
+      "Max_90": {
         "Varunada Lazurite Gemstone": 6,
         "Cleansing Heart": 20,
         "Philanemo Mushroom": 60,
@@ -1123,36 +1123,36 @@
     },
     "ascension": {
       "items": ["Agnidus Agate Sliver", "Small Lamp Grass", "Firm Arrowhead", "Everflame Seed"],
-      "first": {
+      "Max_40": {
         "Agnidus Agate Sliver": 1,
         "Small Lamp Grass": 3,
         "Firm Arrowhead": 3
       },
-      "second": {
+      "Max_50": {
         "Agnidus Agate Fragment": 3,
         "Everflame Seed": 2,
         "Small Lamp Grass": 10,
         "Firm Arrowhead": 15
       },
-      "third": {
+      "Max_60": {
         "Agnidus Agate Fragment": 6,
         "Everflame Seed": 4,
         "Small Lamp Grass": 20,
         "Sharp Arrowhead": 12
       },
-      "fourth": {
+      "Max_70": {
         "Agnidus Agate Chunk": 3,
         "Everflame Seed": 8,
         "Small Lamp Grass": 30,
         "Sharp Arrowhead": 18
       },
-      "fifth": {
+      "Max_80": {
         "Agnidus Agate Chunk": 6,
         "Everflame Seed": 12,
         "Small Lamp Grass": 45,
         "Weathered Arrowhead": 12
       },
-      "sixth": {
+      "Max_90": {
         "Agnidus Agate Gemstone": 6,
         "Everflame Seed": 20,
         "Small Lamp Grass": 60,
@@ -1179,36 +1179,36 @@
     },
     "ascension": {
       "items": ["Vayuda Turquoise Sliver", "Windwheel Aster", "Whopperflower Nectar", "Hurricane Seed"],
-      "first": {
+      "Max_40": {
         "Vayuda Turquoise Sliver": 1,
         "Windwheel Aster": 3,
         "Whopperflower Nectar": 3
       },
-      "second": {
+      "Max_50": {
         "Vayuda Turquoise Fragment": 3,
         "Hurricane Seed": 2,
         "Windwheel Aster": 10,
         "Whopperflower Nectar": 15
       },
-      "third": {
+      "Max_60": {
         "Vayuda Turquoise Fragment": 6,
         "Hurricane Seed": 4,
         "Windwheel Aster": 20,
         "Shimmering Nectar": 12
       },
-      "fourth": {
+      "Max_70": {
         "Vayuda Turquoise Chunk": 3,
         "Hurricane Seed": 8,
         "Windwheel Aster": 30,
         "Shimmering Nectar": 18
       },
-      "fifth": {
+      "Max_80": {
         "Vayuda Turquoise Chunk": 6,
         "Hurricane Seed": 12,
         "Windwheel Aster": 45,
         "Energy Nectar": 12
       },
-      "sixth": {
+      "Max_90": {
         "Vayuda Turquoise Gemstone": 6,
         "Hurricane Seed": 20,
         "Windwheel Aster": 60,
@@ -1235,36 +1235,36 @@
     },
     "ascension": {
       "items": ["Agnidus Agate Sliver", "Jueyun Chili", "Slime Condensate", "Everflame Seed"],
-      "first": {
+      "Max_40": {
         "Agnidus Agate Sliver": 1,
         "Jueyun Chili": 3,
         "Slime Condensate": 3
       },
-      "second": {
+      "Max_50": {
         "Agnidus Agate Fragment": 3,
         "Everflame Seed": 2,
         "Jueyun Chili": 10,
         "Slime Condensate": 15
       },
-      "third": {
+      "Max_60": {
         "Agnidus Agate Fragment": 6,
         "Everflame Seed": 4,
         "Jueyun Chili": 20,
         "Slime Secretions": 12
       },
-      "fourth": {
+      "Max_70": {
         "Agnidus Agate Chunk": 3,
         "Everflame Seed": 8,
         "Jueyun Chili": 30,
         "Slime Secretions": 18
       },
-      "fifth": {
+      "Max_80": {
         "Agnidus Agate Chunk": 6,
         "Everflame Seed": 12,
         "Jueyun Chili": 45,
         "Slime Concentrate": 12
       },
-      "sixth": {
+      "Max_90": {
         "Agnidus Agate Gemstone": 6,
         "Everflame Seed": 20,
         "Jueyun Chili": 60,
@@ -1291,36 +1291,36 @@
     },
     "ascension": {
       "items": ["Varunada Lazurite Sliver", "Silk Flower", "Damaged Mask", "Cleansing Heart"],
-      "first": {
+      "Max_40": {
         "Varunada Lazurite Sliver": 1,
         "Silk Flower": 3,
         "Damaged Mask": 3
       },
-      "second": {
+      "Max_50": {
         "Varunada Lazurite Fragment": 3,
         "Cleansing Heart": 2,
         "Silk Flower": 10,
         "Damaged Mask": 15
       },
-      "third": {
+      "Max_60": {
         "Varunada Lazurite Fragment": 6,
         "Cleansing Heart": 4,
         "Silk Flower": 20,
         "Stained Mask": 12
       },
-      "fourth": {
+      "Max_70": {
         "Varunada Lazurite Chunk": 3,
         "Cleansing Heart": 8,
         "Silk Flower": 30,
         "Stained Mask": 18
       },
-      "fifth": {
+      "Max_80": {
         "Varunada Lazurite Chunk": 6,
         "Cleansing Heart": 12,
         "Silk Flower": 45,
         "Ominous Mask": 12
       },
-      "sixth": {
+      "Max_90": {
         "Varunada Lazurite Gemstone": 6,
         "Cleansing Heart": 20,
         "Silk Flower": 60,
@@ -1347,36 +1347,36 @@
     },
     "ascension": {
       "items": ["Shivada Jade Sliver", "Calla Lily", "Firm Arrowhead", "Hoarfrost Core"],
-      "first": {
+      "Max_40": {
         "Shivada Jade Sliver": 1,
         "Calla Lily": 3,
         "Firm Arrowhead": 3
       },
-      "second": {
+      "Max_50": {
         "Shivada Jade Fragment": 3,
         "Hoarfrost Core": 2,
         "Calla Lily": 10,
         "Firm Arrowhead": 15
       },
-      "third": {
+      "Max_60": {
         "Shivada Jade Fragment": 6,
         "Hoarfrost Core": 4,
         "Calla Lily": 20,
         "Sharp Arrowhead": 12
       },
-      "fourth": {
+      "Max_70": {
         "Shivada Jade Chunk": 3,
         "Hoarfrost Core": 8,
         "Calla Lily": 30,
         "Sharp Arrowhead": 18
       },
-      "fifth": {
+      "Max_80": {
         "Shivada Jade Chunk": 6,
         "Hoarfrost Core": 12,
         "Calla Lily": 45,
         "Weathered Arrowhead": 12
       },
-      "sixth": {
+      "Max_90": {
         "Shivada Jade Gemstone": 6,
         "Hoarfrost Core": 20,
         "Calla Lily": 60,
