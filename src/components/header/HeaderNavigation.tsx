@@ -66,7 +66,7 @@ export const HeaderNavigation = React.forwardRef<HTMLDivElement, Props>((props, 
       ApplyMeta(title, content);
       setSelectedNavPath(location.pathname);
     });
-  }, []);
+  }, [history, props.navs]);
 
   return (
     <Navigation ref={forwardedRef}>
