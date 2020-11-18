@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 
 import { ContentWrapper } from 'src/components';
 import { CharacterAscesion } from './CharacterAscesion';
-import { CharacterTalent } from './CharacterTalent';
+import { DailyItem } from './DailyItem';
 import { CharacterDetailModal } from './modal/CharacterDetailModal';
-import { TalentWeeklyBoss } from './TalentWeeklyBoss';
+import { WeeklyBossItem } from './WeeklyBossItem';
 
 interface Props {}
 
-export function CharacterScreen(props: Props) {
+export function ItemScreen(props: Props) {
   const [detailModalVisible, setDetailModalVisible] = useState(false);
   const [characterName, setCharacterName] = useState('');
 
@@ -27,10 +27,10 @@ export function CharacterScreen(props: Props) {
 
   return (
     <ContentWrapper>
-      <CharacterTalent onClick={onCharacterClick} />
-      <TalentWeeklyBoss onClick={onCharacterClick} />
+      <DailyItem onClick={onCharacterClick} />
+      <WeeklyBossItem onClick={onCharacterClick} />
       <CharacterAscesion onClick={onCharacterClick} />
-      <>{characterName && <CharacterDetailModal visible={detailModalVisible} cancel={() => onCancelClick()} character={characterName} />}</>
+      {/* <>{characterName && <CharacterDetailModal visible={detailModalVisible} cancel={() => onCancelClick()} character={characterName} />}</> */}
     </ContentWrapper>
   );
 }

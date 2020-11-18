@@ -58,7 +58,7 @@ interface Props {
   onClick: Function;
 }
 
-export function TalentWeeklyBoss(props: Props) {
+export function WeeklyBossItem(props: Props) {
   return (
     <Container>
       <Title>Weekly Boss Item</Title>

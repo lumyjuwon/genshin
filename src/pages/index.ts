@@ -1,7 +1,7 @@
 export { GachaScreen } from './gacha/GachaScreen';
 export { PartyScreen } from './party/PartyScreen';
 export { MapScreen } from './map/MapScreen';
-export { CharacterScreen } from './character/CharacterScreen';
+export { ItemScreen } from './item/ItemScreen';
 
 export { MainScreen } from './main/MainScreen';
 export { Policy } from './footer/Policy';
