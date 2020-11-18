@@ -5,6 +5,7 @@ import { FlexWrapper, Modal, RoundImage } from 'src/components';
 import { CharacterImages } from 'src/resources/images';
 import { TalentDetail } from './TalentDetail';
 import { AscensionDetail } from './AscensionDetail';
+import { trans, Lang, KeyLang } from 'src/resources/languages';
 
 const Name = styled.span({
   fontSize: '25px',
@@ -26,7 +27,7 @@ export function CharacterDetailModal(props: Props) {
           <>
             <FlexWrapper>
               <RoundImage src={CharacterImages[props.character]} styles={{ small: { width: '80px', height: '80px' } }} />
-              <Name>{props.character}</Name>
+              <Name>{trans(Lang[props.character as KeyLang])}</Name>
             </FlexWrapper>
             <AscensionDetail character={props.character} />
             <TalentDetail character={props.character} />

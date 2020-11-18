@@ -64,11 +64,9 @@ export function CharacterTalent(props: Props) {
         <>
           <FlexWrapper>
             <DisplayNone>
-              <FlexWrapper styles={{ width: '70px' }}>Item</FlexWrapper>
-              <FlexWrapper styles={{ width: '220px' }}>Day</FlexWrapper>
-            </DisplayNone>
-            <DisplayNone>
-              <FlexWrapper styles={{ width: '500px', medium: { width: '400px' } }}>Characters</FlexWrapper>
+              <FlexWrapper styles={{ width: '70px' }}>{trans(Lang.Character_Item)}</FlexWrapper>
+              <FlexWrapper styles={{ width: '220px' }}>{trans(Lang.Character_Day)}</FlexWrapper>
+              <FlexWrapper styles={{ width: '500px', medium: { width: '400px' } }}>{trans(Lang.Character)}</FlexWrapper>
             </DisplayNone>
           </FlexWrapper>
           {talentSet.map((set) => {
@@ -82,7 +80,7 @@ export function CharacterTalent(props: Props) {
                         <TooltipText styles={{ bottom: '0', fontSize: '12px' }}>{trans(Lang[set as KeyLang])}</TooltipText>
                       </RelativeBox>
                     </ImageWrapper>
-                    <DayText>{characterTalentItemInfo[set].day.join(', ')}</DayText>
+                    <DayText>{characterTalentItemInfo[set].day.map((day) => trans(Lang[day as KeyLang])).join(', ')}</DayText>
                   </FlexWrapper>
                   <GridWrapper styles={{ width: '500px', medium: { width: '400px' } }}>
                     {characters.map((character) => {

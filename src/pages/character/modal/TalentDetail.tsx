@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { BoxModelWrapper, FlexWrapper, RoundImage } from 'src/components';
 import { characterTalentItemInfo, alchemyItemInfo, characterInfo } from 'src/resources/data';
 import { CharacterAscentionItemImages, WeeklyBossItemImages } from 'src/resources/images';
+import { trans, Lang, KeyLang } from 'src/resources/languages';
 
 const Title = styled.div({
   width: '100%',
@@ -53,7 +54,7 @@ export function TalentDetail(props: Props) {
                 );
               })}
             </FlexWrapper>
-            <Name>{characterTalentInfo.book}</Name>
+            <Name>{trans(Lang[characterTalentInfo.book as KeyLang])}</Name>
           </FlexWrapper>
           <FlexWrapper styles={{ margin: '0 0 0 10px', flexDirection: 'column', small: { margin: '10px 0 0' } }}>
             <FlexWrapper>
@@ -88,23 +89,25 @@ export function TalentDetail(props: Props) {
                   })}
               </>
             </FlexWrapper>
-            <Name>{characterTalentInfo.drop}</Name>
+            <Name>{trans(Lang[characterTalentInfo.drop.replace(/\s/g, '_').replace(/'/g, '') as KeyLang])}</Name>
           </FlexWrapper>
           <FlexWrapper styles={{ margin: '0 0 0 10px', flexDirection: 'column', small: { margin: '10px 0 0' } }}>
-            <RoundImage
-              src={WeeklyBossItemImages[characterTalentInfo.boss]}
-              styles={{
-                width: '60px',
-                height: '60px',
-                medium: { width: '50px', height: '50px' },
-                small: { width: '40px', height: '40px' }
-              }}
-            />
-            <Name>{characterTalentInfo.boss}</Name>
+            <BoxModelWrapper styles={{ margin: '3px', medium: { margin: '3px' }, small: { margin: '3px' } }}>
+              <RoundImage
+                src={WeeklyBossItemImages[characterTalentInfo.boss]}
+                styles={{
+                  width: '60px',
+                  height: '60px',
+                  medium: { width: '50px', height: '50px' },
+                  small: { width: '40px', height: '40px' }
+                }}
+              />
+            </BoxModelWrapper>
+            <Name>{trans(Lang[characterTalentInfo.boss.replace(/\s/g, '_').replace(/'/g, '') as KeyLang])}</Name>
           </FlexWrapper>
         </FlexWrapper>
       ) : (
-        <FlexWrapper>None</FlexWrapper>
+        <FlexWrapper>{trans(Lang.None)}</FlexWrapper>
       )}
     </>
   );

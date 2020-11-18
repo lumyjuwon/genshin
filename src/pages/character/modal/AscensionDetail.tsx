@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { FlexWrapper, GridWrapper, RoundImage } from 'src/components';
 import { characterInfo } from 'src/resources/data';
 import { CharacterAscentionItemImages } from 'src/resources/images';
+import { trans, Lang, KeyLang } from 'src/resources/languages';
 
 const Title = styled.div({
   width: '100%',
@@ -66,7 +67,7 @@ export function AscensionDetail(props: Props) {
           return (
             <FlexWrapper key={step} styles={{ margin: '10px 0 0', small: { flexDirection: 'column' } }}>
               <>
-                <MaxLevel>{AscensionStep[step]}</MaxLevel>
+                <MaxLevel>{trans(Lang[AscensionStep[step] as KeyLang])}</MaxLevel>
                 <GridWrapper styles={{ width: '400px', medium: { width: '370px' } }}>
                   {getAscensionItems(AscensionStep[step]).map((item: string) => {
                     return (
