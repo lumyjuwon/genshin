@@ -5,6 +5,7 @@ import { characterAscensionItemInfo, characterInfo } from 'src/resources/data';
 import { CharacterAscentionItemImages, ElementImages } from 'src/resources/images';
 import { RoundImage, GridWrapper, ItemBadgeBox, FlexWrapper } from 'src/components';
 import { CharacterImages } from 'src/resources/images';
+import { trans, Lang, KeyLang } from 'src/resources/languages';
 
 const Container = styled.div({
   display: 'flex',
@@ -77,9 +78,9 @@ export function CharacterAscesion(props: Props) {
         <>
           <DisplayNone>
             <FlexWrapper>
-              <FlexWrapper styles={{ width: '240px' }}>Item</FlexWrapper>
-              <FlexWrapper styles={{ width: '100px', medium: { width: '80px' } }}>Region</FlexWrapper>
-              <FlexWrapper styles={{ width: '450px', medium: { width: '400px' } }}>Characters</FlexWrapper>
+              <FlexWrapper styles={{ width: '240px' }}>{trans(Lang.Character_Item)}</FlexWrapper>
+              <FlexWrapper styles={{ width: '100px', medium: { width: '80px' } }}>{trans(Lang.Character_Region)}</FlexWrapper>
+              <FlexWrapper styles={{ width: '450px', medium: { width: '400px' } }}>{trans(Lang.Character)}</FlexWrapper>
             </FlexWrapper>
           </DisplayNone>
           {ascensionItems.map((item) => {
@@ -94,8 +95,8 @@ export function CharacterAscesion(props: Props) {
                       />
                     </RelativeBox>
                   </ImageWrapper>
-                  <ItemName>{item}</ItemName>
-                  <ItemRegion>{characterAscensionItemInfo[item].region}</ItemRegion>
+                  <ItemName>{trans(Lang[item.replace(/\s/g, '_').replace(/'/g, '') as KeyLang])}</ItemName>
+                  <ItemRegion>{trans(Lang[characterAscensionItemInfo[item].region as KeyLang])}</ItemRegion>
                 </FlexWrapper>
                 <GridWrapper styles={{ width: '450px', medium: { width: '400px' } }}>
                   {characters.map((character) => {

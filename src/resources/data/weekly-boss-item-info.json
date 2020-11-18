@@ -3,28 +3,28 @@
     "rank": 5,
     "obtain": ["Confront Stormterror"]
   },
-  "Ring of Boreas": {
-    "rank": 5,
-    "obtain": ["Wolf of the North Challenge"]
-  },
   "Dvalin's Plume": {
     "rank": 5,
     "obtain": ["Confront Stormterror"]
-  },
-  "Shard of a Foul Legacy": {
-    "rank": 5,
-    "obtain": ["Enter the Golden House", "Childe Challenge Reward"]
-  },
-  "Spirit Locket of Boreas": {
-    "rank": 5,
-    "obtain": ["Wolf of the North Challenge"]
   },
   "Dvalin's Claw": {
     "rank": 5,
     "obtain": ["Confront Stormterror"]
   },
+  "Ring of Boreas": {
+    "rank": 5,
+    "obtain": ["Wolf of the North Challenge"]
+  },
+  "Spirit Locket of Boreas": {
+    "rank": 5,
+    "obtain": ["Wolf of the North Challenge"]
+  },
   "Tail of Boreas": {
     "rank": 5,
     "obtain": ["Wolf of the North Challenge"]
+  },
+  "Shard of a Foul Legacy": {
+    "rank": 5,
+    "obtain": ["Enter the Golden House", "Childe Challenge Reward"]
   }
 }
