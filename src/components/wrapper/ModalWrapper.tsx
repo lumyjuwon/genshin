@@ -15,7 +15,7 @@ const Wrapper = styled.div<{ dialogMoblieAlignCenter: boolean }>((props) => {
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    '@media screen and (max-width: 768px)': {
+    '@media screen and (max-height: 900px)': {
       alignItems: props.dialogMoblieAlignCenter ? 'center' : 'flex-start',
       overflowY: 'scroll'
     }

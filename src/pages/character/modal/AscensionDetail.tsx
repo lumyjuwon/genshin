@@ -15,6 +15,14 @@ const Title = styled.div({
   }
 });
 
+const MaxLevel = styled.div({
+  fontSize: '16px',
+  margin: '0 0 5px',
+  '@media screen and (max-width: 768px)': {
+    fontSize: '14px'
+  }
+});
+
 const Count = styled.div({
   fontSize: '16px',
   margin: '0 0 0 3px',
@@ -24,12 +32,12 @@ const Count = styled.div({
 });
 
 enum AscensionStep {
-  first = 'first',
-  second = 'second',
-  third = 'third',
-  fourth = 'fourth',
-  fifth = 'fifth',
-  sixth = 'sixth'
+  Max_40 = 'Max_40',
+  Max_50 = 'Max_50',
+  Max_60 = 'Max_60',
+  Max_70 = 'Max_70',
+  Max_80 = 'Max_80',
+  Max_90 = 'Max_90'
 }
 type Step = keyof typeof AscensionStep;
 
@@ -58,14 +66,19 @@ export function AscensionDetail(props: Props) {
           return (
             <FlexWrapper key={step} styles={{ margin: '10px 0 0', small: { flexDirection: 'column' } }}>
               <>
-                <FlexWrapper styles={{ width: '70px' }}>{AscensionStep[step]}</FlexWrapper>
+                <MaxLevel>{AscensionStep[step]}</MaxLevel>
                 <GridWrapper styles={{ width: '400px', medium: { width: '370px' } }}>
                   {getAscensionItems(AscensionStep[step]).map((item: string) => {
                     return (
                       <FlexWrapper key={item} styles={{ margin: '0 3px' }}>
                         <RoundImage
                           src={CharacterAscentionItemImages[item]}
-                          styles={{ width: '60px', height: '60px', medium: { width: '50px', height: '50px' } }}
+                          styles={{
+                            width: '60px',
+                            height: '60px',
+                            medium: { width: '50px', height: '50px' },
+                            small: { width: '30px', height: '30px' }
+                          }}
                         />
                         <Count>x{ascensionItems.get(item)}</Count>
                       </FlexWrapper>

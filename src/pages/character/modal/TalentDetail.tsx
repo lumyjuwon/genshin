@@ -42,7 +42,12 @@ export function TalentDetail(props: Props) {
                   <BoxModelWrapper key={item} styles={{ margin: '3px', medium: { margin: '3px' }, small: { margin: '3px' } }}>
                     <RoundImage
                       src={require(`../../../resources/images/items/character-talent/${item}.png`)}
-                      styles={{ width: '60px', height: '60px', medium: { width: '50px', height: '50px' } }}
+                      styles={{
+                        width: '60px',
+                        height: '60px',
+                        medium: { width: '50px', height: '50px' },
+                        small: { width: '40px', height: '40px' }
+                      }}
                     />
                   </BoxModelWrapper>
                 );
@@ -53,7 +58,15 @@ export function TalentDetail(props: Props) {
           <FlexWrapper styles={{ margin: '0 0 0 10px', flexDirection: 'column', small: { margin: '10px 0 0' } }}>
             <FlexWrapper>
               <BoxModelWrapper styles={{ margin: '3px', medium: { margin: '3px' }, small: { margin: '3px' } }}>
-                <RoundImage src={CharacterAscentionItemImages[characterTalentInfo.drop]} styles={{ width: '60px', height: '60px' }} />
+                <RoundImage
+                  src={CharacterAscentionItemImages[characterTalentInfo.drop]}
+                  styles={{
+                    width: '60px',
+                    height: '60px',
+                    medium: { width: '50px', height: '50px' },
+                    small: { width: '40px', height: '40px' }
+                  }}
+                />
               </BoxModelWrapper>
               <>
                 {Object.keys(alchemyItemInfo)
@@ -63,7 +76,12 @@ export function TalentDetail(props: Props) {
                       <BoxModelWrapper key={item} styles={{ margin: '3px', medium: { margin: '3px' }, small: { margin: '3px' } }}>
                         <RoundImage
                           src={CharacterAscentionItemImages[item]}
-                          styles={{ width: '60px', height: '60px', medium: { width: '50px', height: '50px' } }}
+                          styles={{
+                            width: '60px',
+                            height: '60px',
+                            medium: { width: '50px', height: '50px' },
+                            small: { width: '40px', height: '40px' }
+                          }}
                         />
                       </BoxModelWrapper>
                     );
@@ -75,7 +93,12 @@ export function TalentDetail(props: Props) {
           <FlexWrapper styles={{ margin: '0 0 0 10px', flexDirection: 'column', small: { margin: '10px 0 0' } }}>
             <RoundImage
               src={WeeklyBossItemImages[characterTalentInfo.boss]}
-              styles={{ width: '60px', height: '60px', medium: { width: '50px', height: '50px' } }}
+              styles={{
+                width: '60px',
+                height: '60px',
+                medium: { width: '50px', height: '50px' },
+                small: { width: '40px', height: '40px' }
+              }}
             />
             <Name>{characterTalentInfo.boss}</Name>
           </FlexWrapper>
