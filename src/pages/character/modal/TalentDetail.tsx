@@ -39,7 +39,7 @@ export function TalentDetail(props: Props) {
             <FlexWrapper>
               {Object.keys(characterTalentItemInfo[characterTalentInfo.book].items).map((item) => {
                 return (
-                  <BoxModelWrapper styles={{ margin: '3px', medium: { margin: '3px' }, small: { margin: '3px' } }}>
+                  <BoxModelWrapper key={item} styles={{ margin: '3px', medium: { margin: '3px' }, small: { margin: '3px' } }}>
                     <RoundImage
                       src={require(`../../../resources/images/items/character-talent/${item}.png`)}
                       styles={{ width: '60px', height: '60px', medium: { width: '50px', height: '50px' } }}
@@ -60,7 +60,7 @@ export function TalentDetail(props: Props) {
                   .filter((item) => alchemyItemInfo[item].source === characterTalentInfo.drop)
                   .map((item) => {
                     return (
-                      <BoxModelWrapper styles={{ margin: '3px', medium: { margin: '3px' }, small: { margin: '3px' } }}>
+                      <BoxModelWrapper key={item} styles={{ margin: '3px', medium: { margin: '3px' }, small: { margin: '3px' } }}>
                         <RoundImage
                           src={CharacterAscentionItemImages[item]}
                           styles={{ width: '60px', height: '60px', medium: { width: '50px', height: '50px' } }}

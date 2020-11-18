@@ -56,13 +56,13 @@ export function AscensionDetail(props: Props) {
         <Title>Ascension Steps</Title>
         {Object.values(AscensionStep).map((step: Step) => {
           return (
-            <FlexWrapper styles={{ margin: '10px 0 0', small: { flexDirection: 'column' } }}>
+            <FlexWrapper key={step} styles={{ margin: '10px 0 0', small: { flexDirection: 'column' } }}>
               <>
                 <FlexWrapper styles={{ width: '70px' }}>{AscensionStep[step]}</FlexWrapper>
-                <GridWrapper>
+                <GridWrapper styles={{ width: '400px', medium: { width: '370px' } }}>
                   {getAscensionItems(AscensionStep[step]).map((item: string) => {
                     return (
-                      <FlexWrapper styles={{ margin: '0 3px' }}>
+                      <FlexWrapper key={item} styles={{ margin: '0 3px' }}>
                         <RoundImage
                           src={CharacterAscentionItemImages[item]}
                           styles={{ width: '60px', height: '60px', medium: { width: '50px', height: '50px' } }}
