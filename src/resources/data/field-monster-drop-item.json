@@ -2,37 +2,37 @@
   "Whopperflower Nectar": {
     "monster": ["Whopperflower"],
     "rank": 1,
-    "usage": ["Character_Ascension_Material", "Character_Talent_Material"]
+    "usage": ["Character_Ascension_Material", "Character_Talent_Material", "Weapon_Ascension_Material"]
   },
   "Damaged Mask": {
     "monster": ["Hilichurls"],
     "rank": 1,
-    "usage": ["Character_Ascension_Material", "Character_Talent_Material"]
+    "usage": ["Character_Ascension_Material", "Character_Talent_Material", "Weapon_Ascension_Material"]
   },
   "Divining Scroll": {
     "monster": ["Samachurls"],
     "rank": 1,
-    "usage": ["Character_Ascension_Material", "Character_Talent_Material"]
+    "usage": ["Character_Ascension_Material", "Character_Talent_Material", "Weapon_Ascension_Material"]
   },
   "Firm Arrowhead": {
     "monster": ["Ranged Hilichurls"],
     "rank": 1,
-    "usage": ["Character_Ascension_Material", "Character_Talent_Material"]
+    "usage": ["Character_Ascension_Material", "Character_Talent_Material", "Weapon_Ascension_Material"]
   },
   "Recruit's Insignia": {
     "monster": ["Fatui Skirmishers"],
     "rank": 1,
-    "usage": ["Character_Ascension_Material", "Character_Talent_Material"]
+    "usage": ["Character_Ascension_Material", "Character_Talent_Material", "Weapon_Ascension_Material"]
   },
   "Slime Condensate": {
     "monster": ["Slimes"],
     "rank": 1,
-    "usage": ["Character_Ascension_Material", "Character_Talent_Material"]
+    "usage": ["Character_Ascension_Material", "Character_Talent_Material", "Weapon_Ascension_Material"]
   },
   "Treasure Hoarder Insignia": {
     "monster": ["Treasure Hoarders"],
     "rank": 1,
-    "usage": ["Character_Ascension_Material", "Character_Talent_Material"]
+    "usage": ["Character_Ascension_Material", "Character_Talent_Material", "Weapon_Ascension_Material"]
   },
   "Mist Grass Pollen": {
     "monster": ["Electro Cicin Mages"],
