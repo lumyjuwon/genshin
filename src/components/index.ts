@@ -2,6 +2,7 @@
 export { Header } from './header/Header';
 export { Footer } from './Footer';
 export { HeaderNavigation } from './header/HeaderNavigation';
+export { PageHelmet } from './PageHelmet';
 
 // Wrapper
 export { ScreenInnerWrapper } from './wrapper/ScreenInnerWrapper';

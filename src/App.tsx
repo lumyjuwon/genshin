@@ -11,25 +11,37 @@ import { RootState } from './redux/rootReducer';
 import { useSelector } from 'react-redux';
 
 const pages: Navs = {
-  main: {
-    path: '/',
-    title: 'Genshin Impact Simul',
-    content: 'Genshin Impact Simulator with Wish System, Party, Character!',
-    component: MainScreen
-  },
-  gacha: { path: '/gacha', title: 'Gacha', content: 'Test Your Luck!', component: GachaScreen },
+  gacha: { isHeaderMenu: true, path: '/gacha', title: trans(Lang.Gacha), component: GachaScreen },
   party: {
+    isHeaderMenu: true,
     path: '/party',
-    title: 'Party',
-    content: 'Elemental Resonance and Character Equipment System',
+    title: trans(Lang.Party),
     component: PartyScreen
   },
   // map: { path: '/map', title: trans(Lang.Map), content: "D", component: MapScreen },
   item: {
+    isHeaderMenu: true,
     path: '/item',
     title: 'Item',
-    content: 'Genshin Impact Simulator with Wish System, Party, Character!',
     component: ItemScreen
+  },
+  policy: {
+    isHeaderMenu: false,
+    path: '/policy',
+    title: 'Policy',
+    component: Policy
+  },
+  notice: {
+    isHeaderMenu: false,
+    path: '/notice',
+    title: 'Notice',
+    component: Notice
+  },
+  '*': {
+    isHeaderMenu: false,
+    path: '*',
+    title: 'NotFound',
+    component: NotFound
   }
 };
 
@@ -41,15 +53,10 @@ function App() {
     <BrowserRouter>
       <Header navs={pages} />
       <Switch>
+        <Route exact path='/' component={MainScreen} />
         {Object.keys(pages).map((page) => {
-          if (page === 'main') {
-            return <Route exact key={page} path={pages[page].path} component={pages[page].component} />;
-          }
           return <Route key={page} path={pages[page].path} component={pages[page].component} />;
         })}
-        <Route path='/policy' component={Policy} />
-        <Route path='/notice' component={Notice} />
-        <Route path='*' component={NotFound} />
       </Switch>
       <Footer />
     </BrowserRouter>

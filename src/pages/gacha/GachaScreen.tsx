@@ -17,7 +17,8 @@ import {
   FlexWrapper,
   RoundButton,
   ContentWrapper,
-  BoxModelWrapper
+  BoxModelWrapper,
+  PageHelmet
 } from 'src/components';
 
 const itemsInfo = Object.assign({}, weaponInfo, characterInfo);
@@ -116,6 +117,7 @@ export function GachaScreen() {
 
   return (
     <ContentWrapper>
+      <PageHelmet title={trans(Lang.Gacha)} description={trans(Lang.Main_Wish_Desc)} />
       <ScreenInnerWrapper>
         <>
           <GachaBanner content={gachaContent} onClick={onBannerClick} pickUpList={Object.keys(gachaInfo)} />
