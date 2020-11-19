@@ -4,7 +4,7 @@ import { ContentWrapper } from 'src/components';
 import { CharacterAscesion } from './CharacterAscesion';
 import { DailyItem } from './DailyItem';
 import { CharacterDetailModal } from './modal/CharacterDetailModal';
-import { WeeklyBossItem } from './WeeklyBossItem';
+import { WeeklyRewardItem } from './WeeklyRewardItem';
 
 interface Props {}
 
@@ -28,7 +28,7 @@ export function ItemScreen(props: Props) {
   return (
     <ContentWrapper>
       <DailyItem onClick={onCharacterClick} />
-      <WeeklyBossItem onClick={onCharacterClick} />
+      <WeeklyRewardItem onClick={onCharacterClick} />
       <CharacterAscesion onClick={onCharacterClick} />
       {/* <>{characterName && <CharacterDetailModal visible={detailModalVisible} cancel={() => onCancelClick()} character={characterName} />}</> */}
     </ContentWrapper>

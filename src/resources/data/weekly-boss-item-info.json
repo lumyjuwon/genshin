@@ -26,5 +26,13 @@
   "Shard of a Foul Legacy": {
     "rank": 5,
     "obtain": ["Enter the Golden House"]
+  },
+  "Shadow of the Warrior": {
+    "rank": 5,
+    "obtain": ["Enter the Golden House"]
+  },
+  "Tusk of Monoceros Caeli": {
+    "rank": 5,
+    "obtain": ["Enter the Golden House"]
   }
 }

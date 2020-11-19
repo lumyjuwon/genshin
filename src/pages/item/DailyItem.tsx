@@ -99,7 +99,7 @@ export function DailyItem(props: Props) {
                       <RoundImage
                         key={item}
                         src={require(`../../resources/images/items/character-talent/${item}.png`)}
-                        styles={{ width: '60px', height: '60px' }}
+                        styles={{ width: '70px', height: '70px' }}
                       />
                     );
                   })}
@@ -120,7 +120,7 @@ export function DailyItem(props: Props) {
                       <RoundImage
                         key={item}
                         src={require(`../../resources/images/items/weapon-ascension/${item}.png`)}
-                        styles={{ width: '60px', height: '60px' }}
+                        styles={{ width: '70px', height: '70px' }}
                       />
                     );
                   })}
