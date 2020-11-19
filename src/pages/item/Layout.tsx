@@ -79,6 +79,13 @@ const Button = styled.div<TextStyle>((props) => {
     fontSize: props.fontSize || '16px',
     fontWeight: 'normal',
     padding: '3px',
+    cursor: 'pointer',
+    borderRadius: '8px',
+    transition: '.2s',
+    '&:hover': {
+      backgroundColor: '#f1f2f3',
+      color: '#111213'
+    },
     '@media screen and (max-width: 1380px)': {
       fontSize: props.medium?.fontSize || '14px'
     },
