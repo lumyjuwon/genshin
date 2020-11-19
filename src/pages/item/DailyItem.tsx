@@ -1,25 +1,18 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import { characterTalentItemInfo, characterInfo } from 'src/resources/data';
+import { characterTalentItemInfo, weaponAscesionItemInfo } from 'src/resources/data';
 import { RoundImage, GridWrapper, ItemBadgeBox, TooltipText, FlexWrapper } from 'src/components';
 import { DailySetImages, CharacterImages, ElementImages } from 'src/resources/images';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
 
 const Container = styled.div({
-  width: '100%',
+  width: '900px',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
-  alignItems: 'center'
-});
-
-const Viewer = styled.div({
-  width: '100%',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center'
+  alignItems: 'center',
+  margin: '0 auto'
 });
 
 const Line = styled.hr({
@@ -52,27 +45,16 @@ const Title = styled.div({
   fontWeight: 'bold'
 });
 
-const DayText = styled.div({
-  width: '220px',
-  fontSize: '14px',
+const Name = styled.div({
+  width: '100%',
   textAlign: 'center',
-  '@media screen and (max-width: 768px)': {
-    fontSize: '12px',
-    width: '180px'
-  }
+  fontWeight: 'bold'
 });
 
-const RelativeBox = styled.div({
-  position: 'relative'
-});
-
-const DisplayNone = styled.div({
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  '@media screen and (max-width: 768px)': {
-    display: 'none'
-  }
+const Description = styled.div({
+  width: '100%',
+  textAlign: 'center',
+  fontSize: '14px'
 });
 
 enum ButtonText {
@@ -87,7 +69,7 @@ interface Props {
 export function DailyItem(props: Props) {
   const [isViewerVisible, setIsViewerVisible] = useState(false);
   const [buttonText, setButtonText] = useState(ButtonText.open);
-  const talentSet = Object.keys(characterTalentItemInfo);
+  // const talentSet = Object.keys(characterTalentItemInfo);
 
   function toggleViewer() {
     setIsViewerVisible(!isViewerVisible);
@@ -101,44 +83,55 @@ export function DailyItem(props: Props) {
   return (
     <Container>
       <Header>
-        <Title>Daily Abyssal Items</Title>
+        <Title>{trans(Lang.Daily_Abyssal_Items)}</Title>
         <Button onClick={() => toggleViewer()}>{trans(Lang[buttonText])}</Button>
       </Header>
       <Line />
       {isViewerVisible && (
-        <Viewer>
-          <FlexWrapper styles={{ flexDirection: 'column', alignItems: 'flex-start', margin: '20px 0 0' }}>
-            <>
-              <FlexWrapper>
-                <DisplayNone>
-                  <FlexWrapper styles={{ width: '70px' }}>{trans(Lang.Character_Item)}</FlexWrapper>
-                  <FlexWrapper styles={{ width: '220px' }}>{trans(Lang.Character_Day)}</FlexWrapper>
-                  <FlexWrapper styles={{ width: '200px' }}>Region</FlexWrapper>
-                  <FlexWrapper styles={{ width: '150px' }}>Usage</FlexWrapper>
-                </DisplayNone>
+        <GridWrapper styles={{ width: '100%' }}>
+          {Object.keys(characterTalentItemInfo).map((set) => {
+            console.log(set);
+            return (
+              <FlexWrapper key={set} styles={{ flexDirection: 'column', width: '300px', margin: '10px 0 0' }}>
+                <FlexWrapper>
+                  {Object.keys(characterTalentItemInfo[set].items).map((item) => {
+                    return (
+                      <RoundImage
+                        key={item}
+                        src={require(`../../resources/images/items/character-talent/${item}.png`)}
+                        styles={{ width: '60px', height: '60px' }}
+                      />
+                    );
+                  })}
+                </FlexWrapper>
+                <Name>{trans(Lang[set as KeyLang])}</Name>
+                <Description>{characterTalentItemInfo[set].day.map((day) => trans(Lang[day as KeyLang])).join(', ')}</Description>
+                <Description>{trans(Lang.Character_Talent_Material)}</Description>
               </FlexWrapper>
-              {talentSet.map((set) => {
-                return (
-                  <FlexWrapper styles={{ margin: '10px 0 0', width: '100%', small: { flexDirection: 'column' } }} key={set}>
-                    <>
-                      <FlexWrapper>
-                        <ImageWrapper>
-                          <RelativeBox>
-                            <RoundImage src={DailySetImages[set]} styles={{ width: '60px', height: '60px' }} />
-                            <TooltipText styles={{ bottom: '0', fontSize: '12px' }}>{trans(Lang[set as KeyLang])}</TooltipText>
-                          </RelativeBox>
-                        </ImageWrapper>
-                        <DayText>{characterTalentItemInfo[set].day.map((day) => trans(Lang[day as KeyLang])).join(', ')}</DayText>
-                      </FlexWrapper>
-                      <FlexWrapper styles={{ width: '200px' }}>Region</FlexWrapper>
-                      <FlexWrapper styles={{ width: '150px' }}>Usage</FlexWrapper>
-                    </>
-                  </FlexWrapper>
-                );
-              })}
-            </>
-          </FlexWrapper>
-        </Viewer>
+            );
+          })}
+          {Object.keys(weaponAscesionItemInfo).map((set) => {
+            console.log(set);
+            return (
+              <FlexWrapper key={set} styles={{ flexDirection: 'column', width: '300px', margin: '10px 0 0' }}>
+                <FlexWrapper>
+                  {Object.keys(weaponAscesionItemInfo[set].items).map((item) => {
+                    return (
+                      <RoundImage
+                        key={item}
+                        src={require(`../../resources/images/items/weapon-ascension/${item}.png`)}
+                        styles={{ width: '60px', height: '60px' }}
+                      />
+                    );
+                  })}
+                </FlexWrapper>
+                <Name>{trans(Lang[set as KeyLang])}</Name>
+                <Description>{weaponAscesionItemInfo[set].day.map((day) => trans(Lang[day as KeyLang])).join(', ')}</Description>
+                <Description>{trans(Lang.Weapon_Ascension_Material)}</Description>
+              </FlexWrapper>
+            );
+          })}
+        </GridWrapper>
       )}
     </Container>
   );
