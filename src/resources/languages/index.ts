@@ -485,6 +485,9 @@ enum Lang {
   Item = 'Item',
   Viewer_Open = 'Viewer_Open',
   Viewer_Close = 'Viewer_Close',
+  Daily_Abyssal_Items = 'Daily_Abyssal_Items',
+  Character_Talent_Material = 'Character_Talent_Material',
+  Weapon_Ascension_Material = 'Weapon_Ascension_Material',
 
   Character = 'Character',
   Character_Talent = 'Character_Talent',
