@@ -22,7 +22,7 @@ const pages: Navs = {
   item: {
     isHeaderMenu: true,
     path: '/item',
-    title: 'Item',
+    title: trans(Lang.Item),
     component: ItemScreen
   },
   policy: {
