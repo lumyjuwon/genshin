@@ -1,0 +1,30 @@
+{
+  "Whopperflower Nectar": {
+    "monster": ["Whopperflower"],
+    "rank": 1
+  },
+  "Damaged Mask": {
+    "monster": ["Hilichurls"],
+    "rank": 1
+  },
+  "Divining Scroll": {
+    "monster": ["Samachurls"],
+    "rank": 1
+  },
+  "Firm Arrowhead": {
+    "monster": ["Ranged Hilichurls"],
+    "rank": 1
+  },
+  "Recruit's Insignia": {
+    "monster": ["Skirmishers"],
+    "rank": 1
+  },
+  "Slime Condensate": {
+    "monster": ["Slimes"],
+    "rank": 1
+  },
+  "Treasure Hoarder Insignia": {
+    "monster": ["Treasure Hoarders"],
+    "rank": 1
+  }
+}

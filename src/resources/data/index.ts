@@ -148,6 +148,14 @@ interface WeeklyBossItem {
 }
 const weeklyBossItemInfo: WeeklyBossItem = require('../data/weekly-boss-item-info.json');
 
+interface FieldMonsterDropItem {
+  [name: string]: {
+    monster: Array<string>;
+    rank: number;
+  };
+}
+const fieldMonsterDropItemInfo: FieldMonsterDropItem = require('../data/field-monster-drop-item.json');
+
 export {
   gachaInfo,
   characterInfo,
@@ -158,5 +166,6 @@ export {
   serverTimeInfo,
   characterAscensionItemInfo,
   alchemyItemInfo,
-  weeklyBossItemInfo
+  weeklyBossItemInfo,
+  fieldMonsterDropItemInfo
 };
