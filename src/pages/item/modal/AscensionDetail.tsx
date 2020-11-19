@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { FlexWrapper, GridWrapper, RoundImage } from 'src/components';
 import { characterInfo } from 'src/resources/data';
-import { CharacterAscentionItemImages } from 'src/resources/images';
+// import { CharacterAscentionItemImages } from 'src/resources/images';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
 
 const Title = styled.div({
@@ -62,7 +62,7 @@ export function AscensionDetail(props: Props) {
   return (
     <FlexWrapper styles={{ flexDirection: 'column', margin: '15px 0 0' }}>
       <>
-        <Title>Ascension Steps</Title>
+        {/* <Title>Ascension Steps</Title>
         {Object.values(AscensionStep).map((step: Step) => {
           return (
             <FlexWrapper key={step} styles={{ margin: '10px 0 0', small: { flexDirection: 'column' } }}>
@@ -89,7 +89,7 @@ export function AscensionDetail(props: Props) {
               </>
             </FlexWrapper>
           );
-        })}
+        })} */}
       </>
     </FlexWrapper>
   );

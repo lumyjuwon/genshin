@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { BoxModelWrapper, FlexWrapper, RoundImage } from 'src/components';
 import { characterTalentItemInfo, alchemyItemInfo, characterInfo } from 'src/resources/data';
-import { CharacterAscentionItemImages, WeeklyBossItemImages } from 'src/resources/images';
+// import { CharacterAscentionItemImages, WeeklyBossItemImages } from 'src/resources/images';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
 
 const Title = styled.div({
@@ -33,7 +33,7 @@ export function TalentDetail(props: Props) {
 
   return (
     <>
-      <Title>Talent Level Up Items</Title>
+      {/* <Title>Talent Level Up Items</Title>
       {characterTalentInfo.book ? (
         <FlexWrapper styles={{ margin: '10px 0 0', small: { flexDirection: 'column' } }}>
           <FlexWrapper styles={{ flexDirection: 'column' }}>
@@ -108,7 +108,7 @@ export function TalentDetail(props: Props) {
         </FlexWrapper>
       ) : (
         <FlexWrapper>{trans(Lang.None)}</FlexWrapper>
-      )}
+      )} */}
     </>
   );
 }

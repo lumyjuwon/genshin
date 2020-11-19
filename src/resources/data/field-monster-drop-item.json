@@ -26,5 +26,53 @@
   "Treasure Hoarder Insignia": {
     "monster": ["Treasure Hoarders"],
     "rank": 1
+  },
+  "Vajrada Amethyst Sliver": { 
+    "monster": ["Electro Hypostasis", "Confront Stormterror"],
+    "rank": 2
+  },
+  "Vayuda Turquoise Sliver": { 
+    "monster": ["Anemo Hypostasis", "Confront Stormterror"],
+    "rank": 2
+  },
+  "Shivada Jade Sliver": { 
+    "monster": ["Cryo Regisvines", "Wolf of the North Challenge"],
+    "rank": 2
+  },
+  "Varunada Lazurite Sliver": { 
+    "monster": ["Oceanid", "Confront Stormterror"],
+    "rank": 2
+  },
+  "Prithiva Topaz Sliver": { 
+    "monster": ["Geo Hypostasis", "Wolf of the North Challenge"],
+    "rank": 2
+  },
+  "Agnidus Agate Sliver": { 
+    "monster": ["Pyro Regisvines", "Wolf of the North Challenge"],
+    "rank": 2
+  },
+  "Lightning Prism": {
+    "monster": ["Electro Hypostasis"],
+    "rank": 4
+  },
+  "Hurricane Seed": {
+    "monster": ["Anemo Hypostasis"],
+    "rank": 4
+  },
+  "Hoarfrost Core": {
+    "monster": ["Cryo Regisvines"],
+    "rank": 4
+  },
+  "Cleansing Heart": {
+    "monster": ["Oceanid"],
+    "rank": 4
+  },
+  "Basalt Pillar": {
+    "monster": ["Geo Hypostasis"],
+    "rank": 4
+  },
+  "Everflame Seed": {
+    "monster": ["Pyro Regisvines"],
+    "rank": 4
   }
 }

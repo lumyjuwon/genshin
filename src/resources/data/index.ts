@@ -124,13 +124,13 @@ interface ServerTime {
 }
 const serverTimeInfo: ServerTime = require('../data/server-time.json');
 
-interface CharacterAscensionItem {
-  [name: string]: {
+interface LocalSpcialityItem {
+  [item: string]: {
     region: string;
     rank: number;
   };
 }
-const characterAscensionItemInfo: CharacterAscensionItem = require('../data/character-ascension-item-info.json');
+const localSpecialityItemInfo: LocalSpcialityItem = require('../data/local-speciality-item-info.json');
 
 interface AlchemyItem {
   [name: string]: {
@@ -164,7 +164,7 @@ export {
   characterTalentItemInfo,
   weaponAscesionItemInfo,
   serverTimeInfo,
-  characterAscensionItemInfo,
+  localSpecialityItemInfo,
   alchemyItemInfo,
   weeklyBossItemInfo,
   fieldMonsterDropItemInfo
