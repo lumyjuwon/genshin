@@ -28,7 +28,7 @@ export function WeeklyRewardItem(props: Props) {
       <GridWrapper styles={{ width: '100%', medium: { width: '100%' }, small: { width: '100%' } }}>
         {Object.keys(weeklyBossItemInfo).map((item) => {
           return (
-            <FlexWrapper styles={{ flexDirection: 'column', margin: '10px 0 0', width: '300px' }}>
+            <FlexWrapper styles={{ flexDirection: 'column', margin: '15px 0 0', width: '300px' }}>
               <FlexWrapper>
                 <RoundImage
                   src={WeeklyBossItemImages[item]}
