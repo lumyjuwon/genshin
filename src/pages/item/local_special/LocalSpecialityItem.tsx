@@ -50,7 +50,11 @@ export function LocalSpecialityItem(props: Props) {
                   }}
                 />
                 <Name>{trans(Lang[item.replace(/\s/g, '_') as KeyLang])}</Name>
-                <Description>{trans(Lang.Character_Ascension_Material)}</Description>
+                <>
+                  {localSpecialityItemInfo[item].usage.map((usage) => (
+                    <Description>{trans(Lang[usage as KeyLang])}</Description>
+                  ))}
+                </>
               </FlexWrapper>
             );
           })}

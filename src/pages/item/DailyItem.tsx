@@ -23,7 +23,7 @@ interface Props {}
 
 export function DailyItem(props: Props) {
   return (
-    <Layout title={trans(Lang.Daily_Abyssal_Items)}>
+    <Layout title={trans(Lang.Daily_Abyssal_Items)} styles={{ containerStyle: { margin: '0 auto' } }}>
       <GridWrapper styles={{ width: '100%', medium: { width: '100%' }, small: { width: '100%' } }}>
         {Object.keys(characterTalentItemInfo).map((set) => {
           console.log(set);

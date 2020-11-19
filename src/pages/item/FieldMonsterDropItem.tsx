@@ -47,7 +47,11 @@ export function FieldMonsterDropItem() {
                   );
                 })}
               </>
-              <Description>{trans(Lang.Character_Ascension_Material)}</Description>
+              <>
+                {fieldMonsterDropItemInfo[item].usage.map((usage) => (
+                  <Description>{trans(Lang[usage as KeyLang])}</Description>
+                ))}
+              </>
             </FlexWrapper>
           );
         })}

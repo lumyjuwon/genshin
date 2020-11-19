@@ -5,6 +5,7 @@ import { trans, Lang } from 'src/resources/languages';
 
 interface ContainerStyle {
   width?: string;
+  margin?: string;
   medium?: {
     width?: string;
   };
@@ -36,7 +37,7 @@ const Container = styled.div<ContainerStyle>((props) => {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    margin: '50px auto 0',
+    margin: props.margin || '50px auto 0',
     '@media screen and (max-width: 1380px)': {
       width: props.medium?.width || '700px'
     },

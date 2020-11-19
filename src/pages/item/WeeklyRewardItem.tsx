@@ -44,7 +44,11 @@ export function WeeklyRewardItem(props: Props) {
               <Description>
                 {weeklyBossItemInfo[item].obtain.map((location) => trans(Lang[location.replace(/\s/g, '_') as KeyLang])).join(', ')}
               </Description>
-              <Description>{trans(Lang.Character_Talent_Material)}</Description>
+              <>
+                {weeklyBossItemInfo[item].usage.map((usage) => (
+                  <Description>{trans(Lang[usage as KeyLang])}</Description>
+                ))}
+              </>
             </FlexWrapper>
           );
         })}
