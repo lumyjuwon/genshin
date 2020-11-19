@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 import { trans, Lang } from '../../resources/languages';
-import { FlexWrapper, ImageContentCard } from 'src/components';
+import { FlexWrapper, ImageContentCard, PageHelmet } from 'src/components';
 import { DailyAbyssal } from './DailyAbyssal';
 
 const ImageContainer = styled.div({
@@ -40,11 +40,12 @@ const Containter = styled.div({
   }
 });
 
-interface Props { }
+interface Props {}
 
 export function MainScreen(props: Props) {
   return (
     <>
+      <PageHelmet title={trans(Lang.Main_Title)} description={trans(Lang.Main_Desc)} />
       <ImageContainer />
       <Containter>
         <DailyAbyssal />

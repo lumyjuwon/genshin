@@ -10,6 +10,7 @@ enum LangCode {
 enum Lang {
   Main_Logo = 'Main_Logo',
   Main_Title = 'Main_Title',
+  Main_Desc = 'Main_Desc',
   Main_Wish_Desc = 'Main_Wish_Desc',
   Main_Party_Desc = 'Main_Party_Desc',
   Main_Privacy_Policy = 'Main_Privacy_Policy',

@@ -1,15 +1,14 @@
 import React from 'react';
 
-import { ContentWrapper } from 'src/components';
+import { ContentWrapper, PageHelmet } from 'src/components';
+import { Lang, trans } from 'src/resources/languages';
 
 import { CharacterSimulator } from './simulator/CharacterSimulator';
-
-type ElementName = string;
-type ElementCount = number;
 
 export function PartyScreen() {
   return (
     <ContentWrapper>
+      <PageHelmet title={trans(Lang.Party)} description={trans(Lang.Main_Party_Desc)} />
       <CharacterSimulator />
     </ContentWrapper>
   );
