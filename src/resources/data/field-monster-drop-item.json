@@ -20,7 +20,7 @@
     "usage": ["Character_Ascension_Material", "Character_Talent_Material"]
   },
   "Recruit's Insignia": {
-    "monster": ["Skirmishers"],
+    "monster": ["Fatui Skirmishers"],
     "rank": 1,
     "usage": ["Character_Ascension_Material", "Character_Talent_Material"]
   },
@@ -33,6 +33,36 @@
     "monster": ["Treasure Hoarders"],
     "rank": 1,
     "usage": ["Character_Ascension_Material", "Character_Talent_Material"]
+  },
+  "Mist Grass Pollen": {
+    "monster": ["Electro Cicin Mages"],
+    "rank": 2,
+    "usage": ["Weapon_Ascension_Material"]
+  },
+  "Dead Ley Line Branch": {
+    "monster": ["Abyss Mages"],
+    "rank": 2,
+    "usage": ["Weapon_Ascension_Material"]
+  },
+  "Chaos Device": {
+    "monster": ["Ruin Guards", "Ruin Hunters"],
+    "rank": 2,
+    "usage": ["Weapon_Ascension_Material"]
+  },
+  "Heavy Horn": {
+    "monster": ["Mitachurls", "Lawachurls"],
+    "rank": 2,
+    "usage": ["Weapon_Ascension_Material"]
+  },
+  "Hunter's Sacrificial Knife": {
+    "monster": ["Agent"],
+    "rank": 2,
+    "usage": ["Weapon_Ascension_Material"]
+  },
+  "Fragile Bone Shard": {
+    "monster": ["Geovishap Hatchlings"],
+    "rank": 2,
+    "usage": ["Weapon_Ascension_Material"]
   },
   "Vajrada Amethyst Sliver": { 
     "monster": ["Electro Hypostasis", "Confront Stormterror"],
