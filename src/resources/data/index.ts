@@ -128,6 +128,7 @@ interface LocalSpcialityItem {
   [item: string]: {
     region: string;
     rank: number;
+    usage: Array<string>;
   };
 }
 const localSpecialityItemInfo: LocalSpcialityItem = require('../data/local-speciality-item-info.json');
@@ -144,6 +145,7 @@ interface WeeklyBossItem {
   [name: string]: {
     rank: number;
     obtain: Array<string>;
+    usage: Array<string>;
   };
 }
 const weeklyBossItemInfo: WeeklyBossItem = require('../data/weekly-boss-item-info.json');
@@ -152,6 +154,7 @@ interface FieldMonsterDropItem {
   [name: string]: {
     monster: Array<string>;
     rank: number;
+    usage: Array<string>;
   };
 }
 const fieldMonsterDropItemInfo: FieldMonsterDropItem = require('../data/field-monster-drop-item.json');

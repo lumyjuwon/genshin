@@ -1,66 +1,82 @@
 {
   "Calla Lily": {
     "region": "Mondstadt",
-    "rank": 0
+    "rank": 0,
+    "usage": ["Character_Ascension_Material"]
   },
   "Dandelion Seed": {
     "region": "Mondstadt",
-    "rank": 0
+    "rank": 0,
+    "usage": ["Character_Ascension_Material"]
   },
   "Cecilia": {
     "region": "Mondstadt",
-    "rank": 0
+    "rank": 0,
+    "usage": ["Character_Ascension_Material"]
   },
   "Philanemo Mushroom": {
     "region": "Mondstadt",
-    "rank": 0
+    "rank": 0,
+    "usage": ["Character_Ascension_Material"]
   },
   "Small Lamp Grass": {
     "region": "Mondstadt",
-    "rank": 0
+    "rank": 0,
+    "usage": ["Character_Ascension_Material"]
   },
   "Windwheel Aster": {
     "region": "Mondstadt",
-    "rank": 0
+    "rank": 0,
+    "usage": ["Character_Ascension_Material"]
   },
   "Wolfhook": {
     "region": "Mondstadt",
-    "rank": 0
+    "rank": 0,
+    "usage": ["Character_Ascension_Material"]
   },
   "Valberry": {
     "region": "Mondstadt",
-    "rank": 0
+    "rank": 0,
+    "usage": ["Character_Ascension_Material"]
   },
   "Cor Lapis": {
     "region": "Liyue",
-    "rank": 0
+    "rank": 0,
+    "usage": ["Character_Ascension_Material"]
   },
   "Glaze Lily": {
     "region": "Liyue",
-    "rank": 0
+    "rank": 0,
+    "usage": ["Character_Ascension_Material"]
   },
   "Jueyun Chili": {
     "region": "Liyue",
-    "rank": 0
+    "rank": 0,
+    "usage": ["Character_Ascension_Material"]
   },
   "Noctilucous Jade": {
     "region": "Liyue",
-    "rank": 0
+    "rank": 0,
+    "usage": ["Character_Ascension_Material"]
   },
   "Qingxin": {
     "region": "Liyue",
-    "rank": 0
+    "rank": 0,
+    "usage": ["Character_Ascension_Material"]
   },
   "Silk Flower": {
     "region": "Liyue",
-    "rank": 0
+    "rank": 0,
+    "usage": ["Character_Ascension_Material"]
   },
   "Starconch": {
     "region": "Liyue",
-    "rank": 0
+    "rank": 0,
+    "usage": ["Character_Ascension_Material"]
   },
   "Violetgrass": {
     "region": "Liyue",
-    "rank": 0
+    "rank": 0,
+    "usage": ["Character_Ascension_Material"]
   }
 }

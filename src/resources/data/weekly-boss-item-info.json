@@ -1,38 +1,47 @@
 {
   "Dvalin's Sigh": {
     "rank": 5,
-    "obtain": ["Confront Stormterror"]
+    "obtain": ["Confront Stormterror"],
+    "usage": ["Character_Talent_Material"]
   },
   "Dvalin's Plume": {
     "rank": 5,
-    "obtain": ["Confront Stormterror"]
+    "obtain": ["Confront Stormterror"],
+    "usage": ["Character_Talent_Material"]
   },
   "Dvalin's Claw": {
     "rank": 5,
-    "obtain": ["Confront Stormterror"]
+    "obtain": ["Confront Stormterror"],
+    "usage": ["Character_Talent_Material"]
   },
   "Ring of Boreas": {
     "rank": 5,
-    "obtain": ["Wolf of the North Challenge"]
+    "obtain": ["Wolf of the North Challenge"],
+    "usage": ["Character_Talent_Material"]
   },
   "Spirit Locket of Boreas": {
     "rank": 5,
-    "obtain": ["Wolf of the North Challenge"]
+    "obtain": ["Wolf of the North Challenge"],
+    "usage": ["Character_Talent_Material"]
   },
   "Tail of Boreas": {
     "rank": 5,
-    "obtain": ["Wolf of the North Challenge"]
+    "obtain": ["Wolf of the North Challenge"],
+    "usage": ["Character_Talent_Material"]
   },
   "Shard of a Foul Legacy": {
     "rank": 5,
-    "obtain": ["Enter the Golden House"]
+    "obtain": ["Enter the Golden House"],
+    "usage": ["Character_Talent_Material"]
   },
   "Shadow of the Warrior": {
     "rank": 5,
-    "obtain": ["Enter the Golden House"]
+    "obtain": ["Enter the Golden House"],
+    "usage": ["Character_Talent_Material"]
   },
   "Tusk of Monoceros Caeli": {
     "rank": 5,
-    "obtain": ["Enter the Golden House"]
+    "obtain": ["Enter the Golden House"],
+    "usage": ["Character_Talent_Material"]
   }
 }

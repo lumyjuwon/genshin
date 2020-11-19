@@ -1,78 +1,97 @@
 {
   "Whopperflower Nectar": {
     "monster": ["Whopperflower"],
-    "rank": 1
+    "rank": 1,
+    "usage": ["Character_Ascension_Material", "Character_Talent_Material"]
   },
   "Damaged Mask": {
     "monster": ["Hilichurls"],
-    "rank": 1
+    "rank": 1,
+    "usage": ["Character_Ascension_Material", "Character_Talent_Material"]
   },
   "Divining Scroll": {
     "monster": ["Samachurls"],
-    "rank": 1
+    "rank": 1,
+    "usage": ["Character_Ascension_Material", "Character_Talent_Material"]
   },
   "Firm Arrowhead": {
     "monster": ["Ranged Hilichurls"],
-    "rank": 1
+    "rank": 1,
+    "usage": ["Character_Ascension_Material", "Character_Talent_Material"]
   },
   "Recruit's Insignia": {
     "monster": ["Skirmishers"],
-    "rank": 1
+    "rank": 1,
+    "usage": ["Character_Ascension_Material", "Character_Talent_Material"]
   },
   "Slime Condensate": {
     "monster": ["Slimes"],
-    "rank": 1
+    "rank": 1,
+    "usage": ["Character_Ascension_Material", "Character_Talent_Material"]
   },
   "Treasure Hoarder Insignia": {
     "monster": ["Treasure Hoarders"],
-    "rank": 1
+    "rank": 1,
+    "usage": ["Character_Ascension_Material", "Character_Talent_Material"]
   },
   "Vajrada Amethyst Sliver": { 
     "monster": ["Electro Hypostasis", "Confront Stormterror"],
-    "rank": 2
+    "rank": 2,
+    "usage": ["Character_Ascension_Material"]
   },
   "Vayuda Turquoise Sliver": { 
     "monster": ["Anemo Hypostasis", "Confront Stormterror"],
-    "rank": 2
+    "rank": 2,
+    "usage": ["Character_Ascension_Material"]
   },
   "Shivada Jade Sliver": { 
     "monster": ["Cryo Regisvines", "Wolf of the North Challenge"],
-    "rank": 2
+    "rank": 2,
+    "usage": ["Character_Ascension_Material"]
   },
   "Varunada Lazurite Sliver": { 
     "monster": ["Oceanid", "Confront Stormterror"],
-    "rank": 2
+    "rank": 2,
+    "usage": ["Character_Ascension_Material"]
   },
   "Prithiva Topaz Sliver": { 
     "monster": ["Geo Hypostasis", "Wolf of the North Challenge"],
-    "rank": 2
+    "rank": 2,
+    "usage": ["Character_Ascension_Material"]
   },
   "Agnidus Agate Sliver": { 
     "monster": ["Pyro Regisvines", "Wolf of the North Challenge"],
-    "rank": 2
+    "rank": 2,
+    "usage": ["Character_Ascension_Material"]
   },
   "Lightning Prism": {
     "monster": ["Electro Hypostasis"],
-    "rank": 4
+    "rank": 4,
+    "usage": ["Character_Ascension_Material"]
   },
   "Hurricane Seed": {
     "monster": ["Anemo Hypostasis"],
-    "rank": 4
+    "rank": 4,
+    "usage": ["Character_Ascension_Material"]
   },
   "Hoarfrost Core": {
     "monster": ["Cryo Regisvines"],
-    "rank": 4
+    "rank": 4,
+    "usage": ["Character_Ascension_Material"]
   },
   "Cleansing Heart": {
     "monster": ["Oceanid"],
-    "rank": 4
+    "rank": 4,
+    "usage": ["Character_Ascension_Material"]
   },
   "Basalt Pillar": {
     "monster": ["Geo Hypostasis"],
-    "rank": 4
+    "rank": 4,
+    "usage": ["Character_Ascension_Material"]
   },
   "Everflame Seed": {
     "monster": ["Pyro Regisvines"],
-    "rank": 4
+    "rank": 4,
+    "usage": ["Character_Ascension_Material"]
   }
 }
