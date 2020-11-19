@@ -44,11 +44,11 @@ export function WeeklyRewardItem(props: Props) {
               <Description>
                 {weeklyBossItemInfo[item].obtain.map((location) => trans(Lang[location.replace(/\s/g, '_') as KeyLang])).join(', ')}
               </Description>
-              <>
+              <FlexWrapper styles={{ flexDirection: 'column', margin: '5px 0 0' }}>
                 {weeklyBossItemInfo[item].usage.map((usage) => (
                   <Description>{trans(Lang[usage as KeyLang])}</Description>
                 ))}
-              </>
+              </FlexWrapper>
             </FlexWrapper>
           );
         })}

@@ -37,7 +37,7 @@ export function FieldMonsterDropItem() {
                 }}
               />
               <Name>{trans(Lang[item.replace(/\s/g, '_').replace(/'/g, '') as KeyLang])}</Name>
-              <>
+              <FlexWrapper styles={{ flexDirection: 'column', margin: '5px 0 0' }}>
                 {fieldMonsterDropItemInfo[item].monster.map((monster, index) => {
                   return (
                     <Description>
@@ -46,12 +46,12 @@ export function FieldMonsterDropItem() {
                     </Description>
                   );
                 })}
-              </>
-              <>
+              </FlexWrapper>
+              <FlexWrapper styles={{ flexDirection: 'column', margin: '5px 0 0' }}>
                 {fieldMonsterDropItemInfo[item].usage.map((usage) => (
                   <Description>{trans(Lang[usage as KeyLang])}</Description>
                 ))}
-              </>
+              </FlexWrapper>
             </FlexWrapper>
           );
         })}

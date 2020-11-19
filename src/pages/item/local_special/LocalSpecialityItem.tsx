@@ -50,11 +50,11 @@ export function LocalSpecialityItem(props: Props) {
                   }}
                 />
                 <Name>{trans(Lang[item.replace(/\s/g, '_') as KeyLang])}</Name>
-                <>
+                <FlexWrapper styles={{ flexDirection: 'column', margin: '5px 0 0' }}>
                   {localSpecialityItemInfo[item].usage.map((usage) => (
                     <Description>{trans(Lang[usage as KeyLang])}</Description>
                   ))}
-                </>
+                </FlexWrapper>
               </FlexWrapper>
             );
           })}

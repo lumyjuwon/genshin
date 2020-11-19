@@ -16,7 +16,8 @@ const Name = styled.div({
 const Description = styled.div({
   width: '100%',
   textAlign: 'center',
-  fontSize: '14px'
+  fontSize: '14px',
+  margin: '5px 0 0'
 });
 
 interface Props {}
