@@ -27,11 +27,10 @@ interface ListStyles {
 }
 
 const Icon = styled.div({
-  zIndex: -1,
-  float: 'right',
   fontSize: '12px',
   transition: '0.2s',
-  transform: 'rotate(180deg)'
+  transform: 'rotate(180deg)',
+  marginRight: '8px'
 });
 
 const DropDown = styled.ul<ListStyles>((props: ListStyles) => {
@@ -59,9 +58,10 @@ const DropDown = styled.ul<ListStyles>((props: ListStyles) => {
   };
 });
 
-const HoverDiv = styled.div({
+const Content = styled.div({
+  float: 'left',
   width: '100%',
-  float: 'left'
+  paddingLeft: '8px'
 });
 
 const Container = styled.div<ContainerStyles>`
@@ -98,9 +98,9 @@ const List = styled.li<{ default?: boolean }>((props: { default?: boolean }) => 
 const Clickable = styled.div({
   display: 'flex',
   width: '100%',
+  height: '100%',
   justifyContent: 'space-between',
-  alignItems: 'center',
-  padding: '5px 10px'
+  alignItems: 'center'
 });
 
 interface Props {
@@ -150,7 +150,7 @@ export const DropDownButton = React.forwardRef<HTMLDivElement, Props>((props, fo
   return (
     <Container {...props.styles?.containerStyles} ref={dropDownRef}>
       <Clickable onClick={() => onContentClick()}>
-        <HoverDiv>{props.content}</HoverDiv>
+        <Content>{props.content}</Content>
         <Icon>▲</Icon>
       </Clickable>
       <DropDown {...props.styles?.listStyles} id={props.id}>
