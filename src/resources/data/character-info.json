@@ -447,7 +447,7 @@
       "drop": "Recruit's Insignia"
     }
   },
-  "Traveler (Anemo)": {
+  "Traveler(Anemo)": {
     "rank": 5,
     "element": "Anemo",
     "weapon": "Sword",
@@ -498,7 +498,7 @@
       "drop": ""
     }
   },
-  "Traveler (Geo)": {
+  "Traveler(Geo)": {
     "rank": 5,
     "element": "Geo",
     "weapon": "Sword",
