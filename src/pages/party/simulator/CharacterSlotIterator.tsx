@@ -16,7 +16,7 @@ const Container = styled.div({
   alignItems: 'center',
   padding: '32px',
   '@media screen and (max-width: 768px)': {
-    padding: '15px'
+    padding: '10px'
   }
 });
 
