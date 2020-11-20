@@ -27,7 +27,6 @@ export function DailyItem(props: Props) {
     <Layout title={trans(Lang.Daily_Abyssal_Items)} styles={{ containerStyle: { margin: '0 auto' } }}>
       <GridWrapper styles={{ width: '100%', medium: { width: '100%' }, small: { width: '100%' } }}>
         {Object.keys(characterTalentItemInfo).map((set) => {
-          console.log(set);
           return (
             <FlexWrapper key={set} styles={{ flexDirection: 'column', width: '300px', margin: '15px 0 0', medium: { width: '200px' } }}>
               <FlexWrapper>

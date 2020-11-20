@@ -39,7 +39,7 @@ export function LocalSpecialityItem(props: Props) {
           .filter((item) => localSpecialityItemInfo[item].region === props.local)
           .map((item) => {
             return (
-              <FlexWrapper styles={{ flexDirection: 'column', margin: '15px 0 0', width: '200px' }}>
+              <FlexWrapper key={item} styles={{ flexDirection: 'column', margin: '15px 0 0', width: '200px' }}>
                 <RoundImage
                   src={LocalSpecialityItemImages[item]}
                   styles={{
@@ -52,7 +52,7 @@ export function LocalSpecialityItem(props: Props) {
                 <Name>{trans(Lang[item.replace(/\s/g, '_') as KeyLang])}</Name>
                 <FlexWrapper styles={{ flexDirection: 'column', margin: '5px 0 0' }}>
                   {localSpecialityItemInfo[item].usage.map((usage) => (
-                    <Description>{trans(Lang[usage as KeyLang])}</Description>
+                    <Description key={usage}>{trans(Lang[usage as KeyLang])}</Description>
                   ))}
                 </FlexWrapper>
               </FlexWrapper>

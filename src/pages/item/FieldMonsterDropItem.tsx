@@ -26,7 +26,7 @@ export function FieldMonsterDropItem() {
       <GridWrapper styles={{ width: '100%', medium: { width: '100%' }, small: { width: '100%' } }}>
         {Object.keys(fieldMonsterDropItemInfo).map((item) => {
           return (
-            <FlexWrapper styles={{ width: '200px', flexDirection: 'column', margin: '15px 0 0' }}>
+            <FlexWrapper key={item} styles={{ width: '200px', flexDirection: 'column', margin: '15px 0 0' }}>
               <RoundImage
                 src={FieldMonsterDropItemImages[item]}
                 styles={{
@@ -40,7 +40,7 @@ export function FieldMonsterDropItem() {
               <FlexWrapper styles={{ flexDirection: 'column', margin: '5px 0 0' }}>
                 {fieldMonsterDropItemInfo[item].monster.map((monster, index) => {
                   return (
-                    <Description>
+                    <Description key={monster}>
                       {`Drop${index + 1}: `}
                       {trans(Lang[monster.replace(/\s/g, '_') as KeyLang])}
                     </Description>
@@ -49,7 +49,7 @@ export function FieldMonsterDropItem() {
               </FlexWrapper>
               <FlexWrapper styles={{ flexDirection: 'column', margin: '5px 0 0' }}>
                 {fieldMonsterDropItemInfo[item].usage.map((usage) => (
-                  <Description>{trans(Lang[usage as KeyLang])}</Description>
+                  <Description key={usage}>{trans(Lang[usage as KeyLang])}</Description>
                 ))}
               </FlexWrapper>
             </FlexWrapper>

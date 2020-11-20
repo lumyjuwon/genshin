@@ -25,7 +25,7 @@ export function CharacterList() {
       <GridWrapper styles={{ width: '100%' }}>
         {characters.map((name) => {
           return (
-            <Link to={`/character/${name}`}>
+            <Link key={name} to={`/character/${name}`}>
               <ItemBadgeBox
                 badge={
                   <RoundImage

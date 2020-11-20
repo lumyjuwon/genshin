@@ -12,7 +12,7 @@ export function LocalContainer() {
     <Layout title={trans(Lang.Local_Speciality_Items)}>
       <GridWrapper styles={{ width: '100%', medium: { width: '100%' }, small: { width: '100%' } }}>
         {region.map((local) => (
-          <LocalSpecialityItem local={local} />
+          <LocalSpecialityItem key={local} local={local} />
         ))}
       </GridWrapper>
     </Layout>
