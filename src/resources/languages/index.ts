@@ -484,6 +484,7 @@ enum Lang {
   Map = 'Map',
 
   Item = 'Item',
+  Main_Item_Desc = 'Main_Item_Desc',
   Viewer_Open = 'Viewer_Open',
   Viewer_Close = 'Viewer_Close',
   Character_Talent_Material = 'Character_Talent_Material',
