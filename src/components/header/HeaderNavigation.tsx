@@ -48,15 +48,20 @@ interface Props {
   onClick?: Function;
 }
 
+let storagedSelectedPath = window.sessionStorage.getItem('nav');
+
 export const HeaderNavigation = React.forwardRef<HTMLDivElement, Props>((props, forwardedRef) => {
   const history = useHistory();
-  const [selectedNavPath, setSelectedNavPath] = useState<string>('/');
+  const [selectedNavPath, setSelectedNavPath] = useState<string>(storagedSelectedPath || '/');
 
   useEffect(() => {
     history.listen((location) => {
       setSelectedNavPath(location.pathname);
     });
   }, [history, props.navs]);
+
+  storagedSelectedPath = selectedNavPath;
+  window.sessionStorage.setItem('nav', storagedSelectedPath.toString());
 
   return (
     <Navigation ref={forwardedRef}>
@@ -65,13 +70,14 @@ export const HeaderNavigation = React.forwardRef<HTMLDivElement, Props>((props, 
           <FlexWrapper styles={{ small: { flexDirection: 'column', width: '100%' } }}>
             {Object.keys(props.navs).map((navName: string) => {
               const nav = props.navs[navName];
+              console.log(nav.path, window.sessionStorage.getItem('nav'));
               if (nav.isHeaderMenu) {
                 return (
                   <HeaderMenu
                     key={navName}
                     link={nav.path}
                     title={nav.title}
-                    isSelected={selectedNavPath === nav.path}
+                    isSelected={window.sessionStorage.getItem('nav') === nav.path}
                     onClick={props.onClick}
                   />
                 );
