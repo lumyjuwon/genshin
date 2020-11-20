@@ -8,8 +8,12 @@ import { display } from 'html2canvas/dist/types/css/property-descriptors/display
 
 const Relative = styled.div({
   position: 'relative',
-  width: '900px',
-  margin: '0 auto'
+  display: 'flex',
+  width: '1020px',
+  height: '120px',
+  margin: '0 auto',
+  justifyContent: 'space-between',
+  alignItems: 'center'
 });
 
 const HorizontalScroll = styled.div({
@@ -22,9 +26,10 @@ const HorizontalScroll = styled.div({
   height: '900px',
   overflowY: 'auto',
   overflowX: 'hidden',
-  transform: 'rotate(-90deg) translateY(-100px)',
+  transform: 'rotate(-90deg) translateY(-60px)',
   transformOrigin: 'right top',
   scrollbarWidth: 'none',
+  scrollBehavior: 'smooth',
   '&>*': {
     transform: 'rotate(90deg)'
   },
@@ -34,11 +39,30 @@ const HorizontalScroll = styled.div({
   }
 });
 
+const ScrollButton = styled.div({
+  width: '50px',
+  padding: '10px',
+  fontSize: '30px',
+  textAlign: 'center',
+  cursor: 'pointer',
+  borderRadius: '8px',
+  transition: '.2s',
+  '&:hover': {
+    backgroundColor: '#f1f2f3',
+    color: '#222324'
+  }
+});
+
 export function CharacterList() {
   const characters = Object.keys(characterInfo);
 
+  function onScrollButtonClick() {}
+
   return (
     <Relative>
+      <ScrollButton>
+        <i className="fas fa-chevron-left"></i>
+      </ScrollButton>
       <HorizontalScroll>
         {characters.map((character) => {
           return (
@@ -58,7 +82,8 @@ export function CharacterList() {
               }
               child={<RoundImage src={CharacterImages[character]} />}
               styles={{
-                boxStyles: { hoverInnerColor: '#f1f2f3' }
+                boxStyles: { hoverInnerColor: '#f1f2f3', margin: '10px' },
+                badgePosition: { right: '-3px' }
               }}
               onClick={() => alert(character)}
               isActive={true}
@@ -70,6 +95,9 @@ export function CharacterList() {
           );
         })}
       </HorizontalScroll>
+      <ScrollButton>
+        <i className="fas fa-chevron-right"></i>
+      </ScrollButton>
     </Relative>
   );
 }
