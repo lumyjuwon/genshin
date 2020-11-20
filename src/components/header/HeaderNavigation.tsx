@@ -61,7 +61,7 @@ export const HeaderNavigation = React.forwardRef<HTMLDivElement, Props>((props, 
   }, [history, props.navs]);
 
   storagedSelectedPath = selectedNavPath;
-  window.sessionStorage.setItem('nav', storagedSelectedPath.toString());
+  window.sessionStorage.setItem('nav', storagedSelectedPath);
 
   return (
     <Navigation ref={forwardedRef}>
