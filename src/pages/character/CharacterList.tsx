@@ -85,13 +85,16 @@ export function CharacterList() {
               }
               child={<RoundImage src={CharacterImages[character]} />}
               styles={{
-                boxStyles: { hoverInnerColor: '#f1f2f3', margin: '10px' },
-                badgePosition: { right: '-3px' }
+                boxStyles: { margin: '10px' },
+                badgePosition: { right: '-3px' },
+                tooltipStyles: { bottom: '0' }
               }}
+              hoverInnerColor={'#f1f2f3'}
+              tooltip={character}
               onClick={() => alert(character)}
               isActive={true}
               isHoverdToolTip={false}
-              isToolTipVisible={false}
+              isToolTipVisible={true}
               isRankVisible={false}
               isBadgeVisible={true}
             />
