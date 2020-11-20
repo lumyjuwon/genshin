@@ -52,7 +52,6 @@ export function DailyItem(props: Props) {
           );
         })}
         {Object.keys(weaponAscesionItemInfo).map((set) => {
-          console.log(set);
           return (
             <FlexWrapper key={set} styles={{ flexDirection: 'column', width: '300px', margin: '10px 0 0' }}>
               <FlexWrapper>

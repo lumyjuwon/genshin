@@ -1,11 +1,10 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 import { characterInfo } from 'src/resources/data';
 import { CharacterImages, ElementImages } from 'src/resources/images';
-import { FlexWrapper, SquareImage, BoxModelWrapper, ItemBadgeBox, RoundImage, GridWrapper } from 'src/components';
-import { display } from 'html2canvas/dist/types/css/property-descriptors/display';
+import { ItemBadgeBox, RoundImage, GridWrapper } from 'src/components';
 
 const Container = styled.div({
   display: 'flex',

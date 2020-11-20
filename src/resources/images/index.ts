@@ -1,14 +1,4 @@
-import {
-  weaponInfo,
-  artifactInfo,
-  characterInfo,
-  localSpecialityItemInfo,
-  alchemyItemInfo,
-  weeklyBossItemInfo,
-  characterTalentItemInfo,
-  weaponAscesionItemInfo,
-  fieldMonsterDropItemInfo
-} from '../data';
+import { weaponInfo, artifactInfo, characterInfo, localSpecialityItemInfo, weeklyBossItemInfo, fieldMonsterDropItemInfo } from '../data';
 
 export type ImageSrc = string | undefined;
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import {
@@ -8,11 +8,10 @@ import {
   CharacterTalentItem,
   serverTimeInfo
 } from 'src/resources/data';
-import { FlexWrapper, RoundImage, TooltipText, DropDownButton, BoxModelWrapper, GridWrapper } from 'src/components';
+import { FlexWrapper, RoundImage, TooltipText, GridWrapper } from 'src/components';
 import { DailySetImages } from 'src/resources/images';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
 
-import { CommonState } from 'src/redux/common/types';
 import { useSelector } from 'react-redux';
 import { RootState } from 'src/redux/rootReducer';
 
