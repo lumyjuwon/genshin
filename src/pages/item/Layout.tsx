@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 import { trans, Lang } from 'src/resources/languages';
@@ -121,8 +121,8 @@ enum ButtonText {
 }
 
 export function Layout(props: Props) {
-  const [isViewerVisible, setIsViewerVisible] = useState(false);
-  const [buttonText, setButtonText] = useState(ButtonText.open);
+  const [isViewerVisible, setIsViewerVisible] = useState(true);
+  const [buttonText, setButtonText] = useState(ButtonText.close);
 
   function toggleViewer() {
     setIsViewerVisible(!isViewerVisible);
