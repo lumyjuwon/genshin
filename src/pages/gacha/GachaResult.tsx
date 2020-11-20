@@ -7,8 +7,6 @@ import { FlexWrapper, SquareImage } from 'src/components';
 interface Props {
   times: number;
   result: Array<string>;
-  four: number;
-  five: number;
   pity?: number;
   gem: number;
 }
@@ -35,44 +33,29 @@ const Result = styled.div({
   }
 });
 
+const Inner = styled.div({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  flexFlow: 'wrap'
+});
+
 export function GachaResult(props: Props) {
   return (
     <ResultBar>
-      <FlexWrapper>
-        <>
-          <FlexWrapper
-            styles={{
-              small: { flexDirection: 'column' }
-            }}
-          >
-            <>
-              <Result>{`${trans(Lang.Total_Count)}: ${props.times}`}</Result>
-              <Result>{`5★: ${props.five}`}</Result>
-              <Result>{`4★: ${props.four}`}</Result>
-            </>
+      <Inner>
+        <Result>{`${trans(Lang.Total_Count)}: ${props.times}`}</Result>
+        <Result>{`${trans(Lang.Next_Pity)}: ${props.pity}`}</Result>
+        <Result>
+          <FlexWrapper>
+            <SquareImage
+              styles={{ width: '20px', height: '20px', small: { width: '18px', height: '18px' } }}
+              src={require('../../resources/images/items/gem/Primogem.webp')}
+            />
+            <span>{`: ${props.gem}`}</span>
           </FlexWrapper>
-          <FlexWrapper
-            styles={{
-              small: { flexDirection: 'column' }
-            }}
-          >
-            <>
-              <Result>{`${trans(Lang.Next_Pity)}: ${props.pity}`}</Result>
-              <Result>
-                <FlexWrapper>
-                  <>
-                    <SquareImage
-                      styles={{ width: '20px', height: '20px', small: { width: '18px', height: '18px' } }}
-                      src={require('../../resources/images/items/gem/Primogem.webp')}
-                    />
-                    <span>{`: ${props.gem}`}</span>
-                  </>
-                </FlexWrapper>
-              </Result>
-            </>
-          </FlexWrapper>
-        </>
-      </FlexWrapper>
+        </Result>
+      </Inner>
     </ResultBar>
   );
 }

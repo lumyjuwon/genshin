@@ -123,23 +123,9 @@ export function GachaScreen() {
           <GachaBanner content={gachaContent} onClick={onBannerClick} pickUpList={Object.keys(gachaInfo)} />
           <GachaArrangeView result={gachaExecutionResult} />
           {gachaContent === contentList[3] ? (
-            <GachaResult
-              times={totalCount}
-              four={fourStarCount}
-              five={fiveStarCount}
-              gem={usedPrimoGem}
-              pity={0}
-              result={gachaInventoryList}
-            />
+            <GachaResult times={totalCount} gem={usedPrimoGem} pity={0} result={gachaInventoryList} />
           ) : (
-            <GachaResult
-              times={totalCount}
-              four={fourStarCount}
-              five={fiveStarCount}
-              gem={usedPrimoGem}
-              pity={nextPity}
-              result={gachaInventoryList}
-            />
+            <GachaResult times={totalCount} gem={usedPrimoGem} pity={nextPity} result={gachaInventoryList} />
           )}
           <FlexWrapper>
             <>
@@ -210,7 +196,7 @@ export function GachaScreen() {
           <BoxModelWrapper styles={{ margin: '50px auto 30px' }}>
             <>
               <hr />
-              <GachaInventory inventoryList={gachaInventoryList} />
+              <GachaInventory inventoryList={gachaInventoryList} four={fourStarCount} five={fiveStarCount} />
             </>
           </BoxModelWrapper>
         </>

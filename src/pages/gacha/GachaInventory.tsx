@@ -12,14 +12,24 @@ type Inventory = Map<string, number>;
 
 interface Props {
   inventoryList: Array<string>;
+  four: number;
+  five: number;
 }
 
 const Title = styled.div({
   width: 'fit-content',
-  fontSize: '25px'
+  fontSize: '25px',
+  '@media screen and (max-width: 768px)': {
+    width: '100%',
+    fontSize: '20px'
+  }
 });
 
-const ItemCount = styled.div({});
+const ItemCount = styled.div({
+  '@media screen and (max-width: 768px)': {
+    fontSize: '14px'
+  }
+});
 
 const GridContainer = styled.div({
   display: 'grid',
@@ -71,6 +81,13 @@ const Item = styled.div`
   }
 `;
 
+const Result = styled.div({
+  margin: '0 5px',
+  '@media screen and (max-width: 768px)': {
+    fontSize: '14px'
+  }
+});
+
 enum Filter {
   Rarity = 'Filter_Rarity',
   Character = 'Filter_Character',
@@ -105,7 +122,7 @@ export function GachaInventory(props: Props) {
 
   return (
     <>
-      <FlexWrapper styles={{ justifyContent: 'space-between', margin: '0 0 10px' }}>
+      <FlexWrapper styles={{ justifyContent: 'space-between', margin: '0 0 10px', small: { flexDirection: 'column' } }}>
         <>
           <Title>{trans(Lang.Inventory)}</Title>
           <FlexWrapper
@@ -113,6 +130,8 @@ export function GachaInventory(props: Props) {
               justifyContent: 'flex-end'
             }}
           >
+            <Result>5★: {props.five}</Result>
+            <Result>4★: {props.four}</Result>
             <ItemCount>{`${trans(Lang.Item_Count)}: ${totalItemCount}`}</ItemCount>
           </FlexWrapper>
         </>
