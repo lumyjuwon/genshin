@@ -24,7 +24,7 @@ export function ServerSelector(props: Props) {
         defaultValue={server}
         content={server}
         styles={{
-          containerStyles: { width: '70px', height: '35px', fontSize: '20px' },
+          containerStyles: { width: '90px', height: '35px', fontSize: '20px' },
           listStyles: { width: '100px', top: '34px', right: '-1px' }
         }}
       />
