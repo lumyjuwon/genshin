@@ -49,6 +49,7 @@ interface Props {
 }
 
 let storagedSelectedPath = window.sessionStorage.getItem('nav');
+const MAIN_NAV_INDEX = 1;
 
 export const HeaderNavigation = React.forwardRef<HTMLDivElement, Props>((props, forwardedRef) => {
   const history = useHistory();
@@ -56,7 +57,7 @@ export const HeaderNavigation = React.forwardRef<HTMLDivElement, Props>((props, 
 
   useEffect(() => {
     history.listen((location) => {
-      setSelectedNavPath(location.pathname);
+      setSelectedNavPath('/'.concat(location.pathname.split('/')[MAIN_NAV_INDEX]));
     });
   }, [history, props.navs]);
 
@@ -70,7 +71,6 @@ export const HeaderNavigation = React.forwardRef<HTMLDivElement, Props>((props, 
           <FlexWrapper styles={{ small: { flexDirection: 'column', width: '100%' } }}>
             {Object.keys(props.navs).map((navName: string) => {
               const nav = props.navs[navName];
-              console.log(nav.path, window.sessionStorage.getItem('nav'));
               if (nav.isHeaderMenu) {
                 return (
                   <HeaderMenu
