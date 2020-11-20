@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import { GachaScreen, PartyScreen, MainScreen, Policy, Notice, MapScreen, ItemScreen } from 'src/pages';
+import { GachaScreen, PartyScreen, MainScreen, Policy, Notice, MapScreen, ItemScreen, CharacterScreen } from 'src/pages';
 import { Header, Footer } from 'src/components';
 import { trans, Lang } from './resources/languages';
 import NotFound from './NotFound';
@@ -19,6 +19,12 @@ const pages: Navs = {
     component: PartyScreen
   },
   // map: { path: '/map', title: trans(Lang.Map), content: "D", component: MapScreen },
+  character: {
+    isHeaderMenu: true,
+    path: '/character',
+    title: trans(Lang.Character),
+    component: CharacterScreen
+  },
   item: {
     isHeaderMenu: true,
     path: '/item',
