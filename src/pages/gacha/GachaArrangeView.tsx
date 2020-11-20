@@ -95,7 +95,7 @@ export function GachaArrangeView(props: Props) {
                 else if (weaponInfo[item].rank === 4) shadow = shadowPal.four;
               }
               let imagePath = require(`../../resources/images/gacha/${item}.png`);
-              if (window.innerWidth < 768 && characterInfo[item]) imagePath = require(`../../resources/images/characters/${item}.png`);
+              if (window.innerWidth <= 768 && characterInfo[item]) imagePath = require(`../../resources/images/characters/${item}.png`);
 
               return (
                 <HoverTransform key={index}>

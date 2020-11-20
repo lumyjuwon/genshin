@@ -14,7 +14,10 @@ const Container = styled.div({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  padding: '32px 32px'
+  padding: '32px',
+  '@media screen and (max-width: 768px)': {
+    padding: '15px'
+  }
 });
 
 interface Props {

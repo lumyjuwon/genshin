@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const P = styled.span({
-  lineHeight: '140%'
+  lineHeight: '140%',
+  textAlign: 'center'
 });
 
 function parseColorText(text: string, regex: RegExp, color?: string, isBold?: boolean) {
