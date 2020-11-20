@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 
 import { characterInfo } from 'src/resources/data';
@@ -55,15 +55,18 @@ const ScrollButton = styled.div({
 
 export function CharacterList() {
   const characters = Object.keys(characterInfo);
+  const scrollableRef = useRef<HTMLDivElement>(null);
 
-  function onScrollButtonClick() {}
+  function onScrollButtonClick(scrollGap: number) {
+    scrollableRef.current?.scrollBy(0, scrollGap);
+  }
 
   return (
     <Relative>
-      <ScrollButton>
+      <ScrollButton onClick={() => onScrollButtonClick(-300)}>
         <i className="fas fa-chevron-left"></i>
       </ScrollButton>
-      <HorizontalScroll>
+      <HorizontalScroll ref={scrollableRef}>
         {characters.map((character) => {
           return (
             <ItemBadgeBox
@@ -95,7 +98,7 @@ export function CharacterList() {
           );
         })}
       </HorizontalScroll>
-      <ScrollButton>
+      <ScrollButton onClick={() => onScrollButtonClick(300)}>
         <i className="fas fa-chevron-right"></i>
       </ScrollButton>
     </Relative>
