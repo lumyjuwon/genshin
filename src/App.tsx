@@ -10,48 +10,48 @@ import { useTranslation } from 'react-i18next';
 import { RootState } from './redux/rootReducer';
 import { useSelector } from 'react-redux';
 
-const pages: Navs = {
-  gacha: { isHeaderMenu: true, path: '/gacha', title: trans(Lang.Gacha), component: GachaScreen },
-  party: {
-    isHeaderMenu: true,
-    path: '/party',
-    title: trans(Lang.Party),
-    component: PartyScreen
-  },
-  // map: { path: '/map', title: trans(Lang.Map), content: "D", component: MapScreen },
-  character: {
-    isHeaderMenu: true,
-    path: '/character',
-    title: trans(Lang.Character),
-    component: CharacterScreen
-  },
-  item: {
-    isHeaderMenu: true,
-    path: '/item',
-    title: trans(Lang.Item),
-    component: ItemScreen
-  },
-  policy: {
-    isHeaderMenu: false,
-    path: '/policy',
-    title: 'Policy',
-    component: Policy
-  },
-  notice: {
-    isHeaderMenu: false,
-    path: '/notice',
-    title: 'Notice',
-    component: Notice
-  },
-  '*': {
-    isHeaderMenu: false,
-    path: '*',
-    title: 'NotFound',
-    component: NotFound
-  }
-};
-
 function App() {
+  const pages: Navs = {
+    gacha: { isHeaderMenu: true, path: '/gacha', title: trans(Lang.Gacha), component: GachaScreen },
+    party: {
+      isHeaderMenu: true,
+      path: '/party',
+      title: trans(Lang.Party),
+      component: PartyScreen
+    },
+    // map: { path: '/map', title: trans(Lang.Map), content: "D", component: MapScreen },
+    character: {
+      isHeaderMenu: true,
+      path: '/character',
+      title: trans(Lang.Character),
+      component: CharacterScreen
+    },
+    item: {
+      isHeaderMenu: true,
+      path: '/item',
+      title: trans(Lang.Item),
+      component: ItemScreen
+    },
+    policy: {
+      isHeaderMenu: false,
+      path: '/policy',
+      title: 'Policy',
+      component: Policy
+    },
+    notice: {
+      isHeaderMenu: false,
+      path: '/notice',
+      title: 'Notice',
+      component: Notice
+    },
+    '*': {
+      isHeaderMenu: false,
+      path: '*',
+      title: 'NotFound',
+      component: NotFound
+    }
+  };
+
   useSelector<RootState, any>((state) => state.common.server);
   useTranslation();
 
