@@ -53,7 +53,8 @@
       "book": "Freedom",
       "boss": "Ring of Boreas",
       "drop": "Divining Scroll"
-    }
+    },
+    "position": ["Dealer"]
   },
   "Keqing": {
     "rank": 5,
@@ -109,7 +110,8 @@
       "book": "Prosperity",
       "boss": "Ring of Boreas",
       "drop": "Whopperflower Nectar"
-    }
+    },
+    "position": ["Dealer"]
   },
   "Diluc": {
     "rank": 5,
@@ -165,7 +167,8 @@
       "book": "Resistance",
       "boss": "Dvalin's Plume",
       "drop": "Recruit's Insignia"
-    }
+    },
+    "position": ["Dealer"]
   },
   "Jean": {
     "rank": 5,
@@ -221,7 +224,8 @@
       "book": "Resistance",
       "boss": "Dvalin's Plume",
       "drop": "Damaged Mask"
-    }
+    },
+    "position": ["Supporter"]
   },
   "Qiqi": {
     "rank": 5,
@@ -277,7 +281,8 @@
       "book": "Prosperity",
       "boss": "Tail of Boreas",
       "drop": "Divining Scroll"
-    }
+    },
+    "position": ["Healer"]
   },
   "Mona": {
     "rank": 5,
@@ -333,7 +338,8 @@
       "book": "Resistance",
       "boss": "Ring of Boreas",
       "drop": "Whopperflower Nectar"
-    }
+    },
+    "position": ["Supporter"]
   },
   "Venti": {
     "rank": 5,
@@ -389,7 +395,8 @@
       "book": "Ballad",
       "boss": "Tail of Boreas",
       "drop": "Slime Condensate"
-    }
+    },
+    "position": ["Supporter"]
   },
   "Tartaglia": {
     "rank": 5,
@@ -445,7 +452,8 @@
       "book": "Freedom",
       "boss": "Shard of a Foul Legacy",
       "drop": "Recruit's Insignia"
-    }
+    },
+    "position": ["Dealer"]
   },
   "Traveler(Anemo)": {
     "rank": 5,
@@ -496,7 +504,8 @@
       "book": "",
       "boss": "",
       "drop": ""
-    }
+    },
+    "position": ["Supporter"]
   },
   "Traveler(Geo)": {
     "rank": 5,
@@ -547,7 +556,8 @@
       "book": "",
       "boss": "",
       "drop": ""
-    }
+    },
+    "position": ["Supporter"]
   },
   "Noelle": {
     "rank": 4,
@@ -603,7 +613,8 @@
       "book": "Resistance",
       "boss": "Dvalin's Claw",
       "drop": "Damaged Mask"
-    }
+    },
+    "position": ["Dealer", "Supporter"]
   },
   "Razor": {
     "rank": 4,
@@ -659,7 +670,8 @@
       "book": "Resistance",
       "boss": "Dvalin's Claw",
       "drop": "Damaged Mask"
-    }
+    },
+    "position": ["Dealer"]
   },
   "Ningguang": {
     "rank": 4,
@@ -715,7 +727,8 @@
       "book": "Prosperity",
       "boss": "Spirit Locket of Boreas",
       "drop": "Recruit's Insignia"
-    }
+    },
+    "position": ["Dealer"]
   },
   "Lisa": {
     "rank": 4,
@@ -771,7 +784,8 @@
       "book": "Ballad",
       "boss": "Dvalin's Claw",
       "drop": "Slime Condensate"
-    }
+    },
+    "position": ["Supporter"]
   },
   "Kaeya": {
     "rank": 4,
@@ -827,7 +841,8 @@
       "book": "Ballad",
       "boss": "Spirit Locket of Boreas",
       "drop": "Treasure Hoarder Insignia"
-    }
+    },
+    "position": ["Supporter"]
   },
   "Fischl": {
     "rank": 4,
@@ -883,7 +898,8 @@
       "book": "Ballad",
       "boss": "Spirit Locket of Boreas",
       "drop": "Firm Arrowhead"
-    }
+    },
+    "position": ["Dealer", "Supporter"]
   },
   "Chongyun": {
     "rank": 4,
@@ -939,7 +955,8 @@
       "book": "Diligence",
       "boss": "Dvalin's Sigh",
       "drop": "Damaged Mask"
-    }
+    },
+    "position": ["Dealer", "Supporter"]
   },
   "Bennett": {
     "rank": 4,
@@ -995,7 +1012,8 @@
       "book": "Resistance",
       "boss": "Dvalin's Plume",
       "drop": "Treasure Hoarder Insignia"
-    }
+    },
+    "position": ["Dealer", "Supporter"]
   },
   "Beidou": {
     "rank": 4,
@@ -1051,7 +1069,8 @@
       "book": "Gold",
       "boss": "Dvalin's Sigh",
       "drop": "Treasure Hoarder Insignia"
-    }
+    },
+    "position": ["Dealer"]
   },
   "Barbara": {
     "rank": 4,
@@ -1107,7 +1126,8 @@
       "book": "Freedom",
       "boss": "Ring of Boreas",
       "drop": "Divining Scroll"
-    }
+    },
+    "position": ["Healer"]
   },
   "Amber": {
     "rank": 4,
@@ -1163,7 +1183,8 @@
       "book": "Freedom",
       "boss": "Dvalin's Sigh",
       "drop": "Firm Arrowhead"
-    }
+    },
+    "position": ["Supporter"]
   }, 
   "Sucrose": {
     "rank": 4,
@@ -1219,7 +1240,8 @@
       "book": "Freedom",
       "boss": "Spirit Locket of Boreas",
       "drop": "Whopperflower Nectar"
-    }
+    },
+    "position": ["Supporter"]
   },
   "Xiangling": {
     "rank": 4,
@@ -1275,7 +1297,8 @@
       "book": "Diligence",
       "boss": "Dvalin's Claw",
       "drop": "Slime Condensate"
-    }
+    },
+    "position": ["Dealer", "Supporter"]
   },
   "Xingqiu": {
     "rank": 4,
@@ -1331,7 +1354,8 @@
       "book": "Gold",
       "boss": "Tail of Boreas",
       "drop": "Damaged Mask"
-    }
+    },
+    "position": ["Supporter"]
   },
   "Diona": {
     "rank": 4,
@@ -1387,6 +1411,7 @@
       "book": "Freedom",
       "boss": "Shard of a Foul Legacy",
       "drop": "Firm Arrowhead"
-    }
+    },
+    "position": ["Support"]
   }
 }

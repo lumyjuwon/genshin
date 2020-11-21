@@ -56,6 +56,7 @@ interface Character {
       boss: string;
       drop: string;
     };
+    position: Array<string>;
   };
 }
 const characterInfo: Character = require('../data/character-info.json');
