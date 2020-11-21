@@ -42,7 +42,6 @@ export function CharacterList() {
                 child={<RoundImage src={CharacterImages[name]} />}
                 styles={{
                   boxStyles: { margin: '10px' },
-                  badgePosition: { right: '-3px' },
                   tooltipStyles: { bottom: '0' }
                 }}
                 hoverInnerColor={'#f1f2f3'}
