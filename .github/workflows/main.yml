@@ -5,8 +5,6 @@ name: CI
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
-  push:
-    branches: [ master ]
   pull_request:
     branches: [ master ]
 
@@ -21,13 +19,17 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+          
+      - name: Install Dependencies
+      - run: npm install
+      
+      - name: Release Project
+      - run: npm run build
+      
+      - name: Publish to AWS
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ADMIN_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_ADMIN_SECRET_ACCESS_KEY }}
