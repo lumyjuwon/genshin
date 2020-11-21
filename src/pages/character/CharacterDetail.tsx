@@ -69,16 +69,19 @@ export function CharacterDetail(props: Props) {
         />
         <FlexWrapper styles={{ flexDirection: 'column', margin: '0 0 0 20px', alignItems: 'flex-start' }}>
           <Name>{props.character}</Name>
-          <Description>{characterInfo[props.character].position.join(', ')}</Description>
           {/* Region, Weapon */}
         </FlexWrapper>
       </CharacterIntro>
-      {/* Nav Button */}
-      {/* Stat */}
-      {/* Skill */}
-      {/* Constellations */}
-      {/* Ascension Items */}
-      {/* Talent Level up items */}
+      <FlexWrapper styles={{ width: '100%', alignItems: 'flex-start', flexDirection: 'column' }}>
+        <Description>{characterInfo[props.character].position.join(', ')}</Description>
+        {/* Nav Button */}
+        {/* Stat */}
+        {/* Talent */}
+        {/* Passive Talent */}
+        {/* Constellations */}
+        {/* Ascension Items */}
+        {/* Talent Level up items */}
+      </FlexWrapper>
     </Container>
   );
 }
