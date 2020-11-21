@@ -9,9 +9,87 @@
       "HP": "9563",
       "ATK": "289",
       "DEF": "572",
-      "Additional": "Pyro DMG 28.8%"
+      "Additional": "Pyro DMG 28.8%",
+      "Max_20": {
+        "Level": "20",
+        "HP": "2077",
+        "ATK": "63",
+        "DEF": "124",
+        "Additional": "-"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4136",
+        "ATK": "125",
+        "DEF": "247",
+        "Additional": "-"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5319",
+        "ATK": "161",
+        "DEF": "318",
+        "Additional": "Pyro DMG 7.2%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6673",
+        "ATK": "202",
+        "DEF": "399",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7870",
+        "ATK": "238",
+        "DEF": "470",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9076",
+        "ATK": "274",
+        "DEF": "542",
+        "Additional": "Pyro DMG 21.6"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "9563",
+        "ATK": "289",
+        "DEF": "572",
+        "Additional": "Pyro DMG 28.8%"
+      }
     },
-    "ascension": {
+    "recommendedParty": {
+      "recom1": {
+        "party": ["Klee", "Mona", "Fischl", "Venti"],
+        "alter": {
+          "Venti": ["Sucrose", "Jean"]
+        }
+      },
+      "recom2": {
+        "party": ["Klee", "Qiqi", "Fischl", "Venti"],
+        "alter": {
+          "Venti": ["Sucrose", "Jean"]
+        }
+      },
+      "recom3": {
+        "party": ["Klee", "Bennet", "Fischl", "Venti"],
+        "alter": {
+          "Venti": ["Sucrose", "Jean"],
+          "Bennet": ["Xianling"]
+        }
+      },
+      "recom4": {
+        "party": ["Klee", "Xianling", "Chongyun", "Venti"],
+        "alter": {
+          "Venti": ["Sucrose", "Jean"]
+        }
+      }
+    },
+    "ascensionMaterials": {
       "items": ["Agnidus Agate Sliver", "Philanemo Mushroom", "Everflame Seed", "Divining Scroll"],
       "Max_40": {
         "Agnidus Agate Sliver": 1,
@@ -49,12 +127,16 @@
         "Forbidden Curse Scroll": 24
       }
     },
-    "talent": {
+    "talentMaterials": {
       "book": "Freedom",
       "boss": "Ring of Boreas",
       "drop": "Divining Scroll"
     },
-    "position": ["Dealer"]
+    "position": ["Main_Dealer", "Support_Dealer"],
+    "tier": {
+      "Main_Dealer": "T0",
+      "Support_Dealer": "T0"
+    }
   },
   "Keqing": {
     "rank": 5,
@@ -66,9 +148,85 @@
       "HP": "12182",
       "ATK": "300",
       "DEF": "743",
-      "Additional": "CRIT DMG 188.4%"
+      "Additional": "CRIT DMG 188.4%",
+      "Max_20": {
+        "Level": "20",
+        "HP": "2077",
+        "ATK": "63",
+        "DEF": "124",
+        "Additional": "-"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4136",
+        "ATK": "125",
+        "DEF": "247",
+        "Additional": "-"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5319",
+        "ATK": "161",
+        "DEF": "318",
+        "Additional": "Pyro DMG 7.2%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6673",
+        "ATK": "202",
+        "DEF": "399",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7870",
+        "ATK": "238",
+        "DEF": "470",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9076",
+        "ATK": "274",
+        "DEF": "542",
+        "Additional": "Pyro DMG 21.6"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "9563",
+        "ATK": "289",
+        "DEF": "572",
+        "Additional": "Pyro DMG 28.8%"
+      }
     },
-    "ascension": {
+    "recommendedParty": {
+      "recom1": {
+        "party": ["Keqing", "Fischl", "Mona", "Venti"],
+        "alter": {
+          "Venti": ["Sucrose", "Jean"]
+        }
+      },
+      "recom2": {
+        "party": ["Keqing", "Fischl", "Bennet", "Venti"],
+        "alter": {
+          "Bennet": ["Xianling"],
+          "Venti": ["Sucrose", "Jean"]
+        }
+      },
+      "recom3": {
+        "party": ["Keqing", "Fischl", "Xingqiu", "Venti"],
+        "alter": {
+          "Xingqiu": ["Barbara"],
+          "Venti": ["Sucrose", "Jean"]
+        }
+      },
+      "recom4": {
+        "party": ["Keqing", "Fischl", "Bennet", "Xianling"]
+      }
+    },
+    "ascensionMaterials": {
       "items": ["Vajrada Amethyst Sliver", "Cor Lapis", "Whopperflower Nectar", "Lightning Prism"],
       "Max_40": {
         "Vajrada Amethyst Sliver": 1,
@@ -106,12 +264,15 @@
         "Energy Nectar": 24
       }
     },
-    "talent": {
+    "talentMaterials": {
       "book": "Prosperity",
       "boss": "Ring of Boreas",
       "drop": "Whopperflower Nectar"
     },
-    "position": ["Dealer"]
+    "position": ["Main_Dealer"],
+    "tier": {
+      "Main_Dealer": "T1"
+    }
   },
   "Diluc": {
     "rank": 5,
@@ -123,9 +284,87 @@
       "HP": "12068",
       "ATK": "312",
       "DEF": "729",
-      "Additional": "CRIT Rate 24.2%"
+      "Additional": "CRIT Rate 24.2%",
+      "Max_20": {
+        "Level": "20",
+        "HP": "2077",
+        "ATK": "63",
+        "DEF": "124",
+        "Additional": "-"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4136",
+        "ATK": "125",
+        "DEF": "247",
+        "Additional": "-"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5319",
+        "ATK": "161",
+        "DEF": "318",
+        "Additional": "Pyro DMG 7.2%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6673",
+        "ATK": "202",
+        "DEF": "399",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7870",
+        "ATK": "238",
+        "DEF": "470",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9076",
+        "ATK": "274",
+        "DEF": "542",
+        "Additional": "Pyro DMG 21.6"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "9563",
+        "ATK": "289",
+        "DEF": "572",
+        "Additional": "Pyro DMG 28.8%"
+      }
     },
-    "ascension": {
+    "recommendedParty": {
+      "recom1": {
+        "party": ["Diluc", "Chongyun", "Bennet", "Sucrose"],
+        "alter": {
+          "Sucrose": ["Venti", "Jean"]
+        }
+      },
+      "recom2": {
+        "party": ["Diluc", "Mona", "Fischl", "Venti"],
+        "alter": {
+          "Venti": ["Sucrose", "Jean"]
+        }
+      },
+      "recom3": {
+        "party": ["Diluc", "Qiqi", "Bennet", "Sucrose"],
+        "alter": {
+          "Bennet": ["Xianling"],
+          "Sucrose": ["Venti", "Jean"]
+        }
+      },
+      "recom4": {
+        "party": ["Diluc", "Xiangling", "Fischl", "Jean"],
+        "alter": {
+          "Jean": ["Venti", "Sucrose"]
+        }
+      }
+    },
+    "ascensionMaterials": {
       "items": ["Agnidus Agate Sliver", "Everflame Seed", "Small Lamp Grass", "Recruit's Insignia"],
       "Max_40": {
         "Agnidus Agate Sliver": 1,
@@ -163,12 +402,15 @@
         "Lieutenant's Insignia": 24
       }
     },
-    "talent": {
+    "talentMaterials": {
       "book": "Resistance",
       "boss": "Dvalin's Plume",
       "drop": "Recruit's Insignia"
     },
-    "position": ["Dealer"]
+    "position": ["Main_Dealer"],
+    "tier": {
+      "Main_Dealer": "T0"
+    }
   },
   "Jean": {
     "rank": 5,
@@ -180,9 +422,60 @@
       "HP": "12965",
       "ATK": "211",
       "DEF": "678",
-      "Additional": "Healing Bonus 16.6%"
+      "Additional": "Healing Bonus 16.6%",
+      "Max_20": {
+        "Level": "20",
+        "HP": "2077",
+        "ATK": "63",
+        "DEF": "124",
+        "Additional": "-"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4136",
+        "ATK": "125",
+        "DEF": "247",
+        "Additional": "-"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5319",
+        "ATK": "161",
+        "DEF": "318",
+        "Additional": "Pyro DMG 7.2%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6673",
+        "ATK": "202",
+        "DEF": "399",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7870",
+        "ATK": "238",
+        "DEF": "470",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9076",
+        "ATK": "274",
+        "DEF": "542",
+        "Additional": "Pyro DMG 21.6"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "9563",
+        "ATK": "289",
+        "DEF": "572",
+        "Additional": "Pyro DMG 28.8%"
+      }
     },
-    "ascension": {
+    "ascensionMaterial": {
       "items": ["Vayuda Turquoise Sliver", "Dandelion Seed", "Damaged Mask", "Hurricane Seed"],
       "Max_40": {
         "Vayuda Turquoise Sliver": 1,
@@ -220,12 +513,16 @@
         "Ominous Mask": 24
       }
     },
-    "talent": {
+    "talentMaterials": {
       "book": "Resistance",
       "boss": "Dvalin's Plume",
       "drop": "Damaged Mask"
     },
-    "position": ["Supporter"]
+    "position": ["Support_Dealer", "Supporter"],
+    "tier": {
+      "Support_Dealer": "T1",
+      "Supporter": "T0"
+    }
   },
   "Qiqi": {
     "rank": 5,
@@ -237,9 +534,60 @@
       "HP": "11499",
       "ATK": "266",
       "DEF": "857",
-      "Additional": "Healing Bonus 22.2%"
+      "Additional": "Healing Bonus 22.2%",
+      "Max_20": {
+        "Level": "20",
+        "HP": "2077",
+        "ATK": "63",
+        "DEF": "124",
+        "Additional": "-"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4136",
+        "ATK": "125",
+        "DEF": "247",
+        "Additional": "-"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5319",
+        "ATK": "161",
+        "DEF": "318",
+        "Additional": "Pyro DMG 7.2%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6673",
+        "ATK": "202",
+        "DEF": "399",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7870",
+        "ATK": "238",
+        "DEF": "470",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9076",
+        "ATK": "274",
+        "DEF": "542",
+        "Additional": "Pyro DMG 21.6"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "9563",
+        "ATK": "289",
+        "DEF": "572",
+        "Additional": "Pyro DMG 28.8%"
+      }
     },
-    "ascension": {
+    "ascensionMaterials": {
       "items": ["Shivada Jade Sliver", "Violetgrass", "Divining Scroll", "Hoarfrost Core"],
       "Max_40": {
         "Shivada Jade Sliver": 1,
@@ -277,12 +625,15 @@
         "Forbidden Curse Scroll": 24
       }
     },
-    "talent": {
+    "talentMaterials": {
       "book": "Prosperity",
       "boss": "Tail of Boreas",
       "drop": "Divining Scroll"
     },
-    "position": ["Healer"]
+    "position": ["Supporter"],
+    "tier": {
+      "Supporter": "T0"
+    }
   },
   "Mona": {
     "rank": 5,
@@ -294,9 +645,60 @@
       "HP": "9677",
       "ATK": "266",
       "DEF": "607",
-      "Additional": "Energy Recharge 32.0%"
+      "Additional": "Energy Recharge 32.0%",
+      "Max_20": {
+        "Level": "20",
+        "HP": "2077",
+        "ATK": "63",
+        "DEF": "124",
+        "Additional": "-"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4136",
+        "ATK": "125",
+        "DEF": "247",
+        "Additional": "-"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5319",
+        "ATK": "161",
+        "DEF": "318",
+        "Additional": "Pyro DMG 7.2%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6673",
+        "ATK": "202",
+        "DEF": "399",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7870",
+        "ATK": "238",
+        "DEF": "470",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9076",
+        "ATK": "274",
+        "DEF": "542",
+        "Additional": "Pyro DMG 21.6"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "9563",
+        "ATK": "289",
+        "DEF": "572",
+        "Additional": "Pyro DMG 28.8%"
+      }
     },
-    "ascension": {
+    "ascensionMaterials": {
       "items": ["Varunada Lazurite Sliver", "Philanemo Mushroom", "Whopperflower Nectar", "Cleansing Heart"],
       "Max_40": {
         "Varunada Lazurite Sliver": 1,
@@ -334,12 +736,16 @@
         "Energy Nectar": 24
       }
     },
-    "talent": {
+    "talentMaterials": {
       "book": "Resistance",
       "boss": "Ring of Boreas",
       "drop": "Whopperflower Nectar"
     },
-    "position": ["Supporter"]
+    "position": ["Support_Dealer", "Supporter"],
+    "tier": {
+      "Support_Dealer": "T0",
+      "Supporter": "T1"
+    }
   },
   "Venti": {
     "rank": 5,
@@ -351,9 +757,60 @@
       "HP": "8557",
       "ATK": "214",
       "DEF": "543",
-      "Additional": "Energy Recharge 24.0%"
+      "Additional": "Energy Recharge 24.0%",
+      "Max_20": {
+        "Level": "20",
+        "HP": "2077",
+        "ATK": "63",
+        "DEF": "124",
+        "Additional": "-"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4136",
+        "ATK": "125",
+        "DEF": "247",
+        "Additional": "-"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5319",
+        "ATK": "161",
+        "DEF": "318",
+        "Additional": "Pyro DMG 7.2%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6673",
+        "ATK": "202",
+        "DEF": "399",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7870",
+        "ATK": "238",
+        "DEF": "470",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9076",
+        "ATK": "274",
+        "DEF": "542",
+        "Additional": "Pyro DMG 21.6"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "9563",
+        "ATK": "289",
+        "DEF": "572",
+        "Additional": "Pyro DMG 28.8%"
+      }
     },
-    "ascension": {
+    "ascensionMaterials": {
       "items": ["Vayuda Turquoise Sliver", "Cecilia", "Slime Condensate", "Hurricane Seed"],
       "Max_40": {
         "Vayuda Turquoise Sliver": 1,
@@ -391,12 +848,16 @@
         "Slime Concentrate": 24
       }
     },
-    "talent": {
+    "talentMaterials": {
       "book": "Ballad",
       "boss": "Tail of Boreas",
       "drop": "Slime Condensate"
     },
-    "position": ["Supporter"]
+    "position": ["Support_Dealer", "Supporter"],
+    "tier": {
+      "Support_Dealer": "T1",
+      "Supporter": "T0"
+    }
   },
   "Tartaglia": {
     "rank": 5,
@@ -408,9 +869,60 @@
       "HP": "5889",
       "ATK": "137",
       "DEF": "366",
-      "Additional": "Hydro DMG 7.2%"
+      "Additional": "Hydro DMG 7.2%",
+      "Max_20": {
+        "Level": "20",
+        "HP": "2077",
+        "ATK": "63",
+        "DEF": "124",
+        "Additional": "-"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4136",
+        "ATK": "125",
+        "DEF": "247",
+        "Additional": "-"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5319",
+        "ATK": "161",
+        "DEF": "318",
+        "Additional": "Pyro DMG 7.2%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6673",
+        "ATK": "202",
+        "DEF": "399",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7870",
+        "ATK": "238",
+        "DEF": "470",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9076",
+        "ATK": "274",
+        "DEF": "542",
+        "Additional": "Pyro DMG 21.6"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "9563",
+        "ATK": "289",
+        "DEF": "572",
+        "Additional": "Pyro DMG 28.8%"
+      }
     },
-    "ascension": {
+    "ascensionMaterials": {
       "items": ["Varunada Lazurite Sliver", "Starconch", "Recruit's Insignia", "Cleansing Heart"],
       "Max_40": {
         "Varunada Lazurite Sliver": 1,
@@ -448,12 +960,15 @@
         "Lieutenant's Insignia": 24
       }
     },
-    "talent": {
+    "talentMaterials": {
       "book": "Freedom",
       "boss": "Shard of a Foul Legacy",
       "drop": "Recruit's Insignia"
     },
-    "position": ["Dealer"]
+    "position": ["Main_Dealer"],
+    "tier": {
+      "Main_Dealer": "T0"
+    }
   },
   "Traveler(Anemo)": {
     "rank": 5,
@@ -465,9 +980,60 @@
       "HP": "10444",
       "ATK": "204",
       "DEF": "669",
-      "Additional": "ATK 24.0%"
+      "Additional": "ATK 24.0%",
+      "Max_20": {
+        "Level": "20",
+        "HP": "2077",
+        "ATK": "63",
+        "DEF": "124",
+        "Additional": "-"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4136",
+        "ATK": "125",
+        "DEF": "247",
+        "Additional": "-"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5319",
+        "ATK": "161",
+        "DEF": "318",
+        "Additional": "Pyro DMG 7.2%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6673",
+        "ATK": "202",
+        "DEF": "399",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7870",
+        "ATK": "238",
+        "DEF": "470",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9076",
+        "ATK": "274",
+        "DEF": "542",
+        "Additional": "Pyro DMG 21.6"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "9563",
+        "ATK": "289",
+        "DEF": "572",
+        "Additional": "Pyro DMG 28.8%"
+      }
     },
-    "ascension": {
+    "ascensionMaterails": {
       "items": ["Brilliant Diamond Sliver", "Windwheel Aster", "Damaged Mask"],
       "Max_40": {
         "Brilliant Diamond Sliver": 1,
@@ -500,12 +1066,16 @@
         "Ominous Mask": 24
       }
     },
-    "talent": {
+    "talentMaterials": {
       "book": "",
       "boss": "",
       "drop": ""
     },
-    "position": ["Supporter"]
+    "position": ["Support_Dealer", "Supporter"],
+    "tier": {
+      "Support_Dealer": "T2",
+      "Supporter": "T2"
+    }
   },
   "Traveler(Geo)": {
     "rank": 5,
@@ -517,9 +1087,60 @@
       "HP": "10444",
       "ATK": "204",
       "DEF": "669",
-      "Additional": "ATK 24.0%"
+      "Additional": "ATK 24.0%",
+      "Max_20": {
+        "Level": "20",
+        "HP": "2077",
+        "ATK": "63",
+        "DEF": "124",
+        "Additional": "-"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4136",
+        "ATK": "125",
+        "DEF": "247",
+        "Additional": "-"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5319",
+        "ATK": "161",
+        "DEF": "318",
+        "Additional": "Pyro DMG 7.2%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6673",
+        "ATK": "202",
+        "DEF": "399",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7870",
+        "ATK": "238",
+        "DEF": "470",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9076",
+        "ATK": "274",
+        "DEF": "542",
+        "Additional": "Pyro DMG 21.6"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "9563",
+        "ATK": "289",
+        "DEF": "572",
+        "Additional": "Pyro DMG 28.8%"
+      }
     },
-    "ascension": {
+    "ascensionMaterials": {
       "items": ["Brilliant Diamond Sliver", "Windwheel Aster", "Damaged Mask"],
       "Max_40": {
         "Brilliant Diamond Sliver": 1,
@@ -552,12 +1173,15 @@
         "Ominous Mask": 24
       }
     },
-    "talent": {
+    "talentMaterials": {
       "book": "",
       "boss": "",
       "drop": ""
     },
-    "position": ["Supporter"]
+    "position": ["Supporter"],
+    "tier": {
+      "Supporter": "T2"
+    }
   },
   "Noelle": {
     "rank": 4,
@@ -569,9 +1193,60 @@
       "HP": "11235",
       "ATK": "178",
       "DEF": "743",
-      "Additional": "DEF 30.0%"
+      "Additional": "DEF 30.0%",
+      "Max_20": {
+        "Level": "20",
+        "HP": "2077",
+        "ATK": "63",
+        "DEF": "124",
+        "Additional": "-"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4136",
+        "ATK": "125",
+        "DEF": "247",
+        "Additional": "-"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5319",
+        "ATK": "161",
+        "DEF": "318",
+        "Additional": "Pyro DMG 7.2%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6673",
+        "ATK": "202",
+        "DEF": "399",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7870",
+        "ATK": "238",
+        "DEF": "470",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9076",
+        "ATK": "274",
+        "DEF": "542",
+        "Additional": "Pyro DMG 21.6"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "9563",
+        "ATK": "289",
+        "DEF": "572",
+        "Additional": "Pyro DMG 28.8%"
+      }
     },
-    "ascension": {
+    "ascensionMaterials": {
       "items": ["Prithiva Topaz Sliver", "Valberry", "Damaged Mask", "Basalt Pillar"],
       "Max_40": {
         "Prithiva Topaz Sliver": 1,
@@ -609,12 +1284,16 @@
         "Ominous Mask": 24
       }
     },
-    "talent": {
+    "talentMaterials": {
       "book": "Resistance",
       "boss": "Dvalin's Claw",
       "drop": "Damaged Mask"
     },
-    "position": ["Dealer", "Supporter"]
+    "position": ["Main_Dealer", "Supporter"],
+    "tier": {
+      "Main_Dealer": "T2",
+      "Supporter": "T2"
+    }
   },
   "Razor": {
     "rank": 4,
@@ -626,9 +1305,60 @@
       "HP": "11134",
       "ATK": "217",
       "DEF": "699",
-      "Additional": "Physical DMG 30.0%"
+      "Additional": "Physical DMG 30.0%",
+      "Max_20": {
+        "Level": "20",
+        "HP": "2077",
+        "ATK": "63",
+        "DEF": "124",
+        "Additional": "-"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4136",
+        "ATK": "125",
+        "DEF": "247",
+        "Additional": "-"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5319",
+        "ATK": "161",
+        "DEF": "318",
+        "Additional": "Pyro DMG 7.2%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6673",
+        "ATK": "202",
+        "DEF": "399",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7870",
+        "ATK": "238",
+        "DEF": "470",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9076",
+        "ATK": "274",
+        "DEF": "542",
+        "Additional": "Pyro DMG 21.6"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "9563",
+        "ATK": "289",
+        "DEF": "572",
+        "Additional": "Pyro DMG 28.8%"
+      }
     },
-    "ascension": {
+    "ascensionMaterials": {
       "items": ["Vajrada Amethyst Sliver", "Wolfhook", "Damaged Mask", "Lightning Prism"],
       "Max_40": {
         "Vajrada Amethyst Sliver": 1,
@@ -666,12 +1396,15 @@
         "Ominous Mask": 24
       }
     },
-    "talent": {
+    "talentMaterials": {
       "book": "Resistance",
       "boss": "Dvalin's Claw",
       "drop": "Damaged Mask"
     },
-    "position": ["Dealer"]
+    "position": ["Main_Dealer"],
+    "tier": {
+      "Main_Dealer": "T1"
+    }
   },
   "Ningguang": {
     "rank": 4,
@@ -683,9 +1416,60 @@
       "HP": "8764",
       "ATK": "188",
       "DEF": "508",
-      "Additional": "Geo DMG 18.0%"
+      "Additional": "Geo DMG 18.0%",
+      "Max_20": {
+        "Level": "20",
+        "HP": "2077",
+        "ATK": "63",
+        "DEF": "124",
+        "Additional": "-"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4136",
+        "ATK": "125",
+        "DEF": "247",
+        "Additional": "-"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5319",
+        "ATK": "161",
+        "DEF": "318",
+        "Additional": "Pyro DMG 7.2%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6673",
+        "ATK": "202",
+        "DEF": "399",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7870",
+        "ATK": "238",
+        "DEF": "470",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9076",
+        "ATK": "274",
+        "DEF": "542",
+        "Additional": "Pyro DMG 21.6"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "9563",
+        "ATK": "289",
+        "DEF": "572",
+        "Additional": "Pyro DMG 28.8%"
+      }
     },
-    "ascension": {
+    "ascensionMaterials": {
       "items": ["Prithiva Topaz Sliver", "Glaze Lily", "Recruit's Insignia", "Basalt Pillar"],
       "Max_40": {
         "Prithiva Topaz Sliver": 1,
@@ -723,12 +1507,15 @@
         "Lieutenant's Insignia": 24
       }
     },
-    "talent": {
+    "talentMaterials": {
       "book": "Prosperity",
       "boss": "Spirit Locket of Boreas",
       "drop": "Recruit's Insignia"
     },
-    "position": ["Dealer"]
+    "position": ["Main_Dealer"],
+    "tier": {
+      "Main_Dealer": "T1"
+    }
   },
   "Lisa": {
     "rank": 4,
@@ -740,9 +1527,60 @@
       "HP": "7818",
       "ATK": "212",
       "DEF": "468",
-      "Additional": "Element Mastery +72"
+      "Additional": "Element Mastery +72",
+      "Max_20": {
+        "Level": "20",
+        "HP": "2077",
+        "ATK": "63",
+        "DEF": "124",
+        "Additional": "-"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4136",
+        "ATK": "125",
+        "DEF": "247",
+        "Additional": "-"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5319",
+        "ATK": "161",
+        "DEF": "318",
+        "Additional": "Pyro DMG 7.2%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6673",
+        "ATK": "202",
+        "DEF": "399",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7870",
+        "ATK": "238",
+        "DEF": "470",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9076",
+        "ATK": "274",
+        "DEF": "542",
+        "Additional": "Pyro DMG 21.6"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "9563",
+        "ATK": "289",
+        "DEF": "572",
+        "Additional": "Pyro DMG 28.8%"
+      }
     },
-    "ascension": {
+    "ascensionMaterials": {
       "items": ["Vajrada Amethyst Sliver", "Valberry", "Lightning Prism", "Slime Condensate"],
       "Max_40": {
         "Vajrada Amethyst Sliver": 1,
@@ -780,12 +1618,16 @@
         "Slime Concentrate": 24
       }
     },
-    "talent": {
+    "talentMaterials": {
       "book": "Ballad",
       "boss": "Dvalin's Claw",
       "drop": "Slime Condensate"
     },
-    "position": ["Supporter"]
+    "position": ["Main_Dealer", "Support_Dealer"],
+    "tier": {
+      "Main_Dealer": "T3",
+      "Support_Dealer": "T3"
+    }
   },
   "Kaeya": {
     "rank": 4,
@@ -797,9 +1639,60 @@
       "HP": "8184",
       "ATK": "156",
       "DEF": "557",
-      "Additional": "Energy Recharge 113.3%"
+      "Additional": "Energy Recharge 113.3%",
+      "Max_20": {
+        "Level": "20",
+        "HP": "2077",
+        "ATK": "63",
+        "DEF": "124",
+        "Additional": "-"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4136",
+        "ATK": "125",
+        "DEF": "247",
+        "Additional": "-"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5319",
+        "ATK": "161",
+        "DEF": "318",
+        "Additional": "Pyro DMG 7.2%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6673",
+        "ATK": "202",
+        "DEF": "399",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7870",
+        "ATK": "238",
+        "DEF": "470",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9076",
+        "ATK": "274",
+        "DEF": "542",
+        "Additional": "Pyro DMG 21.6"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "9563",
+        "ATK": "289",
+        "DEF": "572",
+        "Additional": "Pyro DMG 28.8%"
+      }
     },
-    "ascension": {
+    "ascensionMaterials": {
       "items": ["Shivada Jade Sliver", "Calla Lily", "Treasure Hoarder Insignia", "Hoarfrost Core"],
       "Max_40": {
         "Shivada Jade Sliver": 1,
@@ -837,12 +1730,15 @@
         "Golden Raven Insignia": 24
       }
     },
-    "talent": {
+    "talentMaterials": {
       "book": "Ballad",
       "boss": "Spirit Locket of Boreas",
       "drop": "Treasure Hoarder Insignia"
     },
-    "position": ["Supporter"]
+    "position": ["Support_Dealer"],
+    "tier": {
+      "Support_Dealer": "T2"
+    }
   },
   "Fischl": {
     "rank": 4,
@@ -854,9 +1750,60 @@
       "HP": "8553",
       "ATK": "227",
       "DEF": "553",
-      "Additional": "ATK 24.0%"
+      "Additional": "ATK 24.0%",
+      "Max_20": {
+        "Level": "20",
+        "HP": "2077",
+        "ATK": "63",
+        "DEF": "124",
+        "Additional": "-"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4136",
+        "ATK": "125",
+        "DEF": "247",
+        "Additional": "-"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5319",
+        "ATK": "161",
+        "DEF": "318",
+        "Additional": "Pyro DMG 7.2%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6673",
+        "ATK": "202",
+        "DEF": "399",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7870",
+        "ATK": "238",
+        "DEF": "470",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9076",
+        "ATK": "274",
+        "DEF": "542",
+        "Additional": "Pyro DMG 21.6"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "9563",
+        "ATK": "289",
+        "DEF": "572",
+        "Additional": "Pyro DMG 28.8%"
+      }
     },
-    "ascension": {
+    "ascensionMaterials": {
       "items": ["Vajrada Amethyst Sliver", "Small Lamp Grass", "Firm Arrowhead", "Lightning Prism"],
       "Max_40": {
         "Vajrada Amethyst Sliver": 1,
@@ -894,12 +1841,16 @@
         "Weathered Arrowhead": 24
       }
     },
-    "talent": {
+    "talentMaterials": {
       "book": "Ballad",
       "boss": "Spirit Locket of Boreas",
       "drop": "Firm Arrowhead"
     },
-    "position": ["Dealer", "Supporter"]
+    "position": ["Main_Dealer", "Support_Dealer"],
+    "tier": {
+      "Main_Dealer": "T1",
+      "Support_Dealer": "T1"
+    }
   },
   "Chongyun": {
     "rank": 4,
@@ -911,9 +1862,60 @@
       "HP": "10223",
       "ATK": "208",
       "DEF": "603",
-      "Additional": "ATK 24.0%"
+      "Additional": "ATK 24.0%",
+      "Max_20": {
+        "Level": "20",
+        "HP": "2077",
+        "ATK": "63",
+        "DEF": "124",
+        "Additional": "-"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4136",
+        "ATK": "125",
+        "DEF": "247",
+        "Additional": "-"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5319",
+        "ATK": "161",
+        "DEF": "318",
+        "Additional": "Pyro DMG 7.2%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6673",
+        "ATK": "202",
+        "DEF": "399",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7870",
+        "ATK": "238",
+        "DEF": "470",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9076",
+        "ATK": "274",
+        "DEF": "542",
+        "Additional": "Pyro DMG 21.6"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "9563",
+        "ATK": "289",
+        "DEF": "572",
+        "Additional": "Pyro DMG 28.8%"
+      }
     },
-    "ascension": {
+    "ascensionMaterials": {
       "items": ["Shivada Jade Sliver", "Cor Lapis", "Damaged Mask", "Lightning Prism"],
       "Max_40": {
         "Shivada Jade Sliver": 1,
@@ -951,12 +1953,16 @@
         "Ominous Mask": 24
       }
     },
-    "talent": {
+    "talentMaterials": {
       "book": "Diligence",
       "boss": "Dvalin's Sigh",
       "drop": "Damaged Mask"
     },
-    "position": ["Dealer", "Supporter"]
+    "position": ["Support_Dealer", "Supporter"],
+    "tier": {
+      "Support_Dealer": "T1",
+      "Supporter": "T2"
+    }
   },
   "Bennett": {
     "rank": 4,
@@ -968,9 +1974,60 @@
       "HP": "10129",
       "ATK": "156",
       "DEF": "630",
-      "Additional": "Energy Recharge 20.0%"
+      "Additional": "Energy Recharge 20.0%",
+      "Max_20": {
+        "Level": "20",
+        "HP": "2077",
+        "ATK": "63",
+        "DEF": "124",
+        "Additional": "-"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4136",
+        "ATK": "125",
+        "DEF": "247",
+        "Additional": "-"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5319",
+        "ATK": "161",
+        "DEF": "318",
+        "Additional": "Pyro DMG 7.2%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6673",
+        "ATK": "202",
+        "DEF": "399",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7870",
+        "ATK": "238",
+        "DEF": "470",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9076",
+        "ATK": "274",
+        "DEF": "542",
+        "Additional": "Pyro DMG 21.6"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "9563",
+        "ATK": "289",
+        "DEF": "572",
+        "Additional": "Pyro DMG 28.8%"
+      }
     },
-    "ascension": {
+    "ascensionMaterials": {
       "items": ["Agnidus Agate Sliver", "Windwheel Aster", "Treasure Hoarder Insignia", "Everflame Seed"],
       "Max_40": {
         "Agnidus Agate Sliver": 1,
@@ -1008,12 +2065,16 @@
         "Golden Raven Insignia": 24
       }
     },
-    "talent": {
+    "talentMaterials": {
       "book": "Resistance",
       "boss": "Dvalin's Plume",
       "drop": "Treasure Hoarder Insignia"
     },
-    "position": ["Dealer", "Supporter"]
+    "position": ["Support_Dealer", "Supporter"],
+    "tier": {
+      "Support_Dealer": "T2",
+      "Supporter": "T0"
+    }
   },
   "Beidou": {
     "rank": 4,
@@ -1025,9 +2086,60 @@
       "HP": "12146",
       "ATK": "209",
       "DEF": "658",
-      "Additional": "Electro DMG 24.0%"
+      "Additional": "Electro DMG 24.0%",
+      "Max_20": {
+        "Level": "20",
+        "HP": "2077",
+        "ATK": "63",
+        "DEF": "124",
+        "Additional": "-"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4136",
+        "ATK": "125",
+        "DEF": "247",
+        "Additional": "-"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5319",
+        "ATK": "161",
+        "DEF": "318",
+        "Additional": "Pyro DMG 7.2%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6673",
+        "ATK": "202",
+        "DEF": "399",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7870",
+        "ATK": "238",
+        "DEF": "470",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9076",
+        "ATK": "274",
+        "DEF": "542",
+        "Additional": "Pyro DMG 21.6"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "9563",
+        "ATK": "289",
+        "DEF": "572",
+        "Additional": "Pyro DMG 28.8%"
+      }
     },
-    "ascension": {
+    "ascensionMaterials": {
       "items": ["Vajrada Amethyst Sliver", "Noctilucous Jade", "Treasure Hoarder Insignia", "Lightning Prism"],
       "Max_40": {
         "Vajrada Amethyst Sliver": 1,
@@ -1065,12 +2177,16 @@
         "Golden Raven Insignia": 24
       }
     },
-    "talent": {
+    "talentMaterials": {
       "book": "Gold",
       "boss": "Dvalin's Sigh",
       "drop": "Treasure Hoarder Insignia"
     },
-    "position": ["Dealer"]
+    "position": ["Main_Dealer", "Support_Dealer"],
+    "tier": {
+      "Main_Dealer": "T2",
+      "Support_Dealer": "T3"
+    }
   },
   "Barbara": {
     "rank": 4,
@@ -1082,9 +2198,60 @@
       "HP": "7561",
       "ATK": "123",
       "DEF": "517",
-      "Additional": "HP 12.0%"
+      "Additional": "HP 12.0%",
+      "Max_20": {
+        "Level": "20",
+        "HP": "2077",
+        "ATK": "63",
+        "DEF": "124",
+        "Additional": "-"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4136",
+        "ATK": "125",
+        "DEF": "247",
+        "Additional": "-"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5319",
+        "ATK": "161",
+        "DEF": "318",
+        "Additional": "Pyro DMG 7.2%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6673",
+        "ATK": "202",
+        "DEF": "399",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7870",
+        "ATK": "238",
+        "DEF": "470",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9076",
+        "ATK": "274",
+        "DEF": "542",
+        "Additional": "Pyro DMG 21.6"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "9563",
+        "ATK": "289",
+        "DEF": "572",
+        "Additional": "Pyro DMG 28.8%"
+      }
     },
-    "ascension": {
+    "ascensionMaterials": {
       "items": ["Varunada Lazurite Sliver", "Philanemo Mushroom", "Divining Scroll", "Cleansing Heart"],
       "Max_40": {
         "Varunada Lazurite Sliver": 1,
@@ -1122,12 +2289,16 @@
         "Forbidden Curse Scroll": 24
       }
     },
-    "talent": {
+    "talentMaterials": {
       "book": "Freedom",
       "boss": "Ring of Boreas",
       "drop": "Divining Scroll"
     },
-    "position": ["Healer"]
+    "position": ["Support_Dealer", "Supporter"],
+    "tier": {
+      "Support_Dealer": "T2",
+      "Supporter": "T1"
+    }
   },
   "Amber": {
     "rank": 4,
@@ -1139,9 +2310,60 @@
       "HP": "7730",
       "ATK": "182",
       "DEF": "491",
-      "Additional": "ATK 18.0%"
+      "Additional": "ATK 18.0%",
+      "Max_20": {
+        "Level": "20",
+        "HP": "2077",
+        "ATK": "63",
+        "DEF": "124",
+        "Additional": "-"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4136",
+        "ATK": "125",
+        "DEF": "247",
+        "Additional": "-"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5319",
+        "ATK": "161",
+        "DEF": "318",
+        "Additional": "Pyro DMG 7.2%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6673",
+        "ATK": "202",
+        "DEF": "399",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7870",
+        "ATK": "238",
+        "DEF": "470",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9076",
+        "ATK": "274",
+        "DEF": "542",
+        "Additional": "Pyro DMG 21.6"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "9563",
+        "ATK": "289",
+        "DEF": "572",
+        "Additional": "Pyro DMG 28.8%"
+      }
     },
-    "ascension": {
+    "ascensionMaterials": {
       "items": ["Agnidus Agate Sliver", "Small Lamp Grass", "Firm Arrowhead", "Everflame Seed"],
       "Max_40": {
         "Agnidus Agate Sliver": 1,
@@ -1179,12 +2401,15 @@
         "Weathered Arrowhead": 24
       }
     },
-    "talent": {
+    "talentMaterials": {
       "book": "Freedom",
       "boss": "Dvalin's Sigh",
       "drop": "Firm Arrowhead"
     },
-    "position": ["Supporter"]
+    "position": ["Support_Dealer"],
+    "tier": {
+      "Support_Dealer": "T3"
+    }
   }, 
   "Sucrose": {
     "rank": 4,
@@ -1196,9 +2421,60 @@
       "HP": "7552",
       "ATK": "129",
       "DEF": "574",
-      "Additional": "Anemo DMG 18.0%"
+      "Additional": "Anemo DMG 18.0%",
+      "Max_20": {
+        "Level": "20",
+        "HP": "2077",
+        "ATK": "63",
+        "DEF": "124",
+        "Additional": "-"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4136",
+        "ATK": "125",
+        "DEF": "247",
+        "Additional": "-"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5319",
+        "ATK": "161",
+        "DEF": "318",
+        "Additional": "Pyro DMG 7.2%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6673",
+        "ATK": "202",
+        "DEF": "399",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7870",
+        "ATK": "238",
+        "DEF": "470",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9076",
+        "ATK": "274",
+        "DEF": "542",
+        "Additional": "Pyro DMG 21.6"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "9563",
+        "ATK": "289",
+        "DEF": "572",
+        "Additional": "Pyro DMG 28.8%"
+      }
     },
-    "ascension": {
+    "ascensionMaterials": {
       "items": ["Vayuda Turquoise Sliver", "Windwheel Aster", "Whopperflower Nectar", "Hurricane Seed"],
       "Max_40": {
         "Vayuda Turquoise Sliver": 1,
@@ -1236,12 +2512,16 @@
         "Energy Nectar": 24
       }
     },
-    "talent": {
+    "talentMaterials": {
       "book": "Freedom",
       "boss": "Spirit Locket of Boreas",
       "drop": "Whopperflower Nectar"
     },
-    "position": ["Supporter"]
+    "position": ["Support_Dealer", "Supporter"],
+    "tier": {
+      "Support_Dealer": "T2",
+      "Supporter": "T1"
+    }
   },
   "Xiangling": {
     "rank": 4,
@@ -1253,9 +2533,60 @@
       "HP": "10122",
       "ATK": "210",
       "DEF": "623",
-      "Additional": "Element Mastery +96"
+      "Additional": "Element Mastery +96",
+      "Max_20": {
+        "Level": "20",
+        "HP": "2077",
+        "ATK": "63",
+        "DEF": "124",
+        "Additional": "-"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4136",
+        "ATK": "125",
+        "DEF": "247",
+        "Additional": "-"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5319",
+        "ATK": "161",
+        "DEF": "318",
+        "Additional": "Pyro DMG 7.2%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6673",
+        "ATK": "202",
+        "DEF": "399",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7870",
+        "ATK": "238",
+        "DEF": "470",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9076",
+        "ATK": "274",
+        "DEF": "542",
+        "Additional": "Pyro DMG 21.6"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "9563",
+        "ATK": "289",
+        "DEF": "572",
+        "Additional": "Pyro DMG 28.8%"
+      }
     },
-    "ascension": {
+    "ascensionMaterials": {
       "items": ["Agnidus Agate Sliver", "Jueyun Chili", "Slime Condensate", "Everflame Seed"],
       "Max_40": {
         "Agnidus Agate Sliver": 1,
@@ -1293,12 +2624,16 @@
         "Slime Concentrate": 24
       }
     },
-    "talent": {
+    "talentMaterials": {
       "book": "Diligence",
       "boss": "Dvalin's Claw",
       "drop": "Slime Condensate"
     },
-    "position": ["Dealer", "Supporter"]
+    "position": ["Main_Dealer", "Support_Dealer"],
+    "tier": {
+      "Main_Dealer": "T2",
+      "Support_Dealer": "T1"
+    }
   },
   "Xingqiu": {
     "rank": 4,
@@ -1310,9 +2645,60 @@
       "HP": "8352",
       "ATK": "165",
       "DEF": "619",
-      "Additional": "ATK 18.0%"
+      "Additional": "ATK 18.0%",
+      "Max_20": {
+        "Level": "20",
+        "HP": "2077",
+        "ATK": "63",
+        "DEF": "124",
+        "Additional": "-"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4136",
+        "ATK": "125",
+        "DEF": "247",
+        "Additional": "-"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5319",
+        "ATK": "161",
+        "DEF": "318",
+        "Additional": "Pyro DMG 7.2%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6673",
+        "ATK": "202",
+        "DEF": "399",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7870",
+        "ATK": "238",
+        "DEF": "470",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9076",
+        "ATK": "274",
+        "DEF": "542",
+        "Additional": "Pyro DMG 21.6"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "9563",
+        "ATK": "289",
+        "DEF": "572",
+        "Additional": "Pyro DMG 28.8%"
+      }
     },
-    "ascension": {
+    "ascensionMaterials": {
       "items": ["Varunada Lazurite Sliver", "Silk Flower", "Damaged Mask", "Cleansing Heart"],
       "Max_40": {
         "Varunada Lazurite Sliver": 1,
@@ -1350,12 +2736,15 @@
         "Ominous Mask": 24
       }
     },
-    "talent": {
+    "talentMaterials": {
       "book": "Gold",
       "boss": "Tail of Boreas",
       "drop": "Damaged Mask"
     },
-    "position": ["Supporter"]
+    "position": ["Supporter"],
+    "tier": {
+      "Supporter": "T1"
+    }
   },
   "Diona": {
     "rank": 4,
@@ -1367,9 +2756,60 @@
       "HP": "No Data",
       "ATK": "No Data",
       "DEF": "No Data",
-      "Additional": "No Data"
+      "Additional": "No Data",
+      "Max_20": {
+        "Level": "20",
+        "HP": "2077",
+        "ATK": "63",
+        "DEF": "124",
+        "Additional": "-"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4136",
+        "ATK": "125",
+        "DEF": "247",
+        "Additional": "-"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5319",
+        "ATK": "161",
+        "DEF": "318",
+        "Additional": "Pyro DMG 7.2%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6673",
+        "ATK": "202",
+        "DEF": "399",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7870",
+        "ATK": "238",
+        "DEF": "470",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9076",
+        "ATK": "274",
+        "DEF": "542",
+        "Additional": "Pyro DMG 21.6"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "9563",
+        "ATK": "289",
+        "DEF": "572",
+        "Additional": "Pyro DMG 28.8%"
+      }
     },
-    "ascension": {
+    "ascensionMaterials": {
       "items": ["Shivada Jade Sliver", "Calla Lily", "Firm Arrowhead", "Hoarfrost Core"],
       "Max_40": {
         "Shivada Jade Sliver": 1,
@@ -1407,11 +2847,14 @@
         "Weathered Arrowhead": 24
       }
     },
-    "talent": {
+    "talentMaterials": {
       "book": "Freedom",
       "boss": "Shard of a Foul Legacy",
       "drop": "Firm Arrowhead"
     },
-    "position": ["Support"]
+    "position": ["Supporter"],
+    "tier": {
+      "Supporter": "T2"
+    }
   }
 }
