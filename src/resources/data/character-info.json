@@ -89,6 +89,24 @@
         }
       }
     },
+    "recommendedArtifact": {
+      "best": {
+        "artifact": ["Crimson Witch of Flames"],
+        "set": 4
+      },
+      "next": {
+        "artifact": ["Crimson Witch of Flames", "Gladiator's Finale"],
+        "set": 2
+      }
+    },
+    "recommendedWeapon": {
+      "best": {
+        "weapon": "Lost Prayer to the Sacred Winds"
+      },
+      "next": {
+        "weapon": "Skyward Atlas"
+      }
+    },
     "ascensionMaterials": {
       "items": ["Agnidus Agate Sliver", "Philanemo Mushroom", "Everflame Seed", "Divining Scroll"],
       "Max_40": {
@@ -224,6 +242,24 @@
       },
       "recom4": {
         "party": ["Keqing", "Fischl", "Bennet", "Xianling"]
+      }
+    },
+    "recommendedArtifact": {
+      "best": {
+        "artifact": ["Gladiator's Finale", "Thundering Fury"],
+        "set": 2
+      },
+      "next": {
+        "artifact": ["Thundersoother"],
+        "set": 4
+      }
+    },
+    "recommandedWeapon": {
+      "best": {
+        "weapon": "Lion's Roar"
+      },
+      "next": {
+        "weapon": "Skyward Blade"
       }
     },
     "ascensionMaterials": {
@@ -364,6 +400,24 @@
         }
       }
     },
+    "recommendedArtifact": {
+      "best": {
+        "artifact": ["Crimson Witch of Flames"],
+        "set": 4
+      },
+      "next": {
+        "artifact": ["Gladiator's Finale"],
+        "set": 4
+      }
+    },
+    "recommendedWeapon": {
+      "best": {
+        "weapon": "Wolf's Gravestone"
+      },
+      "next": {
+        "weapon": "Prototype Aminus"
+      }
+    },
     "ascensionMaterials": {
       "items": ["Agnidus Agate Sliver", "Everflame Seed", "Small Lamp Grass", "Recruit's Insignia"],
       "Max_40": {
@@ -475,7 +529,25 @@
         "Additional": "Pyro DMG 28.8%"
       }
     },
-    "ascensionMaterial": {
+    "recommendedArtifact": {
+      "best": {
+        "artifact": ["Viridescent Venerer"],
+        "set": 4
+      },
+      "next": {
+        "artifact": ["Noblesse Oblige"],
+        "set": 4
+      }
+    },
+    "recommendedWeapon": {
+      "best": {
+        "weapon": "Skyward Blade"
+      },
+      "next": {
+        "weapon": "Favonius Sword"
+      }
+    },
+    "ascensionMaterials": {
       "items": ["Vayuda Turquoise Sliver", "Dandelion Seed", "Damaged Mask", "Hurricane Seed"],
       "Max_40": {
         "Vayuda Turquoise Sliver": 1,
@@ -587,6 +659,24 @@
         "Additional": "Pyro DMG 28.8%"
       }
     },
+    "recommendedArtifact": {
+      "best": {
+        "artifact": ["Maiden Beloved"],
+        "set": 4
+      },
+      "next": {
+        "artifact": ["Gladiator's Finale"],
+        "set": 4
+      }
+    },
+    "recommendedWeapon": {
+      "best": {
+        "weapon": "Skyward Blade"
+      },
+      "next": {
+        "weapon": "Sacrificial Sword"
+      }
+    },
     "ascensionMaterials": {
       "items": ["Shivada Jade Sliver", "Violetgrass", "Divining Scroll", "Hoarfrost Core"],
       "Max_40": {
@@ -696,6 +786,24 @@
         "ATK": "289",
         "DEF": "572",
         "Additional": "Pyro DMG 28.8%"
+      }
+    },
+    "recommendedArtifact": {
+      "best": {
+        "artifact": ["Noblesse Oblige"],
+        "set": 4
+      },
+      "next": {
+        "artifact": ["Wanderer's Troupe"],
+        "set": 4
+      }
+    },
+    "recommendedWeapon": {
+      "best": {
+        "weapon": "Lost Prayer to the Sacred Winds"
+      },
+      "next": {
+        "weapon": "The Widsith"
       }
     },
     "ascensionMaterials": {
@@ -810,6 +918,24 @@
         "Additional": "Pyro DMG 28.8%"
       }
     },
+    "recommendedArtifact": {
+      "best": {
+        "artifact": ["Viridescent Venerer"],
+        "set": 4
+      },
+      "next": {
+        "artifact": ["Wanderer's Troupe"],
+        "set": 4
+      }
+    },
+    "recommendedWeapon": {
+      "best": {
+        "weapon": "The Stringless"
+      },
+      "next": {
+        "weapon": "Sacrificial Bow"
+      }
+    },
     "ascensionMaterials": {
       "items": ["Vayuda Turquoise Sliver", "Cecilia", "Slime Condensate", "Hurricane Seed"],
       "Max_40": {
@@ -920,6 +1046,48 @@
         "ATK": "289",
         "DEF": "572",
         "Additional": "Pyro DMG 28.8%"
+      }
+    },
+    "recommendedParty": {
+      "recom1": {
+        "party": ["Tartaglia", "Xiangling", "Sucrose", "Jean"]
+      },
+      "recom2": {
+        "party": ["Tartaglia", "Xiangling", "Traveler(Geo)", "Sucrose"],
+        "alter": {
+          "Sucrose": ["Venti", "Jean"]
+        }
+      },
+      "recom3": {
+        "party": ["Tartaglia", "Xiangling", "Bennet", "Sucrose"],
+        "alter": {
+          "Sucrose": ["Venti", "Jean"]
+        }
+      },
+      "recom4": {
+        "party": ["Tartaglia", "Fischl", "Sucrose", "Jean"],
+        "alter": {
+          "Sucrose": ["Lisa"],
+          "Jean": ["Venti"]
+        }
+      }
+    },
+    "recommendedArtifact": {
+      "best": {
+        "artifact": ["Gladiator's Finale", "Noblesse Oblige"],
+        "set": 2
+      },
+      "next": {
+        "artifact": ["Wanderer's Troupe"],
+        "set": 4
+      }
+    },
+    "recommendedWeapon": {
+      "best": {
+        "weapon": "Skyward Harp"
+      },
+      "next": {
+        "weapon": "Rust"
       }
     },
     "ascensionMaterials": {
@@ -1033,7 +1201,21 @@
         "Additional": "Pyro DMG 28.8%"
       }
     },
-    "ascensionMaterails": {
+    "recommendedArtifact": {
+      "best": {
+        "artifact": ["Viridescent Venerer"],
+        "set": 4
+      }
+    },
+    "recommendedWeapon": {
+      "best": {
+        "weapon": "Aquila Favonia"
+      },
+      "next": {
+        "weapon": "The Black Sword"
+      }
+    },
+    "ascensionMaterials": {
       "items": ["Brilliant Diamond Sliver", "Windwheel Aster", "Damaged Mask"],
       "Max_40": {
         "Brilliant Diamond Sliver": 1,
@@ -1138,6 +1320,24 @@
         "ATK": "289",
         "DEF": "572",
         "Additional": "Pyro DMG 28.8%"
+      }
+    },
+    "recommendedArtifact": {
+      "best": {
+        "artifact": ["Archaic Petra"],
+        "set": 4
+      },
+      "next": {
+        "artifact": ["Noblesse Oblige"],
+        "set": 4
+      }
+    },
+    "recommendedWeapon": {
+      "best": {
+        "weapon": "Aquila Favonia"
+      },
+      "next": {
+        "weapon": "The Black Sword"
       }
     },
     "ascensionMaterials": {
@@ -1245,6 +1445,12 @@
         "DEF": "572",
         "Additional": "Pyro DMG 28.8%"
       }
+    },
+    "recommendedArtifact": {
+
+    },
+    "recommendedWeapon": {
+
     },
     "ascensionMaterials": {
       "items": ["Prithiva Topaz Sliver", "Valberry", "Damaged Mask", "Basalt Pillar"],
@@ -1358,6 +1564,33 @@
         "Additional": "Pyro DMG 28.8%"
       }
     },
+    "recommendedParty": {
+      "recom1": {
+        "party": ["Razor", "Fischl", "Qiqi", "Sucrose"]
+      },
+      "recom2": {
+        "party": ["Razor", "Fischl", "Kaeya", "Jean"],
+        "alter": {
+          "Fischl": ["Lisa"],
+          "Jean": ["Venti", "Sucrose"]
+        }
+      },
+      "recom3": {
+        "party": ["Razor", "Mona", "Qiqi", "Venti"],
+        "alter": {
+          "Venti": ["Sucrose", "Jean"]
+        }
+      },
+      "recom4": {
+        "party": ["Razor", "Fischl", "Xiangling", "Bennet"]
+      }
+    },
+    "recommendedArtifact": {
+
+    },
+    "recommendedWeapon": {
+
+    },
     "ascensionMaterials": {
       "items": ["Vajrada Amethyst Sliver", "Wolfhook", "Damaged Mask", "Lightning Prism"],
       "Max_40": {
@@ -1469,6 +1702,20 @@
         "Additional": "Pyro DMG 28.8%"
       }
     },
+    "recommendedParty": {
+      "recom1": {
+        "party": ["Ningguang", "Mona", "Noelle", "Bennet"]
+      },
+      "recom2": {
+        "party": ["Ningguang", "Bennet", "Venti", "Barbara"]
+      }
+    },
+    "recommendedArtifact": {
+
+    },
+    "recommendedWeapon": {
+
+    },
     "ascensionMaterials": {
       "items": ["Prithiva Topaz Sliver", "Glaze Lily", "Recruit's Insignia", "Basalt Pillar"],
       "Max_40": {
@@ -1579,6 +1826,12 @@
         "DEF": "572",
         "Additional": "Pyro DMG 28.8%"
       }
+    },
+    "recommendedArtifact": {
+
+    },
+    "recommendedWeapon": {
+
     },
     "ascensionMaterials": {
       "items": ["Vajrada Amethyst Sliver", "Valberry", "Lightning Prism", "Slime Condensate"],
@@ -1692,6 +1945,12 @@
         "Additional": "Pyro DMG 28.8%"
       }
     },
+    "recommendedArtifact": {
+
+    },
+    "recommendedWeapon": {
+
+    },
     "ascensionMaterials": {
       "items": ["Shivada Jade Sliver", "Calla Lily", "Treasure Hoarder Insignia", "Hoarfrost Core"],
       "Max_40": {
@@ -1802,6 +2061,38 @@
         "DEF": "572",
         "Additional": "Pyro DMG 28.8%"
       }
+    },
+    "recommendedParty": {
+      "recom1": {
+        "party": ["Fischl", "Mona", "Diona", "Venti"],
+        "alter": {
+          "Venti": ["Sucrose", "Jean"]
+        }
+      },
+      "recom2": {
+        "party": ["Fischl", "Xiangling", "Chongyun", "Venti"],
+        "alter": {
+          "Venti": ["Sucrose", "Jean"]
+        }
+      },
+      "recom3": {
+        "party": ["Fischl", "Xiangling", "Bennet", "Venti"],
+        "alter": {
+          "Venti": ["Sucrose", "Jean"]
+        }
+      },
+      "recom4": {
+        "party": ["Fischl", "Xiangling", "Venti", "Jean"],
+        "alter": {
+          "Venti": ["Sucrose"]
+        }
+      }
+    },
+    "recommendedArtifact": {
+
+    },
+    "recommendedWeapon": {
+
     },
     "ascensionMaterials": {
       "items": ["Vajrada Amethyst Sliver", "Small Lamp Grass", "Firm Arrowhead", "Lightning Prism"],
@@ -1915,6 +2206,12 @@
         "Additional": "Pyro DMG 28.8%"
       }
     },
+    "recommendedArtifact": {
+
+    },
+    "recommendedWeapon": {
+
+    },
     "ascensionMaterials": {
       "items": ["Shivada Jade Sliver", "Cor Lapis", "Damaged Mask", "Lightning Prism"],
       "Max_40": {
@@ -2026,6 +2323,12 @@
         "DEF": "572",
         "Additional": "Pyro DMG 28.8%"
       }
+    },
+    "recommendedArtifact": {
+
+    },
+    "recommendedWeapon": {
+
     },
     "ascensionMaterials": {
       "items": ["Agnidus Agate Sliver", "Windwheel Aster", "Treasure Hoarder Insignia", "Everflame Seed"],
@@ -2139,6 +2442,12 @@
         "Additional": "Pyro DMG 28.8%"
       }
     },
+    "recommendedArtifact": {
+
+    },
+    "recommendedWeapon": {
+
+    },
     "ascensionMaterials": {
       "items": ["Vajrada Amethyst Sliver", "Noctilucous Jade", "Treasure Hoarder Insignia", "Lightning Prism"],
       "Max_40": {
@@ -2250,6 +2559,12 @@
         "DEF": "572",
         "Additional": "Pyro DMG 28.8%"
       }
+    },
+    "recommendedArtifact": {
+
+    },
+    "recommendedWeapon": {
+
     },
     "ascensionMaterials": {
       "items": ["Varunada Lazurite Sliver", "Philanemo Mushroom", "Divining Scroll", "Cleansing Heart"],
@@ -2363,6 +2678,12 @@
         "Additional": "Pyro DMG 28.8%"
       }
     },
+    "recommendedArtifact": {
+
+    },
+    "recommendedWeapon": {
+
+    },
     "ascensionMaterials": {
       "items": ["Agnidus Agate Sliver", "Small Lamp Grass", "Firm Arrowhead", "Everflame Seed"],
       "Max_40": {
@@ -2473,6 +2794,12 @@
         "DEF": "572",
         "Additional": "Pyro DMG 28.8%"
       }
+    },
+    "recommendedArtifact": {
+
+    },
+    "recommendedWeapon": {
+
     },
     "ascensionMaterials": {
       "items": ["Vayuda Turquoise Sliver", "Windwheel Aster", "Whopperflower Nectar", "Hurricane Seed"],
@@ -2586,6 +2913,12 @@
         "Additional": "Pyro DMG 28.8%"
       }
     },
+    "recommendedArtifact": {
+
+    },
+    "recommendedWeapon": {
+
+    },
     "ascensionMaterials": {
       "items": ["Agnidus Agate Sliver", "Jueyun Chili", "Slime Condensate", "Everflame Seed"],
       "Max_40": {
@@ -2698,6 +3031,12 @@
         "Additional": "Pyro DMG 28.8%"
       }
     },
+    "recommendedArtifact": {
+
+    },
+    "recommendedWeapon": {
+
+    },
     "ascensionMaterials": {
       "items": ["Varunada Lazurite Sliver", "Silk Flower", "Damaged Mask", "Cleansing Heart"],
       "Max_40": {
@@ -2808,6 +3147,12 @@
         "DEF": "572",
         "Additional": "Pyro DMG 28.8%"
       }
+    },
+    "recommendedArtifact": {
+
+    },
+    "recommendedWeapon": {
+
     },
     "ascensionMaterials": {
       "items": ["Shivada Jade Sliver", "Calla Lily", "Firm Arrowhead", "Hoarfrost Core"],
