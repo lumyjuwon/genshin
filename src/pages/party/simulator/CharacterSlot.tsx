@@ -7,7 +7,7 @@ import { PartyData } from 'src/redux/party/types';
 import { ItemBadgeBox, RoundImage, RoundImageBox, FlexWrapper } from 'src/components';
 import { characterInfo, CharacterName } from 'src/resources/data';
 import { ElementImages, CategoryImages, ImageSrc } from 'src/resources/images';
-import { CharacterResult } from '../character/CharacteResult';
+import { CharacterResult } from '../character/CharacterResult';
 import { CharacterEquipSlot } from './CharacterEquipSlot';
 
 const Inner = styled.div({

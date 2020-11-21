@@ -24,10 +24,8 @@ export function CharacterResult(props: Props) {
     <FlexWrapper
       styles={{ width: '855px', alignItems: 'flex-start', medium: { width: '655px' }, small: { width: '100%', flexDirection: 'column' } }}
     >
-      <>
-        <WeaponResult activeWeapon={props.activeWeapon} selectedCharacter={props.selectedCharacter} />
-        <ArtifactResult activeArtifacts={props.activeArtifacts} />
-      </>
+      <WeaponResult activeWeapon={props.activeWeapon} selectedCharacter={props.selectedCharacter} />
+      <ArtifactResult activeArtifacts={props.activeArtifacts} />
     </FlexWrapper>
   );
 }
