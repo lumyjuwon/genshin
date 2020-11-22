@@ -29,7 +29,7 @@ interface Props {
 }
 
 export function TalentDetail(props: Props) {
-  const characterTalentInfo = characterInfo[props.character].talent;
+  const characterTalentInfo = characterInfo[props.character].talentMaterials;
 
   return (
     <>

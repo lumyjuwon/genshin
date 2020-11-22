@@ -62,74 +62,73 @@ interface Props {
 }
 
 export function WeaponBuffText(props: Props) {
-  return (
-    <Container>
-      <Title>{trans(Lang.Character_Stat)}</Title>
-      <FlexWrapper styles={{ width: '100%', justifyContent: 'space-between' }}>
-        <>
-          {props.selectedCharacter && (
-            <Level>
-              <SquareImage styles={{ width: '20px', height: '20px' }} src={CategoryImages.Character} />
-              &nbsp;:
-              {characterInfo[props.selectedCharacter].stats.Level}
-            </Level>
-          )}
-          {props.activeWeapon && (
-            <Level>
-              <SquareImage styles={{ width: '20px', height: '20px' }} src={CategoryImages[characterInfo[props.selectedCharacter].weapon]} />
-              &nbsp;: {weaponInfo[props.activeWeapon].stats.Level}
-            </Level>
-          )}
-        </>
-      </FlexWrapper>
-      <FlexWrapper styles={{ width: '100%', flexDirection: 'column', margin: '5px 0 0' }}>
-        <>
-          <FlexWrapper
-            styles={{
-              flexDirection: 'column',
-              justifyContent: 'center',
-              width: '100%'
-            }}
-          >
-            <>
-              <FlexWrapper
-                styles={{
-                  width: '100%',
-                  justifyContent: 'space-around'
-                }}
-              >
-                <>
-                  <TextDesc>
-                    {trans(Lang.Character_HP)}: {characterInfo[props.selectedCharacter].stats.HP}
-                  </TextDesc>
-                  <TextDesc>
-                    {trans(Lang.Character_DEF)}: {characterInfo[props.selectedCharacter].stats.DEF}
-                  </TextDesc>
-                </>
-              </FlexWrapper>
-              <FlexWrapper>
-                <TextDesc>
-                  {trans(Lang.Character_ATK)}: {characterInfo[props.selectedCharacter].stats.ATK}
-                  {props.activeWeapon && <WeaponStat>(+{weaponInfo[props.activeWeapon].stats.ATK})</WeaponStat>}
-                </TextDesc>
-              </FlexWrapper>
-            </>
-          </FlexWrapper>
-          {/* 기본공격력 + 무기 공격력 + (파티버프 + 무기버프 + 캐릭터버프 %합산) */}
-          <TextDesc marginTop>
-            <SquareImage styles={{ width: '20px', height: '20px' }} src={CategoryImages.Character} />
-            &nbsp;
-            <CharacterStatRegexText>{characterInfo[props.selectedCharacter].stats.Additional}</CharacterStatRegexText>
-          </TextDesc>
-          {props.activeWeapon && (
-            <TextDesc>
-              <SquareImage styles={{ width: '20px', height: '20px' }} src={CategoryImages[characterInfo[props.selectedCharacter].weapon]} />
-              &nbsp;
-              <CharacterStatRegexText>{weaponInfo[props.activeWeapon].stats.Additional}</CharacterStatRegexText>
-            </TextDesc>
-          )}
-        </>
-      </FlexWrapper>
-    </Container>
-  );
+  return <div></div>;
+  // <Container>
+  //   <Title>{trans(Lang.Character_Stat)}</Title>
+  //   <FlexWrapper styles={{ width: '100%', justifyContent: 'space-between' }}>
+  //     <>
+  //       {props.selectedCharacter && (
+  //         <Level>
+  //           <SquareImage styles={{ width: '20px', height: '20px' }} src={CategoryImages.Character} />
+  //           &nbsp;:
+  //           {characterInfo[props.selectedCharacter].stats.Level}
+  //         </Level>
+  //       )}
+  //       {props.activeWeapon && (
+  //         <Level>
+  //           <SquareImage styles={{ width: '20px', height: '20px' }} src={CategoryImages[characterInfo[props.selectedCharacter].weapon]} />
+  //           &nbsp;: {weaponInfo[props.activeWeapon].stats.Level}
+  //         </Level>
+  //       )}
+  //     </>
+  //   </FlexWrapper>
+  //   <FlexWrapper styles={{ width: '100%', flexDirection: 'column', margin: '5px 0 0' }}>
+  //     <>
+  //       <FlexWrapper
+  //         styles={{
+  //           flexDirection: 'column',
+  //           justifyContent: 'center',
+  //           width: '100%'
+  //         }}
+  //       >
+  //         <>
+  //           <FlexWrapper
+  //             styles={{
+  //               width: '100%',
+  //               justifyContent: 'space-around'
+  //             }}
+  //           >
+  //             <>
+  //               <TextDesc>
+  //                 {trans(Lang.Character_HP)}: {characterInfo[props.selectedCharacter].stats.HP}
+  //               </TextDesc>
+  //               <TextDesc>
+  //                 {trans(Lang.Character_DEF)}: {characterInfo[props.selectedCharacter].stats.DEF}
+  //               </TextDesc>
+  //             </>
+  //           </FlexWrapper>
+  //           <FlexWrapper>
+  //             <TextDesc>
+  //               {trans(Lang.Character_ATK)}: {characterInfo[props.selectedCharacter].stats.ATK}
+  //               {props.activeWeapon && <WeaponStat>(+{weaponInfo[props.activeWeapon].stats.ATK})</WeaponStat>}
+  //             </TextDesc>
+  //           </FlexWrapper>
+  //         </>
+  //       </FlexWrapper>
+  //       {/* 기본공격력 + 무기 공격력 + (파티버프 + 무기버프 + 캐릭터버프 %합산) */}
+  //       <TextDesc marginTop>
+  //         <SquareImage styles={{ width: '20px', height: '20px' }} src={CategoryImages.Character} />
+  //         &nbsp;
+  //         <CharacterStatRegexText>{characterInfo[props.selectedCharacter].stats.Additional}</CharacterStatRegexText>
+  //       </TextDesc>
+  //       {props.activeWeapon && (
+  //         <TextDesc>
+  //           <SquareImage styles={{ width: '20px', height: '20px' }} src={CategoryImages[characterInfo[props.selectedCharacter].weapon]} />
+  //           &nbsp;
+  //           <CharacterStatRegexText>{weaponInfo[props.activeWeapon].stats.Additional}</CharacterStatRegexText>
+  //         </TextDesc>
+  //       )}
+  //     </>
+  //   </FlexWrapper>
+  // </Container>
 }

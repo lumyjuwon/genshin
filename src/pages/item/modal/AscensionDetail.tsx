@@ -48,7 +48,7 @@ interface Props {
 
 export function AscensionDetail(props: Props) {
   let ascensionItems: Map<string, number> = new Map();
-  const characterAscensionInfo = characterInfo[props.character].ascension;
+  const characterAscensionInfo = characterInfo[props.character].ascensionMaterials;
 
   function getAscensionItems(key: AscensionStep): Array<string> {
     ascensionItems.clear();
