@@ -1447,10 +1447,22 @@
       }
     },
     "recommendedArtifact": {
-
+      "best": {
+        "artifact": ["Retracting Bolide"],
+        "set": 4
+      },
+      "next": {
+        "artifact": ["Retracting Bolide", "Maiden Beloved"],
+        "set": 2
+      }
     },
     "recommendedWeapon": {
-
+      "best": {
+        "weapon": "Skyward Pride"
+      },
+      "next": {
+        "weapon": "Whiteblind"
+      }
     },
     "ascensionMaterials": {
       "items": ["Prithiva Topaz Sliver", "Valberry", "Damaged Mask", "Basalt Pillar"],
@@ -1586,10 +1598,22 @@
       }
     },
     "recommendedArtifact": {
-
+      "best": {
+        "artifact": ["Gladiator's Finale"],
+        "set": 4
+      },
+      "next": {
+        "artifact": "Thundersoother",
+        "set": 4
+      }
     },
     "recommendedWeapon": {
-
+      "best": {
+        "weapon": "Wolf's Gravestone"
+      },
+      "next": {
+        "weapon": "Prototype Aminus"
+      }
     },
     "ascensionMaterials": {
       "items": ["Vajrada Amethyst Sliver", "Wolfhook", "Damaged Mask", "Lightning Prism"],
@@ -1711,10 +1735,22 @@
       }
     },
     "recommendedArtifact": {
-
+      "best": {
+        "artifact": ["Archaic Petra", "Gladiator's Finale"],
+        "set": 2
+      },
+      "next": {
+        "artifact": ["Archaic Petra"],
+        "set": 4
+      }
     },
     "recommendedWeapon": {
-
+      "best": {
+        "weapon": "Lost Prayer to the Sacred Winds"
+      },
+      "next": {
+        "weapon": "Skyward Atlas"
+      }
     },
     "ascensionMaterials": {
       "items": ["Prithiva Topaz Sliver", "Glaze Lily", "Recruit's Insignia", "Basalt Pillar"],
@@ -1828,10 +1864,22 @@
       }
     },
     "recommendedArtifact": {
-
+      "best": {
+        "artifact": ["Thundering Fury"],
+        "set": 4
+      },
+      "next": {
+        "artifact": ["Noblesse Oblige"],
+        "set": 4
+      }
     },
     "recommendedWeapon": {
-
+      "best": {
+        "weapon": ["Skyward Atlas"]
+      },
+      "next": {
+        "weapon": ["Favonius Codex"]
+      }
     },
     "ascensionMaterials": {
       "items": ["Vajrada Amethyst Sliver", "Valberry", "Lightning Prism", "Slime Condensate"],
@@ -1946,10 +1994,22 @@
       }
     },
     "recommendedArtifact": {
-
+      "best": {
+        "artifact": ["Noblesse Oblige"],
+        "set": 4
+      },
+      "next": {
+        "artifact": ["Noblesse Oblige", "Gladiator's Finale"],
+        "set": 2
+      }
     },
     "recommendedWeapon": {
-
+      "best": {
+        "weapon": "Skyward Blade"
+      },
+      "next": {
+        "weapon": "Favonius Sword"
+      }
     },
     "ascensionMaterials": {
       "items": ["Shivada Jade Sliver", "Calla Lily", "Treasure Hoarder Insignia", "Hoarfrost Core"],
@@ -2089,10 +2149,22 @@
       }
     },
     "recommendedArtifact": {
-
+      "best": {
+        "artifact": ["Thundering Fury"],
+        "set": 4
+      },
+      "next": {
+        "artifact": ["Gladiator's Finale", "Bloodstained Chivalry"],
+        "set": 2
+      }
     },
     "recommendedWeapon": {
-
+      "best": {
+        "weapon": ["Skyward Harp"]
+      },
+      "next": {
+        "weapon": ["The Stringless"]
+      }
     },
     "ascensionMaterials": {
       "items": ["Vajrada Amethyst Sliver", "Small Lamp Grass", "Firm Arrowhead", "Lightning Prism"],
@@ -2207,10 +2279,22 @@
       }
     },
     "recommendedArtifact": {
-
+      "best": {
+        "artifact": ["Noblesse Oblige"],
+        "set": 4
+      },
+      "next": {
+        "artifact": ["Noblesse Oblige", "Gladiator's Finale"],
+        "set": 2
+      }
     },
     "recommendedWeapon": {
-
+      "best": {
+        "weapon": "Wolf's Gravestone"
+      },
+      "next": {
+        "weapon": "Skyward Pride"
+      }
     },
     "ascensionMaterials": {
       "items": ["Shivada Jade Sliver", "Cor Lapis", "Damaged Mask", "Lightning Prism"],
@@ -2325,10 +2409,22 @@
       }
     },
     "recommendedArtifact": {
-
+      "best": {
+        "artifact": ["Noblesse Oblige"],
+        "set": 4
+      },
+      "next": {
+        "artifact": ["Gladiator's Finale", "Bloodstained Chivalry"],
+        "set": 2
+      }
     },
     "recommendedWeapon": {
-
+      "best": {
+        "weapon": ["Skyward Blade"]
+      },
+      "next": {
+        "weapon": ["Aquila Favonia"]
+      }
     },
     "ascensionMaterials": {
       "items": ["Agnidus Agate Sliver", "Windwheel Aster", "Treasure Hoarder Insignia", "Everflame Seed"],
@@ -2443,10 +2539,22 @@
       }
     },
     "recommendedArtifact": {
-
+      "best": {
+        "artifact": ["Gladiator's Finale", "Thundering Fury"],
+        "set": 2
+      },
+      "next": {
+        "artifact": ["Thundering Fury"],
+        "set": 4
+      }
     },
     "recommendedWeapon": {
-
+      "best": {
+        "weapon": "Wolf's Gravestone"
+      },
+      "next": {
+        "weapon": "Rainslasher"
+      }
     },
     "ascensionMaterials": {
       "items": ["Vajrada Amethyst Sliver", "Noctilucous Jade", "Treasure Hoarder Insignia", "Lightning Prism"],
@@ -2561,10 +2669,18 @@
       }
     },
     "recommendedArtifact": {
-
+      "best": {
+        "artifact": ["Maiden Beloved"],
+        "set": 4
+      }
     },
     "recommendedWeapon": {
-
+      "best": {
+        "weapon": "Thrilling Tales of Dragon Slayers"
+      },
+      "next": {
+        "Prototype Malice"
+      }
     },
     "ascensionMaterials": {
       "items": ["Varunada Lazurite Sliver", "Philanemo Mushroom", "Divining Scroll", "Cleansing Heart"],
@@ -2679,10 +2795,22 @@
       }
     },
     "recommendedArtifact": {
-
+      "best": {
+        "artifact": ["Noblesse Oblige"],
+        "set": 4
+      },
+      "next": {
+        "artifact": ["Crimson Witch of Flames"],
+        "set": 4
+      }
     },
     "recommendedWeapon": {
-
+      "best": {
+        "weapon": "Rust"
+      },
+      "next": {
+        "weapon": "Amos' Bow"
+      }
     },
     "ascensionMaterials": {
       "items": ["Agnidus Agate Sliver", "Small Lamp Grass", "Firm Arrowhead", "Everflame Seed"],
@@ -2796,10 +2924,22 @@
       }
     },
     "recommendedArtifact": {
-
+      "best": {
+        "artifact": ["Viridescent Venerer"],
+        "set": 4
+      },
+      "next": {
+        "artifact": ["Wanderer's Troupe", "Scholar"],
+        "set": 2
+      }
     },
     "recommendedWeapon": {
-
+      "best": {
+        "weapon": "Sacrificial Fragments"
+      },
+      "next": {
+        "weapon": "Mappa Mare"
+      }
     },
     "ascensionMaterials": {
       "items": ["Vayuda Turquoise Sliver", "Windwheel Aster", "Whopperflower Nectar", "Hurricane Seed"],
@@ -2914,10 +3054,22 @@
       }
     },
     "recommendedArtifact": {
-
+      "best": {
+        "artifact": ["Crimson Witch of Flames"],
+        "set": 4
+      },
+      "next": {
+        "artifact": ["Gladiator's Finale"],
+        "set": 4
+      }
     },
     "recommendedWeapon": {
-
+      "best": {
+        "weapon": "Prototype Grudge"
+      },
+      "next": {
+        "weapon": "Crescent Pike"
+      }
     },
     "ascensionMaterials": {
       "items": ["Agnidus Agate Sliver", "Jueyun Chili", "Slime Condensate", "Everflame Seed"],
@@ -3032,10 +3184,19 @@
       }
     },
     "recommendedArtifact": {
-
+      "best": {
+        "artifact": ["Noblesse Oblige"],
+        "set": 4
+      },
+      "next": {
+        "artifact": ["Noblesse Oblige", "Gladiator's Finale"],
+        "set": 2
+      }
     },
     "recommendedWeapon": {
-
+      "best": {
+        "weapon": "Sacrificial Sword"
+      }
     },
     "ascensionMaterials": {
       "items": ["Varunada Lazurite Sliver", "Silk Flower", "Damaged Mask", "Cleansing Heart"],
@@ -3149,10 +3310,19 @@
       }
     },
     "recommendedArtifact": {
-
+      "best": {
+        "artifact": ["Maiden Beloved"],
+        "set": 4
+      },
+      "next": {
+        "artifact": ["Noblesse Oblige"],
+        "set": 4
+      }
     },
     "recommendedWeapon": {
-
+      "best": {
+        "weapon": "Sacrificial Bow"
+      }
     },
     "ascensionMaterials": {
       "items": ["Shivada Jade Sliver", "Calla Lily", "Firm Arrowhead", "Hoarfrost Core"],
