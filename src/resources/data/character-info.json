@@ -89,23 +89,18 @@
         }
       }
     },
-    "recommendedArtifact": {
-      "best": {
-        "artifact": ["Crimson Witch of Flames"],
-        "set": 4
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Crimson Witch of Flames"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Crimson Witch of Flames", "Gladiator's Finale"],
+          "set": 2
+        }
       },
-      "next": {
-        "artifact": ["Crimson Witch of Flames", "Gladiator's Finale"],
-        "set": 2
-      }
-    },
-    "recommendedWeapon": {
-      "best": {
-        "weapon": "Lost Prayer to the Sacred Winds"
-      },
-      "next": {
-        "weapon": "Skyward Atlas"
-      }
+      "weapon": ["Lost Prayer to the Sacred Winds", "Skyward Atlas"]
     },
     "ascensionMaterials": {
       "items": ["Agnidus Agate Sliver", "Philanemo Mushroom", "Everflame Seed", "Divining Scroll"],
@@ -242,23 +237,18 @@
         "party": ["Keqing", "Fischl", "Bennet", "Xianling"]
       }
     },
-    "recommendedArtifact": {
-      "best": {
-        "artifact": ["Gladiator's Finale", "Thundering Fury"],
-        "set": 2
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Gladiator's Finale", "Thundering Fury"],
+          "set": 2
+        },
+        "second": {
+          "name": ["Thundersoother"],
+          "set": 4
+        }
       },
-      "next": {
-        "artifact": ["Thundersoother"],
-        "set": 4
-      }
-    },
-    "recommandedWeapon": {
-      "best": {
-        "weapon": "Lion's Roar"
-      },
-      "next": {
-        "weapon": "Skyward Blade"
-      }
+      "weapon": ["Lion's Roar", "Skyward Blade"]
     },
     "ascensionMaterials": {
       "items": ["Vajrada Amethyst Sliver", "Cor Lapis", "Whopperflower Nectar", "Lightning Prism"],
@@ -398,23 +388,18 @@
         }
       }
     },
-    "recommendedArtifact": {
-      "best": {
-        "artifact": ["Crimson Witch of Flames"],
-        "set": 4
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Crimson Witch of Flames"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Gladiator's Finale"],
+          "set": 4
+        }
       },
-      "next": {
-        "artifact": ["Gladiator's Finale"],
-        "set": 4
-      }
-    },
-    "recommendedWeapon": {
-      "best": {
-        "weapon": "Wolf's Gravestone"
-      },
-      "next": {
-        "weapon": "Prototype Aminus"
-      }
+      "weapon": ["Wolf's Gravestone", "Prototype Aminus"]
     },
     "ascensionMaterials": {
       "items": ["Agnidus Agate Sliver", "Everflame Seed", "Small Lamp Grass", "Recruit's Insignia"],
@@ -527,23 +512,18 @@
         "Additional": "No Data"
       }
     },
-    "recommendedArtifact": {
-      "best": {
-        "artifact": ["Viridescent Venerer"],
-        "set": 4
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Viridescent Venerer"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Noblesse Oblige"],
+          "set": 4
+        }
       },
-      "next": {
-        "artifact": ["Noblesse Oblige"],
-        "set": 4
-      }
-    },
-    "recommendedWeapon": {
-      "best": {
-        "weapon": "Skyward Blade"
-      },
-      "next": {
-        "weapon": "Favonius Sword"
-      }
+      "weapon": ["Skyward Blade", "Favonius Sword"]
     },
     "ascensionMaterials": {
       "items": ["Vayuda Turquoise Sliver", "Dandelion Seed", "Damaged Mask", "Hurricane Seed"],
@@ -657,23 +637,18 @@
         "Additional": "Healing Bonus 22.2%"
       }
     },
-    "recommendedArtifact": {
-      "best": {
-        "artifact": ["Maiden Beloved"],
-        "set": 4
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Maiden Beloved"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Gladiator's Finale"],
+          "set": 4
+        }
       },
-      "next": {
-        "artifact": ["Gladiator's Finale"],
-        "set": 4
-      }
-    },
-    "recommendedWeapon": {
-      "best": {
-        "weapon": "Skyward Blade"
-      },
-      "next": {
-        "weapon": "Sacrificial Sword"
-      }
+      "weapon": ["Skyward Blade", "Sacrificial Sword"]
     },
     "ascensionMaterials": {
       "items": ["Shivada Jade Sliver", "Violetgrass", "Divining Scroll", "Hoarfrost Core"],
@@ -786,23 +761,18 @@
         "Additional": "Energy Recharge 32.0%"
       }
     },
-    "recommendedArtifact": {
-      "best": {
-        "artifact": ["Noblesse Oblige"],
-        "set": 4
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Noblesse Oblige"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Wanderer's Troupe"],
+          "set": 4
+        }
       },
-      "next": {
-        "artifact": ["Wanderer's Troupe"],
-        "set": 4
-      }
-    },
-    "recommendedWeapon": {
-      "best": {
-        "weapon": "Lost Prayer to the Sacred Winds"
-      },
-      "next": {
-        "weapon": "The Widsith"
-      }
+      "weapon": ["Lost Prayer to the Sacred Winds", "The Widsith"]
     },
     "ascensionMaterials": {
       "items": ["Varunada Lazurite Sliver", "Philanemo Mushroom", "Whopperflower Nectar", "Cleansing Heart"],
@@ -916,23 +886,18 @@
         "Additional": "Energy Recharge 32.0%"
       }
     },
-    "recommendedArtifact": {
-      "best": {
-        "artifact": ["Viridescent Venerer"],
-        "set": 4
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Viridescent Venerer"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Wanderer's Troupe"],
+          "set": 4
+        }
       },
-      "next": {
-        "artifact": ["Wanderer's Troupe"],
-        "set": 4
-      }
-    },
-    "recommendedWeapon": {
-      "best": {
-        "weapon": "The Stringless"
-      },
-      "next": {
-        "weapon": "Sacrificial Bow"
-      }
+      "weapon": ["The Stringless", "Sacrificial Bow"]
     },
     "ascensionMaterials": {
       "items": ["Vayuda Turquoise Sliver", "Cecilia", "Slime Condensate", "Hurricane Seed"],
@@ -1070,23 +1035,18 @@
         }
       }
     },
-    "recommendedArtifact": {
-      "best": {
-        "artifact": ["Gladiator's Finale", "Noblesse Oblige"],
-        "set": 2
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Gladiator's Finale", "Noblesse Oblige"],
+          "set": 2
+        },
+        "second": {
+          "name": ["Wanderer's Troupe"],
+          "set": 4
+        }
       },
-      "next": {
-        "artifact": ["Wanderer's Troupe"],
-        "set": 4
-      }
-    },
-    "recommendedWeapon": {
-      "best": {
-        "weapon": "Skyward Harp"
-      },
-      "next": {
-        "weapon": "Rust"
-      }
+      "weapon": ["Skyward Harp", "Rust"]
     },
     "ascensionMaterials": {
       "items": ["Varunada Lazurite Sliver", "Starconch", "Recruit's Insignia", "Cleansing Heart"],
@@ -1199,19 +1159,14 @@
         "Additional": "ATK 24.0%"
       }
     },
-    "recommendedArtifact": {
-      "best": {
-        "artifact": ["Viridescent Venerer"],
-        "set": 4
-      }
-    },
-    "recommendedWeapon": {
-      "best": {
-        "weapon": "Aquila Favonia"
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Viridescent Venerer"],
+          "set": 4
+        }
       },
-      "next": {
-        "weapon": "The Black Sword"
-      }
+      "weapon": ["Aquila Favonia", "The Black Sword"]
     },
     "ascensionMaterials": {
       "items": ["Brilliant Diamond Sliver", "Windwheel Aster", "Damaged Mask"],
@@ -1320,23 +1275,18 @@
         "Additional": "ATK 24.0%"
       }
     },
-    "recommendedArtifact": {
-      "best": {
-        "artifact": ["Archaic Petra"],
-        "set": 4
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Archaic Petra"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Noblesse Oblige"],
+          "set": 4
+        }
       },
-      "next": {
-        "artifact": ["Noblesse Oblige"],
-        "set": 4
-      }
-    },
-    "recommendedWeapon": {
-      "best": {
-        "weapon": "Aquila Favonia"
-      },
-      "next": {
-        "weapon": "The Black Sword"
-      }
+      "weapon": ["Aquila Favonia", "The Black Sword"]
     },
     "ascensionMaterials": {
       "items": ["Brilliant Diamond Sliver", "Windwheel Aster", "Damaged Mask"],
@@ -1444,23 +1394,18 @@
         "Additional": "DEF 30.0%"
       }
     },
-    "recommendedArtifact": {
-      "best": {
-        "artifact": ["Retracting Bolide"],
-        "set": 4
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Retracting Bolide"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Retracting Bolide", "Maiden Beloved"],
+          "set": 2
+        }
       },
-      "next": {
-        "artifact": ["Retracting Bolide", "Maiden Beloved"],
-        "set": 2
-      }
-    },
-    "recommendedWeapon": {
-      "best": {
-        "weapon": "Skyward Pride"
-      },
-      "next": {
-        "weapon": "Whiteblind"
-      }
+      "weapon": ["Skyward Pride", "Whiteblind"]
     },
     "ascensionMaterials": {
       "items": ["Prithiva Topaz Sliver", "Valberry", "Damaged Mask", "Basalt Pillar"],
@@ -1595,23 +1540,18 @@
         "party": ["Razor", "Fischl", "Xiangling", "Bennet"]
       }
     },
-    "recommendedArtifact": {
-      "best": {
-        "artifact": ["Gladiator's Finale"],
-        "set": 4
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Gladiator's Finale"],
+          "set": 4
+        },
+        "second": {
+          "name": "Thundersoother",
+          "set": 4
+        }
       },
-      "next": {
-        "artifact": "Thundersoother",
-        "set": 4
-      }
-    },
-    "recommendedWeapon": {
-      "best": {
-        "weapon": "Wolf's Gravestone"
-      },
-      "next": {
-        "weapon": "Prototype Aminus"
-      }
+      "weapon": ["Wolf's Gravestone", "Prototype Aminus"]
     },
     "ascensionMaterials": {
       "items": ["Vajrada Amethyst Sliver", "Wolfhook", "Damaged Mask", "Lightning Prism"],
@@ -1732,23 +1672,18 @@
         "party": ["Ningguang", "Bennet", "Venti", "Barbara"]
       }
     },
-    "recommendedArtifact": {
-      "best": {
-        "artifact": ["Archaic Petra", "Gladiator's Finale"],
-        "set": 2
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Archaic Petra", "Gladiator's Finale"],
+          "set": 2
+        },
+        "second": {
+          "name": ["Archaic Petra"],
+          "set": 4
+        }
       },
-      "next": {
-        "artifact": ["Archaic Petra"],
-        "set": 4
-      }
-    },
-    "recommendedWeapon": {
-      "best": {
-        "weapon": "Lost Prayer to the Sacred Winds"
-      },
-      "next": {
-        "weapon": "Skyward Atlas"
-      }
+      "weapon": ["Lost Prayer to the Sacred Winds", "Skyward Atlas"]
     },
     "ascensionMaterials": {
       "items": ["Prithiva Topaz Sliver", "Glaze Lily", "Recruit's Insignia", "Basalt Pillar"],
@@ -1861,23 +1796,18 @@
         "Additional": "Element Mastery +96"
       }
     },
-    "recommendedArtifact": {
-      "best": {
-        "artifact": ["Thundering Fury"],
-        "set": 4
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Thundering Fury"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Noblesse Oblige"],
+          "set": 4
+        }
       },
-      "next": {
-        "artifact": ["Noblesse Oblige"],
-        "set": 4
-      }
-    },
-    "recommendedWeapon": {
-      "best": {
-        "weapon": ["Skyward Atlas"]
-      },
-      "next": {
-        "weapon": ["Favonius Codex"]
-      }
+      "weapon": ["Skyward Atlas", "Favonius Codex"]
     },
     "ascensionMaterials": {
       "items": ["Vajrada Amethyst Sliver", "Valberry", "Lightning Prism", "Slime Condensate"],
@@ -1938,7 +1868,7 @@
       "HP": "8184",
       "ATK": "156",
       "DEF": "557",
-      "Additional": "Energy Recharge 13.3%",
+      "Additional": "Energy Recharge 113.3%",
       "Max_20": {
         "Level": "20",
         "HP": "2506",
@@ -1991,23 +1921,18 @@
         "Additional": "Energy Recharge 26.7%"
       }
     },
-    "recommendedArtifact": {
-      "best": {
-        "artifact": ["Noblesse Oblige"],
-        "set": 4
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Noblesse Oblige"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Noblesse Oblige", "Gladiator's Finale"],
+          "set": 2
+        }
       },
-      "next": {
-        "artifact": ["Noblesse Oblige", "Gladiator's Finale"],
-        "set": 2
-      }
-    },
-    "recommendedWeapon": {
-      "best": {
-        "weapon": "Skyward Blade"
-      },
-      "next": {
-        "weapon": "Favonius Sword"
-      }
+      "weapon": ["Skyward Blade", "Favonius Sword"]
     },
     "ascensionMaterials": {
       "items": ["Shivada Jade Sliver", "Calla Lily", "Treasure Hoarder Insignia", "Hoarfrost Core"],
@@ -2146,23 +2071,18 @@
         }
       }
     },
-    "recommendedArtifact": {
-      "best": {
-        "artifact": ["Thundering Fury"],
-        "set": 4
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Thundering Fury"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Gladiator's Finale", "Bloodstained Chivalry"],
+          "set": 2
+        }
       },
-      "next": {
-        "artifact": ["Gladiator's Finale", "Bloodstained Chivalry"],
-        "set": 2
-      }
-    },
-    "recommendedWeapon": {
-      "best": {
-        "weapon": ["Skyward Harp"]
-      },
-      "next": {
-        "weapon": ["The Stringless"]
-      }
+      "weapon": ["Skyward Harp", "The Stringless"]
     },
     "ascensionMaterials": {
       "items": ["Vajrada Amethyst Sliver", "Small Lamp Grass", "Firm Arrowhead", "Lightning Prism"],
@@ -2276,23 +2196,18 @@
         "Additional": "ATK 24.4%"
       }
     },
-    "recommendedArtifact": {
-      "best": {
-        "artifact": ["Noblesse Oblige"],
-        "set": 4
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Noblesse Oblige"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Noblesse Oblige", "Gladiator's Finale"],
+          "set": 2
+        }
       },
-      "next": {
-        "artifact": ["Noblesse Oblige", "Gladiator's Finale"],
-        "set": 2
-      }
-    },
-    "recommendedWeapon": {
-      "best": {
-        "weapon": "Wolf's Gravestone"
-      },
-      "next": {
-        "weapon": "Skyward Pride"
-      }
+      "weapon": ["Wolf's Gravestone", "Skyward Pride"]
     },
     "ascensionMaterials": {
       "items": ["Shivada Jade Sliver", "Cor Lapis", "Damaged Mask", "Lightning Prism"],
@@ -2406,23 +2321,18 @@
         "Additional": "No Data"
       }
     },
-    "recommendedArtifact": {
-      "best": {
-        "artifact": ["Noblesse Oblige"],
-        "set": 4
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Noblesse Oblige"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Gladiator's Finale", "Bloodstained Chivalry"],
+          "set": 2
+        }
       },
-      "next": {
-        "artifact": ["Gladiator's Finale", "Bloodstained Chivalry"],
-        "set": 2
-      }
-    },
-    "recommendedWeapon": {
-      "best": {
-        "weapon": ["Skyward Blade"]
-      },
-      "next": {
-        "weapon": ["Aquila Favonia"]
-      }
+      "weapon": ["Skyward Blade", "Aquila Favonia"]
     },
     "ascensionMaterials": {
       "items": ["Agnidus Agate Sliver", "Windwheel Aster", "Treasure Hoarder Insignia", "Everflame Seed"],
@@ -2536,23 +2446,18 @@
         "Additional": "Electro DMG 24.0%"
       }
     },
-    "recommendedArtifact": {
-      "best": {
-        "artifact": ["Gladiator's Finale", "Thundering Fury"],
-        "set": 2
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Gladiator's Finale", "Thundering Fury"],
+          "set": 2
+        },
+        "second": {
+          "name": ["Thundering Fury"],
+          "set": 4
+        }
       },
-      "next": {
-        "artifact": ["Thundering Fury"],
-        "set": 4
-      }
-    },
-    "recommendedWeapon": {
-      "best": {
-        "weapon": "Wolf's Gravestone"
-      },
-      "next": {
-        "weapon": "Rainslasher"
-      }
+      "weapon": ["Wolf's Gravestone", "Rainslasher"]
     },
     "ascensionMaterials": {
       "items": ["Vajrada Amethyst Sliver", "Noctilucous Jade", "Treasure Hoarder Insignia", "Lightning Prism"],
@@ -2666,19 +2571,14 @@
         "Additional": "HP 18.0%"
       }
     },
-    "recommendedArtifact": {
-      "best": {
-        "artifact": ["Maiden Beloved"],
-        "set": 4
-      }
-    },
-    "recommendedWeapon": {
-      "best": {
-        "weapon": "Thrilling Tales of Dragon Slayers"
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Maiden Beloved"],
+          "set": 4
+        }
       },
-      "next": {
-        "weapon": "Prototype Malice"
-      }
+      "weapon": ["Thrilling Tales of Dragon Slayers", "Prototype Malice"]
     },
     "ascensionMaterials": {
       "items": ["Varunada Lazurite Sliver", "Philanemo Mushroom", "Divining Scroll", "Cleansing Heart"],
@@ -2792,23 +2692,18 @@
         "Additional": "ATK 24.0%"
       }
     },
-    "recommendedArtifact": {
-      "best": {
-        "artifact": ["Noblesse Oblige"],
-        "set": 4
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Noblesse Oblige"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Crimson Witch of Flames"],
+          "set": 4
+        }
       },
-      "next": {
-        "artifact": ["Crimson Witch of Flames"],
-        "set": 4
-      }
-    },
-    "recommendedWeapon": {
-      "best": {
-        "weapon": "Rust"
-      },
-      "next": {
-        "weapon": "Amos' Bow"
-      }
+      "weapon": ["Amos' Bow", "Rust"]
     },
     "ascensionMaterials": {
       "items": ["Agnidus Agate Sliver", "Small Lamp Grass", "Firm Arrowhead", "Everflame Seed"],
@@ -2921,23 +2816,18 @@
         "Additional": "Anemo DMG 24.0%"
       }
     },
-    "recommendedArtifact": {
-      "best": {
-        "artifact": ["Viridescent Venerer"],
-        "set": 4
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Viridescent Venerer"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Wanderer's Troupe", "Scholar"],
+          "set": 2
+        }
       },
-      "next": {
-        "artifact": ["Wanderer's Troupe", "Scholar"],
-        "set": 2
-      }
-    },
-    "recommendedWeapon": {
-      "best": {
-        "weapon": "Sacrificial Fragments"
-      },
-      "next": {
-        "weapon": "Mappa Mare"
-      }
+      "weapon": ["Sacrificial Fragments", "Mappa Mare"]
     },
     "ascensionMaterials": {
       "items": ["Vayuda Turquoise Sliver", "Windwheel Aster", "Whopperflower Nectar", "Hurricane Seed"],
@@ -3051,23 +2941,18 @@
         "Additional": "Element Mastery +96"
       }
     },
-    "recommendedArtifact": {
-      "best": {
-        "artifact": ["Crimson Witch of Flames"],
-        "set": 4
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Crimson Witch of Flames"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Gladiator's Finale"],
+          "set": 4
+        }
       },
-      "next": {
-        "artifact": ["Gladiator's Finale"],
-        "set": 4
-      }
-    },
-    "recommendedWeapon": {
-      "best": {
-        "weapon": "Prototype Grudge"
-      },
-      "next": {
-        "weapon": "Crescent Pike"
-      }
+      "weapon": ["Prototype Grudge", "Crescent Pike"]
     },
     "ascensionMaterials": {
       "items": ["Agnidus Agate Sliver", "Jueyun Chili", "Slime Condensate", "Everflame Seed"],
@@ -3181,20 +3066,18 @@
         "Additional": "ATK 24.0%"
       }
     },
-    "recommendedArtifact": {
-      "best": {
-        "artifact": ["Noblesse Oblige"],
-        "set": 4
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Noblesse Oblige"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Noblesse Oblige", "Gladiator's Finale"],
+          "set": 2
+        }
       },
-      "next": {
-        "artifact": ["Noblesse Oblige", "Gladiator's Finale"],
-        "set": 2
-      }
-    },
-    "recommendedWeapon": {
-      "best": {
-        "weapon": "Sacrificial Sword"
-      }
+      "weapon": ["Sacrificial Sword"]
     },
     "ascensionMaterials": {
       "items": ["Varunada Lazurite Sliver", "Silk Flower", "Damaged Mask", "Cleansing Heart"],
@@ -3307,20 +3190,18 @@
         "Additional": "No Data"
       }
     },
-    "recommendedArtifact": {
-      "best": {
-        "artifact": ["Maiden Beloved"],
-        "set": 4
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Maiden Beloved"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Noblesse Oblige"],
+          "set": 4
+        }
       },
-      "next": {
-        "artifact": ["Noblesse Oblige"],
-        "set": 4
-      }
-    },
-    "recommendedWeapon": {
-      "best": {
-        "weapon": "Sacrificial Bow"
-      }
+      "weapon": ["Sacrificial Bow"]
     },
     "ascensionMaterials": {
       "items": ["Shivada Jade Sliver", "Calla Lily", "Firm Arrowhead", "Hoarfrost Core"],

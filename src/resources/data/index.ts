@@ -17,6 +17,17 @@ interface Gacha {
 }
 const gachaInfo: Gacha = require('../data/gacha-info.json');
 
+enum AscensionLevel {
+  Max_20 = 'Max_20',
+  Max_40 = 'Max_40',
+  Max_50 = 'Max_50',
+  Max_60 = 'Max_60',
+  Max_70 = 'Max_70',
+  Max_80 = 'Max_80',
+  Max_90 = 'Max_90'
+}
+export type Level = keyof typeof AscensionLevel;
+
 interface Character {
   [name: string]: {
     rank: Rank;
@@ -24,13 +35,32 @@ interface Character {
     weapon: WeaponType;
     region: CharacterRegion;
     stats: {
-      Level: string;
-      HP: string;
-      ATK: string;
-      DEF: string;
-      Additional: string;
+      [key in AscensionLevel]: {
+        Level: string;
+        HP: string;
+        ATK: string;
+        DEF: string;
+        Additional: string;
+      };
     };
-    ascension: {
+    recommendedParty?: {
+      [list: string]: {
+        party: Array<string>;
+        alter?: {
+          [name: string]: Array<string>;
+        };
+      };
+    };
+    recommendedEquip: {
+      artifact: {
+        [list: string]: {
+          name: Array<string>;
+          set: number;
+        };
+      };
+      weapon: Array<string>;
+    };
+    ascensionMaterials: {
       items: Array<string>;
       Max_40: {
         [itemName: string]: number;
@@ -51,12 +81,15 @@ interface Character {
         [itemName: string]: number;
       };
     };
-    talent: {
+    talentMaterials: {
       book: string;
       boss: string;
       drop: string;
     };
     position: Array<string>;
+    tier: {
+      [position: string]: string;
+    };
   };
 }
 const characterInfo: Character = require('../data/character-info.json');
