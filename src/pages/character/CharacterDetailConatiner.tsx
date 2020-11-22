@@ -38,7 +38,7 @@ const Description = styled.div({
   fontSize: '16px'
 });
 
-export function CharacterDetail(props: Props) {
+export function CharacterDetailConatiner(props: Props) {
   return (
     <Container>
       <CharacterIntro>
@@ -76,11 +76,12 @@ export function CharacterDetail(props: Props) {
         <Description>{characterInfo[props.character].position.join(', ')}</Description>
         {/* Nav Button */}
         {/* Stat */}
-        {/* Talent */}
-        {/* Passive Talent */}
-        {/* Constellations */}
         {/* Ascension Items */}
         {/* Talent Level up items */}
+        {/* Recommended Party */}
+        {/* Recommended Artifact */}
+        {/* Recommended Weapon */}
+        {/* Top Button */}
       </FlexWrapper>
     </Container>
   );

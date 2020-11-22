@@ -5,7 +5,7 @@ import { ContentWrapper } from 'src/components';
 import { PageHelmet } from 'src/components';
 import { CharacterList } from './CharacterList';
 import { characterInfo } from 'src/resources/data';
-import { CharacterDetail } from './CharacterDetail';
+import { CharacterDetailConatiner } from './CharacterDetailConatiner';
 
 export function CharacterScreen() {
   const characters = Object.keys(characterInfo);
@@ -16,7 +16,7 @@ export function CharacterScreen() {
       <Switch>
         <Route exact path="/character" component={CharacterList} />
         {characters.map((name) => {
-          return <Route key={name} path={`/character/${name}`} render={() => <CharacterDetail character={name} />} />;
+          return <Route key={name} path={`/character/${name}`} render={() => <CharacterDetailConatiner character={name} />} />;
         })}
       </Switch>
     </ContentWrapper>
