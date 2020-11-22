@@ -1394,54 +1394,54 @@
       "Additional": "DEF 30.0%",
       "Max_20": {
         "Level": "20",
-        "HP": "2077",
-        "ATK": "63",
-        "DEF": "124",
-        "Additional": "-"
+        "HP": "2600",
+        "ATK": "41",
+        "DEF": "172",
+        "Additional": "No Data"
       },
       "Max_40": {
         "Level": "40",
-        "HP": "4136",
-        "ATK": "125",
-        "DEF": "247",
-        "Additional": "-"
+        "HP": "5027",
+        "ATK": "80",
+        "DEF": "333",
+        "Additional": "No Data"
       },
       "Max_50": {
         "Level": "50",
-        "HP": "5319",
-        "ATK": "161",
-        "DEF": "318",
-        "Additional": "Pyro DMG 7.2%"
+        "HP": "6400",
+        "ATK": "102",
+        "DEF": "423",
+        "Additional": "DEF 7.5%"
       },
       "Max_60": {
         "Level": "60",
-        "HP": "6673",
-        "ATK": "202",
-        "DEF": "399",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "7953",
+        "ATK": "126",
+        "DEF": "526",
+        "Additional": "DEF 15.0%"
 
       },
       "Max_70": {
         "Level": "70",
-        "HP": "7870",
-        "ATK": "238",
-        "DEF": "470",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "9325",
+        "ATK": "148",
+        "DEF": "617",
+        "Additional": "DEF 15.0%"
 
       },
       "Max_80": {
         "Level": "80",
-        "HP": "9076",
-        "ATK": "274",
-        "DEF": "542",
-        "Additional": "Pyro DMG 21.6"
+        "HP": "10698",
+        "ATK": "170",
+        "DEF": "708",
+        "Additional": "DEF 22.5%"
       },
       "Max_90": {
         "Level": "80",
-        "HP": "9563",
-        "ATK": "289",
-        "DEF": "572",
-        "Additional": "Pyro DMG 28.8%"
+        "HP": "11235",
+        "ATK": "178",
+        "DEF": "743",
+        "Additional": "DEF 30.0%"
       }
     },
     "recommendedArtifact": {
@@ -1524,54 +1524,54 @@
       "Additional": "Physical DMG 30.0%",
       "Max_20": {
         "Level": "20",
-        "HP": "2077",
-        "ATK": "63",
-        "DEF": "124",
-        "Additional": "-"
+        "HP": "2577",
+        "ATK": "51",
+        "DEF": "162",
+        "Additional": "No Data"
       },
       "Max_40": {
         "Level": "40",
-        "HP": "4136",
-        "ATK": "125",
-        "DEF": "247",
-        "Additional": "-"
+        "HP": "4982",
+        "ATK": "97",
+        "DEF": "313",
+        "Additional": "No Data"
       },
       "Max_50": {
         "Level": "50",
-        "HP": "5319",
-        "ATK": "161",
-        "DEF": "318",
-        "Additional": "Pyro DMG 7.2%"
+        "HP": "6343",
+        "ATK": "124",
+        "DEF": "398",
+        "Additional": "Physical DMG 7.5%"
       },
       "Max_60": {
         "Level": "60",
-        "HP": "6673",
-        "ATK": "202",
-        "DEF": "399",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "7881",
+        "ATK": "154",
+        "DEF": "495",
+        "Additional": "Physical DMG 15.0%"
 
       },
       "Max_70": {
         "Level": "70",
-        "HP": "7870",
-        "ATK": "238",
-        "DEF": "470",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "9241",
+        "ATK": "180",
+        "DEF": "580",
+        "Additional": "Physical DMG 15.0%"
 
       },
       "Max_80": {
         "Level": "80",
-        "HP": "9076",
-        "ATK": "274",
-        "DEF": "542",
-        "Additional": "Pyro DMG 21.6"
+        "HP": "10602",
+        "ATK": "207",
+        "DEF": "665",
+        "Additional": "Physical DMG 22.5%"
       },
       "Max_90": {
         "Level": "80",
-        "HP": "9563",
-        "ATK": "289",
-        "DEF": "572",
-        "Additional": "Pyro DMG 28.8%"
+        "HP": "11134",
+        "ATK": "217",
+        "DEF": "699",
+        "Additional": "Physical DMG 30.0%"
       }
     },
     "recommendedParty": {
@@ -1674,54 +1674,54 @@
       "Additional": "Geo DMG 18.0%",
       "Max_20": {
         "Level": "20",
-        "HP": "2077",
-        "ATK": "63",
-        "DEF": "124",
-        "Additional": "-"
+        "HP": "2108",
+        "ATK": "46",
+        "DEF": "123",
+        "Additional": "No Data"
       },
       "Max_40": {
         "Level": "40",
-        "HP": "4136",
-        "ATK": "125",
-        "DEF": "247",
-        "Additional": "-"
+        "HP": "4076",
+        "ATK": "89",
+        "DEF": "239",
+        "Additional": "No Data"
       },
       "Max_50": {
         "Level": "50",
-        "HP": "5319",
-        "ATK": "161",
-        "DEF": "318",
-        "Additional": "Pyro DMG 7.2%"
+        "HP": "5189",
+        "ATK": "112",
+        "DEF": "304",
+        "Additional": "Geo DMG 6.0%"
       },
       "Max_60": {
         "Level": "60",
-        "HP": "6673",
-        "ATK": "202",
-        "DEF": "399",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "6448",
+        "ATK": "140",
+        "DEF": "378",
+        "Additional": "Geo DMG 12.0%"
 
       },
       "Max_70": {
         "Level": "70",
-        "HP": "7870",
-        "ATK": "238",
-        "DEF": "470",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "7561",
+        "ATK": "164",
+        "DEF": "443",
+        "Additional": "Geo DMG 12.0%"
 
       },
       "Max_80": {
         "Level": "80",
-        "HP": "9076",
-        "ATK": "274",
-        "DEF": "542",
-        "Additional": "Pyro DMG 21.6"
+        "HP": "8674",
+        "ATK": "188",
+        "DEF": "508",
+        "Additional": "Geo DMG 18.0%"
       },
       "Max_90": {
-        "Level": "80",
-        "HP": "9563",
-        "ATK": "289",
-        "DEF": "572",
-        "Additional": "Pyro DMG 28.8%"
+        "Level": "90",
+        "HP": "9787",
+        "ATK": "212",
+        "DEF": "573",
+        "Additional": "Geo DMG 24.0%"
       }
     },
     "recommendedParty": {
@@ -1811,54 +1811,54 @@
       "Additional": "Element Mastery +72",
       "Max_20": {
         "Level": "20",
-        "HP": "2077",
-        "ATK": "63",
-        "DEF": "124",
-        "Additional": "-"
+        "HP": "2061",
+        "ATK": "50",
+        "DEF": "123",
+        "Additional": "No Data"
       },
       "Max_40": {
         "Level": "40",
-        "HP": "4136",
-        "ATK": "125",
-        "DEF": "247",
-        "Additional": "-"
+        "HP": "3985",
+        "ATK": "96",
+        "DEF": "239",
+        "Additional": "No Data"
       },
       "Max_50": {
         "Level": "50",
-        "HP": "5319",
-        "ATK": "161",
-        "DEF": "318",
-        "Additional": "Pyro DMG 7.2%"
+        "HP": "5074",
+        "ATK": "123",
+        "DEF": "304",
+        "Additional": "Element Mastery +24"
       },
       "Max_60": {
         "Level": "60",
-        "HP": "6673",
-        "ATK": "202",
-        "DEF": "399",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "6305",
+        "ATK": "153",
+        "DEF": "378",
+        "Additional": "Element Mastery +48"
 
       },
       "Max_70": {
         "Level": "70",
-        "HP": "7870",
-        "ATK": "238",
-        "DEF": "470",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "7393",
+        "ATK": "180",
+        "DEF": "443",
+        "Additional": "Element Mastery +48"
 
       },
       "Max_80": {
         "Level": "80",
-        "HP": "9076",
-        "ATK": "274",
-        "DEF": "542",
-        "Additional": "Pyro DMG 21.6"
+        "HP": "8481",
+        "ATK": "207",
+        "DEF": "508",
+        "Additional": "Element Mastery +72"
       },
       "Max_90": {
-        "Level": "80",
-        "HP": "9563",
-        "ATK": "289",
-        "DEF": "572",
-        "Additional": "Pyro DMG 28.8%"
+        "Level": "90",
+        "HP": "9569",
+        "ATK": "234",
+        "DEF": "573",
+        "Additional": "Element Mastery +96"
       }
     },
     "recommendedArtifact": {
@@ -1941,54 +1941,54 @@
       "Additional": "Energy Recharge 113.3%",
       "Max_20": {
         "Level": "20",
-        "HP": "2077",
-        "ATK": "63",
-        "DEF": "124",
-        "Additional": "-"
+        "HP": "2506",
+        "ATK": "48",
+        "DEF": "171",
+        "Additional": "No Data"
       },
       "Max_40": {
         "Level": "40",
-        "HP": "4136",
-        "ATK": "125",
-        "DEF": "247",
-        "Additional": "-"
+        "HP": "4846",
+        "ATK": "93",
+        "DEF": "330",
+        "Additional": "No Data"
       },
       "Max_50": {
         "Level": "50",
-        "HP": "5319",
-        "ATK": "161",
-        "DEF": "318",
-        "Additional": "Pyro DMG 7.2%"
+        "HP": "6170",
+        "ATK": "118",
+        "DEF": "420",
+        "Additional": "Energy Recharge 6.7%"
       },
       "Max_60": {
         "Level": "60",
-        "HP": "6673",
-        "ATK": "202",
-        "DEF": "399",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "7666",
+        "ATK": "147",
+        "DEF": "522",
+        "Additional": "Energy Recharge 13.3%"
 
       },
       "Max_70": {
         "Level": "70",
-        "HP": "7870",
-        "ATK": "238",
-        "DEF": "470",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "8990",
+        "ATK": "172",
+        "DEF": "612",
+        "Additional": "Energy Recharge 13.3%"
 
       },
       "Max_80": {
         "Level": "80",
-        "HP": "9076",
-        "ATK": "274",
-        "DEF": "542",
-        "Additional": "Pyro DMG 21.6"
+        "HP": "10312",
+        "ATK": "196",
+        "DEF": "702",
+        "Additional": "Energy Recharge 20.0%"
       },
       "Max_90": {
-        "Level": "80",
-        "HP": "9563",
-        "ATK": "289",
-        "DEF": "572",
-        "Additional": "Pyro DMG 28.8%"
+        "Level": "90",
+        "HP": "11636",
+        "ATK": "220",
+        "DEF": "792",
+        "Additional": "Energy Recharge 26.7%"
       }
     },
     "recommendedArtifact": {
@@ -2070,54 +2070,54 @@
       "Additional": "ATK 24.0%",
       "Max_20": {
         "Level": "20",
-        "HP": "2077",
-        "ATK": "63",
-        "DEF": "124",
-        "Additional": "-"
+        "HP": "1979",
+        "ATK": "53",
+        "DEF": "128",
+        "Additional": "No Data"
       },
       "Max_40": {
         "Level": "40",
-        "HP": "4136",
-        "ATK": "125",
+        "HP": "3827",
+        "ATK": "102",
         "DEF": "247",
-        "Additional": "-"
+        "Additional": "No Data"
       },
       "Max_50": {
         "Level": "50",
-        "HP": "5319",
-        "ATK": "161",
-        "DEF": "318",
-        "Additional": "Pyro DMG 7.2%"
+        "HP": "4872",
+        "ATK": "130",
+        "DEF": "315",
+        "Additional": "ATK 6.0%"
       },
       "Max_60": {
         "Level": "60",
-        "HP": "6673",
-        "ATK": "202",
-        "DEF": "399",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "6054",
+        "ATK": "161",
+        "DEF": "391",
+        "Additional": "ATK 12.0%"
 
       },
       "Max_70": {
         "Level": "70",
-        "HP": "7870",
-        "ATK": "238",
-        "DEF": "470",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "7099",
+        "ATK": "189",
+        "DEF": "459",
+        "Additional": "ATK 12.0%"
 
       },
       "Max_80": {
         "Level": "80",
-        "HP": "9076",
-        "ATK": "274",
-        "DEF": "542",
-        "Additional": "Pyro DMG 21.6"
+        "HP": "8144",
+        "ATK": "216",
+        "DEF": "526",
+        "Additional": "ATK 18.0%"
       },
       "Max_90": {
-        "Level": "80",
-        "HP": "9563",
-        "ATK": "289",
-        "DEF": "572",
-        "Additional": "Pyro DMG 28.8%"
+        "Level": "90",
+        "HP": "8553",
+        "ATK": "227",
+        "DEF": "553",
+        "Additional": "ATK 24.0%"
       }
     },
     "recommendedParty": {
@@ -2226,54 +2226,54 @@
       "Additional": "ATK 24.0%",
       "Max_20": {
         "Level": "20",
-        "HP": "2077",
-        "ATK": "63",
-        "DEF": "124",
-        "Additional": "-"
+        "HP": "2366",
+        "ATK": "48",
+        "DEF": "140",
+        "Additional": "No Data"
       },
       "Max_40": {
         "Level": "40",
-        "HP": "4136",
-        "ATK": "125",
-        "DEF": "247",
-        "Additional": "-"
+        "HP": "4574",
+        "ATK": "93",
+        "DEF": "270",
+        "Additional": "No Data"
       },
       "Max_50": {
         "Level": "50",
-        "HP": "5319",
-        "ATK": "161",
-        "DEF": "318",
-        "Additional": "Pyro DMG 7.2%"
+        "HP": "5824",
+        "ATK": "119",
+        "DEF": "344",
+        "Additional": "ATK 6.0%"
       },
       "Max_60": {
         "Level": "60",
-        "HP": "6673",
-        "ATK": "202",
-        "DEF": "399",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "7236",
+        "ATK": "147",
+        "DEF": "427",
+        "Additional": "ATK 12.0%"
 
       },
       "Max_70": {
         "Level": "70",
-        "HP": "7870",
-        "ATK": "238",
-        "DEF": "470",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "8485",
+        "ATK": "172",
+        "DEF": "501",
+        "Additional": "ATK 12.0%"
 
       },
       "Max_80": {
         "Level": "80",
-        "HP": "9076",
-        "ATK": "274",
-        "DEF": "542",
-        "Additional": "Pyro DMG 21.6"
+        "HP": "9734",
+        "ATK": "198",
+        "DEF": "575",
+        "Additional": "ATK 18.0%"
       },
       "Max_90": {
         "Level": "80",
-        "HP": "9563",
-        "ATK": "289",
-        "DEF": "572",
-        "Additional": "Pyro DMG 28.8%"
+        "HP": "10223",
+        "ATK": "208",
+        "DEF": "603",
+        "Additional": "ATK 24.4%"
       }
     },
     "recommendedArtifact": {
@@ -2356,54 +2356,54 @@
       "Additional": "Energy Recharge 20.0%",
       "Max_20": {
         "Level": "20",
-        "HP": "2077",
-        "ATK": "63",
-        "DEF": "124",
-        "Additional": "-"
+        "HP": "2670",
+        "ATK": "41",
+        "DEF": "166",
+        "Additional": "No Data"
       },
       "Max_40": {
         "Level": "40",
-        "HP": "4136",
-        "ATK": "125",
-        "DEF": "247",
-        "Additional": "-"
+        "HP": "5163",
+        "ATK": "80",
+        "DEF": "321",
+        "Additional": "No Data"
       },
       "Max_50": {
         "Level": "50",
-        "HP": "5319",
-        "ATK": "161",
-        "DEF": "318",
-        "Additional": "Pyro DMG 7.2%"
+        "HP": "6573",
+        "ATK": "102",
+        "DEF": "409",
+        "Additional": "Energy Recharge 6.7%"
       },
       "Max_60": {
         "Level": "60",
-        "HP": "6673",
-        "ATK": "202",
-        "DEF": "399",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "8168",
+        "ATK": "126",
+        "DEF": "508",
+        "Additional": "Energy Recharge 13.3%"
 
       },
       "Max_70": {
         "Level": "70",
-        "HP": "7870",
-        "ATK": "238",
-        "DEF": "470",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "9577",
+        "ATK": "148",
+        "DEF": "596",
+        "Additional": "Energy Recharge 13.3%"
 
       },
       "Max_80": {
         "Level": "80",
-        "HP": "9076",
-        "ATK": "274",
-        "DEF": "542",
-        "Additional": "Pyro DMG 21.6"
+        "HP": "10987",
+        "ATK": "169",
+        "DEF": "684",
+        "Additional": "Energy Recharge 20.0%"
       },
       "Max_90": {
-        "Level": "80",
-        "HP": "9563",
-        "ATK": "289",
-        "DEF": "572",
-        "Additional": "Pyro DMG 28.8%"
+        "Level": "No Data",
+        "HP": "No Data",
+        "ATK": "No Data",
+        "DEF": "No Data",
+        "Additional": "No Data"
       }
     },
     "recommendedArtifact": {
@@ -2486,54 +2486,54 @@
       "Additional": "Electro DMG 24.0%",
       "Max_20": {
         "Level": "20",
-        "HP": "2077",
-        "ATK": "63",
-        "DEF": "124",
-        "Additional": "-"
+        "HP": "2811",
+        "ATK": "49",
+        "DEF": "140",
+        "Additional": "No Data"
       },
       "Max_40": {
         "Level": "40",
-        "HP": "4136",
-        "ATK": "125",
-        "DEF": "247",
-        "Additional": "-"
+        "HP": "5435",
+        "ATK": "94",
+        "DEF": "270",
+        "Additional": "No Data"
       },
       "Max_50": {
         "Level": "50",
-        "HP": "5319",
-        "ATK": "161",
-        "DEF": "318",
-        "Additional": "Pyro DMG 7.2%"
+        "HP": "6919",
+        "ATK": "120",
+        "DEF": "344",
+        "Additional": "Electro DMG 6.0%"
       },
       "Max_60": {
         "Level": "60",
-        "HP": "6673",
-        "ATK": "202",
-        "DEF": "399",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "8597",
+        "ATK": "148",
+        "DEF": "427",
+        "Additional": "Electro DMG 12.0%"
 
       },
       "Max_70": {
         "Level": "70",
-        "HP": "7870",
-        "ATK": "238",
-        "DEF": "470",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "10081",
+        "ATK": "174",
+        "DEF": "501",
+        "Additional": "Electro DMG 12.0%"
 
       },
       "Max_80": {
         "Level": "80",
-        "HP": "9076",
-        "ATK": "274",
-        "DEF": "542",
-        "Additional": "Pyro DMG 21.6"
+        "HP": "11565",
+        "ATK": "199",
+        "DEF": "575",
+        "Additional": "Electro DMG 18.0%"
       },
       "Max_90": {
         "Level": "80",
-        "HP": "9563",
-        "ATK": "289",
-        "DEF": "572",
-        "Additional": "Pyro DMG 28.8%"
+        "HP": "12146",
+        "ATK": "209",
+        "DEF": "658",
+        "Additional": "Electro DMG 24.0%"
       }
     },
     "recommendedArtifact": {
@@ -2616,54 +2616,54 @@
       "Additional": "HP 12.0%",
       "Max_20": {
         "Level": "20",
-        "HP": "2077",
-        "ATK": "63",
-        "DEF": "124",
-        "Additional": "-"
+        "HP": "2108",
+        "ATK": "34",
+        "DEF": "144",
+        "Additional": "No Data"
       },
       "Max_40": {
         "Level": "40",
-        "HP": "4136",
-        "ATK": "125",
-        "DEF": "247",
-        "Additional": "-"
+        "HP": "4076",
+        "ATK": "67",
+        "DEF": "279",
+        "Additional": "No Data"
       },
       "Max_50": {
         "Level": "50",
-        "HP": "5319",
-        "ATK": "161",
-        "DEF": "318",
-        "Additional": "Pyro DMG 7.2%"
+        "HP": "5189",
+        "ATK": "84",
+        "DEF": "355",
+        "Additional": "HP 6.0%"
       },
       "Max_60": {
         "Level": "60",
-        "HP": "6673",
-        "ATK": "202",
-        "DEF": "399",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "6448",
+        "ATK": "105",
+        "DEF": "441",
+        "Additional": "HP 12.0%"
 
       },
       "Max_70": {
         "Level": "70",
-        "HP": "7870",
-        "ATK": "238",
-        "DEF": "470",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "7561",
+        "ATK": "123",
+        "DEF": "517",
+        "Additional": "HP 12.0%"
 
       },
       "Max_80": {
         "Level": "80",
-        "HP": "9076",
-        "ATK": "274",
-        "DEF": "542",
-        "Additional": "Pyro DMG 21.6"
+        "HP": "8674",
+        "ATK": "141",
+        "DEF": "593",
+        "Additional": "HP 18.0%"
       },
       "Max_90": {
         "Level": "80",
-        "HP": "9563",
-        "ATK": "289",
-        "DEF": "572",
-        "Additional": "Pyro DMG 28.8%"
+        "HP": "9110",
+        "ATK": "149",
+        "DEF": "623",
+        "Additional": "HP 18.0%"
       }
     },
     "recommendedArtifact": {
@@ -2677,7 +2677,7 @@
         "weapon": "Thrilling Tales of Dragon Slayers"
       },
       "next": {
-        "Prototype Malice"
+        "weapon": "Prototype Malice"
       }
     },
     "ascensionMaterials": {
@@ -2742,54 +2742,54 @@
       "Additional": "ATK 18.0%",
       "Max_20": {
         "Level": "20",
-        "HP": "2077",
-        "ATK": "63",
-        "DEF": "124",
-        "Additional": "-"
+        "HP": "2038",
+        "ATK": "48",
+        "DEF": "129",
+        "Additional": "No Data"
       },
       "Max_40": {
         "Level": "40",
-        "HP": "4136",
-        "ATK": "125",
-        "DEF": "247",
-        "Additional": "-"
+        "HP": "3940",
+        "ATK": "93",
+        "DEF": "250",
+        "Additional": "No Data"
       },
       "Max_50": {
         "Level": "50",
-        "HP": "5319",
-        "ATK": "161",
+        "HP": "5016",
+        "ATK": "118",
         "DEF": "318",
-        "Additional": "Pyro DMG 7.2%"
+        "Additional": "ATK 6.0%"
       },
       "Max_60": {
         "Level": "60",
-        "HP": "6673",
-        "ATK": "202",
-        "DEF": "399",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "5578",
+        "ATK": "132",
+        "DEF": "354",
+        "Additional": "ATK 12.0%"
 
       },
       "Max_70": {
         "Level": "70",
-        "HP": "7870",
-        "ATK": "238",
-        "DEF": "470",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "6654",
+        "ATK": "157",
+        "DEF": "422",
+        "Additional": "ATK 12.0%"
 
       },
       "Max_80": {
         "Level": "80",
-        "HP": "9076",
-        "ATK": "274",
-        "DEF": "542",
-        "Additional": "Pyro DMG 21.6"
+        "HP": "8385",
+        "ATK": "198",
+        "DEF": "532",
+        "Additional": "ATK 18.0%"
       },
       "Max_90": {
-        "Level": "80",
-        "HP": "9563",
-        "ATK": "289",
-        "DEF": "572",
-        "Additional": "Pyro DMG 28.8%"
+        "Level": "No Data",
+        "HP": "No Data",
+        "ATK": "No Data",
+        "DEF": "No Data",
+        "Additional": "ATK 24.0%"
       }
     },
     "recommendedArtifact": {
@@ -2871,54 +2871,54 @@
       "Additional": "Anemo DMG 18.0%",
       "Max_20": {
         "Level": "20",
-        "HP": "2077",
-        "ATK": "63",
-        "DEF": "124",
-        "Additional": "-"
+        "HP": "1991",
+        "ATK": "37",
+        "DEF": "151",
+        "Additional": "No Data"
       },
       "Max_40": {
         "Level": "40",
-        "HP": "4136",
-        "ATK": "125",
-        "DEF": "247",
-        "Additional": "-"
+        "HP": "3850",
+        "ATK": "71",
+        "DEF": "293",
+        "Additional": "No Data"
       },
       "Max_50": {
         "Level": "50",
-        "HP": "5319",
-        "ATK": "161",
-        "DEF": "318",
-        "Additional": "Pyro DMG 7.2%"
+        "HP": "4901",
+        "ATK": "90",
+        "DEF": "324",
+        "Additional": "Anemo DMG 6.0%"
       },
       "Max_60": {
         "Level": "60",
-        "HP": "6673",
-        "ATK": "202",
-        "DEF": "399",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "6090",
+        "ATK": "112",
+        "DEF": "463",
+        "Additional": "Anemo DMG 12.0%"
 
       },
       "Max_70": {
         "Level": "70",
-        "HP": "7870",
-        "ATK": "238",
-        "DEF": "470",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "7141",
+        "ATK": "132",
+        "DEF": "543",
+        "Additional": "Anemo DMG 12.0%"
 
       },
       "Max_80": {
         "Level": "80",
-        "HP": "9076",
-        "ATK": "274",
-        "DEF": "542",
-        "Additional": "Pyro DMG 21.6"
+        "HP": "8192",
+        "ATK": "151",
+        "DEF": "623",
+        "Additional": "Anemo DMG 18.0%"
       },
       "Max_90": {
-        "Level": "80",
-        "HP": "9563",
-        "ATK": "289",
-        "DEF": "572",
-        "Additional": "Pyro DMG 28.8%"
+        "Level": "90",
+        "HP": "9243",
+        "ATK": "170",
+        "DEF": "703",
+        "Additional": "Anemo DMG 24.0%"
       }
     },
     "recommendedArtifact": {
@@ -3001,54 +3001,54 @@
       "Additional": "Element Mastery +96",
       "Max_20": {
         "Level": "20",
-        "HP": "2077",
-        "ATK": "63",
-        "DEF": "124",
-        "Additional": "-"
+        "HP": "2342",
+        "ATK": "49",
+        "DEF": "144",
+        "Additional": "No Data"
       },
       "Max_40": {
         "Level": "40",
-        "HP": "4136",
-        "ATK": "125",
-        "DEF": "247",
-        "Additional": "-"
+        "HP": "4529",
+        "ATK": "94",
+        "DEF": "279",
+        "Additional": "No Data"
       },
       "Max_50": {
         "Level": "50",
-        "HP": "5319",
-        "ATK": "161",
-        "DEF": "318",
-        "Additional": "Pyro DMG 7.2%"
+        "HP": "5766",
+        "ATK": "119",
+        "DEF": "355",
+        "Additional": "Element Mastery +24"
       },
       "Max_60": {
         "Level": "60",
-        "HP": "6673",
-        "ATK": "202",
-        "DEF": "399",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "7164",
+        "ATK": "149",
+        "DEF": "441",
+        "Additional": "Element Mastery +48"
 
       },
       "Max_70": {
         "Level": "70",
-        "HP": "7870",
-        "ATK": "238",
-        "DEF": "470",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "8401",
+        "ATK": "174",
+        "DEF": "517",
+        "Additional": "Element Mastery +48"
 
       },
       "Max_80": {
         "Level": "80",
-        "HP": "9076",
-        "ATK": "274",
-        "DEF": "542",
-        "Additional": "Pyro DMG 21.6"
+        "HP": "9638",
+        "ATK": "200",
+        "DEF": "593",
+        "Additional": "Element Mastery +72"
       },
       "Max_90": {
         "Level": "80",
-        "HP": "9563",
-        "ATK": "289",
-        "DEF": "572",
-        "Additional": "Pyro DMG 28.8%"
+        "HP": "10122",
+        "ATK": "210",
+        "DEF": "623",
+        "Additional": "Element Mastery +96"
       }
     },
     "recommendedArtifact": {
@@ -3131,54 +3131,54 @@
       "Additional": "ATK 18.0%",
       "Max_20": {
         "Level": "20",
-        "HP": "2077",
-        "ATK": "63",
-        "DEF": "124",
-        "Additional": "-"
+        "HP": "2202",
+        "ATK": "44",
+        "DEF": "163",
+        "Additional": "No Data"
       },
       "Max_40": {
         "Level": "40",
-        "HP": "4136",
-        "ATK": "125",
-        "DEF": "247",
-        "Additional": "-"
+        "HP": "4257",
+        "ATK": "84",
+        "DEF": "316",
+        "Additional": "No Data"
       },
       "Max_50": {
         "Level": "50",
-        "HP": "5319",
-        "ATK": "161",
-        "DEF": "318",
-        "Additional": "Pyro DMG 7.2%"
+        "HP": "5420",
+        "ATK": "107",
+        "DEF": "402",
+        "Additional": "ATK 6.0%"
       },
       "Max_60": {
         "Level": "60",
-        "HP": "6673",
-        "ATK": "202",
-        "DEF": "399",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "6735",
+        "ATK": "133",
+        "DEF": "499",
+        "Additional": "ATK 12.0%"
 
       },
       "Max_70": {
         "Level": "70",
-        "HP": "7870",
-        "ATK": "238",
-        "DEF": "470",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "7897",
+        "ATK": "156",
+        "DEF": "585",
+        "Additional": "ATK 12.0%"
 
       },
       "Max_80": {
         "Level": "80",
-        "HP": "9076",
-        "ATK": "274",
-        "DEF": "542",
-        "Additional": "Pyro DMG 21.6"
+        "HP": "9060",
+        "ATK": "179",
+        "DEF": "672",
+        "Additional": "ATK 18.0%"
       },
       "Max_90": {
-        "Level": "80",
-        "HP": "9563",
-        "ATK": "289",
-        "DEF": "572",
-        "Additional": "Pyro DMG 28.8%"
+        "Level": "90",
+        "HP": "10223",
+        "ATK": "202",
+        "DEF": "759",
+        "Additional": "ATK 24.0%"
       }
     },
     "recommendedArtifact": {
@@ -3257,54 +3257,54 @@
       "Additional": "No Data",
       "Max_20": {
         "Level": "20",
-        "HP": "2077",
-        "ATK": "63",
-        "DEF": "124",
-        "Additional": "-"
+        "HP": "2061",
+        "ATK": "69",
+        "DEF": "129",
+        "Additional": "No Data"
       },
       "Max_40": {
         "Level": "40",
-        "HP": "4136",
-        "ATK": "125",
-        "DEF": "247",
-        "Additional": "-"
+        "HP": "3985",
+        "ATK": "112",
+        "DEF": "250",
+        "Additional": "No Data"
       },
       "Max_50": {
         "Level": "50",
-        "HP": "5319",
-        "ATK": "161",
-        "DEF": "318",
-        "Additional": "Pyro DMG 7.2%"
+        "HP": "5074",
+        "ATK": "71",
+        "DEF": "252",
+        "Additional": "Cryo DMG 6.0%"
       },
       "Max_60": {
         "Level": "60",
-        "HP": "6673",
-        "ATK": "202",
-        "DEF": "399",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "6305",
+        "ATK": "140",
+        "DEF": "396",
+        "Additional": "Cryo DMG 12.0%"
 
       },
       "Max_70": {
         "Level": "70",
-        "HP": "7870",
-        "ATK": "238",
-        "DEF": "470",
-        "Additional": "Pyro DMG 14.4%"
+        "HP": "7393",
+        "ATK": "164",
+        "DEF": "464",
+        "Additional": "Cryo DMG 12.0%"
 
       },
       "Max_80": {
-        "Level": "80",
-        "HP": "9076",
-        "ATK": "274",
-        "DEF": "542",
-        "Additional": "Pyro DMG 21.6"
+        "Level": "70",
+        "HP": "7818",
+        "ATK": "173",
+        "DEF": "491",
+        "Additional": "Cryo DMG 18.0%"
       },
       "Max_90": {
-        "Level": "80",
-        "HP": "9563",
-        "ATK": "289",
-        "DEF": "572",
-        "Additional": "Pyro DMG 28.8%"
+        "Level": "No Data",
+        "HP": "No Data",
+        "ATK": "No Data",
+        "DEF": "No Data",
+        "Additional": "No Data"
       }
     },
     "recommendedArtifact": {
