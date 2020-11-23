@@ -5,11 +5,6 @@
     "weapon": "Catalyst",
     "region": "Mondstadt",
     "stats": {
-      "Level": "MAX90 80Lv",
-      "HP": "9563",
-      "ATK": "289",
-      "DEF": "572",
-      "Additional": "Pyro DMG 28.8%",
       "Max_20": {
         "Level": "20",
         "HP": "2077",
@@ -157,11 +152,6 @@
     "weapon": "Sword",
     "region": "Liyue",
     "stats": {
-      "Level": "MAX90 80Lv",
-      "HP": "12182",
-      "ATK": "300",
-      "DEF": "743",
-      "Additional": "CRIT DMG 188.4%",
       "Max_20": {
         "Level": "20",
         "HP": "2634",
@@ -304,11 +294,6 @@
     "weapon": "Claymore",
     "region": "Mondstadt",
     "stats": {
-      "Level":"MAX90 80Lv",
-      "HP": "12068",
-      "ATK": "312",
-      "DEF": "729",
-      "Additional": "CRIT Rate 24.2%",
       "Max_20": {
         "Level": "20",
         "HP": "2621",
@@ -455,11 +440,6 @@
     "weapon": "Sword",
     "region": "Mondstadt",
     "stats": {
-      "Level": "MAX80 80Lv",
-      "HP": "12965",
-      "ATK": "211",
-      "DEF": "678",
-      "Additional": "Healing Bonus 16.6%",
       "Max_20": {
         "Level": "20",
         "HP": "2967",
@@ -580,11 +560,6 @@
     "weapon": "Sword",
     "region": "Liyue",
     "stats": {
-      "Level": "MAX90 80Lv",
-      "HP": "11499",
-      "ATK": "266",
-      "DEF": "857",
-      "Additional": "Healing Bonus 22.2%",
       "Max_20": {
         "Level": "20",
         "HP": "2498",
@@ -704,11 +679,6 @@
     "weapon": "Catalyst",
     "region": "Mondstadt",
     "stats": {
-      "Level":"MAX90 80Lv",
-      "HP": "9677",
-      "ATK": "266",
-      "DEF": "607",
-      "Additional": "Energy Recharge 32.0%",
       "Max_20": {
         "Level": "20",
         "HP": "2102",
@@ -829,11 +799,6 @@
     "weapon": "Bow",
     "region": "Mondstadt",
     "stats": {
-      "Level": "MAX80 70Lv",
-      "HP": "8557",
-      "ATK": "214",
-      "DEF": "543",
-      "Additional": "Energy Recharge 24.0%",
       "Max_20": {
         "Level": "20",
         "HP": "2127",
@@ -954,11 +919,6 @@
     "weapon": "Bow",
     "region": "Snezhnaya",
     "stats": {
-      "Level": "MAX50 40Lv",
-      "HP": "5889",
-      "ATK": "137",
-      "DEF": "366",
-      "Additional": "Hydro DMG 7.2%",
       "Max_20": {
         "Level": "20",
         "HP": "2646",
@@ -1102,11 +1062,6 @@
     "weapon": "Sword",
     "region": "unknown",
     "stats": {
-      "Level": "MAX80 80Lv",
-      "HP": "10444",
-      "ATK": "204",
-      "DEF": "669",
-      "Additional": "ATK 24.0%",
       "Max_20": {
         "Level": "20",
         "HP": "2342",
@@ -1218,11 +1173,6 @@
     "weapon": "Sword",
     "region": "unknown",
     "stats": {
-      "Level": "MAX80 80Lv",
-      "HP": "10444",
-      "ATK": "204",
-      "DEF": "669",
-      "Additional": "ATK 24.0%",
       "Max_20": {
         "Level": "20",
         "HP": "2342",
@@ -1337,11 +1287,6 @@
     "weapon": "Claymore",
     "region": "Mondstadt",
     "stats": {
-      "Level":"MAX90 80Lv",
-      "HP": "11235",
-      "ATK": "178",
-      "DEF": "743",
-      "Additional": "DEF 30.0%",
       "Max_20": {
         "Level": "20",
         "HP": "2600",
@@ -1462,11 +1407,6 @@
     "weapon": "Claymore",
     "region": "Mondstadt",
     "stats": {
-      "Level": "MAX90 80Lv",
-      "HP": "11134",
-      "ATK": "217",
-      "DEF": "699",
-      "Additional": "Physical DMG 30.0%",
       "Max_20": {
         "Level": "20",
         "HP": "2577",
@@ -1607,11 +1547,6 @@
     "weapon": "Catalyst",
     "region": "Liyue",
     "stats": {
-      "Level":"MAX80 80Lv",
-      "HP": "8764",
-      "ATK": "188",
-      "DEF": "508",
-      "Additional": "Geo DMG 18.0%",
       "Max_20": {
         "Level": "20",
         "HP": "2108",
@@ -1739,11 +1674,6 @@
     "weapon": "Catalyst",
     "region": "Mondstadt",
     "stats": {
-      "Level":"MAX80 70Lv",
-      "HP": "7818",
-      "ATK": "212",
-      "DEF": "468",
-      "Additional": "Element Mastery +72",
       "Max_20": {
         "Level": "20",
         "HP": "2061",
@@ -1864,11 +1794,6 @@
     "weapon": "Sword",
     "region": "Mondstadt",
     "stats": {
-      "Level": "MAX70 60Lv",
-      "HP": "8184",
-      "ATK": "156",
-      "DEF": "557",
-      "Additional": "Energy Recharge 113.3%",
       "Max_20": {
         "Level": "20",
         "HP": "2506",
@@ -1988,11 +1913,6 @@
     "weapon": "Bow",
     "region": "Mondstadt",
     "stats": {
-      "Level":"MAX90 80Lv",
-      "HP": "8553",
-      "ATK": "227",
-      "DEF": "553",
-      "Additional": "ATK 24.0%",
       "Max_20": {
         "Level": "20",
         "HP": "1979",
@@ -2139,11 +2059,6 @@
     "weapon": "Claymore",
     "region": "Liyue",
     "stats": {
-      "Level": "MAX90 80Lv",
-      "HP": "10223",
-      "ATK": "208",
-      "DEF": "603",
-      "Additional": "ATK 24.0%",
       "Max_20": {
         "Level": "20",
         "HP": "2366",
@@ -2264,11 +2179,6 @@
     "weapon": "Sword",
     "region": "Mondstadt",
     "stats": {
-      "Level": "MAX80 70Lv",
-      "HP": "10129",
-      "ATK": "156",
-      "DEF": "630",
-      "Additional": "Energy Recharge 20.0%",
       "Max_20": {
         "Level": "20",
         "HP": "2670",
@@ -2389,11 +2299,6 @@
     "weapon": "Claymore",
     "region": "Liyue",
     "stats": {
-      "Level": "MAX90 80Lv",
-      "HP": "12146",
-      "ATK": "209",
-      "DEF": "658",
-      "Additional": "Electro DMG 24.0%",
       "Max_20": {
         "Level": "20",
         "HP": "2811",
@@ -2514,11 +2419,6 @@
     "weapon": "Catalyst",
     "region": "Mondstadt",
     "stats": {
-      "Level": "MAX70 70Lv",
-      "HP": "7561",
-      "ATK": "123",
-      "DEF": "517",
-      "Additional": "HP 12.0%",
       "Max_20": {
         "Level": "20",
         "HP": "2108",
@@ -2635,11 +2535,6 @@
     "weapon": "Bow",
     "region": "Mondstadt",
     "stats": {
-      "Level": "MAX80 70Lv",
-      "HP": "7730",
-      "ATK": "182",
-      "DEF": "491",
-      "Additional": "ATK 18.0%",
       "Max_20": {
         "Level": "20",
         "HP": "2038",
@@ -2759,11 +2654,6 @@
     "weapon": "Catalyst",
     "region": "Mondstadt",
     "stats": {
-      "Level":"MAX80 70Lv",
-      "HP": "7552",
-      "ATK": "129",
-      "DEF": "574",
-      "Additional": "Anemo DMG 18.0%",
       "Max_20": {
         "Level": "20",
         "HP": "1991",
@@ -2884,11 +2774,6 @@
     "weapon": "Polearm",
     "region": "Liyue",
     "stats": {
-      "Level":"MAX90 80Lv",
-      "HP": "10122",
-      "ATK": "210",
-      "DEF": "623",
-      "Additional": "Element Mastery +96",
       "Max_20": {
         "Level": "20",
         "HP": "2342",
@@ -3009,11 +2894,6 @@
     "weapon": "Sword",
     "region": "Liyue",
     "stats": {
-      "Level": "MAX80 70Lv",
-      "HP": "8352",
-      "ATK": "165",
-      "DEF": "619",
-      "Additional": "ATK 18.0%",
       "Max_20": {
         "Level": "20",
         "HP": "2202",
@@ -3133,11 +3013,6 @@
     "weapon": "Bow",
     "region": "Mondstadt",
     "stats": {
-      "Level": "No Data",
-      "HP": "No Data",
-      "ATK": "No Data",
-      "DEF": "No Data",
-      "Additional": "No Data",
       "Max_20": {
         "Level": "20",
         "HP": "2061",
