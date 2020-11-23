@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { FlexWrapper, ItemBadgeBox, RoundImage } from 'src/components';
+import { FlexWrapper, ItemBadgeBox, RoundImage, TopButton } from 'src/components';
 import { CharacterImages, ElementImages } from 'src/resources/images';
 import { characterInfo } from 'src/resources/data';
 import {} from 'src/resources/languages';
 import { CharacterStat } from './details/CharacterStat';
 import { CharacterAscensionMaterials } from './details/CharacterAscensionMaterials';
 import { CharacterTalentMaterials } from './details/CharacterTalentMaterials';
+import { CharactrerRecommendedParty } from './details/CharacterRecommendedParty';
 
 interface Props {
   character: string;
@@ -84,12 +85,12 @@ export function CharacterDetailConatiner(props: Props) {
         <CharacterStat character={props.character} />
         <CharacterAscensionMaterials character={props.character} />
         <CharacterTalentMaterials character={props.character} />
+        {characterInfo[props.character].recommendedParty && <CharactrerRecommendedParty character={props.character} />}
         <Description>{characterInfo[props.character].position.join(', ')}</Description>
-        {/* Recommended Party */}
         {/* Recommended Artifact */}
         {/* Recommended Weapon */}
-        {/* Top Button */}
       </FlexWrapper>
+      <TopButton />
     </Container>
   );
 }
