@@ -16,14 +16,6 @@ const MaxLevel = styled.div({
     fontSize: '14px'
   }
 });
-
-const Materials = styled.div({
-  width: '500px',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center'
-});
-
 const Count = styled.div({
   fontSize: '16px',
   margin: '0 0 0 3px',
@@ -74,7 +66,7 @@ export function CharacterAscensionMaterials(props: Props) {
                   {getAscensionItems(AscensionStep[step]).map((item: AscensionMaterialName) => {
                     return (
                       <FlexWrapper styles={{ margin: '0 10px' }}>
-                        <RoundImage src={CharacterAscentionItemImages[item]} styles={{ width: '60px', height: '60px' }} />
+                        <RoundImage src={CharacterAscentionItemImages[item]} styles={{ width: '50px', height: '50px' }} />
                         <Count>x{ascensionItems.get(item)}</Count>
                       </FlexWrapper>
                     );
