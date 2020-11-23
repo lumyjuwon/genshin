@@ -14,6 +14,7 @@ export { BoxModelWrapper } from './wrapper/BoxModelWrapper';
 export { FocusWrapper } from './wrapper/FocusWrapper';
 
 // Button Component
+export { TopButton } from './button/TopButton';
 export { RoundButton } from './button/RoundButton';
 export { CircleButton } from './button/CircleButton';
 export { SquareButton } from './button/SquareButton';
