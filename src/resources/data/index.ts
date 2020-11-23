@@ -12,6 +12,8 @@ export type WeaponType = 'Bow' | 'Catalyst' | 'Claymore' | 'Polearm' | 'Sword';
 export type ArtifactName = string;
 export type ArtifactType = 'Flower' | 'Feather' | 'HourGlass' | 'HolyGrail' | 'Crown';
 
+export type AscensionMaterialName = string;
+
 interface Gacha {
   [key: string]: GachaData;
 }
