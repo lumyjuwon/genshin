@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { ContentWrapper, PageHelmet } from 'src/components';
+import { ContentWrapper, PageHelmet, TopButton } from 'src/components';
 import { DailyItem } from './DailyItem';
 import { FieldMonsterDropItem } from './FieldMonsterDropItem';
 import { WeeklyRewardItem } from './WeeklyRewardItem';
@@ -21,14 +21,17 @@ interface Props {}
 
 export function ItemScreen(props: Props) {
   return (
-    <ContentWrapper>
-      <PageHelmet title={trans(Lang.Item)} description={trans(Lang.Main_Item_Desc)} />
-      <Inner>
-        <DailyItem />
-        <WeeklyRewardItem />
-        <FieldMonsterDropItem />
-        <LocalContainer />
-      </Inner>
-    </ContentWrapper>
+    <>
+      <ContentWrapper>
+        <PageHelmet title={trans(Lang.Item)} description={trans(Lang.Main_Item_Desc)} />
+        <Inner>
+          <DailyItem />
+          <WeeklyRewardItem />
+          <FieldMonsterDropItem />
+          <LocalContainer />
+        </Inner>
+      </ContentWrapper>
+      <TopButton />
+    </>
   );
 }
