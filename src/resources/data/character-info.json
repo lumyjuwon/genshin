@@ -71,14 +71,14 @@
         }
       },
       "recom3": {
-        "party": ["Klee", "Bennet", "Fischl", "Venti"],
+        "party": ["Klee", "Bennett", "Fischl", "Venti"],
         "alter": {
           "Venti": ["Sucrose", "Jean"],
-          "Bennet": ["Xianling"]
+          "Bennett": ["Xiangling"]
         }
       },
       "recom4": {
-        "party": ["Klee", "Xianling", "Chongyun", "Venti"],
+        "party": ["Klee", "Xiangling", "Chongyun", "Venti"],
         "alter": {
           "Venti": ["Sucrose", "Jean"]
         }
@@ -210,9 +210,9 @@
         }
       },
       "recom2": {
-        "party": ["Keqing", "Fischl", "Bennet", "Venti"],
+        "party": ["Keqing", "Fischl", "Bennett", "Venti"],
         "alter": {
-          "Bennet": ["Xianling"],
+          "Bennett": ["Xiangling"],
           "Venti": ["Sucrose", "Jean"]
         }
       },
@@ -224,7 +224,7 @@
         }
       },
       "recom4": {
-        "party": ["Keqing", "Fischl", "Bennet", "Xianling"]
+        "party": ["Keqing", "Fischl", "Bennett", "Xiangling"]
       }
     },
     "recommendedEquip": {
@@ -348,7 +348,7 @@
     },
     "recommendedParty": {
       "recom1": {
-        "party": ["Diluc", "Chongyun", "Bennet", "Sucrose"],
+        "party": ["Diluc", "Chongyun", "Bennett", "Sucrose"],
         "alter": {
           "Sucrose": ["Venti", "Jean"]
         }
@@ -360,9 +360,9 @@
         }
       },
       "recom3": {
-        "party": ["Diluc", "Qiqi", "Bennet", "Sucrose"],
+        "party": ["Diluc", "Qiqi", "Bennett", "Sucrose"],
         "alter": {
-          "Bennet": ["Xianling"],
+          "Bennett": ["Xiangling"],
           "Sucrose": ["Venti", "Jean"]
         }
       },
@@ -982,7 +982,7 @@
         }
       },
       "recom3": {
-        "party": ["Tartaglia", "Xiangling", "Bennet", "Sucrose"],
+        "party": ["Tartaglia", "Xiangling", "Bennett", "Sucrose"],
         "alter": {
           "Sucrose": ["Venti", "Jean"]
         }
@@ -1477,7 +1477,7 @@
         }
       },
       "recom4": {
-        "party": ["Razor", "Fischl", "Xiangling", "Bennet"]
+        "party": ["Razor", "Fischl", "Xiangling", "Bennett"]
       }
     },
     "recommendedEquip": {
@@ -1601,10 +1601,10 @@
     },
     "recommendedParty": {
       "recom1": {
-        "party": ["Ningguang", "Mona", "Noelle", "Bennet"]
+        "party": ["Ningguang", "Mona", "Noelle", "Bennett"]
       },
       "recom2": {
-        "party": ["Ningguang", "Bennet", "Venti", "Barbara"]
+        "party": ["Ningguang", "Bennett", "Venti", "Barbara"]
       }
     },
     "recommendedEquip": {
@@ -1979,7 +1979,7 @@
         }
       },
       "recom3": {
-        "party": ["Fischl", "Xiangling", "Bennet", "Venti"],
+        "party": ["Fischl", "Xiangling", "Bennett", "Venti"],
         "alter": {
           "Venti": ["Sucrose", "Jean"]
         }
