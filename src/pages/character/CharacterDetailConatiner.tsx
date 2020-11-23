@@ -5,6 +5,8 @@ import { FlexWrapper, ItemBadgeBox, RoundImage } from 'src/components';
 import { CharacterImages, ElementImages } from 'src/resources/images';
 import { characterInfo } from 'src/resources/data';
 import {} from 'src/resources/languages';
+import { CharacterStat } from './details/CharacterStat';
+import { CharacterAscensionMaterials } from './details/CharacterAscensionMaterials';
 
 interface Props {
   character: string;
@@ -28,7 +30,7 @@ const CharacterIntro = styled.div({
 });
 
 const Name = styled.div({
-  fontSize: '22px',
+  fontSize: '25px',
   fontWeight: 'bold',
   textAlign: 'left'
 });
@@ -69,15 +71,19 @@ export function CharacterDetailConatiner(props: Props) {
         />
         <FlexWrapper styles={{ flexDirection: 'column', margin: '0 0 0 20px', alignItems: 'flex-start' }}>
           <Name>{props.character}</Name>
-          {/* Region, Weapon */}
+          <FlexWrapper>
+            <Description>{characterInfo[props.character].region}</Description>
+            <Description>&nbsp;·&nbsp;</Description>
+            <Description>{characterInfo[props.character].weapon}</Description>
+          </FlexWrapper>
         </FlexWrapper>
       </CharacterIntro>
       <FlexWrapper styles={{ width: '100%', alignItems: 'flex-start', flexDirection: 'column' }}>
-        <Description>{characterInfo[props.character].position.join(', ')}</Description>
         {/* Nav Button */}
-        {/* Stat */}
-        {/* Ascension Items */}
+        <CharacterStat character={props.character} />
+        <CharacterAscensionMaterials character={props.character} />
         {/* Talent Level up items */}
+        <Description>{characterInfo[props.character].position.join(', ')}</Description>
         {/* Recommended Party */}
         {/* Recommended Artifact */}
         {/* Recommended Weapon */}
