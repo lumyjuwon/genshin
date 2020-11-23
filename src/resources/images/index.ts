@@ -89,11 +89,6 @@ const DailySetImages: ImageMap = {
   Aerosiderite: require('./items/daily-set/Aerosiderite.png')
 };
 
-const CharacterAscentionItemImages: ImageMap = {};
-appendImages(CharacterAscentionItemImages, fieldMonsterDropItemInfo, './items/field-monster-drop');
-appendImages(CharacterAscentionItemImages, alchemyItemInfo, './items/character-ascension');
-appendImages(CharacterAscentionItemImages, localSpecialityItemInfo, './items/local-speciality');
-
 const WeeklyBossItemImages: ImageMap = {};
 appendImages(WeeklyBossItemImages, weeklyBossItemInfo, './items/weekly-boss');
 
@@ -102,6 +97,12 @@ appendImages(FieldMonsterDropItemImages, fieldMonsterDropItemInfo, './items/fiel
 
 const LocalSpecialityItemImages: ImageMap = {};
 appendImages(LocalSpecialityItemImages, localSpecialityItemInfo, './items/local-speciality');
+
+const CharacterAscentionItemImages = Object.assign({}, FieldMonsterDropItemImages, LocalSpecialityItemImages);
+appendImages(CharacterAscentionItemImages, alchemyItemInfo, './items/character-ascension');
+
+const CharacterTalentItemImages = Object.assign({}, FieldMonsterDropItemImages, WeeklyBossItemImages, DailySetImages);
+appendImages(CharacterTalentItemImages, alchemyItemInfo, './items/character-ascension');
 
 export {
   CharacterImages,
@@ -116,5 +117,6 @@ export {
   WeeklyBossItemImages,
   FieldMonsterDropItemImages,
   LocalSpecialityItemImages,
-  CharacterAscentionItemImages
+  CharacterAscentionItemImages,
+  CharacterTalentItemImages
 };
