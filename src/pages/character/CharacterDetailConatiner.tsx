@@ -7,6 +7,7 @@ import { characterInfo } from 'src/resources/data';
 import {} from 'src/resources/languages';
 import { CharacterStat } from './details/CharacterStat';
 import { CharacterAscensionMaterials } from './details/CharacterAscensionMaterials';
+import { CharacterTalentMaterials } from './details/CharacterTalentMaterials';
 
 interface Props {
   character: string;
@@ -82,7 +83,7 @@ export function CharacterDetailConatiner(props: Props) {
         {/* Nav Button */}
         <CharacterStat character={props.character} />
         <CharacterAscensionMaterials character={props.character} />
-        {/* Talent Level up items */}
+        <CharacterTalentMaterials character={props.character} />
         <Description>{characterInfo[props.character].position.join(', ')}</Description>
         {/* Recommended Party */}
         {/* Recommended Artifact */}
