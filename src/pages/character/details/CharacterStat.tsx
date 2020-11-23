@@ -44,7 +44,7 @@ export function CharacterStat(props: Props) {
         </FlexWrapper>
         {characterAscensionLevel.map((level) => {
           return (
-            <FlexWrapper styles={{ margin: '5px 0 0' }}>
+            <FlexWrapper key={level} styles={{ margin: '5px 0 0' }}>
               <LevelBox>{level}</LevelBox>
               <LevelBox>{characterInfo[props.character].stats[level as Level].Level}</LevelBox>
               <FlexWrapper>

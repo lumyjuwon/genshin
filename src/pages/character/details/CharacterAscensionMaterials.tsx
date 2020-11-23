@@ -60,12 +60,12 @@ export function CharacterAscensionMaterials(props: Props) {
         <>
           {Object.values(AscensionStep).map((step: Step) => {
             return (
-              <FlexWrapper styles={{ margin: '10px 0 0' }}>
+              <FlexWrapper key={step} styles={{ margin: '10px 0 0' }}>
                 <MaxLevel>{step}</MaxLevel>
                 <GridWrapper styles={{ width: '500px' }}>
                   {getAscensionItems(AscensionStep[step]).map((item: AscensionMaterialName) => {
                     return (
-                      <FlexWrapper styles={{ margin: '0 10px' }}>
+                      <FlexWrapper key={item} styles={{ margin: '0 10px' }}>
                         <RoundImage src={CharacterAscentionItemImages[item]} styles={{ width: '50px', height: '50px' }} />
                         <Count>x{ascensionItems.get(item)}</Count>
                       </FlexWrapper>
