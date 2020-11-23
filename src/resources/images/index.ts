@@ -1,4 +1,12 @@
-import { weaponInfo, artifactInfo, characterInfo, localSpecialityItemInfo, weeklyBossItemInfo, fieldMonsterDropItemInfo } from '../data';
+import {
+  weaponInfo,
+  artifactInfo,
+  characterInfo,
+  localSpecialityItemInfo,
+  weeklyBossItemInfo,
+  fieldMonsterDropItemInfo,
+  alchemyItemInfo
+} from '../data';
 
 export type ImageSrc = string | undefined;
 
@@ -81,9 +89,10 @@ const DailySetImages: ImageMap = {
   Aerosiderite: require('./items/daily-set/Aerosiderite.png')
 };
 
-// const CharacterAscentionItemImages: ImageMap = {};
-// appendImages(CharacterAscentionItemImages, characterAscensionItemInfo, './items/character-ascension');
-// appendImages(CharacterAscentionItemImages alchemyItemInfo, './items/character-ascension');
+const CharacterAscentionItemImages: ImageMap = {};
+appendImages(CharacterAscentionItemImages, fieldMonsterDropItemInfo, './items/field-monster-drop');
+appendImages(CharacterAscentionItemImages, alchemyItemInfo, './items/character-ascension');
+appendImages(CharacterAscentionItemImages, localSpecialityItemInfo, './items/local-speciality');
 
 const WeeklyBossItemImages: ImageMap = {};
 appendImages(WeeklyBossItemImages, weeklyBossItemInfo, './items/weekly-boss');
@@ -106,5 +115,6 @@ export {
   DailySetImages,
   WeeklyBossItemImages,
   FieldMonsterDropItemImages,
-  LocalSpecialityItemImages
+  LocalSpecialityItemImages,
+  CharacterAscentionItemImages
 };
