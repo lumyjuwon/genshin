@@ -91,7 +91,7 @@ function getDescription(artifacts: Map<string, number>) {
           descriptions.push(trans(Lang.TheExile_TwoPieceSet));
           break;
         case 'Resolution of Sojourner':
-          descriptions.push(trans(Lang.ResolutionOfSojourner_TwoPieceSet));
+          descriptions.push(trans(Lang.ResolutionofSojourner_TwoPieceSet));
           break;
         case 'Martial Artist':
           descriptions.push(trans(Lang.MartialArtist_TwoPieceSet));
@@ -171,7 +171,7 @@ function getDescription(artifacts: Map<string, number>) {
           descriptions.push(trans(Lang.TheExile_FourPieceSet));
           break;
         case 'Resolution of Sojourner':
-          descriptions.push(trans(Lang.ResolutionOfSojourner_FourPieceSet));
+          descriptions.push(trans(Lang.ResolutionofSojourner_FourPieceSet));
           break;
         case 'Martial Artist':
           descriptions.push(trans(Lang.MartialArtist_FourPieceSet));

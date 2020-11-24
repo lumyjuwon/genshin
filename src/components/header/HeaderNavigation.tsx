@@ -48,12 +48,11 @@ interface Props {
   onClick?: Function;
 }
 
-let storagedSelectedPath = window.sessionStorage.getItem('nav');
 const MAIN_NAV_INDEX = 1;
 
 export const HeaderNavigation = React.forwardRef<HTMLDivElement, Props>((props, forwardedRef) => {
   const history = useHistory();
-  const [selectedNavPath, setSelectedNavPath] = useState<string>(storagedSelectedPath || '/');
+  const [selectedNavPath, setSelectedNavPath] = useState<string>(window.sessionStorage.getItem('nav') || '/');
 
   useEffect(() => {
     history.listen((location) => {
@@ -61,8 +60,7 @@ export const HeaderNavigation = React.forwardRef<HTMLDivElement, Props>((props, 
     });
   }, [history, props.navs]);
 
-  storagedSelectedPath = selectedNavPath;
-  window.sessionStorage.setItem('nav', storagedSelectedPath);
+  window.sessionStorage.setItem('nav', selectedNavPath);
 
   return (
     <Navigation ref={forwardedRef}>
