@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { Layout } from './Layout';
 import { CharacterImages, ElementImages } from 'src/resources/images';
-import { FlexWrapper, ItemBadgeBox, RoundImage } from 'src/components';
+import { FlexWrapper, ItemBadgeBox, RoundImage, GridWrapper } from 'src/components';
 import { characterInfo } from 'src/resources/data';
 
 const PartyName = styled.div({
@@ -37,7 +37,7 @@ export function CharactrerRecommendedParty(props: Props) {
             return (
               <FlexWrapper key={partyName} styles={{ flexDirection: 'column', margin: '30px 0 0' }}>
                 <PartyName>Recommended Party #{index + INDEX_BEAUTIFY}</PartyName>
-                <FlexWrapper>
+                <GridWrapper styles={{ width: '100%', medium: { width: '100%' }, small: { width: '100%' } }}>
                   {recommendedParties[partyName].party.map((character) => {
                     return (
                       <ItemBadgeBox
@@ -70,7 +70,7 @@ export function CharactrerRecommendedParty(props: Props) {
                       />
                     );
                   })}
-                </FlexWrapper>
+                </GridWrapper>
                 <>
                   {alterCharacter && (
                     <>

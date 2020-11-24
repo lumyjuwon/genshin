@@ -40,7 +40,7 @@ const StarEmoji = styled.span({
   width: '100%',
   textAlign: 'center',
   '@media screen and (max-width: 768px)': {
-    margin: '-5px',
+    margin: '0 0 0 -10px',
     letterSpacing: '-10px',
     fontSize: '14px'
   }
@@ -64,7 +64,7 @@ export function CharactrerRecommendedEquip(props: Props) {
 
   return (
     <Layout title="Recommended Equipments">
-      <FlexWrapper styles={{ width: '100%' }}>
+      <FlexWrapper styles={{ width: '100%', small: { width: '100%', flexDirection: 'column' } }}>
         <FlexBox>
           {Object.keys(recommendedEquipInfo.artifact).map((info, index) => {
             const artifactBuff: Array<string> = [];

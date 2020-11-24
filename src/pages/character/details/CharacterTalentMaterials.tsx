@@ -33,7 +33,7 @@ export function CharacterTalentMaterials(props: Props) {
 
   return (
     <Layout title="Character Talent Materials">
-      <FlexWrapper styles={{ width: '100%' }}>
+      <FlexWrapper styles={{ width: '100%', small: { width: '100%', flexDirection: 'column' } }}>
         <FlexWrapper styles={{ flexDirection: 'column', margin: '10px 20px' }}>
           {talentInfo.book ? (
             <>

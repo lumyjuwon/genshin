@@ -21,7 +21,13 @@ const Container = styled.div({
   alignItems: 'center',
   justifyContent: 'center',
   width: '1000px',
-  margin: '50px auto'
+  margin: '50px auto',
+  '@media screen and (max-width: 1380px)': {
+    width: '700px'
+  },
+  '@media screen and (max-width: 768px)': {
+    width: '100%'
+  }
 });
 
 const CharacterIntro = styled.div({
