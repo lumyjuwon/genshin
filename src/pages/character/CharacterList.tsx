@@ -25,6 +25,10 @@ const Container = styled.div({
 export function CharacterList() {
   const characters = Object.keys(characterInfo);
 
+  function goToScrollTop() {
+    window.scroll(0, 0);
+  }
+
   return (
     <Container>
       <GridWrapper styles={{ width: '100%' }}>
@@ -52,6 +56,7 @@ export function CharacterList() {
                     styles={{ medium: { width: '90px', height: '90px' }, small: { width: '80px', height: '80px' } }}
                   />
                 }
+                onClick={() => goToScrollTop()}
                 styles={{
                   boxStyles: { margin: '10px', small: { margin: '10px' } },
                   tooltipStyles: { bottom: '0' }
