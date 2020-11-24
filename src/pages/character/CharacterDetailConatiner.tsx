@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { FlexWrapper, ItemBadgeBox, RoundImage, TopButton } from 'src/components';
-import { CharacterImages, ElementImages } from 'src/resources/images';
+import { CharacterImages, ElementImages, TierImages } from 'src/resources/images';
 import { characterInfo } from 'src/resources/data';
 import {} from 'src/resources/languages';
 import { CharacterStat } from './details/CharacterStat';
@@ -55,6 +55,14 @@ const Description = styled.div({
   }
 });
 
+const Position = styled.div({
+  fontSize: '16px',
+  margin: '0 5px 0 0',
+  '@media screen and (max-width: 768px)': {
+    fontSize: '14px'
+  }
+});
+
 export function CharacterDetailConatiner(props: Props) {
   return (
     <Container>
@@ -91,7 +99,16 @@ export function CharacterDetailConatiner(props: Props) {
             <Description>&nbsp;·&nbsp;</Description>
             <Description>{characterInfo[props.character].weapon}</Description>
           </FlexWrapper>
-          <Description>{characterInfo[props.character].position.join(', ')}</Description>
+          <>
+            {characterInfo[props.character].position.map((position) => {
+              return (
+                <FlexWrapper styles={{ margin: '3px 0 0' }}>
+                  <Position>{position}</Position>
+                  <RoundImage src={TierImages[characterInfo[props.character].tier[position]]} styles={{ width: '30px', height: '30px' }} />
+                </FlexWrapper>
+              );
+            })}
+          </>
         </FlexWrapper>
       </CharacterIntro>
       <FlexWrapper styles={{ width: '100%', alignItems: 'flex-start', flexDirection: 'column' }}>
