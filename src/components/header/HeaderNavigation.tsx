@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import { FlexWrapper } from 'src/components';
 import { HeaderMenu } from './HeaderMenu';
-import { useHistory } from 'react-router-dom';
 import { ServerSelector } from './ServerSelector';
 import { LangaugeSelector } from './LangaugeSelector';
 
@@ -48,20 +47,7 @@ interface Props {
   onClick?: Function;
 }
 
-const MAIN_NAV_INDEX = 1;
-
 export const HeaderNavigation = React.forwardRef<HTMLDivElement, Props>((props, forwardedRef) => {
-  const history = useHistory();
-  const [selectedNavPath, setSelectedNavPath] = useState<string>(window.sessionStorage.getItem('nav') || '/');
-
-  useEffect(() => {
-    history.listen((location) => {
-      setSelectedNavPath('/'.concat(location.pathname.split('/')[MAIN_NAV_INDEX]));
-    });
-  }, [history, props.navs]);
-
-  window.sessionStorage.setItem('nav', selectedNavPath);
-
   return (
     <Navigation ref={forwardedRef}>
       <NavList>
