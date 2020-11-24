@@ -13,7 +13,13 @@ const Container = styled.div({
   width: '1000px',
   minHeight: '80vh',
   margin: '0 auto',
-  flexFlow: 'wrap'
+  flexFlow: 'wrap',
+  '@media screen and (max-width: 1380px)': {
+    width: '700px'
+  },
+  '@media screen and (max-width: 768px)': {
+    width: '100%'
+  }
 });
 
 export function CharacterList() {
@@ -40,9 +46,14 @@ export function CharacterList() {
                     }}
                   />
                 }
-                child={<RoundImage src={CharacterImages[name]} />}
+                child={
+                  <RoundImage
+                    src={CharacterImages[name]}
+                    styles={{ medium: { width: '90px', height: '90px' }, small: { width: '80px', height: '80px' } }}
+                  />
+                }
                 styles={{
-                  boxStyles: { margin: '10px' },
+                  boxStyles: { margin: '10px', small: { margin: '10px' } },
                   tooltipStyles: { bottom: '0' }
                 }}
                 hoverInnerColor={'#f1f2f3'}
