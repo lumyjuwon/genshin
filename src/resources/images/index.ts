@@ -19,9 +19,10 @@ interface ImageMap {
 function appendImages(map: any, info: any, path: string): void {
   for (const name of Object.keys(info)) {
     if (map[name] === undefined) {
+      console.log(`${path}/${name}.png`);
       map[name] = require(`${path}/${name}.png`);
     } else {
-      throw new Error(`${name} 해당 값이 없거나 중복 됩니다.`);
+      throw new Error(`${name} 해당 값이 중복 됩니다.`);
     }
   }
 }

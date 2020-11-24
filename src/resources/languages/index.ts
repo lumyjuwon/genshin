@@ -426,7 +426,7 @@ enum Lang {
   Instructor = 'Instructor',
   Berserker = 'Berserker',
   TheExile = 'TheExile',
-  ResolutionofSojourner = 'ResolutionofSojourner',
+  ResolutionOfSojourner = 'ResolutionOfSojourner',
   MartialArtist = 'MartialArtist',
   DefenderOfWill = 'DefenderOfWill',
   TinyMiracle = 'TinyMiracle',
