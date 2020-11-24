@@ -1056,7 +1056,7 @@
       "Main_Dealer": "T0"
     }
   },
-  "Traveler_Anemo": {
+  "Traveler (Anemo)": {
     "rank": 5,
     "element": "Anemo",
     "weapon": "Sword",
@@ -1167,7 +1167,7 @@
       "Supporter": "T2"
     }
   },
-  "Traveler_Geo": {
+  "Traveler (Geo)": {
     "rank": 5,
     "element": "Geo",
     "weapon": "Sword",

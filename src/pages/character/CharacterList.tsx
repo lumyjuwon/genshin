@@ -23,8 +23,9 @@ export function CharacterList() {
     <Container>
       <GridWrapper styles={{ width: '100%' }}>
         {characters.map((name) => {
+          const path = name.replace(/\s\(|\)|/g, '');
           return (
-            <Link key={name} to={`/character/${name}`}>
+            <Link key={name} to={`/character/${path}`}>
               <ItemBadgeBox
                 badge={
                   <RoundImage
