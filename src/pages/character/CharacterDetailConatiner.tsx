@@ -41,12 +41,18 @@ const CharacterIntro = styled.div({
 const Name = styled.div({
   fontSize: '25px',
   fontWeight: 'bold',
-  textAlign: 'left'
+  textAlign: 'left',
+  '@media screen and (max-width: 768px)': {
+    fontSize: '20px'
+  }
 });
 
 const Description = styled.div({
   margin: '5px 0 0',
-  fontSize: '16px'
+  fontSize: '16px',
+  '@media screen and (max-width: 768px)': {
+    fontSize: '14px'
+  }
 });
 
 export function CharacterDetailConatiner(props: Props) {

@@ -9,19 +9,61 @@ const Container = styled.div({
   width: '100%'
 });
 
+const Inner = styled.div({
+  display: 'flex',
+  alignItems: 'center',
+  margin: '5px 0 0',
+  justifyContent: 'space-around',
+  padding: '0 200px',
+  '@media screen and (max-width: 1380px)': {
+    padding: '0 100px'
+  },
+  '@media screen and (max-width: 768px)': {
+    padding: '0 50px'
+  },
+  '@media screen and (max-width: 475px)': {
+    justifyContent: 'space-between',
+    padding: '0'
+  }
+});
+
+const MaxLevelBox = styled.div({
+  minWidth: '80px',
+  textAlign: 'center',
+  '@media screen and (max-width: 768px)': {
+    fontSize: '14px',
+    minWidth: '75px'
+  }
+});
+
 const LevelBox = styled.div({
-  width: '80px',
-  textAlign: 'center'
+  minWidth: '80px',
+  textAlign: 'center',
+  '@media screen and (max-width: 768px)': {
+    fontSize: '14px',
+    minWidth: '60px'
+  }
 });
 
 const StatBox = styled.div({
-  width: '80px',
-  textAlign: 'center'
+  minWidth: '100%',
+  textAlign: 'center',
+  '@media screen and (max-width: 768px)': {
+    fontSize: '14px'
+  }
 });
 
 const AdditionBox = styled.div({
-  width: '200px',
-  textAlign: 'center'
+  minWidth: '200px',
+  textAlign: 'center',
+  '@media screen and (max-width: 768px)': {
+    fontSize: '14px',
+    minWidth: '150px'
+  }
+});
+
+const Line = styled.hr({
+  width: '90%'
 });
 
 interface Props {
@@ -34,26 +76,24 @@ export function CharacterStat(props: Props) {
   return (
     <Layout title="Character Stat">
       <Container>
-        <FlexWrapper styles={{ margin: '5px 0 0' }}>
-          <LevelBox>Max Level</LevelBox>
+        <Inner>
+          <MaxLevelBox>Max Level</MaxLevelBox>
           <LevelBox>Level</LevelBox>
-          <StatBox>HP</StatBox>
-          <StatBox>DEF</StatBox>
-          <StatBox>ATK</StatBox>
-          <AdditionBox>Additional</AdditionBox>
-        </FlexWrapper>
+          <AdditionBox>Stat</AdditionBox>
+        </Inner>
+        <Line />
         {characterAscensionLevel.map((level) => {
           return (
-            <FlexWrapper key={level} styles={{ margin: '5px 0 0' }}>
-              <LevelBox>{level}</LevelBox>
+            <Inner key={level}>
+              <MaxLevelBox>{level}</MaxLevelBox>
               <LevelBox>{characterInfo[props.character].stats[level as Level].Level}</LevelBox>
-              <FlexWrapper>
-                <StatBox>{characterInfo[props.character].stats[level as Level].HP}</StatBox>
-                <StatBox>{characterInfo[props.character].stats[level as Level].DEF}</StatBox>
-                <StatBox>{characterInfo[props.character].stats[level as Level].ATK}</StatBox>
+              <FlexWrapper styles={{ flexDirection: 'column' }}>
+                <StatBox>HP: {characterInfo[props.character].stats[level as Level].HP}</StatBox>
+                <StatBox>DEF: {characterInfo[props.character].stats[level as Level].DEF}</StatBox>
+                <StatBox>ATK: {characterInfo[props.character].stats[level as Level].ATK}</StatBox>
                 <AdditionBox>{characterInfo[props.character].stats[level as Level].Additional}</AdditionBox>
               </FlexWrapper>
-            </FlexWrapper>
+            </Inner>
           );
         })}
       </Container>

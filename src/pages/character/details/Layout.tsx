@@ -14,7 +14,10 @@ const Line = styled.hr({
 
 const Title = styled.div({
   fontSize: '22px',
-  fontWeight: 'bold'
+  fontWeight: 'bold',
+  '@media screen and (max-width: 768px)': {
+    fontSize: '18px'
+  }
 });
 
 interface Props {
@@ -27,7 +30,9 @@ export function Layout(props: Props) {
     <Container>
       <Title>{props.title}</Title>
       <Line />
-      <BoxModelWrapper styles={{ margin: '20px 0 0' }}>{props.children}</BoxModelWrapper>
+      <BoxModelWrapper styles={{ margin: '20px 0 0', medium: { margin: '20px 0 0' }, small: { margin: '20px 0 0' } }}>
+        {props.children}
+      </BoxModelWrapper>
     </Container>
   );
 }

@@ -13,23 +13,37 @@ const FlexBox = styled.div({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  padding: '0 20px'
+  padding: '0 20px',
+  '@media screen and (max-width: 768px)': {
+    width: '100%'
+  }
 });
 
 const ListName = styled.div({
   width: '100%',
   fontSize: '20px',
-  textAlign: 'left'
+  textAlign: 'left',
+  '@media screen and (max-width: 768px)': {
+    fontSize: '16px'
+  }
 });
 
 const Name = styled.div({
   fontSize: '18px',
-  fontWeight: 'bold'
+  fontWeight: 'bold',
+  textAlign: 'center',
+  '@media screen and (max-width: 768px)': {
+    fontSize: '16px'
+  }
 });
 
 const BuffText = styled.div({
   margin: '3px 0 0',
   textAlign: 'center'
+});
+
+const Line = styled.hr({
+  width: '100%'
 });
 
 const StarEmoji = styled.span({
@@ -52,13 +66,15 @@ interface Props {
 
 export function CharactrerRecommendedEquip(props: Props) {
   const recommendedEquipInfo = characterInfo[props.character].recommendedEquip;
+  const TWO_PIECE = '_TwoPieceSet';
+  const FOUR_PIECE = '_FourPieceSet';
 
   function pushArtifactSetBuff(name: string, count: number, list: Array<string>) {
     if (count >= 2) {
-      list.push(trans(Lang[name.concat('_TwoPieceSet') as KeyLang]));
+      list.push(trans(Lang[name.concat(TWO_PIECE) as KeyLang]));
     }
     if (count >= 4) {
-      list.push(trans(Lang[name.concat('_FourPieceSet') as KeyLang]));
+      list.push(trans(Lang[name.concat(FOUR_PIECE) as KeyLang]));
     }
   }
 
@@ -71,6 +87,7 @@ export function CharactrerRecommendedEquip(props: Props) {
             return (
               <FlexWrapper styles={{ flexDirection: 'column', margin: '20px 0 0', width: '100%' }}>
                 <ListName>Recommended Aritfact #{index + 1}</ListName>
+                <Line />
                 <>
                   {recommendedEquipInfo.artifact[info].name.map((set) => {
                     const replacedName = set.replace(/\s/g, '').replace(/'s/g, 'Of');
@@ -99,8 +116,9 @@ export function CharactrerRecommendedEquip(props: Props) {
         <FlexBox>
           {recommendedEquipInfo.weapon.map((item: string, index) => {
             return (
-              <FlexWrapper styles={{ flexDirection: 'column', margin: '20px 0 0', width: '100%' }}>
+              <FlexWrapper styles={{ flexDirection: 'column', margin: '20px 0 0', width: '100%', small: { width: '100%' } }}>
                 <ListName>Recommended Weapon #{index + 1}</ListName>
+                <Line />
                 <RoundImage src={ItemImages[item]} styles={{ width: '80px', height: '80px' }} />
                 <StarEmoji role="img">{'⭐'.repeat(weaponInfo[item].rank)}</StarEmoji>
                 <Name>{item}</Name>

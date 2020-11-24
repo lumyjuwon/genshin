@@ -9,7 +9,20 @@ import { characterInfo } from 'src/resources/data';
 const PartyName = styled.div({
   width: '100%',
   fontSize: '20px',
-  textAlign: 'left'
+  textAlign: 'left',
+  '@media screen and (max-width: 768px)': {
+    fontSize: '16px'
+  }
+});
+
+const AlterText = styled.div({
+  width: '100%',
+  fontSize: '16px',
+  textAlign: 'center',
+  margin: '5px 0 0',
+  '@media screen and (max-width: 768px)': {
+    fontSize: '14px'
+  }
 });
 
 interface PartyInfo {
@@ -74,7 +87,7 @@ export function CharactrerRecommendedParty(props: Props) {
                 <>
                   {alterCharacter && (
                     <>
-                      <div>Alternatives</div>
+                      <AlterText>Alternatives</AlterText>
                       <FlexWrapper styles={{ flexDirection: 'column', margin: '5px 0 0' }}>
                         {Object.keys(alterCharacter).map((character) => {
                           return (
