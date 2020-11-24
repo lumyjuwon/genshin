@@ -181,21 +181,21 @@
   },
   "ViridescentVenerer": {
     "rank": 5,
-    "Flower": "Thunderbird's Mercy",
-    "Feather": "Survivor of Catastrophe",
-    "HourGlass": "Hourglass of Thunder",
-    "HolyGrail": "Omen of Thunderstorm",
-    "Crown": "Thunder Summoner's Crown",
-    "TwoPieceSet": "Anemo DMG Bonus +15%",
-    "FourPieceSet": "Increases Swirl DMG by 60%. Decreases opponent's Elemental RES to the element infused in the Swirl by 40% for 10s"
-  },
-  "ThunderingFury": {
-    "rank": 5,
     "Flower": "In Remembrance of Viridescent Fields",
     "Feather": "Viridescent Arrow Feather",
     "HourGlass": "Viridescent Venerer's Determination",
     "HolyGrail": "Viridescent Venerer's Vessel",
     "Crown": "Viridescent Venerer's Diadem",
+    "TwoPieceSet": "Anemo DMG Bonus +15%",
+    "FourPieceSet": "Increases Swirl DMG by 60%. Decreases opponent's Elemental RES to the element infused in the Swirl by 40% for 10s"
+  },
+  "ThunderingFury": {
+    "rank": 5,
+    "Flower": "Thunderbird's Mercy",
+    "Feather": "Survivor of Catastrophe",
+    "HourGlass": "Hourglass of Thunder",
+    "HolyGrail": "Omen of Thunderstorm",
+    "Crown": "Thunder Summoner's Crown",
     "TwoPieceSet": "Electro DMG Bonus +15%",
     "FourPieceSet": "Increases damage caused by Overloaded, Electro-Charged, and Superconduct DMG by 40%. Triggering such effects decreases Elemental Skill CD by 1s. Can only occur once every 0.8s"
   },
@@ -209,7 +209,7 @@
     "TwoPieceSet": "Electro RES increased by 40%",
     "FourPieceSet": "Increases DMG against enemies affected by Electro by 35%"
   },
-  "CrimsonWitchOfFlames": {
+  "CrimsonWitchofFlames": {
     "rank": 5,
     "Flower": "Witch's Flower of Blaze",
     "Feather": "Witch's Ever-Burning Plume",

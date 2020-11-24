@@ -6,7 +6,8 @@ import {
   weeklyBossItemInfo,
   fieldMonsterDropItemInfo,
   alchemyItemInfo,
-  travelerAscensionItemInfo
+  travelerAscensionItemInfo,
+  artifactSetInfo
 } from '../data';
 
 export type ImageSrc = string | undefined;
@@ -41,6 +42,9 @@ const ElementImages: ImageMap = {
 const ItemImages: ImageMap = {};
 appendImages(ItemImages, weaponInfo, './items/weapons');
 appendImages(ItemImages, artifactInfo, './items/artifacts');
+
+const ArtifactSetImages: ImageMap = {};
+appendImages(ArtifactSetImages, artifactSetInfo, './items/artifact-set');
 
 const GemImages: ImageMap = {
   Intertwined: require('./items/gem/Intertwined Fate.png'),
@@ -122,5 +126,6 @@ export {
   FieldMonsterDropItemImages,
   LocalSpecialityItemImages,
   CharacterAscentionItemImages,
-  CharacterTalentItemImages
+  CharacterTalentItemImages,
+  ArtifactSetImages
 };

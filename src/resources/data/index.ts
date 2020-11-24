@@ -130,6 +130,7 @@ interface ArtifactSet {
     FourPieceSet: string;
   };
 }
+const artifactSetInfo: ArtifactSet = require('../data/artifact-set-info.json');
 
 export interface CharacterTalentItem {
   [setName: string]: {
@@ -208,6 +209,7 @@ export {
   characterInfo,
   weaponInfo,
   artifactInfo,
+  artifactSetInfo,
   characterTalentItemInfo,
   weaponAscesionItemInfo,
   serverTimeInfo,

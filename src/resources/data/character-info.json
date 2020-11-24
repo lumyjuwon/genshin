@@ -1342,11 +1342,11 @@
     "recommendedEquip": {
       "artifact": {
         "first": {
-          "name": ["Retracting Bolide"],
+          "name": ["Retracing Bolide"],
           "set": 4
         },
         "second": {
-          "name": ["Retracting Bolide", "Maiden Beloved"],
+          "name": ["Retracing Bolide", "Maiden Beloved"],
           "set": 2
         }
       },
