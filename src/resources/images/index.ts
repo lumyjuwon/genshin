@@ -5,7 +5,8 @@ import {
   localSpecialityItemInfo,
   weeklyBossItemInfo,
   fieldMonsterDropItemInfo,
-  alchemyItemInfo
+  alchemyItemInfo,
+  travelerAscensionItemInfo
 } from '../data';
 
 export type ImageSrc = string | undefined;
@@ -89,6 +90,9 @@ const DailySetImages: ImageMap = {
   Aerosiderite: require('./items/daily-set/Aerosiderite.png')
 };
 
+const TravelerAscensionItemImages: ImageMap = {};
+appendImages(TravelerAscensionItemImages, travelerAscensionItemInfo, './items/traveler-ascension');
+
 const WeeklyBossItemImages: ImageMap = {};
 appendImages(WeeklyBossItemImages, weeklyBossItemInfo, './items/weekly-boss');
 
@@ -98,7 +102,7 @@ appendImages(FieldMonsterDropItemImages, fieldMonsterDropItemInfo, './items/fiel
 const LocalSpecialityItemImages: ImageMap = {};
 appendImages(LocalSpecialityItemImages, localSpecialityItemInfo, './items/local-speciality');
 
-const CharacterAscentionItemImages = Object.assign({}, FieldMonsterDropItemImages, LocalSpecialityItemImages);
+const CharacterAscentionItemImages = Object.assign({}, FieldMonsterDropItemImages, LocalSpecialityItemImages, TravelerAscensionItemImages);
 appendImages(CharacterAscentionItemImages, alchemyItemInfo, './items/character-ascension');
 
 const CharacterTalentItemImages = Object.assign({}, FieldMonsterDropItemImages, WeeklyBossItemImages, DailySetImages);
