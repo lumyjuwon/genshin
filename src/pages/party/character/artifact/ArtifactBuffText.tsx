@@ -49,6 +49,16 @@ function convertToArtifactsSetCountMap(artifacts: Artifacts): Map<string, number
   return artifactsCount;
 }
 
+function pushArtifactSetBuff(name: string, count: number, list: Array<string>) {
+  console.log(name);
+  if (count >= 2) {
+    list.push(trans(Lang[name.concat('_TwoPieceSet') as KeyLang]));
+  }
+  if (count >= 4) {
+    list.push(trans(Lang[name.concat('_FourPieceSet') as KeyLang]));
+  }
+}
+
 function getDescription(artifacts: Map<string, number>) {
   const descriptions: string[] = [];
 
@@ -102,7 +112,7 @@ function getDescription(artifacts: Map<string, number>) {
           descriptions.push(trans(Lang.Scholar_TwoPieceSet));
           break;
         case "Gladiator's Finale":
-          descriptions.push(trans(Lang.GladiatorOfFinaleFinale_TwoPieceSet));
+          descriptions.push(trans(Lang.GladiatorOfFinale_TwoPieceSet));
           break;
         case 'Maiden Beloved':
           descriptions.push(trans(Lang.MaidenBeloved_TwoPieceSet));
@@ -126,7 +136,7 @@ function getDescription(artifacts: Map<string, number>) {
           descriptions.push(trans(Lang.Thundersoother_TwoPieceSet));
           break;
         case 'Crimson Witch of Flames':
-          descriptions.push(trans(Lang.CrimsonWitchOfFlames_TwoPieceSet));
+          descriptions.push(trans(Lang.CrimsonWitchofFlames_TwoPieceSet));
           break;
         case 'Lavawalker':
           descriptions.push(trans(Lang.Lavawalker_TwoPieceSet));
@@ -182,7 +192,7 @@ function getDescription(artifacts: Map<string, number>) {
           descriptions.push(trans(Lang.Scholar_FourPieceSet));
           break;
         case "Gladiator's Finale":
-          descriptions.push(trans(Lang.GladiatorOfFinaleFinale_FourPieceSet));
+          descriptions.push(trans(Lang.GladiatorOfFinale_FourPieceSet));
           break;
         case 'Maiden Beloved':
           descriptions.push(trans(Lang.MaidenBeloved_FourPieceSet));
@@ -206,7 +216,7 @@ function getDescription(artifacts: Map<string, number>) {
           descriptions.push(trans(Lang.Thundersoother_FourPieceSet));
           break;
         case 'Crimson Witch of Flames':
-          descriptions.push(trans(Lang.CrimsonWitchOfFlames_FourPieceSet));
+          descriptions.push(trans(Lang.CrimsonWitchofFlames_FourPieceSet));
           break;
         case 'Lavawalker':
           descriptions.push(trans(Lang.Lavawalker_FourPieceSet));
