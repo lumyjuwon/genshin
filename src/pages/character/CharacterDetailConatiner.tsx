@@ -79,6 +79,7 @@ export function CharacterDetailConatiner(props: Props) {
             <Description>&nbsp;·&nbsp;</Description>
             <Description>{characterInfo[props.character].weapon}</Description>
           </FlexWrapper>
+          <Description>{characterInfo[props.character].position.join(', ')}</Description>
         </FlexWrapper>
       </CharacterIntro>
       <FlexWrapper styles={{ width: '100%', alignItems: 'flex-start', flexDirection: 'column' }}>
@@ -88,8 +89,6 @@ export function CharacterDetailConatiner(props: Props) {
         <CharacterTalentMaterials character={props.character} />
         {characterInfo[props.character].recommendedParty && <CharactrerRecommendedParty character={props.character} />}
         <CharactrerRecommendedEquip character={props.character} />
-        <Description>{characterInfo[props.character].position.join(', ')}</Description>
-        {/* Recommended Weapon */}
       </FlexWrapper>
       <TopButton />
     </Container>
