@@ -140,10 +140,10 @@
       "boss": "Ring of Boreas",
       "drop": "Divining Scroll"
     },
-    "position": ["Main_Dealer", "Support_Dealer"],
+    "position": ["Main_Dealer", "Sub_Dealer"],
     "tier": {
       "Main_Dealer": "T0",
-      "Support_Dealer": "T0"
+      "Sub_Dealer": "T0"
     }
   },
   "Keqing": {
@@ -548,9 +548,9 @@
       "boss": "Dvalin's Plume",
       "drop": "Damaged Mask"
     },
-    "position": ["Support_Dealer", "Supporter"],
+    "position": ["Sub_Dealer", "Supporter"],
     "tier": {
-      "Support_Dealer": "T1",
+      "Sub_Dealer": "T1",
       "Supporter": "T0"
     }
   },
@@ -787,9 +787,9 @@
       "boss": "Ring of Boreas",
       "drop": "Whopperflower Nectar"
     },
-    "position": ["Support_Dealer", "Supporter"],
+    "position": ["Sub_Dealer", "Supporter"],
     "tier": {
-      "Support_Dealer": "T0",
+      "Sub_Dealer": "T0",
       "Supporter": "T1"
     }
   },
@@ -907,9 +907,9 @@
       "boss": "Tail of Boreas",
       "drop": "Slime Condensate"
     },
-    "position": ["Support_Dealer", "Supporter"],
+    "position": ["Sub_Dealer", "Supporter"],
     "tier": {
-      "Support_Dealer": "T1",
+      "Sub_Dealer": "T1",
       "Supporter": "T0"
     }
   },
@@ -1161,9 +1161,9 @@
       "boss": "",
       "drop": ""
     },
-    "position": ["Support_Dealer", "Supporter"],
+    "position": ["Sub_Dealer", "Supporter"],
     "tier": {
-      "Support_Dealer": "T2",
+      "Sub_Dealer": "T2",
       "Supporter": "T2"
     }
   },
@@ -1782,10 +1782,10 @@
       "boss": "Dvalin's Claw",
       "drop": "Slime Condensate"
     },
-    "position": ["Main_Dealer", "Support_Dealer"],
+    "position": ["Main_Dealer", "Sub_Dealer"],
     "tier": {
       "Main_Dealer": "T3",
-      "Support_Dealer": "T3"
+      "Sub_Dealer": "T3"
     }
   },
   "Kaeya": {
@@ -1902,9 +1902,9 @@
       "boss": "Spirit Locket of Boreas",
       "drop": "Treasure Hoarder Insignia"
     },
-    "position": ["Support_Dealer"],
+    "position": ["Sub_Dealer"],
     "tier": {
-      "Support_Dealer": "T2"
+      "Sub_Dealer": "T2"
     }
   },
   "Fischl": {
@@ -2047,10 +2047,10 @@
       "boss": "Spirit Locket of Boreas",
       "drop": "Firm Arrowhead"
     },
-    "position": ["Main_Dealer", "Support_Dealer"],
+    "position": ["Main_Dealer", "Sub_Dealer"],
     "tier": {
       "Main_Dealer": "T1",
-      "Support_Dealer": "T1"
+      "Sub_Dealer": "T1"
     }
   },
   "Chongyun": {
@@ -2167,9 +2167,9 @@
       "boss": "Dvalin's Sigh",
       "drop": "Damaged Mask"
     },
-    "position": ["Support_Dealer", "Supporter"],
+    "position": ["Sub_Dealer", "Supporter"],
     "tier": {
-      "Support_Dealer": "T1",
+      "Sub_Dealer": "T1",
       "Supporter": "T2"
     }
   },
@@ -2287,9 +2287,9 @@
       "boss": "Dvalin's Plume",
       "drop": "Treasure Hoarder Insignia"
     },
-    "position": ["Support_Dealer", "Supporter"],
+    "position": ["Sub_Dealer", "Supporter"],
     "tier": {
-      "Support_Dealer": "T2",
+      "Sub_Dealer": "T2",
       "Supporter": "T0"
     }
   },
@@ -2407,10 +2407,10 @@
       "boss": "Dvalin's Sigh",
       "drop": "Treasure Hoarder Insignia"
     },
-    "position": ["Main_Dealer", "Support_Dealer"],
+    "position": ["Main_Dealer", "Sub_Dealer"],
     "tier": {
       "Main_Dealer": "T2",
-      "Support_Dealer": "T3"
+      "Sub_Dealer": "T3"
     }
   },
   "Barbara": {
@@ -2523,9 +2523,9 @@
       "boss": "Ring of Boreas",
       "drop": "Divining Scroll"
     },
-    "position": ["Support_Dealer", "Supporter"],
+    "position": ["Sub_Dealer", "Supporter"],
     "tier": {
-      "Support_Dealer": "T2",
+      "Sub_Dealer": "T2",
       "Supporter": "T1"
     }
   },
@@ -2643,9 +2643,9 @@
       "boss": "Dvalin's Sigh",
       "drop": "Firm Arrowhead"
     },
-    "position": ["Support_Dealer"],
+    "position": ["Sub_Dealer"],
     "tier": {
-      "Support_Dealer": "T3"
+      "Sub_Dealer": "T3"
     }
   }, 
   "Sucrose": {
@@ -2762,9 +2762,9 @@
       "boss": "Spirit Locket of Boreas",
       "drop": "Whopperflower Nectar"
     },
-    "position": ["Support_Dealer", "Supporter"],
+    "position": ["Sub_Dealer", "Supporter"],
     "tier": {
-      "Support_Dealer": "T2",
+      "Sub_Dealer": "T2",
       "Supporter": "T1"
     }
   },
@@ -2882,10 +2882,10 @@
       "boss": "Dvalin's Claw",
       "drop": "Slime Condensate"
     },
-    "position": ["Main_Dealer", "Support_Dealer"],
+    "position": ["Main_Dealer", "Sub_Dealer"],
     "tier": {
       "Main_Dealer": "T2",
-      "Support_Dealer": "T1"
+      "Sub_Dealer": "T1"
     }
   },
   "Xingqiu": {
