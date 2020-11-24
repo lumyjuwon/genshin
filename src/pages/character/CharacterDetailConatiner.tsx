@@ -9,6 +9,7 @@ import { CharacterStat } from './details/CharacterStat';
 import { CharacterAscensionMaterials } from './details/CharacterAscensionMaterials';
 import { CharacterTalentMaterials } from './details/CharacterTalentMaterials';
 import { CharactrerRecommendedParty } from './details/CharacterRecommendedParty';
+import { CharactrerRecommendedEquip } from './details/CharacterRecommendedEquip';
 
 interface Props {
   character: string;
@@ -86,8 +87,8 @@ export function CharacterDetailConatiner(props: Props) {
         <CharacterAscensionMaterials character={props.character} />
         <CharacterTalentMaterials character={props.character} />
         {characterInfo[props.character].recommendedParty && <CharactrerRecommendedParty character={props.character} />}
+        <CharactrerRecommendedEquip character={props.character} />
         <Description>{characterInfo[props.character].position.join(', ')}</Description>
-        {/* Recommended Artifact */}
         {/* Recommended Weapon */}
       </FlexWrapper>
       <TopButton />
