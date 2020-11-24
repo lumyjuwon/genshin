@@ -112,6 +112,13 @@ appendImages(CharacterAscentionItemImages, alchemyItemInfo, './items/character-a
 const CharacterTalentItemImages = Object.assign({}, FieldMonsterDropItemImages, WeeklyBossItemImages, DailySetImages);
 appendImages(CharacterTalentItemImages, alchemyItemInfo, './items/character-ascension');
 
+const TierImages: ImageMap = {
+  T0: require('./tier/T0.png'),
+  T1: require('./tier/T1.png'),
+  T2: require('./tier/T2.png'),
+  T3: require('./tier/T3.png')
+};
+
 export {
   CharacterImages,
   ElementImages,
@@ -127,5 +134,6 @@ export {
   LocalSpecialityItemImages,
   CharacterAscentionItemImages,
   CharacterTalentItemImages,
-  ArtifactSetImages
+  ArtifactSetImages,
+  TierImages
 };
