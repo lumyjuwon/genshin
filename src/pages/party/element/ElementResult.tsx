@@ -23,10 +23,10 @@ export function ElementResult() {
   const characters: PartyData = useSelector<RootState, any>((state) => state.party.partyData);
 
   function getActiveElements(data: PartyData) {
-    let activeElemts: Map<string, number> = new Map();
+    const activeElemts: Map<string, number> = new Map();
 
     Object.keys(data).forEach((character) => {
-      let element: string = characterInfo[character].element;
+      const element: string = characterInfo[character].element;
       if (activeElemts.has(element)) {
         // @ts-ignore Check Has
         activeElemts.set(element, activeElemts.get(element) + 1);
