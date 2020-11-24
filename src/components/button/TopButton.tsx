@@ -19,6 +19,10 @@ const Button = styled.div`
     transform: translateY(-8px);
     transition: 0.3s ease 0s;
   }
+  @media screen and (max-width: 768px) {
+    padding: 20px 10px;
+    font-size: 16px;
+  }
 `;
 
 export function TopButton() {
