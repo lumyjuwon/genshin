@@ -976,7 +976,7 @@
         "party": ["Tartaglia", "Xiangling", "Sucrose", "Jean"]
       },
       "recom2": {
-        "party": ["Tartaglia", "Xiangling", "Traveler(Geo)", "Sucrose"],
+        "party": ["Tartaglia", "Xiangling", "Traveler (Geo)", "Sucrose"],
         "alter": {
           "Sucrose": ["Venti", "Jean"]
         }
@@ -1487,7 +1487,7 @@
           "set": 4
         },
         "second": {
-          "name": "Thundersoother",
+          "name": ["Thundersoother"],
           "set": 4
         }
       },
