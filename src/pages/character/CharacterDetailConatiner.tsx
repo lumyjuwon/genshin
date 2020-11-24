@@ -119,7 +119,7 @@ export function CharacterDetailConatiner(props: Props) {
         {characterInfo[props.character].recommendedParty && <CharactrerRecommendedParty character={props.character} />}
         <CharactrerRecommendedEquip character={props.character} />
       </FlexWrapper>
-      {/* <TopButton /> */}
+      <TopButton />
     </Container>
   );
 }

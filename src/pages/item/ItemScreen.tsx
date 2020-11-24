@@ -31,7 +31,7 @@ export function ItemScreen(props: Props) {
           <LocalContainer />
         </Inner>
       </ContentWrapper>
-      {/* <TopButton /> */}
+      <TopButton />
     </>
   );
 }
