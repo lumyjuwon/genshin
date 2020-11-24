@@ -5,6 +5,7 @@ import { Layout } from './Layout';
 import { CharacterImages, ElementImages } from 'src/resources/images';
 import { FlexWrapper, ItemBadgeBox, RoundImage, GridWrapper } from 'src/components';
 import { characterInfo } from 'src/resources/data';
+import { trans, Lang, KeyLang } from 'src/resources/languages';
 
 const PartyName = styled.div({
   width: '100%',
@@ -43,7 +44,7 @@ export function CharactrerRecommendedParty(props: Props) {
 
   if (recommendedParties) {
     return (
-      <Layout title="Recommended Party">
+      <Layout title={trans(Lang.Recommended_Party)}>
         <FlexWrapper styles={{ width: '100%', flexDirection: 'column' }}>
           {Object.keys(recommendedParties).map((partyName: string, index: number) => {
             const alterCharacter = recommendedParties[partyName].alter;

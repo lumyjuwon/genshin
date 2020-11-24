@@ -9,9 +9,8 @@ import { Layout } from './Layout';
 
 const Name = styled.div({
   fontSize: '16px',
-  '@media screen and (max-width: 768px)': {
-    fontSize: '14px'
-  }
+  margin: '5px 0 0',
+  fontWeight: 'bold'
 });
 
 interface Props {
@@ -32,7 +31,7 @@ export function CharacterTalentMaterials(props: Props) {
   }
 
   return (
-    <Layout title="Character Talent Materials">
+    <Layout title={trans(Lang.Character_Talent_Material)}>
       <FlexWrapper styles={{ width: '100%', small: { width: '100%', flexDirection: 'column' } }}>
         <FlexWrapper styles={{ flexDirection: 'column', margin: '10px 20px' }}>
           {talentInfo.book ? (
@@ -41,35 +40,43 @@ export function CharacterTalentMaterials(props: Props) {
                 <>
                   {Object.keys(characterTalentItemInfo[talentInfo.book].items).map((item) => {
                     return (
-                      <RoundImage
-                        key={item}
-                        src={require(`../../../resources/images/items/character-talent/${item}.png`)}
-                        styles={{ width: '60px', height: '60px' }}
-                      />
+                      <FlexWrapper styles={{ margin: '3px' }}>
+                        <RoundImage
+                          key={item}
+                          src={require(`../../../resources/images/items/character-talent/${item}.png`)}
+                          styles={{ width: '60px', height: '60px' }}
+                        />
+                      </FlexWrapper>
                     );
                   })}
                 </>
               </FlexWrapper>
-              <Name>{talentInfo.book}</Name>
+              <Name>{trans(Lang[talentInfo.book as KeyLang])}</Name>
             </>
           ) : (
-            <Name>None</Name>
+            <Name>{trans(Lang.None)}</Name>
           )}
         </FlexWrapper>
         <FlexWrapper styles={{ flexDirection: 'column', margin: '10px 20px' }}>
           <FlexWrapper>
-            <RoundImage src={CharacterTalentItemImages[talentInfo.drop]} styles={{ width: '60px', height: '60px' }} />
+            <FlexWrapper styles={{ margin: '3px' }}>
+              <RoundImage src={CharacterTalentItemImages[talentInfo.drop]} styles={{ width: '60px', height: '60px' }} />
+            </FlexWrapper>
             <>
               {getArchemyItems(talentInfo.drop).map((item) => {
-                return <RoundImage key={item} src={CharacterTalentItemImages[item]} styles={{ width: '60px', height: '60px' }} />;
+                return (
+                  <FlexWrapper styles={{ margin: '3px' }}>
+                    <RoundImage key={item} src={CharacterTalentItemImages[item]} styles={{ width: '60px', height: '60px' }} />
+                  </FlexWrapper>
+                );
               })}
             </>
           </FlexWrapper>
-          <Name>{talentInfo.drop}</Name>
+          <Name>{trans(Lang[talentInfo.drop.replace(/'/g, '').replace(/\s/g, '_') as KeyLang])}</Name>
         </FlexWrapper>
         <FlexWrapper styles={{ flexDirection: 'column', margin: '10px 20px' }}>
           <RoundImage src={CharacterTalentItemImages[talentInfo.boss]} styles={{ width: '60px', height: '60px' }} />
-          <Name>{talentInfo.boss}</Name>
+          <Name>{trans(Lang[talentInfo.boss.replace(/'/g, '').replace(/\s/g, '_') as KeyLang])}</Name>
         </FlexWrapper>
       </FlexWrapper>
     </Layout>

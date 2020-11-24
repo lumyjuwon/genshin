@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Layout } from './Layout';
-import { FlexWrapper } from 'src/components';
+import { FlexWrapper, CharacterStatRegexText } from 'src/components';
 import { characterInfo, Level } from 'src/resources/data';
+import { trans, Lang, KeyLang } from 'src/resources/languages';
 
 const Container = styled.div({
   width: '100%'
@@ -74,24 +75,32 @@ export function CharacterStat(props: Props) {
   const characterAscensionLevel = Object.keys(characterInfo[props.character].stats);
 
   return (
-    <Layout title="Character Stat">
+    <Layout title={trans(Lang.Character_Stat)}>
       <Container>
         <Inner>
-          <MaxLevelBox>Max Level</MaxLevelBox>
-          <LevelBox>Level</LevelBox>
-          <AdditionBox>Stat</AdditionBox>
+          <MaxLevelBox>{trans(Lang.Max_Level)}</MaxLevelBox>
+          <LevelBox>{trans(Lang.Level)}</LevelBox>
+          <AdditionBox>{trans(Lang.Stat)}</AdditionBox>
         </Inner>
         <Line />
         {characterAscensionLevel.map((level) => {
           return (
             <Inner key={level}>
-              <MaxLevelBox>{level}</MaxLevelBox>
+              <MaxLevelBox>{trans(Lang[level as KeyLang])}</MaxLevelBox>
               <LevelBox>{characterInfo[props.character].stats[level as Level].Level}</LevelBox>
               <FlexWrapper styles={{ flexDirection: 'column' }}>
-                <StatBox>HP: {characterInfo[props.character].stats[level as Level].HP}</StatBox>
-                <StatBox>DEF: {characterInfo[props.character].stats[level as Level].DEF}</StatBox>
-                <StatBox>ATK: {characterInfo[props.character].stats[level as Level].ATK}</StatBox>
-                <AdditionBox>{characterInfo[props.character].stats[level as Level].Additional}</AdditionBox>
+                <StatBox>
+                  {trans(Lang.HP)}: {characterInfo[props.character].stats[level as Level].HP}
+                </StatBox>
+                <StatBox>
+                  {trans(Lang.DEF)}: {characterInfo[props.character].stats[level as Level].DEF}
+                </StatBox>
+                <StatBox>
+                  {trans(Lang.ATK)}: {characterInfo[props.character].stats[level as Level].ATK}
+                </StatBox>
+                <AdditionBox>
+                  <CharacterStatRegexText>{characterInfo[props.character].stats[level as Level].Additional}</CharacterStatRegexText>
+                </AdditionBox>
               </FlexWrapper>
             </Inner>
           );

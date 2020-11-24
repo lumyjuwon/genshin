@@ -3,9 +3,10 @@ import styled from 'styled-components';
 
 import { Layout } from './Layout';
 import { CharacterImages, ElementImages, ArtifactSetImages, ItemImages } from 'src/resources/images';
-import { FlexWrapper, RoundImage } from 'src/components';
+import { BoxModelWrapper, FlexWrapper, RoundImage } from 'src/components';
 import { characterInfo, artifactSetInfo, weaponInfo } from 'src/resources/data';
 import { KeyLang, trans, Lang } from 'src/resources/languages';
+import { RegexColorText } from 'src/components/text/RegexColorText';
 
 const FlexBox = styled.div({
   display: 'flex',
@@ -37,13 +38,14 @@ const Name = styled.div({
   }
 });
 
-const BuffText = styled.div({
-  margin: '3px 0 0',
-  textAlign: 'center'
-});
-
 const Line = styled.hr({
   width: '100%'
+});
+
+const BuffText = styled.div({
+  margin: '3px 0 0',
+  textAlign: 'center',
+  wordBreak: 'keep-all'
 });
 
 const StarEmoji = styled.span({
@@ -79,14 +81,16 @@ export function CharactrerRecommendedEquip(props: Props) {
   }
 
   return (
-    <Layout title="Recommended Equipments">
+    <Layout title={trans(Lang.Recommended_Equip)}>
       <FlexWrapper styles={{ width: '100%', small: { width: '100%', flexDirection: 'column' } }}>
         <FlexBox>
           {Object.keys(recommendedEquipInfo.artifact).map((info, index) => {
             const artifactBuff: Array<string> = [];
             return (
               <FlexWrapper styles={{ flexDirection: 'column', margin: '20px 0 0', width: '100%' }}>
-                <ListName>Recommended Aritfact #{index + 1}</ListName>
+                <ListName>
+                  {trans(Lang.Recommended_Artifact)} #{index + 1}
+                </ListName>
                 <Line />
                 <>
                   {recommendedEquipInfo.artifact[info].name.map((set) => {
@@ -95,17 +99,23 @@ export function CharactrerRecommendedEquip(props: Props) {
                     return (
                       <>
                         <RoundImage src={ArtifactSetImages[replacedName]} styles={{ width: '70px', height: '70px' }} />
-                        <Name>{set}</Name>
+                        <Name>{trans(Lang[set.replace(/'s/g, 'Of').replace(/\s/g, '') as KeyLang])}</Name>
                         <div>Set: {recommendedEquipInfo.artifact[info].set}</div>
                       </>
                     );
                   })}
                 </>
                 <FlexWrapper styles={{ flexDirection: 'column', margin: '5px 0 0' }}>
-                  <div>Effect</div>
+                  <div>{trans(Lang.Artifact_Effect)}</div>
                   <>
                     {artifactBuff.map((buff) => {
-                      return <BuffText>{buff}</BuffText>;
+                      return (
+                        <BuffText>
+                          <RegexColorText regex={/\d+%/g} color={'red'} isBold>
+                            {buff}
+                          </RegexColorText>
+                        </BuffText>
+                      );
                     })}
                   </>
                 </FlexWrapper>
@@ -117,11 +127,13 @@ export function CharactrerRecommendedEquip(props: Props) {
           {recommendedEquipInfo.weapon.map((item: string, index) => {
             return (
               <FlexWrapper styles={{ flexDirection: 'column', margin: '20px 0 0', width: '100%', small: { width: '100%' } }}>
-                <ListName>Recommended Weapon #{index + 1}</ListName>
+                <ListName>
+                  {trans(Lang.Recommended_Weapon)} #{index + 1}
+                </ListName>
                 <Line />
                 <RoundImage src={ItemImages[item]} styles={{ width: '80px', height: '80px' }} />
                 <StarEmoji role="img">{'⭐'.repeat(weaponInfo[item].rank)}</StarEmoji>
-                <Name>{item}</Name>
+                <Name>{trans(Lang[item.replace(/\s/g, '_').replace(/'/g, '') as KeyLang])}</Name>
               </FlexWrapper>
             );
           })}

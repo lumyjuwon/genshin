@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { FlexWrapper, ItemBadgeBox, RoundImage, TopButton } from 'src/components';
 import { CharacterImages, ElementImages, TierImages } from 'src/resources/images';
 import { characterInfo } from 'src/resources/data';
-import {} from 'src/resources/languages';
+import { trans, Lang, KeyLang } from 'src/resources/languages';
 import { CharacterStat } from './details/CharacterStat';
 import { CharacterAscensionMaterials } from './details/CharacterAscensionMaterials';
 import { CharacterTalentMaterials } from './details/CharacterTalentMaterials';
@@ -93,17 +93,17 @@ export function CharacterDetailConatiner(props: Props) {
           isBadgeVisible={true}
         />
         <FlexWrapper styles={{ flexDirection: 'column', margin: '0 0 0 20px', alignItems: 'flex-start' }}>
-          <Name>{props.character}</Name>
+          <Name>{trans(Lang[props.character as KeyLang])}</Name>
           <FlexWrapper>
-            <Description>{characterInfo[props.character].region}</Description>
+            <Description>{trans(Lang[characterInfo[props.character].region as KeyLang])}</Description>
             <Description>&nbsp;·&nbsp;</Description>
-            <Description>{characterInfo[props.character].weapon}</Description>
+            <Description>{trans(Lang[characterInfo[props.character].weapon as KeyLang])}</Description>
           </FlexWrapper>
           <>
             {characterInfo[props.character].position.map((position) => {
               return (
                 <FlexWrapper styles={{ margin: '3px 0 0' }}>
-                  <Position>{position}</Position>
+                  <Position>{trans(Lang[position as KeyLang])}</Position>
                   <RoundImage src={TierImages[characterInfo[props.character].tier[position]]} styles={{ width: '30px', height: '30px' }} />
                 </FlexWrapper>
               );
