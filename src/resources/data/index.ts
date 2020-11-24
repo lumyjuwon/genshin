@@ -195,6 +195,14 @@ interface FieldMonsterDropItem {
 }
 const fieldMonsterDropItemInfo: FieldMonsterDropItem = require('../data/field-monster-drop-item.json');
 
+interface TravelerAscensionItem {
+  [name: string]: {
+    rank: number;
+    obtain: Array<string>;
+  };
+}
+const travelerAscensionItemInfo: TravelerAscensionItem = require('../data/traveler-ascension-item.json');
+
 export {
   gachaInfo,
   characterInfo,
@@ -206,5 +214,6 @@ export {
   localSpecialityItemInfo,
   alchemyItemInfo,
   weeklyBossItemInfo,
-  fieldMonsterDropItemInfo
+  fieldMonsterDropItemInfo,
+  travelerAscensionItemInfo
 };
