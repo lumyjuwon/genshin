@@ -1060,7 +1060,7 @@
     "rank": 5,
     "element": "Anemo",
     "weapon": "Sword",
-    "region": "unknown",
+    "region": "Unknown",
     "stats": {
       "Max_20": {
         "Level": "20",
@@ -1171,7 +1171,7 @@
     "rank": 5,
     "element": "Geo",
     "weapon": "Sword",
-    "region": "unknown",
+    "region": "Unknown",
     "stats": {
       "Max_20": {
         "Level": "20",
