@@ -26,10 +26,6 @@ const Count = styled.div({
   }
 });
 
-const Line = styled.hr({
-  width: '100%'
-});
-
 interface Props {
   character: string;
 }
@@ -58,7 +54,7 @@ export function CharacterAscensionMaterials(props: Props) {
   }
   return (
     <Layout title={trans(Lang.Character_Ascension_Material)}>
-      <BoxModelWrapper styles={{ small: { padding: '0 20px' } }}>
+      <BoxModelWrapper styles={{ small: { padding: '0 10px' } }}>
         <FlexWrapper styles={{ width: '100%', flexDirection: 'column', small: { width: '100%' } }}>
           <FlexWrapper styles={{ small: { width: '100%' } }}>
             <MaxLevel>{trans(Lang.Ascension_Step)}</MaxLevel>
@@ -66,11 +62,10 @@ export function CharacterAscensionMaterials(props: Props) {
               {trans(Lang.Material)}
             </GridWrapper>
           </FlexWrapper>
-          <Line />
           <>
             {Object.values(AscensionStep).map((step: Step) => {
               return (
-                <FlexWrapper key={step} styles={{ margin: '10px 0 0', small: { width: '100%' } }}>
+                <FlexWrapper key={step} styles={{ margin: '10px 0 0', padding: '5px', small: { width: '100%' } }}>
                   <MaxLevel>{trans(Lang[step as KeyLang])}</MaxLevel>
                   <GridWrapper styles={{ width: '500px', medium: { width: '450px' }, small: { width: '100%' } }}>
                     {getAscensionItems(AscensionStep[step]).map((item: AscensionMaterialName) => {

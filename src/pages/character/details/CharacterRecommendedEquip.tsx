@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Layout } from './Layout';
-import { CharacterImages, ElementImages, ArtifactSetImages, ItemImages } from 'src/resources/images';
-import { BoxModelWrapper, FlexWrapper, RoundImage } from 'src/components';
-import { characterInfo, artifactSetInfo, weaponInfo } from 'src/resources/data';
+import { ArtifactSetImages, ItemImages } from 'src/resources/images';
+import { FlexWrapper, RoundImage } from 'src/components';
+import { characterInfo, weaponInfo } from 'src/resources/data';
 import { KeyLang, trans, Lang } from 'src/resources/languages';
 import { RegexColorText } from 'src/components/text/RegexColorText';
 
@@ -36,10 +36,6 @@ const Name = styled.div({
   '@media screen and (max-width: 768px)': {
     fontSize: '16px'
   }
-});
-
-const Line = styled.hr({
-  width: '100%'
 });
 
 const BuffText = styled.div({
@@ -91,7 +87,6 @@ export function CharactrerRecommendedEquip(props: Props) {
                 <ListName>
                   {trans(Lang.Recommended_Artifact)} #{index + 1}
                 </ListName>
-                <Line />
                 <>
                   {recommendedEquipInfo.artifact[info].name.map((set) => {
                     const replacedName = set.replace(/\s/g, '').replace(/'s/g, 'Of');
@@ -130,7 +125,6 @@ export function CharactrerRecommendedEquip(props: Props) {
                 <ListName>
                   {trans(Lang.Recommended_Weapon)} #{index + 1}
                 </ListName>
-                <Line />
                 <RoundImage src={ItemImages[item]} styles={{ width: '80px', height: '80px' }} />
                 <StarEmoji role="img">{'⭐'.repeat(weaponInfo[item].rank)}</StarEmoji>
                 <Name>{trans(Lang[item.replace(/\s/g, '_').replace(/'/g, '') as KeyLang])}</Name>

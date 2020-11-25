@@ -18,6 +18,7 @@ interface DivProps {
   readonly alignItems?: string;
   readonly width?: string;
   readonly margin?: string;
+  readonly padding?: string;
   readonly medium?: {
     readonly flexDirection?:
       | 'inherit'
@@ -33,6 +34,7 @@ interface DivProps {
     readonly width?: string;
     readonly justifyContent?: string;
     readonly alignItems?: string;
+    readonly padding?: string;
   };
   readonly small?: {
     readonly flexDirection?:
@@ -50,6 +52,7 @@ interface DivProps {
     readonly alignItems?: string;
     readonly justifyContent?: string;
     readonly margin?: string;
+    readonly padding?: string;
   };
 }
 
@@ -61,18 +64,21 @@ const FlexDiv = styled.div<DivProps>((props: DivProps) => {
     alignItems: props.alignItems || 'center',
     width: props.width || 'auto',
     margin: props.margin || '0',
+    padding: props.padding || '0',
     '@media screen and (max-width: 1380px)': {
       flexDirection: props.medium?.flexDirection || props.flexDirection || 'row',
       width: props.medium?.width || props.width || 'auto',
       justifyContent: props.medium?.justifyContent || props.justifyContent || 'center',
-      alignItems: props.medium?.alignItems || props.alignItems || 'center'
+      alignItems: props.medium?.alignItems || props.alignItems || 'center',
+      padding: props.medium?.padding || props.padding || '0px'
     },
     '@media screen and (max-width: 768px)': {
       flexDirection: props.small?.flexDirection || props.flexDirection || 'row',
       width: props.small?.width || props.width || 'auto',
       alignItems: props.small?.alignItems || props.alignItems || 'center',
       justifyContent: props.small?.justifyContent || props.justifyContent || 'center',
-      margin: props.small?.margin || props.margin || '0'
+      margin: props.small?.margin || props.margin || '0',
+      padding: props.small?.padding || props.padding || '0px'
     }
   };
 });

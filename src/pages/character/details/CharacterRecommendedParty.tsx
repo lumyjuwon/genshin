@@ -50,7 +50,9 @@ export function CharactrerRecommendedParty(props: Props) {
             const alterCharacter = recommendedParties[partyName].alter;
             return (
               <FlexWrapper key={partyName} styles={{ flexDirection: 'column', margin: '30px 0 0' }}>
-                <PartyName>Recommended Party #{index + INDEX_BEAUTIFY}</PartyName>
+                <PartyName>
+                  {trans(Lang.Recommended_Party)} #{index + INDEX_BEAUTIFY}
+                </PartyName>
                 <GridWrapper styles={{ width: '100%', medium: { width: '100%' }, small: { width: '100%' } }}>
                   {recommendedParties[partyName].party.map((character) => {
                     return (
@@ -88,7 +90,7 @@ export function CharactrerRecommendedParty(props: Props) {
                 <>
                   {alterCharacter && (
                     <>
-                      <AlterText>Alternatives</AlterText>
+                      <AlterText>{trans(Lang.Alternative)}</AlterText>
                       <FlexWrapper styles={{ flexDirection: 'column', margin: '5px 0 0' }}>
                         {Object.keys(alterCharacter).map((character) => {
                           return (

@@ -63,10 +63,6 @@ const AdditionBox = styled.div({
   }
 });
 
-const Line = styled.hr({
-  width: '90%'
-});
-
 interface Props {
   character: string;
 }
@@ -82,13 +78,12 @@ export function CharacterStat(props: Props) {
           <LevelBox>{trans(Lang.Level)}</LevelBox>
           <AdditionBox>{trans(Lang.Stat)}</AdditionBox>
         </Inner>
-        <Line />
         {characterAscensionLevel.map((level) => {
           return (
             <Inner key={level}>
               <MaxLevelBox>{trans(Lang[level as KeyLang])}</MaxLevelBox>
               <LevelBox>{characterInfo[props.character].stats[level as Level].Level}</LevelBox>
-              <FlexWrapper styles={{ flexDirection: 'column' }}>
+              <FlexWrapper styles={{ flexDirection: 'column', padding: '5px' }}>
                 <StatBox>
                   {trans(Lang.HP)}: {characterInfo[props.character].stats[level as Level].HP}
                 </StatBox>
