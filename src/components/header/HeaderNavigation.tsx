@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import { useHistory } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
 
 import { FlexWrapper } from 'src/components';
 import { HeaderMenu } from './HeaderMenu';
@@ -42,12 +44,23 @@ const NavList = styled.div({
   }
 });
 
+const enterPathName = createBrowserHistory().location.pathname;
+
 interface Props {
   navs: Navs;
   onClick?: Function;
 }
 
 export const HeaderNavigation = React.forwardRef<HTMLDivElement, Props>((props, forwardedRef) => {
+  const [selectedNavPath, setSelectedNavPath] = useState<string>(enterPathName);
+  const history = useHistory();
+
+  useEffect(() => {
+    history.listen((location) => {
+      setSelectedNavPath(location.pathname);
+    });
+  }, [history, props.navs]);
+
   return (
     <Navigation ref={forwardedRef}>
       <NavList>
@@ -61,7 +74,7 @@ export const HeaderNavigation = React.forwardRef<HTMLDivElement, Props>((props, 
                     key={navName}
                     link={nav.path}
                     title={nav.title}
-                    isSelected={window.sessionStorage.getItem('nav') === nav.path}
+                    isSelected={selectedNavPath === nav.path}
                     onClick={props.onClick}
                   />
                 );

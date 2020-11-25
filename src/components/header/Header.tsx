@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 
+import { useHandleClickOutside } from 'src/components';
+
 import { HeaderNavigation, Navs } from './HeaderNavigation';
 import { MainLogo } from './MainLogo';
-import { useHandleClickOutside } from 'src/components';
-import { useHistory } from 'react-router-dom';
 
 const HeaderOuter = styled.header({
   borderBottom: '1px solid #515253',
@@ -43,22 +43,10 @@ interface Props {
   navs: Navs;
 }
 
-const MAIN_NAV_INDEX = 1;
-
 export function Header(props: Props) {
   const [isNavVisible, setIsNavVisible] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const navigationRef = useRef<HTMLDivElement>(null);
-  const [selectedNavPath, setSelectedNavPath] = useState<string>(window.sessionStorage.getItem('nav') || '/');
-  const history = useHistory();
-
-  useEffect(() => {
-    history.listen((location) => {
-      setSelectedNavPath('/'.concat(location.pathname.split('/')[MAIN_NAV_INDEX]));
-    });
-  }, [history, props.navs]);
-
-  window.sessionStorage.setItem('nav', selectedNavPath);
 
   useEffect(() => {
     function handleResize() {
@@ -89,7 +77,7 @@ export function Header(props: Props) {
             setIsNavVisible(!isNavVisible);
           }}
         >
-          <i className="fas fa-bars"></i>
+          <i className='fas fa-bars'></i>
         </ToggleIcon>
       </HeaderInner>
     </HeaderOuter>
