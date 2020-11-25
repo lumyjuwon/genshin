@@ -663,7 +663,8 @@ enum Lang {
   Max_Level = 'Max_Level',
   Level = 'Level',
   Stat = 'Stat',
-  Unknown = 'Unknown'
+  Unknown = 'Unknown',
+  Alternative = 'Alternative'
 }
 
 export type KeyLang = keyof typeof Lang;
