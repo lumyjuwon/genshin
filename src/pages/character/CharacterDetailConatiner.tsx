@@ -102,7 +102,7 @@ export function CharacterDetailConatiner(props: Props) {
           <>
             {characterInfo[props.character].position.map((position) => {
               return (
-                <FlexWrapper styles={{ margin: '3px 0 0' }}>
+                <FlexWrapper key={position} styles={{ margin: '3px 0 0' }}>
                   <Position>{trans(Lang[position as KeyLang])}</Position>
                   <RoundImage src={TierImages[characterInfo[props.character].tier[position]]} styles={{ width: '30px', height: '30px' }} />
                 </FlexWrapper>

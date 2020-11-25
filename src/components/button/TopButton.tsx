@@ -34,7 +34,6 @@ export function TopButton() {
   }
 
   function scrollFunction() {
-    console.log('scroll');
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
       setIsButtonVisible(true);
     } else {
@@ -48,7 +47,6 @@ export function TopButton() {
   window.onload = function () {
     scrollFunction();
   };
-  console.log(isButtonVisible);
 
   return (
     <>

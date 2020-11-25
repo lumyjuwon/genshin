@@ -121,6 +121,7 @@ export function Menu(props: Props) {
       const link = document.createElement('a');
       link.href = canvans.toDataURL();
       link.download = InputRef.current?.value !== '' ? `${InputRef.current?.value}.png` : 'Party.png';
+      console.log();
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);

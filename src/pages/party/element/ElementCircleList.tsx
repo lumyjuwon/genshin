@@ -59,6 +59,7 @@ export function ElementCircleList(props: Props) {
   return (
     <ElementLayout>
       {Object.keys(elements).map((element: string) => {
+        console.log(props.activeElements);
         return (
           <ElementCircle
             key={element}

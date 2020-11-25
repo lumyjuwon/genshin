@@ -17,7 +17,6 @@ export function CharacterScreen() {
         <Route exact path="/character" component={CharacterList} />
         {characters.map((name) => {
           const path = name.replace(/\s\(|\)|/g, '');
-          console.log('path', path);
           return <Route key={name} path={`/character/${path}`} render={() => <CharacterDetailConatiner character={name} />} />;
         })}
       </Switch>

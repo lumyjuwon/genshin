@@ -83,7 +83,7 @@ export function CharactrerRecommendedEquip(props: Props) {
           {Object.keys(recommendedEquipInfo.artifact).map((info, index) => {
             const artifactBuff: Array<string> = [];
             return (
-              <FlexWrapper styles={{ flexDirection: 'column', margin: '20px 0 0', width: '100%' }}>
+              <FlexWrapper key={info} styles={{ flexDirection: 'column', margin: '20px 0 0', width: '100%' }}>
                 <ListName>
                   {trans(Lang.Recommended_Artifact)} #{index + 1}
                 </ListName>
@@ -92,11 +92,11 @@ export function CharactrerRecommendedEquip(props: Props) {
                     const replacedName = set.replace(/\s/g, '').replace(/'s/g, 'Of');
                     pushArtifactSetBuff(replacedName, recommendedEquipInfo.artifact[info].set, artifactBuff);
                     return (
-                      <>
+                      <React.Fragment key={set}>
                         <RoundImage src={ArtifactSetImages[replacedName]} styles={{ width: '70px', height: '70px' }} />
                         <Name>{trans(Lang[set.replace(/'s/g, 'Of').replace(/\s/g, '') as KeyLang])}</Name>
                         <div>Set: {recommendedEquipInfo.artifact[info].set}</div>
-                      </>
+                      </React.Fragment>
                     );
                   })}
                 </>
@@ -105,7 +105,7 @@ export function CharactrerRecommendedEquip(props: Props) {
                   <>
                     {artifactBuff.map((buff) => {
                       return (
-                        <BuffText>
+                        <BuffText key={buff}>
                           <RegexColorText regex={/\d+%/g} color={'red'} isBold>
                             {buff}
                           </RegexColorText>
@@ -121,7 +121,7 @@ export function CharactrerRecommendedEquip(props: Props) {
         <FlexBox>
           {recommendedEquipInfo.weapon.map((item: string, index) => {
             return (
-              <FlexWrapper styles={{ flexDirection: 'column', margin: '20px 0 0', width: '100%', small: { width: '100%' } }}>
+              <FlexWrapper key={item} styles={{ flexDirection: 'column', margin: '20px 0 0', width: '100%', small: { width: '100%' } }}>
                 <ListName>
                   {trans(Lang.Recommended_Weapon)} #{index + 1}
                 </ListName>

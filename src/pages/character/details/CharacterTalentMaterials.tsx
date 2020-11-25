@@ -40,9 +40,8 @@ export function CharacterTalentMaterials(props: Props) {
                 <>
                   {Object.keys(characterTalentItemInfo[talentInfo.book].items).map((item) => {
                     return (
-                      <FlexWrapper styles={{ margin: '3px' }}>
+                      <FlexWrapper key={item} styles={{ margin: '3px' }}>
                         <RoundImage
-                          key={item}
                           src={require(`../../../resources/images/items/character-talent/${item}.png`)}
                           styles={{ width: '60px', height: '60px' }}
                         />
@@ -61,8 +60,8 @@ export function CharacterTalentMaterials(props: Props) {
                 <>
                   {getArchemyItems(talentInfo.drop).map((item) => {
                     return (
-                      <FlexWrapper styles={{ margin: '3px' }}>
-                        <RoundImage key={item} src={CharacterTalentItemImages[item]} styles={{ width: '60px', height: '60px' }} />
+                      <FlexWrapper key={item} styles={{ margin: '3px' }}>
+                        <RoundImage src={CharacterTalentItemImages[item]} styles={{ width: '60px', height: '60px' }} />
                       </FlexWrapper>
                     );
                   })}
