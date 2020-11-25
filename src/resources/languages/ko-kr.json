@@ -650,5 +650,6 @@
   "Material": "재료",
   "Max_Level": "최대 레벨",
   "Level": "레벨",
-  "Stat": "스탯"
+  "Stat": "스탯",
+  "Unknown": "알려지지 않음"
 }

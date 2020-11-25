@@ -649,5 +649,6 @@
   "Material": "Materials",
   "Max_Level": "Max Level",
   "Level": "Level",
-  "Stat": "Stat"
+  "Stat": "Stat",
+  "Unknown": "Unknown"
 }
