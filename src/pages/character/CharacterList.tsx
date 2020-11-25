@@ -14,6 +14,8 @@ const Container = styled.div({
   minHeight: '80vh',
   margin: '0 auto',
   flexFlow: 'wrap',
+  backgroundColor: '#313232',
+  borderRadius: '30px',
   '@media screen and (max-width: 1380px)': {
     width: '700px'
   },

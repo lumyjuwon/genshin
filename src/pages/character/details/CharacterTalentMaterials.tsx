@@ -32,10 +32,10 @@ export function CharacterTalentMaterials(props: Props) {
 
   return (
     <Layout title={trans(Lang.Character_Talent_Material)}>
-      <FlexWrapper styles={{ width: '100%', small: { width: '100%', flexDirection: 'column' } }}>
-        <FlexWrapper styles={{ flexDirection: 'column', margin: '10px 20px' }}>
-          {talentInfo.book ? (
-            <>
+      <FlexWrapper styles={{ small: { width: '100%', flexDirection: 'column' } }}>
+        {talentInfo.book ? (
+          <>
+            <FlexWrapper styles={{ flexDirection: 'column', margin: '10px 20px' }}>
               <FlexWrapper>
                 <>
                   {Object.keys(characterTalentItemInfo[talentInfo.book].items).map((item) => {
@@ -52,32 +52,34 @@ export function CharacterTalentMaterials(props: Props) {
                 </>
               </FlexWrapper>
               <Name>{trans(Lang[talentInfo.book as KeyLang])}</Name>
-            </>
-          ) : (
-            <Name>{trans(Lang.None)}</Name>
-          )}
-        </FlexWrapper>
-        <FlexWrapper styles={{ flexDirection: 'column', margin: '10px 20px' }}>
-          <FlexWrapper>
-            <FlexWrapper styles={{ margin: '3px' }}>
-              <RoundImage src={CharacterTalentItemImages[talentInfo.drop]} styles={{ width: '60px', height: '60px' }} />
             </FlexWrapper>
-            <>
-              {getArchemyItems(talentInfo.drop).map((item) => {
-                return (
-                  <FlexWrapper styles={{ margin: '3px' }}>
-                    <RoundImage key={item} src={CharacterTalentItemImages[item]} styles={{ width: '60px', height: '60px' }} />
-                  </FlexWrapper>
-                );
-              })}
-            </>
-          </FlexWrapper>
-          <Name>{trans(Lang[talentInfo.drop.replace(/'/g, '').replace(/\s/g, '_') as KeyLang])}</Name>
-        </FlexWrapper>
-        <FlexWrapper styles={{ flexDirection: 'column', margin: '10px 20px' }}>
-          <RoundImage src={CharacterTalentItemImages[talentInfo.boss]} styles={{ width: '60px', height: '60px' }} />
-          <Name>{trans(Lang[talentInfo.boss.replace(/'/g, '').replace(/\s/g, '_') as KeyLang])}</Name>
-        </FlexWrapper>
+            <FlexWrapper styles={{ flexDirection: 'column', margin: '10px 20px' }}>
+              <FlexWrapper>
+                <FlexWrapper styles={{ margin: '3px' }}>
+                  <RoundImage src={CharacterTalentItemImages[talentInfo.drop]} styles={{ width: '60px', height: '60px' }} />
+                </FlexWrapper>
+                <>
+                  {getArchemyItems(talentInfo.drop).map((item) => {
+                    return (
+                      <FlexWrapper styles={{ margin: '3px' }}>
+                        <RoundImage key={item} src={CharacterTalentItemImages[item]} styles={{ width: '60px', height: '60px' }} />
+                      </FlexWrapper>
+                    );
+                  })}
+                </>
+              </FlexWrapper>
+              <Name>{trans(Lang[talentInfo.drop.replace(/'/g, '').replace(/\s/g, '_') as KeyLang])}</Name>
+            </FlexWrapper>
+            <FlexWrapper styles={{ flexDirection: 'column', margin: '10px 20px' }}>
+              <FlexWrapper styles={{ margin: '3px' }}>
+                <RoundImage src={CharacterTalentItemImages[talentInfo.boss]} styles={{ width: '60px', height: '60px' }} />
+              </FlexWrapper>
+              <Name>{trans(Lang[talentInfo.boss.replace(/'/g, '').replace(/\s/g, '_') as KeyLang])}</Name>
+            </FlexWrapper>
+          </>
+        ) : (
+          <Name>{trans(Lang.None)}</Name>
+        )}
       </FlexWrapper>
     </Layout>
   );

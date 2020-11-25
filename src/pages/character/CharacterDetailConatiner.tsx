@@ -93,7 +93,7 @@ export function CharacterDetailConatiner(props: Props) {
           isBadgeVisible={true}
         />
         <FlexWrapper styles={{ flexDirection: 'column', margin: '0 0 0 20px', alignItems: 'flex-start' }}>
-          <Name>{trans(Lang[props.character as KeyLang])}</Name>
+          <Name>{trans(Lang[props.character.replace(/\s\(/g, '_').replace(/\)/g, '') as KeyLang])}</Name>
           <FlexWrapper>
             <Description>{trans(Lang[characterInfo[props.character].region as KeyLang])}</Description>
             <Description>&nbsp;·&nbsp;</Description>
