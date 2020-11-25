@@ -15,7 +15,8 @@ const HeaderNav = styled.div<HeaderNavProps>((props: HeaderNavProps) => {
       textShadow: '0 0 8px #f1f2f3, 0 0 15px #f1f2f3, 0 0 20px #f1f2f3',
       boxShadow: 'inset 0 -2px 0 #f1f2f3'
     },
-    boxShadow: props.isSelected ? 'inset 0 -2px 0 #f1f2f3' : ''
+    boxShadow: props.isSelected ? 'inset 0 -2px 0 #f1f2f3' : '',
+    textShadow: props.isSelected ? '0 0 8px #f1f2f3, 0 0 15px #f1f2f3, 0 0 20px #f1f2f3' : ''
   };
 });
 
