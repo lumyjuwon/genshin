@@ -6,6 +6,7 @@ import { CharacterImages, ElementImages } from 'src/resources/images';
 import { FlexWrapper, ItemBadgeBox, RoundImage, GridWrapper } from 'src/components';
 import { characterInfo } from 'src/resources/data';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
+import { Link } from 'react-router-dom';
 
 const PartyName = styled.div({
   width: '100%',
@@ -42,6 +43,10 @@ const INDEX_BEAUTIFY = 1;
 export function CharactrerRecommendedParty(props: Props) {
   const recommendedParties = characterInfo[props.character].recommendedParty;
 
+  function goToScrollTop() {
+    window.scroll(0, 0);
+  }
+
   if (recommendedParties) {
     return (
       <Layout title={trans(Lang.Recommended_Party)}>
@@ -55,35 +60,39 @@ export function CharactrerRecommendedParty(props: Props) {
                 </PartyName>
                 <GridWrapper styles={{ width: '100%', medium: { width: '100%' }, small: { width: '100%' } }}>
                   {recommendedParties[partyName].party.map((character) => {
+                    const path = character.replace(/\s\(|\)|/g, '');
                     return (
-                      <ItemBadgeBox
-                        key={character}
-                        badge={
-                          <RoundImage
-                            src={ElementImages[characterInfo[character].element]}
-                            styles={{
-                              width: '25px',
-                              height: '25px',
-                              small: {
+                      <Link to={`/character/${path}`}>
+                        <ItemBadgeBox
+                          key={character}
+                          badge={
+                            <RoundImage
+                              src={ElementImages[characterInfo[character].element]}
+                              styles={{
                                 width: '25px',
-                                height: '25px'
-                              }
-                            }}
-                          />
-                        }
-                        child={<RoundImage src={CharacterImages[character]} styles={{ width: '80px', height: '80px' }} />}
-                        styles={{
-                          boxStyles: { margin: '10px' },
-                          tooltipStyles: { bottom: '0', fontSize: '13px' }
-                        }}
-                        hoverInnerColor={'#f1f2f3'}
-                        tooltip={character}
-                        isActive={false}
-                        isHoverdToolTip={true}
-                        isToolTipVisible={true}
-                        isRankVisible={false}
-                        isBadgeVisible={true}
-                      />
+                                height: '25px',
+                                small: {
+                                  width: '25px',
+                                  height: '25px'
+                                }
+                              }}
+                            />
+                          }
+                          child={<RoundImage src={CharacterImages[character]} styles={{ width: '80px', height: '80px' }} />}
+                          onClick={() => goToScrollTop()}
+                          styles={{
+                            boxStyles: { margin: '10px' },
+                            tooltipStyles: { bottom: '0', fontSize: '13px' }
+                          }}
+                          hoverInnerColor={'#f1f2f3'}
+                          tooltip={character}
+                          isActive={true}
+                          isHoverdToolTip={true}
+                          isToolTipVisible={true}
+                          isRankVisible={false}
+                          isBadgeVisible={true}
+                        />
+                      </Link>
                     );
                   })}
                 </GridWrapper>

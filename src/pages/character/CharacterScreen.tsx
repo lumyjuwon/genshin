@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import { ContentWrapper } from 'src/components';
+import { ContentWrapper, ContentBackgroundBox } from 'src/components';
 import { PageHelmet } from 'src/components';
 import { CharacterList } from './CharacterList';
 import { characterInfo } from 'src/resources/data';
@@ -12,14 +12,16 @@ export function CharacterScreen() {
 
   return (
     <ContentWrapper>
-      <PageHelmet title={'Character'} description={'Desc'} />
-      <Switch>
-        <Route exact path="/character" component={CharacterList} />
-        {characters.map((name) => {
-          const path = name.replace(/\s\(|\)|/g, '');
-          return <Route key={name} path={`/character/${path}`} render={() => <CharacterDetailConatiner character={name} />} />;
-        })}
-      </Switch>
+      <ContentBackgroundBox backgroundColor="#2a2b2c">
+        <PageHelmet title={'Character'} description={'Desc'} />
+        <Switch>
+          <Route exact path="/character" component={CharacterList} />
+          {characters.map((name) => {
+            const path = name.replace(/\s\(|\)|/g, '');
+            return <Route key={name} path={`/character/${path}`} render={() => <CharacterDetailConatiner character={name} />} />;
+          })}
+        </Switch>
+      </ContentBackgroundBox>
     </ContentWrapper>
   );
 }
