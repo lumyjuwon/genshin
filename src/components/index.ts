@@ -12,6 +12,7 @@ export { FlexWrapper } from './wrapper/FlexWrapper';
 export { ContentWrapper } from './wrapper/ContentWrapper';
 export { BoxModelWrapper } from './wrapper/BoxModelWrapper';
 export { FocusWrapper } from './wrapper/FocusWrapper';
+export { CSSGridWrapper } from './wrapper/CSSGridWrapper';
 
 // Button Component
 export { TopButton } from './button/TopButton';

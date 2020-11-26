@@ -2,15 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { characterTalentItemInfo, weaponAscesionItemInfo } from 'src/resources/data';
-import { RoundImage, FlexWrapper, GridWrapper, ItemContentBox } from 'src/components';
+import { RoundImage, FlexWrapper, GridWrapper, ItemContentBox, CSSGridWrapper } from 'src/components';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
 import { Layout } from './Layout';
 
 const Description = styled.div({
   width: '100%',
   textAlign: 'center',
-  fontSize: '14px',
-  margin: '5px 0 0'
+  fontSize: '16px',
+  margin: '10px 0 0',
+  '@media screen and (max-width: 768px)': {
+    fontSize: '14px'
+  }
 });
 
 interface Props {}
@@ -18,19 +21,10 @@ interface Props {}
 export function DailyItem(props: Props) {
   return (
     <Layout title={trans(Lang.Daily_Abyssal_Items)}>
-      <GridWrapper styles={{ width: '100%', medium: { width: '100%' }, small: { width: '100%' } }}>
-        {Object.keys(characterTalentItemInfo).map((set) => {
-          return (
-            <FlexWrapper
-              key={set}
-              styles={{
-                flexDirection: 'column',
-                width: '300px',
-                margin: '15px 10px 0',
-                medium: { width: '240px' },
-                small: { width: '240px' }
-              }}
-            >
+      <CSSGridWrapper styles={{ gridTemplateColumns: 'repeat(auto-fit, 300px)', columnGap: '20px' }}>
+        <>
+          {Object.keys(characterTalentItemInfo).map((set) => {
+            return (
               <ItemContentBox
                 image={
                   <FlexWrapper>
@@ -55,21 +49,10 @@ export function DailyItem(props: Props) {
                 <Description>{characterTalentItemInfo[set].day.map((day) => trans(Lang[day as KeyLang])).join(', ')}</Description>
                 <Description>{trans(Lang.Character_Talent_Material)}</Description>
               </ItemContentBox>
-            </FlexWrapper>
-          );
-        })}
-        {Object.keys(weaponAscesionItemInfo).map((set) => {
-          return (
-            <FlexWrapper
-              key={set}
-              styles={{
-                flexDirection: 'column',
-                width: '300px',
-                margin: '15px 10px 0',
-                medium: { width: '240px' },
-                small: { width: '240px' }
-              }}
-            >
+            );
+          })}
+          {Object.keys(weaponAscesionItemInfo).map((set) => {
+            return (
               <ItemContentBox
                 image={
                   <FlexWrapper>
@@ -94,10 +77,10 @@ export function DailyItem(props: Props) {
                 <Description>{weaponAscesionItemInfo[set].day.map((day) => trans(Lang[day as KeyLang])).join(', ')}</Description>
                 <Description>{trans(Lang.Weapon_Ascension_Material)}</Description>
               </ItemContentBox>
-            </FlexWrapper>
-          );
-        })}
-      </GridWrapper>
+            );
+          })}
+        </>
+      </CSSGridWrapper>
     </Layout>
   );
 }
