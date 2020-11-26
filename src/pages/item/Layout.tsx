@@ -32,7 +32,7 @@ interface Style {
 
 const Container = styled.div<ContainerStyle>((props) => {
   return {
-    width: props.width || '900px',
+    width: props.width || '1000px',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -49,7 +49,7 @@ const Container = styled.div<ContainerStyle>((props) => {
 
 const Header = styled.div<ContainerStyle>((props) => {
   return {
-    width: props.width || '900px',
+    width: props.width || '1000px',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -65,7 +65,7 @@ const Header = styled.div<ContainerStyle>((props) => {
 
 const Line = styled.hr<ContainerStyle>((props) => {
   return {
-    width: props.width || '900px',
+    width: props.width || '1000px',
     '@media screen and (max-width: 1380px)': {
       width: props.medium?.width || '700px'
     },

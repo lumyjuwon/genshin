@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { FlexWrapper, GridWrapper, RoundImage } from 'src/components';
+import { FlexWrapper, GridWrapper, ItemContentBox, RoundImage } from 'src/components';
 import { localSpecialityItemInfo } from 'src/resources/data';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
 import { LocalSpecialityItemImages } from 'src/resources/images';
@@ -29,7 +29,7 @@ export function LocalSpecialityItem(props: Props) {
     <Layout
       title={trans(Lang[props.local as KeyLang])}
       styles={{
-        containerStyle: { width: '800px', medium: { width: '600px' }, small: { width: '240px' } },
+        containerStyle: { width: '900px', medium: { width: '600px' }, small: { width: '90%' } },
         titleStyle: { fontSize: '16px', medium: { fontSize: '14px' }, small: { fontSize: '13px' } },
         buttonStyle: { fontSize: '14px', medium: { fontSize: '12px' }, small: { fontSize: '12px' } }
       }}
@@ -39,22 +39,27 @@ export function LocalSpecialityItem(props: Props) {
           .filter((item) => localSpecialityItemInfo[item].region === props.local)
           .map((item) => {
             return (
-              <FlexWrapper key={item} styles={{ flexDirection: 'column', margin: '15px 0 0', width: '200px' }}>
-                <RoundImage
-                  src={LocalSpecialityItemImages[item]}
-                  styles={{
-                    width: '70px',
-                    height: '70px',
-                    medium: { width: '60px', height: '60px' },
-                    small: { width: '60px', height: '60px' }
-                  }}
-                />
-                <Name>{trans(Lang[item.replace(/\s/g, '_') as KeyLang])}</Name>
-                <FlexWrapper styles={{ flexDirection: 'column', margin: '5px 0 0' }}>
-                  {localSpecialityItemInfo[item].usage.map((usage) => (
-                    <Description key={usage}>{trans(Lang[usage as KeyLang])}</Description>
-                  ))}
-                </FlexWrapper>
+              <FlexWrapper key={item} styles={{ flexDirection: 'column', margin: '15px 10px 0', width: '200px' }}>
+                <ItemContentBox
+                  image={
+                    <RoundImage
+                      src={LocalSpecialityItemImages[item]}
+                      styles={{
+                        width: '70px',
+                        height: '70px',
+                        medium: { width: '60px', height: '60px' },
+                        small: { width: '60px', height: '60px' }
+                      }}
+                    />
+                  }
+                  name={trans(Lang[item.replace(/\s/g, '_') as KeyLang])}
+                >
+                  <FlexWrapper styles={{ flexDirection: 'column', margin: '5px 0 0' }}>
+                    {localSpecialityItemInfo[item].usage.map((usage) => (
+                      <Description key={usage}>{trans(Lang[usage as KeyLang])}</Description>
+                    ))}
+                  </FlexWrapper>
+                </ItemContentBox>
               </FlexWrapper>
             );
           })}
