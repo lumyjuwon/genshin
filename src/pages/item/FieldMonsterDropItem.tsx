@@ -29,6 +29,7 @@ export function FieldMonsterDropItem() {
         {Object.keys(fieldMonsterDropItemInfo).map((item) => {
           return (
             <ItemContentBox
+              key={item}
               image={
                 <RoundImage
                   src={FieldMonsterDropItemImages[item]}

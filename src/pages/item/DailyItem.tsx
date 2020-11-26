@@ -26,6 +26,7 @@ export function DailyItem(props: Props) {
           {Object.keys(characterTalentItemInfo).map((set) => {
             return (
               <ItemContentBox
+                key={set}
                 image={
                   <FlexWrapper>
                     {Object.keys(characterTalentItemInfo[set].items).map((item) => {
@@ -54,6 +55,7 @@ export function DailyItem(props: Props) {
           {Object.keys(weaponAscesionItemInfo).map((set) => {
             return (
               <ItemContentBox
+                key={set}
                 image={
                   <FlexWrapper>
                     {Object.keys(weaponAscesionItemInfo[set].items).map((item) => {

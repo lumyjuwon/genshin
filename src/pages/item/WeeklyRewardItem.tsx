@@ -26,6 +26,7 @@ export function WeeklyRewardItem(props: Props) {
         {Object.keys(weeklyBossItemInfo).map((item) => {
           return (
             <ItemContentBox
+              key={item}
               image={
                 <RoundImage
                   src={WeeklyBossItemImages[item]}

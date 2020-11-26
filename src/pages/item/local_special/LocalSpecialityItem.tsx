@@ -36,6 +36,7 @@ export function LocalSpecialityItem(props: Props) {
           .map((item) => {
             return (
               <ItemContentBox
+                key={item}
                 image={
                   <RoundImage
                     src={LocalSpecialityItemImages[item]}

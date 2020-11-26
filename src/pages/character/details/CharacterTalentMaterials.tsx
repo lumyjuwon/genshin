@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { CSSGridWrapper, FlexWrapper, RoundImage } from 'src/components';
+import { CSSGridWrapper, FlexWrapper, ItemContentBox, RoundImage } from 'src/components';
 import { characterTalentItemInfo, alchemyItemInfo, characterInfo } from 'src/resources/data';
 import { CharacterTalentItemImages } from 'src/resources/images';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
@@ -35,46 +35,52 @@ export function CharacterTalentMaterials(props: Props) {
       <CSSGridWrapper styles={{ gridTemplateColumns: 'repeat(auto-fit, 250px)', columnGap: '20px' }}>
         {talentInfo.book ? (
           <>
-            <FlexWrapper styles={{ flexDirection: 'column' }}>
-              <FlexWrapper>
-                <>
-                  {Object.keys(characterTalentItemInfo[talentInfo.book].items).map((item) => {
-                    return (
-                      <FlexWrapper key={item} styles={{ margin: '3px' }}>
-                        <RoundImage
-                          src={require(`../../../resources/images/items/character-talent/${item}.png`)}
-                          styles={{ width: '60px', height: '60px' }}
-                        />
-                      </FlexWrapper>
-                    );
-                  })}
-                </>
-              </FlexWrapper>
-              <Name>{trans(Lang[talentInfo.book as KeyLang])}</Name>
-            </FlexWrapper>
-            <FlexWrapper styles={{ flexDirection: 'column' }}>
-              <FlexWrapper>
-                <FlexWrapper styles={{ margin: '3px' }}>
-                  <RoundImage src={CharacterTalentItemImages[talentInfo.drop]} styles={{ width: '60px', height: '60px' }} />
+            <ItemContentBox
+              image={
+                <FlexWrapper>
+                  <>
+                    {Object.keys(characterTalentItemInfo[talentInfo.book].items).map((item) => {
+                      return (
+                        <FlexWrapper key={item} styles={{ margin: '3px' }}>
+                          <RoundImage
+                            src={require(`../../../resources/images/items/character-talent/${item}.png`)}
+                            styles={{ width: '60px', height: '60px' }}
+                          />
+                        </FlexWrapper>
+                      );
+                    })}
+                  </>
                 </FlexWrapper>
-                <>
-                  {getArchemyItems(talentInfo.drop).map((item) => {
-                    return (
-                      <FlexWrapper key={item} styles={{ margin: '3px' }}>
-                        <RoundImage src={CharacterTalentItemImages[item]} styles={{ width: '60px', height: '60px' }} />
-                      </FlexWrapper>
-                    );
-                  })}
-                </>
-              </FlexWrapper>
-              <Name>{trans(Lang[talentInfo.drop.replace(/'/g, '').replace(/\s/g, '_') as KeyLang])}</Name>
-            </FlexWrapper>
-            <FlexWrapper styles={{ flexDirection: 'column' }}>
-              <FlexWrapper styles={{ margin: '3px' }}>
-                <RoundImage src={CharacterTalentItemImages[talentInfo.boss]} styles={{ width: '60px', height: '60px' }} />
-              </FlexWrapper>
-              <Name>{trans(Lang[talentInfo.boss.replace(/'/g, '').replace(/\s/g, '_') as KeyLang])}</Name>
-            </FlexWrapper>
+              }
+              name={trans(Lang[talentInfo.book as KeyLang])}
+            />
+            <ItemContentBox
+              image={
+                <FlexWrapper>
+                  <FlexWrapper styles={{ margin: '3px' }}>
+                    <RoundImage src={CharacterTalentItemImages[talentInfo.drop]} styles={{ width: '60px', height: '60px' }} />
+                  </FlexWrapper>
+                  <>
+                    {getArchemyItems(talentInfo.drop).map((item) => {
+                      return (
+                        <FlexWrapper key={item} styles={{ margin: '3px' }}>
+                          <RoundImage src={CharacterTalentItemImages[item]} styles={{ width: '60px', height: '60px' }} />
+                        </FlexWrapper>
+                      );
+                    })}
+                  </>
+                </FlexWrapper>
+              }
+              name={trans(Lang[talentInfo.drop.replace(/'/g, '').replace(/\s/g, '_') as KeyLang])}
+            />
+            <ItemContentBox
+              image={
+                <FlexWrapper styles={{ margin: '3px' }}>
+                  <RoundImage src={CharacterTalentItemImages[talentInfo.boss]} styles={{ width: '60px', height: '60px' }} />
+                </FlexWrapper>
+              }
+              name={trans(Lang[talentInfo.boss.replace(/'/g, '').replace(/\s/g, '_') as KeyLang])}
+            />
           </>
         ) : (
           <Name>{trans(Lang.None)}</Name>

@@ -86,7 +86,7 @@ export function CharactrerRecommendedEquip(props: Props) {
         <>
           {Object.keys(recommendedEquipInfo.artifact).map((info, index) => {
             return (
-              <GridItem column={1} row={index + 1}>
+              <GridItem key={info} column={1} row={index + 1}>
                 <ListName>
                   {trans(Lang.Recommended_Artifact)} #{index + 1}
                 </ListName>
@@ -97,6 +97,7 @@ export function CharactrerRecommendedEquip(props: Props) {
                     pushArtifactSetBuff(replacedName, recommendedEquipInfo.artifact[info].set, artifactBuff);
                     return (
                       <ItemContentBox
+                        key={set}
                         image={<RoundImage src={ArtifactSetImages[replacedName]} styles={{ width: '70px', height: '70px' }} />}
                         name={trans(Lang[set.replace(/'s/g, 'Of').replace(/\s/g, '') as KeyLang])}
                         styles={{ containerStyle: { margin: '15px 0 0' } }}
@@ -122,7 +123,7 @@ export function CharactrerRecommendedEquip(props: Props) {
           })}
           {recommendedEquipInfo.weapon.map((item: string, index) => {
             return (
-              <GridItem column={2} row={index + 1}>
+              <GridItem key={item} column={2} row={index + 1}>
                 <ListName>
                   {trans(Lang.Recommended_Weapon)} #{index + 1}
                 </ListName>
