@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { BoxModelWrapper, FlexWrapper, RoundImage } from 'src/components';
+import { CSSGridWrapper, FlexWrapper, RoundImage } from 'src/components';
 import { characterTalentItemInfo, alchemyItemInfo, characterInfo } from 'src/resources/data';
 import { CharacterTalentItemImages } from 'src/resources/images';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
@@ -32,10 +32,10 @@ export function CharacterTalentMaterials(props: Props) {
 
   return (
     <Layout title={trans(Lang.Character_Talent_Material)}>
-      <FlexWrapper styles={{ small: { width: '100%', flexDirection: 'column' } }}>
+      <CSSGridWrapper styles={{ gridTemplateColumns: 'repeat(auto-fit, 250px)', columnGap: '20px' }}>
         {talentInfo.book ? (
           <>
-            <FlexWrapper styles={{ flexDirection: 'column', margin: '10px 20px' }}>
+            <FlexWrapper styles={{ flexDirection: 'column' }}>
               <FlexWrapper>
                 <>
                   {Object.keys(characterTalentItemInfo[talentInfo.book].items).map((item) => {
@@ -52,7 +52,7 @@ export function CharacterTalentMaterials(props: Props) {
               </FlexWrapper>
               <Name>{trans(Lang[talentInfo.book as KeyLang])}</Name>
             </FlexWrapper>
-            <FlexWrapper styles={{ flexDirection: 'column', margin: '10px 20px' }}>
+            <FlexWrapper styles={{ flexDirection: 'column' }}>
               <FlexWrapper>
                 <FlexWrapper styles={{ margin: '3px' }}>
                   <RoundImage src={CharacterTalentItemImages[talentInfo.drop]} styles={{ width: '60px', height: '60px' }} />
@@ -69,7 +69,7 @@ export function CharacterTalentMaterials(props: Props) {
               </FlexWrapper>
               <Name>{trans(Lang[talentInfo.drop.replace(/'/g, '').replace(/\s/g, '_') as KeyLang])}</Name>
             </FlexWrapper>
-            <FlexWrapper styles={{ flexDirection: 'column', margin: '10px 20px' }}>
+            <FlexWrapper styles={{ flexDirection: 'column' }}>
               <FlexWrapper styles={{ margin: '3px' }}>
                 <RoundImage src={CharacterTalentItemImages[talentInfo.boss]} styles={{ width: '60px', height: '60px' }} />
               </FlexWrapper>
@@ -79,7 +79,7 @@ export function CharacterTalentMaterials(props: Props) {
         ) : (
           <Name>{trans(Lang.None)}</Name>
         )}
-      </FlexWrapper>
+      </CSSGridWrapper>
     </Layout>
   );
 }
