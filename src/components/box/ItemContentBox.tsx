@@ -1,28 +1,39 @@
 import React from 'react';
 import styled from 'styled-components';
 
-interface Style {
+interface NameStyle {
   color?: string;
 }
 
-const Container = styled.div({
-  width: '100%',
-  display: 'flex',
-  padding: '10px',
-  margin: '10px',
-  borderRadius: '20px',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-  backgroundColor: '#333435',
-  alignSelf: 'stretch',
-  boxShadow: '3px 3px 2px rgba(20, 20, 20, .3)',
-  '&:hover': {
-    boxShadow: '1px 1px 1px rgba(38, 38, 38, .3)'
-  }
+interface ContatinerStyle {
+  margin?: string;
+}
+
+interface Style {
+  containerStyle?: ContatinerStyle;
+  nameStyle?: NameStyle;
+}
+
+const Container = styled.div<ContatinerStyle>((props) => {
+  return {
+    width: '100%',
+    display: 'flex',
+    padding: '10px',
+    borderRadius: '20px',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#333435',
+    alignSelf: 'stretch',
+    margin: props.margin || '0',
+    boxShadow: '3px 3px 2px rgba(20, 20, 20, .3)',
+    '&:hover': {
+      boxShadow: '1px 1px 1px rgba(38, 38, 38, .3)'
+    }
+  };
 });
 
-const Name = styled.div<Style>((props) => {
+const Name = styled.div<NameStyle>((props) => {
   return {
     color: props.color || '#f1f2f3',
     fontWeight: 'bold',
@@ -46,9 +57,9 @@ interface Props {
 
 export function ItemContentBox(props: Props) {
   return (
-    <Container>
+    <Container {...props.styles?.containerStyle}>
       {props.image}
-      <Name {...props.styles}>{props.name}</Name>
+      <Name {...props.styles?.nameStyle}>{props.name}</Name>
       {props.children}
     </Container>
   );
