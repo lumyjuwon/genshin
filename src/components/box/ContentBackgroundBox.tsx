@@ -16,7 +16,7 @@ const ColoredBox = styled.div<Style>((props) => {
       padding: '20px 15px'
     },
     '@media screen and (max-width: 768px)': {
-      padding: '15px 5px'
+      padding: '20px 5px'
     }
   };
 });

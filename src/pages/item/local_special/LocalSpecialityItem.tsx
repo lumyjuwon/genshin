@@ -29,7 +29,7 @@ export function LocalSpecialityItem(props: Props) {
     <Layout
       title={trans(Lang[props.local as KeyLang])}
       styles={{
-        containerStyle: { width: '800px', medium: { width: '600px' }, small: { width: '200px' } },
+        containerStyle: { width: '800px', medium: { width: '600px' }, small: { width: '240px' } },
         titleStyle: { fontSize: '16px', medium: { fontSize: '14px' }, small: { fontSize: '13px' } },
         buttonStyle: { fontSize: '14px', medium: { fontSize: '12px' }, small: { fontSize: '12px' } }
       }}

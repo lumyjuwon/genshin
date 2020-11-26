@@ -42,7 +42,7 @@ const Container = styled.div<ContainerStyle>((props) => {
       width: props.medium?.width || '700px'
     },
     '@media screen and (max-width: 768px)': {
-      width: props.small?.width || '240px'
+      width: props.small?.width || '100%'
     }
   };
 });
@@ -58,7 +58,7 @@ const Header = styled.div<ContainerStyle>((props) => {
       width: props.medium?.width || '700px'
     },
     '@media screen and (max-width: 768px)': {
-      width: props.small?.width || '240px'
+      width: props.small?.width || '100%'
     }
   };
 });
@@ -70,7 +70,7 @@ const Line = styled.hr<ContainerStyle>((props) => {
       width: props.medium?.width || '700px'
     },
     '@media screen and (max-width: 768px)': {
-      width: props.small?.width || '240px'
+      width: props.small?.width || '100%'
     }
   };
 });

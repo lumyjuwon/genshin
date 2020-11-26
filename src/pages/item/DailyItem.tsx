@@ -28,7 +28,16 @@ export function DailyItem(props: Props) {
       <GridWrapper styles={{ width: '100%', medium: { width: '100%' }, small: { width: '100%' } }}>
         {Object.keys(characterTalentItemInfo).map((set) => {
           return (
-            <FlexWrapper key={set} styles={{ flexDirection: 'column', width: '300px', margin: '15px 0 0', medium: { width: '200px' } }}>
+            <FlexWrapper
+              key={set}
+              styles={{
+                flexDirection: 'column',
+                width: '300px',
+                margin: '15px 0 0',
+                medium: { width: '240px' },
+                small: { width: '240px' }
+              }}
+            >
               <FlexWrapper>
                 {Object.keys(characterTalentItemInfo[set].items).map((item) => {
                   return (
@@ -53,7 +62,16 @@ export function DailyItem(props: Props) {
         })}
         {Object.keys(weaponAscesionItemInfo).map((set) => {
           return (
-            <FlexWrapper key={set} styles={{ flexDirection: 'column', width: '300px', margin: '10px 0 0' }}>
+            <FlexWrapper
+              key={set}
+              styles={{
+                flexDirection: 'column',
+                width: '300px',
+                margin: '10px 0 0',
+                medium: { width: '240px' },
+                small: { width: '240px' }
+              }}
+            >
               <FlexWrapper>
                 {Object.keys(weaponAscesionItemInfo[set].items).map((item) => {
                   return (

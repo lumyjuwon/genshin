@@ -2,7 +2,7 @@ import React from 'react';
 
 import { LocalSpecialityItem } from './LocalSpecialityItem';
 import { trans, Lang } from 'src/resources/languages';
-import { GridWrapper } from 'src/components';
+import { FlexWrapper, GridWrapper } from 'src/components';
 import { Layout } from '../Layout';
 
 export function LocalContainer() {
@@ -10,11 +10,11 @@ export function LocalContainer() {
 
   return (
     <Layout title={trans(Lang.Local_Speciality_Items)}>
-      <GridWrapper styles={{ width: '100%', medium: { width: '100%' }, small: { width: '100%' } }}>
+      <FlexWrapper styles={{ flexDirection: 'column' }}>
         {region.map((local) => (
           <LocalSpecialityItem key={local} local={local} />
         ))}
-      </GridWrapper>
+      </FlexWrapper>
     </Layout>
   );
 }
