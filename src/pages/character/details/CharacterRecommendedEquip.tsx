@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { Layout } from './Layout';
 import { ArtifactSetImages, ItemImages } from 'src/resources/images';
-import { FlexWrapper, ItemContentBox, RoundImage } from 'src/components';
+import { FlexWrapper, ItemContentBox, RoundImage, CSSGridWrapper } from 'src/components';
 import { characterInfo, weaponInfo } from 'src/resources/data';
 import { KeyLang, trans, Lang } from 'src/resources/languages';
 import { RegexColorText } from 'src/components/text/RegexColorText';
@@ -31,7 +31,7 @@ const ListName = styled.div({
 });
 
 const BuffText = styled.div({
-  margin: '3px 0 0',
+  margin: '10px 0 0',
   textAlign: 'center',
   wordBreak: 'keep-all'
 });
@@ -48,6 +48,18 @@ const StarEmoji = styled.span({
     letterSpacing: '-10px',
     fontSize: '14px'
   }
+});
+
+const GridItem = styled.div<{ column: number; row: number }>((props) => {
+  return {
+    alignSelf: 'stretch',
+    gridColumnStart: `${props.column}`,
+    gridRowStart: `${props.row}`,
+    display: 'grid',
+    gridTemplateColumns: '100%',
+    gridTemplateRows: 'min-content',
+    width: '100%'
+  };
 });
 
 interface Props {
@@ -70,11 +82,11 @@ export function CharactrerRecommendedEquip(props: Props) {
 
   return (
     <Layout title={trans(Lang.Recommended_Equip)}>
-      <FlexWrapper styles={{ width: '100%', small: { width: '100%', flexDirection: 'column' } }}>
-        <FlexBox>
+      <CSSGridWrapper styles={{ gridTemplateColumns: 'repeat(2, 450px)', columnGap: '20px', rowGap: '20px' }}>
+        <>
           {Object.keys(recommendedEquipInfo.artifact).map((info, index) => {
             return (
-              <FlexWrapper key={info} styles={{ flexDirection: 'column', margin: '20px 0 0', width: '100%' }}>
+              <GridItem column={1} row={index + 1}>
                 <ListName>
                   {trans(Lang.Recommended_Artifact)} #{index + 1}
                 </ListName>
@@ -87,13 +99,14 @@ export function CharactrerRecommendedEquip(props: Props) {
                       <ItemContentBox
                         image={<RoundImage src={ArtifactSetImages[replacedName]} styles={{ width: '70px', height: '70px' }} />}
                         name={trans(Lang[set.replace(/'s/g, 'Of').replace(/\s/g, '') as KeyLang])}
+                        styles={{ containerStyle: { margin: '15px 0 0' } }}
                       >
                         <div style={{ margin: '3px 0 0' }}>Set: {recommendedEquipInfo.artifact[info].set}</div>
                         <>
                           {artifactBuff.map((buff) => {
                             return (
                               <BuffText key={buff}>
-                                <RegexColorText regex={/\d+%/g} color={'red'} isBold styles={{ small: { fontSize: '12px' } }}>
+                                <RegexColorText regex={/\d+%|\+\d/g} color={'red'} isBold styles={{ small: { fontSize: '12px' } }}>
                                   {buff}
                                 </RegexColorText>
                               </BuffText>
@@ -104,14 +117,12 @@ export function CharactrerRecommendedEquip(props: Props) {
                     );
                   })}
                 </>
-              </FlexWrapper>
+              </GridItem>
             );
           })}
-        </FlexBox>
-        <FlexBox>
           {recommendedEquipInfo.weapon.map((item: string, index) => {
             return (
-              <FlexWrapper key={item} styles={{ flexDirection: 'column', margin: '20px 0 0', width: '100%', small: { width: '100%' } }}>
+              <GridItem column={2} row={index + 1}>
                 <ListName>
                   {trans(Lang.Recommended_Weapon)} #{index + 1}
                 </ListName>
@@ -123,12 +134,13 @@ export function CharactrerRecommendedEquip(props: Props) {
                     </>
                   }
                   name={trans(Lang[item.replace(/\s/g, '_').replace(/'/g, '') as KeyLang])}
+                  styles={{ containerStyle: { margin: '15px 0 0' } }}
                 />
-              </FlexWrapper>
+              </GridItem>
             );
           })}
-        </FlexBox>
-      </FlexWrapper>
+        </>
+      </CSSGridWrapper>
     </Layout>
   );
 }
