@@ -29,8 +29,8 @@ const GridContainer = styled.div({
   },
   '@media screen and (max-width: 768px)': {
     width: '100%',
-    gridTemplateColumns: 'repeat(3, 80px)',
-    gridTemplateRows: 'repeat(auto-fit, 80px)',
+    gridTemplateColumns: 'repeat(3, 70px)',
+    gridTemplateRows: 'repeat(auto-fit, 70px)',
     height: '450px'
   }
 });
@@ -106,7 +106,7 @@ export function GachaArrangeView(props: Props) {
                       boxShadow: `${shadow}`,
                       objectFit: 'none',
                       medium: { height: '220px' },
-                      small: { width: '80px', height: '80px' }
+                      small: { width: '70px', height: '70px' }
                     }}
                     src={imagePath}
                   />
@@ -130,7 +130,7 @@ export function GachaArrangeView(props: Props) {
         >
           <>
             <SquareImage styles={{ width: '300x', height: '370px' }} src={require('../../resources/images/characters/Flying Paimon.gif')} />
-            <TextCenterWrapper styles={{ fontSize: '25px', small: { fontSize: '20px' } }}>
+            <TextCenterWrapper styles={{ fontSize: '25px', small: { fontSize: '18px' } }}>
               <>
                 <span role="img" aria-label="comment">
                   💬&nbsp;

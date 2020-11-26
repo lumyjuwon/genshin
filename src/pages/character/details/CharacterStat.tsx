@@ -32,8 +32,8 @@ const MaxLevelBox = styled.div({
   minWidth: '80px',
   textAlign: 'center',
   '@media screen and (max-width: 768px)': {
-    fontSize: '14px',
-    minWidth: '75px'
+    fontSize: '13px',
+    minWidth: '70px'
   }
 });
 
@@ -41,8 +41,8 @@ const LevelBox = styled.div({
   minWidth: '80px',
   textAlign: 'center',
   '@media screen and (max-width: 768px)': {
-    fontSize: '14px',
-    minWidth: '60px'
+    fontSize: '13px',
+    minWidth: '40px'
   }
 });
 
@@ -50,7 +50,7 @@ const StatBox = styled.div({
   minWidth: '100%',
   textAlign: 'center',
   '@media screen and (max-width: 768px)': {
-    fontSize: '14px'
+    fontSize: '13px'
   }
 });
 
@@ -58,8 +58,8 @@ const AdditionBox = styled.div({
   minWidth: '200px',
   textAlign: 'center',
   '@media screen and (max-width: 768px)': {
-    fontSize: '14px',
-    minWidth: '150px'
+    fontSize: '13px',
+    minWidth: '130px'
   }
 });
 
@@ -76,7 +76,9 @@ export function CharacterStat(props: Props) {
         <Inner>
           <MaxLevelBox>{trans(Lang.Max_Level)}</MaxLevelBox>
           <LevelBox>{trans(Lang.Level)}</LevelBox>
-          <AdditionBox>{trans(Lang.Stat)}</AdditionBox>
+          <FlexWrapper styles={{ padding: '5px' }}>
+            <AdditionBox>{trans(Lang.Stat)}</AdditionBox>
+          </FlexWrapper>
         </Inner>
         {characterAscensionLevel.map((level) => {
           return (

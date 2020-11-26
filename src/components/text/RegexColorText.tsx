@@ -1,9 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const P = styled.span({
-  lineHeight: '140%',
-  textAlign: 'center'
+interface Style {
+  fontSize?: string;
+  small?: {
+    fontSize?: string;
+  };
+}
+
+const P = styled.span<Style>((props) => {
+  return {
+    lineHeight: '140%',
+    textAlign: 'center',
+    fontSize: props.fontSize || '16px',
+    '@media screen and (max-width: 768px)': {
+      fontSize: props.small?.fontSize || '14px'
+    }
+  };
 });
 
 function parseColorText(text: string, regex: RegExp, color?: string, isBold?: boolean) {
@@ -37,12 +50,13 @@ interface Props {
   regex: RegExp;
   color?: string;
   isBold?: boolean;
+  styles?: Style;
 }
 
 export function RegexColorText(props: Props) {
   const coloredText = parseColorText(props.children, props.regex, props.color, props.isBold);
   return (
-    <P>
+    <P {...props.styles}>
       {coloredText?.map((text) => {
         return text;
       })}

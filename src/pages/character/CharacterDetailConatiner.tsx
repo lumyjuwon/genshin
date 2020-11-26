@@ -23,10 +23,12 @@ const Container = styled.div({
   width: '1000px',
   margin: '50px auto',
   '@media screen and (max-width: 1380px)': {
-    width: '700px'
+    width: '700px',
+    margin: '30px auto'
   },
   '@media screen and (max-width: 768px)': {
-    width: '100%'
+    width: '100%',
+    margin: '15px auto'
   }
 });
 

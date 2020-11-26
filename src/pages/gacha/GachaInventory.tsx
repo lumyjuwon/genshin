@@ -46,7 +46,7 @@ const GridContainer = styled.div({
     columnGap: '4px'
   },
   '@media screen and (max-width: 768px)': {
-    gridTemplateColumns: 'repeat(3, 90px)'
+    gridTemplateColumns: 'repeat(3, 80px)'
   }
 });
 
@@ -60,7 +60,12 @@ const Badge = styled.div({
   width: '25px',
   height: '25px',
   zIndex: 1,
-  boxShadow: '4px 4px 2px rgba(0,0,0,0.5)'
+  boxShadow: '4px 4px 2px rgba(0,0,0,0.5)',
+  '@media screen and (max-width: 768px)': {
+    width: '20px',
+    height: '20px',
+    fontSize: '12px'
+  }
 });
 
 const HoverVisibleElement = styled.div({
@@ -173,7 +178,7 @@ export function GachaInventory(props: Props) {
             <Item key={index}>
               <ItemBadgeBox
                 badge={<Badge>{inventory.get(item)}</Badge>}
-                child={<RoundImage styles={{ small: { width: '80px', height: '80px' } }} src={GachaImages[item]} />}
+                child={<RoundImage styles={{ small: { width: '70px', height: '70px' } }} src={GachaImages[item]} />}
                 rank={items[item].rank}
                 tooltip={item}
                 styles={{

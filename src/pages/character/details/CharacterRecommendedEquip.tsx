@@ -16,7 +16,8 @@ const FlexBox = styled.div({
   alignItems: 'center',
   padding: '0 20px',
   '@media screen and (max-width: 768px)': {
-    width: '100%'
+    width: '100%',
+    padding: '0 8px'
   }
 });
 
@@ -24,15 +25,6 @@ const ListName = styled.div({
   width: '100%',
   fontSize: '20px',
   textAlign: 'left',
-  '@media screen and (max-width: 768px)': {
-    fontSize: '16px'
-  }
-});
-
-const Name = styled.div({
-  fontSize: '18px',
-  fontWeight: 'bold',
-  textAlign: 'center',
   '@media screen and (max-width: 768px)': {
     fontSize: '16px'
   }
@@ -101,7 +93,7 @@ export function CharactrerRecommendedEquip(props: Props) {
                           {artifactBuff.map((buff) => {
                             return (
                               <BuffText key={buff}>
-                                <RegexColorText regex={/\d+%/g} color={'red'} isBold>
+                                <RegexColorText regex={/\d+%/g} color={'red'} isBold styles={{ small: { fontSize: '12px' } }}>
                                   {buff}
                                 </RegexColorText>
                               </BuffText>

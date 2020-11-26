@@ -132,7 +132,7 @@ export function GachaScreen() {
               <RoundTextButton
                 styles={{
                   buttonStyles: { display: 'inline-block', backgroundColor: '#cc0000', margin: '10px', padding: '12px' },
-                  textStyles: { fontSize: '20px' }
+                  textStyles: { fontSize: '20px', small: { fontSize: '16px' } }
                 }}
                 onClick={() => onResetClick()}
               >

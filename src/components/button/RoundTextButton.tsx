@@ -6,12 +6,24 @@ import { RoundButton, ButtonStyle } from './RoundButton';
 interface TextStyle {
   readonly fontSize?: string;
   readonly color?: string;
+  medium?: {
+    readonly fontSize?: string;
+  };
+  small?: {
+    readonly fontSize?: string;
+  };
 }
 
 const Text = styled.a<TextStyle>((props: TextStyle) => {
   return {
-    fontSize: props.fontSize || '16px'
+    fontSize: props.fontSize || '16px',
     // add color property in RoundButton component
+    '@media screen and (max-width: 1380px)': {
+      fontSize: props.medium?.fontSize || '16px'
+    },
+    '@media screen and (max-width: 768px)': {
+      fontSize: props.small?.fontSize || '14px'
+    }
   };
 });
 
