@@ -53,6 +53,7 @@ export { CharacterStatRegexText } from './text/CharacterStatRegexTrans';
 export { ItemBadgeBox } from './box/ItemBadgeBox';
 export { RoundImageBox } from './box/RoundImageBox';
 export { ContentBackgroundBox } from './box/ContentBackgroundBox';
+export { ItemContentBox } from './box/ItemContentBox';
 
 // Hook
 export { useHandleClickOutside } from './hooks/useHandleClickOutside';
