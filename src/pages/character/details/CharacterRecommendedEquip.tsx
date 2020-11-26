@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { Layout } from './Layout';
 import { ArtifactSetImages, ItemImages } from 'src/resources/images';
-import { FlexWrapper, RoundImage } from 'src/components';
+import { FlexWrapper, ItemContentBox, RoundImage } from 'src/components';
 import { characterInfo, weaponInfo } from 'src/resources/data';
 import { KeyLang, trans, Lang } from 'src/resources/languages';
 import { RegexColorText } from 'src/components/text/RegexColorText';
@@ -81,7 +81,6 @@ export function CharactrerRecommendedEquip(props: Props) {
       <FlexWrapper styles={{ width: '100%', small: { width: '100%', flexDirection: 'column' } }}>
         <FlexBox>
           {Object.keys(recommendedEquipInfo.artifact).map((info, index) => {
-            const artifactBuff: Array<string> = [];
             return (
               <FlexWrapper key={info} styles={{ flexDirection: 'column', margin: '20px 0 0', width: '100%' }}>
                 <ListName>
@@ -89,31 +88,30 @@ export function CharactrerRecommendedEquip(props: Props) {
                 </ListName>
                 <>
                   {recommendedEquipInfo.artifact[info].name.map((set) => {
+                    const artifactBuff: Array<string> = [];
                     const replacedName = set.replace(/\s/g, '').replace(/'s/g, 'Of');
                     pushArtifactSetBuff(replacedName, recommendedEquipInfo.artifact[info].set, artifactBuff);
                     return (
-                      <React.Fragment key={set}>
-                        <RoundImage src={ArtifactSetImages[replacedName]} styles={{ width: '70px', height: '70px' }} />
-                        <Name>{trans(Lang[set.replace(/'s/g, 'Of').replace(/\s/g, '') as KeyLang])}</Name>
-                        <div>Set: {recommendedEquipInfo.artifact[info].set}</div>
-                      </React.Fragment>
+                      <ItemContentBox
+                        image={<RoundImage src={ArtifactSetImages[replacedName]} styles={{ width: '70px', height: '70px' }} />}
+                        name={trans(Lang[set.replace(/'s/g, 'Of').replace(/\s/g, '') as KeyLang])}
+                      >
+                        <div style={{ margin: '3px 0 0' }}>Set: {recommendedEquipInfo.artifact[info].set}</div>
+                        <>
+                          {artifactBuff.map((buff) => {
+                            return (
+                              <BuffText key={buff}>
+                                <RegexColorText regex={/\d+%/g} color={'red'} isBold>
+                                  {buff}
+                                </RegexColorText>
+                              </BuffText>
+                            );
+                          })}
+                        </>
+                      </ItemContentBox>
                     );
                   })}
                 </>
-                <FlexWrapper styles={{ flexDirection: 'column', margin: '5px 0 0' }}>
-                  <div>{trans(Lang.Artifact_Effect)}</div>
-                  <>
-                    {artifactBuff.map((buff) => {
-                      return (
-                        <BuffText key={buff}>
-                          <RegexColorText regex={/\d+%/g} color={'red'} isBold>
-                            {buff}
-                          </RegexColorText>
-                        </BuffText>
-                      );
-                    })}
-                  </>
-                </FlexWrapper>
               </FlexWrapper>
             );
           })}
@@ -125,9 +123,15 @@ export function CharactrerRecommendedEquip(props: Props) {
                 <ListName>
                   {trans(Lang.Recommended_Weapon)} #{index + 1}
                 </ListName>
-                <RoundImage src={ItemImages[item]} styles={{ width: '80px', height: '80px' }} />
-                <StarEmoji role="img">{'⭐'.repeat(weaponInfo[item].rank)}</StarEmoji>
-                <Name>{trans(Lang[item.replace(/\s/g, '_').replace(/'/g, '') as KeyLang])}</Name>
+                <ItemContentBox
+                  image={
+                    <>
+                      <RoundImage src={ItemImages[item]} styles={{ width: '80px', height: '80px' }} />
+                      <StarEmoji role="img">{'⭐'.repeat(weaponInfo[item].rank)}</StarEmoji>
+                    </>
+                  }
+                  name={trans(Lang[item.replace(/\s/g, '_').replace(/'/g, '') as KeyLang])}
+                />
               </FlexWrapper>
             );
           })}
