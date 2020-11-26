@@ -30,7 +30,7 @@ export function LocalSpecialityItem(props: Props) {
         buttonStyle: { fontSize: '14px', medium: { fontSize: '12px' }, small: { fontSize: '12px' } }
       }}
     >
-      <CSSGridWrapper styles={{ gridTemplateColumns: 'repeat(auto-fit, 250px)', columnGap: '20px' }}>
+      <CSSGridWrapper styles={{ gridTemplateColumns: 'repeat(auto-fit, 250px)', columnGap: '20px', rowGap: '20px' }}>
         {Object.keys(localSpecialityItemInfo)
           .filter((item) => localSpecialityItemInfo[item].region === props.local)
           .map((item) => {

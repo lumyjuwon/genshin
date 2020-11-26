@@ -22,7 +22,8 @@ export function FieldMonsterDropItem() {
       <CSSGridWrapper
         styles={{
           gridTemplateColumns: 'repeat(auto-fit, 300px)',
-          columnGap: '20px'
+          columnGap: '20px',
+          rowGap: '20px'
         }}
       >
         {Object.keys(fieldMonsterDropItemInfo).map((item) => {

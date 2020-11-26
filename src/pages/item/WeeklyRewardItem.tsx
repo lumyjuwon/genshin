@@ -22,7 +22,7 @@ interface Props {}
 export function WeeklyRewardItem(props: Props) {
   return (
     <Layout title={trans(Lang.Weekly_Boss_Items)}>
-      <CSSGridWrapper styles={{ gridTemplateColumns: 'repeat(auto-fit, 300px)', columnGap: '20px' }}>
+      <CSSGridWrapper styles={{ gridTemplateColumns: 'repeat(auto-fit, 300px)', columnGap: '20px', rowGap: '20px' }}>
         {Object.keys(weeklyBossItemInfo).map((item) => {
           return (
             <ItemContentBox
