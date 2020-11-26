@@ -48,15 +48,13 @@ interface Props {
   onClick?: Function;
 }
 
-const MAIN_NAV_INDEX = 1;
-
 export const HeaderNavigation = React.forwardRef<HTMLDivElement, Props>((props, forwardedRef) => {
-  const [selectedNavPath, setSelectedNavPath] = useState<string>('/'.concat(window.location.pathname.split('/')[MAIN_NAV_INDEX]));
+  const [selectedNavPath, setSelectedNavPath] = useState<string>(window.location.pathname);
   const history = useHistory();
 
   useEffect(() => {
     const historyListener = history.listen((location) => {
-      setSelectedNavPath('/'.concat(location.pathname.split('/')[MAIN_NAV_INDEX]));
+      setSelectedNavPath(location.pathname);
     });
 
     return () => {
