@@ -14,7 +14,11 @@ const Container = styled.div({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  backgroundColor: '#333435'
+  backgroundColor: '#333435',
+  boxShadow: '3px 3px 2px rgba(20, 20, 20, .3)',
+  '&:hover': {
+    boxShadow: '1px 1px 1px rgba(38, 38, 38, .3)'
+  }
 });
 
 const Name = styled.div<Style>((props) => {
@@ -22,7 +26,7 @@ const Name = styled.div<Style>((props) => {
     color: props.color || '#f1f2f3',
     fontWeight: 'bold',
     fontSize: '18px',
-    margin: '3px 0 0',
+    margin: '5px 0 0',
     '@media screen and (max-width: 1380px)': {
       fontSize: '16px'
     },
