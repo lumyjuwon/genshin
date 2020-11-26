@@ -62,9 +62,8 @@ export function CharactrerRecommendedParty(props: Props) {
                   {recommendedParties[partyName].party.map((character) => {
                     const path = character.replace(/\s\(|\)|/g, '');
                     return (
-                      <Link to={`/character/${path}`}>
+                      <Link key={character} to={`/character/${path}`}>
                         <ItemBadgeBox
-                          key={character}
                           badge={
                             <RoundImage
                               src={ElementImages[characterInfo[character].element]}
