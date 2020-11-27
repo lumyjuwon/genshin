@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { WeaponBuffText } from './WeaponBuffText';
+// import { WeaponBuffText } from './WeaponBuffText';
 import { WeaponName, CharacterName } from 'src/resources/data';
 
 interface Props {
@@ -9,5 +9,6 @@ interface Props {
 }
 
 export function WeaponResult(props: Props) {
-  return <WeaponBuffText activeWeapon={props.activeWeapon} selectedCharacter={props.selectedCharacter} />;
+  // return <WeaponBuffText activeWeapon={props.activeWeapon} selectedCharacter={props.selectedCharacter} />;
+  return null;
 }
