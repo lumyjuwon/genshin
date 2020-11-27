@@ -39,6 +39,8 @@ const Name = styled.div<NameStyle>((props) => {
     fontWeight: 'bold',
     fontSize: '18px',
     margin: '10px 0 0',
+    wordBreak: 'keep-all',
+    textAlign: 'center',
     '@media screen and (max-width: 1380px)': {
       fontSize: '16px'
     },
