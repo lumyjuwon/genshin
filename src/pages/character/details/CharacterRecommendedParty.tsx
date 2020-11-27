@@ -21,7 +21,7 @@ const AlterText = styled.div({
   width: '100%',
   fontSize: '16px',
   textAlign: 'center',
-  margin: '5px 0 0',
+  margin: '15px 0 5px',
   '@media screen and (max-width: 768px)': {
     fontSize: '14px'
   }
@@ -99,10 +99,10 @@ export function CharactrerRecommendedParty(props: Props) {
                   {alterCharacter && (
                     <>
                       <AlterText>{trans(Lang.Alternative)}</AlterText>
-                      <FlexWrapper styles={{ flexDirection: 'column', margin: '5px 0 0' }}>
+                      <FlexWrapper styles={{ flexDirection: 'column' }}>
                         {Object.keys(alterCharacter).map((character) => {
                           return (
-                            <FlexWrapper key={character} styles={{ margin: '10px 0 0' }}>
+                            <FlexWrapper key={character} styles={{ margin: '0 0 10px' }}>
                               <>
                                 <RoundImage src={CharacterImages[character]} styles={{ width: '50px', height: '50px' }} />
                                 &nbsp;→&nbsp;
