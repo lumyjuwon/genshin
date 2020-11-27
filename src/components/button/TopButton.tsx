@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 const Button = styled.div`
@@ -28,6 +28,14 @@ const Button = styled.div`
 export function TopButton() {
   const [isButtonVisible, setIsButtonVisible] = useState(false);
 
+  useEffect(() => {
+    window.addEventListener('scroll', scrollFunction);
+
+    return function cleanUp() {
+      window.removeEventListener('scroll', scrollFunction);
+    };
+  });
+
   function TopEvent() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
@@ -41,20 +49,5 @@ export function TopButton() {
     }
   }
 
-  window.onscroll = function () {
-    scrollFunction();
-  };
-  window.onload = function () {
-    scrollFunction();
-  };
-
-  return (
-    <>
-      {isButtonVisible && (
-        <Button onClick={TopEvent} id="topButton">
-          TOP
-        </Button>
-      )}
-    </>
-  );
+  return <>{isButtonVisible && <Button onClick={TopEvent}>TOP</Button>}</>;
 }
