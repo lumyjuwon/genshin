@@ -46,12 +46,18 @@ const Set = styled.div({
   }
 });
 
-const GridItem = styled.div({
-  alignSelf: 'stretch',
-  display: 'grid',
-  gridTemplateColumns: '100%',
-  gridTemplateRows: 'min-content',
-  width: '100%'
+const GridItem = styled.div<{ row: number }>((props) => {
+  return {
+    alignSelf: 'stretch',
+    display: 'grid',
+    gridRowStart: props.row,
+    gridTemplateColumns: '100%',
+    gridTemplateRows: 'min-content',
+    width: '100%',
+    '@media screen and (max-width: 529px)': {
+      gridRowStart: 'auto'
+    }
+  };
 });
 
 interface Props {
@@ -86,7 +92,7 @@ export function CharactrerRecommendedEquip(props: Props) {
         <>
           {Object.keys(recommendedEquipInfo.artifact).map((info, index) => {
             return (
-              <GridItem key={info}>
+              <GridItem key={info} row={1}>
                 <ListName>
                   {trans(Lang.Recommended_Artifact)} #{index + 1}
                 </ListName>
@@ -123,7 +129,7 @@ export function CharactrerRecommendedEquip(props: Props) {
           })}
           {recommendedEquipInfo.weapon.map((item: string, index) => {
             return (
-              <GridItem key={item}>
+              <GridItem key={item} row={2}>
                 <ListName>
                   {trans(Lang.Recommended_Weapon)} #{index + 1}
                 </ListName>

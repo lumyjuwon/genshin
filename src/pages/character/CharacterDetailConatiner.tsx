@@ -37,7 +37,10 @@ const CharacterIntro = styled.div({
   justifyContent: 'center',
   alignItems: 'center',
   width: '100%',
-  margin: '0 auto'
+  margin: '0 auto',
+  '@media screen and (max-width: 768px)': {
+    alignItems: 'flex-start'
+  }
 });
 
 const Name = styled.div({
@@ -101,16 +104,16 @@ export function CharacterDetailConatiner(props: Props) {
             <Description>&nbsp;·&nbsp;</Description>
             <Description>{trans(Lang[characterInfo[props.character].weapon as KeyLang])}</Description>
           </FlexWrapper>
-          <>
+          <FlexWrapper styles={{ margin: '10px 0 0', small: { flexDirection: 'column' } }}>
             {characterInfo[props.character].position.map((position) => {
               return (
-                <FlexWrapper key={position} styles={{ margin: '3px 0 0' }}>
+                <FlexWrapper key={position} styles={{ margin: '0 5px 0 0', small: { margin: '5px 0 0' } }}>
                   <Position>{trans(Lang[position as KeyLang])}</Position>
                   <RoundImage src={TierImages[characterInfo[props.character].tier[position]]} styles={{ width: '30px', height: '30px' }} />
                 </FlexWrapper>
               );
             })}
-          </>
+          </FlexWrapper>
         </FlexWrapper>
       </CharacterIntro>
       <FlexWrapper styles={{ width: '100%', alignItems: 'flex-start', flexDirection: 'column' }}>
