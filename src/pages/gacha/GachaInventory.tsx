@@ -137,6 +137,7 @@ export function GachaInventory(props: Props) {
           width: '100%',
           margin: '10px 0',
           justifyContent: 'flex-end',
+          padding: '0 10px',
           small: { justifyContent: 'space-between' }
         }}
       >
