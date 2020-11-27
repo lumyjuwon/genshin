@@ -961,7 +961,7 @@
         "HP": "11561",
         "ATK": "266",
         "DEF": "719",
-        "Additional": "Hydro DMG 21.6"
+        "Additional": "Hydro DMG 21.6%"
       },
       "Max_90": {
         "Level": "90",
@@ -1693,14 +1693,14 @@
         "HP": "5074",
         "ATK": "123",
         "DEF": "304",
-        "Additional": "Element Mastery +24"
+        "Additional": "Elemental Mastery +24"
       },
       "Max_60": {
         "Level": "60",
         "HP": "6305",
         "ATK": "153",
         "DEF": "378",
-        "Additional": "Element Mastery +48"
+        "Additional": "Elemental Mastery +48"
 
       },
       "Max_70": {
@@ -1708,7 +1708,7 @@
         "HP": "7393",
         "ATK": "180",
         "DEF": "443",
-        "Additional": "Element Mastery +48"
+        "Additional": "Elemental Mastery +48"
 
       },
       "Max_80": {
@@ -1716,14 +1716,14 @@
         "HP": "8481",
         "ATK": "207",
         "DEF": "508",
-        "Additional": "Element Mastery +72"
+        "Additional": "Elemental Mastery +72"
       },
       "Max_90": {
         "Level": "90",
         "HP": "9569",
         "ATK": "234",
         "DEF": "573",
-        "Additional": "Element Mastery +96"
+        "Additional": "Elemental Mastery +96"
       }
     },
     "recommendedEquip": {
@@ -2793,14 +2793,14 @@
         "HP": "5766",
         "ATK": "119",
         "DEF": "355",
-        "Additional": "Element Mastery +24"
+        "Additional": "Elemental Mastery +24"
       },
       "Max_60": {
         "Level": "60",
         "HP": "7164",
         "ATK": "149",
         "DEF": "441",
-        "Additional": "Element Mastery +48"
+        "Additional": "Elemental Mastery +48"
 
       },
       "Max_70": {
@@ -2808,7 +2808,7 @@
         "HP": "8401",
         "ATK": "174",
         "DEF": "517",
-        "Additional": "Element Mastery +48"
+        "Additional": "Elemental Mastery +48"
 
       },
       "Max_80": {
@@ -2816,14 +2816,14 @@
         "HP": "9638",
         "ATK": "200",
         "DEF": "593",
-        "Additional": "Element Mastery +72"
+        "Additional": "Elemental Mastery +72"
       },
       "Max_90": {
         "Level": "80",
         "HP": "10122",
         "ATK": "210",
         "DEF": "623",
-        "Additional": "Element Mastery +96"
+        "Additional": "Elemental Mastery +96"
       }
     },
     "recommendedEquip": {
