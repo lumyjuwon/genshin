@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { CharacterSlot } from './CharacterSlot';
-import { Modal, GridWrapper, ItemBadgeBox, RoundImage, RoundImageBox } from 'src/components';
+import { Modal, GridWrapper, ItemBadgeBox, RoundImage, RoundImageBox, ContentBackgroundBox, BoxModelWrapper } from 'src/components';
 import { characterInfo, CharacterName } from 'src/resources/data';
 import { ElementImages, CharacterImages } from 'src/resources/images';
 import { maxCharacterLength } from './CharacterSimulator';
@@ -57,12 +57,11 @@ export function CharacterSlotIterator(props: Props) {
       {Array.from({ length: maxCharacterSlot }, () => '').map((name: string, index: number) => {
         const characterName = charactersArray[index] !== undefined ? charactersArray[index] : '';
         return (
-          <CharacterSlot
-            key={index}
-            setVisible={callbackSetIsVisibleCharacterModal}
-            name={characterName}
-            src={CharacterImages[characterName]}
-          />
+          <BoxModelWrapper key={`${name}_${index}_slot`} styles={{ margin: '20px 0' }}>
+            <ContentBackgroundBox>
+              <CharacterSlot setVisible={callbackSetIsVisibleCharacterModal} name={characterName} src={CharacterImages[characterName]} />
+            </ContentBackgroundBox>
+          </BoxModelWrapper>
         );
       })}
       <Modal

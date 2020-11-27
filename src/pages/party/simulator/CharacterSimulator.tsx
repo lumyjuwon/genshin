@@ -8,6 +8,7 @@ import { ElementResult } from '../element/ElementResult';
 import { useSelector } from 'react-redux';
 import { PartyData } from 'src/redux/party/types';
 import { RootState } from 'src/redux/rootReducer';
+import { ContentBackgroundBox } from 'src/components';
 
 export const maxCharacterLength = 4;
 
@@ -37,11 +38,13 @@ export function CharacterSimulator(props: Props) {
 
   return (
     <Wrapper>
-      <Menu />
-      <div id={'party-content'}>
-        <CharacterSlotIterator characters={characters} />
-        <ElementResult />
-      </div>
+      <ContentBackgroundBox backgroundColor="#2a2b2c">
+        <Menu />
+        <div id={'party-content'}>
+          <CharacterSlotIterator characters={characters} />
+          <ElementResult />
+        </div>
+      </ContentBackgroundBox>
     </Wrapper>
   );
 }

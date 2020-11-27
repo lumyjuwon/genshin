@@ -13,10 +13,10 @@ const Container = styled.div({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  margin: '0 0 50px 20px',
+  margin: '0 0 20px',
   '@media screen and (max-width: 1380px)': {
     // width: '700px',
-    margin: '0 0 50px 10px'
+    margin: '0 0 10px'
   },
   '@media screen and (max-width: 768px)': {
     width: '220px',
@@ -49,15 +49,15 @@ function convertToArtifactsSetCountMap(artifacts: Artifacts): Map<string, number
   return artifactsCount;
 }
 
-function pushArtifactSetBuff(name: string, count: number, list: Array<string>) {
-  console.log(name);
-  if (count >= 2) {
-    list.push(trans(Lang[name.concat('_TwoPieceSet') as KeyLang]));
-  }
-  if (count >= 4) {
-    list.push(trans(Lang[name.concat('_FourPieceSet') as KeyLang]));
-  }
-}
+// function pushArtifactSetBuff(name: string, count: number, list: Array<string>) {
+//   console.log(name);
+//   if (count >= 2) {
+//     list.push(trans(Lang[name.concat('_TwoPieceSet') as KeyLang]));
+//   }
+//   if (count >= 4) {
+//     list.push(trans(Lang[name.concat('_FourPieceSet') as KeyLang]));
+//   }
+// }
 
 function getDescription(artifacts: Map<string, number>) {
   const descriptions: string[] = [];
