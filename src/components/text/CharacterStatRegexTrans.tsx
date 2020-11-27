@@ -15,12 +15,11 @@ interface Props {
 export function CharacterStatRegexText(props: Props) {
   let statPercent: string = '';
   // @ts-ignore
-  if (props.children.match(/\d.+%/g)?.length > 0) statPercent = props.children.match(/\d.+%/g)[0];
-
+  if (props.children.match(/\d.+%|\+\d+/g)?.length > 0) statPercent = props.children.match(/\d.+%|\+\d+/g)[0];
   return (
     <P>
-      <RegexColorText regex={/\d.+%/g} color={'#ff0000'} isBold>
-        {trans(Lang[props.children.replace(/\s/g, '_').replace(/_\d.+%/g, '') as KeyLang]).concat(` ${statPercent}`)}
+      <RegexColorText regex={/\d.+%|\+\d+/g} color={'#ff0000'} isBold>
+        {trans(Lang[props.children.replace(/\s/g, '_').replace(/_\d.+%|_\+\d+/g, '') as KeyLang]).concat(` ${statPercent}`)}
       </RegexColorText>
     </P>
   );
