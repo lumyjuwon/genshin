@@ -23,7 +23,9 @@ export function FieldMonsterDropItem() {
         styles={{
           gridTemplateColumns: 'repeat(auto-fit, 300px)',
           columnGap: '20px',
-          rowGap: '20px'
+          rowGap: '20px',
+          medium: { gridTemplateColumns: 'repeat(auto-fit, 300px)', rowGap: '20px', columnGap: '20px' },
+          small: { gridTemplateColumns: 'repeat(auto-fit, 250px)', rowGap: '20px', columnGap: '20px' }
         }}
       >
         {Object.keys(fieldMonsterDropItemInfo).map((item) => {

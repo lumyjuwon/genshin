@@ -21,7 +21,15 @@ interface Props {}
 export function DailyItem(props: Props) {
   return (
     <Layout title={trans(Lang.Daily_Abyssal_Items)}>
-      <CSSGridWrapper styles={{ gridTemplateColumns: 'repeat(auto-fit, 300px)', columnGap: '20px', rowGap: '20px' }}>
+      <CSSGridWrapper
+        styles={{
+          gridTemplateColumns: 'repeat(auto-fit, 300px)',
+          columnGap: '20px',
+          rowGap: '20px',
+          medium: { gridTemplateColumns: 'repeat(auto-fit, 300px)', rowGap: '20px', columnGap: '20px' },
+          small: { gridTemplateColumns: 'repeat(auto-fit, 250px)', rowGap: '20px', columnGap: '20px' }
+        }}
+      >
         <>
           {Object.keys(characterTalentItemInfo).map((set) => {
             return (
