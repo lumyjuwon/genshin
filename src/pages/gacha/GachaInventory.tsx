@@ -130,16 +130,21 @@ export function GachaInventory(props: Props) {
       <FlexWrapper styles={{ justifyContent: 'space-between', margin: '0 0 10px', small: { flexDirection: 'column' } }}>
         <>
           <Title>{trans(Lang.Inventory)}</Title>
-          <FlexWrapper
-            styles={{
-              justifyContent: 'flex-end'
-            }}
-          >
-            <Result>5★: {props.five}</Result>
-            <Result>4★: {props.four}</Result>
-            <ItemCount>{`${trans(Lang.Item_Count)}: ${totalItemCount}`}</ItemCount>
-          </FlexWrapper>
         </>
+      </FlexWrapper>
+      <FlexWrapper
+        styles={{
+          width: '100%',
+          margin: '10px 0',
+          justifyContent: 'flex-end',
+          small: { justifyContent: 'space-between' }
+        }}
+      >
+        <FlexWrapper styles={{ margin: '0 20px', small: { margin: '0' } }}>
+          <Result>5★: {props.five}</Result>
+          <Result>4★: {props.four}</Result>
+        </FlexWrapper>
+        <ItemCount>{`${trans(Lang.Item_Count)}: ${totalItemCount}`}</ItemCount>
       </FlexWrapper>
       <FlexWrapper styles={{ justifyContent: 'flex-end', margin: '0 0 40px' }}>
         <>
