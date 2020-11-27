@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Layout } from './Layout';
-import { FlexWrapper, CharacterStatRegexText } from 'src/components';
+import { FlexWrapper, CharacterStatRegexText, TableWrapper } from 'src/components';
 import { characterInfo, Level } from 'src/resources/data';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
 
@@ -13,18 +13,12 @@ const Container = styled.div({
 const Inner = styled.div({
   display: 'flex',
   alignItems: 'center',
-  margin: '5px 0 0',
-  justifyContent: 'space-around',
-  padding: '0 200px',
-  '@media screen and (max-width: 1380px)': {
-    padding: '0 100px'
-  },
-  '@media screen and (max-width: 768px)': {
-    padding: '0 50px'
-  },
+  justifyContent: 'center',
+  padding: '20px',
+  '@media screen and (max-width: 1380px)': {},
+  '@media screen and (max-width: 768px)': {},
   '@media screen and (max-width: 475px)': {
-    justifyContent: 'space-between',
-    padding: '0'
+    justifyContent: 'space-between'
   }
 });
 
@@ -47,7 +41,7 @@ const LevelBox = styled.div({
 });
 
 const StatBox = styled.div({
-  minWidth: '100%',
+  minWidth: '100px',
   textAlign: 'center',
   '@media screen and (max-width: 768px)': {
     fontSize: '13px'
@@ -73,7 +67,33 @@ export function CharacterStat(props: Props) {
   return (
     <Layout title={trans(Lang.Character_Stat)}>
       <Container>
-        <Inner>
+        <TableWrapper
+          header={
+            <Inner>
+              <MaxLevelBox>{trans(Lang.Max_Level)}</MaxLevelBox>
+              <LevelBox>{trans(Lang.Level)}</LevelBox>
+              <StatBox>{trans(Lang.HP)}</StatBox>
+              <StatBox>{trans(Lang.DEF)}</StatBox>
+              <StatBox>{trans(Lang.ATK)}</StatBox>
+              <AdditionBox>{trans(Lang.Character_Additional)}</AdditionBox>
+            </Inner>
+          }
+          body={characterAscensionLevel.map((level) => {
+            return (
+              <Inner key={level}>
+                <MaxLevelBox>{trans(Lang[level as KeyLang])}</MaxLevelBox>
+                <LevelBox>{characterInfo[props.character].stats[level as Level].Level}</LevelBox>
+                <StatBox>{characterInfo[props.character].stats[level as Level].HP}</StatBox>
+                <StatBox>{characterInfo[props.character].stats[level as Level].DEF}</StatBox>
+                <StatBox>{characterInfo[props.character].stats[level as Level].ATK}</StatBox>
+                <AdditionBox>
+                  <CharacterStatRegexText>{characterInfo[props.character].stats[level as Level].Additional}</CharacterStatRegexText>
+                </AdditionBox>
+              </Inner>
+            );
+          })}
+        />
+        {/* <Inner>
           <MaxLevelBox>{trans(Lang.Max_Level)}</MaxLevelBox>
           <LevelBox>{trans(Lang.Level)}</LevelBox>
           <FlexWrapper styles={{ padding: '5px' }}>
@@ -101,7 +121,7 @@ export function CharacterStat(props: Props) {
               </FlexWrapper>
             </Inner>
           );
-        })}
+        })} */}
       </Container>
     </Layout>
   );

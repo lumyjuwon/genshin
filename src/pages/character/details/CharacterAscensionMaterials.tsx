@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Layout } from './Layout';
-import { FlexWrapper, RoundImage, GridWrapper, BoxModelWrapper } from 'src/components';
+import { FlexWrapper, RoundImage, GridWrapper, BoxModelWrapper, TableWrapper } from 'src/components';
 import { characterInfo, AscensionMaterialName, Level } from 'src/resources/data';
 import { CharacterAscentionItemImages } from 'src/resources/images';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
@@ -55,36 +55,36 @@ export function CharacterAscensionMaterials(props: Props) {
   return (
     <Layout title={trans(Lang.Character_Ascension_Material)}>
       <BoxModelWrapper styles={{ small: { padding: '0 10px' } }}>
-        <FlexWrapper styles={{ width: '100%', flexDirection: 'column', small: { width: '100%' } }}>
-          <FlexWrapper styles={{ padding: '5px', small: { width: '100%', padding: '5px' } }}>
-            <MaxLevel>{trans(Lang.Ascension_Step)}</MaxLevel>
-            <GridWrapper styles={{ width: '500px', medium: { width: '450px' }, small: { width: '100%' } }}>
-              {trans(Lang.Material)}
-            </GridWrapper>
-          </FlexWrapper>
-          <>
-            {Object.values(AscensionStep).map((step: Step) => {
-              return (
-                <FlexWrapper key={step} styles={{ margin: '10px 0 0', padding: '5px', small: { width: '100%', padding: '5px' } }}>
-                  <MaxLevel>{trans(Lang[step as KeyLang])}</MaxLevel>
-                  <GridWrapper styles={{ width: '500px', medium: { width: '450px' }, small: { width: '100%' } }}>
-                    {getAscensionItems(AscensionStep[step]).map((item: AscensionMaterialName) => {
-                      return (
-                        <FlexWrapper key={item} styles={{ margin: '0 10px' }}>
-                          <RoundImage
-                            src={CharacterAscentionItemImages[item]}
-                            styles={{ width: '50px', height: '50px', small: { width: '40px', height: '40px' } }}
-                          />
-                          <Count>x{ascensionItems.get(item)}</Count>
-                        </FlexWrapper>
-                      );
-                    })}
-                  </GridWrapper>
-                </FlexWrapper>
-              );
-            })}
-          </>
-        </FlexWrapper>
+        <TableWrapper
+          header={
+            <FlexWrapper styles={{ padding: '5px', small: { width: '100%', padding: '5px' } }}>
+              <MaxLevel>{trans(Lang.Ascension_Step)}</MaxLevel>
+              <GridWrapper styles={{ width: '500px', medium: { width: '450px' }, small: { width: '100%' } }}>
+                {trans(Lang.Material)}
+              </GridWrapper>
+            </FlexWrapper>
+          }
+          body={Object.values(AscensionStep).map((step: Step) => {
+            return (
+              <FlexWrapper key={step} styles={{ margin: '10px 0 0', padding: '5px', small: { width: '100%', padding: '5px' } }}>
+                <MaxLevel>{trans(Lang[step as KeyLang])}</MaxLevel>
+                <GridWrapper styles={{ width: '500px', medium: { width: '450px' }, small: { width: '100%' } }}>
+                  {getAscensionItems(AscensionStep[step]).map((item: AscensionMaterialName) => {
+                    return (
+                      <FlexWrapper key={item} styles={{ margin: '8px' }}>
+                        <RoundImage
+                          src={CharacterAscentionItemImages[item]}
+                          styles={{ width: '50px', height: '50px', small: { width: '40px', height: '40px' } }}
+                        />
+                        <Count>x{ascensionItems.get(item)}</Count>
+                      </FlexWrapper>
+                    );
+                  })}
+                </GridWrapper>
+              </FlexWrapper>
+            );
+          })}
+        />
       </BoxModelWrapper>
     </Layout>
   );
