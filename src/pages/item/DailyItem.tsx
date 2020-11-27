@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { characterTalentItemInfo, weaponAscesionItemInfo } from 'src/resources/data';
-import { RoundImage, FlexWrapper, GridWrapper, ItemContentBox, CSSGridWrapper } from 'src/components';
+import { RoundImage, FlexWrapper, ItemContentBox, CSSGridWrapper } from 'src/components';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
 import { Layout } from './Layout';
 

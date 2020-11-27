@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Layout } from './Layout';
-import { FlexWrapper, CharacterStatRegexText, TableWrapper } from 'src/components';
+import { CharacterStatRegexText, TableWrapper } from 'src/components';
 import { characterInfo, Level } from 'src/resources/data';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
 

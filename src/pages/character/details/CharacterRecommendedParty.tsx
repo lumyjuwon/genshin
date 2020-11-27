@@ -5,7 +5,7 @@ import { Layout } from './Layout';
 import { CharacterImages, ElementImages } from 'src/resources/images';
 import { FlexWrapper, ItemBadgeBox, RoundImage, GridWrapper } from 'src/components';
 import { characterInfo } from 'src/resources/data';
-import { trans, Lang, KeyLang } from 'src/resources/languages';
+import { trans, Lang } from 'src/resources/languages';
 import { Link } from 'react-router-dom';
 
 const PartyName = styled.div({

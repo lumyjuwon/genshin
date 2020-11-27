@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import { GachaScreen, PartyScreen, MainScreen, Policy, Notice, MapScreen, ItemScreen, CharacterScreen } from 'src/pages';
+import { GachaScreen, PartyScreen, MainScreen, Policy, Notice, ItemScreen, CharacterScreen } from 'src/pages';
 import { Header, Footer } from 'src/components';
 import { trans, Lang } from './resources/languages';
 import NotFound from './NotFound';
@@ -59,7 +59,7 @@ function App() {
     <BrowserRouter>
       <Header navs={pages} />
       <Switch>
-        <Route exact path='/' component={MainScreen} />
+        <Route exact path="/" component={MainScreen} />
         {Object.keys(pages).map((page) => {
           return <Route key={page} path={pages[page].path} component={pages[page].component} />;
         })}

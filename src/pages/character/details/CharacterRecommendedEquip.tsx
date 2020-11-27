@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { Layout } from './Layout';
 import { ArtifactSetImages, ItemImages } from 'src/resources/images';
-import { FlexWrapper, ItemContentBox, RoundImage, CSSGridWrapper } from 'src/components';
+import { ItemContentBox, RoundImage, CSSGridWrapper } from 'src/components';
 import { characterInfo, weaponInfo } from 'src/resources/data';
 import { KeyLang, trans, Lang } from 'src/resources/languages';
 import { RegexColorText } from 'src/components/text/RegexColorText';

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { LocalSpecialityItem } from './LocalSpecialityItem';
 import { trans, Lang } from 'src/resources/languages';
-import { FlexWrapper, GridWrapper } from 'src/components';
+import { FlexWrapper } from 'src/components';
 import { Layout } from '../Layout';
 
 export function LocalContainer() {

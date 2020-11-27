@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { fieldMonsterDropItemInfo } from 'src/resources/data';
-import { FlexWrapper, RoundImage, ItemContentBox, CSSGridWrapper, BoxModelWrapper } from 'src/components';
+import { FlexWrapper, RoundImage, ItemContentBox, CSSGridWrapper } from 'src/components';
 import { FieldMonsterDropItemImages } from 'src/resources/images';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
 import { Layout } from './Layout';

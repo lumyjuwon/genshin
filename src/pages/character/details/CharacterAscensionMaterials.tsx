@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { Layout } from './Layout';
 import { FlexWrapper, RoundImage, GridWrapper, BoxModelWrapper, TableWrapper } from 'src/components';
-import { characterInfo, AscensionMaterialName, Level } from 'src/resources/data';
+import { characterInfo, AscensionMaterialName } from 'src/resources/data';
 import { CharacterAscentionItemImages } from 'src/resources/images';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
 

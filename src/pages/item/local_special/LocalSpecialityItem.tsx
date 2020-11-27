@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { CSSGridWrapper, FlexWrapper, GridWrapper, ItemContentBox, RoundImage } from 'src/components';
+import { CSSGridWrapper, FlexWrapper, ItemContentBox, RoundImage } from 'src/components';
 import { localSpecialityItemInfo } from 'src/resources/data';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
 import { LocalSpecialityItemImages } from 'src/resources/images';
