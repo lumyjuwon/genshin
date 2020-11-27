@@ -44,7 +44,8 @@ const StatBox = styled.div({
   minWidth: '100px',
   textAlign: 'center',
   '@media screen and (max-width: 768px)': {
-    fontSize: '13px'
+    fontSize: '13px',
+    minWidth: '80px'
   }
 });
 
@@ -53,7 +54,7 @@ const AdditionBox = styled.div({
   textAlign: 'center',
   '@media screen and (max-width: 768px)': {
     fontSize: '13px',
-    minWidth: '130px'
+    minWidth: '140px'
   }
 });
 
