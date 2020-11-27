@@ -457,7 +457,7 @@ enum Lang {
   DEF = 'DEF',
   Physical_DMG = 'Physical_DMG',
   Geo_DMG = 'Geo_DMG',
-  Elemental_Mastery = 'Element_Mastery',
+  Elemental_Mastery = 'Elemental_Mastery',
   Electro_DMG = 'Electro_DMG',
   HP = 'HP',
   Anemo_DMG = 'Anemo_DMG',
