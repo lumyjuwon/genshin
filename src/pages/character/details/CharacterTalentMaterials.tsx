@@ -32,7 +32,14 @@ export function CharacterTalentMaterials(props: Props) {
 
   return (
     <Layout title={trans(Lang.Character_Talent_Material)}>
-      <CSSGridWrapper styles={{ gridTemplateColumns: 'repeat(auto-fit, 250px)', columnGap: '20px' }}>
+      <CSSGridWrapper
+        styles={{
+          gridTemplateColumns: 'repeat(auto-fit, 250px)',
+          columnGap: '20px',
+          medium: { gridTemplateColumns: 'repeat(auto-fit, 250px)', columnGap: '20px', rowGap: '20px' },
+          small: { gridTemplateColumns: 'repeat(auto-fit, 250px)', columnGap: '20px', rowGap: '20px' }
+        }}
+      >
         {talentInfo.book ? (
           <>
             <ItemContentBox

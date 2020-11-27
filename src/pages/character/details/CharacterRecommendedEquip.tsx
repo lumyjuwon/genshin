@@ -8,19 +8,6 @@ import { characterInfo, weaponInfo } from 'src/resources/data';
 import { KeyLang, trans, Lang } from 'src/resources/languages';
 import { RegexColorText } from 'src/components/text/RegexColorText';
 
-const FlexBox = styled.div({
-  display: 'flex',
-  flex: '1 1',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-  padding: '0 20px',
-  '@media screen and (max-width: 768px)': {
-    width: '100%',
-    padding: '0 8px'
-  }
-});
-
 const ListName = styled.div({
   width: '100%',
   fontSize: '20px',
@@ -50,16 +37,21 @@ const StarEmoji = styled.span({
   }
 });
 
-const GridItem = styled.div<{ column: number; row: number }>((props) => {
-  return {
-    alignSelf: 'stretch',
-    gridColumnStart: `${props.column}`,
-    gridRowStart: `${props.row}`,
-    display: 'grid',
-    gridTemplateColumns: '100%',
-    gridTemplateRows: 'min-content',
-    width: '100%'
-  };
+const Set = styled.div({
+  fontSize: '14px',
+  textAlign: 'center',
+  margin: '5px 0 0',
+  '@media screen and (max-width: 768px)': {
+    fontSize: '12px'
+  }
+});
+
+const GridItem = styled.div({
+  alignSelf: 'stretch',
+  display: 'grid',
+  gridTemplateColumns: '100%',
+  gridTemplateRows: 'min-content',
+  width: '100%'
 });
 
 interface Props {
@@ -82,11 +74,19 @@ export function CharactrerRecommendedEquip(props: Props) {
 
   return (
     <Layout title={trans(Lang.Recommended_Equip)}>
-      <CSSGridWrapper styles={{ gridTemplateColumns: 'repeat(2, 450px)', columnGap: '20px', rowGap: '20px' }}>
+      <CSSGridWrapper
+        styles={{
+          gridTemplateColumns: 'repeat(2, 450px)',
+          columnGap: '20px',
+          rowGap: '30px',
+          medium: { gridTemplateColumns: 'repeat(2, 300px)', columnGap: '20px', rowGap: '30px' },
+          small: { gridTemplateColumns: 'repeat(auto-fit, 240px)', columnGap: '20px', rowGap: '30px' }
+        }}
+      >
         <>
           {Object.keys(recommendedEquipInfo.artifact).map((info, index) => {
             return (
-              <GridItem key={info} column={1} row={index + 1}>
+              <GridItem key={info}>
                 <ListName>
                   {trans(Lang.Recommended_Artifact)} #{index + 1}
                 </ListName>
@@ -102,7 +102,7 @@ export function CharactrerRecommendedEquip(props: Props) {
                         name={trans(Lang[set.replace(/'s/g, 'Of').replace(/\s/g, '') as KeyLang])}
                         styles={{ containerStyle: { margin: '15px 0 0' } }}
                       >
-                        <div style={{ margin: '3px 0 0' }}>Set: {recommendedEquipInfo.artifact[info].set}</div>
+                        <Set>Set: {recommendedEquipInfo.artifact[info].set}</Set>
                         <>
                           {artifactBuff.map((buff) => {
                             return (
@@ -123,7 +123,7 @@ export function CharactrerRecommendedEquip(props: Props) {
           })}
           {recommendedEquipInfo.weapon.map((item: string, index) => {
             return (
-              <GridItem key={item} column={2} row={index + 1}>
+              <GridItem key={item}>
                 <ListName>
                   {trans(Lang.Recommended_Weapon)} #{index + 1}
                 </ListName>
