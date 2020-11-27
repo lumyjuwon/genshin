@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import { GachaScreen, PartyScreen, MainScreen, Policy, Notice, MapScreen, ItemScreen, CharacterScreen } from 'src/pages';
+import { GachaScreen, PartyScreen, MainScreen, Policy, Notice, ItemScreen, CharacterScreen } from 'src/pages';
 import { Header, Footer } from 'src/components';
 import { trans, Lang } from './resources/languages';
 import NotFound from './NotFound';
