@@ -4,8 +4,8 @@ import styled from 'styled-components';
 const Container = styled.div({
   display: 'flex',
   flexDirection: 'column',
-  width: '100%',
-  margin: '20px 0 0',
+  width: 'fit-content',
+  margin: '20px auto 0',
   border: '1px solid #212223',
   overflowX: 'auto'
 });

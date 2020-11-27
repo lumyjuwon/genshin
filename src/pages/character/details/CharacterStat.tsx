@@ -7,7 +7,8 @@ import { characterInfo, Level } from 'src/resources/data';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
 
 const Container = styled.div({
-  width: '100%'
+  width: '100%',
+  overflowX: 'auto'
 });
 
 const Inner = styled.div({
@@ -43,9 +44,11 @@ const LevelBox = styled.div({
 const StatBox = styled.div({
   minWidth: '100px',
   textAlign: 'center',
-  '@media screen and (max-width: 768px)': {
-    fontSize: '13px',
+  '@media screen and (max-width: 1380px)': {
     minWidth: '80px'
+  },
+  '@media screen and (max-width: 768px)': {
+    fontSize: '13px'
   }
 });
 
