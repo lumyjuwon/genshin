@@ -66,7 +66,7 @@ export function CharacterAscensionMaterials(props: Props) {
           }
           body={Object.values(AscensionStep).map((step: Step) => {
             return (
-              <FlexWrapper key={step} styles={{ margin: '10px 0 0', padding: '5px', small: { width: '100%', padding: '5px' } }}>
+              <FlexWrapper key={step} styles={{ padding: '15px', small: { width: '100%', padding: '8px' } }}>
                 <MaxLevel>{trans(Lang[step as KeyLang])}</MaxLevel>
                 <GridWrapper styles={{ width: '500px', medium: { width: '450px' }, small: { width: '100%' } }}>
                   {getAscensionItems(AscensionStep[step]).map((item: AscensionMaterialName) => {
