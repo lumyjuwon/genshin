@@ -5,6 +5,16 @@ interface Style {
   gridTemplateColumns: string;
   rowGap?: string;
   columnGap?: string;
+  medium?: {
+    gridTemplateColumns: string;
+    rowGap?: string;
+    columnGap?: string;
+  };
+  small?: {
+    gridTemplateColumns: string;
+    rowGap?: string;
+    columnGap?: string;
+  };
 }
 
 const GridContainer = styled.div<Style>((props) => {
@@ -16,7 +26,17 @@ const GridContainer = styled.div<Style>((props) => {
     columnGap: props.columnGap || '10px',
     margin: '20px 0 0',
     justifyItems: 'center',
-    placeContent: 'center'
+    placeContent: 'center',
+    '@media screen and (max-width: 1380px)': {
+      gridTemplateColumns: props.medium?.gridTemplateColumns || 'repeat(auto-fit, 300px)',
+      rowGap: props.medium?.rowGap || '10px',
+      columnGap: props.medium?.columnGap || '10px'
+    },
+    '@media screen and (max-width: 768px)': {
+      gridTemplateColumns: props.small?.gridTemplateColumns || 'repeat(auto-fit, 300px)',
+      rowGap: props.small?.rowGap || '10px',
+      columnGap: props.small?.columnGap || '10px'
+    }
   };
 });
 
