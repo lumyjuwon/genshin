@@ -56,7 +56,7 @@ export function CharacterAscensionMaterials(props: Props) {
     <Layout title={trans(Lang.Character_Ascension_Material)}>
       <BoxModelWrapper styles={{ small: { padding: '0 10px' } }}>
         <FlexWrapper styles={{ width: '100%', flexDirection: 'column', small: { width: '100%' } }}>
-          <FlexWrapper styles={{ small: { width: '100%' } }}>
+          <FlexWrapper styles={{ padding: '5px', small: { width: '100%', padding: '5px' } }}>
             <MaxLevel>{trans(Lang.Ascension_Step)}</MaxLevel>
             <GridWrapper styles={{ width: '500px', medium: { width: '450px' }, small: { width: '100%' } }}>
               {trans(Lang.Material)}
@@ -65,7 +65,7 @@ export function CharacterAscensionMaterials(props: Props) {
           <>
             {Object.values(AscensionStep).map((step: Step) => {
               return (
-                <FlexWrapper key={step} styles={{ margin: '10px 0 0', padding: '5px', small: { width: '100%' } }}>
+                <FlexWrapper key={step} styles={{ margin: '10px 0 0', padding: '5px', small: { width: '100%', padding: '5px' } }}>
                   <MaxLevel>{trans(Lang[step as KeyLang])}</MaxLevel>
                   <GridWrapper styles={{ width: '500px', medium: { width: '450px' }, small: { width: '100%' } }}>
                     {getAscensionItems(AscensionStep[step]).map((item: AscensionMaterialName) => {
