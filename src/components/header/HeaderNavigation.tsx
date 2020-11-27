@@ -43,6 +43,15 @@ const NavList = styled.div({
   }
 });
 
+function getBasePathName(pathName: string): string {
+  const basePathName = pathName.split('/')[1];
+  if (basePathName) {
+    return `/${pathName.split('/')[1]}`;
+  }
+
+  return pathName;
+}
+
 interface Props {
   navs: Navs;
   onClick?: Function;
@@ -51,6 +60,8 @@ interface Props {
 export const HeaderNavigation = React.forwardRef<HTMLDivElement, Props>((props, forwardedRef) => {
   const [selectedNavPath, setSelectedNavPath] = useState<string>(window.location.pathname);
   const history = useHistory();
+
+  console.log(window.location);
 
   useEffect(() => {
     const historyListener = history.listen((location) => {
@@ -75,7 +86,7 @@ export const HeaderNavigation = React.forwardRef<HTMLDivElement, Props>((props, 
                     key={navName}
                     link={nav.path}
                     title={nav.title}
-                    isSelected={selectedNavPath === nav.path}
+                    isSelected={getBasePathName(selectedNavPath) === nav.path}
                     onClick={props.onClick}
                   />
                 );
