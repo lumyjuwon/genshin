@@ -36,7 +36,11 @@ export function TableWrapper(props: Props) {
       <TableHeader>{props.header}</TableHeader>
       <TableBody>
         {props.body.map((element, index) => {
-          return <TableCell index={index}>{element}</TableCell>;
+          return (
+            <TableCell key={index.toString()} index={index}>
+              {element}
+            </TableCell>
+          );
         })}
       </TableBody>
     </Container>
