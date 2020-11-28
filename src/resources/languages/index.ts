@@ -646,6 +646,7 @@ enum Lang {
   Geovishap_Hatchlings = 'Geovishap_Hatchlings',
 
   Character = 'Character',
+  Charcater_Page_Desc = 'Charcater_Page_Desc',
   Max_20 = 'Max_20',
   Max_40 = 'Max_40',
   Max_50 = 'Max_50',

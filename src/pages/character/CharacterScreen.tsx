@@ -14,7 +14,7 @@ export function CharacterScreen() {
   return (
     <ContentWrapper>
       <ContentBackgroundBox backgroundColor='#2a2b2c'>
-        <PageHelmet title={trans(Lang.Character)} description={'Desc'} />
+        <PageHelmet title={trans(Lang.Character)} description={trans(Lang.Charcater_Page_Desc)} />
         <Switch>
           <Route exact path='/character' component={CharacterList} />
           {characters.map((name) => {
