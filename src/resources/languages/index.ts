@@ -98,6 +98,9 @@ enum Lang {
   Four_Pick_Up = 'Four_Pick_Up',
   Help_Warning = 'Help_Warning',
   Help_No_Pick_UP = 'Help_No_Pick_Up',
+  Help_Stack_Title = 'Help_Stack_Title',
+  Help_Stack_First_Section = 'Help_Stack_First_Section',
+  Help_Stack_Second_Section = 'Help_Stack_Second_Section',
 
   Klee = 'Klee',
   Diluc = 'Diluc',
