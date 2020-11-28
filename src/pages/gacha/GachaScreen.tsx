@@ -49,10 +49,6 @@ export function GachaScreen() {
     threeStars: gachaInfo[gachaContent].threeStars
   };
 
-  const watchingVideoPreventClick = {
-    pointerEvents: 'none'
-  };
-
   useEffect(() => {
     if (!gachaMap.current?.has(gachaContent)) {
       const data = new GachaContent(contentData);
