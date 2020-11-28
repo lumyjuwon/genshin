@@ -113,7 +113,7 @@ export function CharactrerRecommendedEquip(props: Props) {
                           {artifactBuff.map((buff) => {
                             return (
                               <BuffText key={buff}>
-                                <RegexColorText regex={/\d+%|\+\d/g} color={'red'} isBold styles={{ small: { fontSize: '12px' } }}>
+                                <RegexColorText regex={/\d+%|\+\d+/g} color={'red'} isBold styles={{ small: { fontSize: '12px' } }}>
                                   {buff}
                                 </RegexColorText>
                               </BuffText>
