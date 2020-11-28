@@ -1,7 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 
-import { BoxModelWrapper, CSSGridWrapper, DropDownButton, FlexWrapper, GridWrapper, RoundImageButton } from 'src/components';
-import { trans, Lang, KeyLang } from 'src/resources/languages';
+import { CSSGridWrapper, FlexWrapper, RoundImageButton } from 'src/components';
 import { WishClickImages } from 'src/resources/images';
 import { GachaDetails } from './GachaDetails';
 
@@ -13,7 +12,6 @@ interface Props {
 }
 
 export function GachaBanner(props: Props) {
-  const wishListRef = useRef<HTMLDivElement>(null);
   const [clickedWishIndex, setClickedWishIndex] = useState<number>(0);
 
   function onClickBannerImages(index: number) {

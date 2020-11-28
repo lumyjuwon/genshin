@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { Layout } from './Layout';
 import { CharacterImages, ElementImages } from 'src/resources/images';
-import { FlexWrapper, ItemBadgeBox, RoundImage, GridWrapper, ContentBackgroundBox, BoxModelWrapper } from 'src/components';
+import { FlexWrapper, ItemBadgeBox, RoundImage, GridWrapper, ContentBackgroundBox } from 'src/components';
 import { characterInfo } from 'src/resources/data';
 import { trans, Lang } from 'src/resources/languages';
 import { Link } from 'react-router-dom';
