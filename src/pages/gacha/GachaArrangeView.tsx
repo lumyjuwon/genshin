@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import { characterInfo, weaponInfo } from 'src/resources/data';
 import { FlexWrapper, SquareImage, TextCenterWrapper, TooltipText } from 'src/components';
@@ -51,14 +51,21 @@ const Video = styled.video({
   objectFit: 'fill'
 });
 
-const HoverTransform = styled.div`
+const ItemAnimation = keyframes`
+  0% {
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+const HoverTransform = styled.div<{ delay: number }>`
   position: relative;
   z-index: 1;
-  &:hover {
-    z-index: 2;
-    transition: 0.1s ease-in-out;
-    transform: scale(1.2, 1.2);
-  }
+  opacity: 0;
+  animation: ${ItemAnimation} 0.4s ${(props) => props.delay * 0.2}s forwards;
   &:hover ${HoverVisibleElement} {
     visibility: visible;
   }
@@ -153,7 +160,7 @@ export function GachaArrangeView(props: Props) {
                 if (window.innerWidth <= 768 && characterInfo[item]) imagePath = require(`../../resources/images/characters/${item}.png`);
 
                 return (
-                  <HoverTransform key={index}>
+                  <HoverTransform key={index} delay={index}>
                     <SquareImage
                       styles={{
                         width: '110px',
