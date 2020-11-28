@@ -2,12 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 interface Style {
+  padding?: string;
   color?: string;
 }
 
 const ColoredBox = styled.div<Style>((props) => {
   return {
-    padding: '40px 30px',
+    padding: props.padding || '40px 30px',
     width: 'fit-content',
     margin: '0 auto',
     borderRadius: '30px',
@@ -25,9 +26,14 @@ const ColoredBox = styled.div<Style>((props) => {
 
 interface Props {
   children: JSX.Element | JSX.Element[];
+  padding?: string;
   backgroundColor?: string;
 }
 
 export function ContentBackgroundBox(props: Props) {
-  return <ColoredBox color={props.backgroundColor}>{props.children}</ColoredBox>;
+  return (
+    <ColoredBox padding={props.padding} color={props.backgroundColor}>
+      {props.children}
+    </ColoredBox>
+  );
 }

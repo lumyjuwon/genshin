@@ -58,7 +58,7 @@ export function CharacterSlotIterator(props: Props) {
         const characterName = charactersArray[index] !== undefined ? charactersArray[index] : '';
         return (
           <BoxModelWrapper key={`${name}_${index}_slot`} styles={{ margin: '20px 0' }}>
-            <ContentBackgroundBox>
+            <ContentBackgroundBox padding={'40px 30px 10px 40px'}>
               <CharacterSlot setVisible={callbackSetIsVisibleCharacterModal} name={characterName} src={CharacterImages[characterName]} />
             </ContentBackgroundBox>
           </BoxModelWrapper>
