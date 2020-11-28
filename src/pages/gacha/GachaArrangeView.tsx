@@ -192,7 +192,10 @@ export function GachaArrangeView(props: Props) {
           }}
         >
           <>
-            <SquareImage styles={{ width: '300x', height: '370px' }} src={require('../../resources/images/characters/Flying Paimon.gif')} />
+            <SquareImage
+              styles={{ width: '300px', height: '370px', small: { width: '250px', height: '320px' } }}
+              src={require('../../resources/images/characters/Flying Paimon.gif')}
+            />
             <TextCenterWrapper styles={{ fontSize: '25px', small: { fontSize: '18px' } }}>
               <>
                 <span role="img" aria-label="comment">
