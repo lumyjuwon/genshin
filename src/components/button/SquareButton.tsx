@@ -26,7 +26,7 @@ const Button = styled.button<ButtonStyle>((props: ButtonStyle) => {
     alignItems: 'center',
     display: props.display || 'inline-block',
     padding: props.padding || '0px',
-    border: props.border || '1px solid #fff',
+    border: props.border || '1px solid transparent',
     backgroundColor: props.backgroundColor || 'transparent',
     WebkitTouchCallout: 'none',
     WebkitUserSelect: 'none',
@@ -35,6 +35,7 @@ const Button = styled.button<ButtonStyle>((props: ButtonStyle) => {
     userSelect: 'none',
     position: 'relative',
     overflow: 'hidden',
+    outline: 'none',
     '@media screen and (max-width: 1380px)': {
       width: props.medium?.width || 'fit-content',
       height: props.medium?.height || 'fit-content'

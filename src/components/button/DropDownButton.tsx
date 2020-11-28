@@ -143,6 +143,7 @@ export const DropDownButton = React.forwardRef<HTMLDivElement, Props>((props, fo
   };
 
   const onListClick = (item: string) => {
+    console.log(item);
     props.onClick(item);
     dropDownRef.current?.lastElementChild?.classList.remove('show-list');
   };
@@ -155,6 +156,7 @@ export const DropDownButton = React.forwardRef<HTMLDivElement, Props>((props, fo
       </Clickable>
       <DropDown {...props.styles?.listStyles} id={props.id}>
         {Object.keys(props.items).map((item: any) => {
+          console.log(props.items);
           if (props.defaultValue === props.items[item]) {
             return (
               <List default key={item} onClick={(event: React.MouseEvent<HTMLLIElement, MouseEvent>) => onListClick(item)}>

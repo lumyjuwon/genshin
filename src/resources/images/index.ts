@@ -94,6 +94,17 @@ const DailySetImages: ImageMap = {
   Aerosiderite: require('./items/daily-set/Aerosiderite.png')
 };
 
+const WishClickImages: ImageMap = {
+  Character_Event_Wish: require('./gacha/banner/Character Event Wish.png'),
+  Weapon_Event_Wish: require('./gacha/banner/Weapon Event Wish.png'),
+  Standard_Wish: require('./gacha/banner/Standard Wish.png'),
+  Novice_Wishes: require('./gacha/banner/Novice Wishes.png'),
+  Character_Event_Wish_Selected: require('./gacha/banner/Character Event Wish Selected.png'),
+  Weapon_Event_Wish_Selected: require('./gacha/banner/Weapon Event Wish Selected.png'),
+  Standard_Wish_Selected: require('./gacha/banner/Standard Wish Selected.png'),
+  Novice_Wishes_Selected: require('./gacha/banner/Novice Wishes Selected.png')
+};
+
 const TravelerAscensionItemImages: ImageMap = {};
 appendImages(TravelerAscensionItemImages, travelerAscensionItemInfo, './items/traveler-ascension');
 
@@ -135,5 +146,6 @@ export {
   CharacterAscentionItemImages,
   CharacterTalentItemImages,
   ArtifactSetImages,
-  TierImages
+  TierImages,
+  WishClickImages
 };

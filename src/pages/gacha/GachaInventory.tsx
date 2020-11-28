@@ -14,6 +14,7 @@ interface Props {
   inventoryList: Array<string>;
   four: number;
   five: number;
+  showVideo: boolean;
 }
 
 const Title = styled.div({

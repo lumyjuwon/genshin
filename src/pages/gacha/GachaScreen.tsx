@@ -32,6 +32,7 @@ export function GachaScreen() {
   const [gachaExecutionResult, setGachaExecutionResult] = useState([]);
   const [nextPity, setNextPity] = useState(0);
   const [usedPrimoGem, setUsedPrimoGem] = useState(0);
+  const [isWatchingVideo, setIsWatchingVideo] = useState(false);
 
   const refInitialValue = new Map<string, GachaController>();
   const gacha = useRef<GachaController>();
@@ -46,6 +47,10 @@ export function GachaScreen() {
     fiveStars: gachaInfo[gachaContent].fiveStars,
     fourStars: gachaInfo[gachaContent].fourStars,
     threeStars: gachaInfo[gachaContent].threeStars
+  };
+
+  const watchingVideoPreventClick = {
+    pointerEvents: 'none'
   };
 
   useEffect(() => {
@@ -93,6 +98,7 @@ export function GachaScreen() {
   };
 
   const onGachaExecution = (tries: number): void => {
+    turnOnWishVideo();
     setGachaExecutionResult(gacha.current?.start(tries) as never[]);
     if (gacha.current) {
       setTotalCount(gacha.current.totalCount);
@@ -115,13 +121,21 @@ export function GachaScreen() {
     result.map((item: string) => setItemRankCount(item));
   };
 
+  function turnOnWishVideo() {
+    setIsWatchingVideo(true);
+  }
+
+  function turnOffWishVideo() {
+    setIsWatchingVideo(false);
+  }
+
   return (
     <ContentWrapper>
       <PageHelmet title={trans(Lang.Gacha)} description={trans(Lang.Main_Wish_Desc)} />
       <ScreenInnerWrapper>
         <>
           <GachaBanner content={gachaContent} onClick={onBannerClick} pickUpList={Object.keys(gachaInfo)} />
-          <GachaArrangeView result={gachaExecutionResult} />
+          <GachaArrangeView result={gachaExecutionResult} video={isWatchingVideo} turnOff={turnOffWishVideo} />
           {gachaContent === contentList[3] ? (
             <GachaResult times={totalCount} gem={usedPrimoGem} pity={0} result={gachaInventoryList} />
           ) : (
@@ -129,19 +143,40 @@ export function GachaScreen() {
           )}
           <FlexWrapper>
             <>
-              <RoundTextButton
-                styles={{
-                  buttonStyles: { display: 'inline-block', backgroundColor: '#cc0000', margin: '10px', padding: '12px' },
-                  textStyles: { fontSize: '20px', small: { fontSize: '16px' } }
-                }}
-                onClick={() => onResetClick()}
-              >
-                <>
-                  {trans(Lang.Reset)}
-                  <Ripple />
-                </>
-              </RoundTextButton>
-              {stopBeginnerWishes ? (
+              {isWatchingVideo ? (
+                <RoundTextButton
+                  styles={{
+                    buttonStyles: {
+                      display: 'inline-block',
+                      backgroundColor: '#cc0000',
+                      margin: '10px',
+                      padding: '12px',
+                      pointerEvents: 'none'
+                    },
+                    textStyles: { fontSize: '20px', small: { fontSize: '16px' } }
+                  }}
+                  onClick={() => onResetClick()}
+                >
+                  <>
+                    {trans(Lang.Reset)}
+                    <Ripple />
+                  </>
+                </RoundTextButton>
+              ) : (
+                <RoundTextButton
+                  styles={{
+                    buttonStyles: { display: 'inline-block', backgroundColor: '#cc0000', margin: '10px', padding: '12px' },
+                    textStyles: { fontSize: '20px', small: { fontSize: '16px' } }
+                  }}
+                  onClick={() => onResetClick()}
+                >
+                  <>
+                    {trans(Lang.Reset)}
+                    <Ripple />
+                  </>
+                </RoundTextButton>
+              )}
+              {stopBeginnerWishes || isWatchingVideo ? (
                 <RoundButton
                   styles={{ border: '2px solid #f1f2f3', width: '150px', display: 'inline-block', pointerEvents: 'none' }}
                   onClick={() => onGachaExecution(10)}
@@ -196,7 +231,7 @@ export function GachaScreen() {
           <BoxModelWrapper styles={{ margin: '50px auto 30px' }}>
             <>
               <hr />
-              <GachaInventory inventoryList={gachaInventoryList} four={fourStarCount} five={fiveStarCount} />
+              <GachaInventory inventoryList={gachaInventoryList} four={fourStarCount} five={fiveStarCount} showVideo={isWatchingVideo} />
             </>
           </BoxModelWrapper>
         </>

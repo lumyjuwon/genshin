@@ -1,7 +1,8 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
-import { DropDownButton, FlexWrapper } from 'src/components';
+import { BoxModelWrapper, DropDownButton, FlexWrapper, SquareImageButton } from 'src/components';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
+import { WishClickImages } from 'src/resources/images';
 import { GachaDetails } from './GachaDetails';
 
 interface Props {
@@ -12,29 +13,37 @@ interface Props {
 
 export function GachaBanner(props: Props) {
   const wishListRef = useRef<HTMLDivElement>(null);
+  const [clickedWishIndex, setClickedWishIndex] = useState<number>(0);
 
-  const transWishList = props.pickUpList.map((wish) => trans(Lang[wish as KeyLang]));
+  function onClickBannerImages(index: number) {
+    props.onClick(index);
+    setClickedWishIndex(index);
+  }
+
+  function getImagePath(content: string, index: number) {
+    if (clickedWishIndex === index) {
+      return WishClickImages[`${content}_Selected`];
+    } else {
+      return WishClickImages[content];
+    }
+  }
 
   return (
     <FlexWrapper styles={{ justifyContent: 'space-between', margin: '0 0 20px' }}>
       <>
-        <DropDownButton
-          id="wish"
-          ref={wishListRef}
-          items={transWishList}
-          styles={{
-            containerStyles: {
-              width: '300px',
-              height: '40px',
-              fontSize: '20px',
-              small: { width: '220px', fontSize: '16px', height: '35px' }
-            },
-            listStyles: { width: '300px', top: '39px', right: '-1px', small: { width: '220px', top: '34px' } }
-          }}
-          onClick={props.onClick}
-          defaultValue={trans(Lang[props.content as KeyLang])}
-          content={trans(Lang[props.content as KeyLang])}
-        />
+        <FlexWrapper styles={{ alignItems: 'flex-end' }}>
+          {props.pickUpList.map((content, index) => {
+            return (
+              <BoxModelWrapper styles={{ margin: '0 20px 0 0', medium: { margin: '0 20px 0 0' } }}>
+                <SquareImageButton
+                  src={getImagePath(content, index)}
+                  onClick={() => onClickBannerImages(index)}
+                  styles={{ imageStyles: { width: '130px', height: '65px' }, buttonStyles: { border: '1px solid transparent' } }}
+                />
+              </BoxModelWrapper>
+            );
+          })}
+        </FlexWrapper>
         <GachaDetails content={props.content} />
       </>
     </FlexWrapper>
