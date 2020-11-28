@@ -38,7 +38,7 @@ export function CharacterSimulator(props: Props) {
 
   return (
     <Wrapper>
-      <ContentBackgroundBox backgroundColor="#2a2b2c">
+      <ContentBackgroundBox backgroundColor='#2a2b2c'>
         <Menu />
         <div id={'party-content'}>
           <CharacterSlotIterator characters={characters} />
