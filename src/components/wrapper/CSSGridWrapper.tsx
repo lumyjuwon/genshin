@@ -5,6 +5,8 @@ interface Style {
   gridTemplateColumns: string;
   rowGap?: string;
   columnGap?: string;
+  placeContent?: string;
+  margin?: string;
   medium?: {
     gridTemplateColumns: string;
     rowGap?: string;
@@ -24,9 +26,9 @@ const GridContainer = styled.div<Style>((props) => {
     gridTemplateColumns: props.gridTemplateColumns || 'repeat(auto-fit, 300px)',
     rowGap: props.rowGap || '10px',
     columnGap: props.columnGap || '10px',
-    margin: '20px 0 0',
+    margin: props.margin || '20px 0 0',
     justifyItems: 'center',
-    placeContent: 'center',
+    placeContent: props.placeContent || 'center',
     '@media screen and (max-width: 1380px)': {
       gridTemplateColumns: props.medium?.gridTemplateColumns || 'repeat(auto-fit, 300px)',
       rowGap: props.medium?.rowGap || '10px',
