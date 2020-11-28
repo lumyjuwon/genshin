@@ -17,6 +17,7 @@ export interface Style {
   readonly small?: {
     readonly width?: string;
     readonly height?: string;
+    readonly objectFit?: 'inherit' | 'none' | '-moz-initial' | 'initial' | 'revert' | 'unset' | 'fill' | 'contain' | 'cover' | 'scale-down';
   };
 }
 
@@ -33,6 +34,7 @@ const Image = styled.img<Style>((props: Style) => {
       height: props.medium?.height || props.height || '100px'
     },
     '@media screen and (max-width: 768px)': {
+      objectFit: props.small?.objectFit || props.objectFit || 'fill',
       width: props.small?.width || props.width || '100px',
       height: props.small?.height || props.height || '100px'
     }

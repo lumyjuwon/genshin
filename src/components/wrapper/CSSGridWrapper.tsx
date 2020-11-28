@@ -17,6 +17,11 @@ interface Style {
     rowGap?: string;
     columnGap?: string;
   };
+  xsmall?: {
+    gridTemplateColumns: string;
+    rowGap?: string;
+    columnGap?: string;
+  };
 }
 
 const GridContainer = styled.div<Style>((props) => {
@@ -38,6 +43,11 @@ const GridContainer = styled.div<Style>((props) => {
       gridTemplateColumns: props.small?.gridTemplateColumns || 'repeat(auto-fit, 300px)',
       rowGap: props.small?.rowGap || '10px',
       columnGap: props.small?.columnGap || '10px'
+    },
+    '@media screen and (max-width: 500px)': {
+      gridTemplateColumns: props.xsmall?.gridTemplateColumns || props.small?.gridTemplateColumns,
+      rowGap: props.xsmall?.rowGap || props.small?.rowGap || '10px',
+      columnGap: props.xsmall?.columnGap || props.small?.columnGap || '10px'
     }
   };
 });

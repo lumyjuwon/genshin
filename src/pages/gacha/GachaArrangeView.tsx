@@ -2,38 +2,9 @@ import React, { useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 
 import { characterInfo, weaponInfo } from 'src/resources/data';
-import { FlexWrapper, SquareImage, TextCenterWrapper, TooltipText } from 'src/components';
+import { CSSGridWrapper, FlexWrapper, SquareImage, TextCenterWrapper, TooltipText } from 'src/components';
 import { trans, Lang } from 'src/resources/languages';
 import { changeItemNameToKeyLang } from 'src/utils';
-
-const GridContainer = styled.div({
-  backgroundColor: '#333',
-  display: 'grid',
-  width: '1300px',
-  height: '400px',
-  gridTemplateColumns: 'repeat(auto-fit, 110px)',
-  columnGap: '12px',
-  textAlign: 'center',
-  padding: '0 15px',
-  alignItems: 'center',
-  justifyItems: 'center',
-  alignContent: 'center',
-  justifyContent: 'center',
-  '@media screen and (max-width: 1380px)': {
-    width: '700px',
-    gridTemplateColumns: 'repeat(5, 110px)',
-    columnGap: '10px',
-    gridTemplateRows: 'repeat(auto-fit, 220px)',
-    rowGap: '20px',
-    height: '500px'
-  },
-  '@media screen and (max-width: 768px)': {
-    width: '100%',
-    gridTemplateColumns: 'repeat(3, 70px)',
-    gridTemplateRows: 'repeat(auto-fit, 70px)',
-    height: '450px'
-  }
-});
 
 const HoverVisibleElement = styled.div({
   visibility: 'hidden'
@@ -63,6 +34,7 @@ const ItemAnimation = keyframes`
 
 const HoverTransform = styled.div<{ delay: number }>`
   position: relative;
+  align-self: stretch;
   z-index: 1;
   opacity: 0;
   animation: ${ItemAnimation} 0.4s ${(props) => props.delay * 0.2}s forwards;
@@ -145,41 +117,50 @@ export function GachaArrangeView(props: Props) {
             <SkipButton onClick={() => turnOff()}>Skip</SkipButton>
           </VideoBox>
         ) : (
-          <FlexWrapper>
-            <GridContainer>
-              {props.result.map((item: string, index: number) => {
-                let shadow = '0 0 8px 2px #777, 0px 8px 5px #777, 0px -8px 5px #777';
-                if (characterInfo[item]) {
-                  if (characterInfo[item].rank === 5) shadow = shadowPal.five;
-                  else if (characterInfo[item].rank === 4) shadow = shadowPal.four;
-                } else {
-                  if (weaponInfo[item].rank === 5) shadow = shadowPal.five;
-                  else if (weaponInfo[item].rank === 4) shadow = shadowPal.four;
-                }
-                let imagePath = require(`../../resources/images/gacha/${item}.png`);
-                if (window.innerWidth <= 768 && characterInfo[item]) imagePath = require(`../../resources/images/characters/${item}.png`);
+          <CSSGridWrapper
+            styles={{
+              gridTemplateColumns: 'repeat(10, 110px)',
+              columnGap: '15px',
+              margin: '0',
+              medium: { gridTemplateColumns: 'repeat(5, 110px)', columnGap: '15px', rowGap: '15px' },
+              small: { gridTemplateColumns: 'repeat(5, 80px)', columnGap: '15px', rowGap: '15px' },
+              xsmall: { gridTemplateColumns: 'repeat(auto-fit, 70px)' }
+            }}
+          >
+            {props.result.map((item: string, index: number) => {
+              let shadow = '0 0 8px 2px #777, 0px 8px 5px #777, 0px -8px 5px #777';
+              if (characterInfo[item]) {
+                if (characterInfo[item].rank === 5) shadow = shadowPal.five;
+                else if (characterInfo[item].rank === 4) shadow = shadowPal.four;
+              } else {
+                if (weaponInfo[item].rank === 5) shadow = shadowPal.five;
+                else if (weaponInfo[item].rank === 4) shadow = shadowPal.four;
+              }
+              let imagePath = require(`../../resources/images/gacha/${item}.png`);
+              if (window.innerWidth <= 768 && characterInfo[item]) imagePath = require(`../../resources/images/characters/${item}.png`);
 
-                return (
-                  <HoverTransform key={index} delay={index}>
-                    <SquareImage
-                      styles={{
-                        width: '110px',
-                        height: '300px',
-                        boxShadow: `${shadow}`,
-                        objectFit: 'none',
-                        medium: { height: '220px' },
-                        small: { width: '70px', height: '70px' }
-                      }}
-                      src={imagePath}
-                    />
-                    <HoverVisibleElement>
-                      <TooltipText styles={{ small: { fontSize: '14px' } }}>{trans(Lang[changeItemNameToKeyLang(item)])}</TooltipText>
-                    </HoverVisibleElement>
-                  </HoverTransform>
-                );
-              })}
-            </GridContainer>
-          </FlexWrapper>
+              return (
+                <HoverTransform key={index} delay={index}>
+                  <SquareImage
+                    styles={{
+                      width: '110px',
+                      height: '300px',
+                      boxShadow: `${shadow}`,
+                      objectFit: 'none',
+                      medium: { height: '220px' },
+                      small: { width: '70px', height: '70px', objectFit: 'fill' }
+                    }}
+                    src={imagePath}
+                  />
+                  <HoverVisibleElement>
+                    <TooltipText styles={{ small: { fontSize: '14px', bottom: '0' } }}>
+                      {trans(Lang[changeItemNameToKeyLang(item)])}
+                    </TooltipText>
+                  </HoverVisibleElement>
+                </HoverTransform>
+              );
+            })}
+          </CSSGridWrapper>
         )}
       </Container>
     );

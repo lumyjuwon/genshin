@@ -7,6 +7,7 @@ export interface TooltipStyle {
   readonly left?: string;
   readonly small?: {
     readonly fontSize?: string;
+    readonly bottom?: string;
   };
 }
 
@@ -26,7 +27,8 @@ const ItemTooltip = styled.div<TooltipStyle>((props: TooltipStyle) => {
     wordBreak: 'keep-all',
     fontSize: props.fontSize || '16px',
     '@media screen and (max-width: 768px)': {
-      fontSize: props.small?.fontSize || props.fontSize || '12px'
+      fontSize: props.small?.fontSize || props.fontSize || '12px',
+      bottom: props.small?.bottom || props.bottom || '16px'
     }
   };
 });
