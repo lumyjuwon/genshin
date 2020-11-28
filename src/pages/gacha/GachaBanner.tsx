@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-import { BoxModelWrapper, DropDownButton, FlexWrapper, SquareImageButton } from 'src/components';
+import { BoxModelWrapper, DropDownButton, FlexWrapper, RoundImageButton } from 'src/components';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
 import { WishClickImages } from 'src/resources/images';
 import { GachaDetails } from './GachaDetails';
@@ -9,6 +9,7 @@ interface Props {
   content: string;
   onClick: Function;
   pickUpList: Array<string>;
+  video: boolean;
 }
 
 export function GachaBanner(props: Props) {
@@ -31,19 +32,38 @@ export function GachaBanner(props: Props) {
   return (
     <FlexWrapper styles={{ justifyContent: 'space-between', margin: '0 0 20px' }}>
       <>
-        <FlexWrapper styles={{ alignItems: 'flex-end' }}>
-          {props.pickUpList.map((content, index) => {
-            return (
-              <BoxModelWrapper styles={{ margin: '0 20px 0 0', medium: { margin: '0 20px 0 0' } }}>
-                <SquareImageButton
-                  src={getImagePath(content, index)}
-                  onClick={() => onClickBannerImages(index)}
-                  styles={{ imageStyles: { width: '130px', height: '65px' }, buttonStyles: { border: '1px solid transparent' } }}
-                />
-              </BoxModelWrapper>
-            );
-          })}
-        </FlexWrapper>
+        {props.video ? (
+          <FlexWrapper styles={{ alignItems: 'flex-end' }}>
+            {props.pickUpList.map((content, index) => {
+              return (
+                <BoxModelWrapper styles={{ margin: '0 20px 0 0', medium: { margin: '0 20px 0 0' } }}>
+                  <RoundImageButton
+                    src={getImagePath(content, index)}
+                    onClick={() => onClickBannerImages(index)}
+                    styles={{
+                      imageStyles: { width: '130px', height: '65px' },
+                      buttonStyles: { pointerEvents: 'none', border: 'none' }
+                    }}
+                  />
+                </BoxModelWrapper>
+              );
+            })}
+          </FlexWrapper>
+        ) : (
+          <FlexWrapper styles={{ alignItems: 'flex-end' }}>
+            {props.pickUpList.map((content, index) => {
+              return (
+                <BoxModelWrapper styles={{ margin: '0 20px 0 0', medium: { margin: '0 20px 0 0' } }}>
+                  <RoundImageButton
+                    src={getImagePath(content, index)}
+                    onClick={() => onClickBannerImages(index)}
+                    styles={{ imageStyles: { width: '130px', height: '65px' }, buttonStyles: { border: 'none' } }}
+                  />
+                </BoxModelWrapper>
+              );
+            })}
+          </FlexWrapper>
+        )}
         <GachaDetails content={props.content} />
       </>
     </FlexWrapper>

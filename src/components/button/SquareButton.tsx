@@ -8,6 +8,22 @@ export interface ButtonStyle {
   readonly padding?: string;
   readonly border?: string;
   readonly backgroundColor?: string;
+  readonly pointerEvents?:
+    | 'fill'
+    | 'stroke'
+    | 'none'
+    | 'auto'
+    | 'inherit'
+    | 'initial'
+    | '-moz-initial'
+    | 'revert'
+    | 'unset'
+    | 'all'
+    | 'visible'
+    | 'painted'
+    | 'visibleFill'
+    | 'visiblePainted'
+    | 'visibleStroke';
   readonly medium?: {
     readonly width?: string;
     readonly height?: string;
@@ -19,6 +35,7 @@ export interface ButtonStyle {
 }
 
 const Button = styled.button<ButtonStyle>((props: ButtonStyle) => {
+  console.log(props);
   return {
     width: props.width || 'fit-content',
     height: props.height || 'fit-content',
@@ -28,6 +45,7 @@ const Button = styled.button<ButtonStyle>((props: ButtonStyle) => {
     padding: props.padding || '0px',
     border: props.border || '1px solid transparent',
     backgroundColor: props.backgroundColor || 'transparent',
+    pointerEvents: props.pointerEvents || 'auto',
     WebkitTouchCallout: 'none',
     WebkitUserSelect: 'none',
     msUserSelect: 'none',

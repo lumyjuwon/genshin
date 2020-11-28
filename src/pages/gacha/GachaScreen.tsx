@@ -134,7 +134,7 @@ export function GachaScreen() {
       <PageHelmet title={trans(Lang.Gacha)} description={trans(Lang.Main_Wish_Desc)} />
       <ScreenInnerWrapper>
         <>
-          <GachaBanner content={gachaContent} onClick={onBannerClick} pickUpList={Object.keys(gachaInfo)} />
+          <GachaBanner content={gachaContent} onClick={onBannerClick} pickUpList={Object.keys(gachaInfo)} video={isWatchingVideo} />
           <GachaArrangeView result={gachaExecutionResult} video={isWatchingVideo} turnOff={turnOffWishVideo} />
           {gachaContent === contentList[3] ? (
             <GachaResult times={totalCount} gem={usedPrimoGem} pity={0} result={gachaInventoryList} />
