@@ -66,9 +66,8 @@ const DetailsContainer = styled.div({
   }
 });
 
-const ExitButton = styled.span({
-  display: 'inline-block',
-  position: 'absolute',
+const ExitButton = styled.div({
+  display: 'flex',
   top: '0',
   right: '0',
   fontSize: '35px',
@@ -106,31 +105,57 @@ export function GachaDetails(props: Props) {
   return (
     <div style={{ position: 'relative' }}>
       <Help onClick={() => onExitClick()}>
-        <EmojiText label="help" symbol="❔" />
+        <EmojiText label='help' symbol='❔' />
       </Help>
-      <Details id="help" style={{ visibility: 'hidden' }}>
+      <Details id='help' style={{ visibility: 'hidden' }}>
         <DetailsContainer>
-          <ExitButton role="img" onClick={() => onExitClick()}>
-            <EmojiText label="exit" symbol="❌" />
-          </ExitButton>
-          <TextCenterWrapper styles={{ fontSize: '35px', margin: '0', padding: '0', small: { fontSize: '25px' } }}>
-            {trans(Lang.Help_Title)}
-          </TextCenterWrapper>
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              width: '100%',
+              justifyContent: 'space-between',
+              paddingTop: '144px',
+              paddingBottom: '72px'
+            }}
+          >
+            <div />
+
+            <TextCenterWrapper styles={{ fontSize: '35px', margin: '0', padding: '0', small: { fontSize: '25px' } }}>
+              {trans(Lang.Help_Title)}
+            </TextCenterWrapper>
+
+            <ExitButton role='img' onClick={() => onExitClick()}>
+              <EmojiText label='exit' symbol='❌' />
+            </ExitButton>
+          </div>
+
           <TextAlignLeft styles={{ fontSize: '25px', small: { fontSize: '20px' } }}>1. {trans(Lang.Help_Prob)}</TextAlignLeft>
           <TextAlignLeft styles={{ fontSize: '20px', margin: '0 0 20px', small: { fontSize: '16px' } }}>
             {trans(Lang.Help_Prob_Five)}: {gachaInfo[props.content].fiveStars.percent}%,&nbsp;
             {trans(Lang.Help_Prob_Four)}: {gachaInfo[props.content].fourStars.percent}%
           </TextAlignLeft>
+
           <TextAlignLeft styles={{ fontSize: '20px', margin: '0 0 20px', small: { fontSize: '16px' } }}>
             {trans(Lang.Help_Prob_Five_Pick_Up)}: {gachaInfo[props.content].fiveStars.pickUpPercent}%,&nbsp;
             {trans(Lang.Help_Prob_Four_Pick_Up)}: {gachaInfo[props.content].fourStars.pickUpPercent}%
           </TextAlignLeft>
+
+          <TextAlignLeft styles={{ fontSize: '25px', small: { fontSize: '20px' } }}>2. {trans(Lang.Help_Stack_Title)}</TextAlignLeft>
+          <TextAlignLeft styles={{ fontSize: '20px', margin: '0 0 20px', small: { fontSize: '16px' } }}>
+            {trans(Lang.Help_Stack_First_Section)}
+          </TextAlignLeft>
+          <TextAlignLeft styles={{ fontSize: '20px', margin: '0 0 20px', small: { fontSize: '16px' } }}>
+            {trans(Lang.Help_Stack_Second_Section)}
+          </TextAlignLeft>
+
           <TextAlignLeft styles={{ fontSize: '25px', small: { fontSize: '20px' } }}>2. {trans(Lang.Help_Item)}</TextAlignLeft>
           <TextAlignLeft styles={{ fontSize: '20px', margin: '0 0 20px', small: { fontSize: '16px' } }}>
             <>
               {trans(Lang.Help_Content)}: {trans(Lang[props.content as KeyLang])}
             </>
           </TextAlignLeft>
+
           <FlexWrapper styles={{ width: '100%', justifyContent: 'flex-start', small: { justifyContent: 'center' } }}>
             <>
               <SquareImage
@@ -139,14 +164,17 @@ export function GachaDetails(props: Props) {
               />
             </>
           </FlexWrapper>
+
           <TextAlignLeft styles={{ fontSize: '20px', small: { fontSize: '16px' } }}>
             {trans(Lang.Five_Pick_Up)}: {transFivePickUpList.join(', ') || 'None'}
           </TextAlignLeft>
+
           <TextAlignLeft styles={{ fontSize: '20px', margin: '0', small: { fontSize: '16px' } }}>
             {trans(Lang.Four_Pick_Up)}: {transFourStarPickUpList.join(', ') || 'None'}
           </TextAlignLeft>
+
           <TextAlignLeft styles={{ fontSize: '22px', small: { fontSize: '18px' } }}>
-            <span role="img">⚠</span>&nbsp;{trans(Lang.Help_Warning)}
+            <span role='img'>⚠</span>&nbsp;{trans(Lang.Help_Warning)}
           </TextAlignLeft>
         </DetailsContainer>
       </Details>

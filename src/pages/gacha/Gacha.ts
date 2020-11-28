@@ -1,11 +1,11 @@
-export interface GachaInfo{
+export interface GachaInfo {
   percent: number;
   items: Array<string>;
   pickUpPercent: number;
   pickUpItems: Array<string>;
 }
 
-export interface GachaData{
+export interface GachaData {
   pickUpTarget: Array<string>;
   maxPityCount: number;
   maxPickUpCount: number;
@@ -16,7 +16,7 @@ export interface GachaData{
   threeStars: GachaInfo;
 }
 
-export class GachaContent implements GachaData{
+export class GachaContent implements GachaData {
   readonly pickUpTarget: Array<string>;
   readonly maxPityCount: number;
   readonly maxPickUpCount: number;
@@ -26,7 +26,7 @@ export class GachaContent implements GachaData{
   readonly fourStars: GachaInfo;
   readonly threeStars: GachaInfo;
 
-  constructor(data: GachaData){
+  constructor(data: GachaData) {
     this.pickUpTarget = data.pickUpTarget;
     this.maxPityCount = data.maxPityCount;
     this.maxPickUpCount = data.maxPickUpCount;
@@ -39,7 +39,7 @@ export class GachaContent implements GachaData{
     this.isValidData();
   }
 
-  isValidData(){
+  isValidData() {
     /// NORMAL_ITEMS에 WIN_ITEMS가 절대 포함되면 안 됨 이라는 코드 작성 필요
   }
 }
@@ -55,7 +55,7 @@ export class GachaController {
   public isNextFivePickUp: boolean;
   public isNextFourPickUp: boolean;
 
-  constructor(gachaData: GachaContent){
+  constructor(gachaData: GachaContent) {
     this.data = gachaData;
     this.totalCount = 0;
     this.pityCount = 0;
@@ -67,7 +67,7 @@ export class GachaController {
     this.isNextFourPickUp = false;
   }
 
-  clear(){
+  clear() {
     this.totalCount = 0;
     this.pityCount = 0;
     this.favoriteCount = 0;
@@ -81,16 +81,14 @@ export class GachaController {
     let resultItem: string;
 
     // Check Pick Up
-    if(isPickUp){
+    if (isPickUp) {
       const itemIndex = Math.floor(Math.random() * info.pickUpItems.length);
       resultItem = info.pickUpItems[itemIndex];
     }
     // Not Pick Up
-    else{
-      const nonPickUpItems: Array<string> = info.items.filter(
-        (item: string) => !info.pickUpItems.includes(item)
-      );
-      const itemIndex:number = Math.floor(Math.random() * nonPickUpItems.length);
+    else {
+      const nonPickUpItems: Array<string> = info.items.filter((item: string) => !info.pickUpItems.includes(item));
+      const itemIndex: number = Math.floor(Math.random() * nonPickUpItems.length);
       resultItem = nonPickUpItems[itemIndex];
     }
 
@@ -100,21 +98,16 @@ export class GachaController {
   nextIsPickUp(info: GachaInfo, isNextPickUp: boolean): string {
     let resultItem: string;
 
-    if(info.pickUpItems.length > 0) {
-      
-      if(isNextPickUp) {
-        const characterIndex = Math.floor(Math.random() * info.pickUpItems.length)
+    if (info.pickUpItems.length > 0) {
+      if (isNextPickUp) {
+        const characterIndex = Math.floor(Math.random() * info.pickUpItems.length);
         resultItem = info.pickUpItems[characterIndex];
         isNextPickUp = false;
-        
-      }
-      else {
+      } else {
         resultItem = this.pick(info);
         isNextPickUp = true;
-        
       }
-    }
-    else {
+    } else {
       resultItem = this.pick(info);
     }
 
@@ -125,125 +118,109 @@ export class GachaController {
     this.totalCount += tries;
     const resultItems = new Array<string>();
 
-    for(let i = 0; i<tries; i++){
+    for (let i = 0; i < tries; i++) {
       this.pityCount += 1;
       this.favoriteCount += 1;
 
       // 4성이상 보장, 초보자 Noelle
-      if(this.data.maxBonusCount === tries && i === 0) {
+      if (this.data.maxBonusCount === tries && i === 0) {
         const percent = Math.random() * 100;
         let resultItem: string;
 
-        if(this.data.guaranteeItem && !this.isGuaranteeItem) {
+        if (this.data.guaranteeItem && !this.isGuaranteeItem) {
           resultItem = this.data.guaranteeItem;
           this.isGuaranteeItem = true;
-        }
-        else if(percent <= this.data.fiveStars.percent) {
+        } else if (percent <= this.data.fiveStars.percent) {
           resultItem = this.pick(this.data.fiveStars);
           this.pityCount = 0;
-          
+
           if (this.data.fiveStars.pickUpItems.includes(resultItem)) {
             this.favoriteCount = 0;
             this.isNextFivePickUp = false;
-          }
-          else {
+          } else {
             this.isNextFivePickUp = true;
           }
-        }
-        else {
+        } else {
           resultItem = this.nextIsPickUp(this.data.fourStars, this.isNextFourPickUp);
 
           if (this.data.fourStars.pickUpItems.includes(resultItem)) {
             this.isNextFourPickUp = false;
-          } 
-          else {
+          } else {
             this.isNextFourPickUp = true;
           }
         }
 
         resultItems.push(resultItem);
       }
+
       // maxPickUpCount 천장
-      else if(this.favoriteCount === this.data.maxPickUpCount) {
+      else if (this.favoriteCount === this.data.maxPickUpCount) {
         let resultItem: string;
 
-        if(this.data.fiveStars.pickUpItems.length > 0) {
-          const characterIndex = Math.floor(Math.random() * this.data.pickUpTarget.length)
+        if (this.data.fiveStars.pickUpItems.length > 0) {
+          const characterIndex = Math.floor(Math.random() * this.data.pickUpTarget.length);
           resultItem = this.data.pickUpTarget[characterIndex];
-
-        }
-        else {
+        } else {
           resultItem = this.pick(this.data.fiveStars);
-
         }
 
         this.pityCount = 0;
         this.favoriteCount = 0;
         this.isNextFivePickUp = false;
-        
+
         resultItems.push(resultItem);
       }
-      // maxPityCount 천장
-      else if(this.pityCount === this.data.maxPityCount){
-        
-        const resultItem = this.nextIsPickUp(this.data.fiveStars, this.isNextFivePickUp);
 
+      // maxPityCount 천장
+      else if (this.pityCount === this.data.maxPityCount) {
+        const resultItem = this.nextIsPickUp(this.data.fiveStars, this.isNextFivePickUp);
         this.pityCount = 0;
-        
-        if(this.data.pickUpTarget.includes(resultItem)){
+
+        if (this.data.pickUpTarget.includes(resultItem)) {
           this.favoriteCount = 0;
           this.isNextFivePickUp = false;
-          
-        }
-        else{
+        } else {
           this.isNextFivePickUp = true;
-          
         }
 
         resultItems.push(resultItem);
       }
+
       // 일반 뽑기
-      else{
+      else {
         const percent = Math.random() * 100;
         let resultItem: string;
 
-        if(percent <= this.data.fiveStars.percent) {
+        // 확률 보정으로 인해 76번 이상 부터는 32% 확률 적용
+        const fiveStarPercent = this.favoriteCount >= 76 ? 32 : this.data.fiveStars.percent;
+        console.log(fiveStarPercent);
 
+        if (percent <= fiveStarPercent) {
           resultItem = this.nextIsPickUp(this.data.fiveStars, this.isNextFivePickUp);
-          
           this.pityCount = 0;
-          
+
           if (this.data.fiveStars.pickUpItems.includes(resultItem)) {
             this.favoriteCount = 0;
             this.isNextFivePickUp = false;
-            
-          }
-          else {
+          } else {
             this.isNextFivePickUp = true;
           }
-
-        }
-        else if(percent <= (this.data.fiveStars.percent + this.data.fourStars.percent)) {
-          
+        } else if (percent <= this.data.fiveStars.percent + this.data.fourStars.percent) {
           resultItem = this.nextIsPickUp(this.data.fourStars, this.isNextFourPickUp);
-          
+
           if (this.data.fourStars.pickUpItems.includes(resultItem)) {
             this.isNextFourPickUp = false;
-            
-          }
-          else {
+          } else {
             this.isNextFourPickUp = true;
           }
-
-        }
-        else {
+        } else {
           resultItem = this.pick(this.data.threeStars);
         }
 
         resultItems.push(resultItem);
       }
     }
-    
+
     this.nextPity = this.data.maxPityCount - this.pityCount;
     this.gachaResult = resultItems;
     return resultItems;
