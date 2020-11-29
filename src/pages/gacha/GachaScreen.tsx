@@ -21,17 +21,18 @@ import {
   PageHelmet
 } from 'src/components';
 
+import { GachaState } from 'src/redux/gacha/types';
+import { gachaDispatch } from 'src/redux/gacha/dispatch';
+import { useSelector } from 'react-redux';
+import { RootState } from 'src/redux/rootReducer';
+
 const itemsInfo = Object.assign({}, weaponInfo, characterInfo);
 
 export function GachaScreen() {
-  const [totalCount, setTotalCount] = useState(0);
-  const [fiveStarCount, setFiveStarCount] = useState(0);
-  const [fourStarCount, setFourStarCount] = useState(0);
+  const gachaStore: GachaState = useSelector<RootState, any>((state) => state.gacha);
+
   const [gachaContent, setGachaContent] = useState(Object.keys(gachaInfo)[0]);
-  const [gachaInventoryList, setGachaInventoryList] = useState([]);
   const [gachaExecutionResult, setGachaExecutionResult] = useState([]);
-  const [nextPity, setNextPity] = useState(0);
-  const [usedPrimoGem, setUsedPrimoGem] = useState(0);
   const [isWatchingVideo, setIsWatchingVideo] = useState(false);
 
   const refInitialValue = new Map<string, GachaController>();
@@ -57,10 +58,6 @@ export function GachaScreen() {
     }
 
     gacha.current = gachaMap.current?.get(gachaContent);
-    if (gacha.current) {
-      setTotalCount(gacha.current.totalCount);
-      setNextPity(gacha.current.nextPity);
-    }
   }, [gachaContent, contentData]);
 
   let contentList = Object.keys(gachaInfo);
@@ -73,49 +70,77 @@ export function GachaScreen() {
     payedFateCount = 8;
   }
 
-  let stopBeginnerWishes: boolean = gachaContent === contentList[3] && totalCount === 20;
+  let stopBeginnerWishes: boolean = gachaContent === contentList[3] && gachaStore.contents[gachaContent].totalCount === 20;
 
-  const onResetClick = (): void => {
-    setTotalCount(0);
-    setFourStarCount(0);
-    setFiveStarCount(0);
-    setGachaExecutionResult([]);
-    setGachaInventoryList([]);
-    setUsedPrimoGem(0);
-    setNextPity(0);
-
+  function onResetClick() {
     gachaMap.current.clear();
-  };
 
-  const onBannerClick = (index: number): void => {
+    const gachaData: GachaState = {
+      contents: {
+        Character_Event_Wish: {
+          totalCount: 0,
+          nextPity: 0
+        },
+        Weapon_Event_Wish: {
+          totalCount: 0,
+          nextPity: 0
+        },
+        Standard_Wish: {
+          totalCount: 0,
+          nextPity: 0
+        },
+        Novice_Wishes: {
+          totalCount: 0,
+          nextPity: 0
+        }
+      },
+      fiveStarCount: 0,
+      fourStarCount: 0,
+      inventoryList: [],
+      usedPrimoGem: 0
+    };
+
+    gachaDispatch.SetGacha(gachaData);
+  }
+
+  function onBannerClick(index: number) {
     const wishContentNames = Object.keys(gachaInfo);
     setGachaContent(wishContentNames[index]);
     setGachaExecutionResult([]);
-  };
+  }
+  console.log(gachaStore.contents);
 
-  const onGachaExecution = (tries: number): void => {
+  function onGachaExecution(tries: number) {
     turnOnWishVideo();
-    setGachaExecutionResult(gacha.current?.start(tries) as never[]);
-    if (gacha.current) {
-      setTotalCount(gacha.current.totalCount);
-      setNextPity(contentData.maxPityCount - gacha.current.pityCount);
-      setGachaInventoryList([...gachaInventoryList, ...(gacha.current.gachaResult as never[])]);
-      setStarCount(gacha.current.gachaResult);
-    }
-    setUsedPrimoGem(usedPrimoGem + payedFateCount * 160);
-  };
+    const executeResult = gacha.current?.start(tries);
+    setGachaExecutionResult(executeResult as never[]);
 
-  const setItemRankCount = (item: string) => {
-    if (itemsInfo[item].rank === 5) {
-      setFiveStarCount(fiveStarCount + 1);
-    } else if (itemsInfo[item].rank === 4) {
-      setFourStarCount(fourStarCount + 1);
-    }
-  };
+    let fourStarItemCount = 0;
+    let fiveStarItemCount = 0;
 
-  const setStarCount = (result: Array<string>) => {
-    result.map((item: string) => setItemRankCount(item));
-  };
+    if (executeResult && gacha.current) {
+      executeResult.forEach((item) => {
+        if (itemsInfo[item].rank === 5) fiveStarItemCount += 1;
+        else if (itemsInfo[item].rank === 4) fourStarItemCount += 1;
+      });
+
+      const gachaData: GachaState = {
+        contents: {
+          ...gachaStore.contents,
+          [gachaContent]: {
+            totalCount: gacha.current?.totalCount,
+            nextPity: contentData.maxPityCount - gacha.current.pityCount
+          }
+        },
+        fiveStarCount: gachaStore.fiveStarCount + fiveStarItemCount,
+        fourStarCount: gachaStore.fourStarCount + fourStarItemCount,
+        inventoryList: [...gachaStore.inventoryList, ...executeResult],
+        usedPrimoGem: gachaStore.usedPrimoGem + payedFateCount * 160
+      };
+
+      gachaDispatch.SetGacha(gachaData);
+    }
+  }
 
   function turnOnWishVideo() {
     setIsWatchingVideo(true);
@@ -133,9 +158,19 @@ export function GachaScreen() {
           <GachaBanner content={gachaContent} onClick={onBannerClick} pickUpList={Object.keys(gachaInfo)} video={isWatchingVideo} />
           <GachaArrangeView result={gachaExecutionResult} video={isWatchingVideo} turnOff={turnOffWishVideo} />
           {gachaContent === contentList[3] ? (
-            <GachaResult times={totalCount} gem={usedPrimoGem} pity={0} result={gachaInventoryList} />
+            <GachaResult
+              times={gachaStore.contents[gachaContent].totalCount}
+              gem={gachaStore.usedPrimoGem}
+              pity={0}
+              result={gachaStore.inventoryList}
+            />
           ) : (
-            <GachaResult times={totalCount} gem={usedPrimoGem} pity={nextPity} result={gachaInventoryList} />
+            <GachaResult
+              times={gachaStore.contents[gachaContent].totalCount}
+              gem={gachaStore.usedPrimoGem}
+              pity={gachaStore.contents[gachaContent].nextPity}
+              result={gachaStore.inventoryList}
+            />
           )}
           <FlexWrapper>
             <>
@@ -227,7 +262,12 @@ export function GachaScreen() {
           <BoxModelWrapper styles={{ margin: '50px auto 30px' }}>
             <>
               <hr />
-              <GachaInventory inventoryList={gachaInventoryList} four={fourStarCount} five={fiveStarCount} showVideo={isWatchingVideo} />
+              <GachaInventory
+                inventoryList={gachaStore.inventoryList}
+                four={gachaStore.fourStarCount}
+                five={gachaStore.fiveStarCount}
+                showVideo={isWatchingVideo}
+              />
             </>
           </BoxModelWrapper>
         </>

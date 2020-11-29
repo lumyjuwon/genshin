@@ -9,7 +9,7 @@ import rootReducer, { RootState } from './rootReducer';
 const persistConfig: PersistConfig<any> = {
   key: 'root',
   storage: storage,
-  whitelist: ['party', 'common']
+  whitelist: ['party', 'common', 'gacha']
 };
 
 const enhancedReducer = persistReducer(persistConfig, rootReducer);

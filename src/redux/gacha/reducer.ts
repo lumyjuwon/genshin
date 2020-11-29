@@ -1,25 +1,27 @@
 import { ActionTypes, GachaState, GachaAction } from './types';
 
 const initialState: GachaState = {
-  characterEventWish: {
-    count: 0,
-    nextPity: 0
-  },
-  weaponEventWish: {
-    count: 0,
-    nextPity: 0
-  },
-  standardWish: {
-    count: 0,
-    nextPity: 0
-  },
-  noviceWishes: {
-    count: 0,
-    nextPity: 0
+  contents: {
+    Character_Event_Wish: {
+      totalCount: 0,
+      nextPity: 0
+    },
+    Weapon_Event_Wish: {
+      totalCount: 0,
+      nextPity: 0
+    },
+    Standard_Wish: {
+      totalCount: 0,
+      nextPity: 0
+    },
+    Novice_Wishes: {
+      totalCount: 0,
+      nextPity: 0
+    }
   },
   fiveStarCount: 0,
   fourStarCount: 0,
-  itemCount: 0,
+  inventoryList: [],
   usedPrimoGem: 0
 };
 

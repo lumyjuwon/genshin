@@ -1,23 +1,13 @@
 export interface GachaState {
-  characterEventWish: {
-    count: number;
-    nextPity: number;
-  };
-  weaponEventWish: {
-    count: number;
-    nextPity: number;
-  };
-  standardWish: {
-    count: number;
-    nextPity: number;
-  };
-  noviceWishes: {
-    count: number;
-    nextPity: number;
+  contents: {
+    [content: string]: {
+      totalCount: number;
+      nextPity: number;
+    };
   };
   fiveStarCount: number;
   fourStarCount: number;
-  itemCount: number;
+  inventoryList: Array<string>;
   usedPrimoGem: number;
 }
 
