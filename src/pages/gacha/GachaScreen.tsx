@@ -58,9 +58,10 @@ export function GachaScreen() {
     }
 
     gacha.current = gachaMap.current?.get(gachaContent);
+    console.log('useEffecft');
     if (gacha.current) {
       gacha.current.totalCount = gachaStore.contents[gachaContent].totalCount;
-      gacha.current.nextPity = gachaStore.contents[gachaContent].nextPity;
+      gacha.current.pityCount = gachaStore.contents[gachaContent].pityCount;
     }
   }, [gachaContent, contentData, gachaStore.contents]);
 
@@ -83,18 +84,22 @@ export function GachaScreen() {
       contents: {
         Character_Event_Wish: {
           totalCount: 0,
+          pityCount: 0,
           nextPity: 0
         },
         Weapon_Event_Wish: {
           totalCount: 0,
+          pityCount: 0,
           nextPity: 0
         },
         Standard_Wish: {
           totalCount: 0,
+          pityCount: 0,
           nextPity: 0
         },
         Novice_Wishes: {
           totalCount: 0,
+          pityCount: 0,
           nextPity: 0
         }
       },
@@ -132,7 +137,8 @@ export function GachaScreen() {
         contents: {
           ...gachaStore.contents,
           [gachaContent]: {
-            totalCount: gacha.current?.totalCount,
+            totalCount: gacha.current.totalCount,
+            pityCount: gacha.current.pityCount,
             nextPity: contentData.maxPityCount - gacha.current.pityCount
           }
         },

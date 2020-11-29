@@ -2,6 +2,7 @@ export interface GachaState {
   contents: {
     [content: string]: {
       totalCount: number;
+      pityCount: number;
       nextPity: number;
     };
   };
