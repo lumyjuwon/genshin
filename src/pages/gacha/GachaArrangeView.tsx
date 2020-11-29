@@ -37,7 +37,7 @@ const HoverTransform = styled.div<{ delay: number }>`
   align-self: stretch;
   z-index: 1;
   opacity: 0;
-  animation: ${ItemAnimation} 0.4s ${(props) => props.delay * 0.2}s forwards;
+  animation: ${ItemAnimation} 0.3s ${(props) => props.delay * 0.2}s forwards;
   &:hover ${HoverVisibleElement} {
     visibility: visible;
   }
