@@ -37,7 +37,7 @@ export function GachaScreen() {
   const [gemImage, setGemImage] = useState<ImageSrc>();
   const [usedFateCount, setUsedFateCount] = useState(10);
 
-  const stopBeginnerWishes: boolean = gachaCategory === 'stopBeginnerWishes' && gachaStore.contents[gachaCategory].totalCount === 20;
+  const stopBeginnerWishes: boolean = gachaCategory === 'Novice_Wishes' && gachaStore.contents[gachaCategory].totalCount === 20;
 
   useEffect(() => {
     const contentData: GachaData = {
