@@ -5,6 +5,7 @@ export interface GachaState {
       pityCount: number;
       nextPity: number;
       usedFate: number;
+      favoriteCount: number;
     };
   };
   fiveStarCount: number;

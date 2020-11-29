@@ -3,6 +3,10 @@ export interface GachaExecutionInfo {
   excution10ConsumeGem: number;
 }
 
+export interface StackInfo {
+  [stack: string]: number;
+}
+
 export interface GachaInfo {
   percent: number;
   items: Array<string>;
@@ -17,6 +21,7 @@ export interface GachaData {
   maxBonusCount: number;
   guaranteeItem: string;
   executionInfo: GachaExecutionInfo;
+  stackPercentage: StackInfo;
   fiveStars: GachaInfo;
   fourStars: GachaInfo;
   threeStars: GachaInfo;
@@ -29,6 +34,7 @@ export class GachaContent implements GachaData {
   readonly maxBonusCount: number;
   readonly guaranteeItem: string;
   readonly executionInfo: GachaExecutionInfo;
+  readonly stackPercentage: StackInfo;
   readonly fiveStars: GachaInfo;
   readonly fourStars: GachaInfo;
   readonly threeStars: GachaInfo;
@@ -40,6 +46,7 @@ export class GachaContent implements GachaData {
     this.maxBonusCount = data.maxBonusCount;
     this.guaranteeItem = data.guaranteeItem;
     this.executionInfo = data.executionInfo;
+    this.stackPercentage = data.stackPercentage;
     this.fiveStars = data.fiveStars;
     this.fourStars = data.fourStars;
     this.threeStars = data.threeStars;
@@ -57,19 +64,15 @@ export class GachaController {
   public totalCount: number;
   public pityCount: number;
   public favoriteCount: number;
-  private nextPity: number;
-  private gachaResult: Array<string>;
-  private isGuaranteeItem: boolean;
-  private isNextFivePickUp: boolean;
-  private isNextFourPickUp: boolean;
+  public isGuaranteeItem: boolean;
+  public isNextFivePickUp: boolean;
+  public isNextFourPickUp: boolean;
 
   constructor(gachaData: GachaContent) {
     this.data = gachaData;
     this.totalCount = 0;
     this.pityCount = 0;
     this.favoriteCount = 0;
-    this.nextPity = gachaData.maxPityCount;
-    this.gachaResult = new Array<string>();
     this.isGuaranteeItem = false;
     this.isNextFivePickUp = false;
     this.isNextFourPickUp = false;
@@ -196,9 +199,17 @@ export class GachaController {
         const percent = Math.random() * 100;
         let resultItem: string;
 
-        // 확률 보정으로 인해 76번 이상 부터는 32% 확률 적용
-        const fiveStarPercent = this.pityCount >= 76 ? 32 : this.data.fiveStars.percent;
-        console.log(this.pityCount);
+        // 확률 보정으로 인해 pityCount가 n번 이상 부터는 p% 확률 적용
+        let maxStack = 0;
+        let fiveStarPercent = this.data.fiveStars.percent;
+        Object.keys(this.data.stackPercentage).forEach((stack) => {
+          if (this.pityCount >= +stack && +stack > maxStack) {
+            maxStack = +stack;
+            fiveStarPercent = this.data.stackPercentage[stack];
+          }
+        });
+
+        console.log(fiveStarPercent, this.pityCount);
 
         if (percent <= fiveStarPercent) {
           resultItem = this.nextIsPickUp(this.data.fiveStars, this.isNextFivePickUp);
@@ -226,8 +237,6 @@ export class GachaController {
       }
     }
 
-    this.nextPity = this.data.maxPityCount - this.pityCount;
-    this.gachaResult = resultItems;
     return resultItems;
   }
 }

@@ -8,7 +8,7 @@ import rootReducer, { RootState } from './rootReducer';
 import { initialGachaState } from './gacha/reducer';
 
 const migrations = {
-  0: (state: RootState) => {
+  1: (state: RootState) => {
     return {
       ...state,
       gacha: initialGachaState
@@ -19,7 +19,7 @@ const migrations = {
 const persistConfig: PersistConfig<any> = {
   key: 'root',
   storage: storage,
-  version: 0,
+  version: 1,
   whitelist: ['party', 'common', 'gacha'],
   // @ts-ignore
   migrate: createMigrate(migrations, { debug: false })
