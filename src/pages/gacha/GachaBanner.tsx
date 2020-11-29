@@ -44,6 +44,7 @@ export function GachaBanner(props: Props) {
             {props.pickUpList.map((content, index) => {
               return (
                 <RoundImageButton
+                  key={content}
                   src={getImagePath(content, index)}
                   onClick={() => onClickBannerImages(index)}
                   styles={{
@@ -68,6 +69,7 @@ export function GachaBanner(props: Props) {
             {props.pickUpList.map((content, index) => {
               return (
                 <RoundImageButton
+                  key={content}
                   src={getImagePath(content, index)}
                   onClick={() => onClickBannerImages(index)}
                   styles={{
