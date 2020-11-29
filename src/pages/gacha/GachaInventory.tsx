@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 
 import { trans, Lang } from 'src/resources/languages';
-import { FlexWrapper, RoundImage, TextCenterWrapper, CheckBoxButton, ItemBadgeBox, DropDownButton } from 'src/components';
+import { FlexWrapper, RoundImage, TextCenterWrapper, CheckBoxButton, ItemBadgeBox, DropDownButton, SquareImage } from 'src/components';
 import { characterInfo, gachaInfo, weaponInfo } from 'src/resources/data';
 import { GachaImages } from 'src/resources/images';
 
@@ -15,6 +15,7 @@ interface Props {
   four: number;
   five: number;
   showVideo: boolean;
+  usedGem: number;
 }
 
 const Title = styled.div({
@@ -137,16 +138,22 @@ export function GachaInventory(props: Props) {
         styles={{
           width: '100%',
           margin: '10px 0',
-          justifyContent: 'flex-end',
+          justifyContent: 'space-between',
           padding: '0 10px',
-          small: { justifyContent: 'space-between' }
+          small: { justifyContent: 'center', flexDirection: 'column-reverse' }
         }}
       >
-        <FlexWrapper styles={{ margin: '0 20px', small: { margin: '0' } }}>
+        <FlexWrapper styles={{ small: { margin: '10px 0 0' } }}>
           <Result>5★: {props.five}</Result>
           <Result>4★: {props.four}</Result>
         </FlexWrapper>
-        <ItemCount>{`${trans(Lang.Item_Count)}: ${totalItemCount}`}</ItemCount>
+        <FlexWrapper>
+          <ItemCount>{`${trans(Lang.Item_Count)}: ${totalItemCount}`}</ItemCount>
+          <FlexWrapper styles={{ margin: '0 5px 0 10px' }}>
+            <SquareImage src={require('../../resources/images/items/gem/Primogem.webp')} styles={{ width: '20px', height: '20px' }} />
+            <ItemCount>: {props.usedGem}</ItemCount>
+          </FlexWrapper>
+        </FlexWrapper>
       </FlexWrapper>
       <FlexWrapper styles={{ justifyContent: 'flex-end', margin: '0 0 40px' }}>
         <>

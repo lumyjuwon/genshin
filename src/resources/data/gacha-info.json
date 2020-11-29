@@ -258,7 +258,6 @@
       "pickUpItems": []
     }
   },
-
   "Novice_Wishes": {
     "pickUpTarget": [],
     "maxPityCount": 0,
@@ -267,7 +266,7 @@
     "guaranteeItem": "Noelle",
     "executionInfo": {
       "gemImageName": "Acquaint",
-      "excution10ConsumeGem": 10
+      "excution10ConsumeGem": 8
     },
     "fiveStars": {
       "percent": 0.6,

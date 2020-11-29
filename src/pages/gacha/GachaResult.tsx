@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 import { trans, Lang } from 'src/resources/languages';
 import { FlexWrapper, SquareImage } from 'src/components';
-import { GemImages, ImageSrc } from 'src/resources/images';
+import { ImageSrc } from 'src/resources/images';
 
 interface Props {
-  times: number;
+  fate: number;
   result: Array<string>;
   pity?: number;
   gem: number;
@@ -50,7 +50,7 @@ export function GachaResult(props: Props) {
         <FlexWrapper styles={{ margin: '5px 10px' }}>
           <>
             <SquareImage styles={{ width: '25px', height: '25px' }} src={props.gemImage} />
-            <div>: {props.times}</div>
+            <div>: {props.fate}</div>
           </>
         </FlexWrapper>
         <Result>

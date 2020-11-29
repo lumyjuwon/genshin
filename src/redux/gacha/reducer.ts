@@ -5,22 +5,26 @@ const initialState: GachaState = {
     Character_Event_Wish: {
       totalCount: 0,
       pityCount: 0,
-      nextPity: 0
+      nextPity: 0,
+      usedFate: 0
     },
     Weapon_Event_Wish: {
       totalCount: 0,
       pityCount: 0,
-      nextPity: 0
+      nextPity: 0,
+      usedFate: 0
     },
     Standard_Wish: {
       totalCount: 0,
       pityCount: 0,
-      nextPity: 0
+      nextPity: 0,
+      usedFate: 0
     },
     Novice_Wishes: {
       totalCount: 0,
       pityCount: 0,
-      nextPity: 0
+      nextPity: 0,
+      usedFate: 0
     }
   },
   fiveStarCount: 0,

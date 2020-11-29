@@ -35,6 +35,7 @@ export function GachaScreen() {
   const [gachaExecutionResult, setGachaExecutionResult] = useState([]);
   const [isWatchingVideo, setIsWatchingVideo] = useState(false);
   const [gemImage, setGemImage] = useState<ImageSrc>();
+  const [usedFateCount, setUsedFateCount] = useState(10);
 
   const stopBeginnerWishes: boolean = gachaCategory === 'stopBeginnerWishes' && gachaStore.contents[gachaCategory].totalCount === 20;
 
@@ -57,6 +58,7 @@ export function GachaScreen() {
     gacha.current.pityCount = gachaStore.contents[gachaCategory].pityCount;
 
     setGemImage(GemImages[data.executionInfo.gemImageName]);
+    setUsedFateCount(data.executionInfo.excution10ConsumeGem);
   }, [gachaCategory, gachaStore.contents]);
 
   function onResetClick() {
@@ -89,7 +91,8 @@ export function GachaScreen() {
           [gachaCategory]: {
             totalCount: gacha.current.totalCount,
             pityCount: gacha.current.pityCount,
-            nextPity: gacha.current.data.maxPityCount - gacha.current.pityCount
+            nextPity: gacha.current.data.maxPityCount - gacha.current.pityCount,
+            usedFate: gachaStore.contents[gachaCategory].usedFate + usedFateCount
           }
         },
         fiveStarCount: gachaStore.fiveStarCount + fiveStarItemCount,
@@ -120,16 +123,16 @@ export function GachaScreen() {
           {gachaCategory === 'Novice_Wishes' ? (
             <GachaResult
               gemImage={gemImage}
-              times={gachaStore.contents[gachaCategory].totalCount}
-              gem={gachaStore.usedPrimoGem}
+              fate={gachaStore.contents[gachaCategory].usedFate}
+              gem={(gachaStore.contents[gachaCategory].usedFate || 0) * 160}
               pity={0}
               result={gachaStore.inventoryList}
             />
           ) : (
             <GachaResult
               gemImage={gemImage}
-              times={gachaStore.contents[gachaCategory].totalCount}
-              gem={gachaStore.usedPrimoGem}
+              fate={gachaStore.contents[gachaCategory].usedFate}
+              gem={(gachaStore.contents[gachaCategory].usedFate || 0) * 160}
               pity={gachaStore.contents[gachaCategory].nextPity}
               result={gachaStore.inventoryList}
             />
@@ -225,6 +228,7 @@ export function GachaScreen() {
             <>
               <hr />
               <GachaInventory
+                usedGem={gachaStore.usedPrimoGem}
                 inventoryList={gachaStore.inventoryList}
                 four={gachaStore.fourStarCount}
                 five={gachaStore.fiveStarCount}
