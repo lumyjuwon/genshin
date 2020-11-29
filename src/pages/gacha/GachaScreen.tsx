@@ -169,6 +169,7 @@ export function GachaScreen() {
           <GachaArrangeView result={gachaExecutionResult} video={isWatchingVideo} turnOff={turnOffWishVideo} />
           {gachaContent === contentList[3] ? (
             <GachaResult
+              gemImage={gemImage}
               times={gachaStore.contents[gachaContent].totalCount}
               gem={gachaStore.usedPrimoGem}
               pity={0}
@@ -176,6 +177,7 @@ export function GachaScreen() {
             />
           ) : (
             <GachaResult
+              gemImage={gemImage}
               times={gachaStore.contents[gachaContent].totalCount}
               gem={gachaStore.usedPrimoGem}
               pity={gachaStore.contents[gachaContent].nextPity}
