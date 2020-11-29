@@ -101,9 +101,9 @@ export function GachaDetails(props: Props) {
   return (
     <div style={{ position: 'relative' }}>
       <Help onClick={() => onExitClick()}>
-        <EmojiText label="help" symbol="❔" />
+        <EmojiText label='help' symbol='❔' />
       </Help>
-      <Details id="help" style={{ visibility: 'hidden' }}>
+      <Details id='help' style={{ visibility: 'hidden' }}>
         <DetailsContainer>
           <div
             style={{
@@ -121,8 +121,8 @@ export function GachaDetails(props: Props) {
               {trans(Lang.Help_Title)}
             </TextCenterWrapper>
 
-            <ExitButton role="img" onClick={() => onExitClick()}>
-              <EmojiText label="exit" symbol="❌" />
+            <ExitButton role='img' onClick={() => onExitClick()}>
+              <EmojiText label='exit' symbol='❌' />
             </ExitButton>
           </div>
 
@@ -145,7 +145,7 @@ export function GachaDetails(props: Props) {
             {trans(Lang.Help_Stack_Second_Section)}
           </TextAlignLeft>
 
-          <TextAlignLeft styles={{ fontSize: '25px', small: { fontSize: '20px' } }}>2. {trans(Lang.Help_Item)}</TextAlignLeft>
+          <TextAlignLeft styles={{ fontSize: '25px', small: { fontSize: '20px' } }}>3. {trans(Lang.Help_Item)}</TextAlignLeft>
           <TextAlignLeft styles={{ fontSize: '20px', margin: '0 0 20px', small: { fontSize: '16px' } }}>
             <>
               {trans(Lang.Help_Content)}: {trans(Lang[props.content as KeyLang])}
@@ -170,7 +170,7 @@ export function GachaDetails(props: Props) {
           </TextAlignLeft>
 
           <TextAlignLeft styles={{ fontSize: '22px', small: { fontSize: '18px' } }}>
-            <span role="img">⚠</span>&nbsp;{trans(Lang.Help_Warning)}
+            <span role='img'>⚠</span>&nbsp;{trans(Lang.Help_Warning)}
           </TextAlignLeft>
         </DetailsContainer>
       </Details>

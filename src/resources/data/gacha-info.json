@@ -5,6 +5,10 @@
     "maxPickUpCount": 180,
     "maxBonusCount": 10,
     "guaranteeItem": "",
+    "executionInfo": {
+      "gemImageName": "Intertwined",
+      "excution10ConsumeGem": 10
+    },
     "fiveStars": {
       "percent": 0.6,
       "pickUpPercent": 50,
@@ -76,6 +80,10 @@
     "maxPickUpCount": 160,
     "maxBonusCount": 10,
     "guaranteeItem": "",
+    "executionInfo": {
+      "gemImageName": "Intertwined",
+      "excution10ConsumeGem": 10
+    },
     "fiveStars": {
       "percent": 0.7,
       "pickUpPercent": 75,
@@ -164,6 +172,10 @@
     "maxPickUpCount": 180,
     "maxBonusCount": 10,
     "guaranteeItem": "",
+    "executionInfo": {
+      "gemImageName": "Acquaint",
+      "excution10ConsumeGem": 10
+    },
     "fiveStars": {
       "percent": 0.6,
       "pickUpPercent": 0,
@@ -253,6 +265,10 @@
     "maxPickUpCount": 0,
     "maxBonusCount": 10,
     "guaranteeItem": "Noelle",
+    "executionInfo": {
+      "gemImageName": "Acquaint",
+      "excution10ConsumeGem": 10
+    },
     "fiveStars": {
       "percent": 0.6,
       "pickUpPercent": 0,

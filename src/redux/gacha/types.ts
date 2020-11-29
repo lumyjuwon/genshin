@@ -13,7 +13,8 @@ export interface GachaState {
 }
 
 export enum ActionTypes {
-  SetGacha = 'SetGacha'
+  SetGacha = 'SetGacha',
+  ClearGacha = 'ClearGacha'
 }
 
 interface SetGacha {
@@ -21,4 +22,8 @@ interface SetGacha {
   payload: GachaState;
 }
 
-export type GachaAction = SetGacha;
+interface ClearGacha {
+  type: ActionTypes.ClearGacha;
+}
+
+export type GachaAction = SetGacha | ClearGacha;

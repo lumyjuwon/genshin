@@ -8,7 +8,7 @@ import { GachaInventory } from './GachaInventory';
 import { GachaArrangeView } from './GachaArrangeView';
 import { GachaController, GachaContent, GachaData } from './Gacha';
 import { characterInfo, weaponInfo, gachaInfo } from 'src/resources/data';
-import { GemImages } from 'src/resources/images';
+import { GemImages, ImageSrc } from 'src/resources/images';
 import {
   ScreenInnerWrapper,
   RoundTextButton,
@@ -30,94 +30,44 @@ const itemsInfo = Object.assign({}, weaponInfo, characterInfo);
 
 export function GachaScreen() {
   const gachaStore: GachaState = useSelector<RootState, any>((state) => state.gacha);
-
-  const [gachaContent, setGachaContent] = useState(Object.keys(gachaInfo)[0]);
+  const gacha = useRef<GachaController>();
+  const [gachaCategory, setGachaCategory] = useState(Object.keys(gachaInfo)[0]);
   const [gachaExecutionResult, setGachaExecutionResult] = useState([]);
   const [isWatchingVideo, setIsWatchingVideo] = useState(false);
+  const [gemImage, setGemImage] = useState<ImageSrc>();
 
-  const refInitialValue = new Map<string, GachaController>();
-  const gacha = useRef<GachaController>();
-  const gachaMap = useRef<Map<string, GachaController>>(refInitialValue);
-
-  const contentData: GachaData = {
-    pickUpTarget: gachaInfo[gachaContent].pickUpTarget,
-    maxPityCount: gachaInfo[gachaContent].maxPityCount,
-    maxPickUpCount: gachaInfo[gachaContent].maxPickUpCount,
-    maxBonusCount: gachaInfo[gachaContent].maxBonusCount,
-    guaranteeItem: gachaInfo[gachaContent].guaranteeItem,
-    fiveStars: gachaInfo[gachaContent].fiveStars,
-    fourStars: gachaInfo[gachaContent].fourStars,
-    threeStars: gachaInfo[gachaContent].threeStars
-  };
+  const stopBeginnerWishes: boolean = gachaCategory === 'stopBeginnerWishes' && gachaStore.contents[gachaCategory].totalCount === 20;
 
   useEffect(() => {
-    if (!gachaMap.current?.has(gachaContent)) {
-      const data = new GachaContent(contentData);
-      const executor = new GachaController(data);
-      gachaMap.current?.set(gachaContent, executor);
-    }
-
-    gacha.current = gachaMap.current?.get(gachaContent);
-    console.log('useEffecft');
-    if (gacha.current) {
-      gacha.current.totalCount = gachaStore.contents[gachaContent].totalCount;
-      gacha.current.pityCount = gachaStore.contents[gachaContent].pityCount;
-    }
-  }, [gachaContent, contentData, gachaStore.contents]);
-
-  let contentList = Object.keys(gachaInfo);
-  let payedFateCount: number = 10;
-  let gemImage: string = 'Acquaint';
-  if (gachaContent === contentList[0] || gachaContent === contentList[1]) {
-    gemImage = 'Intertwined';
-  }
-  if (gachaContent === contentList[3]) {
-    payedFateCount = 8;
-  }
-
-  let stopBeginnerWishes: boolean = gachaContent === contentList[3] && gachaStore.contents[gachaContent].totalCount === 20;
-
-  function onResetClick() {
-    gachaMap.current.clear();
-
-    const gachaData: GachaState = {
-      contents: {
-        Character_Event_Wish: {
-          totalCount: 0,
-          pityCount: 0,
-          nextPity: 0
-        },
-        Weapon_Event_Wish: {
-          totalCount: 0,
-          pityCount: 0,
-          nextPity: 0
-        },
-        Standard_Wish: {
-          totalCount: 0,
-          pityCount: 0,
-          nextPity: 0
-        },
-        Novice_Wishes: {
-          totalCount: 0,
-          pityCount: 0,
-          nextPity: 0
-        }
-      },
-      fiveStarCount: 0,
-      fourStarCount: 0,
-      inventoryList: [],
-      usedPrimoGem: 0
+    const contentData: GachaData = {
+      pickUpTarget: gachaInfo[gachaCategory].pickUpTarget,
+      maxPityCount: gachaInfo[gachaCategory].maxPityCount,
+      maxPickUpCount: gachaInfo[gachaCategory].maxPickUpCount,
+      maxBonusCount: gachaInfo[gachaCategory].maxBonusCount,
+      guaranteeItem: gachaInfo[gachaCategory].guaranteeItem,
+      executionInfo: gachaInfo[gachaCategory].executionInfo,
+      fiveStars: gachaInfo[gachaCategory].fiveStars,
+      fourStars: gachaInfo[gachaCategory].fourStars,
+      threeStars: gachaInfo[gachaCategory].threeStars
     };
 
-    gachaDispatch.SetGacha(gachaData);
+    const data = new GachaContent(contentData);
+    gacha.current = new GachaController(data);
+    gacha.current.totalCount = gachaStore.contents[gachaCategory].totalCount;
+    gacha.current.pityCount = gachaStore.contents[gachaCategory].pityCount;
+
+    setGemImage(GemImages[data.executionInfo.gemImageName]);
+  }, [gachaCategory, gachaStore.contents]);
+
+  function onResetClick() {
+    gachaDispatch.ClearGacha();
   }
 
   function onBannerClick(index: number) {
     const wishContentNames = Object.keys(gachaInfo);
-    setGachaContent(wishContentNames[index]);
+    setGachaCategory(wishContentNames[index]);
     setGachaExecutionResult([]);
   }
-  console.log(gachaStore.contents);
 
   function onGachaExecution(tries: number) {
     turnOnWishVideo();
@@ -136,16 +86,16 @@ export function GachaScreen() {
       const gachaData: GachaState = {
         contents: {
           ...gachaStore.contents,
-          [gachaContent]: {
+          [gachaCategory]: {
             totalCount: gacha.current.totalCount,
             pityCount: gacha.current.pityCount,
-            nextPity: contentData.maxPityCount - gacha.current.pityCount
+            nextPity: gacha.current.data.maxPityCount - gacha.current.pityCount
           }
         },
         fiveStarCount: gachaStore.fiveStarCount + fiveStarItemCount,
         fourStarCount: gachaStore.fourStarCount + fourStarItemCount,
         inventoryList: [...gachaStore.inventoryList, ...executeResult],
-        usedPrimoGem: gachaStore.usedPrimoGem + payedFateCount * 160
+        usedPrimoGem: gachaStore.usedPrimoGem + gacha.current?.data.executionInfo.excution10ConsumeGem * 160
       };
 
       gachaDispatch.SetGacha(gachaData);
@@ -165,12 +115,12 @@ export function GachaScreen() {
       <PageHelmet title={trans(Lang.Gacha)} description={trans(Lang.Main_Wish_Desc)} />
       <ScreenInnerWrapper>
         <>
-          <GachaBanner content={gachaContent} onClick={onBannerClick} pickUpList={Object.keys(gachaInfo)} video={isWatchingVideo} />
+          <GachaBanner content={gachaCategory} onClick={onBannerClick} pickUpList={Object.keys(gachaInfo)} video={isWatchingVideo} />
           <GachaArrangeView result={gachaExecutionResult} video={isWatchingVideo} turnOff={turnOffWishVideo} />
-          {gachaContent === contentList[3] ? (
+          {gachaCategory === 'Novice_Wishes' ? (
             <GachaResult
               gemImage={gemImage}
-              times={gachaStore.contents[gachaContent].totalCount}
+              times={gachaStore.contents[gachaCategory].totalCount}
               gem={gachaStore.usedPrimoGem}
               pity={0}
               result={gachaStore.inventoryList}
@@ -178,9 +128,9 @@ export function GachaScreen() {
           ) : (
             <GachaResult
               gemImage={gemImage}
-              times={gachaStore.contents[gachaContent].totalCount}
+              times={gachaStore.contents[gachaCategory].totalCount}
               gem={gachaStore.usedPrimoGem}
-              pity={gachaStore.contents[gachaContent].nextPity}
+              pity={gachaStore.contents[gachaCategory].nextPity}
               result={gachaStore.inventoryList}
             />
           )}
@@ -236,8 +186,8 @@ export function GachaScreen() {
                       <div style={{ fontSize: '14px' }}>{trans(Lang.Start)}</div>
                       <FlexWrapper>
                         <>
-                          <SquareImage styles={{ width: '25px', height: '25px' }} src={GemImages[gemImage]} />
-                          <span style={{ fontSize: '14px' }}>&nbsp;× {payedFateCount}</span>
+                          <SquareImage styles={{ width: '25px', height: '25px' }} src={gemImage} />
+                          <span style={{ fontSize: '14px' }}>&nbsp;× {gacha.current?.data.executionInfo.excution10ConsumeGem}</span>
                         </>
                       </FlexWrapper>
                     </>
@@ -254,8 +204,8 @@ export function GachaScreen() {
                         <div style={{ fontSize: '14px' }}>{trans(Lang.Start)}</div>
                         <FlexWrapper>
                           <>
-                            <SquareImage styles={{ width: '25px', height: '25px' }} src={GemImages[gemImage]} />
-                            <span style={{ fontSize: '14px' }}>&nbsp;× {payedFateCount}</span>
+                            <SquareImage styles={{ width: '25px', height: '25px' }} src={gemImage} />
+                            <span style={{ fontSize: '14px' }}>&nbsp;× {gacha.current?.data.executionInfo.excution10ConsumeGem}</span>
                           </>
                         </FlexWrapper>
                       </>

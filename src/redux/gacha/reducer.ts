@@ -36,6 +36,10 @@ export function gachaReducer(state = initialState, action: GachaAction): GachaSt
         ...state,
         ...action.payload
       };
+    case ActionTypes.ClearGacha:
+      return {
+        ...initialState
+      };
     default:
       return state;
   }

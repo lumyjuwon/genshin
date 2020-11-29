@@ -6,3 +6,9 @@ export function SetGacha(gachaState: GachaState) {
     payload: gachaState
   };
 }
+
+export function ClearGacha() {
+  return {
+    type: ActionTypes.ClearGacha
+  };
+}

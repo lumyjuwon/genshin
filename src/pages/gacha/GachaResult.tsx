@@ -3,14 +3,14 @@ import styled from 'styled-components';
 
 import { trans, Lang } from 'src/resources/languages';
 import { FlexWrapper, SquareImage } from 'src/components';
-import { GemImages } from 'src/resources/images';
+import { GemImages, ImageSrc } from 'src/resources/images';
 
 interface Props {
   times: number;
   result: Array<string>;
   pity?: number;
   gem: number;
-  gemImage: string;
+  gemImage: ImageSrc;
 }
 
 const ResultBar = styled.div({
@@ -49,7 +49,7 @@ export function GachaResult(props: Props) {
         <Result>{`${trans(Lang.Next_Pity)}: ${props.pity}`}</Result>
         <FlexWrapper styles={{ margin: '5px 10px' }}>
           <>
-            <SquareImage styles={{ width: '25px', height: '25px' }} src={GemImages[props.gemImage]} />
+            <SquareImage styles={{ width: '25px', height: '25px' }} src={props.gemImage} />
             <div>: {props.times}</div>
           </>
         </FlexWrapper>

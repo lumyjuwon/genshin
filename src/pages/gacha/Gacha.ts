@@ -1,3 +1,8 @@
+export interface GachaExecutionInfo {
+  gemImageName: string;
+  excution10ConsumeGem: number;
+}
+
 export interface GachaInfo {
   percent: number;
   items: Array<string>;
@@ -11,6 +16,7 @@ export interface GachaData {
   maxPickUpCount: number;
   maxBonusCount: number;
   guaranteeItem: string;
+  executionInfo: GachaExecutionInfo;
   fiveStars: GachaInfo;
   fourStars: GachaInfo;
   threeStars: GachaInfo;
@@ -22,6 +28,7 @@ export class GachaContent implements GachaData {
   readonly maxPickUpCount: number;
   readonly maxBonusCount: number;
   readonly guaranteeItem: string;
+  readonly executionInfo: GachaExecutionInfo;
   readonly fiveStars: GachaInfo;
   readonly fourStars: GachaInfo;
   readonly threeStars: GachaInfo;
@@ -32,6 +39,7 @@ export class GachaContent implements GachaData {
     this.maxPickUpCount = data.maxPickUpCount;
     this.maxBonusCount = data.maxBonusCount;
     this.guaranteeItem = data.guaranteeItem;
+    this.executionInfo = data.executionInfo;
     this.fiveStars = data.fiveStars;
     this.fourStars = data.fourStars;
     this.threeStars = data.threeStars;
@@ -45,7 +53,7 @@ export class GachaContent implements GachaData {
 }
 
 export class GachaController {
-  private data: GachaContent;
+  public readonly data: GachaContent;
   public totalCount: number;
   public pityCount: number;
   public favoriteCount: number;
@@ -193,7 +201,7 @@ export class GachaController {
 
         // 확률 보정으로 인해 76번 이상 부터는 32% 확률 적용
         const fiveStarPercent = this.favoriteCount >= 76 ? 32 : this.data.fiveStars.percent;
-        console.log(fiveStarPercent);
+        console.log(this.favoriteCount);
 
         if (percent <= fiveStarPercent) {
           resultItem = this.nextIsPickUp(this.data.fiveStars, this.isNextFivePickUp);
