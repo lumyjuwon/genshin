@@ -1,12 +1,12 @@
 import { ActionTypes, PartyAction, PartyState, PartyPreset } from './types';
 import * as loadsh from 'lodash';
 
-const initialState: PartyState = {
+export const initialPartyState: PartyState = {
   partyData: {},
   partyPreset: {}
 };
 
-export function partyReducer(state = initialState, action: PartyAction): PartyState {
+export function partyReducer(state = initialPartyState, action: PartyAction): PartyState {
   switch (action.type) {
     case ActionTypes.SetParty:
       return {

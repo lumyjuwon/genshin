@@ -1,15 +1,28 @@
-import { applyMiddleware, createStore, Store } from 'redux';
-import { PersistConfig, persistReducer, persistStore } from 'redux-persist';
+import { $CombinedState, applyMiddleware, createStore, Store } from 'redux';
+import { createMigrate, PersistConfig, persistReducer, persistStore, MigrationManifest } from 'redux-persist';
 import logger from 'redux-logger';
 import storage from 'redux-persist/lib/storage';
 
 import { isDev } from 'src/utils';
 import rootReducer, { RootState } from './rootReducer';
+import { initialGachaState } from './gacha/reducer';
+
+const migrations = {
+  0: (state: RootState) => {
+    return {
+      ...state,
+      gacha: initialGachaState
+    };
+  }
+};
 
 const persistConfig: PersistConfig<any> = {
   key: 'root',
   storage: storage,
-  whitelist: ['party', 'common', 'gacha']
+  version: 0,
+  whitelist: ['party', 'common', 'gacha'],
+  // @ts-ignore
+  migrate: createMigrate(migrations, { debug: false })
 };
 
 const enhancedReducer = persistReducer(persistConfig, rootReducer);

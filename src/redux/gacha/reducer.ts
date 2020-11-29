@@ -1,6 +1,6 @@
 import { ActionTypes, GachaState, GachaAction } from './types';
 
-const initialState: GachaState = {
+export const initialGachaState: GachaState = {
   contents: {
     Character_Event_Wish: {
       totalCount: 0,
@@ -33,7 +33,7 @@ const initialState: GachaState = {
   usedPrimoGem: 0
 };
 
-export function gachaReducer(state = initialState, action: GachaAction): GachaState {
+export function gachaReducer(state = initialGachaState, action: GachaAction): GachaState {
   switch (action.type) {
     case ActionTypes.SetGacha:
       return {
@@ -42,7 +42,7 @@ export function gachaReducer(state = initialState, action: GachaAction): GachaSt
       };
     case ActionTypes.ClearGacha:
       return {
-        ...initialState
+        ...initialGachaState
       };
     default:
       return state;

@@ -1,10 +1,10 @@
 import { ActionTypes, CommonAction, CommonState, Continent } from './types';
 
-const initialState: CommonState = {
+export const initialCommonState: CommonState = {
   server: Continent.Asia
 };
 
-export function commonReducer(state = initialState, action: CommonAction) {
+export function commonReducer(state = initialCommonState, action: CommonAction) {
   switch (action.type) {
     case ActionTypes.SetServer:
       return {
