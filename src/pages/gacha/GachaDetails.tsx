@@ -111,8 +111,8 @@ export function GachaDetails(props: Props) {
               flexDirection: 'row',
               width: '100%',
               justifyContent: 'space-between',
-              paddingTop: '144px',
-              paddingBottom: '72px'
+              paddingTop: '36px',
+              paddingBottom: '36px'
             }}
           >
             <div />
