@@ -2,9 +2,20 @@ import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 
 import { trans, Lang } from 'src/resources/languages';
-import { FlexWrapper, RoundImage, TextCenterWrapper, CheckBoxButton, ItemBadgeBox, DropDownButton, SquareImage } from 'src/components';
+import {
+  FlexWrapper,
+  RoundImage,
+  TextCenterWrapper,
+  CheckBoxButton,
+  ItemBadgeBox,
+  DropDownButton,
+  SquareImage,
+  RoundTextButton
+} from 'src/components';
 import { characterInfo, gachaInfo, weaponInfo } from 'src/resources/data';
 import { GachaImages } from 'src/resources/images';
+import { gachaDispatch } from 'src/redux/gacha/dispatch';
+import { Ripple } from 'src/components/effect';
 
 const items = Object.assign({}, characterInfo, weaponInfo);
 
@@ -16,6 +27,7 @@ interface Props {
   five: number;
   showVideo: boolean;
   usedGem: number;
+  blankView: Function;
 }
 
 const Title = styled.div({
@@ -123,36 +135,68 @@ export function GachaInventory(props: Props) {
     inputRef.current && setIsHideThree(inputRef.current.checked);
   };
 
+  function onResetClick() {
+    gachaDispatch.ClearGacha();
+    props.blankView();
+  }
+
   const onFilterClick = (index: number) => {
     setFilter(filterList[index]);
   };
 
   return (
     <>
-      <FlexWrapper styles={{ justifyContent: 'space-between', margin: '0 0 10px', small: { flexDirection: 'column' } }}>
+      <FlexWrapper styles={{ justifyContent: 'space-between', margin: '0 0 10px' }}>
         <>
           <Title>{trans(Lang.Inventory)}</Title>
+          {props.showVideo ? (
+            <RoundTextButton
+              styles={{
+                buttonStyles: { display: 'inline-block', backgroundColor: '#cc0000', padding: '5px 10px', pointerEvents: 'none' },
+                textStyles: { fontSize: '20px', small: { fontSize: '16px' } }
+              }}
+              onClick={() => {}}
+            >
+              <>
+                <i className="far fa-trash-alt"></i>
+                <Ripple />
+              </>
+            </RoundTextButton>
+          ) : (
+            <RoundTextButton
+              styles={{
+                buttonStyles: { display: 'inline-block', backgroundColor: '#cc0000', padding: '5px 10px' },
+                textStyles: { fontSize: '20px', small: { fontSize: '16px' } }
+              }}
+              onClick={() => onResetClick()}
+            >
+              <>
+                <i className="far fa-trash-alt"></i>
+                <Ripple />
+              </>
+            </RoundTextButton>
+          )}
         </>
       </FlexWrapper>
       <FlexWrapper
         styles={{
           width: '100%',
           margin: '10px 0',
-          justifyContent: 'space-between',
           padding: '0 10px',
-          small: { justifyContent: 'center', flexDirection: 'column-reverse' }
+          flexDirection: 'column',
+          alignItems: 'flex-end'
         }}
       >
-        <FlexWrapper styles={{ small: { margin: '10px 0 0' } }}>
-          <Result>5★: {props.five}</Result>
-          <Result>4★: {props.four}</Result>
-        </FlexWrapper>
         <FlexWrapper>
           <ItemCount>{`${trans(Lang.Item_Count)}: ${totalItemCount}`}</ItemCount>
           <FlexWrapper styles={{ margin: '0 5px 0 10px' }}>
             <SquareImage src={require('../../resources/images/items/gem/Primogem.webp')} styles={{ width: '20px', height: '20px' }} />
             <ItemCount>: {props.usedGem}</ItemCount>
           </FlexWrapper>
+        </FlexWrapper>
+        <FlexWrapper styles={{ margin: '10px 0 0' }}>
+          <Result>5★: {props.five}</Result>
+          <Result>4★: {props.four}</Result>
         </FlexWrapper>
       </FlexWrapper>
       <FlexWrapper styles={{ justifyContent: 'flex-end', margin: '0 0 40px' }}>

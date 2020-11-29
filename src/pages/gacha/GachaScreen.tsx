@@ -76,11 +76,6 @@ export function GachaScreen() {
 
   console.log(gacha.current?.pityCount);
 
-  function onResetClick() {
-    gachaDispatch.ClearGacha();
-    setGachaExecutionResult([]);
-  }
-
   function onBannerClick(index: number) {
     const wishContentNames = Object.keys(gachaInfo);
     setGachaCategory(wishContentNames[index]);
@@ -130,6 +125,10 @@ export function GachaScreen() {
     setIsWatchingVideo(false);
   }
 
+  function makeArrangeViewBlank() {
+    setGachaExecutionResult([]);
+  }
+
   return (
     <ContentWrapper>
       <PageHelmet title={trans(Lang.Gacha)} description={trans(Lang.Main_Wish_Desc)} />
@@ -156,60 +155,15 @@ export function GachaScreen() {
           )}
           <FlexWrapper>
             <>
-              {isWatchingVideo ? (
-                <RoundTextButton
-                  styles={{
-                    buttonStyles: {
-                      display: 'inline-block',
-                      backgroundColor: '#cc0000',
-                      margin: '10px',
-                      padding: '12px',
-                      pointerEvents: 'none'
-                    },
-                    textStyles: { fontSize: '20px', small: { fontSize: '16px' } }
-                  }}
-                  onClick={() => onResetClick()}
-                >
-                  <>
-                    {trans(Lang.Reset)}
-                    <Ripple />
-                  </>
-                </RoundTextButton>
-              ) : (
-                <RoundTextButton
-                  styles={{
-                    buttonStyles: { display: 'inline-block', backgroundColor: '#cc0000', margin: '10px', padding: '12px' },
-                    textStyles: { fontSize: '20px', small: { fontSize: '16px' } }
-                  }}
-                  onClick={() => onResetClick()}
-                >
-                  <>
-                    {trans(Lang.Reset)}
-                    <Ripple />
-                  </>
-                </RoundTextButton>
-              )}
               {stopBeginnerWishes || isWatchingVideo ? (
                 <RoundButton
                   styles={{ border: '2px solid #f1f2f3', width: '150px', display: 'inline-block' }}
                   onClick={() => turnOffWishVideo()}
                 >
-                  <FlexWrapper
-                    styles={{
-                      flexDirection: 'column',
-                      width: '100%',
-                      medium: { flexDirection: 'column' },
-                      small: { flexDirection: 'column' }
-                    }}
-                  >
+                  <FlexWrapper styles={{ padding: '10px', small: { padding: '6px 0' } }}>
                     <>
-                      <div style={{ fontSize: '14px' }}>{trans(Lang.Start)}</div>
-                      <FlexWrapper>
-                        <>
-                          <SquareImage styles={{ width: '25px', height: '25px' }} src={gemImage} />
-                          <span style={{ fontSize: '14px' }}>&nbsp;× {gacha.current?.data.executionInfo.excution10ConsumeGem}</span>
-                        </>
-                      </FlexWrapper>
+                      <SquareImage styles={{ width: '30px', height: '30px' }} src={gemImage} />
+                      <span style={{ fontSize: '20px' }}>&nbsp;× {gacha.current?.data.executionInfo.excution10ConsumeGem}</span>
                     </>
                   </FlexWrapper>
                 </RoundButton>
@@ -219,15 +173,10 @@ export function GachaScreen() {
                   onClick={() => onGachaExecution(10)}
                 >
                   <>
-                    <FlexWrapper styles={{ flexDirection: 'column', width: '100%' }}>
+                    <FlexWrapper styles={{ padding: '10px', small: { padding: '6px 0' } }}>
                       <>
-                        <div style={{ fontSize: '14px' }}>{trans(Lang.Start)}</div>
-                        <FlexWrapper>
-                          <>
-                            <SquareImage styles={{ width: '25px', height: '25px' }} src={gemImage} />
-                            <span style={{ fontSize: '14px' }}>&nbsp;× {gacha.current?.data.executionInfo.excution10ConsumeGem}</span>
-                          </>
-                        </FlexWrapper>
+                        <SquareImage styles={{ width: '30px', height: '30px' }} src={gemImage} />
+                        <span style={{ fontSize: '20px' }}>&nbsp;× {gacha.current?.data.executionInfo.excution10ConsumeGem}</span>
                       </>
                     </FlexWrapper>
                     <Ripple />
@@ -250,6 +199,7 @@ export function GachaScreen() {
                 four={gachaStore.fourStarCount}
                 five={gachaStore.fiveStarCount}
                 showVideo={isWatchingVideo}
+                blankView={makeArrangeViewBlank}
               />
             </>
           </BoxModelWrapper>
