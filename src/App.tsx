@@ -1,7 +1,18 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import { GachaScreen, PartyScreen, MainScreen, Policy, Notice, ItemScreen, CharacterScreen, MapScreen, CooperationScreen } from 'src/pages';
+import {
+  GachaScreen,
+  PartyScreen,
+  MainScreen,
+  Policy,
+  Notice,
+  ItemScreen,
+  CharacterScreen,
+  MapScreen,
+  CooperationScreen,
+  RedeemScreen
+} from 'src/pages';
 import { Header, Footer } from 'src/components';
 import { trans, Lang } from './resources/languages';
 import NotFound from './NotFound';
@@ -19,7 +30,7 @@ function App() {
       title: trans(Lang.Party),
       component: PartyScreen
     },
-    // map: { isHeaderMenu: true, path: '/map', title: trans(Lang.Map), component: MapScreen },
+    map: { isHeaderMenu: true, path: '/map', title: trans(Lang.Map), component: MapScreen },
     character: {
       isHeaderMenu: true,
       path: '/character',
@@ -37,6 +48,12 @@ function App() {
       path: '/cooperation',
       title: trans(Lang.Cooperation),
       component: CooperationScreen
+    },
+    redeem: {
+      isHeaderMenu: true,
+      path: '/redeem',
+      title: trans(Lang.Redeem),
+      component: RedeemScreen
     },
     policy: {
       isHeaderMenu: false,

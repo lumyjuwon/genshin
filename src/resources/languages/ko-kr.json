@@ -659,5 +659,8 @@
   "Alternative": "대안",
 
   "Cooperation": "다인모드",
-  "CooperationDesc": "CooperationDesc"
+  "CooperationDesc": "CooperationDesc",
+
+  "Redeem": "리딤",
+  "RedeemDesc": "RedeemDesc"
 }

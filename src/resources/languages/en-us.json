@@ -657,6 +657,9 @@
   "Unknown": "Unknown",
   "Alternative": "Alternative",
 
-  "Cooperation": "co-op",
-  "CooperationDesc": "CooperationDesc"
+  "Cooperation": "Co-op",
+  "CooperationDesc": "CooperationDesc",
+
+  "Redeem": "Redeem",
+  "RedeemDesc": "RedeemDesc"
 }

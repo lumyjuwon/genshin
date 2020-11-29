@@ -4,6 +4,7 @@ export { MapScreen } from './map/MapScreen';
 export { ItemScreen } from './item/ItemScreen';
 export { CharacterScreen } from './character/CharacterScreen';
 export { CooperationScreen } from './cooperation/CooperationScreen';
+export { RedeemScreen } from './redeem/RedeemScreen';
 
 export { MainScreen } from './main/MainScreen';
 export { Policy } from './footer/Policy';
