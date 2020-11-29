@@ -58,7 +58,11 @@ export function GachaScreen() {
     }
 
     gacha.current = gachaMap.current?.get(gachaContent);
-  }, [gachaContent, contentData]);
+    if (gacha.current) {
+      gacha.current.totalCount = gachaStore.contents[gachaContent].totalCount;
+      gacha.current.nextPity = gachaStore.contents[gachaContent].nextPity;
+    }
+  }, [gachaContent, contentData, gachaStore.contents]);
 
   let contentList = Object.keys(gachaInfo);
   let payedFateCount: number = 10;
