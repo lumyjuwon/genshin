@@ -57,11 +57,11 @@ export class GachaController {
   public totalCount: number;
   public pityCount: number;
   public favoriteCount: number;
-  public nextPity: number;
-  public gachaResult: Array<string>;
-  public isGuaranteeItem: boolean;
-  public isNextFivePickUp: boolean;
-  public isNextFourPickUp: boolean;
+  private nextPity: number;
+  private gachaResult: Array<string>;
+  private isGuaranteeItem: boolean;
+  private isNextFivePickUp: boolean;
+  private isNextFourPickUp: boolean;
 
   constructor(gachaData: GachaContent) {
     this.data = gachaData;
@@ -75,13 +75,10 @@ export class GachaController {
     this.isNextFourPickUp = false;
   }
 
-  clear() {
-    this.totalCount = 0;
-    this.pityCount = 0;
-    this.favoriteCount = 0;
-    this.gachaResult = new Array<string>();
-    this.isGuaranteeItem = false;
-    this.isNextFivePickUp = false;
+  setCount(totalCount: number, pityCount: number, favoriteCount: number) {
+    this.totalCount = totalCount;
+    this.pityCount = pityCount;
+    this.favoriteCount = favoriteCount;
   }
 
   pick(info: GachaInfo): string {
@@ -200,8 +197,8 @@ export class GachaController {
         let resultItem: string;
 
         // 확률 보정으로 인해 76번 이상 부터는 32% 확률 적용
-        const fiveStarPercent = this.favoriteCount >= 76 ? 32 : this.data.fiveStars.percent;
-        console.log(this.favoriteCount);
+        const fiveStarPercent = this.pityCount >= 76 ? 32 : this.data.fiveStars.percent;
+        console.log(this.pityCount);
 
         if (percent <= fiveStarPercent) {
           resultItem = this.nextIsPickUp(this.data.fiveStars, this.isNextFivePickUp);

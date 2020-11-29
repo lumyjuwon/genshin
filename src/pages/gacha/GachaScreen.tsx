@@ -54,11 +54,19 @@ export function GachaScreen() {
 
     const data = new GachaContent(contentData);
     gacha.current = new GachaController(data);
-    gacha.current.totalCount = gachaStore.contents[gachaCategory].totalCount;
-    gacha.current.pityCount = gachaStore.contents[gachaCategory].pityCount;
 
     setGemImage(GemImages[data.executionInfo.gemImageName]);
     setUsedFateCount(data.executionInfo.excution10ConsumeGem);
+  }, [gachaCategory]);
+
+  useEffect(() => {
+    if (gacha.current) {
+      gacha.current.setCount(
+        gachaStore.contents[gachaCategory].totalCount,
+        gachaStore.contents[gachaCategory].pityCount,
+        gachaStore.contents[gachaCategory].favoriteCount
+      );
+    }
   }, [gachaCategory, gachaStore.contents]);
 
   function onResetClick() {
