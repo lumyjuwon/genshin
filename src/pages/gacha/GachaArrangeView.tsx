@@ -100,6 +100,13 @@ export function GachaArrangeView(props: Props) {
     props.turnOff();
   }
 
+  function sortGachaResultByRank(result: Array<string>): Array<string> {
+    const sortedResult = result.sort((item, nextItem) => {
+      return Items[nextItem].rank - Items[item].rank;
+    });
+    return sortedResult;
+  }
+
   props.result.forEach((result) => {
     if (Items[result].rank === 5) {
       videoPath = require('../../resources/video/gacha/5starwish.mp4');
@@ -127,7 +134,7 @@ export function GachaArrangeView(props: Props) {
               xsmall: { gridTemplateColumns: 'repeat(auto-fit, 70px)' }
             }}
           >
-            {props.result.map((item: string, index: number) => {
+            {sortGachaResultByRank(props.result).map((item: string, index: number) => {
               let shadow = '0 0 8px 2px #777, 0px 8px 5px #777, 0px -8px 5px #777';
               if (characterInfo[item]) {
                 if (characterInfo[item].rank === 5) shadow = shadowPal.five;
