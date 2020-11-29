@@ -655,5 +655,8 @@
   "Level": "Level",
   "Stat": "Stat",
   "Unknown": "Unknown",
-  "Alternative": "Alternative"
+  "Alternative": "Alternative",
+
+  "Cooperation": "co-op",
+  "CooperationDesc": "CooperationDesc"
 }

@@ -668,7 +668,10 @@ enum Lang {
   Level = 'Level',
   Stat = 'Stat',
   Unknown = 'Unknown',
-  Alternative = 'Alternative'
+  Alternative = 'Alternative',
+
+  Cooperation = 'Cooperation',
+  CooperationDesc = 'CooperationDesc'
 }
 
 export type KeyLang = keyof typeof Lang;

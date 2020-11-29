@@ -656,5 +656,8 @@
   "Level": "레벨",
   "Stat": "스탯",
   "Unknown": "알 수 없음",
-  "Alternative": "대안"
+  "Alternative": "대안",
+
+  "Cooperation": "다인모드",
+  "CooperationDesc": "CooperationDesc"
 }
