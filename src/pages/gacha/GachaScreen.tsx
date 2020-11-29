@@ -219,8 +219,8 @@ export function GachaScreen() {
               )}
               {stopBeginnerWishes || isWatchingVideo ? (
                 <RoundButton
-                  styles={{ border: '2px solid #f1f2f3', width: '150px', display: 'inline-block', pointerEvents: 'none' }}
-                  onClick={() => onGachaExecution(10)}
+                  styles={{ border: '2px solid #f1f2f3', width: '150px', display: 'inline-block' }}
+                  onClick={() => turnOffWishVideo()}
                 >
                   <FlexWrapper
                     styles={{
