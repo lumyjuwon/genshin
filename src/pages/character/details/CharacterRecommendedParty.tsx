@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { Layout } from './Layout';
 import { CharacterImages, ElementImages } from 'src/resources/images';
-import { FlexWrapper, ItemBadgeBox, RoundImage, GridWrapper, ContentBackgroundBox } from 'src/components';
+import { FlexWrapper, ItemBadgeBox, RoundImage, FlexGridWrapper, ContentBackgroundBox } from 'src/components';
 import { characterInfo } from 'src/resources/data';
 import { trans, Lang } from 'src/resources/languages';
 import { Link } from 'react-router-dom';
@@ -60,7 +60,7 @@ export function CharactrerRecommendedParty(props: Props) {
                   {trans(Lang.Recommended_Party)} #{index + INDEX_BEAUTIFY}
                 </PartyName>
                 <ContentBackgroundBox>
-                  <GridWrapper styles={{ width: '100%', medium: { width: '100%' }, small: { width: '100%' } }}>
+                  <FlexGridWrapper styles={{ width: '100%', medium: { width: '100%' }, small: { width: '100%' } }}>
                     {recommendedParties[partyName].party.map((character) => {
                       const path = character.replace(/\s\(|\)|/g, '');
                       return (
@@ -96,7 +96,7 @@ export function CharactrerRecommendedParty(props: Props) {
                         </Link>
                       );
                     })}
-                  </GridWrapper>
+                  </FlexGridWrapper>
                   <>
                     {alterCharacter && (
                       <>

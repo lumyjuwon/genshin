@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Layout } from './Layout';
-import { FlexWrapper, RoundImage, GridWrapper, BoxModelWrapper, TableWrapper } from 'src/components';
+import { FlexWrapper, RoundImage, FlexGridWrapper, BoxModelWrapper, TableWrapper } from 'src/components';
 import { characterInfo, AscensionMaterialName } from 'src/resources/data';
 import { CharacterAscentionItemImages } from 'src/resources/images';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
@@ -59,16 +59,16 @@ export function CharacterAscensionMaterials(props: Props) {
           header={
             <FlexWrapper styles={{ padding: '5px', small: { width: '100%', padding: '5px' } }}>
               <MaxLevel>{trans(Lang.Ascension_Step)}</MaxLevel>
-              <GridWrapper styles={{ width: '500px', medium: { width: '450px' }, small: { width: '100%' } }}>
+              <FlexGridWrapper styles={{ width: '500px', medium: { width: '450px' }, small: { width: '100%' } }}>
                 {trans(Lang.Material)}
-              </GridWrapper>
+              </FlexGridWrapper>
             </FlexWrapper>
           }
           body={Object.values(AscensionStep).map((step: Step) => {
             return (
               <FlexWrapper key={step} styles={{ padding: '15px', small: { width: '100%', padding: '8px' } }}>
                 <MaxLevel>{trans(Lang[step as KeyLang])}</MaxLevel>
-                <GridWrapper styles={{ width: '500px', medium: { width: '450px' }, small: { width: '100%' } }}>
+                <FlexGridWrapper styles={{ width: '500px', medium: { width: '450px' }, small: { width: '100%' } }}>
                   {getAscensionItems(AscensionStep[step]).map((item: AscensionMaterialName) => {
                     return (
                       <FlexWrapper key={item} styles={{ margin: '8px' }}>
@@ -80,7 +80,7 @@ export function CharacterAscensionMaterials(props: Props) {
                       </FlexWrapper>
                     );
                   })}
-                </GridWrapper>
+                </FlexGridWrapper>
               </FlexWrapper>
             );
           })}

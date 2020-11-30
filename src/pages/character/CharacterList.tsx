@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import { characterInfo } from 'src/resources/data';
 import { CharacterImages, ElementImages } from 'src/resources/images';
-import { ItemBadgeBox, RoundImage, GridWrapper } from 'src/components';
+import { ItemBadgeBox, RoundImage, FlexGridWrapper } from 'src/components';
 
 const Container = styled.div({
   display: 'flex',
@@ -31,7 +31,7 @@ export function CharacterList() {
 
   return (
     <Container>
-      <GridWrapper styles={{ width: '100%' }}>
+      <FlexGridWrapper styles={{ width: '100%' }}>
         {characters.map((name) => {
           const path = name.replace(/\s\(|\)|/g, '');
           return (
@@ -72,7 +72,7 @@ export function CharacterList() {
             </Link>
           );
         })}
-      </GridWrapper>
+      </FlexGridWrapper>
     </Container>
   );
 }

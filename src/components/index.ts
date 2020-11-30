@@ -7,7 +7,7 @@ export { PageHelmet } from './PageHelmet';
 // Wrapper
 export { ScreenInnerWrapper } from './wrapper/ScreenInnerWrapper';
 export { TextCenterWrapper } from './/wrapper/TextCenterWrapper';
-export { GridWrapper } from './wrapper/GridWrapper';
+export { FlexGridWrapper } from './wrapper/FlexGridWrapper';
 export { FlexWrapper } from './wrapper/FlexWrapper';
 export { ContentWrapper } from './wrapper/ContentWrapper';
 export { BoxModelWrapper } from './wrapper/BoxModelWrapper';

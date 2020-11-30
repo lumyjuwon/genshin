@@ -8,7 +8,7 @@ import {
   CharacterTalentItem,
   serverTimeInfo
 } from 'src/resources/data';
-import { FlexWrapper, RoundImage, TooltipText, GridWrapper } from 'src/components';
+import { FlexWrapper, RoundImage, TooltipText, FlexGridWrapper } from 'src/components';
 import { DailySetImages } from 'src/resources/images';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
 
@@ -95,7 +95,7 @@ export function DailyAbyssal() {
         <FlexWrapper styles={{ margin: '0 10px 0 0', flexDirection: 'column', small: { margin: '0' } }}>
           <>
             <SubTitle>{trans(Lang.Daily_Character)}</SubTitle>
-            <GridWrapper styles={{ width: '250px', medium: { width: '250px' }, small: { width: '250px' } }}>
+            <FlexGridWrapper styles={{ width: '250px', medium: { width: '250px' }, small: { width: '250px' } }}>
               {getTodayAbyssalItems(characterTalentItemSet, characterTalentItemInfo).map((name) => {
                 return (
                   <ImageContainer key={name}>
@@ -104,13 +104,13 @@ export function DailyAbyssal() {
                   </ImageContainer>
                 );
               })}
-            </GridWrapper>
+            </FlexGridWrapper>
           </>
         </FlexWrapper>
         <FlexWrapper styles={{ flexDirection: 'column', small: { margin: '10px 0 0' } }}>
           <>
             <SubTitle>{trans(Lang.Daily_Weapon)}</SubTitle>
-            <GridWrapper styles={{ width: '250px', medium: { width: '250px' }, small: { width: '250px' } }}>
+            <FlexGridWrapper styles={{ width: '250px', medium: { width: '250px' }, small: { width: '250px' } }}>
               {getTodayAbyssalItems(weaponAscesionItemSet, weaponAscesionItemInfo).map((name) => {
                 return (
                   <ImageContainer key={name}>
@@ -119,7 +119,7 @@ export function DailyAbyssal() {
                   </ImageContainer>
                 );
               })}
-            </GridWrapper>
+            </FlexGridWrapper>
           </>
         </FlexWrapper>
       </SetContainer>

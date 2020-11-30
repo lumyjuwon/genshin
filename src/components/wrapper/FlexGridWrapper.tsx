@@ -32,6 +32,6 @@ interface Props {
   styles?: Styles;
 }
 
-export function GridWrapper(props: Props) {
+export function FlexGridWrapper(props: Props) {
   return <Wrapper {...props.styles}>{props.children}</Wrapper>;
 }

@@ -15,7 +15,7 @@ import {
   ArtifactName,
   CharacterName
 } from 'src/resources/data';
-import { GridWrapper, ItemBadgeBox, Modal, RoundImage, BoxModelWrapper, RoundImageBox } from 'src/components';
+import { FlexGridWrapper, ItemBadgeBox, Modal, RoundImage, BoxModelWrapper, RoundImageBox } from 'src/components';
 import { CategoryImages, ImageSrc, ItemImages } from 'src/resources/images';
 import { partyDispatch } from 'src/redux';
 
@@ -172,7 +172,7 @@ export function CharacterEquipSlot(props: Props) {
         }}
         visible={isVisibleEquipmentModal}
       >
-        <GridWrapper>
+        <FlexGridWrapper>
           {Object.keys(items).map((name: EquipmentName) => {
             if (items[name].type === modalEquipmentCategory) {
               return (
@@ -226,7 +226,7 @@ export function CharacterEquipSlot(props: Props) {
             }
             return null;
           })}
-        </GridWrapper>
+        </FlexGridWrapper>
       </Modal>
     </Container>
   );

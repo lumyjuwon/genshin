@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { CharacterSlot } from './CharacterSlot';
-import { Modal, GridWrapper, ItemBadgeBox, RoundImage, RoundImageBox, ContentBackgroundBox, BoxModelWrapper } from 'src/components';
+import { Modal, FlexGridWrapper, ItemBadgeBox, RoundImage, RoundImageBox, ContentBackgroundBox, BoxModelWrapper } from 'src/components';
 import { characterInfo, CharacterName } from 'src/resources/data';
 import { ElementImages, CharacterImages } from 'src/resources/images';
 import { maxCharacterLength } from './CharacterSimulator';
@@ -70,7 +70,7 @@ export function CharacterSlotIterator(props: Props) {
         }}
         visible={isVisibleCharacterModal}
       >
-        <GridWrapper>
+        <FlexGridWrapper>
           {Object.keys(characterInfo).map((name: string) => {
             return (
               <ItemBadgeBox
@@ -120,7 +120,7 @@ export function CharacterSlotIterator(props: Props) {
               />
             );
           })}
-        </GridWrapper>
+        </FlexGridWrapper>
       </Modal>
     </Container>
   );
