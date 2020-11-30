@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { FlexWrapper } from 'src/components';
 import { characterInfo } from 'src/resources/data';
 
 const Container = styled.div({

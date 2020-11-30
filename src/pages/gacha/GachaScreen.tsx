@@ -11,7 +11,6 @@ import { characterInfo, weaponInfo, gachaInfo } from 'src/resources/data';
 import { GemImages, ImageSrc } from 'src/resources/images';
 import {
   ScreenInnerWrapper,
-  RoundTextButton,
   TextCenterWrapper,
   SquareImage,
   FlexWrapper,
