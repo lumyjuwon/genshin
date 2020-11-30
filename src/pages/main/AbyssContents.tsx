@@ -57,7 +57,7 @@ const ImageContainer = styled.div({
 
 type Items = WeaponAscesionItem | CharacterTalentItem;
 
-export function DailyAbyssal() {
+export function AbyssContents() {
   const server: string = useSelector<RootState, any>((state) => state.common.server);
 
   /*
@@ -84,6 +84,32 @@ export function DailyAbyssal() {
       }
     });
     return todayItems;
+  }
+
+  // 1, 16일 utc기준 4시에 초기화
+  function getSpiralAbyssResetTime() {
+    const serverDate = serverTime.getUTCDate();
+
+    // 16일 4시부터 1일 3시 59분까지
+    if ((serverDate >= 16 && serverTime.getUTCHours() >= 4) || (serverDate === 1 && serverTime.getUTCHours() < 4)) {
+      let resetTime: Date;
+
+      if (serverTime.getUTCMonth() === 11) {
+        resetTime = new Date(Date.UTC(serverTime.getUTCFullYear() + 1, 0, 1, 4, 0, 0, 0));
+      } else {
+        resetTime = new Date(Date.UTC(serverTime.getUTCFullYear(), serverTime.getUTCMonth() + 1, 1, 4, 0, 0, 0));
+      }
+
+      const remainTime = (resetTime.getTime() - serverTime.getTime()) / (1000 * 60 * 60);
+      return Math.floor(remainTime);
+    }
+    // 1일 4시부터 16일 3시 59분까지
+    else {
+      const resetTime = new Date(Date.UTC(serverTime.getUTCFullYear(), serverTime.getUTCMonth(), 16, 4, 0, 0, 0));
+
+      const remainTime = (resetTime.getTime() - serverTime.getTime()) / (1000 * 60 * 60);
+      return Math.floor(remainTime);
+    }
   }
 
   return (
@@ -123,6 +149,11 @@ export function DailyAbyssal() {
           </>
         </FlexWrapper>
       </SetContainer>
+      <FlexWrapper styles={{ margin: '10px 0 0' }}>
+        <>
+          {trans(Lang.Spiral_Abyss_Reset)}:&nbsp;{getSpiralAbyssResetTime()}&nbsp;{trans(Lang.Hours)}
+        </>
+      </FlexWrapper>
     </Container>
   );
 }

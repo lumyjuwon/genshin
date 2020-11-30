@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import { trans, Lang } from '../../resources/languages';
 import { FlexWrapper, ImageContentCard, PageHelmet } from 'src/components';
-import { DailyAbyssal } from './DailyAbyssal';
+import { AbyssContents } from './AbyssContents';
 
 const ImageContainer = styled.div({
   zIndex: -1,
@@ -52,7 +52,7 @@ export function MainScreen(props: Props) {
       <PageHelmet title={trans(Lang.Main_Title)} description={trans(Lang.Main_Desc)} />
       <ImageContainer />
       <Containter>
-        <DailyAbyssal />
+        <AbyssContents />
         <FlexWrapper styles={{ width: '100%' }}>
           <FlexWrapper
             styles={{
