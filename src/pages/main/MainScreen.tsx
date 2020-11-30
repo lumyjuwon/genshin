@@ -43,6 +43,10 @@ const Containter = styled.div({
 interface Props {}
 
 export function MainScreen(props: Props) {
+  function onScrollTop() {
+    window.scroll(0, 0);
+  }
+
   return (
     <>
       <PageHelmet title={trans(Lang.Main_Title)} description={trans(Lang.Main_Desc)} />
@@ -57,7 +61,7 @@ export function MainScreen(props: Props) {
             }}
           >
             <>
-              <Link to='/gacha'>
+              <Link to="/gacha" onClick={() => onScrollTop()}>
                 <ImageContentCard
                   src={`${require('../../resources/images/mainscreen/gacha.png')}`}
                   title={trans(Lang.Gacha)}
@@ -76,7 +80,7 @@ export function MainScreen(props: Props) {
                   }}
                 />
               </Link>
-              <Link to='/party'>
+              <Link to="/party" onClick={() => onScrollTop()}>
                 <ImageContentCard
                   src={`${require('../../resources/images/mainscreen/party.png')}`}
                   title={trans(Lang.Party)}
@@ -97,8 +101,8 @@ export function MainScreen(props: Props) {
               </Link>
               <ImageContentCard
                 src={`${require('../../resources/images/mainscreen/Paimon.jpg')}`}
-                title='Coming Soon...'
-                desc='Coming Soon...'
+                title="Coming Soon..."
+                desc="Coming Soon..."
                 styles={{
                   cardStyles: {
                     width: '300px',
