@@ -30,7 +30,7 @@ export function HeaderMenu(props: Props) {
   return (
     <Link to={props.link}>
       <HeaderNav isSelected={props.isSelected} onClick={() => props.onClick?.()}>
-        <TextBlockButton styles={{ buttonStyles: { medium: { fontSize: '16px' }, small: { width: '95vw', fontSize: '18px' } } }}>
+        <TextBlockButton styles={{ buttonStyles: { medium: { fontSize: '16px' }, small: { width: '180px', fontSize: '18px' } } }}>
           {props.title}
         </TextBlockButton>
       </HeaderNav>

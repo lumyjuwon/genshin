@@ -32,11 +32,13 @@ const NavList = styled.div({
   alignItems: 'center',
   width: '100%',
   '@media screen and (max-width: 768px)': {
+    width: '200px',
+    height: '90vh',
     display: 'flex',
     flexDirection: 'column',
     position: 'absolute',
     top: '10vh',
-    left: '0',
+    right: '0',
     backgroundColor: '#111',
     textAlign: 'center',
     zIndex: 15
@@ -94,10 +96,10 @@ export const HeaderNavigation = React.forwardRef<HTMLDivElement, Props>((props, 
               return null;
             })}
           </FlexWrapper>
-        </FlexWrapper>
-        <FlexWrapper>
-          <ServerSelector />
-          <LangaugeSelector />
+          <FlexWrapper>
+            <ServerSelector />
+            <LangaugeSelector />
+          </FlexWrapper>
         </FlexWrapper>
       </NavList>
     </Navigation>

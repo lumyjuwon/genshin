@@ -10,7 +10,10 @@ const HeaderOuter = styled.header({
   borderBottom: '1px solid #515253',
   backgroundColor: 'rgba(0, 0, 0, .7)',
   position: 'relative',
-  zIndex: 999
+  zIndex: 999,
+  '@media screen and (max-width: 768px)': {
+    borderBottom: 'none'
+  }
 });
 
 const HeaderInner = styled.div({
@@ -54,13 +57,30 @@ export function Header(props: Props) {
     }
 
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+
+    if (windowWidth <= 768 && isNavVisible) {
+      lockScroll();
+    } else {
+      unlockScroll();
+    }
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [windowWidth, isNavVisible]);
 
   useHandleClickOutside(navigationRef, isNavVisible, onClickNavOrOutside);
 
   function onClickNavOrOutside() {
     setIsNavVisible(false);
+  }
+
+  function lockScroll() {
+    document.body.style.overflowY = 'hidden';
+  }
+
+  function unlockScroll() {
+    document.body.style.overflowY = 'auto';
   }
 
   return (
@@ -75,9 +95,10 @@ export function Header(props: Props) {
         <ToggleIcon
           onClick={() => {
             setIsNavVisible(!isNavVisible);
+            window.scrollTo(0, 0);
           }}
         >
-          <i className='fas fa-bars'></i>
+          <i className="fas fa-bars"></i>
         </ToggleIcon>
       </HeaderInner>
     </HeaderOuter>
