@@ -10,7 +10,8 @@ import {
   ItemBadgeBox,
   DropDownButton,
   SquareImage,
-  RoundTextButton
+  RoundTextButton,
+  CSSGridWrapper
 } from 'src/components';
 import { characterInfo, gachaInfo, weaponInfo } from 'src/resources/data';
 import { GachaImages } from 'src/resources/images';
@@ -42,25 +43,6 @@ const Title = styled.div({
 const ItemCount = styled.div({
   '@media screen and (max-width: 768px)': {
     fontSize: '14px'
-  }
-});
-
-const GridContainer = styled.div({
-  display: 'grid',
-  alignItems: 'center',
-  justifyItems: 'center',
-  alignContent: 'center',
-  justifyContent: 'center',
-  gridTemplateColumns: 'repeat(9, 120px)',
-  gridTemplateRows: 'repeat(autofit, 100px)',
-  columnGap: '10px',
-  rowGap: '10px',
-  '@media screen and (max-width: 1380px)': {
-    gridTemplateColumns: 'repeat(6, 120px)',
-    columnGap: '4px'
-  },
-  '@media screen and (max-width: 768px)': {
-    gridTemplateColumns: 'repeat(3, 80px)'
   }
 });
 
@@ -230,7 +212,14 @@ export function GachaInventory(props: Props) {
           {trans(Lang.If_Inventory_Blank)}
         </TextCenterWrapper>
       )}
-      <GridContainer>
+      <CSSGridWrapper
+        styles={{
+          gridTemplateColumns: 'repeat(auto-fit, 120px)',
+          rowGap: '15px',
+          medium: { gridTemplateColumns: 'repeat(auto-fit, 120px)', rowGap: '15px' },
+          small: { gridTemplateColumns: 'repeat(auto-fit, 80px)', rowGap: '15px' }
+        }}
+      >
         {inventoryItems.map((item: string, index: number) => {
           return (
             <Item key={index}>
@@ -241,13 +230,13 @@ export function GachaInventory(props: Props) {
                 tooltip={item}
                 styles={{
                   tooltipStyles: { fontSize: '14px', bottom: '0', small: { fontSize: '12px' } },
-                  badgePosition: { top: '-16px', right: '8px' }
+                  badgePosition: { top: '-13px', right: '6px' }
                 }}
               />
             </Item>
           );
         })}
-      </GridContainer>
+      </CSSGridWrapper>
     </>
   );
 }
