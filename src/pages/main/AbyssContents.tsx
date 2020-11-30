@@ -55,6 +55,12 @@ const ImageContainer = styled.div({
   margin: '3px 3px'
 });
 
+const Spiral = styled.div({
+  textAlign: 'center',
+  margin: '10px 0 0',
+  wordBreak: 'keep-all'
+});
+
 type Items = WeaponAscesionItem | CharacterTalentItem;
 
 export function AbyssContents() {
@@ -149,11 +155,9 @@ export function AbyssContents() {
           </>
         </FlexWrapper>
       </SetContainer>
-      <FlexWrapper styles={{ margin: '10px 0 0' }}>
-        <>
-          {trans(Lang.Spiral_Abyss_Reset)}:&nbsp;{getSpiralAbyssResetTime()}&nbsp;{trans(Lang.Hours)}
-        </>
-      </FlexWrapper>
+      <Spiral>
+        {trans(Lang.Spiral_Abyss_Reset)}:&nbsp;{getSpiralAbyssResetTime()}&nbsp;{trans(Lang.Hours)}
+      </Spiral>
     </Container>
   );
 }
