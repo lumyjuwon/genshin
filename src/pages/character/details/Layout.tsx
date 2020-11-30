@@ -3,9 +3,11 @@ import styled from 'styled-components';
 
 import { BoxModelWrapper } from 'src/components';
 
-const Container = styled.div({
-  width: '100%',
-  margin: '50px 0 0'
+const Container = styled.div<{ top?: boolean }>((props) => {
+  return {
+    width: '100%',
+    margin: props.top ? '0' : '50px 0 0'
+  };
 });
 
 const Line = styled.hr({
@@ -23,11 +25,13 @@ const Title = styled.div({
 interface Props {
   title: string;
   children: JSX.Element;
+  id: string;
+  top?: boolean;
 }
 
 export function Layout(props: Props) {
   return (
-    <Container>
+    <Container id={props.id} top={props.top}>
       <Title>{props.title}</Title>
       <Line />
       <BoxModelWrapper styles={{ margin: '20px 0 0', medium: { margin: '20px 0 0' }, small: { margin: '20px 0 0' } }}>

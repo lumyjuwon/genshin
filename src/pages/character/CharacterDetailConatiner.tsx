@@ -10,6 +10,7 @@ import { CharacterAscensionMaterials } from './details/CharacterAscensionMateria
 import { CharacterTalentMaterials } from './details/CharacterTalentMaterials';
 import { CharactrerRecommendedParty } from './details/CharacterRecommendedParty';
 import { CharactrerRecommendedEquip } from './details/CharacterRecommendedEquip';
+import { CharacterDetailNavigation } from './CharacterDetailNavigation';
 
 interface Props {
   character: string;
@@ -117,11 +118,11 @@ export function CharacterDetailConatiner(props: Props) {
         </FlexWrapper>
       </CharacterIntro>
       <FlexWrapper styles={{ width: '100%', alignItems: 'flex-start', flexDirection: 'column' }}>
-        {/* Nav Button */}
+        <CharacterDetailNavigation character={props.character} />
         <CharacterStat character={props.character} />
         <CharacterAscensionMaterials character={props.character} />
         <CharacterTalentMaterials character={props.character} />
-        {characterInfo[props.character].recommendedParty && <CharactrerRecommendedParty character={props.character} />}
+        {characterInfo[props.character].recommendedParty ? <CharactrerRecommendedParty character={props.character} /> : null}
         <CharactrerRecommendedEquip character={props.character} />
       </FlexWrapper>
       <TopButton />

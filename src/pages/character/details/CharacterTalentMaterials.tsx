@@ -31,7 +31,7 @@ export function CharacterTalentMaterials(props: Props) {
   }
 
   return (
-    <Layout title={trans(Lang.Character_Talent_Material)}>
+    <Layout id="talent-materials" title={trans(Lang.Character_Talent_Material)}>
       <CSSGridWrapper
         styles={{
           gridTemplateColumns: 'repeat(auto-fit, 250px)',

@@ -69,7 +69,7 @@ export function CharacterStat(props: Props) {
   const characterAscensionLevel = Object.keys(characterInfo[props.character].stats);
 
   return (
-    <Layout title={trans(Lang.Character_Stat)}>
+    <Layout id="stats" title={trans(Lang.Character_Stat)} top>
       <Container>
         <TableWrapper
           header={

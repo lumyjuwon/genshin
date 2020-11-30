@@ -50,7 +50,7 @@ export function CharactrerRecommendedParty(props: Props) {
 
   if (recommendedParties) {
     return (
-      <Layout title={trans(Lang.Recommended_Party)}>
+      <Layout id="recommended-party" title={trans(Lang.Recommended_Party)}>
         <FlexWrapper styles={{ width: '100%', flexDirection: 'column' }}>
           {Object.keys(recommendedParties).map((partyName: string, index: number) => {
             const alterCharacter = recommendedParties[partyName].alter;

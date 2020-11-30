@@ -53,7 +53,7 @@ export function CharacterAscensionMaterials(props: Props) {
     return items;
   }
   return (
-    <Layout title={trans(Lang.Character_Ascension_Material)}>
+    <Layout id="ascension-materials" title={trans(Lang.Character_Ascension_Material)}>
       <BoxModelWrapper styles={{ small: { padding: '0 10px' } }}>
         <TableWrapper
           header={

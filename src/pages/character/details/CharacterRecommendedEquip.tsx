@@ -79,7 +79,7 @@ export function CharactrerRecommendedEquip(props: Props) {
   }
 
   return (
-    <Layout title={trans(Lang.Recommended_Equip)}>
+    <Layout id="recommended-equip" title={trans(Lang.Recommended_Equip)}>
       <CSSGridWrapper
         styles={{
           gridTemplateColumns: 'repeat(2, 450px)',
