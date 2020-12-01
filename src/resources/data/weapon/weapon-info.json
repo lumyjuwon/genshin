@@ -730,6 +730,23 @@
       "sixth": ["Boreal Wolf's Nostalgia"]
     }
   },
+  "The Unforged": {
+    "rank": 5,
+    "type": "Claymore",
+    "stats": {
+      "Level": "-",
+      "ATK": "-",
+      "Additional": "-"
+    },
+    "ascesion": {
+      "first": ["-"],
+      "second": ["-"],
+      "third": ["-"],
+      "fourth": ["-"],
+      "fifth": ["-"],
+      "sixth": ["-"]
+    }
+  },
   "Rainslasher": {
     "rank": 4,
     "type": "Claymore",
@@ -1034,6 +1051,23 @@
       "fourth": ["Boreal Wolf's Broken Fang"],
       "fifth": ["MAX"],
       "sixth": ["MAX"]
+    }
+  },
+  "Vortex Vanquisher": {
+    "rank": 5,
+    "type": "Polearm",
+    "stats": {
+      "Level": "-",
+      "ATK": "-",
+      "Additional": "-"
+    },
+    "ascesion": {
+      "first": ["Unknown"],
+      "second": ["Unknown"],
+      "third": ["Unknown"],
+      "fourth": ["Unknown"],
+      "fifth": ["Unknown"],
+      "sixth": ["Unknown"]
     }
   },
   "Kunwu's Iris Rift": {

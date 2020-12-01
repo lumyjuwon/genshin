@@ -1,6 +1,6 @@
 {
   "Character_Event_Wish": {
-    "pickUpTarget": ["Tartaglia"],
+    "pickUpTarget": ["Zhongli"],
     "maxPityCount": 90,
     "maxPickUpCount": 180,
     "maxBonusCount": 10,
@@ -15,24 +15,24 @@
     "fiveStars": {
       "percent": 0.6,
       "pickUpPercent": 50,
-      "items": ["Tartaglia", "Keqing", "Mona", "Qiqi", "Jean", "Diluc"],
-      "pickUpItems": ["Tartaglia"]
+      "items": ["Zhongli", "Keqing", "Mona", "Qiqi", "Jean", "Diluc"],
+      "pickUpItems": ["Zhongli"]
     },
     "fourStars": {
       "percent": 5.1,
       "pickUpPercent": 75,
       "items": [
-        "Diona",
-        "Ningguang",
-        "Beidou",
-        "Sucrose",
+        "Xinyan",
         "Chongyun",
+        "Razor",
+        "Sucrose",
         "Noelle",
         "Bennett",
         "Fischl",
+        "Ningguang",
         "Xingqiu",
+        "Beidou",
         "Xiangling",
-        "Razor",
         "Barbara",
         "Rust",
         "Sacrificial Bow",
@@ -53,7 +53,7 @@
         "The Flute",
         "Favonius Sword"
       ],
-      "pickUpItems": ["Diona", "Ningguang", "Beidou"]
+      "pickUpItems": ["Xinyan", "Chongyun", "Razor"]
     },
     "threeStars": {
       "percent": 94.3,
@@ -78,7 +78,7 @@
   },
 
   "Weapon_Event_Wish": {
-    "pickUpTarget": ["Skyward Harp", "Memory of Dust"],
+    "pickUpTarget": ["Vortex Vanquisher", "The Unforged"],
     "maxPityCount": 80,
     "maxPickUpCount": 160,
     "maxBonusCount": 10,
@@ -94,9 +94,10 @@
       "percent": 0.7,
       "pickUpPercent": 75,
       "items": [
-        "Skyward Harp",
-        "Memory of Dust",
+        "Vortex Vanquisher",
+        "The Unforged",
         "Amos' Bow",
+        "Skyward Harp",
         "Lost Prayer to the Sacred Winds",
         "Skyward Atlas",
         "Primordial Jade Winged-Spear",
@@ -106,17 +107,17 @@
         "Skyward Blade",
         "Aquila Favonia"
       ],
-      "pickUpItems": ["Skyward Harp", "Memory of Dust"]
+      "pickUpItems": ["Vortex Vanquisher", "The Unforged"]
     },
     "fourStars": {
       "percent": 6.0,
       "pickUpPercent": 75,
       "items": [
-        "Rust",
-        "Eye of Perception",
-        "Favonius Lance",
-        "Rainslasher",
-        "The Flute",
+        "Favonius Warbow",
+        "Favonius Codex",
+        "Dragon's Bane",
+        "The Bell",
+        "Lion's Roar",
         "Sucrose",
         "Chongyun",
         "Noelle",
@@ -128,18 +129,18 @@
         "Xiangling",
         "Razor",
         "Barbara",
+        "Rust",
         "Sacrificial Bow",
         "The Stringless",
-        "Favonius Warbow",
+        "Eye of Perception",
         "Sacrificial Fragments",
         "The Widsith",
-        "Favonius Codex",
-        "Dragon's Bane",
+        "Favonius Lance",
+        "Rainslasher",
         "Sacrificial Greatsword",
-        "The Bell",
         "Favonius Greatsword",
-        "Lion's Roar",
         "Sacrificial Sword",
+        "The Flute",
         "Favonius Sword"
       ],
       "pickUpItems": [

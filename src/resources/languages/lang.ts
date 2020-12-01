@@ -106,6 +106,8 @@ export enum Lang {
   Traveler_Geo = 'TravelerGeo',
   Venti = 'Venti',
   Keqing = 'Keqing',
+  Zhongli = 'Zhongli',
+  Xinyan = 'Xinyan',
   Xiao = 'Xiao',
   Lisa = 'Lisa',
   Kaeya = 'Kaeya',
@@ -174,6 +176,7 @@ export enum Lang {
 
   Wolfs_Gravestone = 'Wolfs_Gravestone',
   Skyward_Pride = 'Skyward_Pride',
+  The_Unforged = 'The_Unforged',
   Rainslasher = 'Rainslasher',
   Whiteblind = 'Whiteblind',
   The_Bell = 'The_Bell',
@@ -193,6 +196,7 @@ export enum Lang {
   Old_Mercs_Pal = 'Old_Mercs_Pal',
   Waster_Greatsword = 'Waster_Greatsword',
 
+  Vortex_Vanquisher = 'Vortex_Vanquisher',
   Kunwus_Iris_Rift = 'Kunwus_Iris_Rift',
   Primordial_Jade_Winged_Spear = 'Primordial_Jade_Winged_Spear',
   Skyward_Spine = 'Skyward_Spine',
