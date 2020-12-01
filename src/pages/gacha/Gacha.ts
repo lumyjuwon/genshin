@@ -84,6 +84,11 @@ export class GachaController {
     this.favoriteCount = favoriteCount;
   }
 
+  setNextPickUp(isNextFivePickUp: boolean, isNextFourPickUp: boolean) {
+    this.isNextFivePickUp = isNextFivePickUp;
+    this.isNextFourPickUp = isNextFourPickUp;
+  }
+
   pick(info: GachaInfo): string {
     const isPickUp = Math.random() * 100 <= info.pickUpPercent;
     let resultItem: string;
@@ -108,11 +113,15 @@ export class GachaController {
 
     if (info.pickUpItems.length > 0) {
       if (isNextPickUp) {
+        console.log('무조건 픽업입니다.');
         const characterIndex = Math.floor(Math.random() * info.pickUpItems.length);
         resultItem = info.pickUpItems[characterIndex];
+        console.log('바꾼다!');
         isNextPickUp = false;
       } else {
+        console.log('픽업이 아닐수도 있습니다.');
         resultItem = this.pick(info);
+        console.log('바꾼다!');
         isNextPickUp = true;
       }
     } else {
@@ -130,6 +139,8 @@ export class GachaController {
       this.pityCount += 1;
       this.favoriteCount += 1;
 
+      console.log('favo', this.favoriteCount);
+
       // 4성이상 보장, 초보자 Noelle
       if (this.data.maxBonusCount === tries && i === 0) {
         const percent = Math.random() * 100;
@@ -144,17 +155,26 @@ export class GachaController {
 
           if (this.data.fiveStars.pickUpItems.includes(resultItem)) {
             this.favoriteCount = 0;
+            console.log('바꾼다!');
             this.isNextFivePickUp = false;
+            console.log('개런티. 5성 픽업을 포함해 false', this.isNextFivePickUp);
           } else {
+            console.log('바꾼다!');
             this.isNextFivePickUp = true;
+            console.log('개런티. 5성 픽업이 아니여서 true', this.isNextFivePickUp);
           }
         } else {
+          console.log('넣기전', this.isNextFourPickUp);
           resultItem = this.nextIsPickUp(this.data.fourStars, this.isNextFourPickUp);
 
           if (this.data.fourStars.pickUpItems.includes(resultItem)) {
+            console.log('바꾼다!');
             this.isNextFourPickUp = false;
+            console.log('개런티. 4성 픽업을 포함해 false', this.isNextFourPickUp);
           } else {
+            console.log('바꾼다!');
             this.isNextFourPickUp = true;
+            console.log('개런티. 4성 픽업이 아니여서 true', this.isNextFourPickUp);
           }
         }
 
@@ -172,9 +192,12 @@ export class GachaController {
           resultItem = this.pick(this.data.fiveStars);
         }
 
+        console.log('0으로 초기화합니다. 180천장');
         this.pityCount = 0;
         this.favoriteCount = 0;
+        console.log('바꾼다!');
         this.isNextFivePickUp = false;
+        console.log('다음 5성은 픽업이 아닐수도 있습니다. 180천장, false', this.isNextFivePickUp);
 
         resultItems.push(resultItem);
       }
@@ -185,10 +208,15 @@ export class GachaController {
         this.pityCount = 0;
 
         if (this.data.pickUpTarget.includes(resultItem)) {
+          console.log('0으로 초기화합니다. 90천장');
           this.favoriteCount = 0;
+          console.log('바꾼다!');
           this.isNextFivePickUp = false;
+          console.log('다음 5성은 픽업이 아닐수도 있습니다. 90천장, false', this.isNextFivePickUp);
         } else {
+          console.log('바꾼다!');
           this.isNextFivePickUp = true;
+          console.log('다음 5성은 무조건 픽업입니다. 90천장, true', this.isNextFivePickUp);
         }
 
         resultItems.push(resultItem);
@@ -209,25 +237,32 @@ export class GachaController {
           }
         });
 
-        console.log(fiveStarPercent, this.pityCount);
-
         if (percent <= fiveStarPercent) {
           resultItem = this.nextIsPickUp(this.data.fiveStars, this.isNextFivePickUp);
           this.pityCount = 0;
 
           if (this.data.fiveStars.pickUpItems.includes(resultItem)) {
+            console.log('0으로 초기화합니다. normal');
             this.favoriteCount = 0;
+            console.log('바꾼다!');
             this.isNextFivePickUp = false;
+            console.log('다음 5성은 픽업이 아닐수도 있습니다. normal, false', this.isNextFivePickUp);
           } else {
+            console.log('바꾼다!');
             this.isNextFivePickUp = true;
+            console.log('다음 5성은 무조건 픽업입니다. normal, true', this.isNextFivePickUp);
           }
         } else if (percent <= this.data.fiveStars.percent + this.data.fourStars.percent) {
           resultItem = this.nextIsPickUp(this.data.fourStars, this.isNextFourPickUp);
 
           if (this.data.fourStars.pickUpItems.includes(resultItem)) {
+            console.log('바꾼다!');
             this.isNextFourPickUp = false;
+            console.log('다음 4성은 픽업이 아닐수도 있습니다. normal, false', this.isNextFourPickUp);
           } else {
+            console.log('바꾼다!');
             this.isNextFourPickUp = true;
+            console.log('다음 4성은 픽업입니다. normal, true', this.isNextFourPickUp);
           }
         } else {
           resultItem = this.pick(this.data.threeStars);

@@ -6,6 +6,8 @@ export interface GachaState {
       nextPity: number;
       usedFate: number;
       favoriteCount: number;
+      isNextFivePickUp: boolean;
+      isNextFourPickUP: boolean;
     };
   };
   fiveStarCount: number;

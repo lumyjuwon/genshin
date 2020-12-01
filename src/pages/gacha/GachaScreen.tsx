@@ -58,6 +58,7 @@ export function GachaScreen() {
     const categoryInfo = gachaStore.contents[gachaCategory];
 
     gacha.current.setCount(categoryInfo.totalCount, categoryInfo.pityCount, categoryInfo.favoriteCount);
+    gacha.current.setNextPickUp(categoryInfo.isNextFivePickUp, categoryInfo.isNextFourPickUP);
 
     setGemImage(GemImages[data.executionInfo.gemImageName]);
     setUsedFateCount(data.executionInfo.excution10ConsumeGem);
@@ -70,10 +71,9 @@ export function GachaScreen() {
         gachaStore.contents[gachaCategory].pityCount,
         gachaStore.contents[gachaCategory].favoriteCount
       );
+      gacha.current.setNextPickUp(gachaStore.contents[gachaCategory].isNextFivePickUp, gachaStore.contents[gachaCategory].isNextFourPickUP);
     }
   }, [gachaCategory, gachaStore.contents]);
-
-  console.log(gacha.current?.pityCount);
 
   function onBannerClick(index: number) {
     const wishContentNames = Object.keys(gachaInfo);
@@ -103,7 +103,9 @@ export function GachaScreen() {
             pityCount: gacha.current.pityCount,
             nextPity: gacha.current.data.maxPityCount - gacha.current.pityCount,
             usedFate: gachaStore.contents[gachaCategory].usedFate + usedFateCount,
-            favoriteCount: gacha.current.favoriteCount
+            favoriteCount: gacha.current.favoriteCount,
+            isNextFivePickUp: gacha.current.isNextFivePickUp,
+            isNextFourPickUP: gacha.current.isNextFourPickUp
           }
         },
         fiveStarCount: gachaStore.fiveStarCount + fiveStarItemCount,

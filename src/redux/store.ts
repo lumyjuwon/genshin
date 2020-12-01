@@ -13,13 +13,26 @@ const migrations = {
       ...state,
       gacha: initialGachaState
     };
+  },
+  2: (state: RootState) => {
+    return {
+      ...state,
+      gacha: {
+        ...state.gacha,
+        contents: {
+          ...state.gacha.contents,
+          isNextFivePickUp: false,
+          isNextFourPickUp: false
+        }
+      }
+    };
   }
 };
 
 const persistConfig: PersistConfig<any> = {
   key: 'root',
   storage: storage,
-  version: 1,
+  version: 2,
   whitelist: ['party', 'common', 'gacha'],
   // @ts-ignore
   migrate: createMigrate(migrations, { debug: false })

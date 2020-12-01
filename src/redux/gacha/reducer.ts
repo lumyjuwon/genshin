@@ -7,28 +7,36 @@ export const initialGachaState: GachaState = {
       pityCount: 0,
       nextPity: 0,
       usedFate: 0,
-      favoriteCount: 0
+      favoriteCount: 0,
+      isNextFivePickUp: false,
+      isNextFourPickUP: false
     },
     Weapon_Event_Wish: {
       totalCount: 0,
       pityCount: 0,
       nextPity: 0,
       usedFate: 0,
-      favoriteCount: 0
+      favoriteCount: 0,
+      isNextFivePickUp: false,
+      isNextFourPickUP: false
     },
     Standard_Wish: {
       totalCount: 0,
       pityCount: 0,
       nextPity: 0,
       usedFate: 0,
-      favoriteCount: 0
+      favoriteCount: 0,
+      isNextFivePickUp: false,
+      isNextFourPickUP: false
     },
     Novice_Wishes: {
       totalCount: 0,
       pityCount: 0,
       nextPity: 0,
       usedFate: 0,
-      favoriteCount: 0
+      favoriteCount: 0,
+      isNextFivePickUp: false,
+      isNextFourPickUP: false
     }
   },
   fiveStarCount: 0,
