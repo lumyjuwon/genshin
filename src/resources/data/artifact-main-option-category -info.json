@@ -1,0 +1,7 @@
+{
+  "Flower": ["HP"],
+  "Feather": ["ATK"],
+  "HourGlass": ["HP%", "DEF%", "ATK%", "Elemantal Mastery", "Energy Recharge%"],
+  "HolyGrail": ["HP%", "DEF%", "ATK%", "Elemantal Mastery", "Elemental DMG Bonus%", "Physical DMG Bonus%"],
+  "Crown": ["HP%", "DEF%", "ATK%", "Elemantal Mastery", "CRIT Rate%", "CRIT DMG%", "Healing Bonus%"]
+}
