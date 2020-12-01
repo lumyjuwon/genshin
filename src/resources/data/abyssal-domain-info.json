@@ -1,0 +1,70 @@
+{
+  "Hidden Palace of Lianshan Formula": {
+    "type": "Domains of Forgery",
+    "location": "Liyue",
+    "drop": {
+
+    }
+  },
+  "Cecilia Garden": {
+    "type": "Domains of Forgery",
+    "location": "Mondstadt",
+    "drop": {
+
+    }
+  },
+  "Forsaken Rift": {
+    "type": "Domains of Mastery",
+    "location": "Mondstadt",
+    "drop": {
+
+    }
+  },
+  "Taishan Mansion": {
+    "type": "Domains of Mastery",
+    "location": "Liyue",
+    "drop": {
+
+    }
+  },
+  "Domain of Guyun": {
+    "type": "Domains of Blessing",
+    "location": "Liyue",
+    "drop": {
+      "fix": ["100 Adventure EXP", "2200 Mora", "20 Companionship EXP"],
+      "possible": ["Lucky Dog", "Heart of Bravery", "Archaic Petra", "Retracing Bolide"]
+    }
+  },
+  "Midsummer Courtyard": {
+    "type": "Domains of Blessing",
+    "location": "Mondstadt",
+    "drop": {
+      "fix": ["100 Adventure EXP", "2200 Mora", "20 Companionship EXP"],
+      "possible": ["Adventurer", "Resolution of Sojourner", "Thundering Fury", "Thundersoother"]
+    }
+  },
+  "Valley of Remembrance": {
+    "type": "Domains of Blessing",
+    "location": "Mondstadt",
+    "drop": {
+      "fix": ["100 Adventure EXP", "2200 Mora", "20 Companionship EXP"],
+      "possible": ["Tiny Miracle", "Traveling Doctor", "Viridescent Venerer", "Maiden Beloved"]
+    }
+  },
+  "Hidden Palace of Zhou Formula": {
+    "type": "Domains of Blessing",
+    "location": "Liyue",
+    "drop": {
+      "fix": ["100 Adventure EXP", "2200 Mora", "20 Companionship EXP"],
+      "possible": ["Defender's Will", "Martial Artist", "Crimson Witch of Flames", "Lavawalker"]
+    }
+  },
+  "Clear Pool and Mountain Cavern": {
+    "type": "Domains of Blessing",
+    "location": "Liyue",
+    "drop": {
+      "fix": ["100 Adventure EXP", "2200 Mora", "20 Companionship EXP"],
+      "possible": ["Gambler", "Scholar", "Bloodstained Chivalry", "Noblesse Oblige"]
+    }
+  }
+}
