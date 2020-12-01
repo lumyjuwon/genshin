@@ -1,20 +1,14 @@
-export enum Continent {
-  Asia = 'Asia',
-  US = 'US',
-  EU = 'EU'
-}
-
-export interface CommonState {
-  server: Continent;
+export interface ArtifactState {
+  consumedResin: number;
 }
 
 export enum ActionTypes {
-  SetServer = 'SetServer'
+  SetConsumedResin = 'SetConsumedResin'
 }
 
-interface SetServer {
-  type: ActionTypes.SetServer;
-  payload: Continent;
+interface SetConsumedResin {
+  type: ActionTypes.SetConsumedResin;
+  payload: number;
 }
 
-export type CommonAction = SetServer;
+export type ArtifactAction = SetConsumedResin;

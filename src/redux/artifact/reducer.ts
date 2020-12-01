@@ -1,12 +1,12 @@
-import { ActionTypes, CommonAction, CommonState, Continent } from './types';
+import { ActionTypes, ArtifactAction, ArtifactState } from './types';
 
-export const initialCommonState: CommonState = {
-  server: Continent.Asia
+export const initialCommonState: ArtifactState = {
+  consumedResin: 0
 };
 
-export function commonReducer(state = initialCommonState, action: CommonAction) {
+export function artifactReducer(state = initialCommonState, action: ArtifactAction) {
   switch (action.type) {
-    case ActionTypes.SetServer:
+    case ActionTypes.SetConsumedResin:
       return {
         ...state,
         server: action.payload

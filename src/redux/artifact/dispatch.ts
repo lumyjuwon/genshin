@@ -1,7 +1,6 @@
 import { store } from '../store';
-import { SetServer } from './actions';
-import { Continent } from './types';
+import { SetConsumedResin } from './actions';
 
 export const commonDispatch = {
-  SetServer: (server: Continent) => store.dispatch(SetServer(server))
+  SetConsumedResin: (resin: number) => store.dispatch(SetConsumedResin(resin))
 };

@@ -1,8 +1,8 @@
-import { ActionTypes, Continent } from './types';
+import { ActionTypes } from './types';
 
-export function SetServer(server: Continent) {
+export function SetConsumedResin(resin: number) {
   return {
-    type: ActionTypes.SetServer,
-    payload: server
+    type: ActionTypes.SetConsumedResin,
+    payload: resin
   };
 }
