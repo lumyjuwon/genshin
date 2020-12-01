@@ -669,5 +669,8 @@
   "CooperationDesc": "CooperationDesc",
 
   "Redeem": "리딤",
-  "RedeemDesc": "RedeemDesc"
+  "RedeemDesc": "RedeemDesc",
+
+  "Artifact": "성유물",
+  "ArtifactDesc": "ArtifactDesc"
 }

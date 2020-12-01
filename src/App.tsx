@@ -20,10 +20,17 @@ import { Navs } from './components/header/HeaderNavigation';
 import { useTranslation } from 'react-i18next';
 import { RootState } from './redux/rootReducer';
 import { useSelector } from 'react-redux';
+import { ArtifactGachaScreen } from './pages/artifactGacha/ArtifactGachaScreen';
 
 function App() {
   const pages: Navs = {
     gacha: { isHeaderMenu: true, path: '/gacha', title: trans(Lang.Gacha), component: GachaScreen },
+    artifact: {
+      isHeaderMenu: true,
+      path: '/artifact',
+      title: trans(Lang.Artifact),
+      component: ArtifactGachaScreen
+    },
     party: {
       isHeaderMenu: true,
       path: '/party',
