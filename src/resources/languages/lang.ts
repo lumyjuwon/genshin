@@ -672,5 +672,8 @@ export enum Lang {
   CooperationDesc = 'CooperationDesc',
 
   Redeem = 'Redeem',
-  RedeemDesc = 'RedeemDesc'
+  RedeemDesc = 'RedeemDesc',
+
+  Artifact = 'Artifact',
+  ArtifactDesc = 'ArtifactDesc'
 }
