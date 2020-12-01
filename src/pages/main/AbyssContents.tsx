@@ -74,8 +74,8 @@ export function AbyssContents() {
   */
 
   const serverTime = new Date();
-  serverTime.setUTCHours(serverTime.getUTCHours() + serverTimeInfo[server]);
-  const serverDay: string = convertToTextDay(serverTime.getUTCHours() < 4 ? serverTime.getUTCDay() - 1 : serverTime.getUTCDay());
+  serverTime.setUTCHours(serverTime.getUTCHours() + (serverTime.getTimezoneOffset() + serverTimeInfo[server] * 60) / 60);
+  const serverDay: string = convertToTextDay(serverTime.getHours() < 4 ? serverTime.getDay() - 1 : serverTime.getDay());
   const imageSize: { width: string; height: string } = { width: '70px', height: '65px' };
   const tooltipoFontSize = '12px';
 
@@ -92,31 +92,32 @@ export function AbyssContents() {
     return todayItems;
   }
 
-  // 1, 16일 utc기준 4시에 초기화
-  function getSpiralAbyssResetTime() {
-    const serverDate = serverTime.getUTCDate();
+  // serverTime 기준 1, 16일 4시에 초기화
+  // function getSpiralAbyssResetTime() {
+  //   const serverDate = serverTime.getUTCDate();
+  //   const now = new Date().toUTCString();
+  //   const nowUTC = new Date(now);
+  //   let resetTime: Date;
 
-    // 16일 4시부터 1일 3시 59분까지
-    if ((serverDate >= 16 && serverTime.getUTCHours() >= 4) || (serverDate === 1 && serverTime.getUTCHours() < 4)) {
-      let resetTime: Date;
+  //   // 16일 4시부터 1일 3시 59분까지
+  //   if ((serverDate >= 16 && serverTime.getUTCHours() >= 4) || (serverDate === 1 && serverTime.getUTCHours() < 4)) {
+  //     if (serverTime.getUTCMonth() === 11) {
+  //       resetTime = new Date(Date.UTC(serverTime.getUTCFullYear() + 1, 0, 1, 4, 0, 0, 0));
+  //     } else {
+  //       resetTime = new Date(Date.UTC(serverTime.getUTCFullYear(), serverTime.getUTCMonth() + 1, 1, 4, 0, 0, 0));
+  //     }
+  //   }
+  //   // 1일 4시부터 16일 3시 59분까지
+  //   else {
+  //     resetTime = new Date(Date.UTC(serverTime.getUTCFullYear(), serverTime.getUTCMonth(), 16, 0, 0, 0, 0));
+  //   }
 
-      if (serverTime.getUTCMonth() === 11) {
-        resetTime = new Date(Date.UTC(serverTime.getUTCFullYear() + 1, 0, 1, 4, 0, 0, 0));
-      } else {
-        resetTime = new Date(Date.UTC(serverTime.getUTCFullYear(), serverTime.getUTCMonth() + 1, 1, 4, 0, 0, 0));
-      }
-
-      const remainTime = (resetTime.getTime() - serverTime.getTime()) / (1000 * 60 * 60);
-      return Math.floor(remainTime);
-    }
-    // 1일 4시부터 16일 3시 59분까지
-    else {
-      const resetTime = new Date(Date.UTC(serverTime.getUTCFullYear(), serverTime.getUTCMonth(), 16, 4, 0, 0, 0));
-
-      const remainTime = (resetTime.getTime() - serverTime.getTime()) / (1000 * 60 * 60);
-      return Math.floor(remainTime);
-    }
-  }
+  //   console.log(resetTime, serverTime);
+  //   console.log(nowUTC);
+  //   const remainDate = (resetTime.getTime() - nowUTC.getTime()) / (1000 * 60 * 60 * 24);
+  //   const remainHour = (resetTime.getTime() - nowUTC.getTime()) / (1000 * 60 * 60) - Math.floor(remainDate) * 24;
+  //   return { date: Math.floor(remainDate), hour: Math.floor(remainHour) };
+  // }
 
   return (
     <Container>
@@ -155,9 +156,10 @@ export function AbyssContents() {
           </>
         </FlexWrapper>
       </SetContainer>
-      <Spiral>
-        {trans(Lang.Spiral_Abyss_Reset)}:&nbsp;{getSpiralAbyssResetTime()}&nbsp;{trans(Lang.Hours)}
-      </Spiral>
+      {/* <Spiral>
+        {trans(Lang.Spiral_Abyss_Reset)}:&nbsp;{getSpiralAbyssResetTime().date}&nbsp;d&nbsp;{getSpiralAbyssResetTime().hour}&nbsp;
+        {trans(Lang.Hours)}
+      </Spiral> */}
     </Container>
   );
 }
