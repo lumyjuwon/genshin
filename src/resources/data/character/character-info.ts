@@ -1,4 +1,4 @@
-import { WeaponType } from './weapon-info';
+import { WeaponType } from '../weapon/weapon-info';
 
 type Rank = number;
 

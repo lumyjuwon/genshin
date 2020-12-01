@@ -14,11 +14,11 @@ export {
 } from './item/item';
 export type { WeaponAscesionItem, CharacterTalentItem, AscensionMaterialName } from './item/item';
 
-export { characterInfo } from './character-info';
-export type { CharacterElementType, CharacterName, CharacterRegion, Level } from './character-info';
+export { characterInfo } from './character/character-info';
+export type { CharacterElementType, CharacterName, CharacterRegion, Level } from './character/character-info';
 
-export { weaponInfo } from './weapon-info';
-export type { WeaponName, WeaponType } from './weapon-info';
+export { weaponInfo } from './weapon/weapon-info';
+export type { WeaponName, WeaponType } from './weapon/weapon-info';
 
 export type Rank = number;
 
