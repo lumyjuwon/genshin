@@ -36,6 +36,11 @@ const Relative = styled.div<BoxStyle>`
   position: relative;
   margin: ${(props) => props.margin || '6px'};
   cursor: pointer;
+  border-radius: 12px;
+  border: 3px solid transparent;
+  &:hover {
+    border-color: #f1f2f3;
+  }
   @media screen and (max-width: 768px) {
     margin: ${(props) => props.small?.margin || '3px'};
   }
