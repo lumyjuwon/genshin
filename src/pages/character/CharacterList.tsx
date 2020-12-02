@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import { characterInfo } from 'src/resources/data';
 import { CharacterImages, ElementImages } from 'src/resources/images';
-import { ItemBadgeBox, RoundImage, FlexGridWrapper } from 'src/components';
+import { CharacterBadgeBox, RoundImage, FlexGridWrapper } from 'src/components';
 
 const Container = styled.div({
   display: 'flex',
@@ -36,7 +36,7 @@ export function CharacterList() {
           const path = name.replace(/\s\(|\)|/g, '');
           return (
             <Link key={name} to={`/character/${path}`}>
-              <ItemBadgeBox
+              <CharacterBadgeBox
                 badge={
                   <RoundImage
                     src={ElementImages[characterInfo[name].element]}
@@ -53,20 +53,20 @@ export function CharacterList() {
                 child={
                   <RoundImage
                     src={CharacterImages[name]}
-                    styles={{ medium: { width: '90px', height: '90px' }, small: { width: '80px', height: '80px' } }}
+                    styles={{
+                      borderRadius: '8px 8px 20px 0',
+                      backgroundColor: characterInfo[name].rank === 5 ? '#aa6e33' : '#8a67ad',
+                      medium: { width: '90px', height: '90px' },
+                      small: { width: '80px', height: '80px' }
+                    }}
                   />
                 }
                 onClick={() => goToScrollTop()}
                 styles={{
-                  boxStyles: { margin: '10px', small: { margin: '10px' } },
-                  tooltipStyles: { bottom: '0' }
+                  boxStyles: { margin: '10px', small: { margin: '10px' } }
                 }}
-                hoverInnerColor={'#f1f2f3'}
-                tooltip={name}
+                name={name}
                 isActive={true}
-                isHoverdToolTip={true}
-                isToolTipVisible={true}
-                isRankVisible={false}
                 isBadgeVisible={true}
               />
             </Link>
