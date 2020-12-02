@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { characterInfo } from 'src/resources/data';
+import { trans, Lang } from 'src/resources/languages';
 
 const Container = styled.div({
   display: 'flex',
@@ -36,11 +37,13 @@ interface Props {
 export function CharacterDetailNavigation(props: Props) {
   return (
     <Container>
-      <Button href="#stats">Stat</Button>
-      <Button href="#ascension-materials">Ascension</Button>
-      <Button href="#talent-materials">Talent</Button>
-      {characterInfo[props.character].recommendedParty ? <Button href="#recommended-party">Party</Button> : null}
-      <Button href="#recommended-equip">Equipments</Button>
+      <Button href="#stats">{trans(Lang.Character_Nav_Stat)}</Button>
+      <Button href="#ascension-materials">{trans(Lang.Character_Nav_Ascension)}</Button>
+      <Button href="#talent-materials">{trans(Lang.Character_Nav_Talent)}</Button>
+      {characterInfo[props.character].recommendedParty ? (
+        <Button href="#recommended-party">{trans(Lang.Character_Nav_Party)}</Button>
+      ) : null}
+      <Button href="#recommended-equip">{trans(Lang.Character_Nav_Equip)}</Button>
     </Container>
   );
 }

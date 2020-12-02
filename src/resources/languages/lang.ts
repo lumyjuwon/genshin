@@ -643,6 +643,11 @@ export enum Lang {
   Geovishap_Hatchlings = 'Geovishap_Hatchlings',
 
   Character = 'Character',
+  Character_Nav_Stat = 'Character_Nav_Stat',
+  Character_Nav_Ascension = 'Character_Nav_Ascension',
+  Character_Nav_Talent = 'Character_Nav_Talent',
+  Character_Nav_Party = 'Character_Nav_Party',
+  Character_Nav_Equip = 'Character_Nav_Equip',
   Charcater_Page_Desc = 'Charcater_Page_Desc',
   Max_20 = 'Max_20',
   Max_40 = 'Max_40',

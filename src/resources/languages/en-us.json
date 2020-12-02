@@ -640,6 +640,11 @@
   "Geovishap_Hatchlings": "Geovishap Hatchlings",
 
   "Character": "Character",
+  "Character_Nav_Stat": "Stat",
+  "Character_Nav_Ascension": "Ascension",
+  "Character_Nav_Talent": "Talent",
+  "Character_Nav_Party": "Party",
+  "Character_Nav_Equip": "Equipments",
   "Charcater_Page_Desc": "Character promotion material, recommended party",
   "Max_20": "Max 20",
   "Max_40": "Max 40",

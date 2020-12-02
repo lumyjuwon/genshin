@@ -640,6 +640,11 @@
   "Geovishap_Hatchlings": "새끼 바위 용 도마뱀",
 
   "Character": "캐릭터",
+  "Character_Nav_Stat": "스탯",
+  "Character_Nav_Ascension": "승급 재료",
+  "Character_Nav_Talent": "특성 재료",
+  "Character_Nav_Party": "추천 파티",
+  "Character_Nav_Equip": "추천 장비",
   "Charcater_Page_Desc": "캐릭터 승급 재료, 추천 파티",
   "Max_20": "Max 20",
   "Max_40": "Max 40",
