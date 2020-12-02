@@ -16,7 +16,8 @@ const Button = styled.div({
   textAlign: 'center',
   margin: '0 20px',
   borderRadius: '12px',
-  border: '2px solid #f1f2f3'
+  border: '2px solid #f1f2f3',
+  userSelect: 'none'
 });
 
 const PostContainer = styled.div({

@@ -48,7 +48,8 @@ const GetMemberStatus = styled.div<{ getMember: boolean }>((props) => {
     padding: '2px',
     marginLeft: '10px',
     color: props.getMember ? '#00ff00' : '#ff0000',
-    border: props.getMember ? '1px solid #00ff00' : '1px solid #ff0000'
+    border: props.getMember ? '1px solid #00ff00' : '1px solid #ff0000',
+    userSelect: 'none'
   };
 });
 
