@@ -57,6 +57,7 @@ export { RoundImageBox } from './box/RoundImageBox';
 export { ContentBackgroundBox } from './box/ContentBackgroundBox';
 export { ItemContentBox } from './box/ItemContentBox';
 export { CharacterBadgeBox } from './box/CharacterBadgeBox';
+export { TimeLineBox } from './box/TimelineBox';
 
 // Hook
 export { useHandleClickOutside } from './hooks/useHandleClickOutside';
