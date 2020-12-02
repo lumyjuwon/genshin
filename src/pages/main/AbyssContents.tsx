@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import {
   weaponAscesionItemInfo,
@@ -8,7 +8,7 @@ import {
   CharacterTalentItem,
   serverTimeInfo
 } from 'src/resources/data';
-import { FlexWrapper, RoundImage, TooltipText, FlexGridWrapper } from 'src/components';
+import { FlexWrapper, RoundImage, TooltipText, FlexGridWrapper, EmojiText } from 'src/components';
 import { DailySetImages } from 'src/resources/images';
 import { trans, Lang, KeyLang } from 'src/resources/languages';
 
@@ -61,6 +61,22 @@ const Spiral = styled.div({
   wordBreak: 'keep-all'
 });
 
+const Ticking = keyframes`
+  0% {transform: rotate(0deg);}
+	10% {transform: rotate(-10deg);}
+	20% {transform: rotate(10deg);}
+	30% {transform: rotate(-10deg);}
+	40% {transform: rotate(5deg);}
+	50% {transform: rotate(0deg);}
+	100% {transform: rotate(0deg);}
+`;
+
+const TimeEmoji = styled.span`
+  display: inline-block;
+  font-size: 25px;
+  animation: ${Ticking} 1.8s linear infinite;
+`;
+
 type Items = WeaponAscesionItem | CharacterTalentItem;
 
 export function AbyssContents() {
@@ -93,31 +109,30 @@ export function AbyssContents() {
   }
 
   // serverTime 기준 1, 16일 4시에 초기화
-  // function getSpiralAbyssResetTime() {
-  //   const serverDate = serverTime.getUTCDate();
-  //   const now = new Date().toUTCString();
-  //   const nowUTC = new Date(now);
-  //   let resetTime: Date;
+  function getSpiralAbyssResetTime() {
+    const serverDate = serverTime.getUTCDate();
+    const now = new Date();
+    let resetTime: Date;
 
-  //   // 16일 4시부터 1일 3시 59분까지
-  //   if ((serverDate >= 16 && serverTime.getUTCHours() >= 4) || (serverDate === 1 && serverTime.getUTCHours() < 4)) {
-  //     if (serverTime.getUTCMonth() === 11) {
-  //       resetTime = new Date(Date.UTC(serverTime.getUTCFullYear() + 1, 0, 1, 4, 0, 0, 0));
-  //     } else {
-  //       resetTime = new Date(Date.UTC(serverTime.getUTCFullYear(), serverTime.getUTCMonth() + 1, 1, 4, 0, 0, 0));
-  //     }
-  //   }
-  //   // 1일 4시부터 16일 3시 59분까지
-  //   else {
-  //     resetTime = new Date(Date.UTC(serverTime.getUTCFullYear(), serverTime.getUTCMonth(), 16, 0, 0, 0, 0));
-  //   }
+    // 16일 4시부터 1일 3시 59분까지
+    if ((serverDate >= 16 && serverTime.getHours() >= 4) || (serverDate === 1 && serverTime.getHours() < 4)) {
+      if (serverTime.getUTCMonth() === 11) {
+        resetTime = new Date(serverTime.getFullYear() + 1, 0, 1, 4, 0, 0, 0);
+      } else {
+        resetTime = new Date(serverTime.getFullYear(), serverTime.getMonth() + 1, 1, 4, 0, 0, 0);
+      }
+    }
+    // 1일 4시부터 16일 3시 59분까지
+    else {
+      resetTime = new Date(serverTime.getFullYear(), serverTime.getMonth(), 16, 4, 0, 0, 0);
+    }
 
-  //   console.log(resetTime, serverTime);
-  //   console.log(nowUTC);
-  //   const remainDate = (resetTime.getTime() - nowUTC.getTime()) / (1000 * 60 * 60 * 24);
-  //   const remainHour = (resetTime.getTime() - nowUTC.getTime()) / (1000 * 60 * 60) - Math.floor(remainDate) * 24;
-  //   return { date: Math.floor(remainDate), hour: Math.floor(remainHour) };
-  // }
+    const remainTime = resetTime.getTime() - now.getTime() - (serverTime.getTimezoneOffset() + serverTimeInfo[server] * 60) * 1000 * 60;
+
+    const remainDate = remainTime / (1000 * 60 * 60 * 24);
+    const remainHour = remainTime / (1000 * 60 * 60) - Math.floor(remainDate) * 24;
+    return { date: Math.floor(remainDate), hour: Math.floor(remainHour) };
+  }
 
   return (
     <Container>
@@ -156,10 +171,12 @@ export function AbyssContents() {
           </>
         </FlexWrapper>
       </SetContainer>
-      {/* <Spiral>
-        {trans(Lang.Spiral_Abyss_Reset)}:&nbsp;{getSpiralAbyssResetTime().date}&nbsp;d&nbsp;{getSpiralAbyssResetTime().hour}&nbsp;
-        {trans(Lang.Hours)}
-      </Spiral> */}
+      <Spiral>
+        <TimeEmoji>
+          <EmojiText label="time" symbol="⏰" />
+        </TimeEmoji>
+        {trans(Lang.Spiral_Abyss_Reset)}:&nbsp;{getSpiralAbyssResetTime().date}d&nbsp;{getSpiralAbyssResetTime().hour}h
+      </Spiral>
     </Container>
   );
 }

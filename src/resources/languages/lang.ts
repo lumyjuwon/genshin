@@ -63,7 +63,6 @@ export enum Lang {
   Notice_Content3 = 'Notice_Content3',
 
   Spiral_Abyss_Reset = 'Spiral_Abyss_Reset',
-  Hours = 'Hours',
 
   Gacha = 'Gacha',
   Character_Event_Wish = 'Character_Event_Wish',
