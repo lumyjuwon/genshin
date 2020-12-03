@@ -1,19 +1,20 @@
 {
-  "name": "server",
+  "name": "genshin-server",
   "version": "1.0.0",
-  "description": "genshin server",
-  "main": "app.ts",
-  "scripts": {
-    "start": "tsc && node src/app.ts",
-    "dev": "nodemon srcapp.ts"
+  "private": true,
+  "devDependencies": {
+    "@types/express": "^4.17.7",
+    "@types/node": "^14.0.26",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@types/express": "^4.17.9",
-    "@types/node": "^14.14.10",
+    "esm": "^3.2.25",
     "express": "^4.17.1"
   },
-  "devDependencies": {},
-  "keywords": []
+  "scripts": {
+    "prestart": "tsc",
+    "start": "nodemon --exec ts-node src/app.ts"
+  }
 }

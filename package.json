@@ -1,9 +1,8 @@
 {
   "scripts": {
-    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm start\" "
+    "start": "concurrently \"cd server && yarn start\" \"cd client && yarn start\" "
   },
   "dependencies": {
-    "concurrently": "^5.3.0",
-    "nodemon": "^2.0.6"
+    "concurrently": "^5.3.0"
   }
 }
