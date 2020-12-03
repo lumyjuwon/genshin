@@ -67,7 +67,10 @@ export function TimeLineBox(props: Props) {
       <Header>
         <FlexWrapper styles={{ width: '100%', flexDirection: 'column', alignItems: 'flex-start' }}>
           <FlexWrapper>
-            <RoundImage src={props.profileImage} styles={{ width: '35px', height: '35px', borderRadius: '50%' }} />
+            <RoundImage
+              src={require(`src/resources/images/characters/${props.profileImage}`)}
+              styles={{ width: '35px', height: '35px', borderRadius: '50%' }}
+            />
             <Name>{props.name}</Name>
           </FlexWrapper>
           <FlexWrapper styles={{ margin: '15px 0 0' }}>

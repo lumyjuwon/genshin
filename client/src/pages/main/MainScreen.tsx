@@ -69,7 +69,7 @@ export function MainScreen(props: Props) {
                   styles={{
                     cardStyles: {
                       width: '300px',
-                      height: '400px',
+                      height: '370px',
                       padding: '20px 10px',
                       backgroundColor: 'rgba(20, 20, 20, .8)',
                       medium: { width: '210px', margin: '20px', height: '350px' },
@@ -88,7 +88,7 @@ export function MainScreen(props: Props) {
                   styles={{
                     cardStyles: {
                       width: '300px',
-                      height: '400px',
+                      height: '370px',
                       padding: '20px 10px',
                       backgroundColor: 'rgba(20, 20, 20, .8)',
                       medium: { width: '210px', margin: '20px', height: '350px' },
@@ -106,7 +106,7 @@ export function MainScreen(props: Props) {
                 styles={{
                   cardStyles: {
                     width: '300px',
-                    height: '400px',
+                    height: '370px',
                     padding: '20px 10px',
                     backgroundColor: 'rgba(20, 20, 20, .8)',
                     medium: { width: '210px', margin: '20px', height: '350px' },

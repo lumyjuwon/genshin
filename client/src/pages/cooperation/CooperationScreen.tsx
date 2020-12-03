@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 import { PageHelmet, ContentWrapper, FlexWrapper, TimeLineBox, RoundImage } from 'src/components';
@@ -25,24 +25,28 @@ const PostContainer = styled.div({
   margin: '10px auto'
 });
 
+interface PostData {
+  [key: string]: {
+    profileImage: string;
+    name: string;
+    title: string;
+    content: string;
+    getMember: boolean;
+  };
+}
+
 export function CooperationScreen() {
-  const mockUpData = [
-    {
-      profileImage: require('../../resources/images/characters/Mona.png'),
-      name: 'testName',
-      title: 'mockUpTitle',
-      content: '비경 팟 구함',
-      getMember: false
-    },
-    {
-      profileImage: require('../../resources/images/characters/Mona.png'),
-      name: 'testName2',
-      title: 'clamp test',
-      content:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      getMember: true
-    }
-  ];
+  const [postData, setPostData] = useState<PostData>({});
+  const dataKeys = Object.keys(postData);
+
+  useEffect(() => {
+    fetch('/cooperation')
+      .then((res) => res.json())
+      .then(
+        (data) => setPostData(data),
+        () => console.log(postData)
+      );
+  }, []);
 
   return (
     <>
@@ -55,14 +59,14 @@ export function CooperationScreen() {
             <Button>기타</Button>
           </FlexWrapper>
           <PostContainer>
-            {mockUpData.map((data) => {
+            {dataKeys.map((key) => {
               return (
                 <TimeLineBox
-                  profileImage={data.profileImage}
-                  name={data.name}
-                  title={data.title}
-                  content={data.content}
-                  getMember={data.getMember}
+                  profileImage={postData[key].profileImage}
+                  name={postData[key].name}
+                  title={postData[key].title}
+                  content={postData[key].content}
+                  getMember={postData[key].getMember}
                 />
               );
             })}
