@@ -1,0 +1,18 @@
+{
+  "Brilliant Diamond Sliver": {
+    "rank": 2,
+    "obtain": ["Adventure Rank Reward"]
+  },
+  "Brilliant Diamond Fragment": {
+    "rank": 3,
+    "obtain": ["Adventure Rank Reward"]
+  },
+  "Brilliant Diamond Chunk": {
+    "rank": 4,
+    "obtain": ["Adventure Rank Reward"]
+  },
+  "Brilliant Diamond Gemstone": {
+    "rank": 4,
+    "obtain": ["Adventure Rank Reward"]
+  }
+}

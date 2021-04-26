@@ -1,0 +1,128 @@
+{
+  "3": {
+    "HP": {
+      "min": 100,
+      "max": 143
+    },
+    "ATK": {
+      "min": 7,
+      "max": 9
+    },
+    "DEF": {
+      "min": 8,
+      "max": 11
+    },
+    "HP%": {
+      "min": 2.5,
+      "max": 3.5
+    },
+    "ATK%": {
+      "min": 2.5,
+      "max": 3.5   
+    },
+    "DEF%": {
+      "min": 3.1,
+      "max": 4.4
+    },
+    "Elemental Mastery": {
+      "min": 10,
+      "max": 14
+    },
+    "Energy Recharge": {
+      "min": 2.7,
+      "max": 3.5
+    },
+    "CRIT Rate%": {
+      "min": 1.6,
+      "max": 2.3
+    },
+    "CRIT DMG%": {
+      "min": 3.3,
+      "max": 4.7
+    }
+  },
+  "4": {
+    "HP": {
+      "min": 167,
+      "max": 239
+    },
+    "ATK": {
+      "min": 11,
+      "max": 16
+    },
+    "DEF": {
+      "min": 13,
+      "max": 19
+    },
+    "HP%": {
+      "min": 3.3,
+      "max": 4.7
+    },
+    "ATK%": {
+      "min": 3.3,
+      "max": 4.7 
+    },
+    "DEF%": {
+      "min": 4.1,
+      "max": 5.8
+    },
+    "Elemental Mastery": {
+      "min": 13,
+      "max": 19
+    },
+    "Energy Recharge": {
+      "min": 4.1,
+      "max": 5.2
+    },
+    "CRIT Rate%": {
+      "min": 2.2,
+      "max": 3.1
+    },
+    "CRIT DMG%": {
+      "min": 4.4,
+      "max": 6.2
+    }
+  },
+  "5": {
+    "HP": {
+      "min": 209,
+      "max": 299
+    },
+    "ATK": {
+      "min": 14,
+      "max": 19
+    },
+    "DEF": {
+      "min": 16,
+      "max": 23
+    },
+    "HP%": {
+      "min": 4.1,
+      "max": 5.8
+    },
+    "ATK%": {
+      "min": 4.1,
+      "max": 5.8
+    },
+    "DEF%": {
+      "min": 5.1,
+      "max": 7.3
+    },
+    "Elemental Mastery": {
+      "min": 16,
+      "max": 23
+    },
+    "Energy Recharge": {
+      "min": 4.5,
+      "max": 6.5
+    },
+    "CRIT Rate%": {
+      "min": 2.7,
+      "max": 3.9
+    },
+    "CRIT DMG%": {
+      "min": 5.4,
+      "max": 7.8
+    }
+  }
+}

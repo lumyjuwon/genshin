@@ -1,0 +1,3362 @@
+{
+  "Klee": {
+    "rank": 5,
+    "element": "Pyro",
+    "weapon": "Catalyst",
+    "region": "Mondstadt",
+    "stats": {
+      "Max_20": {
+        "Level": "20",
+        "HP": "2077",
+        "ATK": "63",
+        "DEF": "124",
+        "Additional": "No Data"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4136",
+        "ATK": "125",
+        "DEF": "247",
+        "Additional": "No Data"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5319",
+        "ATK": "161",
+        "DEF": "318",
+        "Additional": "Pyro DMG 7.2%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6673",
+        "ATK": "202",
+        "DEF": "399",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7870",
+        "ATK": "238",
+        "DEF": "470",
+        "Additional": "Pyro DMG 14.4%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9076",
+        "ATK": "274",
+        "DEF": "542",
+        "Additional": "Pyro DMG 21.6%"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "9563",
+        "ATK": "289",
+        "DEF": "572",
+        "Additional": "Pyro DMG 28.8%"
+      }
+    },
+    "recommendedParty": {
+      "recom1": {
+        "party": ["Klee", "Mona", "Fischl", "Venti"],
+        "alter": {
+          "Venti": ["Sucrose", "Jean"]
+        }
+      },
+      "recom2": {
+        "party": ["Klee", "Qiqi", "Fischl", "Venti"],
+        "alter": {
+          "Venti": ["Sucrose", "Jean"]
+        }
+      },
+      "recom3": {
+        "party": ["Klee", "Bennett", "Fischl", "Venti"],
+        "alter": {
+          "Venti": ["Sucrose", "Jean"],
+          "Bennett": ["Xiangling"]
+        }
+      },
+      "recom4": {
+        "party": ["Klee", "Xiangling", "Chongyun", "Venti"],
+        "alter": {
+          "Venti": ["Sucrose", "Jean"]
+        }
+      }
+    },
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Crimson Witch of Flames"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Crimson Witch of Flames", "Gladiator's Finale"],
+          "set": 2
+        }
+      },
+      "weapon": ["Lost Prayer to the Sacred Winds", "Skyward Atlas"]
+    },
+    "ascensionMaterials": {
+      "items": ["Agnidus Agate Sliver", "Philanemo Mushroom", "Everflame Seed", "Divining Scroll"],
+      "Max_40": {
+        "Agnidus Agate Sliver": 1,
+        "Philanemo Mushroom": 3,
+        "Divining Scroll": 3
+      },
+      "Max_50": {
+        "Agnidus Agate Fragment": 3,
+        "Everflame Seed": 2,
+        "Philanemo Mushroom": 10,
+        "Divining Scroll": 15
+      },
+      "Max_60": {
+        "Agnidus Agate Fragment": 6,
+        "Everflame Seed": 4,
+        "Philanemo Mushroom": 20,
+        "Sealed Scroll": 12
+      },
+      "Max_70": {
+        "Agnidus Agate Chunk": 3,
+        "Everflame Seed": 8,
+        "Philanemo Mushroom": 30,
+        "Sealed Scroll": 18
+      },
+      "Max_80": {
+        "Agnidus Agate Chunk": 6,
+        "Everflame Seed": 12,
+        "Philanemo Mushroom": 45,
+        "Forbidden Curse Scroll": 12
+      },
+      "Max_90": {
+        "Agnidus Agate Gemstone": 6,
+        "Everflame Seed": 20,
+        "Philanemo Mushroom": 60,
+        "Forbidden Curse Scroll": 24
+      }
+    },
+    "talentMaterials": {
+      "book": "Freedom",
+      "boss": "Ring of Boreas",
+      "drop": "Divining Scroll"
+    },
+    "position": ["Main_Dealer", "Sub_Dealer"],
+    "tier": {
+      "Main_Dealer": "T0",
+      "Sub_Dealer": "T0"
+    }
+  },
+  "Keqing": {
+    "rank": 5,
+    "element": "Electro",
+    "weapon": "Sword",
+    "region": "Liyue",
+    "stats": {
+      "Max_20": {
+        "Level": "20",
+        "HP": "2634",
+        "ATK": "66",
+        "DEF": "162",
+        "Additional": "No Data"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "5268",
+        "ATK": "130",
+        "DEF": "321",
+        "Additional": "No Data"
+      },
+      "Max_50": {
+        "Level":" 50",
+        "HP": "6776",
+        "ATK": "167",
+        "DEF": "413",
+        "Additional": "CRIT DMG 9.6%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "8500",
+        "ATK": "209",
+        "DEF": "519",
+        "Additional": "CRIT DMG 19.2%"
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "10025",
+        "ATK": "247",
+        "DEF": "612",
+        "Additional": "CRIT DMG 19.2%"
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "11561",
+        "ATK": "285",
+        "DEF": "705",
+        "Additional": "CRIT DMG 28.8%"
+      },
+      "Max_90": {
+        "Level": "90",
+        "HP": "13105",
+        "ATK": "323",
+        "DEF": "800",
+        "Additional": "CRIT DMG 38.4%"
+      }
+    },
+    "recommendedParty": {
+      "recom1": {
+        "party": ["Keqing", "Fischl", "Mona", "Venti"],
+        "alter": {
+          "Venti": ["Sucrose", "Jean"]
+        }
+      },
+      "recom2": {
+        "party": ["Keqing", "Fischl", "Bennett", "Venti"],
+        "alter": {
+          "Bennett": ["Xiangling"],
+          "Venti": ["Sucrose", "Jean"]
+        }
+      },
+      "recom3": {
+        "party": ["Keqing", "Fischl", "Xingqiu", "Venti"],
+        "alter": {
+          "Xingqiu": ["Barbara"],
+          "Venti": ["Sucrose", "Jean"]
+        }
+      },
+      "recom4": {
+        "party": ["Keqing", "Fischl", "Bennett", "Xiangling"]
+      }
+    },
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Gladiator's Finale", "Thundering Fury"],
+          "set": 2
+        },
+        "second": {
+          "name": ["Thundersoother"],
+          "set": 4
+        }
+      },
+      "weapon": ["Lion's Roar", "Skyward Blade"]
+    },
+    "ascensionMaterials": {
+      "items": ["Vajrada Amethyst Sliver", "Cor Lapis", "Whopperflower Nectar", "Lightning Prism"],
+      "Max_40": {
+        "Vajrada Amethyst Sliver": 1,
+        "Cor Lapis": 3,
+        "Whopperflower Nectar": 3
+      },
+      "Max_50": {
+        "Vajrada Amethyst Fragment": 3,
+        "Lightning Prism": 2,
+        "Cor Lapis": 10,
+        "Whopperflower Nectar": 15
+      },
+      "Max_60": {
+        "Vajrada Amethyst Fragment": 6,
+        "Lightning Prism": 4,
+        "Cor Lapis": 20,
+        "Shimmering Nectar": 12
+      },
+      "Max_70": {
+        "Vajrada Amethyst Chunk": 3,
+        "Lightning Prism": 8,
+        "Cor Lapis": 30,
+        "Shimmering Nectar": 18
+      },
+      "Max_80": {
+        "Vajrada Amethyst Chunk": 6,
+        "Lightning Prism": 12,
+        "Cor Lapis": 45,
+        "Energy Nectar": 12
+      },
+      "Max_90": {
+        "Vajrada Amethyst Gemstone": 6,
+        "Lightning Prism": 20,
+        "Cor Lapis": 60,
+        "Energy Nectar": 24
+      }
+    },
+    "talentMaterials": {
+      "book": "Prosperity",
+      "boss": "Ring of Boreas",
+      "drop": "Whopperflower Nectar"
+    },
+    "position": ["Main_Dealer"],
+    "tier": {
+      "Main_Dealer": "T1"
+    }
+  },
+  "Diluc": {
+    "rank": 5,
+    "element": "Pyro",
+    "weapon": "Claymore",
+    "region": "Mondstadt",
+    "stats": {
+      "Max_20": {
+        "Level": "20",
+        "HP": "2621",
+        "ATK": "68",
+        "DEF": "158",
+        "Additional": "CRIT Rate 5%"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "5219",
+        "ATK": "135",
+        "DEF": "315",
+        "Additional": "CRIT Rate 5%"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "6712",
+        "ATK": "173",
+        "DEF": "405",
+        "Additional": "CRIT Rate 9.8%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "8421",
+        "ATK": "217",
+        "DEF": "509",
+        "Additional": "CRIT Rate 14.6%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "9932",
+        "ATK": "256",
+        "DEF": "600",
+        "Additional": "CRIT Rate 14.6%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "11453",
+        "ATK": "296",
+        "DEF": "692",
+        "Additional": "CRIT Rate 19.4%"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "12068",
+        "ATK": "312",
+        "DEF": "729",
+        "Additional": "CRIT Rate 24.2%"
+      }
+    },
+    "recommendedParty": {
+      "recom1": {
+        "party": ["Diluc", "Chongyun", "Bennett", "Sucrose"],
+        "alter": {
+          "Sucrose": ["Venti", "Jean"]
+        }
+      },
+      "recom2": {
+        "party": ["Diluc", "Mona", "Fischl", "Venti"],
+        "alter": {
+          "Venti": ["Sucrose", "Jean"]
+        }
+      },
+      "recom3": {
+        "party": ["Diluc", "Qiqi", "Bennett", "Sucrose"],
+        "alter": {
+          "Bennett": ["Xiangling"],
+          "Sucrose": ["Venti", "Jean"]
+        }
+      },
+      "recom4": {
+        "party": ["Diluc", "Xiangling", "Fischl", "Jean"],
+        "alter": {
+          "Jean": ["Venti", "Sucrose"]
+        }
+      }
+    },
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Crimson Witch of Flames"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Gladiator's Finale"],
+          "set": 4
+        }
+      },
+      "weapon": ["Wolf's Gravestone", "Prototype Aminus"]
+    },
+    "ascensionMaterials": {
+      "items": ["Agnidus Agate Sliver", "Everflame Seed", "Small Lamp Grass", "Recruit's Insignia"],
+      "Max_40": {
+        "Agnidus Agate Sliver": 1,
+        "Small Lamp Grass": 3,
+        "Recruit's Insignia": 3
+      },
+      "Max_50": {
+        "Agnidus Agate Fragment": 3,
+        "Everflame Seed": 2,
+        "Small Lamp Grass": 10,
+        "Recruit's Insignia": 15
+      },
+      "Max_60": {
+        "Agnidus Agate Fragment": 6,
+        "Everflame Seed": 4,
+        "Small Lamp Grass": 20,
+        "Sergeant's Insignia": 12
+      },
+      "Max_70": {
+        "Agnidus Agate Chunk": 3,
+        "Everflame Seed": 8,
+        "Small Lamp Grass": 30,
+        "Sergeant's Insignia": 18
+      },
+      "Max_80": {
+        "Agnidus Agate Chunk": 6,
+        "Everflame Seed": 12,
+        "Small Lamp Grass": 45,
+        "Lieutenant's Insignia": 12
+      },
+      "Max_90": {
+        "Agnidus Agate Gemstone": 6,
+        "Everflame Seed": 20,
+        "Small Lamp Grass": 60,
+        "Lieutenant's Insignia": 24
+      }
+    },
+    "talentMaterials": {
+      "book": "Resistance",
+      "boss": "Dvalin's Plume",
+      "drop": "Recruit's Insignia"
+    },
+    "position": ["Main_Dealer"],
+    "tier": {
+      "Main_Dealer": "T0"
+    }
+  },
+  "Jean": {
+    "rank": 5,
+    "element": "Anemo",
+    "weapon": "Sword",
+    "region": "Mondstadt",
+    "stats": {
+      "Max_20": {
+        "Level": "20",
+        "HP": "2967",
+        "ATK": "49",
+        "DEF": "155",
+        "Additional": "No Data"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "5908",
+        "ATK": "96",
+        "DEF": "309",
+        "Additional": "No Data"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "7599",
+        "ATK": "124",
+        "DEF": "397",
+        "Additional": "Healing Bonus 5.5%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "9533",
+        "ATK": "155",
+        "DEF": "499",
+        "Additional": "Healing Bonus 11.1%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "11243",
+        "ATK": "183",
+        "DEF": "588",
+        "Additional": "Healing Bonus 11.1%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "12965",
+        "ATK": "211",
+        "DEF": "678",
+        "Additional": "Healing Bonus 16.6%"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "No Data",
+        "ATK": "No Data",
+        "DEF": "No Data",
+        "Additional": "No Data"
+      }
+    },
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Viridescent Venerer"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Noblesse Oblige"],
+          "set": 4
+        }
+      },
+      "weapon": ["Skyward Blade", "Favonius Sword"]
+    },
+    "ascensionMaterials": {
+      "items": ["Vayuda Turquoise Sliver", "Dandelion Seed", "Damaged Mask", "Hurricane Seed"],
+      "Max_40": {
+        "Vayuda Turquoise Sliver": 1,
+        "Dandelion Seed": 3,
+        "Damaged Mask": 3
+      },
+      "Max_50": {
+        "Vayuda Turquoise Fragment": 3,
+        "Hurricane Seed": 2,
+        "Dandelion Seed": 10,
+        "Damaged Mask": 15
+      },
+      "Max_60": {
+        "Vayuda Turquoise Fragment": 6,
+        "Hurricane Seed": 4,
+        "Dandelion Seed": 20,
+        "Stained Mask": 12 
+      },
+      "Max_70": {
+        "Vayuda Turquoise Chunk": 3,
+        "Hurricane Seed": 8,
+        "Dandelion Seed": 30,
+        "Stained Mask": 18
+      },
+      "Max_80": {
+        "Vayuda Turquoise Chunk": 6,
+        "Hurricane Seed": 12,
+        "Dandelion Seed": 45,
+        "Ominous Mask": 12
+      },
+      "Max_90": {
+        "Vayuda Turquoise Gemstone": 6,
+        "Hurricane Seed": 20,
+        "Dandelion Seed": 60,
+        "Ominous Mask": 24
+      }
+    },
+    "talentMaterials": {
+      "book": "Resistance",
+      "boss": "Dvalin's Plume",
+      "drop": "Damaged Mask"
+    },
+    "position": ["Sub_Dealer", "Supporter"],
+    "tier": {
+      "Sub_Dealer": "T1",
+      "Supporter": "T0"
+    }
+  },
+  "Qiqi": {
+    "rank": 5,
+    "element": "Cryo",
+    "weapon": "Sword",
+    "region": "Liyue",
+    "stats": {
+      "Max_20": {
+        "Level": "20",
+        "HP": "2498",
+        "ATK": "58",
+        "DEF": "186",
+        "Additional": "No Data"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4973",
+        "ATK": "115",
+        "DEF": "371",
+        "Additional": "No Data"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "6396",
+        "ATK": "149",
+        "DEF": "477",
+        "Additional": "Healing Bonus 5.5%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "8023",
+        "ATK": "186",
+        "DEF": "598",
+        "Additional": "Healing Bonus 11.1%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "9463",
+        "ATK": "219",
+        "DEF": "706",
+        "Additional": "Healing Bonus 11.1%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "10912",
+        "ATK": "253",
+        "DEF": "814",
+        "Additional": "Healing Bonus 16.6%"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "11499",
+        "ATK": "266",
+        "DEF": "857",
+        "Additional": "Healing Bonus 22.2%"
+      }
+    },
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Maiden Beloved"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Gladiator's Finale"],
+          "set": 4
+        }
+      },
+      "weapon": ["Skyward Blade", "Sacrificial Sword"]
+    },
+    "ascensionMaterials": {
+      "items": ["Shivada Jade Sliver", "Violetgrass", "Divining Scroll", "Hoarfrost Core"],
+      "Max_40": {
+        "Shivada Jade Sliver": 1,
+        "Violetgrass": 3,
+        "Divining Scroll": 3
+      },
+      "Max_50": {
+        "Shivada Jade Fragment": 3,
+        "Hoarfrost Core": 2,
+        "Violetgrass": 10,
+        "Divining Scroll": 15
+      },
+      "Max_60": {
+        "Shivada Jade Fragment": 6,
+        "Hoarfrost Core": 4,
+        "Violetgrass": 20,
+        "Sealed Scroll": 12
+      },
+      "Max_70": {
+        "Shivada Jade Chunk": 3,
+        "Hoarfrost Core": 8,
+        "Violetgrass": 30,
+        "Sealed Scroll": 18
+      },
+      "Max_80": {
+        "Shivada Jade Chunk": 6,
+        "Hoarfrost Core": 12,
+        "Violetgrass": 45,
+        "Forbidden Curse Scroll": 12
+      },
+      "Max_90": {
+        "Shivada Jade Gemstone": 6,
+        "Hoarfrost Core": 20,
+        "Violetgrass": 60,
+        "Forbidden Curse Scroll": 24
+      }
+    },
+    "talentMaterials": {
+      "book": "Prosperity",
+      "boss": "Tail of Boreas",
+      "drop": "Divining Scroll"
+    },
+    "position": ["Supporter"],
+    "tier": {
+      "Supporter": "T0"
+    }
+  },
+  "Mona": {
+    "rank": 5,
+    "element": "Hydro",
+    "weapon": "Catalyst",
+    "region": "Mondstadt",
+    "stats": {
+      "Max_20": {
+        "Level": "20",
+        "HP": "2102",
+        "ATK": "58",
+        "DEF": "132",
+        "Additional": "No Data"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4185",
+        "ATK": "116",
+        "DEF": "263",
+        "Additional": "No Data"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5383",
+        "ATK": "149",
+        "DEF": "338",
+        "Additional": "Energy Recharge 8.0%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6752",
+        "ATK": "186",
+        "DEF": "424",
+        "Additional": "Energy Recharge 16.0%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7964",
+        "ATK": "219",
+        "DEF": "500",
+        "Additional": "Energy Recharge 16.0%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9184",
+        "ATK": "266",
+        "DEF": "607",
+        "Additional": "Energy Recharge 32.0%"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "9677",
+        "ATK": "266",
+        "DEF": "607",
+        "Additional": "Energy Recharge 32.0%"
+      }
+    },
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Noblesse Oblige"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Wanderer's Troupe"],
+          "set": 4
+        }
+      },
+      "weapon": ["Lost Prayer to the Sacred Winds", "The Widsith"]
+    },
+    "ascensionMaterials": {
+      "items": ["Varunada Lazurite Sliver", "Philanemo Mushroom", "Whopperflower Nectar", "Cleansing Heart"],
+      "Max_40": {
+        "Varunada Lazurite Sliver": 1,
+        "Philanemo Mushroom": 3,
+        "Whopperflower Nectar": 3
+      },
+      "Max_50": {
+        "Varunada Lazurite Fragment": 3,
+        "Cleansing Heart": 2,
+        "Philanemo Mushroom": 10,
+        "Whopperflower Nectar": 15
+      },
+      "Max_60": {
+        "Varunada Lazurite Fragment": 6,
+        "Cleansing Heart": 4,
+        "Philanemo Mushroom": 20,
+        "Shimmering Nectar": 12
+      },
+      "Max_70": {
+        "Varunada Lazurite Chunk": 3,
+        "Cleansing Heart": 8,
+        "Philanemo Mushroom": 30,
+        "Shimmering Nectar": 18
+      },
+      "Max_80": {
+        "Varunada Lazurite Chunk": 6,
+        "Cleansing Heart": 12,
+        "Philanemo Mushroom": 45,
+        "Energy Nectar": 12
+      },
+      "Max_90": {
+        "Varunada Lazurite Gemstone": 6,
+        "Cleansing Heart": 20,
+        "Philanemo Mushroom": 60,
+        "Energy Nectar": 24
+      }
+    },
+    "talentMaterials": {
+      "book": "Resistance",
+      "boss": "Ring of Boreas",
+      "drop": "Whopperflower Nectar"
+    },
+    "position": ["Sub_Dealer", "Supporter"],
+    "tier": {
+      "Sub_Dealer": "T0",
+      "Supporter": "T1"
+    }
+  },
+  "Venti": {
+    "rank": 5,
+    "element": "Anemo",
+    "weapon": "Bow",
+    "region": "Mondstadt",
+    "stats": {
+      "Max_20": {
+        "Level": "20",
+        "HP": "2127",
+        "ATK": "53",
+        "DEF": "135",
+        "Additional": "No Data"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4234",
+        "ATK": "106",
+        "DEF": "269",
+        "Additional": "No Data"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5446",
+        "ATK": "136",
+        "DEF": "346",
+        "Additional": "Energy Recharge 8.0%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6832",
+        "ATK": "170",
+        "DEF": "434",
+        "Additional": "Energy Recharge 16.0%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "8058",
+        "ATK": "202",
+        "DEF": "512",
+        "Additional": "Energy Recharge 16.0%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9291",
+        "ATK": "233",
+        "DEF": "591",
+        "Additional": "Energy Recharge 24.0%"
+      },
+      "Max_90": {
+        "Level": "90",
+        "HP": "10531",
+        "ATK": "265",
+        "DEF": "670",
+        "Additional": "Energy Recharge 32.0%"
+      }
+    },
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Viridescent Venerer"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Wanderer's Troupe"],
+          "set": 4
+        }
+      },
+      "weapon": ["The Stringless", "Sacrificial Bow"]
+    },
+    "ascensionMaterials": {
+      "items": ["Vayuda Turquoise Sliver", "Cecilia", "Slime Condensate", "Hurricane Seed"],
+      "Max_40": {
+        "Vayuda Turquoise Sliver": 1,
+        "Cecilia": 3,
+        "Slime Condensate": 3
+      },
+      "Max_50": {
+        "Vayuda Turquoise Fragment": 3,
+        "Hurricane Seed": 2,
+        "Cecilia": 10,
+        "Slime Condensate": 15
+      },
+      "Max_60": {
+        "Vayuda Turquoise Fragment": 6,
+        "Hurricane Seed": 4,
+        "Cecilia": 20,
+        "Slime Secretions": 12
+      },
+      "Max_70": {
+        "Vayuda Turquoise Chunk": 3,
+        "Hurricane Seed": 8,
+        "Cecilia": 30,
+        "Slime Secretions": 18
+      },
+      "Max_80": {
+        "Vayuda Turquoise Chunk": 6,
+        "Hurricane Seed": 12,
+        "Cecilia": 45,
+        "Slime Concentrate": 12
+      },
+      "Max_90": {
+        "Vayuda Turquoise Gemstone": 6,
+        "Hurricane Seed": 20,
+        "Cecilia": 60,
+        "Slime Concentrate": 24
+      }
+    },
+    "talentMaterials": {
+      "book": "Ballad",
+      "boss": "Tail of Boreas",
+      "drop": "Slime Condensate"
+    },
+    "position": ["Sub_Dealer", "Supporter"],
+    "tier": {
+      "Sub_Dealer": "T1",
+      "Supporter": "T0"
+    }
+  },
+  "Tartaglia": {
+    "rank": 5,
+    "element": "Hydro",
+    "weapon": "Bow",
+    "region": "Snezhnaya",
+    "stats": {
+      "Max_20": {
+        "Level": "20",
+        "HP": "2646",
+        "ATK": "61",
+        "DEF": "165",
+        "Additional": "No Data"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "5268",
+        "ATK": "121",
+        "DEF": "328",
+        "Additional": "No Data"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "6776",
+        "ATK": "156",
+        "DEF": "421",
+        "Additional": "Hydro DMG 7.2%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "8500",
+        "ATK": "196",
+        "DEF": "528",
+        "Additional": "Hydro DMG 14.4%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "10025",
+        "ATK": "231",
+        "DEF": "623",
+        "Additional": "Hydro DMG 14.4%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "11561",
+        "ATK": "266",
+        "DEF": "719",
+        "Additional": "Hydro DMG 21.6%"
+      },
+      "Max_90": {
+        "Level": "90",
+        "HP": "13103",
+        "ATK": "301289",
+        "DEF": "815",
+        "Additional": "Hydro DMG 28.8%"
+      }
+    },
+    "recommendedParty": {
+      "recom1": {
+        "party": ["Tartaglia", "Xiangling", "Sucrose", "Jean"]
+      },
+      "recom2": {
+        "party": ["Tartaglia", "Xiangling", "Traveler (Geo)", "Sucrose"],
+        "alter": {
+          "Sucrose": ["Venti", "Jean"]
+        }
+      },
+      "recom3": {
+        "party": ["Tartaglia", "Xiangling", "Bennett", "Sucrose"],
+        "alter": {
+          "Sucrose": ["Venti", "Jean"]
+        }
+      },
+      "recom4": {
+        "party": ["Tartaglia", "Fischl", "Sucrose", "Jean"],
+        "alter": {
+          "Sucrose": ["Lisa"],
+          "Jean": ["Venti"]
+        }
+      }
+    },
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Gladiator's Finale", "Noblesse Oblige"],
+          "set": 2
+        },
+        "second": {
+          "name": ["Wanderer's Troupe"],
+          "set": 4
+        }
+      },
+      "weapon": ["Skyward Harp", "Rust"]
+    },
+    "ascensionMaterials": {
+      "items": ["Varunada Lazurite Sliver", "Starconch", "Recruit's Insignia", "Cleansing Heart"],
+      "Max_40": {
+        "Varunada Lazurite Sliver": 1,
+        "Starconch": 3,
+        "Recruit's Insignia": 3
+      },
+      "Max_50": {
+        "Varunada Lazurite Fragment": 3,
+        "Cleansing Heart": 2,
+        "Starconch": 10,
+        "Recruit's Insignia": 15
+      },
+      "Max_60": {
+        "Varunada Lazurite Fragment": 6,
+        "Cleansing Heart": 4,
+        "Starconch": 20,
+        "Sergeant's Insignia": 12
+      },
+      "Max_70": {
+        "Varunada Lazurite Chunk": 3,
+        "Cleansing Heart": 8,
+        "Starconch": 30,
+        "Sergeant's Insignia": 18
+      },
+      "Max_80": {
+        "Varunada Lazurite Chunk": 6,
+        "Cleansing Heart": 12,
+        "Starconch": 45,
+        "Lieutenant's Insignia": 12
+      },
+      "Max_90": {
+        "Varunada Lazurite Gemstone": 6,
+        "Cleansing Heart": 20,
+        "Starconch": 60,
+        "Lieutenant's Insignia": 24
+      }
+    },
+    "talentMaterials": {
+      "book": "Freedom",
+      "boss": "Shard of a Foul Legacy",
+      "drop": "Recruit's Insignia"
+    },
+    "position": ["Main_Dealer"],
+    "tier": {
+      "Main_Dealer": "T0"
+    }
+  },
+  "Zhongli": {
+    "rank": 5,
+    "element": "Geo",
+    "weapon": "Polearm",
+    "region": "Liyue",
+    "stats": {
+      "Max_20": {
+        "Level": "20",
+        "HP": "2967",
+        "ATK": "51",
+        "DEF": "149",
+        "Additional": "No Data"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "5908",
+        "ATK": "101",
+        "DEF": "297",
+        "Additional": "No Data"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "7599",
+        "ATK": "130",
+        "DEF": "382",
+        "Additional": "Geo DMG Bonus 7.2%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "9533",
+        "ATK": "163",
+        "DEF": "479",
+        "Additional": "Geo DMG Bonus 14.4%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "11243",
+        "ATK": "192",
+        "DEF": "564",
+        "Additional": "Geo DMG Bonus 14.4%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "12965",
+        "ATK": "222",
+        "DEF": "651",
+        "Additional": "Geo DMG Bonus 21.6%"
+      },
+      "Max_90": {
+        "Level": "90",
+        "HP": "14695",
+        "ATK": "251",
+        "DEF": "738",
+        "Additional": "Geo DMG Bonus 28.8%"
+      }
+    },
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Archaic Petra", "Noblesse Oblige"],
+          "set": 2
+        },
+        "second": {
+          "name": ["Noblesse Oblige"],
+          "set": 4
+        }
+      },
+      "weapon": ["Vortex Vanquisher", "Skyward Spine"]
+    },
+    "ascensionMaterials": {
+      "items": ["Prithiva Topaz Sliver", "Basalt Pillar", "Cor Lapis", "Slime Condensate"],
+      "Max_40": {
+        "Prithiva Topaz Sliver": 1,
+        "Cor Lapis": 3,
+        "Slime Condensate": 3
+      },
+      "Max_50": {
+        "Prithiva Topaz Fragment": 3,
+        "Cor Lapis": 10,
+        "Slime Condensate": 15
+      },
+      "Max_60": {
+        "Prithiva Topaz Fragment": 6,
+        "Cor Lapis": 20,
+        "Slime Secretions": 12
+      },
+      "Max_70": {
+        "Prithiva Topaz Chunk": 3,
+        "Cor Lapis": 30,
+        "Slime Secretions": 18
+      },
+      "Max_80": {
+        "Prithiva Topaz Chunk": 6,
+        "Cor Lapis": 45,
+        "Slime Concentrate": 12
+      },
+      "Max_90": {
+        "Prithiva Topaz Gemstone": 6,
+        "Cor Lapis": 60,
+        "Slime Concentrate": 24
+      }
+    },
+    "talentMaterials": {
+      "book": "Gold",
+      "boss": "Tusk of Monoceros Caeli",
+      "drop": "Slime Condensate"
+    },
+    "position": ["Supporter"],
+    "tier": {
+      "Supporter": "T1"
+    }
+  },
+  "Traveler (Anemo)": {
+    "rank": 5,
+    "element": "Anemo",
+    "weapon": "Sword",
+    "region": "Unknown",
+    "stats": {
+      "Max_20": {
+        "Level": "20",
+        "HP": "2342",
+        "ATK": "46",
+        "DEF": "147",
+        "Additional": "No Data"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4529",
+        "ATK": "88",
+        "DEF": "284",
+        "Additional": "No Data"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5766",
+        "ATK": "112",
+        "DEF": "362",
+        "Additional": "ATK 6.0%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "7164",
+        "ATK": "140",
+        "DEF": "450",
+        "Additional": "ATK 12.0%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "8401",
+        "ATK": "164",
+        "DEF": "527",
+        "Additional": "ATK 12.0%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9638",
+        "ATK": "188",
+        "DEF": "605",
+        "Additional": "ATK 18.0%"
+      },
+      "Max_90": {
+        "Level": "90",
+        "HP": "10875",
+        "ATK": "213",
+        "DEF": "682",
+        "Additional": "ATK 24.0%"
+      }
+    },
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Viridescent Venerer"],
+          "set": 4
+        }
+      },
+      "weapon": ["Aquila Favonia", "The Black Sword"]
+    },
+    "ascensionMaterials": {
+      "items": ["Brilliant Diamond Sliver", "Windwheel Aster", "Damaged Mask"],
+      "Max_40": {
+        "Brilliant Diamond Sliver": 1,
+        "Windwheel Aster": 3,
+        "Damaged Mask": 3
+      },
+      "Max_50": {
+        "Brilliant Diamond Fragment": 3,
+        "Windwheel Aster": 10,
+        "Damaged Mask": 15
+      },
+      "Max_60": {
+        "Brilliant Diamond Fragment": 6,
+        "Windwheel Aster": 20,
+        "Stained Mask": 12
+      },
+      "Max_70": {
+        "Brilliant Diamond Chunk": 3,
+        "Windwheel Aster": 30,
+        "Stained Mask": 18
+      },
+      "Max_80": {
+        "Brilliant Diamond Chunk": 6,
+        "Windwheel Aster": 45,
+        "Ominous Mask": 12
+      },
+      "Max_90": {
+        "Brilliant Diamond Gemstone": 6,
+        "Windwheel Aster": 60,
+        "Ominous Mask": 24
+      }
+    },
+    "talentMaterials": {
+      "book": "",
+      "boss": "",
+      "drop": ""
+    },
+    "position": ["Sub_Dealer", "Supporter"],
+    "tier": {
+      "Sub_Dealer": "T2",
+      "Supporter": "T2"
+    }
+  },
+  "Traveler (Geo)": {
+    "rank": 5,
+    "element": "Geo",
+    "weapon": "Sword",
+    "region": "Unknown",
+    "stats": {
+      "Max_20": {
+        "Level": "20",
+        "HP": "2342",
+        "ATK": "46",
+        "DEF": "147",
+        "Additional": "No Data"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4529",
+        "ATK": "88",
+        "DEF": "284",
+        "Additional": "No Data"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5766",
+        "ATK": "112",
+        "DEF": "362",
+        "Additional": "ATK 6.0%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "7164",
+        "ATK": "140",
+        "DEF": "450",
+        "Additional": "ATK 12.0%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "8401",
+        "ATK": "164",
+        "DEF": "527",
+        "Additional": "ATK 12.0%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9638",
+        "ATK": "188",
+        "DEF": "605",
+        "Additional": "ATK 18.0%"
+      },
+      "Max_90": {
+        "Level": "90",
+        "HP": "10875",
+        "ATK": "213",
+        "DEF": "682",
+        "Additional": "ATK 24.0%"
+      }
+    },
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Archaic Petra"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Noblesse Oblige"],
+          "set": 4
+        }
+      },
+      "weapon": ["Aquila Favonia", "The Black Sword"]
+    },
+    "ascensionMaterials": {
+      "items": ["Brilliant Diamond Sliver", "Windwheel Aster", "Damaged Mask"],
+      "Max_40": {
+        "Brilliant Diamond Sliver": 1,
+        "Windwheel Aster": 3,
+        "Damaged Mask": 3
+      },
+      "Max_50": {
+        "Brilliant Diamond Fragment": 3,
+        "Windwheel Aster": 10,
+        "Damaged Mask": 15
+      },
+      "Max_60": {
+        "Brilliant Diamond Fragment": 6,
+        "Windwheel Aster": 20,
+        "Stained Mask": 12
+      },
+      "Max_70": {
+        "Brilliant Diamond Chunk": 3,
+        "Windwheel Aster": 30,
+        "Stained Mask": 18
+      },
+      "Max_80": {
+        "Brilliant Diamond Chunk": 6,
+        "Windwheel Aster": 45,
+        "Ominous Mask": 12
+      },
+      "Max_90": {
+        "Brilliant Diamond Gemstone": 6,
+        "Windwheel Aster": 60,
+        "Ominous Mask": 24
+      }
+    },
+    "talentMaterials": {
+      "book": "",
+      "boss": "",
+      "drop": ""
+    },
+    "position": ["Supporter"],
+    "tier": {
+      "Supporter": "T2"
+    }
+  },
+  "Noelle": {
+    "rank": 4,
+    "element": "Geo",
+    "weapon": "Claymore",
+    "region": "Mondstadt",
+    "stats": {
+      "Max_20": {
+        "Level": "20",
+        "HP": "2600",
+        "ATK": "41",
+        "DEF": "172",
+        "Additional": "No Data"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "5027",
+        "ATK": "80",
+        "DEF": "333",
+        "Additional": "No Data"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "6400",
+        "ATK": "102",
+        "DEF": "423",
+        "Additional": "DEF 7.5%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "7953",
+        "ATK": "126",
+        "DEF": "526",
+        "Additional": "DEF 15.0%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "9325",
+        "ATK": "148",
+        "DEF": "617",
+        "Additional": "DEF 15.0%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "10698",
+        "ATK": "170",
+        "DEF": "708",
+        "Additional": "DEF 22.5%"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "11235",
+        "ATK": "178",
+        "DEF": "743",
+        "Additional": "DEF 30.0%"
+      }
+    },
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Retracing Bolide"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Retracing Bolide", "Maiden Beloved"],
+          "set": 2
+        }
+      },
+      "weapon": ["Skyward Pride", "Whiteblind"]
+    },
+    "ascensionMaterials": {
+      "items": ["Prithiva Topaz Sliver", "Valberry", "Damaged Mask", "Basalt Pillar"],
+      "Max_40": {
+        "Prithiva Topaz Sliver": 1,
+        "Valberry": 3,
+        "Damaged Mask": 3
+      },
+      "Max_50": {
+        "Prithiva Topaz Fragment": 3,
+        "Basalt Pillar": 2,
+        "Valberry": 10,
+        "Damaged Mask": 15
+      },
+      "Max_60": {
+        "Prithiva Topaz Fragment": 6,
+        "Basalt Pillar": 4,
+        "Valberry": 20,
+        "Stained Mask": 12
+      },
+      "Max_70": {
+        "Prithiva Topaz Chunk": 3,
+        "Basalt Pillar": 8,
+        "Valberry": 30,
+        "Stained Mask": 18
+      },
+      "Max_80": {
+        "Prithiva Topaz Chunk": 6,
+        "Basalt Pillar": 12,
+        "Valberry": 45,
+        "Ominous Mask": 12
+      },
+      "Max_90": {
+        "Prithiva Topaz Gemstone": 6,
+        "Basalt Pillar": 20,
+        "Valberry": 60,
+        "Ominous Mask": 24
+      }
+    },
+    "talentMaterials": {
+      "book": "Resistance",
+      "boss": "Dvalin's Claw",
+      "drop": "Damaged Mask"
+    },
+    "position": ["Main_Dealer", "Supporter"],
+    "tier": {
+      "Main_Dealer": "T2",
+      "Supporter": "T2"
+    }
+  },
+  "Razor": {
+    "rank": 4,
+    "element": "Electro",
+    "weapon": "Claymore",
+    "region": "Mondstadt",
+    "stats": {
+      "Max_20": {
+        "Level": "20",
+        "HP": "2577",
+        "ATK": "51",
+        "DEF": "162",
+        "Additional": "No Data"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4982",
+        "ATK": "97",
+        "DEF": "313",
+        "Additional": "No Data"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "6343",
+        "ATK": "124",
+        "DEF": "398",
+        "Additional": "Physical DMG 7.5%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "7881",
+        "ATK": "154",
+        "DEF": "495",
+        "Additional": "Physical DMG 15.0%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "9241",
+        "ATK": "180",
+        "DEF": "580",
+        "Additional": "Physical DMG 15.0%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "10602",
+        "ATK": "207",
+        "DEF": "665",
+        "Additional": "Physical DMG 22.5%"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "11134",
+        "ATK": "217",
+        "DEF": "699",
+        "Additional": "Physical DMG 30.0%"
+      }
+    },
+    "recommendedParty": {
+      "recom1": {
+        "party": ["Razor", "Fischl", "Qiqi", "Sucrose"]
+      },
+      "recom2": {
+        "party": ["Razor", "Fischl", "Kaeya", "Jean"],
+        "alter": {
+          "Fischl": ["Lisa"],
+          "Jean": ["Venti", "Sucrose"]
+        }
+      },
+      "recom3": {
+        "party": ["Razor", "Mona", "Qiqi", "Venti"],
+        "alter": {
+          "Venti": ["Sucrose", "Jean"]
+        }
+      },
+      "recom4": {
+        "party": ["Razor", "Fischl", "Xiangling", "Bennett"]
+      }
+    },
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Gladiator's Finale"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Thundersoother"],
+          "set": 4
+        }
+      },
+      "weapon": ["Wolf's Gravestone", "Prototype Aminus"]
+    },
+    "ascensionMaterials": {
+      "items": ["Vajrada Amethyst Sliver", "Wolfhook", "Damaged Mask", "Lightning Prism"],
+      "Max_40": {
+        "Vajrada Amethyst Sliver": 1,
+        "Wolfhook": 3,
+        "Damaged Mask": 3
+      },
+      "Max_50": {
+        "Vajrada Amethyst Fragment": 3,
+        "Lightning Prism": 2,
+        "Wolfhook": 10,
+        "Damaged Mask": 15
+      },
+      "Max_60": {
+        "Vajrada Amethyst Fragment": 6,
+        "Lightning Prism": 4,
+        "Wolfhook": 20,
+        "Stained Mask": 12
+      },
+      "Max_70": {
+        "Vajrada Amethyst Chunk": 3,
+        "Lightning Prism": 8,
+        "Wolfhook": 30,
+        "Stained Mask": 18
+      },
+      "Max_80": {
+        "Vajrada Amethyst Chunk": 6,
+        "Lightning Prism": 12,
+        "Wolfhook": 45,
+        "Ominous Mask": 12
+      },
+      "Max_90": {
+        "Vajrada Amethyst Gemstone": 6,
+        "Lightning Prism": 20,
+        "Wolfhook": 60,
+        "Ominous Mask": 24
+      }
+    },
+    "talentMaterials": {
+      "book": "Resistance",
+      "boss": "Dvalin's Claw",
+      "drop": "Damaged Mask"
+    },
+    "position": ["Main_Dealer"],
+    "tier": {
+      "Main_Dealer": "T1"
+    }
+  },
+  "Ningguang": {
+    "rank": 4,
+    "element": "Geo",
+    "weapon": "Catalyst",
+    "region": "Liyue",
+    "stats": {
+      "Max_20": {
+        "Level": "20",
+        "HP": "2108",
+        "ATK": "46",
+        "DEF": "123",
+        "Additional": "No Data"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4076",
+        "ATK": "89",
+        "DEF": "239",
+        "Additional": "No Data"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5189",
+        "ATK": "112",
+        "DEF": "304",
+        "Additional": "Geo DMG 6.0%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6448",
+        "ATK": "140",
+        "DEF": "378",
+        "Additional": "Geo DMG 12.0%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7561",
+        "ATK": "164",
+        "DEF": "443",
+        "Additional": "Geo DMG 12.0%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "8674",
+        "ATK": "188",
+        "DEF": "508",
+        "Additional": "Geo DMG 18.0%"
+      },
+      "Max_90": {
+        "Level": "90",
+        "HP": "9787",
+        "ATK": "212",
+        "DEF": "573",
+        "Additional": "Geo DMG 24.0%"
+      }
+    },
+    "recommendedParty": {
+      "recom1": {
+        "party": ["Ningguang", "Mona", "Noelle", "Bennett"]
+      },
+      "recom2": {
+        "party": ["Ningguang", "Bennett", "Venti", "Barbara"]
+      }
+    },
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Archaic Petra", "Gladiator's Finale"],
+          "set": 2
+        },
+        "second": {
+          "name": ["Archaic Petra"],
+          "set": 4
+        }
+      },
+      "weapon": ["Lost Prayer to the Sacred Winds", "Skyward Atlas"]
+    },
+    "ascensionMaterials": {
+      "items": ["Prithiva Topaz Sliver", "Glaze Lily", "Recruit's Insignia", "Basalt Pillar"],
+      "Max_40": {
+        "Prithiva Topaz Sliver": 1,
+        "Glaze Lily": 3,
+        "Recruit's Insignia": 3
+      },
+      "Max_50": {
+        "Prithiva Topaz Fragment": 3,
+        "Basalt Pillar": 2,
+        "Glaze Lily": 10,
+        "Recruit's Insignia": 15
+      },
+      "Max_60": {
+        "Prithiva Topaz Fragment": 6,
+        "Basalt Pillar": 4,
+        "Glaze Lily": 20,
+        "Sergeant's Insignia": 12
+      },
+      "Max_70": {
+        "Prithiva Topaz Chunk": 3,
+        "Basalt Pillar": 8,
+        "Glaze Lily": 30,
+        "Sergeant's Insignia": 18
+      },
+      "Max_80": {
+        "Prithiva Topaz Chunk": 6,
+        "Basalt Pillar": 12,
+        "Glaze Lily": 45,
+        "Lieutenant's Insignia": 12
+      },
+      "Max_90": {
+        "Prithiva Topaz Gemstone": 6,
+        "Basalt Pillar": 20,
+        "Glaze Lily": 60,
+        "Lieutenant's Insignia": 24
+      }
+    },
+    "talentMaterials": {
+      "book": "Prosperity",
+      "boss": "Spirit Locket of Boreas",
+      "drop": "Recruit's Insignia"
+    },
+    "position": ["Main_Dealer"],
+    "tier": {
+      "Main_Dealer": "T1"
+    }
+  },
+  "Lisa": {
+    "rank": 4,
+    "element": "Electro",
+    "weapon": "Catalyst",
+    "region": "Mondstadt",
+    "stats": {
+      "Max_20": {
+        "Level": "20",
+        "HP": "2061",
+        "ATK": "50",
+        "DEF": "123",
+        "Additional": "No Data"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "3985",
+        "ATK": "96",
+        "DEF": "239",
+        "Additional": "No Data"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5074",
+        "ATK": "123",
+        "DEF": "304",
+        "Additional": "Elemental Mastery +24"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6305",
+        "ATK": "153",
+        "DEF": "378",
+        "Additional": "Elemental Mastery +48"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7393",
+        "ATK": "180",
+        "DEF": "443",
+        "Additional": "Elemental Mastery +48"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "8481",
+        "ATK": "207",
+        "DEF": "508",
+        "Additional": "Elemental Mastery +72"
+      },
+      "Max_90": {
+        "Level": "90",
+        "HP": "9569",
+        "ATK": "234",
+        "DEF": "573",
+        "Additional": "Elemental Mastery +96"
+      }
+    },
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Thundering Fury"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Noblesse Oblige"],
+          "set": 4
+        }
+      },
+      "weapon": ["Skyward Atlas", "Favonius Codex"]
+    },
+    "ascensionMaterials": {
+      "items": ["Vajrada Amethyst Sliver", "Valberry", "Lightning Prism", "Slime Condensate"],
+      "Max_40": {
+        "Vajrada Amethyst Sliver": 1,
+        "Valberry": 3,
+        "Slime Condensate": 3
+      },
+      "Max_50": {
+        "Vajrada Amethyst Fragment": 3,
+        "Lightning Prism": 2,
+        "Valberry": 10,
+        "Slime Condensate": 15
+      },
+      "Max_60": {
+        "Vajrada Amethyst Fragment": 6,
+        "Lightning Prism": 4,
+        "Valberry": 20,
+        "Slime Secretions": 12
+      },
+      "Max_70": {
+        "Vajrada Amethyst Chunk": 3,
+        "Lightning Prism": 8,
+        "Valberry": 30,
+        "Slime Secretions": 18
+      },
+      "Max_80": {
+        "Vajrada Amethyst Chunk": 6,
+        "Lightning Prism": 12,
+        "Valberry": 45,
+        "Slime Concentrate": 12
+      },
+      "Max_90": {
+        "Vajrada Amethyst Gemstone": 6,
+        "Lightning Prism": 20,
+        "Valberry": 60,
+        "Slime Concentrate": 24
+      }
+    },
+    "talentMaterials": {
+      "book": "Ballad",
+      "boss": "Dvalin's Claw",
+      "drop": "Slime Condensate"
+    },
+    "position": ["Main_Dealer", "Sub_Dealer"],
+    "tier": {
+      "Main_Dealer": "T3",
+      "Sub_Dealer": "T3"
+    }
+  },
+  "Kaeya": {
+    "rank": 4,
+    "element": "Cryo",
+    "weapon": "Sword",
+    "region": "Mondstadt",
+    "stats": {
+      "Max_20": {
+        "Level": "20",
+        "HP": "2506",
+        "ATK": "48",
+        "DEF": "171",
+        "Additional": "No Data"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4846",
+        "ATK": "93",
+        "DEF": "330",
+        "Additional": "No Data"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "6170",
+        "ATK": "118",
+        "DEF": "420",
+        "Additional": "Energy Recharge 6.7%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "7666",
+        "ATK": "147",
+        "DEF": "522",
+        "Additional": "Energy Recharge 13.3%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "8990",
+        "ATK": "172",
+        "DEF": "612",
+        "Additional": "Energy Recharge 13.3%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "10312",
+        "ATK": "196",
+        "DEF": "702",
+        "Additional": "Energy Recharge 20.0%"
+      },
+      "Max_90": {
+        "Level": "90",
+        "HP": "11636",
+        "ATK": "220",
+        "DEF": "792",
+        "Additional": "Energy Recharge 26.7%"
+      }
+    },
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Noblesse Oblige"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Noblesse Oblige", "Gladiator's Finale"],
+          "set": 2
+        }
+      },
+      "weapon": ["Skyward Blade", "Favonius Sword"]
+    },
+    "ascensionMaterials": {
+      "items": ["Shivada Jade Sliver", "Calla Lily", "Treasure Hoarder Insignia", "Hoarfrost Core"],
+      "Max_40": {
+        "Shivada Jade Sliver": 1,
+        "Calla Lily": 3,
+        "Treasure Hoarder Insignia": 3
+      },
+      "Max_50": {
+        "Shivada Jade Fragment": 3,
+        "Hoarfrost Core": 2,
+        "Calla Lily": 10,
+        "Treasure Hoarder Insignia": 15
+      },
+      "Max_60": {
+        "Shivada Jade Fragment": 6,
+        "Hoarfrost Core": 4,
+        "Calla Lily": 20,
+        "Silver Raven Insignia": 12
+      },
+      "Max_70": {
+        "Shivada Jade Chunk": 3,
+        "Hoarfrost Core": 8,
+        "Calla Lily": 30,
+        "Silver Raven Insignia": 12
+      },
+      "Max_80": {
+        "Shivada Jade Chunk": 6,
+        "Hoarfrost Core": 12,
+        "Calla Lily": 45,
+        "Golden Raven Insignia": 12
+      },
+      "Max_90": {
+        "Shivada Jade Gemstone": 6,
+        "Hoarfrost Core": 20,
+        "Calla Lily": 60,
+        "Golden Raven Insignia": 24
+      }
+    },
+    "talentMaterials": {
+      "book": "Ballad",
+      "boss": "Spirit Locket of Boreas",
+      "drop": "Treasure Hoarder Insignia"
+    },
+    "position": ["Sub_Dealer"],
+    "tier": {
+      "Sub_Dealer": "T2"
+    }
+  },
+  "Fischl": {
+    "rank": 4,
+    "element": "Electro",
+    "weapon": "Bow",
+    "region": "Mondstadt",
+    "stats": {
+      "Max_20": {
+        "Level": "20",
+        "HP": "1979",
+        "ATK": "53",
+        "DEF": "128",
+        "Additional": "No Data"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "3827",
+        "ATK": "102",
+        "DEF": "247",
+        "Additional": "No Data"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "4872",
+        "ATK": "130",
+        "DEF": "315",
+        "Additional": "ATK 6.0%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6054",
+        "ATK": "161",
+        "DEF": "391",
+        "Additional": "ATK 12.0%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7099",
+        "ATK": "189",
+        "DEF": "459",
+        "Additional": "ATK 12.0%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "8144",
+        "ATK": "216",
+        "DEF": "526",
+        "Additional": "ATK 18.0%"
+      },
+      "Max_90": {
+        "Level": "90",
+        "HP": "8553",
+        "ATK": "227",
+        "DEF": "553",
+        "Additional": "ATK 24.0%"
+      }
+    },
+    "recommendedParty": {
+      "recom1": {
+        "party": ["Fischl", "Mona", "Diona", "Venti"],
+        "alter": {
+          "Venti": ["Sucrose", "Jean"]
+        }
+      },
+      "recom2": {
+        "party": ["Fischl", "Xiangling", "Chongyun", "Venti"],
+        "alter": {
+          "Venti": ["Sucrose", "Jean"]
+        }
+      },
+      "recom3": {
+        "party": ["Fischl", "Xiangling", "Bennett", "Venti"],
+        "alter": {
+          "Venti": ["Sucrose", "Jean"]
+        }
+      },
+      "recom4": {
+        "party": ["Fischl", "Xiangling", "Venti", "Jean"],
+        "alter": {
+          "Venti": ["Sucrose"]
+        }
+      }
+    },
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Thundering Fury"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Gladiator's Finale", "Bloodstained Chivalry"],
+          "set": 2
+        }
+      },
+      "weapon": ["Skyward Harp", "The Stringless"]
+    },
+    "ascensionMaterials": {
+      "items": ["Vajrada Amethyst Sliver", "Small Lamp Grass", "Firm Arrowhead", "Lightning Prism"],
+      "Max_40": {
+        "Vajrada Amethyst Sliver": 1,
+        "Small Lamp Grass": 3,
+        "Firm Arrowhead": 3
+      },
+      "Max_50": {
+        "Vajrada Amethyst Fragment": 3,
+        "Lightning Prism": 2,
+        "Small Lamp Grass": 10,
+        "Firm Arrowhead": 15
+      },
+      "Max_60": {
+        "Vajrada Amethyst Fragment": 6,
+        "Lightning Prism": 4,
+        "Small Lamp Grass": 20,
+        "Sharp Arrowhead": 12
+      },
+      "Max_70": {
+        "Vajrada Amethyst Chunk": 3,
+        "Lightning Prism": 8,
+        "Small Lamp Grass": 30,
+        "Sharp Arrowhead": 18
+      },
+      "Max_80": {
+        "Vajrada Amethyst Chunk": 6,
+        "Lightning Prism": 12,
+        "Small Lamp Grass": 45,
+        "Golden Raven Insignia": 12
+      },
+      "Max_90": {
+        "Vajrada Amethyst Gemstone": 6,
+        "Lightning Prism": 20,
+        "Small Lamp Grass": 60,
+        "Golden Raven Insignia": 24
+      }
+    },
+    "talentMaterials": {
+      "book": "Ballad",
+      "boss": "Spirit Locket of Boreas",
+      "drop": "Firm Arrowhead"
+    },
+    "position": ["Main_Dealer", "Sub_Dealer"],
+    "tier": {
+      "Main_Dealer": "T1",
+      "Sub_Dealer": "T1"
+    }
+  },
+  "Chongyun": {
+    "rank": 4,
+    "element": "Cryo",
+    "weapon": "Claymore",
+    "region": "Liyue",
+    "stats": {
+      "Max_20": {
+        "Level": "20",
+        "HP": "2366",
+        "ATK": "48",
+        "DEF": "140",
+        "Additional": "No Data"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4574",
+        "ATK": "93",
+        "DEF": "270",
+        "Additional": "No Data"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5824",
+        "ATK": "119",
+        "DEF": "344",
+        "Additional": "ATK 6.0%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "7236",
+        "ATK": "147",
+        "DEF": "427",
+        "Additional": "ATK 12.0%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "8485",
+        "ATK": "172",
+        "DEF": "501",
+        "Additional": "ATK 12.0%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9734",
+        "ATK": "198",
+        "DEF": "575",
+        "Additional": "ATK 18.0%"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "10223",
+        "ATK": "208",
+        "DEF": "603",
+        "Additional": "ATK 24.4%"
+      }
+    },
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Noblesse Oblige"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Noblesse Oblige", "Gladiator's Finale"],
+          "set": 2
+        }
+      },
+      "weapon": ["Wolf's Gravestone", "Skyward Pride"]
+    },
+    "ascensionMaterials": {
+      "items": ["Shivada Jade Sliver", "Cor Lapis", "Damaged Mask", "Lightning Prism"],
+      "Max_40": {
+        "Shivada Jade Sliver": 1,
+        "Cor Lapis": 3,
+        "Damaged Mask": 3
+      },
+      "Max_50": {
+        "Shivada Jade Fragment": 3,
+        "Hoarfrost Core": 2,
+        "Cor Lapis": 10,
+        "Damaged Mask": 15
+      },
+      "Max_60": {
+        "Shivada Jade Fragment": 6,
+        "Hoarfrost Core": 4,
+        "Cor Lapis": 20,
+        "Stained Mask": 12
+      },
+      "Max_70": {
+        "Shivada Jade Chunk": 3,
+        "Hoarfrost Core": 8,
+        "Cor Lapis": 30,
+        "Stained Mask": 18
+      },
+      "Max_80": {
+        "Shivada Jade Chunk": 6,
+        "Hoarfrost Core": 12,
+        "Cor Lapis": 45,
+        "Ominous Mask": 12
+      },
+      "Max_90": {
+        "Shivada Jade Gemstone": 6,
+        "Hoarfrost Core": 20,
+        "Cor Lapis": 60,
+        "Ominous Mask": 24
+      }
+    },
+    "talentMaterials": {
+      "book": "Diligence",
+      "boss": "Dvalin's Sigh",
+      "drop": "Damaged Mask"
+    },
+    "position": ["Sub_Dealer", "Supporter"],
+    "tier": {
+      "Sub_Dealer": "T1",
+      "Supporter": "T2"
+    }
+  },
+  "Bennett": {
+    "rank": 4,
+    "element": "Pyro",
+    "weapon": "Sword",
+    "region": "Mondstadt",
+    "stats": {
+      "Max_20": {
+        "Level": "20",
+        "HP": "2670",
+        "ATK": "41",
+        "DEF": "166",
+        "Additional": "No Data"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "5163",
+        "ATK": "80",
+        "DEF": "321",
+        "Additional": "No Data"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "6573",
+        "ATK": "102",
+        "DEF": "409",
+        "Additional": "Energy Recharge 6.7%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "8168",
+        "ATK": "126",
+        "DEF": "508",
+        "Additional": "Energy Recharge 13.3%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "9577",
+        "ATK": "148",
+        "DEF": "596",
+        "Additional": "Energy Recharge 13.3%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "10987",
+        "ATK": "169",
+        "DEF": "684",
+        "Additional": "Energy Recharge 20.0%"
+      },
+      "Max_90": {
+        "Level": "No Data",
+        "HP": "No Data",
+        "ATK": "No Data",
+        "DEF": "No Data",
+        "Additional": "No Data"
+      }
+    },
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Noblesse Oblige"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Gladiator's Finale", "Bloodstained Chivalry"],
+          "set": 2
+        }
+      },
+      "weapon": ["Skyward Blade", "Aquila Favonia"]
+    },
+    "ascensionMaterials": {
+      "items": ["Agnidus Agate Sliver", "Windwheel Aster", "Treasure Hoarder Insignia", "Everflame Seed"],
+      "Max_40": {
+        "Agnidus Agate Sliver": 1,
+        "Windwheel Aster": 3,
+        "Treasure Hoarder Insignia": 3
+      },
+      "Max_50": {
+        "Agnidus Agate Fragment": 3,
+        "Everflame Seed": 2,
+        "Windwheel Aster": 10,
+        "Treasure Hoarder Insignia": 15
+      },
+      "Max_60": {
+        "Agnidus Agate Fragment": 6,
+        "Everflame Seed": 4,
+        "Windwheel Aster": 20,
+        "Silver Raven Insignia": 12
+      },
+      "Max_70": {
+        "Agnidus Agate Chunk": 3,
+        "Everflame Seed": 8,
+        "Windwheel Aster": 30,
+        "Silver Raven Insignia": 18
+      },
+      "Max_80": {
+        "Agnidus Agate Chunk": 6,
+        "Everflame Seed": 12,
+        "Windwheel Aster": 45,
+        "Golden Raven Insignia": 12
+      },
+      "Max_90": {
+        "Agnidus Agate Gemstone": 6,
+        "Everflame Seed": 20,
+        "Windwheel Aster": 60,
+        "Golden Raven Insignia": 24
+      }
+    },
+    "talentMaterials": {
+      "book": "Resistance",
+      "boss": "Dvalin's Plume",
+      "drop": "Treasure Hoarder Insignia"
+    },
+    "position": ["Sub_Dealer", "Supporter"],
+    "tier": {
+      "Sub_Dealer": "T2",
+      "Supporter": "T0"
+    }
+  },
+  "Beidou": {
+    "rank": 4,
+    "element": "Electro",
+    "weapon": "Claymore",
+    "region": "Liyue",
+    "stats": {
+      "Max_20": {
+        "Level": "20",
+        "HP": "2811",
+        "ATK": "49",
+        "DEF": "140",
+        "Additional": "No Data"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "5435",
+        "ATK": "94",
+        "DEF": "270",
+        "Additional": "No Data"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "6919",
+        "ATK": "120",
+        "DEF": "344",
+        "Additional": "Electro DMG 6.0%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "8597",
+        "ATK": "148",
+        "DEF": "427",
+        "Additional": "Electro DMG 12.0%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "10081",
+        "ATK": "174",
+        "DEF": "501",
+        "Additional": "Electro DMG 12.0%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "11565",
+        "ATK": "199",
+        "DEF": "575",
+        "Additional": "Electro DMG 18.0%"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "12146",
+        "ATK": "209",
+        "DEF": "658",
+        "Additional": "Electro DMG 24.0%"
+      }
+    },
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Gladiator's Finale", "Thundering Fury"],
+          "set": 2
+        },
+        "second": {
+          "name": ["Thundering Fury"],
+          "set": 4
+        }
+      },
+      "weapon": ["Wolf's Gravestone", "Rainslasher"]
+    },
+    "ascensionMaterials": {
+      "items": ["Vajrada Amethyst Sliver", "Noctilucous Jade", "Treasure Hoarder Insignia", "Lightning Prism"],
+      "Max_40": {
+        "Vajrada Amethyst Sliver": 1,
+        "Noctilucous Jade": 3,
+        "Treasure Hoarder Insignia": 3
+      },
+      "Max_50": {
+        "Vajrada Amethyst Fragment": 3,
+        "Lightning Prism": 2,
+        "Noctilucous Jade": 10,
+        "Treasure Hoarder Insignia": 15
+      },
+      "Max_60": {
+        "Vajrada Amethyst Fragment": 6,
+        "Lightning Prism": 4,
+        "Noctilucous Jade": 20,
+        "Silver Raven Insignia": 12
+      },
+      "Max_70": {
+        "Vajrada Amethyst Chunk": 3,
+        "Lightning Prism": 8,
+        "Noctilucous Jade": 30,
+        "Silver Raven Insignia": 18
+      },
+      "Max_80": {
+        "Vajrada Amethyst Chunk": 6,
+        "Lightning Prism": 12,
+        "Noctilucous Jade": 45,
+        "Golden Raven Insignia": 12
+      },
+      "Max_90": {
+        "Vajrada Amethyst Gemstone": 6,
+        "Lightning Prism": 20,
+        "Noctilucous Jade": 60,
+        "Golden Raven Insignia": 24
+      }
+    },
+    "talentMaterials": {
+      "book": "Gold",
+      "boss": "Dvalin's Sigh",
+      "drop": "Treasure Hoarder Insignia"
+    },
+    "position": ["Main_Dealer", "Sub_Dealer"],
+    "tier": {
+      "Main_Dealer": "T2",
+      "Sub_Dealer": "T3"
+    }
+  },
+  "Barbara": {
+    "rank": 4,
+    "element": "Hydro",
+    "weapon": "Catalyst",
+    "region": "Mondstadt",
+    "stats": {
+      "Max_20": {
+        "Level": "20",
+        "HP": "2108",
+        "ATK": "34",
+        "DEF": "144",
+        "Additional": "No Data"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4076",
+        "ATK": "67",
+        "DEF": "279",
+        "Additional": "No Data"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5189",
+        "ATK": "84",
+        "DEF": "355",
+        "Additional": "HP 6.0%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6448",
+        "ATK": "105",
+        "DEF": "441",
+        "Additional": "HP 12.0%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7561",
+        "ATK": "123",
+        "DEF": "517",
+        "Additional": "HP 12.0%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "8674",
+        "ATK": "141",
+        "DEF": "593",
+        "Additional": "HP 18.0%"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "9110",
+        "ATK": "149",
+        "DEF": "623",
+        "Additional": "HP 18.0%"
+      }
+    },
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Maiden Beloved"],
+          "set": 4
+        }
+      },
+      "weapon": ["Thrilling Tales of Dragon Slayers", "Prototype Malice"]
+    },
+    "ascensionMaterials": {
+      "items": ["Varunada Lazurite Sliver", "Philanemo Mushroom", "Divining Scroll", "Cleansing Heart"],
+      "Max_40": {
+        "Varunada Lazurite Sliver": 1,
+        "Philanemo Mushroom": 3,
+        "Divining Scroll": 3
+      },
+      "Max_50": {
+        "Varunada Lazurite Fragment": 3,
+        "Cleansing Heart": 2,
+        "Philanemo Mushroom": 10,
+        "Divining Scroll": 15
+      },
+      "Max_60": {
+        "Varunada Lazurite Fragment": 6,
+        "Cleansing Heart": 4,
+        "Philanemo Mushroom": 20,
+        "Sealed Scroll": 12
+      },
+      "Max_70": {
+        "Varunada Lazurite Chunk": 3,
+        "Cleansing Heart": 8,
+        "Philanemo Mushroom": 30,
+        "Sealed Scroll": 18
+      },
+      "Max_80": {
+        "Varunada Lazurite Chunk": 6,
+        "Cleansing Heart": 12,
+        "Philanemo Mushroom": 45,
+        "Forbidden Curse Scroll": 12
+      },
+      "Max_90": {
+        "Varunada Lazurite Gemstone": 6,
+        "Cleansing Heart": 20,
+        "Philanemo Mushroom": 60,
+        "Forbidden Curse Scroll": 24
+      }
+    },
+    "talentMaterials": {
+      "book": "Freedom",
+      "boss": "Ring of Boreas",
+      "drop": "Divining Scroll"
+    },
+    "position": ["Sub_Dealer", "Supporter"],
+    "tier": {
+      "Sub_Dealer": "T2",
+      "Supporter": "T1"
+    }
+  },
+  "Amber": {
+    "rank": 4,
+    "element": "Pyro",
+    "weapon": "Bow",
+    "region": "Mondstadt",
+    "stats": {
+      "Max_20": {
+        "Level": "20",
+        "HP": "2038",
+        "ATK": "48",
+        "DEF": "129",
+        "Additional": "No Data"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "3940",
+        "ATK": "93",
+        "DEF": "250",
+        "Additional": "No Data"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5016",
+        "ATK": "118",
+        "DEF": "318",
+        "Additional": "ATK 6.0%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "5578",
+        "ATK": "132",
+        "DEF": "354",
+        "Additional": "ATK 12.0%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "6654",
+        "ATK": "157",
+        "DEF": "422",
+        "Additional": "ATK 12.0%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "8385",
+        "ATK": "198",
+        "DEF": "532",
+        "Additional": "ATK 18.0%"
+      },
+      "Max_90": {
+        "Level": "No Data",
+        "HP": "No Data",
+        "ATK": "No Data",
+        "DEF": "No Data",
+        "Additional": "ATK 24.0%"
+      }
+    },
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Noblesse Oblige"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Crimson Witch of Flames"],
+          "set": 4
+        }
+      },
+      "weapon": ["Amos' Bow", "Rust"]
+    },
+    "ascensionMaterials": {
+      "items": ["Agnidus Agate Sliver", "Small Lamp Grass", "Firm Arrowhead", "Everflame Seed"],
+      "Max_40": {
+        "Agnidus Agate Sliver": 1,
+        "Small Lamp Grass": 3,
+        "Firm Arrowhead": 3
+      },
+      "Max_50": {
+        "Agnidus Agate Fragment": 3,
+        "Everflame Seed": 2,
+        "Small Lamp Grass": 10,
+        "Firm Arrowhead": 15
+      },
+      "Max_60": {
+        "Agnidus Agate Fragment": 6,
+        "Everflame Seed": 4,
+        "Small Lamp Grass": 20,
+        "Sharp Arrowhead": 12
+      },
+      "Max_70": {
+        "Agnidus Agate Chunk": 3,
+        "Everflame Seed": 8,
+        "Small Lamp Grass": 30,
+        "Sharp Arrowhead": 18
+      },
+      "Max_80": {
+        "Agnidus Agate Chunk": 6,
+        "Everflame Seed": 12,
+        "Small Lamp Grass": 45,
+        "Weathered Arrowhead": 12
+      },
+      "Max_90": {
+        "Agnidus Agate Gemstone": 6,
+        "Everflame Seed": 20,
+        "Small Lamp Grass": 60,
+        "Weathered Arrowhead": 24
+      }
+    },
+    "talentMaterials": {
+      "book": "Freedom",
+      "boss": "Dvalin's Sigh",
+      "drop": "Firm Arrowhead"
+    },
+    "position": ["Sub_Dealer"],
+    "tier": {
+      "Sub_Dealer": "T3"
+    }
+  }, 
+  "Sucrose": {
+    "rank": 4,
+    "element": "Anemo",
+    "weapon": "Catalyst",
+    "region": "Mondstadt",
+    "stats": {
+      "Max_20": {
+        "Level": "20",
+        "HP": "1991",
+        "ATK": "37",
+        "DEF": "151",
+        "Additional": "No Data"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "3850",
+        "ATK": "71",
+        "DEF": "293",
+        "Additional": "No Data"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "4901",
+        "ATK": "90",
+        "DEF": "324",
+        "Additional": "Anemo DMG 6.0%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6090",
+        "ATK": "112",
+        "DEF": "463",
+        "Additional": "Anemo DMG 12.0%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7141",
+        "ATK": "132",
+        "DEF": "543",
+        "Additional": "Anemo DMG 12.0%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "8192",
+        "ATK": "151",
+        "DEF": "623",
+        "Additional": "Anemo DMG 18.0%"
+      },
+      "Max_90": {
+        "Level": "90",
+        "HP": "9243",
+        "ATK": "170",
+        "DEF": "703",
+        "Additional": "Anemo DMG 24.0%"
+      }
+    },
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Viridescent Venerer"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Wanderer's Troupe", "Scholar"],
+          "set": 2
+        }
+      },
+      "weapon": ["Sacrificial Fragments", "Mappa Mare"]
+    },
+    "ascensionMaterials": {
+      "items": ["Vayuda Turquoise Sliver", "Windwheel Aster", "Whopperflower Nectar", "Hurricane Seed"],
+      "Max_40": {
+        "Vayuda Turquoise Sliver": 1,
+        "Windwheel Aster": 3,
+        "Whopperflower Nectar": 3
+      },
+      "Max_50": {
+        "Vayuda Turquoise Fragment": 3,
+        "Hurricane Seed": 2,
+        "Windwheel Aster": 10,
+        "Whopperflower Nectar": 15
+      },
+      "Max_60": {
+        "Vayuda Turquoise Fragment": 6,
+        "Hurricane Seed": 4,
+        "Windwheel Aster": 20,
+        "Shimmering Nectar": 12
+      },
+      "Max_70": {
+        "Vayuda Turquoise Chunk": 3,
+        "Hurricane Seed": 8,
+        "Windwheel Aster": 30,
+        "Shimmering Nectar": 18
+      },
+      "Max_80": {
+        "Vayuda Turquoise Chunk": 6,
+        "Hurricane Seed": 12,
+        "Windwheel Aster": 45,
+        "Energy Nectar": 12
+      },
+      "Max_90": {
+        "Vayuda Turquoise Gemstone": 6,
+        "Hurricane Seed": 20,
+        "Windwheel Aster": 60,
+        "Energy Nectar": 24
+      }
+    },
+    "talentMaterials": {
+      "book": "Freedom",
+      "boss": "Spirit Locket of Boreas",
+      "drop": "Whopperflower Nectar"
+    },
+    "position": ["Sub_Dealer", "Supporter"],
+    "tier": {
+      "Sub_Dealer": "T2",
+      "Supporter": "T1"
+    }
+  },
+  "Xiangling": {
+    "rank": 4,
+    "element": "Pyro",
+    "weapon": "Polearm",
+    "region": "Liyue",
+    "stats": {
+      "Max_20": {
+        "Level": "20",
+        "HP": "2342",
+        "ATK": "49",
+        "DEF": "144",
+        "Additional": "No Data"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4529",
+        "ATK": "94",
+        "DEF": "279",
+        "Additional": "No Data"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5766",
+        "ATK": "119",
+        "DEF": "355",
+        "Additional": "Elemental Mastery +24"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "7164",
+        "ATK": "149",
+        "DEF": "441",
+        "Additional": "Elemental Mastery +48"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "8401",
+        "ATK": "174",
+        "DEF": "517",
+        "Additional": "Elemental Mastery +48"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9638",
+        "ATK": "200",
+        "DEF": "593",
+        "Additional": "Elemental Mastery +72"
+      },
+      "Max_90": {
+        "Level": "80",
+        "HP": "10122",
+        "ATK": "210",
+        "DEF": "623",
+        "Additional": "Elemental Mastery +96"
+      }
+    },
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Crimson Witch of Flames"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Gladiator's Finale"],
+          "set": 4
+        }
+      },
+      "weapon": ["Prototype Grudge", "Crescent Pike"]
+    },
+    "ascensionMaterials": {
+      "items": ["Agnidus Agate Sliver", "Jueyun Chili", "Slime Condensate", "Everflame Seed"],
+      "Max_40": {
+        "Agnidus Agate Sliver": 1,
+        "Jueyun Chili": 3,
+        "Slime Condensate": 3
+      },
+      "Max_50": {
+        "Agnidus Agate Fragment": 3,
+        "Everflame Seed": 2,
+        "Jueyun Chili": 10,
+        "Slime Condensate": 15
+      },
+      "Max_60": {
+        "Agnidus Agate Fragment": 6,
+        "Everflame Seed": 4,
+        "Jueyun Chili": 20,
+        "Slime Secretions": 12
+      },
+      "Max_70": {
+        "Agnidus Agate Chunk": 3,
+        "Everflame Seed": 8,
+        "Jueyun Chili": 30,
+        "Slime Secretions": 18
+      },
+      "Max_80": {
+        "Agnidus Agate Chunk": 6,
+        "Everflame Seed": 12,
+        "Jueyun Chili": 45,
+        "Slime Concentrate": 12
+      },
+      "Max_90": {
+        "Agnidus Agate Gemstone": 6,
+        "Everflame Seed": 20,
+        "Jueyun Chili": 60,
+        "Slime Concentrate": 24
+      }
+    },
+    "talentMaterials": {
+      "book": "Diligence",
+      "boss": "Dvalin's Claw",
+      "drop": "Slime Condensate"
+    },
+    "position": ["Main_Dealer", "Sub_Dealer"],
+    "tier": {
+      "Main_Dealer": "T2",
+      "Sub_Dealer": "T1"
+    }
+  },
+  "Xingqiu": {
+    "rank": 4,
+    "element": "Hydro",
+    "weapon": "Sword",
+    "region": "Liyue",
+    "stats": {
+      "Max_20": {
+        "Level": "20",
+        "HP": "2202",
+        "ATK": "44",
+        "DEF": "163",
+        "Additional": "No Data"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4257",
+        "ATK": "84",
+        "DEF": "316",
+        "Additional": "No Data"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5420",
+        "ATK": "107",
+        "DEF": "402",
+        "Additional": "ATK 6.0%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6735",
+        "ATK": "133",
+        "DEF": "499",
+        "Additional": "ATK 12.0%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7897",
+        "ATK": "156",
+        "DEF": "585",
+        "Additional": "ATK 12.0%"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9060",
+        "ATK": "179",
+        "DEF": "672",
+        "Additional": "ATK 18.0%"
+      },
+      "Max_90": {
+        "Level": "90",
+        "HP": "10223",
+        "ATK": "202",
+        "DEF": "759",
+        "Additional": "ATK 24.0%"
+      }
+    },
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Noblesse Oblige"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Noblesse Oblige", "Gladiator's Finale"],
+          "set": 2
+        }
+      },
+      "weapon": ["Sacrificial Sword"]
+    },
+    "ascensionMaterials": {
+      "items": ["Varunada Lazurite Sliver", "Silk Flower", "Damaged Mask", "Cleansing Heart"],
+      "Max_40": {
+        "Varunada Lazurite Sliver": 1,
+        "Silk Flower": 3,
+        "Damaged Mask": 3
+      },
+      "Max_50": {
+        "Varunada Lazurite Fragment": 3,
+        "Cleansing Heart": 2,
+        "Silk Flower": 10,
+        "Damaged Mask": 15
+      },
+      "Max_60": {
+        "Varunada Lazurite Fragment": 6,
+        "Cleansing Heart": 4,
+        "Silk Flower": 20,
+        "Stained Mask": 12
+      },
+      "Max_70": {
+        "Varunada Lazurite Chunk": 3,
+        "Cleansing Heart": 8,
+        "Silk Flower": 30,
+        "Stained Mask": 18
+      },
+      "Max_80": {
+        "Varunada Lazurite Chunk": 6,
+        "Cleansing Heart": 12,
+        "Silk Flower": 45,
+        "Ominous Mask": 12
+      },
+      "Max_90": {
+        "Varunada Lazurite Gemstone": 6,
+        "Cleansing Heart": 20,
+        "Silk Flower": 60,
+        "Ominous Mask": 24
+      }
+    },
+    "talentMaterials": {
+      "book": "Gold",
+      "boss": "Tail of Boreas",
+      "drop": "Damaged Mask"
+    },
+    "position": ["Supporter"],
+    "tier": {
+      "Supporter": "T1"
+    }
+  },
+  "Diona": {
+    "rank": 4,
+    "element": "Cryo",
+    "weapon": "Bow",
+    "region": "Mondstadt",
+    "stats": {
+      "Max_20": {
+        "Level": "20",
+        "HP": "2061",
+        "ATK": "69",
+        "DEF": "129",
+        "Additional": "No Data"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "3985",
+        "ATK": "112",
+        "DEF": "250",
+        "Additional": "No Data"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5074",
+        "ATK": "71",
+        "DEF": "252",
+        "Additional": "Cryo DMG 6.0%"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "6305",
+        "ATK": "140",
+        "DEF": "396",
+        "Additional": "Cryo DMG 12.0%"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "7393",
+        "ATK": "164",
+        "DEF": "464",
+        "Additional": "Cryo DMG 12.0%"
+
+      },
+      "Max_80": {
+        "Level": "70",
+        "HP": "7818",
+        "ATK": "173",
+        "DEF": "491",
+        "Additional": "Cryo DMG 18.0%"
+      },
+      "Max_90": {
+        "Level": "No Data",
+        "HP": "No Data",
+        "ATK": "No Data",
+        "DEF": "No Data",
+        "Additional": "No Data"
+      }
+    },
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Maiden Beloved"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Noblesse Oblige"],
+          "set": 4
+        }
+      },
+      "weapon": ["Sacrificial Bow"]
+    },
+    "ascensionMaterials": {
+      "items": ["Shivada Jade Sliver", "Calla Lily", "Firm Arrowhead", "Hoarfrost Core"],
+      "Max_40": {
+        "Shivada Jade Sliver": 1,
+        "Calla Lily": 3,
+        "Firm Arrowhead": 3
+      },
+      "Max_50": {
+        "Shivada Jade Fragment": 3,
+        "Hoarfrost Core": 2,
+        "Calla Lily": 10,
+        "Firm Arrowhead": 15
+      },
+      "Max_60": {
+        "Shivada Jade Fragment": 6,
+        "Hoarfrost Core": 4,
+        "Calla Lily": 20,
+        "Sharp Arrowhead": 12
+      },
+      "Max_70": {
+        "Shivada Jade Chunk": 3,
+        "Hoarfrost Core": 8,
+        "Calla Lily": 30,
+        "Sharp Arrowhead": 18
+      },
+      "Max_80": {
+        "Shivada Jade Chunk": 6,
+        "Hoarfrost Core": 12,
+        "Calla Lily": 45,
+        "Weathered Arrowhead": 12
+      },
+      "Max_90": {
+        "Shivada Jade Gemstone": 6,
+        "Hoarfrost Core": 20,
+        "Calla Lily": 60,
+        "Weathered Arrowhead": 24
+      }
+    },
+    "talentMaterials": {
+      "book": "Freedom",
+      "boss": "Shard of a Foul Legacy",
+      "drop": "Firm Arrowhead"
+    },
+    "position": ["Supporter"],
+    "tier": {
+      "Supporter": "T2"
+    }
+  },
+  "Xinyan": {
+    "rank": 4,
+    "element": "Pyro",
+    "weapon": "Claymore",
+    "region": "Liyue",
+    "stats": {
+      "Max_20": {
+        "Level": "20",
+        "HP": "2413",
+        "ATK": "54",
+        "DEF": "172",
+        "Additional": "No Data"
+      },
+      "Max_40": {
+        "Level": "40",
+        "HP": "4665",
+        "ATK": "103",
+        "DEF": "333",
+        "Additional": "No Data"
+      },
+      "Max_50": {
+        "Level": "50",
+        "HP": "5939",
+        "ATK": "132",
+        "DEF": "423",
+        "Additional": "No Data"
+      },
+      "Max_60": {
+        "Level": "60",
+        "HP": "7379",
+        "ATK": "164",
+        "DEF": "526",
+        "Additional": "No Data"
+
+      },
+      "Max_70": {
+        "Level": "70",
+        "HP": "8653",
+        "ATK": "192",
+        "DEF": "617",
+        "Additional": "No Data"
+
+      },
+      "Max_80": {
+        "Level": "80",
+        "HP": "9927",
+        "ATK": "220",
+        "DEF": "708",
+        "Additional": "No Data"
+      },
+      "Max_90": {
+        "Level": "90",
+        "HP": "11201",
+        "ATK": "249",
+        "DEF": "799",
+        "Additional": "No Data"
+      }
+    },
+    "recommendedEquip": {
+      "artifact": {
+        "first": {
+          "name": ["Crimson Witch of Flames"],
+          "set": 4
+        },
+        "second": {
+          "name": ["Retracing Bolide", "Bloodstained Chivalry"],
+          "set": 2
+        }
+      },
+      "weapon": ["Wolf's Gravestone", "Prototype Aminus"]
+    },
+    "ascensionMaterials": {
+      "items": ["Agnidus Agate Sliver", "Everflame Seed", "Violetgrass", "Treasure Hoarder Insignia"],
+      "Max_40": {
+        "Agnidus Agate Sliver": 1,
+        "Violetgrass": 3,
+        "Treasure Hoarder Insignia": 3
+      },
+      "Max_50": {
+        "Agnidus Agate Fragment": 3,
+        "Everflame Seed": 2,
+        "Violetgrass": 10,
+        "Treasure Hoarder Insignia": 15
+      },
+      "Max_60": {
+        "Agnidus Agate Fragment": 6,
+        "Everflame Seed": 4,
+        "Violetgrass": 20,
+        "Silver Raven Insignia": 12
+      },
+      "Max_70": {
+        "Agnidus Agate Chunk": 3,
+        "Everflame Seed": 8,
+        "Violetgrass": 30,
+        "Silver Raven Insignia": 18
+      },
+      "Max_80": {
+        "Agnidus Agate Chunk": 6,
+        "Everflame Seed": 12,
+        "Violetgrass": 45,
+        "Golden Raven Insignia": 12
+      },
+      "Max_90": {
+        "Agnidus Agate Gemstone": 6,
+        "Everflame Seed": 20,
+        "Violetgrass": 60,
+        "Golden Raven Insignia": 24
+      }
+    },
+    "talentMaterials": {
+      "book": "Gold",
+      "boss": "Tusk of Monoceros Caeli",
+      "drop": "Treasure Hoarder Insignia"
+    },
+    "position": ["Sub_Dealer"],
+    "tier": {
+      "Sub_Dealer": "T1"
+    }
+  }
+}

@@ -1,0 +1,648 @@
+{
+  "Summer Night's Waterballoon": {
+    "rank": 5,
+    "type": "HolyGrail",
+    "set": "Retracing Bolide"
+  },
+  "Summer Night's Moment": {
+    "rank": 5,
+    "type": "HourGlass",
+    "set": "Retracing Bolide"
+  },
+  "Summer Night's Finale": {
+    "rank": 5,
+    "type": "Feather",
+    "set": "Retracing Bolide"
+  },
+  "Summer Night's Bloom": {
+    "rank": 5,
+    "type": "Flower",
+    "set": "Retracing Bolide"
+  },
+  "Summer Night's Mask": {
+    "rank": 5,
+    "type": "Crown",
+    "set": "Retracing Bolide"
+  },
+  "Flower of Creviced Cliff": {
+    "rank": 5,
+    "type": "Flower",
+    "set": "Archaic Petra"
+  },
+  "Feather of Jagged Peaks": {
+    "rank": 5,
+    "type": "Feather",
+    "set": "Archaic Petra"
+  },
+  "Sundial of Enduring Jade": {
+    "rank": 5,
+    "type": "HourGlass",
+    "set": "Archaic Petra"
+  },
+  "Goblet of Chiseled Crag": {
+    "rank": 5,
+    "type": "HolyGrail",
+    "set": "Archaic Petra"
+  },
+  "Mask of Solitude Basalt": {
+    "rank": 5,
+    "type": "Crown",
+    "set": "Archaic Petra"
+  },
+  "Lavawalker's Resolution": {
+    "rank": 5,
+    "type": "Flower",
+    "set": "Lavawalker"
+  },
+  "Lavawalker's Salvation": {
+    "rank": 5,
+    "type": "Feather",
+    "set": "Lavawalker"
+  },
+  "Lavawalker's Torment": {
+    "rank": 5,
+    "type": "HourGlass",
+    "set": "Lavawalker"
+  },
+  "Lavawalker's Epiphany": {
+    "rank": 5,
+    "type": "HolyGrail",
+    "set": "Lavawalker"
+  },
+  "Lavawalker's Wisdom": {
+    "rank": 5,
+    "type": "Crown",
+    "set": "Lavawalker"
+  },
+  "Witch's Flower of Blaze": {
+    "rank": 5,
+    "type": "Flower",
+    "set": "Crimson Witch of Flames"
+  },
+  "Witch's Ever-Burning Plume": {
+    "rank": 5,
+    "type": "Feather",
+    "set": "Crimson Witch of Flames"
+  },
+  "Witch's End Time": {
+    "rank": 5,
+    "type": "HourGlass",
+    "set": "Crimson Witch of Flames"
+  },
+  "Witch's Heart Flames": {
+    "rank": 5,
+    "type": "HolyGrail",
+    "set": "Crimson Witch of Flames"
+  },
+  "Witch's Scorching Hat": {
+    "rank": 5,
+    "type": "Crown",
+    "set": "Crimson Witch of Flames"
+  },
+  "Thundershoother's Heart": {
+    "rank": 5,
+    "type": "Flower",
+    "set": "Thundershoother"
+  },
+  "Thundershoother's Plume": {
+    "rank": 5,
+    "type": "Feather",
+    "set": "Thundershoother"
+  },
+  "Hour of Soothing Thunder": {
+    "rank": 5,
+    "type": "HourGlass",
+    "set": "Thundershoother"
+  },
+  "Thundershoother's Goblet": {
+    "rank": 5,
+    "type": "HolyGrail",
+    "set": "Thundershoother"
+  },
+  "Thundershoother's Diadem": {
+    "rank": 5,
+    "type": "Crown",
+    "set": "Thundershoother"
+  },
+  "Thunderbird's Mercy": {
+    "rank": 5,
+    "type": "Flower",
+    "set": "Thundering Fury"
+  },
+  "Survivor of Catastrophe": {
+    "rank": 5,
+    "type": "Feather",
+    "set": "Thundering Fury"
+  },
+  "Hourglass of Thunder": {
+    "rank": 5,
+    "type": "HourGlass",
+    "set": "Thundering Fury"
+  },
+  "Omen of Thunderstorm": {
+    "rank": 5,
+    "type": "HolyGrail",
+    "set": "Thundering Fury"
+  },
+  "Thunder Summoner's Crown": {
+    "rank": 5,
+    "type": "Crown",
+    "set": "Thundering Fury"
+  },
+  
+  "In Remembrance of Viridescent Fields": {
+    "rank": 5,
+    "type": "Flower",
+    "set": "Viridescent Venerer"
+  },
+  "Viridescent Arrow Feather": {
+    "rank": 5,
+    "type": "Feather",
+    "set": "Viridescent Venerer"
+  },
+  "Viridescent Venerer's Determination": {
+    "rank": 5,
+    "type": "HourGlass",
+    "set": "Viridescent Venerer"
+  },
+  "Viridescent Venerer's Vessel": {
+    "rank": 5,
+    "type": "HolyGrail",
+    "set": "Viridescent Venerer"
+  },
+  "Viridescent Venerer's Diadem": {
+    "rank": 5,
+    "type": "Crown",
+    "set": "Viridescent Venerer"
+  },
+  "Troupe's Dawnlight": {
+    "rank": 5,
+    "type": "Flower",
+    "set": "Wanderer's Troupe"
+  },
+  "Bard's Arrow Feather": {
+    "rank": 5,
+    "type": "Feather",
+    "set": "Wanderer's Troupe"
+  },
+  "Concert's Final Hour": {
+    "rank": 5,
+    "type": "HourGlass",
+    "set": "Wanderer's Troupe"
+  },
+  "Wanderer's String Kettle": {
+    "rank": 5,
+    "type": "HolyGrail",
+    "set": "Wanderer's Troupe"
+  },
+  "Conductor's Top Hat": {
+    "rank": 5,
+    "type": "Crown",
+    "set": "Wanderer's Troupe"
+  },
+  "Bloodstained Flower of Iron": {
+    "rank": 5,
+    "type": "Flower",
+    "set": "Bloodstained Chivalry"
+  },
+  "Bloodstained Black Plume": {
+    "rank": 5,
+    "type": "Feather",
+    "set": "Bloodstained Chivalry"
+  },
+  "Bloodstained Final Hour": {
+    "rank": 5,
+    "type": "HourGlass",
+    "set": "Bloodstained Chivalry"
+  },
+  "Bloodstained Chevalier's Goblet": {
+    "rank": 5,
+    "type": "HolyGrail",
+    "set": "Bloodstained Chivalry"
+  },
+  "Bloodstained Iron Mask": {
+    "rank": 5,
+    "type": "Crown",
+    "set": "Bloodstained Chivalry"
+  },
+  "Royal Flora": {
+    "rank": 5,
+    "type": "Flower",
+    "set": "Noblesse Oblige"
+  },
+  "Royal Plume": {
+    "rank": 5,
+    "type": "Feather",
+    "set": "Noblesse Oblige"
+  },
+  "Royal Pocket Watch": {
+    "rank": 5,
+    "type": "HourGlass",
+    "set": "Noblesse Oblige"
+  },
+  "Royal Silver Urn": {
+    "rank": 5,
+    "type": "HolyGrail",
+    "set": "Noblesse Oblige"
+  },
+  "Royal Masque": {
+    "rank": 5,
+    "type": "Crown",
+    "set": "Noblesse Oblige"
+  },
+  "Maiden's Distant Love": {
+    "rank": 5,
+    "type": "Flower",
+    "set": "Maiden Beloved"
+  },
+  "Maiden's Heart-stricken Infatuation": {
+    "rank": 5,
+    "type": "Feather",
+    "set": "Maiden Beloved"
+  },
+  "Maiden's Passing Youth": {
+    "rank": 5,
+    "type": "HourGlass",
+    "set": "Maiden Beloved"
+  },
+  "Maiden's Fleeting Leisure": {
+    "rank": 5,
+    "type": "HolyGrail",
+    "set": "Maiden Beloved"
+  },
+  "Maiden's Fading Beauty": {
+    "rank": 5,
+    "type": "Crown",
+    "set": "Maiden Beloved"
+  },
+  "Gladiator's Nostalgia": {
+    "rank": 5,
+    "type": "Flower",
+    "set": "Gladiator's Finale"
+  },
+  "Gladiator's Destiny": {
+    "rank": 5,
+    "type": "Feather",
+    "set": "Gladiator's Finale"
+  },
+  "Gladiator's Longing": {
+    "rank": 5,
+    "type": "HourGlass",
+    "set": "Gladiator's Finale"
+  },
+  "Gladiator's Intoxication": {
+    "rank": 5,
+    "type": "HolyGrail",
+    "set": "Gladiator's Finale"
+  },
+  "Gladiator's Triumphus": {
+    "rank": 5,
+    "type": "Crown",
+    "set": "Gladiator's Finale"
+  },
+  "Scholar's Bookmark": {
+    "rank": 4,
+    "type": "Flower",
+    "set": "Scholar"
+  },
+  "Scholar's Quill Pen": {
+    "rank": 4,
+    "type": "Feather",
+    "set": "Scholar"
+  },
+  "Scholar's Clock": {
+    "rank": 4,
+    "type": "HourGlass",
+    "set": "Scholar"
+  },
+  "Scholar's Ink Cup": {
+    "rank": 4,
+    "type": "HolyGrail",
+    "set": "Scholar"
+  },
+  "Scholar's Lens": {
+    "rank": 4,
+    "type": "Crown",
+    "set": "Scholar"
+  },
+  "Gambler's Brooch": {
+    "rank": 4,
+    "type": "Flower",
+    "set": "Gambler"
+  },
+  "Gambler's Feather Accessory": {
+    "rank": 4,
+    "type": "Feather",
+    "set": "Gambler"
+  },
+  "Gambler's Pocket Watch": {
+    "rank": 4,
+    "type": "HourGlass",
+    "set": "Gambler"
+  },
+  "Gambler's Dice Cup": {
+    "rank": 4,
+    "type": "HolyGrail",
+    "set": "Gambler"
+  },
+  "Gambler's Earrings": {
+    "rank": 4,
+    "type": "Crown",
+    "set": "Gambler"
+  },
+  "Medal of the Brave": {
+    "rank": 4,
+    "type": "Flower",
+    "set": "Heart of Bravery"
+  },
+  "Prospect of the Brave": {
+    "rank": 4,
+    "type": "Feather",
+    "set": "Heart of Bravery"
+  },
+  "Fortitude of the Brave": {
+    "rank": 4,
+    "type": "HourGlass",
+    "set": "Heart of Bravery"
+  },
+  "Outset of the Brave": {
+    "rank": 4,
+    "type": "HolyGrail",
+    "set": "Heart of Bravery"
+  },
+  "Crown of the Brave": {
+    "rank": 4,
+    "type": "Crown",
+    "set": "Heart of Bravery"
+  },
+  "Tiny Miracle's Flower": {
+    "rank": 4,
+    "type": "Flower",
+    "set": "Tiny Miracle's"
+  },
+  "Tiny Miracle's Feather": {
+    "rank": 4,
+    "type": "Feather",
+    "set": "Tiny Miracle's"
+  },
+  "Tiny Miracle's Hourglass": {
+    "rank": 4,
+    "type": "HourGlass",
+    "set": "Tiny Miracle's"
+  },
+  "Tiny Miracle's Goblet": {
+    "rank": 4,
+    "type": "HolyGrail",
+    "set": "Tiny Miracle's"
+  },
+  "Tiny Miracle's Earrings": {
+    "rank": 4,
+    "type": "Crown",
+    "set": "Tiny Miracle's"
+  },
+  "Guardian's Flower": {
+    "rank": 4,
+    "type": "Flower",
+    "set": "Defender's Will"
+  },
+  "Guardian's Sigil": {
+    "rank": 4,
+    "type": "Feather",
+    "set": "Defender's Will"
+  },
+  "Guardian's Clock": {
+    "rank": 4,
+    "type": "HourGlass",
+    "set": "Defender's Will"
+  },
+  "Guardian's Vessel": {
+    "rank": 4,
+    "type": "HolyGrail",
+    "set": "Defender's Will"
+  },
+  "Guardian's Band": {
+    "rank": 4,
+    "type": "Crown",
+    "set": "Defender's Will"
+  },
+  "Martial Artist's Red Flower": {
+    "rank": 4,
+    "type": "Flower",
+    "set": "Martial Artist"
+  },
+  "Martial Artist's Feather Accessory": {
+    "rank": 4,
+    "type": "Feather",
+    "set": "Martial Artist"
+  },
+  "Martial Artist's Water Hourglass": {
+    "rank": 4,
+    "type": "HourGlass",
+    "set": "Martial Artist"
+  },
+  "Martial Artist's Wine Cup": {
+    "rank": 4,
+    "type": "HolyGrail",
+    "set": "Martial Artist"
+  },
+  "Martial Artist's Bandana": {
+    "rank": 4,
+    "type": "Crown",
+    "set": "Martial Artist"
+  },
+  "Heart of Comeradeship": {
+    "rank": 4,
+    "type": "Flower",
+    "set": "Resolution of Sojourner"
+  },
+  "Feather of Homecoming": {
+    "rank": 4,
+    "type": "Feather",
+    "set": "Resolution of Sojourner"
+  },
+  "Sundial of the Sojourner": {
+    "rank": 4,
+    "type": "HourGlass",
+    "set": "Resolution of Sojourner"
+  },
+  "Goblet of the Sojourner": {
+    "rank": 4,
+    "type": "HolyGrail",
+    "set": "Resolution of Sojourner"
+  },
+  "Crown of Parting": {
+    "rank": 4,
+    "type": "Crown",
+    "set": "Resolution of Sojourner"
+  },
+  "Exile's Flower": {
+    "rank": 4,
+    "type": "Flower",
+    "set": "The Exile"
+  },
+  "Exile's Feather": {
+    "rank": 4,
+    "type": "Feather",
+    "set": "The Exile"
+  },
+  "Exile's Pocket Watch": {
+    "rank": 4,
+    "type": "HourGlass",
+    "set": "The Exile"
+  },
+  "Exile's Goblet": {
+    "rank": 4,
+    "type": "HolyGrail",
+    "set": "The Exile"
+  },
+  "Exile's Circlet": {
+    "rank": 4,
+    "type": "Crown",
+    "set": "The Exile"
+  },
+  "Berserker's Rose": {
+    "rank": 4,
+    "type": "Flower",
+    "set": "Berserker"
+  },
+  "Berserker's Indigo Feather": {
+    "rank": 4,
+    "type": "Feather",
+    "set": "Berserker"
+  },
+  "Berserker's Timepiece": {
+    "rank": 4,
+    "type": "HourGlass",
+    "set": "Berserker"
+  },
+  "Berserker's Bone Goblet": {
+    "rank": 4,
+    "type": "HolyGrail",
+    "set": "Berserker"
+  },
+  "Berserker's Battle Mask": {
+    "rank": 4,
+    "type": "Crown",
+    "set": "Berserker"
+  },
+  "Instructor's Brooch": {
+    "rank": 4,
+    "type": "Flower",
+    "set": "Instructor"
+  },
+  "Instructor's Feather Accessory": {
+    "rank": 4,
+    "type": "Feather",
+    "set": "Instructor"
+  },
+  "Instructor's Pocket Watch": {
+    "rank": 4,
+    "type": "HourGlass",
+    "set": "Instructor"
+  },
+  "Instructor's Tea Cup": {
+    "rank": 4,
+    "type": "HolyGrail",
+    "set": "Instructor"
+  },
+  "Instructor's Cap": {
+    "rank": 4,
+    "type": "Crown",
+    "set": "Instructor"
+  },
+  "Traveling Doctor's Silver Lotus": {
+    "rank": 3,
+    "type": "Flower",
+    "set": "Traveling Doctor"
+  },
+  "Traveling Doctor's Owl Feather": {
+    "rank": 3,
+    "type": "Feather",
+    "set": "Traveling Doctor"
+  },
+  "Traveling Doctor's Pocket Watch": {
+    "rank": 3,
+    "type": "HourGlass",
+    "set": "Traveling Doctor"
+  },
+  "Traveling Doctor's Medicine Pot": {
+    "rank": 3,
+    "type": "HolyGrail",
+    "set": "Traveling Doctor"
+  },
+  "Traveling Doctor's Handkerchief": {
+    "rank": 3,
+    "type": "Crown",
+    "set": "Traveling Doctor"
+  },
+  "Lucky Dog's Clover": {
+    "rank": 3,
+    "type": "Flower",
+    "set": "Lucky Dog"
+  },
+  "Lucky Dog's Eagle Feather": {
+    "rank": 3,
+    "type": "Feather",
+    "set": "Lucky Dog"
+  },
+  "Lucky Dog's Hourglass": {
+    "rank": 3,
+    "type": "HourGlass",
+    "set": "Lucky Dog"
+  },
+  "Lucky Dog's Goblet": {
+    "rank": 3,
+    "type": "HolyGrail",
+    "set": "Lucky Dog"
+  },
+  "Lucky Dog's Silver Circlet": {
+    "rank": 3,
+    "type": "Crown",
+    "set": "Lucky Dog"
+  },
+  "Adventurer's Flower": {
+    "rank": 3,
+    "type": "Flower",
+    "set": "Adventurer"
+  },
+  "Adventurer's Tail Feather": {
+    "rank": 3,
+    "type": "Feather",
+    "set": "Adventurer"
+  },
+  "Adventurer's Pocket Watch": {
+    "rank": 3,
+    "type": "HourGlass",
+    "set": "Adventurer"
+  },
+  "Adventurer's Golden Goblet": {
+    "rank": 3,
+    "type": "HolyGrail",
+    "set": "Adventurer"
+  },
+  "Adventurer's Bandana": {
+    "rank": 3,
+    "type": "Crown",
+    "set": "Adventurer"
+  },
+  "Tiara of Torrents": {
+    "rank": 4,
+    "type": "Crown",
+    "set": "Prayers for Destiny"
+  },
+  "Tiara of Flame": {
+    "rank": 4,
+    "type": "Crown",
+    "set": "Prayers for Illumination"
+  },
+  "Tiara of Frost": {
+    "rank": 4,
+    "type": "Crown",
+    "set": "Prayers to Springtime"
+  },
+  "Tiara of Thunder": {
+    "rank": 5,
+    "type": "Crown",
+    "set": "Prayers for Wisdom"
+  }
+}

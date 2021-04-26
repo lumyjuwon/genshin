@@ -1,0 +1,1668 @@
+{
+  "Amos' Bow": {
+    "rank": 5,
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX90 90Lv",
+      "ATK": "608",
+      "Additional": "ATK 49.6%"
+    },
+    "ascesion": {
+      "first": ["Fetters of the Dandelion Gladiator", 5],
+      "second": ["Chains of the Dandelion Gladiator", 5],
+      "third": ["Chains of the Dandelion Gladiator", 9],
+      "fourth": ["Shackles of the Dandelion Gladiator", 5],
+      "fifth": ["Shackles of the Dandelion Gladiator", 9],
+      "sixth": ["Dream of the Dandelion Gladiator", 6]
+    }
+  },
+  "Skyward Harp": {
+    "rank": 5,
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX90 90Lv",
+      "ATK": "674",
+      "Additional": "CRIT Rate 22.1%"
+    },
+    "ascesion": {
+      "first": ["Boreal Wolf's Milk Tooth", 5],
+      "second": ["Boreal Wolf's Cracked Tooth", 5],
+      "third": ["Boreal Wolf's Cracked Tooth", 9],
+      "fourth": ["Boreal Wolf's Broken Fang", 5],
+      "fifth": ["Boreal Wolf's Broken Fang", 9],
+      "sixth": ["Boreal Wolf's Nostalgia", 6]
+    }
+  },
+  "Alley Hunter": {
+    "rank": 4,
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "427",
+      "Additional": "CRIT Rate 33.5%"
+    },
+    "ascesion": {
+      "first": ["Boreal Wolf's Milk Tooth"],
+      "second": ["Boreal Wolf's Cracked Tooth"],
+      "third": ["Boreal Wolf's Cracked Tooth"],
+      "fourth": ["Boreal Wolf's Broken Fang"],
+      "fifth": ["Boreal Wolf's Broken Fang"] ,
+      "sixth": ["Boreal Wolf's Nostalgia"]
+    }
+  },
+  "The Stringless": {
+    "rank": 4,
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "Elemental Mastery 150"
+    },
+    "ascesion": {
+      "first": ["Tile of Decarabian's Tower"],
+      "second": ["Debris of Decarabian's City"],
+      "third": ["Debris of Decarabian's City"],
+      "fourth": ["Fragment of Decarabian's Epic"],
+      "fifth": ["Fragment of Decarabian's Epic"] ,
+      "sixth": ["Scattered Piece of Decarabian's Dream"]
+    }
+  },
+  "Sacrificial Bow": {
+    "rank": 4,
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX70 60Lv",
+      "ATK": "387",
+      "Additional": "Energy Recharge 22.6%"
+    },
+    "ascesion": {
+      "first": ["Boreal Wolf's Milk Tooth"],
+      "second": ["Boreal Wolf's Cracked Tooth"],
+      "third": ["Boreal Wolf's Cracked Tooth"],
+      "fourth": ["Boreal Wolf's Broken Fang"],
+      "fifth": ["Boreal Wolf's Broken Fang"] ,
+      "sixth": ["unknown"]
+    }
+  },
+  "Rust": {
+    "rank": 4,
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "ATK 37.7%"
+    },
+    "ascesion": {
+      "first": ["Luminous Sands from Guyun"],
+      "second": ["Lustrous Stone from Guyun"],
+      "third": ["Lustrous Stone from Guyun"],
+      "fourth": ["Relic from Guyun"],
+      "fifth": ["Relic from Guyun"] ,
+      "sixth": ["Divine Body from Guyun"]
+    }
+  },
+  "Royal Bow": {
+    "rank": 4,
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "ATK 37.7%"
+    },
+    "ascesion": {
+      "first": ["unknown"],
+      "second": ["unknown"],
+      "third": ["unknown"],
+      "fourth": ["unknown"],
+      "fifth": ["unknown"],
+      "sixth": ["unknown"]
+    }
+  },
+  "The Viridescent Hunt": {
+    "rank": 4,
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "CRIT Rate 25.1%"
+    },
+    "ascesion": {
+      "first": ["Tile of Decarabian's Tower"],
+      "second": ["Debris of Decarabian's City"],
+      "third": ["Debris of Decarabian's City"],
+      "fourth": ["Fragment of Decarabian's Epic"],
+      "fifth": ["Fragment of Decarabian's Epic"],
+      "sixth": ["Scattered Piece of Decarabian's Dream"]
+    }
+  },
+  "Prototype Crescent": {
+    "rank": 4,
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "ATK 37.7%"
+    },
+    "ascesion": {
+      "first": ["Mist Veiled Lead Elixir"],
+      "second": ["Mist Veiled Mercury Elixir"],
+      "third": ["Mist Veiled Mercury Elixir"],
+      "fourth": ["Mist Veiled Gold Elixir"],
+      "fifth": ["Mist Veiled Gold Elixir"],
+      "sixth": ["Mist Veiled Primo Elixir"]
+    }
+  },
+  "Favonius Warbow": {
+    "rank": 4,
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "427",
+      "Additional": "Energy Recharge 55.9%"
+    },
+    "ascesion": {
+      "first": ["Fetters of the Dandelion Gladiator"],
+      "second": ["Chains of the Dandelion Gladiator"],
+      "third": ["Chains of the Dandelion Gladiator"],
+      "fourth": ["Shackles of the Dandelion Gladiator"],
+      "fifth":  ["Shackles of the Dandelion Gladiator"],
+      "sixth":  ["Dream of the Dandelion Gladiator"]
+    }
+  },
+  "Compound Bow": {
+    "rank": 4,
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "427",
+      "Additional": "Physical DMG 62.9%"
+    },
+    "ascesion": {
+      "first": ["Grain of Aerosiderite"],
+      "second": ["Piece of Aerosiderite"],
+      "third": ["Piece of Aerosiderite"],
+      "fourth": ["Bit of Aerosiderite"],
+      "fifth": ["Bit of Aerosiderite"] ,
+      "sixth": ["Chunk of Aerosiderite"]
+    }
+  },
+  "Blackcliff Warbow": {
+    "rank": 4,
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "523",
+      "Additional": "ATK 25.1%"
+    },
+    "ascesion": {
+      "first": ["Luminous Sands from Guyun"],
+      "second": ["Lustrous Stone from Guyun"],
+      "third": ["Lustrous Stone from Guyun"],
+      "fourth": ["Relic from Guyun"],
+      "fifth": ["Relic from Guyun"],
+      "sixth": ["Divine Body from Guyun"]
+    }
+  },
+  "Raven Bow": {
+    "rank": 3,
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX60 50Lv",
+      "ATK": "259",
+      "Additional": "Elemantal Mastery 61"
+    },
+    "ascesion": {
+      "first": ["Tile of Decarabian's Tower"],
+      "second": ["Debris of Decarabian's City"],
+      "third": ["Debris of Decarabian's City"],
+      "fourth": ["Fragment of Decarabian's Epic"],
+      "fifth": ["Fragment of Decarabian's Epic"],
+      "sixth": ["Scattered Piece of Decarabian's Dream"]
+    }
+  },
+  "Messenger": {
+    "rank": 3,
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX80 70Lv",
+      "ATK": "363",
+      "Additional": "CRIT DMG 25.7%"
+    },
+    "ascesion": {
+      "first": ["Mist Veiled Lead Elixir"],
+      "second": ["Mist Veiled Mercury Elixir"],
+      "third": ["Mist Veiled Mercury Elixir"],
+      "fourth": ["Mist Veiled Gold Elixir"],
+      "fifth": ["Mist Veiled Gold Elixir"],
+      "sixth": ["Mist Veiled Primo Elixir"]
+    }
+  },
+  "Ebony Bow": {
+    "rank": 3,
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX80 70Lv",
+      "ATK": "363",
+      "Additional": "No Data"
+    },
+    "ascesion": {
+      "first": ["Unknown"],
+      "second": ["Unknown"],
+      "third": ["Unknown"],
+      "fourth": ["Unknown"],
+      "fifth": ["Unknown"],
+      "sixth": ["Unknown"]
+    }
+  },
+  "Sharpshooter's Oath": {
+    "rank": 3,
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX60 50Lv",
+      "ATK": "236",
+      "Additional": "CRIT DMG 30.4%"
+    },
+    "ascesion": {
+      "first": ["Boreal Wolf's Milk Tooth"],
+      "second": ["Boreal Wolf's Cracked Tooth"],
+      "third": ["Boreal Wolf's Cracked Tooth"],
+      "fourth": ["Boreal Wolf's Broken Fang"],
+      "fifth": ["Boreal Wolf's Broken Fang"] ,
+      "sixth": ["Boreal Wolf's Nostalgia"]
+    }
+  },
+  "Slingshot": {
+    "rank": 3,
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "334",
+      "Additional": "CRIT Rate 28.5%"
+    },
+    "ascesion": {
+      "first": ["Luminous Sands from Guyun"],
+      "second": ["Lustrous Stone from Guyun"],
+      "third": ["Lustrous Stone from Guyun"],
+      "fourth": ["Relic from Guyun"],
+      "fifth":  ["Relic from Guyun"],
+      "sixth":  ["Divine Body from Guyun"]
+    }
+  },
+  "Recurve Bow": {
+    "rank": 3,
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX60 50Lv",
+      "ATK": "212",
+      "Additional": "HP 30.4%"
+    },
+    "ascesion": {
+      "first": ["Fetters of the Dandelion Gladiator"],
+      "second": ["Chains of the Dandelion Gladiator"],
+      "third": ["Chains of the Dandelion Gladiator"],
+      "fourth": ["Shackles of the Dandelion Gladiator"],
+      "fifth": ["Shackles of the Dandelion Gladiator"] ,
+      "sixth": ["Dream of the Dandelion Gladiator"]
+    }
+  },
+  "Seasoned Hunter's Bow": {
+    "rank": 2,
+    "type": "Bow",
+    "stats": {
+      "Level": "No Data",
+      "ATK": "No Data",
+      "Additional": "None"
+    },
+    "ascesion": {
+      "first": ["Boreal Wolf's Milk Tooth"],
+      "second": ["Boreal Wolf's Cracked Tooth"],
+      "third": ["Boreal Wolf's Cracked Tooth"],
+      "fourth": ["Boreal Wolf's Broken Fang"],
+      "fifth": ["MAX"],
+      "sixth": ["MAX"]
+    }
+  },
+  "Hunter's Bow": {
+    "rank": 1,
+    "type": "Bow",
+    "stats": {
+      "Level": "MAX70 70Lv",
+      "ATK": "ATK 185",
+      "Additional": "None"
+    },
+    "ascesion": {
+      "first": ["Boreal Wolf's Milk Tooth"],
+      "second": ["Boreal Wolf's Cracked Tooth"],
+      "third": ["Boreal Wolf's Cracked Tooth"],
+      "fourth": ["Boreal Wolf's Broken Fang"],
+      "fifth": ["MAX"],
+      "sixth": ["MAX"]
+    }
+  },
+  "Lost Prayer to the Sacred Winds": {
+    "rank": 5,
+    "type": "Catalyst",
+    "stats": {
+      "Level": "MAX90 90Lv",
+      "ATK": "608",
+      "Additional": "CRIT Rate 33.1%"
+    },
+    "ascesion": {
+      "first": ["Fetters of the Dandelion Gladiator"],
+      "second": ["Chains of the Dandelion Gladiator"],
+      "third": ["Chains of the Dandelion Gladiator"],
+      "fourth": ["Shackles of the Dandelion Gladiator"],
+      "fifth": ["Shackles of the Dandelion Gladiator"],
+      "sixth": ["Dream of the Dandelion Gladiator"]
+    }
+  },
+  "Skyward Atlas": {
+    "rank": 5,
+    "type": "Catalyst",
+    "stats": {
+      "Level": "MAX90 90Lv",
+      "ATK": "674",
+      "Additional": "ATK 33.1%"
+    },
+    "ascesion": {
+      "first": ["Boreal Wolf's Milk Tooth"],
+      "second": ["Boreal Wolf's Cracked Tooth"],
+      "third": ["Boreal Wolf's Cracked Tooth"],
+      "fourth": ["Boreal Wolf's Broken Fang"],
+      "fifth": ["Boreal Wolf's Broken Fang"],
+      "sixth": ["Boreal Wolf's Nostalgia"]
+    }
+  },
+  "Memory of Dust": {
+    "rank": 5,
+    "type": "Catalyst",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "563",
+      "Additional": "ATK 45.3%"
+    },
+    "ascesion": {
+      "first": ["Grain of Aerosiderite"],
+      "second": ["Piece of Aerosiderite"],
+      "third": ["Piece of Aerosiderite"],
+      "fourth": ["Bit of Aerosiderite"],
+      "fifth": ["Bit of Aerosiderite"],
+      "sixth": ["Chunk of Aerosiderite"]
+    }
+  },
+  "Wine and Song": {
+    "rank": 4,
+    "type": "Catalyst",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "Energy Recharge 41.9%"
+    },
+    "ascesion": {
+      "first": [""],
+      "second": [""],
+      "third": [""],
+      "fourth": [""],
+      "fifth": [""],
+      "sixth": [""]
+    }
+  },
+  "Blackcliff Amulet": {
+    "rank": 4,
+    "type": "Catalyst",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "CRIT DMG 50.3%"
+    },
+    "ascesion": {
+      "first": [""],
+      "second": [""],
+      "third": [""],
+      "fourth": [""],
+      "fifth": [""],
+      "sixth": [""]
+    }
+  },
+  "Eye of Perception": {
+    "rank": 4,
+    "type": "Catalyst",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "427",
+      "Additional": "ATK 50.3%"
+    },
+    "ascesion": {
+      "first": ["Mist Veiled Lead Elixir"],
+      "second": ["Mist Veiled Mercury Elixir"],
+      "third": ["Mist Veiled Mercury Elixir"],
+      "fourth": ["Mist Veiled Gold Elixir"],
+      "fifth": ["Mist Veiled Gold Elixir"],
+      "sixth": ["Mist Veiled Primo Elixir"]
+    }
+  },
+  "Favonius Codex": {
+    "rank": 4,
+    "type": "Catalyst",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "Energy Recharge 41.9%"
+    },
+    "ascesion": {
+      "first": ["Tile of Decarabian's Tower"],
+      "second": ["Debris of Decarabian's City"],
+      "third": ["Debris of Decarabian's City"],
+      "fourth": ["Fragment of Decarabian's Epic"],
+      "fifth": ["Fragment of Decarabian's Epic"],
+      "sixth": ["Unknown"]
+    }
+  },
+  "Mappa Mare": {
+    "rank": 4,
+    "type": "Catalyst",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "523",
+      "Additional": "Elemental Mastery 101"
+    },
+    "ascesion": {
+      "first": ["Grain of Aerosiderite"],
+      "second": ["Piece of Aerosiderite"],
+      "third": ["Piece of Aerosiderite"],
+      "fourth": ["Bit of Aerosiderite"],
+      "fifth": ["Bit of Aerosiderite"],
+      "sixth": ["Chunk of Aerosiderites"]
+    }
+  },
+  "The Widsith": {
+    "rank": 4,
+    "type": "Catalyst",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "CRIT DMG 50.3%"
+    },
+    "ascesion": {
+      "first": ["Boreal Wolf's Milk Tooth"],
+      "second": ["Boreal Wolf's Cracked Tooth"],
+      "third": ["Boreal Wolf's Cracked Tooth"],
+      "fourth": ["Boreal Wolf's Broken Fang"],
+      "fifth": ["Boreal Wolf's Broken Fang"],
+      "sixth": ["Boreal Wolf's Nostalgia"]
+    }
+  },
+  "Solar Pearl": {
+    "rank": 4,
+    "type": "Catalyst",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "CRIT Rate 25.1%"
+    },
+    "ascesion": {
+      "first": ["Luminous Sands from Guyun"],
+      "second": ["Lustrous Stone from Guyun"],
+      "third": ["Lustrous Stone from Guyun"],
+      "fourth": ["Relic from Guyun"],
+      "fifth": ["Relic from Guyun"],
+      "sixth": ["Divine Body from Guyun"]
+    }
+  },
+  "Prototype Malice": {
+    "rank": 4,
+    "type": "Catalyst",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "HP 37.7%"
+    },
+    "ascesion": {
+      "first": ["Mist Veiled Lead Elixir"],
+      "second": ["Mist Veiled Mercury Elixir"],
+      "third": ["Mist Veiled Mercury Elixir"],
+      "fourth": ["Mist Veiled Mercury Elixir"],
+      "fifth": ["Mist Veiled Mercury Elixir"],
+      "sixth": ["Mist Veiled Primo Elixir"]
+    }
+  },
+  "Royal Grimoire": {
+    "rank": 4,
+    "type": "Catalyst",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "523",
+      "Additional": "ATK 25.1%"
+    },
+    "ascesion": {
+      "first": ["Tile of Decarabian's Tower"],
+      "second": ["Debris of Decarabian's City"],
+      "third": ["Debris of Decarabian's City"],
+      "fourth": ["Unknown"],
+      "fifth": ["Unknown"],
+      "sixth": ["Unknown"]
+    }
+  },
+  "Sacrificial Fragments": {
+    "rank": 4,
+    "type": "Catalyst",
+    "stats": {
+      "Level": "MAX80 70Lv",
+      "ATK": "373",
+      "Additional": "Elemental Mastery 182"
+    },
+    "ascesion": {
+      "first": ["Fetters of the Dandelion Gladiator"],
+      "second": ["Chains of the Dandelion Gladiator"],
+      "third": ["Chains of the Dandelion Gladiator"],
+      "fourth": ["Shackles of the Dandelion Gladiator"],
+      "fifth": ["Shackles of the Dandelion Gladiator"],
+      "sixth": ["Dream of the Dandelion Gladiator"]
+    }
+  },
+  "Twin Nephrite": {
+    "rank": 3,
+    "type": "Catalyst",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "415",
+      "Additional": "No Data"
+    },
+    "ascesion": {
+      "first": ["Mist Veiled Lead Elixir"],
+      "second": ["Mist Veiled Mercury Elixir"],
+      "third": ["Mist Veiled Mercury Elixir"],
+      "fourth": ["Mist Veiled Gold Elixir"],
+      "fifth": ["Mist Veiled Gold Elixir"],
+      "sixth": ["Mist Veiled Primo Elixir"]
+    }
+  },
+  "Thrilling Tales of Dragon Slayers": {
+    "rank": 3,
+    "type": "Catalyst",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "375",
+      "Additional": "32.1%"
+    },
+    "ascesion": {
+      "first": ["Boreal Wolf's Milk Tooth"],
+      "second": ["Boreal Wolf's Cracked Tooth"],
+      "third": ["Boreal Wolf's Cracked Tooth"],
+      "fourth": ["Boreal Wolf's Broken Fang"],
+      "fifth": ["Boreal Wolf's Broken Fang"],
+      "sixth": ["Boreal Wolf's Nostalgia"]
+    }
+  },
+  "Amber Catalyst": {
+    "rank": 3,
+    "type": "Catalyst",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "415",
+      "Additional": "No Data"
+    },
+    "ascesion": {
+      "first": ["Unknown"],
+      "second": ["Unknown"],
+      "third": ["Unknown"],
+      "fourth": ["Unknown"],
+      "fifth": ["Unknown"],
+      "sixth": ["Unknown"]
+    }
+  },
+  "Magic Guide": {
+    "rank": 3,
+    "type": "Catalyst",
+    "stats": {
+      "Level": "MAX80 70Lv",
+      "ATK": "294",
+      "Additional": "Elemant Mastery 154"
+    },
+    "ascesion": {
+      "first": ["Tile of Decarabian's Tower"],
+      "second": ["Debris of Decarabian's City"],
+      "third": ["Debris of Decarabian's City"],
+      "fourth": ["Fragment of Decarabian's Epic"],
+      "fifth": ["Fragment of Decarabian's Epic"],
+      "sixth": ["Scattered Piece of Decarabian's Dream"]
+    }
+  },
+  "Otherworldly Story": {
+    "rank": 3,
+    "type": "Catalyst",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "375",
+      "Additional": "No Data"
+    },
+    "ascesion": {
+      "first": ["Fetters of the Dandelion Gladiator"],
+      "second": ["Chains of the Dandelion Gladiator"],
+      "third": ["Chains of the Dandelion Gladiator"],
+      "fourth": ["Shackles of the Dandelion Gladiator"],
+      "fifth": ["Shackles of the Dandelion Gladiator"],
+      "sixth": ["Dream of the Dandelion Gladiator"]
+    }
+  },
+  "Emerald Orb": {
+    "rank": 3,
+    "type": "Catalyst",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "415",
+      "Additional": "No Data"
+    },
+    "ascesion": {
+      "first": ["Luminous Sands from Guyun"],
+      "second": ["Lustrous Stone from Guyun"],
+      "third": ["Lustrous Stone from Guyun"],
+      "fourth": ["Relic from Guyun"],
+      "fifth": ["Relic from Guyun"],
+      "sixth": ["Divine Body from Guyun"]
+    }
+  },
+  "Pocket Grimoire": {
+    "rank": 2,
+    "type": "Catalyst",
+    "stats": {
+      "Level": "MAX60 50Lv",
+      "ATK": "186",
+      "Additional": "None"
+    },
+    "ascesion": {
+      "first": ["Tile of Decarabian's Tower"],
+      "second": ["Debris of Decarabian's City"],
+      "third": ["Debris of Decarabian's City"],
+      "fourth": ["Fragment of Decarabian's Epic"],
+      "fifth": ["MAX"],
+      "sixth": ["MAX"]
+    }
+  },
+  "Apprentice's Notes": {
+    "rank": 1,
+    "type": "Catalyst",
+    "stats": {
+      "Level": "MAX70 70Lv",
+      "ATK": "185",
+      "Additional": "None"
+    },
+    "ascesion": {
+      "first": ["Tile of Decarabian's Tower"],
+      "second": ["Debris of Decarabian's City"],
+      "third": ["Debris of Decarabian's City"],
+      "fourth": ["Fragment of Decarabian's Epic"],
+      "fifth": ["MAX"],
+      "sixth": ["MAX"]
+    }
+  },
+  "Wolf's Gravestone": {
+    "rank": 5,
+    "type": "Claymore",
+    "stats": {
+      "Level": "MAX90 90Lv",
+      "ATK": "608",
+      "Additional": "ATK 49.6"
+    },
+    "ascesion": {
+      "first": ["Fetters of the Dandelion Gladiator"],
+      "second": ["Chains of the Dandelion Gladiator"],
+      "third": ["Chains of the Dandelion Gladiator"],
+      "fourth": ["Shackles of the Dandelion Gladiator"],
+      "fifth": ["Shackles of the Dandelion Gladiator"],
+      "sixth": ["Dream of the Dandelion Gladiators"]
+    }
+  },
+  "Skyward Pride": {
+    "rank": 5,
+    "type": "Claymore",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "621",
+      "Additional": "Energy Recharge 33.5%"
+    },
+    "ascesion": {
+      "first": ["Boreal Wolf's Milk Tooth"],
+      "second": ["Boreal Wolf's Cracked Tooth"],
+      "third": ["Boreal Wolf's Cracked Tooth"],
+      "fourth": ["Boreal Wolf's Broken Fang"],
+      "fifth": ["Boreal Wolf's Broken Fang"],
+      "sixth": ["Boreal Wolf's Nostalgia"]
+    }
+  },
+  "The Unforged": {
+    "rank": 5,
+    "type": "Claymore",
+    "stats": {
+      "Level": "-",
+      "ATK": "-",
+      "Additional": "-"
+    },
+    "ascesion": {
+      "first": ["-"],
+      "second": ["-"],
+      "third": ["-"],
+      "fourth": ["-"],
+      "fifth": ["-"],
+      "sixth": ["-"]
+    }
+  },
+  "Rainslasher": {
+    "rank": 4,
+    "type": "Claymore",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "Elemental Mastery 151"
+    },
+    "ascesion": {
+      "first": ["Mist Veiled Lead Elixir"],
+      "second": ["Mist Veiled Mercury Elixir"],
+      "third": ["Mist Veiled Mercury Elixir"],
+      "fourth": ["Mist Veiled Gold Elixir"],
+      "fifth": ["Mist Veiled Gold Elixir"],
+      "sixth": ["Mist Veiled Primo Elixir"]
+    }
+  },
+  "Whiteblind": {
+    "rank": 4,
+    "type": "Claymore",
+    "stats": {
+      "Level": "MAX80 70Lv",
+      "ATK": "414",
+      "Additional": "DEF 42.6%"
+    },
+    "ascesion": {
+      "first": ["Luminous Sands from Guyun"],
+      "second": ["Lustrous Stone from Guyun"],
+      "third": ["Lustrous Stone from Guyun"],
+      "fourth": ["Relic from Guyun"],
+      "fifth": ["Relic from Guyun"],
+      "sixth": ["Divine Body from Guyun"]
+    }
+  },
+  "The Bell": {
+    "rank": 4,
+    "type": "Claymore",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "HP 37.7%"
+    },
+    "ascesion": {
+      "first": ["Tile of Decarabian's Tower"],
+      "second": ["Debris of Decarabian's City"],
+      "third": ["Debris of Decarabian's City"],
+      "fourth": ["Fragment of Decarabian's Epic"],
+      "fifth": ["Fragment of Decarabian's Epic"],
+      "sixth": ["Unknown"]
+    }
+  },
+  "Serpent Spine": {
+    "rank": 4,
+    "type": "Claymore",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "CRIT Rate 25.1%"
+    },
+    "ascesion": {
+      "first": ["Grain of Aerosiderite"],
+      "second": ["Piece of Aerosiderite"],
+      "third": ["Piece of Aerosiderite"],
+      "fourth": ["Bit of Aerosiderite"],
+      "fifth": ["Bit of Aerosiderite"],
+      "sixth": ["Chunk of Aerosiderite"]
+    }
+  },
+  "Sacrificial Greatsword": {
+    "rank": 4,
+    "type": "Claymore",
+    "stats": {
+      "Level": "MAX70 60Lv",
+      "ATK": "387",
+      "Additional": "Energy Recharge 22.6%"
+    },
+    "ascesion": {
+      "first": ["Boreal Wolf's Milk Tooth"],
+      "second": ["Boreal Wolf's Cracked Tooth"],
+      "third": ["Boreal Wolf's Cracked Tooth"],
+      "fourth": ["Boreal Wolf's Broken Fang"],
+      "fifth": ["Boreal Wolf's Broken Fang"],
+      "sixth": ["Boreal Wolf's Nostalgia"]
+    }
+  },
+  "Blackcliff Slasher": {
+    "rank": 4,
+    "type": "Claymore",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "CRIT DMG 50.3%"
+    },
+    "ascesion": {
+      "first": ["Mist Veiled Lead Elixir"],
+      "second": ["Mist Veiled Mercury Elixir"],
+      "third": ["Mist Veiled Mercury Elixir"],
+      "fourth": ["Mist Veiled Gold Elixir"],
+      "fifth": ["Mist Veiled Gold Elixir"],
+      "sixth": ["Mist Veiled Primo Elixir"]
+    }
+  },
+  "Prototype Aminus": {
+    "rank": 4,
+    "type": "Claymore",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "523",
+      "Additional": "ATK 25.1%"
+    },
+    "ascesion": {
+      "first": ["Grain of Aerosiderite"],
+      "second": ["Piece of Aerosiderite"],
+      "third": ["Piece of Aerosiderite"],
+      "fourth": ["Bit of Aerosiderite"],
+      "fifth": ["Bit of Aerosiderite"],
+      "sixth": ["Chunk of Aerosiderite"]
+    }
+  },
+  "Lithic Blade": {
+    "rank": 4,
+    "type": "Claymore",
+    "stats": {
+      "Level": "MAX70 60Lv",
+      "ATK": "319",
+      "Additional": "CRIT DMG 54.1"
+    },
+    "ascesion": {
+      "first": ["Unknown"],
+      "second": ["Unknown"],
+      "third": ["Unknown"],
+      "fourth": ["Unknown"],
+      "fifth": ["Unknown"],
+      "sixth": ["Unknown"]
+    }
+  },
+  "Favonius Greatsword": {
+    "rank": 4,
+    "type": "Claymore",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "427",
+      "Additional": "Energy Recharge 55.9%"
+    },
+    "ascesion": {
+      "first": ["Fetters of the Dandelion Gladiator"],
+      "second": ["Chains of the Dandelion Gladiator"],
+      "third": ["Chains of the Dandelion Gladiator"],
+      "fourth": ["Shackles of the Dandelion Gladiator"],
+      "fifth": ["Shackles of the Dandelion Gladiator"],
+      "sixth": ["Dream of the Dandelion Gladiator"]
+    }
+  },
+  "Royal Greatsword": {
+    "rank": 4,
+    "type": "Claymore",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "523",
+      "Additional": "ATK 25.1%"
+    },
+    "ascesion": {
+      "first": ["Fetters of the Dandelion Gladiator"],
+      "second": ["Chains of the Dandelion Gladiator"],
+      "third": ["Chains of the Dandelion Gladiator"],
+      "fourth": ["Shackles of the Dandelion Gladiator"],
+      "fifth": ["Shackles of the Dandelion Gladiator"],
+      "sixth": ["Unknown"]
+    }
+  },
+  "Quartz": {
+    "rank": 3,
+    "type": "Claymore",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "415",
+      "Additional": "No Data"
+    },
+    "ascesion": {
+      "first": ["Unknown"],
+      "second": ["Unknown"],
+      "third": ["Unknown"],
+      "fourth": ["Unknown"],
+      "fifth": ["Unknown"],
+      "sixth": ["Unknown"]
+    }
+  },
+  "Bloodtainted Greatsword": {
+    "rank": 3,
+    "type": "Claymore",
+    "stats": {
+      "Level": "MAX80 70Lv",
+      "ATK": "294",
+      "Additional": "Elemenatl Mastery 154"
+    },
+    "ascesion": {
+      "first": ["Boreal Wolf's Milk Tooth"],
+      "second": ["Boreal Wolf's Cracked Tooth"],
+      "third": ["Boreal Wolf's Cracked Tooth"],
+      "fourth": ["Boreal Wolf's Broken Fang"],
+      "fifth": ["Boreal Wolf's Broken Fang"],
+      "sixth": ["Boreal Wolf's Nostalgia"]
+    }
+  },
+  "Skyrider Greatsword": {
+    "rank": 3,
+    "type": "Claymore",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "375",
+      "Additional": "No Data"
+    },
+    "ascesion": {
+      "first": ["Grain of Aerosiderite"],
+      "second": ["Piece of Aerosiderite"],
+      "third": ["Piece of Aerosiderite"],
+      "fourth": ["Bit of Aerosiderite"],
+      "fifth": ["Bit of Aerosiderite"],
+      "sixth": ["Chunk of Aerosiderite"]
+    }
+  },
+  "Ferrous Shadow": {
+    "rank": 3,
+    "type": "Claymore",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "375",
+      "Additional": "HP 32.1%"
+    },
+    "ascesion": {
+      "first": ["Tile of Decarabian's Tower"],
+      "second": ["Debris of Decarabian's City"],
+      "third": ["Debris of Decarabian's City"],
+      "fourth": ["Fragment of Decarabian's Epic"],
+      "fifth": ["Fragment of Decarabian's Epic"],
+      "sixth": ["Scattered Piece of Decarabian's Dream"]
+    }
+  },
+  "White Iron Greatsword": {
+    "rank": 3,
+    "type": "Claymore",
+    "stats": {
+      "Level": "MAX60 50Lv",
+      "ATK": "236",
+      "Additional": "DEF 28.5%"
+    },
+    "ascesion": {
+      "first": ["Fetters of the Dandelion Gladiator"],
+      "second": ["Chains of the Dandelion Gladiator"],
+      "third": ["Chains of the Dandelion Gladiator"],
+      "fourth": ["Shackles of the Dandelion Gladiator"],
+      "fifth": ["Shackles of the Dandelion Gladiator"],
+      "sixth": ["Dream of the Dandelion Gladiator"]
+    }
+  },
+  "Debate Club": {
+    "rank": 3,
+    "type": "Claymore",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "375",
+      "Additional": "ATK 32.1%"
+    },
+    "ascesion": {
+      "first": ["Mist Veiled Lead Elixir"],
+      "second": ["Mist Veiled Mercury Elixir"],
+      "third": ["Mist Veiled Mercury Elixir"],
+      "fourth": ["Mist Veiled Gold Elixir"],
+      "fifth": ["Mist Veiled Gold Elixir"],
+      "sixth": ["Mist Veiled Primo Elixir"]
+    }
+  },
+  "Old Merc's Pal": {
+    "rank": 2,
+    "type": "Claymore",
+    "stats": {
+      "Level": "MAX60 50Lv",
+      "ATK": "186",
+      "Additional": "None"
+    },
+    "ascesion": {
+      "first": ["Boreal Wolf's Milk Tooth"],
+      "second": ["Boreal Wolf's Cracked Tooth"],
+      "third": ["Boreal Wolf's Cracked Tooth"],
+      "fourth": ["Boreal Wolf's Broken Fang"],
+      "fifth": ["MAX"],
+      "sixth": ["MAX"]
+    }
+  },
+  "Waster Greatsword": {
+    "rank": 1,
+    "type": "Claymore",
+    "stats": {
+      "Level": "MAX70 70Lv",
+      "ATK": "185",
+      "Additional": "None"
+    },
+    "ascesion": {
+      "first": ["Boreal Wolf's Milk Tooth"],
+      "second": ["Boreal Wolf's Cracked Tooth"],
+      "third": ["Boreal Wolf's Cracked Tooth"],
+      "fourth": ["Boreal Wolf's Broken Fang"],
+      "fifth": ["MAX"],
+      "sixth": ["MAX"]
+    }
+  },
+  "Vortex Vanquisher": {
+    "rank": 5,
+    "type": "Polearm",
+    "stats": {
+      "Level": "-",
+      "ATK": "-",
+      "Additional": "-"
+    },
+    "ascesion": {
+      "first": ["Unknown"],
+      "second": ["Unknown"],
+      "third": ["Unknown"],
+      "fourth": ["Unknown"],
+      "fifth": ["Unknown"],
+      "sixth": ["Unknown"]
+    }
+  },
+  "Kunwu's Iris Rift": {
+    "rank": 5,
+    "type": "Polearm",
+    "stats": {
+      "Level": "MAX90 90Lv",
+      "ATK": "608",
+      "Additional": "ATK 49.6%"
+    },
+    "ascesion": {
+      "first": ["Unknown"],
+      "second": ["Unknown"],
+      "third": ["Unknown"],
+      "fourth": ["Unknown"],
+      "fifth": ["Unknown"],
+      "sixth": ["Unknown"]
+    }
+  },
+  "Primordial Jade Winged-Spear": {
+    "rank": 5,
+    "type": "Polearm",
+    "stats": {
+      "Level": "MAX90 90Lv",
+      "ATK": "674",
+      "Additional": "CRIT Rate 22.1%"
+    },
+    "ascesion": {
+      "first": ["Luminous Sands from Guyun"],
+      "second": ["Lustrous Stone from Guyun"],
+      "third": ["Lustrous Stone from Guyun"],
+      "fourth": ["Relic from Guyun"],
+      "fifth": ["Relic from Guyun"],
+      "sixth": ["Divine Body from Guyun"]
+    }
+  },
+  "Skyward Spine": {
+    "rank": 5,
+    "type": "Polearm",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "621",
+      "Additional": "Energy Recharge 33.5%"
+    },
+    "ascesion": {
+      "first": ["Fetters of the Dandelion Gladiator"],
+      "second": ["Chains of the Dandelion Gladiator"],
+      "third": ["Chains of the Dandelion Gladiator"],
+      "fourth": ["Shackles of the Dandelion Gladiator"],
+      "fifth": ["Shackles of the Dandelion Gladiator"],
+      "sixth": ["Dream of the Dandelion Gladiator"]
+    }
+  },
+  "Blackcliff Pole": {
+    "rank": 4,
+    "type": "Polearm",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "CRIT DMG 50.3%"
+    },
+    "ascesion": {
+      "first": ["Unknown"],
+      "second": ["Unknown"],
+      "third": ["Unknown"],
+      "fourth": ["Unknown"],
+      "fifth": ["Unknown"],
+      "sixth": ["Unknown"]
+    }
+  },
+  "Crescent Pike": {
+    "rank": 4,
+    "type": "Polearm",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "523",
+      "Additional": "Physical DMG 31.5%"
+    },
+    "ascesion": {
+      "first": ["Luminous Sands from Guyun"],
+      "second": ["Lustrous Stone from Guyun"],
+      "third": ["Lustrous Stone from Guyun"],
+      "fourth": ["Relic from Guyun"],
+      "fifth": ["Relic from Guyun"],
+      "sixth": ["Divine Body from Guyun"]
+    }
+  },
+  "Deathmatch": {
+    "rank": 4,
+    "type": "Polearm",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "427",
+      "Additional": "CRIT Rate 33.5%"
+    },
+    "ascesion": {
+      "first": ["Boreal Wolf's Milk Tooth"],
+      "second": ["Boreal Wolf's Cracked Tooth"],
+      "third": ["Boreal Wolf's Cracked Tooth"],
+      "fourth": ["Boreal Wolf's Broken Fang "],
+      "fifth": ["Boreal Wolf's Broken Fang "],
+      "sixth": ["Boreal Wolf's Nostalgia"]
+    }
+  },
+  "Dragon's Bane": {
+    "rank": 4,
+    "type": "Polearm",
+    "stats": {
+      "Level": "MAX80 70Lv",
+      "ATK": "373",
+      "Additional": "Elemental Mastery 182"
+    },
+    "ascesion": {
+      "first": ["Mist Veiled Lead Elixir"],
+      "second": ["Mist Veiled Mercury Elixir"],
+      "third": ["Mist Veiled Mercury Elixir"],
+      "fourth": ["Mist Veiled Gold Elixir"],
+      "fifth": ["Mist Veiled Gold Elixir"],
+      "sixth": ["Mist Veiled Primo Elixir"]
+    }
+  },
+  "Favonius Lance": {
+    "rank": 4,
+    "type": "Polearm",
+    "stats": {
+      "Level": "MAX70 60Lv",
+      "ATK": "387",
+      "Additional": "Energy Recharge 22.6%"
+    },
+    "ascesion": {
+      "first": ["Fetters of the Dandelion Gladiator"],
+      "second": ["Chains of the Dandelion Gladiator"],
+      "third": ["Chains of the Dandelion Gladiator"],
+      "fourth": ["Shackles of the Dandelion Gladiator"],
+      "fifth": ["Shackles of the Dandelion Gladiator"],
+      "sixth": ["Dream of the Dandelion Gladiator"]
+    }
+  },
+  "Lithic Spear": {
+    "rank": 4,
+    "type": "Polearm",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "Physical DMG 37.7%"
+    },
+    "ascesion": {
+      "first": ["Unknown"],
+      "second": ["Unknown"],
+      "third": ["Unknown"],
+      "fourth": ["Unknown"],
+      "fifth": ["Unknown"],
+      "sixth": ["Unknown"]
+    }
+  },
+  "Prototype Grudge": {
+    "rank": 4,
+    "type": "Polearm",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "Energy Recharge 41.9%"
+    },
+    "ascesion": {
+      "first": ["Grain of Aerosiderite"],
+      "second": ["Piece of Aerosiderite"],
+      "third": ["Piece of Aerosiderite"],
+      "fourth": ["Bit of Aerosiderite"],
+      "fifth": ["Bit of Aerosiderite"],
+      "sixth": ["Chunk of Aerosiderite"]
+    }
+  },
+  "Black Tassel": {
+    "rank": 3,
+    "type": "Polearm",
+    "stats": {
+      "Level": "MAX60 50Lv",
+      "ATK": "212",
+      "Additional": "HP 30.4%"
+    },
+    "ascesion": {
+      "first": ["Grain of Aerosiderite"],
+      "second": ["Piece of Aerosiderite"],
+      "third": ["Piece of Aerosiderite"],
+      "fourth": ["Bit of Aerosiderite"],
+      "fifth": ["Bit of Aerosiderite"],
+      "sixth": ["Chunk of Aerosiderite"]
+    }
+  },
+  "Halberd": {
+    "rank": 3,
+    "type": "Polearm",
+    "stats": {
+      "Level": "MAX70 60Lv",
+      "ATK": "311",
+      "Additional": "ATK 17.3%"
+    },
+    "ascesion": {
+      "first": ["Mist Veiled Lead Elixir"],
+      "second": ["Mist Veiled Mercury Elixir"],
+      "third": ["Mist Veiled Mercury Elixir"],
+      "fourth": ["Mist Veiled Gold Elixir"],
+      "fifth": ["Mist Veiled Gold Elixir"],
+      "sixth": ["Mist Veiled Primo Elixir"]
+    }
+  },
+  "White Tassel": {
+    "rank": 3,
+    "type": "Polearm",
+    "stats": {
+      "Level": "MAX70 60Lv",
+      "ATK": "282",
+      "Additional": "CRIT Rate 17.3%"
+    },
+    "ascesion": {
+      "first": ["Luminous Sands from Guyun"],
+      "second": ["Lustrous Stone from Guyun"],
+      "third": ["Lustrous Stone from Guyun"],
+      "fourth": ["Relic from Guyun"],
+      "fifth": ["Relic from Guyun"],
+      "sixth": ["Divine Body from Guyun"]
+    }
+  },
+  "Iron Point": {
+    "rank": 2,
+    "type": "Polearm",
+    "stats": {
+      "Level": "MAX60 50Lv",
+      "ATK": "186",
+      "Additional": "None"
+    },
+    "ascesion": {
+      "first": ["Fetters of the Dandelion Gladiator"],
+      "second": ["Chains of the Dandelion Gladiator"],
+      "third": ["Chains of the Dandelion Gladiator"],
+      "fourth": ["Shackles of the Dandelion Gladiator"],
+      "fifth": ["MAX"],
+      "sixth": ["MAX"]
+    }
+  },
+  "Beginner's Protector": {
+    "rank": 1,
+    "type": "Polearm",
+    "stats": {
+      "Level": "MAX70 70Lv",
+      "ATK": "185",
+      "Additional": "None"
+    },
+    "ascesion": {
+      "first": ["Fetters of the Dandelion Gladiator"],
+      "second": ["Chains of the Dandelion Gladiator"],
+      "third": ["Chains of the Dandelion Gladiator"],
+      "fourth": ["Shackles of the Dandelion Gladiator"],
+      "fifth": ["MAX"],
+      "sixth": ["MAX"]
+    }
+  },
+  "Skyward Blade": {
+    "rank": 5,
+    "type": "Sword",
+    "stats": {
+      "Level": "MAX90 90Lv",
+      "ATK": "608",
+      "Additional": "Energy Recharge 55.1%"
+    },
+    "ascesion": {
+      "first": ["Boreal Wolf's Milk Tooth"],
+      "second": ["Boreal Wolf's Cracked Tooth"],
+      "third": ["Boreal Wolf's Cracked Tooth"],
+      "fourth": ["Boreal Wolf's Broken Fang"],
+      "fifth": ["Boreal Wolf's Broken Fang"],
+      "sixth": ["Boreal Wolf's Nostalgia"]
+    }
+  },
+  "Aquila Favonia": {
+    "rank": 5,
+    "type": "Sword",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "621",
+      "Additional": "Physical DMG 37.7%"
+    },
+    "ascesion": {
+      "first": ["Tile of Decarabian's Tower"],
+      "second": ["Debris of Decarabian's City"],
+      "third": ["Debris of Decarabian's City"],
+      "fourth": ["Fragment of Decarabian's Epic"],
+      "fifth": ["Fragment of Decarabian's Epic"],
+      "sixth": ["Scattered Piece of Decarabian's Dream"]
+    }
+  },
+  "Blackcliff Longsword": {
+    "rank": 4,
+    "type": "Sword",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "523",
+      "Additional": "CRIT DMG 33.5%"
+    },
+    "ascesion": {
+      "first": ["Unknown"],
+      "second": ["Unknown"],
+      "third": ["Unknown"],
+      "fourth": ["Unknown"],
+      "fifth": ["Unknown"],
+      "sixth": ["Unknown"]
+    }
+  },
+  "The Flute": {
+    "rank": 4,
+    "type": "Sword",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "ATK 37.7%"
+    },
+    "ascesion": {
+      "first": ["Boreal Wolf's Milk Tooth"],
+      "second": ["Boreal Wolf's Cracked Tooth"],
+      "third": ["Boreal Wolf's Cracked Tooth"],
+      "fourth": ["Boreal Wolf's Broken Fang"],
+      "fifth": ["Boreal Wolf's Broken Fang"],
+      "sixth": ["Boreal Wolf's Nostalgia"]
+    }
+  },
+  "The Black Sword": {
+    "rank": 4,
+    "type": "Sword",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "CRIT Rate 25.1%"
+    },
+    "ascesion": {
+      "first": ["Boreal Wolf's Milk Tooth"],
+      "second": ["Boreal Wolf's Cracked Tooth"],
+      "third": ["Boreal Wolf's Cracked Tooth"],
+      "fourth": ["Boreal Wolf's Broken Fang"],
+      "fifth": ["Boreal Wolf's Broken Fang"],
+      "sixth": ["Boreal Wolf's Nostalgia"]
+    }
+  },
+  "The Alley Flash": {
+    "rank": 4,
+    "type": "Sword",
+    "stats": {
+      "Level": "MAX80 70Lv",
+      "ATK": "455",
+      "Additional": "CRIT Rate 15.1%"
+    },
+    "ascesion": {
+      "first": ["Unknown"],
+      "second": ["Unknown"],
+      "third": ["Unknown"],
+      "fourth": ["Unknown"],
+      "fifth": ["Unknown"],
+      "sixth": ["Unknown"]
+    }
+  },
+  "Sacrificial Sword": {
+    "rank": 4,
+    "type": "Sword",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "427",
+      "Additional": "Energy Recharge 55.9%"
+    },
+    "ascesion": {
+      "first": ["Fetters of the Dandelion Gladiator"],
+      "second": ["Chains of the Dandelion Gladiator"],
+      "third": ["Chains of the Dandelion Gladiator"],
+      "fourth": ["Shackles of the Dandelion Gladiator"],
+      "fifth": ["Shackles of the Dandelion Gladiator"],
+      "sixth": ["Dream of the Dandelion Gladiator"]
+    }
+  },
+  "Royal Longsword": {
+    "rank": 4,
+    "type": "Sword",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "ATK 37.7%"
+    },
+    "ascesion": {
+      "first": ["Unknown"],
+      "second": ["Unknown"],
+      "third": ["Unknown"],
+      "fourth": ["Unknown"],
+      "fifth": ["Unknown"],
+      "sixth": ["Unknown"]
+    }
+  },
+  "Prototype Rancour": {
+    "rank": 4,
+    "type": "Sword",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "523",
+      "Additional": "Physical DMG 31.5%"
+    },
+    "ascesion": {
+      "first": ["Mist Veiled Lead Elixir"],
+      "second": ["Mist Veiled Mercury Elixir"],
+      "third": ["Mist Veiled Mercury Elixir"],
+      "fourth": ["Mist Veiled Gold Elixi"],
+      "fifth": ["Mist Veiled Gold Elixir"],
+      "sixth": ["Mist Veiled Primo Elixir"]
+    }
+  },
+  "Lion's Roar": {
+    "rank": 4,
+    "type": "Sword",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "ATK 37.7%"
+    },
+    "ascesion": {
+      "first": ["Luminous Sands from Guyun"],
+      "second": ["Lustrous Stone from Guyun"],
+      "third": ["Lustrous Stone from Guyun"],
+      "fourth": ["Relic from Guyun"],
+      "fifth": ["Relic from Guyun"],
+      "sixth": ["Divine Body from Guyun"]
+    }
+  },
+  "Iron Sting": {
+    "rank": 4,
+    "type": "Sword",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "475",
+      "Additional": "Elemental Mastery 151"
+    },
+    "ascesion": {
+      "first": ["Grain of Aerosiderite"],
+      "second": ["Piece of Aerosiderite"],
+      "third": ["Piece of Aerosiderite"],
+      "fourth": ["Bit of Aerosiderite"],
+      "fifth": ["Bit of Aerosiderite"],
+      "sixth": ["Chunk of Aerosiderite"]
+    }
+  },
+  "Favonius Sword": {
+    "rank": 4,
+    "type": "Sword",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "427",
+      "Additional": "55.9%"
+    },
+    "ascesion": {
+      "first": ["Tile of Decarabian's Tower"],
+      "second": ["Debris of Decarabian's City"],
+      "third": ["Debris of Decarabian's City"],
+      "fourth": ["Fragment of Decarabian's Epic"],
+      "fifth": ["Fragment of Decarabian's Epic"],
+      "sixth": ["Fragment of Decarabian's Epic"]
+    }
+  },
+  "Harbinger of Dawn": {
+    "rank": 3,
+    "type": "Sword",
+    "stats": {
+      "Level": "MAX60 50Lv",
+      "ATK": "216",
+      "Additional": "CRIT DMG 30.4%"
+    },
+    "ascesion": {
+      "first": ["Boreal Wolf's Milk Tooth"],
+      "second": ["Boreal Wolf's Cracked Tooth"],
+      "third": ["Boreal Wolf's Cracked Tooth"],
+      "fourth": ["Boreal Wolf's Broken Fang"],
+      "fifth": ["Boreal Wolf's Broken Fang"],
+      "sixth": ["Boreal Wolf's Nostalgia"]
+    }
+  },
+  "Skyrider Sword": {
+    "rank": 3,
+    "type": "Sword",
+    "stats": {
+      "Level": "MAX80 70Lv",
+      "ATK": "294",
+      "Additional": "Energy Recharge 42.6%"
+    },
+    "ascesion": {
+      "first": ["Grain of Aerosiderite"],
+      "second": ["Piece of Aerosiderite"],
+      "third": ["Piece of Aerosiderite"],
+      "fourth": ["Bit of Aerosiderite"],
+      "fifth": ["Bit of Aerosiderite"],
+      "sixth": ["Chunk of Aerosiderite"]
+    }
+  },
+  "Fillet Blade": {
+    "rank": 3,
+    "type": "Sword",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "375",
+      "Additional": "ATK 32.1%"
+    },
+    "ascesion": {
+      "first": ["Mist Veiled Lead Elixir"],
+      "second": ["Mist Veiled Mercury Elixir"],
+      "third": ["Mist Veiled Mercury Elixir"],
+      "fourth": ["Mist Veiled Gold Elixir"],
+      "fifth": ["Mist Veiled Gold Elixir"],
+      "sixth": ["Mist Veiled Primo Elixir"]
+    }
+  },
+  "Dark Iron Sword": {
+    "rank": 3,
+    "type": "Sword",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "375",
+      "Additional": "No Data"
+    },
+    "ascesion": {
+      "first": ["Luminous Sands from Guyun"],
+      "second": ["Lustrous Stone from Guyun"],
+      "third": ["Lustrous Stone from Guyun"],
+      "fourth": ["Relic from Guyun"],
+      "fifth": ["Relic from Guyun"],
+      "sixth": ["Divine Body from Guyun"]
+    }
+  },
+  "Cool Steel": {
+    "rank": 3,
+    "type": "Sword",
+    "stats": {
+      "Level": "MAX90 80Lv",
+      "ATK": "375",
+      "Additional": "ATK 32.1%"
+    },
+    "ascesion": {
+      "first": ["Tile of Decarabian's Tower"],
+      "second": ["Debris of Decarabian's City"],
+      "third": ["Debris of Decarabian's City"],
+      "fourth": ["Fragment of Decarabian's Epic"],
+      "fifth": ["Fragment of Decarabian's Epic"],
+      "sixth": ["Scattered Piece of Decarabian's Dream"]
+    }
+  },
+  "Traveler's Handy Sword": {
+    "rank": 3,
+    "type": "Sword",
+    "stats": {
+      "Level": "MAX80 70Lv",
+      "ATK": "363",
+      "Additional": "DEF 24.1%"
+    },
+    "ascesion": {
+      "first": ["Fetters of the Dandelion Gladiator"],
+      "second": ["Chains of the Dandelion Gladiator"],
+      "third": ["Chains of the Dandelion Gladiator"],
+      "fourth": ["Shackles of the Dandelion Gladiator"],
+      "fifth": ["Shackles of the Dandelion Gladiator"],
+      "sixth": ["Dream of the Dandelion Gladiator"]
+    }
+  },
+  "Silver Sword": {
+    "rank": 2,
+    "type": "Sword",
+    "stats": {
+      "Level": "MAX60 50Lv",
+      "ATK": "186",
+      "Additional": "None"
+    },
+    "ascesion": {
+      "first": ["Tile of Decarabian's Tower"],
+      "second": ["Debris of Decarabian's City"],
+      "third": ["Debris of Decarabian's City"],
+      "fourth": ["Fragment of Decarabian's Epic"],
+      "fifth": ["MAX"],
+      "sixth": ["MAX"]
+    }
+  },
+  "Dull Blade": {
+    "rank": 1,
+    "type": "Sword",
+    "stats": {
+      "Level": "MAX70 70Lv",
+      "ATK": "185",
+      "Additional": "None"
+    },
+    "ascesion": {
+      "first": ["Tile of Decarabian's Tower"],
+      "second": ["Debris of Decarabian's City"],
+      "third": ["Debris of Decarabian's City"],
+      "fourth": ["Fragment of Decarabian's Epic"],
+      "fifth": ["MAX"],
+      "sixth": ["MAX"]
+    }
+  }
+}
