@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "94cca375c4c6c390f3323ba3a7773c85",
+    "revision": "d075becad7d5725dcc0db8a66032c1b8",
     "url": "/genshin/index.html"
   },
   {
-    "revision": "70d1d64a5537f807113b",
+    "revision": "d212a837f05a946740e0",
     "url": "/genshin/static/css/main.1b48f554.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/genshin/static/js/2.366a58f6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "70d1d64a5537f807113b",
-    "url": "/genshin/static/js/main.f2ebf33c.chunk.js"
+    "revision": "d212a837f05a946740e0",
+    "url": "/genshin/static/js/main.fe211124.chunk.js"
   },
   {
     "revision": "0a0b5a2535b0947822c0",

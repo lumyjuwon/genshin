@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/genshin/static/css/main.1b48f554.chunk.css",
-    "main.js": "/genshin/static/js/main.f2ebf33c.chunk.js",
+    "main.js": "/genshin/static/js/main.fe211124.chunk.js",
     "runtime-main.js": "/genshin/static/js/runtime-main.3f9fdede.js",
     "static/js/2.366a58f6.chunk.js": "/genshin/static/js/2.366a58f6.chunk.js",
     "index.html": "/genshin/index.html",
-    "precache-manifest.d474eab23981d81a2b28874805bc87d3.js": "/genshin/precache-manifest.d474eab23981d81a2b28874805bc87d3.js",
+    "precache-manifest.fd674e3ec66ee20c26ad74d423d745ff.js": "/genshin/precache-manifest.fd674e3ec66ee20c26ad74d423d745ff.js",
     "service-worker.js": "/genshin/service-worker.js",
     "static/js/2.366a58f6.chunk.js.LICENSE.txt": "/genshin/static/js/2.366a58f6.chunk.js.LICENSE.txt",
     "static/media/Acquaint Fate.png": "/genshin/static/media/Acquaint Fate.6e8d8434.png",
@@ -444,6 +444,6 @@
     "static/js/runtime-main.3f9fdede.js",
     "static/js/2.366a58f6.chunk.js",
     "static/css/main.1b48f554.chunk.css",
-    "static/js/main.f2ebf33c.chunk.js"
+    "static/js/main.fe211124.chunk.js"
   ]
 }
