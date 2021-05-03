@@ -1,3 +1,3 @@
 ## Site
 
-https://lumyjuwon.github.io/
+https://lumyjuwon.github.io/genshin/
